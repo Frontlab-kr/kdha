@@ -7642,7 +7642,7 @@ button {
 
 .preview-index__links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 .preview-index__links a {
@@ -7680,41 +7680,6 @@ button {
   border-top: 1px solid #dfe2e7;
   color: #858c98;
   font-size: 13px;
-}
-.preview-index__footer div {
-  display: flex;
-  gap: 10px;
-}
-
-.preview-index__button {
-  display: inline-flex;
-  min-height: 40px;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  padding: 0 16px;
-  border: 1px solid #d9dce2;
-  border-radius: 10px;
-  background: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.preview-index__button--disabled {
-  background: #eceef1;
-  color: #a3a8b1;
-  cursor: not-allowed;
-}
-
-.preview-index__button--figma {
-  border-color: #7656ff;
-  background: #7656ff;
-  color: #fff;
-  transition: background-color 0.2s ease;
-}
-.preview-index__button--figma:hover {
-  background: #6041eb;
 }
 
 .preview-toolbar {
@@ -7790,6 +7755,11 @@ button {
   .preview-viewer--pc .preview-canvas img {
     width: 1920px;
     max-width: none;
+  }
+}
+@media (min-width: 681px) and (max-width: 900px) {
+  .preview-index__links {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 * {
