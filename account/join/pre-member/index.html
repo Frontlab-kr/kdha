@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/datepicker.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <title>선가입회원 회원가입</title>
+  </head>
+  <body class="account-site account-join-page">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <main id="main-content" class="account-login account-join account-join--long">
+      <div class="account-login__shell">
+        <header class="account-login__brand">
+          <a href="/main/" aria-label="대한치과위생사협회 대표사이트 홈으로 이동">
+            <img src="/assets/brand/logo-header-b.svg" width="220" height="42" alt="대한치과위생사협회" />
+          </a>
+          <span>KDHA 통합 회원서비스</span>
+        </header>
+
+        <div class="account-join__main">
+          <section class="account-join__card account-join__card--long" aria-labelledby="join-title">
+            <header class="account-join__heading">
+              <h1 id="join-title">선가입회원 회원가입</h1>
+              <p>회원 상세정보를 입력해주세요.</p>
+            </header>
+            <form class="edu-member-form account-join-pre-member-form" action="/account/join/complete/">
+              <div class="edu-member-grid">
+                <label class="edu-field">
+                  <span>이름</span>
+                  <input type="text" placeholder="이름 입력" required />
+                </label>
+                <div class="edu-field form-datepicker">
+                  <label for="pre-birth-date">생년월일</label>
+                  <span class="form-datepicker__control">
+                    <input id="pre-birth-date" type="text" placeholder="YYYY-MM-DD" data-datepicker required />
+                    <button
+                      class="form-datepicker__button"
+                      type="button"
+                      data-datepicker-trigger
+                      aria-label="생년월일 달력 열기"
+                      aria-controls="pre-birth-date"
+                    >
+                      <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                    </button>
+                  </span>
+                </div>
+                <label class="edu-field edu-field--wide">
+                  <span>아이디</span>
+                  <span class="edu-input-action">
+                    <input type="text" placeholder="4-12자 사이의 영문 또는 숫자" required />
+                    <button class="form-action-button" type="button">중복체크</button>
+                  </span>
+                </label>
+                <label class="edu-field edu-field--wide">
+                  <span>비밀번호</span>
+                  <input type="password" placeholder="6-20자 사이의 영문 소문자, 숫자" required />
+                </label>
+                <label class="edu-field edu-field--wide has-error">
+                  <span>비밀번호 확인</span>
+                  <input
+                    type="password"
+                    placeholder="비밀번호 재입력"
+                    aria-invalid="true"
+                    aria-describedby="pre-password-error"
+                    required
+                  />
+                  <small id="pre-password-error">비밀번호가 일치하지 않습니다.</small>
+                </label>
+                <div class="account-form-row account-form-row--school edu-field--wide">
+                  <label class="edu-field">
+                    <span>학교</span>
+                    <select required data-custom-select>
+                      <option value="">학제</option>
+                    </select>
+                  </label>
+                  <label class="edu-field account-form-row__unlabeled">
+                    <span class="sr-only">학교명</span>
+                    <select required data-custom-select>
+                      <option value="">학교</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="edu-field form-datepicker">
+                  <label for="pre-graduation-date">졸업예정년도</label>
+                  <span class="form-datepicker__control">
+                    <input
+                      id="pre-graduation-date"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="YYYY"
+                      autocomplete="off"
+                      data-datepicker
+                      data-datepicker-view="year"
+                      required
+                    />
+                    <button
+                      class="form-datepicker__button"
+                      type="button"
+                      data-datepicker-trigger
+                      aria-label="졸업예정년도 달력 열기"
+                      aria-controls="pre-graduation-date"
+                    >
+                      <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                    </button>
+                  </span>
+                </div>
+                <label class="edu-field">
+                  <span>휴대폰번호</span>
+                  <input type="tel" inputmode="numeric" placeholder="- 없이 숫자만 입력" required />
+                </label>
+                <div class="edu-field edu-field--wide">
+                  <span>주소</span>
+                  <span class="edu-input-action">
+                    <input
+                      id="pre-member-address"
+                      aria-label="주소"
+                      value="06365 123-12 서울특별시 강남구 1길 1"
+                      readonly
+                    />
+                    <button
+                      class="form-action-button"
+                      type="button"
+                      data-dialog-open="address-dialog"
+                      data-address-target="pre-member-address"
+                    >
+                      주소찾기
+                    </button>
+                  </span>
+                  <input aria-label="상세주소" placeholder="상세주소 입력" required />
+                </div>
+              </div>
+              <div class="account-join-terms">
+                <div class="account-join-term">
+                  <strong>[필수] 대한치과위생사협회 홈페이지 이용약관</strong>
+                  <div class="account-join-term__control">
+                    <div class="account-join-term__radios">
+                      <label class="form-check">
+                        <input type="radio" name="preServiceTerms" value="no" />
+                        동의안함
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="preServiceTerms" value="yes" data-required-term />
+                        동의함
+                      </label>
+                    </div>
+                    <a class="ds-link ds-link--text" href="/account/join/terms/#terms-service" data-dialog-link>
+                      <span class="account-join-term__detail-pc">이용약관 상세보기</span>
+                      <span class="account-join-term__detail-mobile">이용약관</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="account-join-term">
+                  <strong>[필수] 개인정보 수집 및 이용약관</strong>
+                  <div class="account-join-term__control">
+                    <div class="account-join-term__radios">
+                      <label class="form-check">
+                        <input type="radio" name="prePrivacyTerms" value="no" />
+                        동의안함
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="prePrivacyTerms" value="yes" data-required-term />
+                        동의함
+                      </label>
+                    </div>
+                    <a class="ds-link ds-link--text" href="/account/join/terms/#terms-privacy" data-dialog-link>
+                      <span class="account-join-term__detail-pc">이용약관 상세보기</span>
+                      <span class="account-join-term__detail-mobile">이용약관</span>
+                    </a>
+                  </div>
+                </div>
+                <label class="form-check account-join-terms__all">
+                  <input type="checkbox" data-terms-all />
+                  모두 동의합니다.
+                </label>
+              </div>
+              <footer class="account-join__actions">
+                <a class="ds-button ds-button--outline ds-button--large" href="/account/join/">취소</a>
+                <button class="ds-button ds-button--primary ds-button--large" type="submit">완료</button>
+              </footer>
+            </form>
+          </section>
+          <p class="account-login__copyright">
+            <span class="account-login__copyright-pc">
+              © Korean Dental Hygienists Association. All rights reserved.
+            </span>
+            <span class="account-login__copyright-mobile">© Korean Dental Hygienists Association</span>
+          </p>
+        </div>
+      </div>
+    </main>
+    <dialog class="edu-dialog edu-dialog--address" id="address-dialog" aria-labelledby="address-dialog-title">
+      <button
+        type="button"
+        class="edu-dialog__close material-symbols-rounded"
+        data-dialog-close
+        aria-label="주소검색 창 닫기"
+      >
+        close
+      </button>
+      <h2 id="address-dialog-title">주소검색</h2>
+      <form class="edu-address-search" role="search">
+        <label class="form-field form-field--large edu-address-search__field">
+          <span class="sr-only">주소 검색어</span>
+          <input placeholder="주소 입력" />
+        </label>
+        <button class="form-action-button" type="submit">검색</button>
+      </form>
+      <div class="edu-dialog__body edu-address-results" data-address-accordion hidden>
+        <article class="edu-address-result is-open" data-address-value="06774 서울특별시 서초구 강남대로 27">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="true">
+            <strong>서울특별시 서초구 강남대로 27 [양재동]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel">
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>06774</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 서초구 강남대로 27 [양재동]</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 서초구 양재동 232 AT 센터</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <article class="edu-address-result" data-address-value="06130 서울특별시 강남구 테헤란로 7길 12">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="false">
+            <strong>서울특별시 강남구 테헤란로 7길 12 [역삼동]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel" hidden>
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>06130</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 강남구 테헤란로 7길 12</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 강남구 역삼동 648-23</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <article class="edu-address-result" data-address-value="04524 서울특별시 중구 세종대로 110">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="false">
+            <strong>서울특별시 중구 세종대로 110 [태평로1가]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel" hidden>
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>04524</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 중구 세종대로 110</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 중구 태평로1가 31</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <article class="edu-address-result" data-address-value="03154 서울특별시 종로구 종로 1">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="false">
+            <strong>서울특별시 종로구 종로 1 [종로1가]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel" hidden>
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>03154</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 종로구 종로 1</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 종로구 종로1가 1</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <article class="edu-address-result" data-address-value="07236 서울특별시 영등포구 국회대로 76길 10">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="false">
+            <strong>서울특별시 영등포구 국회대로 76길 10 [여의도동]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel" hidden>
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>07236</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 영등포구 국회대로 76길 10</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 영등포구 여의도동 17-8</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+      </div>
+      <button
+        class="ds-button ds-button--primary ds-button--large edu-address-select"
+        type="button"
+        data-address-select
+      >
+        선택
+      </button>
+    </dialog>
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="회원가입 화면 확인">
+        <a href="/account/join/terms/#terms-service">홈페이지 이용약관</a>
+        <a href="/account/join/terms/#terms-privacy">개인정보 수집 이용약관</a>
+        <a href="/account/join/verification/#join-history-dialog">가입이력 있음</a>
+        <a href="/account/join/verification/#pre-member-dialog">선가입회원 있음</a>
+        <a href="/account/join/verification/#pre-member-empty-dialog">선가입회원 미존재</a>
+        <a href="/account/join/verification/#verification-failed-dialog">본인인증 실패</a>
+        <a href="/account/join/information/#address-dialog">주소검색</a>
+      </nav>
+    </details>
+
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/swiper.js"></script>
+    <script src="/assets/js/vendor/datepicker.js"></script>
+    <script src="/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/assets/js/common.js"></script>
+
+    <script src="/assets/js/education.js"></script>
+  </body>
+</html>

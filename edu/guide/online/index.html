@@ -3,107 +3,938 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/datepicker.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <title>사이버교육 안내 | 치위생교육원</title>
   </head>
   <body class="edu-site">
-    <header class="edu-header">
-      <div class="edu-header__utility">
-        <div class="edu-container edu-header__utility-inner">
-          <a href="/kdha/main/">대한치과위생사협회 대표사이트</a>
-          <div>
-            <a href="/kdha/mypage/">마이페이지</a>
-            <a href="/kdha/account/login/">로그인</a>
-          </div>
-        </div>
-      </div>
-      <div class="edu-container edu-header__main">
-        <a class="edu-brand" href="/kdha/edu/" aria-label="치위생교육원 홈">
-          <span class="edu-brand__mark" aria-hidden="true">KDHA</span>
-          <span>
-            <strong>치위생교육원</strong>
-            <small>KOREAN DENTAL HYGIENE EDUCATION INSTITUTE</small>
-          </span>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <header class="site-header">
+      <div class="site-header__inner layout-container">
+        <a class="site-logo site-logo--header" href="/" aria-label="대한치과위생사협회 페이지 인덱스">
+          <img
+            class="site-logo__image"
+            width="220"
+            height="42"
+            alt="대한치과위생사협회"
+            src="/assets/brand/logo-header-b.svg"
+          />
         </a>
-        <nav class="edu-nav" aria-label="교육원 주 메뉴">
-          <a href="/kdha/edu/about/">교육원 소개</a>
-          <div class="edu-nav__group">
-            <a href="/kdha/edu/guide/offline/">교육안내</a>
-            <div class="edu-nav__submenu">
-              <a href="/kdha/edu/guide/offline/">현장교육 안내</a>
-              <a href="/kdha/edu/guide/online/">사이버교육 안내</a>
+        <div class="site-header__navigation">
+          <nav class="utility-nav" aria-label="유틸리티 메뉴">
+            <div class="utility-nav__external">
+              <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
+                덴톡
+              </a>
+              <a
+                class="utility-nav__link"
+                href="http://kdhamall.or.kr/member/login.php?prev=%2F"
+                target="_blank"
+                rel="noreferrer"
+              >
+                KDHA mall
+              </a>
+              <a class="utility-nav__link" href="/en/">영문사이트</a>
             </div>
-          </div>
-          <a href="/kdha/edu/offline/">현장교육</a>
-          <a href="/kdha/edu/online/">사이버교육</a>
-          <a href="/kdha/edu/classroom/applications/">내 강의실</a>
-        </nav>
-        <a class="edu-header__cart" href="/kdha/edu/cart/" aria-label="장바구니">
-          <span class="material-symbols-outlined">shopping_cart</span>
-          <span>2</span>
-        </a>
+            <a class="utility-nav__login" href="/account/login/">로그인</a>
+          </nav>
+          <nav class="primary-nav" aria-label="주 메뉴">
+            <div class="primary-nav__links primary-nav__links--main">
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/news/schedule/">협회소식</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>협회소식</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/schedule/">협회일정</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/videos/">영상자료</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/reports/">연구보고서</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/newsletter/">치위협보</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/resources/">자료실</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/fund/">회관기금</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/career/jobs/">구인구직 상담</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>구인구직 상담</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/career/jobs/">구인ㆍ구직 게시판</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/career/contact/">1:1 상담</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/career/consulting/">법률ㆍ노무 상담</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/education/about/">치위생교육원</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>치위생교육원</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/about/">교육원 소개</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/guide/">교육안내</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/regulations/">관련법규소개</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/offline/">현장교육</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/online/">사이버교육</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/license/report/">면허센터</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>면허센터</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/license/report/">면허신고</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/license/exemption/">보수교육 면제ㆍ유예ㆍ비대상</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a
+                          class="primary-nav__submenu-link"
+                          href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          면허신고센터
+                          <span
+                            class="material-symbols-outlined material-icon"
+                            aria-hidden="true"
+                            style="font-size: 16px; width: 16px; height: 16px"
+                          >
+                            open_in_new
+                          </span>
+                        </a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a
+                          class="primary-nav__submenu-link"
+                          href="https://lic.mohw.go.kr/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          면허증 재교부/조회
+                          <span
+                            class="material-symbols-outlined material-icon"
+                            aria-hidden="true"
+                            style="font-size: 16px; width: 16px; height: 16px"
+                          >
+                            open_in_new
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/community/notices/">소통광장</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>소통광장</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/notices/">공지사항</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/faq/">자주하는 질문</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/surveys/">설문조사</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/organizations/">산하단체 게시판</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/executives/">
+                          시도회ㆍ산하단체 임원게시판
+                        </a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/volunteer/">봉사게시판</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/events/">이벤트</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/examiner-training/">
+                          국가시험 실기시험 채점자교육
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/introduce/greeting/">협회소개</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>협회소개</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/greeting/">인사말</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/history/">연혁</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/articles/">정관</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/organization#map">조직도</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/policybusiness/">주요정책사업</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/dentalhygienist#introduce">
+                          치과위생사소개
+                        </a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/ci/">CI</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/map/">찾아오시는 길</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="primary-nav__links primary-nav__links--education">
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/edu/about/">교육원 소개</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>교육원 소개</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/about/">교육원 소개</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/regulations/">관련법규 소개</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/edu/guide/offline/">교육안내</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>치위생교육원</span>
+                      <strong>교육안내</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/guide/offline/">현장교육 안내</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/guide/online/">사이버교육 안내</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item"><a class="primary-nav__link" href="/edu/offline/">현장교육</a></div>
+              <div class="primary-nav__item"><a class="primary-nav__link" href="/edu/online/">사이버교육</a></div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/edu/classroom/applications/">내 강의실</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>치위생교육원</span>
+                      <strong>내 강의실</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/classroom/applications/">수강신청 현황</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/classroom/progress/">학습진도 현황</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/classroom/completions/">교육이수 현황</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="primary-nav__icon-button primary-nav__education-cart" href="/edu/cart/" aria-label="장바구니">
+              <span
+                class="material-symbols-outlined material-icon"
+                aria-hidden="true"
+                style="font-size: 28px; width: 28px; height: 28px"
+              >
+                shopping_cart
+              </span>
+            </a>
+            <a class="primary-nav__main-login" href="/account/login/">로그인</a>
+            <button class="primary-nav__icon-button primary-nav__search" type="button" aria-label="검색">
+              <span
+                class="material-symbols-outlined material-icon"
+                aria-hidden="true"
+                style="font-size: 28px; width: 28px; height: 28px"
+              >
+                search
+              </span>
+            </button>
+            <button class="primary-nav__icon-button" type="button" aria-label="전체 메뉴">
+              <span
+                class="material-symbols-rounded material-icon"
+                aria-hidden="true"
+                style="font-size: 40px; width: 40px; height: 40px"
+              >
+                dehaze
+              </span>
+            </button>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="edu-sub">
+    <main id="main-content" class="edu-sub">
       <header class="edu-sub__hero">
         <div class="edu-container">
-          <p>EDUCATION GUIDE</p>
+          <p>ONLINE EDUCATION</p>
           <h1>사이버교육 안내</h1>
-          <span>언제 어디서나 학습하고 이수 평점을 관리하세요.</span>
+          <span>사이버 보수교육의 신청, 수강, 수료, 환불 기준을 안내합니다.</span>
         </div>
       </header>
       <div class="edu-container edu-content">
-        <ol class="edu-steps">
-          <li>
-            <span>01</span>
-            <strong>강의 선택</strong>
-            <p>분야·평점·필수 여부를 확인합니다.</p>
-          </li>
-          <li>
-            <span>02</span>
-            <strong>장바구니/결제</strong>
-            <p>수강할 교육을 선택해 결제합니다.</p>
-          </li>
-          <li>
-            <span>03</span>
-            <strong>온라인 학습</strong>
-            <p>내 강의실에서 차시별로 학습합니다.</p>
-          </li>
-          <li>
-            <span>04</span>
-            <strong>평가 완료</strong>
-            <p>진도와 평가기준을 모두 충족합니다.</p>
-          </li>
-          <li>
-            <span>05</span>
-            <strong>이수증 발급</strong>
-            <p>이수 현황에서 증명서를 출력합니다.</p>
-          </li>
-        </ol>
-        <div class="edu-info-callout edu-info-callout--warning">
-          <span class="material-symbols-outlined">verified</span>
+        <section class="legacy-public-content legacy-public-content--edu" aria-label="사이버교육 안내 상세 안내">
+          <!-- container -->
           <div>
-            <strong>필수과목 인정 기준을 꼭 확인해 주세요.</strong>
-            <p>면허신고 1회 기준 필수과목 2평점이 필요하며, 한 번 이수한 교육은 재이수할 수 없습니다.</p>
+            <!-- sub_each -->
+            <article>
+              <!-- top_visu -->
+              <div>
+                <div>
+                  <div>
+                    <img
+                      src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/img_online_edu_info.png"
+                      alt="안내 화면"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div>
+                    <p>
+                      2026년 치과위생사
+                      <b>사이버보수교육 안내</b>
+                    </p>
+                    <div>
+                      <p>
+                        의료기사 등에 관한 법률 제20조 및 동법 시행령 제11조에 의거하여,
+                        <span>치과위생사는 법정 보수교육을 연 8시간(8평점)이상 이수</span>
+                        하여야 합니다.
+                      </p>
+                      <p>
+                        미이수자는 의료관계 행정처분규칙-행정처분기준에 따라 보건복지부장관의 경고 및 면허자격정지 등의
+                        행정처분을 받게 되므로 반드시 보수교육을 이수하여야 합니다.
+                      </p>
+                      <p>
+                        아울러 의료기사 등에 관한 법률에 따른 면허신고 시행으로 보수교육 이수 의무가 더욱 강화되었으므로
+                        아래 일정을 참고하시어 보수교육 이수에 만전을 기하여 주시기 바랍니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- // top_visu -->
+            </article>
+            <!-- // sub_each -->
+            <!-- sub_each -->
+            <article>
+              1. 교육 대상 및 신청 평점
+              <!-- border_box -->
+
+              <p>보수교육 수강 희망자, 원하는 과목 및 평점 신청</p>
+              <!-- // border_box -->
+            </article>
+            <!-- // sub_each -->
+            <!-- sub_each -->
+            <article>
+              2. 접수 및 수강 기간
+              <!-- border_box -->
+              <div>
+                <ul>
+                  <li>
+                    <span>접수기간</span>
+                    :
+                    <span>상시(2026년도 사이버보수교육 오픈 일정은 정해지는 대로 공지 예정)</span>
+                  </li>
+                  <li>
+                    <span>수강기간</span>
+                    : 결제일로부터 14일 (결제 후, 수강종료일 반드시 확인)
+                  </li>
+                </ul>
+              </div>
+              <!-- // border_box -->
+            </article>
+            <!-- // sub_each -->
+            <!-- sub_each -->
+            <article>
+              3. 신청 방법
+              <!-- apply_guide_wrap -->
+              <div>
+                <!-- apply_guide -->
+                <div>
+                  <!-- step -->
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_step01.png"
+                          alt="안내 화면"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      협회홈페이지
+                      <br />
+                      접속
+                    </div>
+                  </div>
+                  <!-- // step -->
+                  <!-- step -->
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_step02.png"
+                          alt="안내 화면"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      치위생교육원
+                      <br />
+                      접속 및 로그인
+                    </div>
+                  </div>
+                  <!-- // step -->
+                  <!-- step -->
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_step03.png"
+                          alt="안내 화면"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      사이버교육 &gt; 교육등록
+                      <br />
+                      원하는 교육 수강 신청
+                    </div>
+                  </div>
+                  <!-- // step -->
+                  <!-- step -->
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_step04.png"
+                          alt="안내 화면"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div>이수년도 설정 및 결제(카드 or 가상계좌)</div>
+                  </div>
+                  <!-- // step -->
+                  <!-- step -->
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_step05.png"
+                          alt="안내 화면"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      마이페이지 &gt;
+                      <br />
+                      사이버교육 강의실 &gt;
+                      <br />
+                      결제한 교육 클릭
+                    </div>
+                  </div>
+                  <!-- // step -->
+                  <!-- step -->
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_step06.png"
+                          alt="안내 화면"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      14일동안 수강
+                      <br />
+                      (진도율 체크)
+                    </div>
+                  </div>
+                  <!-- // step -->
+                  <!-- step -->
+                  <div>
+                    <div>
+                      <div>
+                        <img
+                          src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_step07.png"
+                          alt="안내 화면"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <span>수강이 완료된 경우</span>
+                      마이페이지 &gt; 보수교육 현황 확인
+                    </div>
+                  </div>
+                  <!-- // step -->
+                  <!-- step -->
+                  <!-- <div class="step step8 wow fadeInUp" data-wow-delay="1.6s"> -->
+                  <!-- 	<div class="left"> -->
+                  <!-- 		<div class="img_wrap"> -->
+                  <!-- 			<img src="/Common/template/cms/user/images/sub/ico_step08.png" alt=""> -->
+                  <!-- 		</div> -->
+                  <!-- 	</div> -->
+                  <!-- 	<div class="right"  style=""><span style="color: #ff4a4a;">수강종료일로부터 3일 후</span> 협회홈페이지 > 마이페이지 > 보수교육 이수현황 확인</div> -->
+                  <!-- </div> -->
+                  <!-- // step -->
+                </div>
+                <!-- // apply_guide -->
+              </div>
+              <!-- // apply_guide_wrap -->
+            </article>
+            <!-- // sub_each -->
+            <!-- sub_each -->
+            <article>
+              4. 보수교육 등록비
+              <ul>
+                <li>
+                  <em>①</em>
+                  교육과정 운영에 지출하는 비용을 직접비와 간접비로 산정하여 부과합니다.
+                </li>
+                <li>
+                  <em>②</em>
+                  보수교육 직접비는 협회비 완납 회원과 미납 회원에게 동일하게 부과합니다.
+                </li>
+                <li>
+                  <em>③</em>
+                  간접비는 합리적으로 산정하여 협회비 미납 회원에게 부과합니다.
+                </li>
+              </ul>
+              <table>
+                <caption>표 입니다.</caption>
+                <colgroup>
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">회비완납회원(원)</th>
+                    <th scope="col">회비미납회원(원)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1평점</td>
+                    <td>10,000</td>
+                    <td>20,000</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul>
+                <li>회비완납회원(등록정회원, 평생회원, 임시정회원) : 직접비</li>
+                <li>회비미납회원(등록준회원, 미등록회원) : 직접비 + 간접비</li>
+              </ul>
+
+              <div>
+                <div>
+                  <p>직접비</p>
+                  <ul>
+                    <li>
+                      각 교육 별로 강사료, 교재비, 임차료 등 교육에 직접 소요되는 비용 전체를 총 교육대상자 수로 나누어
+                      1인당 비용을 산정합니다.
+                    </li>
+                  </ul>
+                  <div>
+                    <table>
+                      <caption>표 입니다.</caption>
+                      <colgroup>
+                        <col />
+                        <col />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th colspan="3">직접비 산정근거</th>
+                        </tr>
+                        <tr>
+                          <th scope="col">구분</th>
+                          <th scope="col">항목</th>
+                          <th scope="col">소계(천원)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="2">교육개발비</td>
+                          <td>콘텐츠 개발비</td>
+                          <td>200,000</td>
+                        </tr>
+                        <tr>
+                          <td>연자료</td>
+                          <td>40,000</td>
+                        </tr>
+                        <tr>
+                          <td rowspan="2">일반수용비</td>
+                          <td>홈페이지유지보수비</td>
+                          <td>30,000</td>
+                        </tr>
+                        <tr>
+                          <td>서버운영 비용</td>
+                          <td>600,000</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">합계</td>
+                          <td>870,000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p>세부산출 근거</p>
+                  <ul>
+                    <li>2026년 사이버보수교육 예상 이수점수 87,000점</li>
+                    <li>2026년 사이버보수교육 관련 직접비 지출 870,000천원</li>
+                    <li>870,000천원 / 87,000점</li>
+                    <li>직접비(1점) = 10,000원</li>
+                    <!--<li>간접비 산정근거는 공지사항 등록비 안내를 참조 </li> -->
+                  </ul>
+                </div>
+                <div>
+                  <!--
+                                <p style="color: #b645d0; font-weight: 500">간접비</p>
+								<ul class="bar_list">
+									<li>협회가 소요하는 비용 중 보수교육과 관련 있는 운영비, 담당자 인건비, 사무비 등을 보수교육 업무에 드는 비중을 고려하여 연간 교육대상자로 나누어 비용을 산정합니다.</li>
+								</ul>
+                                -->
+                  <p>
+                    <!--※ 중앙회 간접비는 하단 보수교육 등록비 안내 파일 참조-->
+                    ※ 정회원 · 평생회원의 경우, 협회 회원증 카드로 사이버보수교육비 결제 시 10% 캐시백(결제월 익월말)
+                  </p>
+                </div>
+              </div>
+              <div>
+                <a
+                  href="https://www.kdha.or.kr/Download/2026%EB%85%84%20%EC%A4%91%EC%95%99%ED%9A%8C%20%EA%B0%84%EC%A0%91%EB%B9%84%20%EC%82%B0%EC%A0%95%EA%B7%BC%EA%B1%B0.hwp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="보수교육 등록비 안내 페이지로 새 창 이동합니다"
+                  title="보수교육 등록비 안내 페이지로 새 창 이동합니다"
+                >
+                  보수교육 등록비 안내
+                </a>
+              </div>
+            </article>
+            <!-- // sub_each -->
+            <!-- sub_each -->
+            <article>
+              5. 환불 안내 사이버보수교육 등록비 환불기준
+              <div>
+                <table>
+                  <caption>표 입니다.</caption>
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">환불신청일</th>
+                      <th scope="col">수강기간/수강진도율</th>
+                      <th scope="col">환불금액</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="4">결제 후 1개월 이내</td>
+                      <td>수강 전</td>
+                      <td>등록비 전액</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        수강기간(또는 수강진도율)
+                        <br />
+                        1/3이 지나기 전
+                      </td>
+                      <td>등록비의 2/3에 해당하는 비용</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        수강기간(또는 수강진도율)
+                        <br />
+                        1/3이 지난 후 1/2이 지나기 이전
+                      </td>
+                      <td>등록비의 1/2에 해당하는 비용</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        수강기간(또는 수강진도율)
+                        <br />
+                        1/2이 지난 후
+                      </td>
+                      <td>환불 불가</td>
+                    </tr>
+                    <tr>
+                      <td>결제 후 1개월 이후</td>
+                      <td>무관</td>
+                      <td>환불 불가</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">
+                        <div>
+                          <p>
+                            ※ 수강신청 취소/환불은
+                            <span>[치위생교육원&gt;마이페이지&gt;결제정보&gt;결제내역]</span>
+                            에서 진행하실 수 있습니다.
+                          </p>
+                          <p>
+                            ※ 치위생교육원 내 환불처리는 주말, 공휴일 제외 최대 7일 소요됩니다. (신용카드의 경우,
+                            카드사별로 처리기간 상이)
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <em>①</em>
+                    인터넷콘텐츠업에 명시된 규정 및 평생교육법 학습비 반환기준을 근거하여 운영합니다.
+                  </li>
+                  <li>
+                    <em>②</em>
+                    수강하신 과목에 대해서는 환불이 절대 불가합니다.
+                  </li>
+                  <li>
+                    <em>③</em>
+                    환불은 절차에 따라 주말, 공휴일 제외 최대 7일 소요될 수 있습니다. (신용카드의 경우, 카드사별로 처리
+                    기간 상이)
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <!-- // sub_each -->
+            <!-- sub_each -->
+            <article>
+              6. 이수증 및 수료증 출력
+              <div>
+                <div><p>치위생교육원 로그인</p></div>
+                <div><p>마이페이지</p></div>
+                <div><p>보수교육현황</p></div>
+                <div><p>이수증 및 수료증 출력</p></div>
+              </div>
+            </article>
+            <!-- // sub_each -->
+            <!-- sub_each -->
+            <article>
+              7. 기타 안내
+              <div>
+                <ul>
+                  <li>
+                    <em>①</em>
+                    협회홈페이지 개인정보에 면허번호가 등록(치과위생사회원 전환)되어야 [면허신고센터 및 치위생교육원
+                    보수교육현황]에서 교육내역 확인이 가능하오니 반드시 협회홈페이지에 면허번호를 등록하여 주시기
+                    바랍니다.
+                  </li>
+                  <li>
+                    <em>②</em>
+                    2026.1.1(회원등급 변경 기준일)이후 등록일 현재 회원등급이 재확인·적용되오니 회원등급 확인 후 수강
+                    신청을 진행하여 주시기 바랍니다.
+                  </li>
+                  <li>
+                    <em>③</em>
+                    이전에 사이버보수교육으로 수강하신 과목을 재수강하는 경우, 평점인정이 불가하오니
+                    [치위생교육원-마이페이지-보수교육현황]을 확인하시어 수강하신 과목은 피해주시기 바랍니다.
+                  </li>
+                  <li>
+                    <em>④</em>
+                    모바일로도 교육을 수강하실 수 있습니다.
+                  </li>
+                  <li>
+                    <em>⑤</em>
+                    수강기간 내에 수강하지 못한 경우, 신청 시 1회에 한하여 수강종료일로부터 일주일동안 기간연장이
+                    가능합니다.
+                  </li>
+                  <li>
+                    <em>⑥</em>
+                    설정했던 이수년도의 변경을 원하는 경우, [치위생교육원-마이페이지-교육등록현황]에서 교육명 클릭 시
+                    직접 변경이 가능합니다. (단, 수강이 완료된 강의는 변경 불가)
+                  </li>
+                  <li>
+                    <em>⑦</em>
+                    교육 수강완료 후 다음 날 [치위생교육원-마이페이지-보수교육현황]에서 반영된 점수를 확인하실 수
+                    있습니다.
+                  </li>
+                  <li>
+                    <em>⑧</em>
+                    교육영상 시청 시 다양한 팝업창이 생성되는데 창의 확인버튼을 누르지 않으면 영상이 다시 재생되지
+                    않습니다.
+                  </li>
+                  <li>
+                    <em>⑨</em>
+                    강의 중간 강의내용에 대한 퀴즈 풀이가 있습니다. 강의를 정상적으로 시청하시는 경우 무리없이 문제를
+                    푸실 수 있으며 총 2번의 기회가 주어집니다. 모두 오답일 경우 영상이 이전 시점으로 돌아가게 되오니
+                    집중하여 수강해 주시기 바랍니다.
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <!-- // sub_each -->
           </div>
-        </div>
-        <a class="edu-button edu-button--primary" href="/kdha/edu/online/">사이버교육 찾기</a>
+          <!-- // container -->
+        </section>
       </div>
     </main>
-    <footer class="edu-footer">
-      <div class="edu-container edu-footer__inner">
-        <div>
-          <strong>치위생교육원</strong>
-          <p>서울특별시 동대문구 고산자로 566 치과위생사회관 · 02-2236-0914</p>
-        </div>
-        <div class="edu-footer__links">
-          <a href="/kdha/edu/privacy/">개인정보처리방침</a>
-          <a href="/kdha/main/">대표사이트</a>
+    <footer class="site-footer">
+      <div class="site-footer__inner layout-container">
+        <a class="site-logo site-logo--footer" href="/main/" aria-label="대한치과위생사협회 홈">
+          <img
+            class="site-logo__image"
+            width="290"
+            height="55"
+            alt="대한치과위생사협회"
+            src="/assets/brand/logo-footer.png"
+          />
+        </a>
+        <address class="site-footer__address">
+          105-82-07361(통신판매번호 : 제2010-서울동대문-0959호)　|　대표자 : 박정란
+          <br />
+          서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)
+        </address>
+        <p class="site-footer__contact">TEL. 02-2236-0914　 FAX. 02-2236-0915</p>
+        <div class="site-footer__bottom">
+          <div class="site-footer__legal">
+            <div class="site-footer__legal-links">
+              <a href="/privacy/">개인정보처리방침</a>
+              <a href="/remote-support/">원격지원</a>
+              <a href="/related-sites/">관련사이트</a>
+              <a href="/regional-sites">시도회 사이트</a>
+            </div>
+            <p>Copyright ⓒ 2026 KDHA. All rights Reserved</p>
+          </div>
+          <div class="social-links">
+            <a
+              class="social-links__item"
+              href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="대한치과위생사협회 공식 유튜브(새 창)"
+            >
+              <img class="social-links__image" width="20" height="20" alt="" src="/assets/social/sns-youtube.png" />
+            </a>
+            <a
+              class="social-links__item"
+              href="https://ko-kr.facebook.com/koreadha/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="대한치과위생사협회 페이스북(새 창)"
+            >
+              <img class="social-links__image" width="20" height="20" alt="" src="/assets/social/sns-facebook.png" />
+            </a>
+            <a
+              class="social-links__item"
+              href="https://www.instagram.com/krdha77/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="대한치과위생사협회 인스타그램(새 창)"
+            >
+              <img class="social-links__image" width="20" height="20" alt="" src="/assets/social/sns-instagram.png" />
+            </a>
+          </div>
         </div>
       </div>
-      <p class="edu-footer__copyright">COPYRIGHT © KDHA. ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/swiper.js"></script>
+    <script src="/assets/js/vendor/datepicker.js"></script>
+    <script src="/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/assets/js/common.js"></script>
   </body>
 </html>

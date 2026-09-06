@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <title>Components | KDHA Design System</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <main id="main-content" class="foundation-page component-catalog-page">
+      <header class="system-header">
+        <h1 class="system-header__title">Components</h1>
+        <p class="system-header__description">
+          Figma 라이브러리와 실제 퍼블리싱에서 공통으로 사용하는 인터페이스 요소를 한곳에 정리했습니다.
+        </p>
+      </header>
+      <div class="foundation-page__content">
+        <section class="foundation-section">
+          <div class="foundation-section__heading">
+            <h2>Component Map</h2>
+            <p>대표·교육원·시도회·영문 사이트가 같은 클래스와 접근성 구조를 공유합니다.</p>
+          </div>
+          <div class="component-inventory-grid">
+            <a class="component-inventory-card" href="/design-system/button">
+              <span class="component-inventory-card__category">Action</span>
+              <strong>Button</strong>
+              <p>Primary / Outline · L / M / S · Default / Hover / Pressed / Disabled</p>
+            </a>
+            <a class="component-inventory-card" href="/design-system/form/">
+              <span class="component-inventory-card__category">Form</span>
+              <strong>Input Field</strong>
+              <p>M 48px / L 56px · Default / Focused / Error / Disabled · 단일·2단 입력</p>
+            </a>
+            <a class="component-inventory-card" href="/design-system/form/#selection">
+              <span class="component-inventory-card__category">Element</span>
+              <strong>Checkbox</strong>
+              <p>Unchecked / Checked · Default / Hover / Focused / Disabled</p>
+            </a>
+            <a class="component-inventory-card" href="/design-system/overlay/">
+              <span class="component-inventory-card__category">Overlay</span>
+              <strong>Modal / Dialog</strong>
+              <p>PC 560px / MO 320px · Overlay Dim · 일반 Dialog / 작은 Alert</p>
+            </a>
+            <a class="component-inventory-card" href="#tabs">
+              <span class="component-inventory-card__category">Navigation</span>
+              <strong>Tab</strong>
+              <p>PC / MO · tab_on / tab_off. 페이지 내 동일 레벨 콘텐츠 전환에 사용합니다.</p>
+            </a>
+            <a class="component-inventory-card" href="#link">
+              <span class="component-inventory-card__category">Action</span>
+              <strong>Link</strong>
+              <p>아이콘형 M / S · 밑줄형 M / S · Default / Disabled / hover / Click</p>
+            </a>
+            <article class="component-inventory-card component-inventory-card--reference">
+              <span class="component-inventory-card__category">Status</span>
+              <strong>Badge / Chip</strong>
+              <p>높이 30px의 5개 유형. 목록 상태, 카테고리와 짧은 메타 정보에 사용합니다.</p>
+            </article>
+            <a class="component-inventory-card" href="#guide-list">
+              <span class="component-inventory-card__category">Content</span>
+              <strong>Guide List</strong>
+              <p>짧은 안내 문구와 인라인 링크·버튼을 묶어 제공하는 공통 설명문구입니다.</p>
+            </a>
+            <a class="component-inventory-card" href="/design-system/icon/">
+              <span class="component-inventory-card__category">Graphic</span>
+              <strong>Icon</strong>
+              <p>Google Material Symbols를 기본 Weight 300으로 불러오고 실제 사용 아이콘을 자동 수집합니다.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="foundation-section" id="link">
+          <div class="foundation-section__heading">
+            <h2>Link</h2>
+            <p>화면 이동이나 관련 콘텐츠 탐색에 사용하며 Figma Link 컴포넌트의 크기와 상태를 공유합니다.</p>
+          </div>
+          <div class="link-state-table" aria-label="링크 유형 및 상태 예시">
+            <strong>Type</strong>
+            <strong>Default</strong>
+            <strong>Disabled</strong>
+            <strong>hover</strong>
+            <strong>Click</strong>
+
+            <strong>Icon M</strong>
+            <a class="ds-link ds-link--more ds-link--medium" href="#link">
+              더보기
+              <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+            </a>
+            <a class="ds-link ds-link--more ds-link--medium" href="#link" aria-disabled="true" tabindex="-1">
+              더보기
+              <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+            </a>
+
+            <a class="ds-link ds-link--more ds-link--medium is-hover" href="#link">
+              더보기
+              <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+            </a>
+            <a class="ds-link ds-link--more ds-link--medium is-pressed" href="#link">
+              더보기
+              <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+            </a>
+
+            <strong>Icon S</strong>
+            <a class="ds-link ds-link--more ds-link--small" href="#link">
+              더보기
+              <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+            </a>
+            <a class="ds-link ds-link--more ds-link--small" href="#link" aria-disabled="true" tabindex="-1">
+              더보기
+              <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+            </a>
+
+            <a class="ds-link ds-link--more ds-link--small is-hover" href="#link">
+              더보기
+              <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+            </a>
+            <a class="ds-link ds-link--more ds-link--small is-pressed" href="#link">
+              더보기
+              <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+            </a>
+
+            <strong>Text M</strong>
+            <span class="ds-link-group">
+              <a class="ds-link ds-link--text ds-link--medium" href="#link">더보기</a>
+              <span class="ds-link-group__suffix"></span>
+            </span>
+            <span class="ds-link-group">
+              <a class="ds-link ds-link--text ds-link--medium" href="#link" aria-disabled="true" tabindex="-1">
+                더보기
+              </a>
+              <span class="ds-link-group__suffix"></span>
+            </span>
+
+            <span class="ds-link-group">
+              <a class="ds-link ds-link--text ds-link--medium is-hover" href="#link">더보기</a>
+              <span class="ds-link-group__suffix"></span>
+            </span>
+            <span class="ds-link-group">
+              <a class="ds-link ds-link--text ds-link--medium is-pressed" href="#link">더보기</a>
+              <span class="ds-link-group__suffix"></span>
+            </span>
+
+            <strong>Text S</strong>
+            <span class="ds-link-group">
+              <a class="ds-link ds-link--text ds-link--small" href="#link">더보기</a>
+              <span class="ds-link-group__suffix"></span>
+            </span>
+            <span class="ds-link-group">
+              <a class="ds-link ds-link--text ds-link--small" href="#link" aria-disabled="true" tabindex="-1">더보기</a>
+              <span class="ds-link-group__suffix"></span>
+            </span>
+
+            <span class="ds-link-group">
+              <a class="ds-link ds-link--text ds-link--small is-hover" href="#link">더보기</a>
+              <span class="ds-link-group__suffix"></span>
+            </span>
+            <span class="ds-link-group">
+              <a class="ds-link ds-link--text ds-link--small is-pressed" href="#link">더보기</a>
+              <span class="ds-link-group__suffix"></span>
+            </span>
+          </div>
+          <pre class="component-code"><code>&lt;!-- 공통 아이콘형 링크 --&gt;
+<a class="ds-link ds-link--more ds-link--medium " href="/path" >
+  더보기
+  <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+</a>
+
+
+&lt;!-- 공통 밑줄형 링크 --&gt;
+<span class="ds-link-group">
+  <a class="ds-link ds-link--text ds-link--medium " href="/path" >더보기</a>
+  <span class="ds-link-group__suffix"></span>
+</span>
+</code></pre>
+        </section>
+
+        <section class="foundation-section" id="tabs" data-tabs-root>
+          <div class="foundation-section__heading">
+            <h2>Tab</h2>
+            <p>같은 영역의 콘텐츠를 전환하며 마우스·터치·키보드에서 동일하게 사용할 수 있습니다.</p>
+          </div>
+          <div class="tabs-specimen">
+            <div class="ds-tabs" data-tabs role="tablist" aria-label="탭 컴포넌트 예시">
+              <button
+                class="ds-tabs__item"
+                id="component-tab-certificate"
+                type="button"
+                data-tab
+                role="tab"
+                aria-selected="true"
+                aria-controls="component-panel-certificate"
+              >
+                인증서
+              </button>
+              <button
+                class="ds-tabs__item"
+                id="component-tab-phone"
+                type="button"
+                data-tab
+                role="tab"
+                aria-selected="false"
+                aria-controls="component-panel-phone"
+                tabindex="-1"
+              >
+                휴대폰인증
+              </button>
+              <button
+                class="ds-tabs__item"
+                id="component-tab-ipin"
+                type="button"
+                data-tab
+                role="tab"
+                aria-selected="false"
+                aria-controls="component-panel-ipin"
+                tabindex="-1"
+              >
+                아이핀인증
+              </button>
+            </div>
+            <div id="component-panel-certificate" role="tabpanel" aria-labelledby="component-tab-certificate">
+              인증서 콘텐츠 영역
+            </div>
+            <div id="component-panel-phone" role="tabpanel" aria-labelledby="component-tab-phone" hidden>
+              휴대폰인증 콘텐츠 영역
+            </div>
+            <div id="component-panel-ipin" role="tabpanel" aria-labelledby="component-tab-ipin" hidden>
+              아이핀인증 콘텐츠 영역
+            </div>
+          </div>
+          <pre class="component-code"><code>&lt;section data-tabs-root&gt;
+  &lt;div class="ds-tabs" data-tabs role="tablist" aria-label="콘텐츠 분류"&gt;
+    &lt;button class="ds-tabs__item" data-tab role="tab" aria-selected="true" aria-controls="panel-1"&gt;탭 1&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div id="panel-1" role="tabpanel"&gt;콘텐츠&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+        </section>
+
+        <section class="foundation-section" id="guide-list">
+          <div class="foundation-section__heading">
+            <h2>Guide List</h2>
+            <p>로그인·회원가입 등에서 보조 안내와 다음 행동을 간결하게 제공합니다.</p>
+          </div>
+          <div class="guide-list-specimen">
+            <ul class="ds-guide-list">
+              <li class="ds-guide-list__item">
+                <span class="ds-guide-list__content">입력하신 주민등록번호는 실명인증의 목적으로만 사용됩니다.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="guide-list-specimen">
+            <ul class="ds-guide-list">
+              <li class="ds-guide-list__item">
+                <span class="ds-guide-list__content">
+                  아직 회원이 아니신가요?
+                  <span class="ds-link-group">
+                    <a class="ds-link ds-link--text ds-link--medium" href="/account/join/">회원가입</a>
+                    <span class="ds-link-group__suffix"></span>
+                  </span>
+                </span>
+              </li>
+              <li class="ds-guide-list__item">
+                <span class="ds-guide-list__content">
+                  선가입 회원이라면
+                  <span class="ds-link-group">
+                    <button class="ds-link ds-link--text ds-link--medium" type="button">회원등록</button>
+                    <span class="ds-link-group__suffix">을</span>
+                  </span>
+                  먼저 진행해 주세요.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <pre class="component-code"><code>&lt;ul class="ds-guide-list"&gt;
+  &lt;li class="ds-guide-list__item"&gt;
+    &lt;span class="ds-guide-list__content"&gt;
+      안내 문구
+      <span class="ds-link-group">
+  <a class="ds-link ds-link--text ds-link--medium " href="/path" >텍스트 링크</a>
+  <span class="ds-link-group__suffix"></span>
+</span>
+
+    &lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </section>
+
+        <section class="foundation-section">
+          <div class="foundation-section__heading">
+            <h2>Implementation Rule</h2>
+          </div>
+          <ul class="component-rule-list">
+            <li>디자인 값은 공통 SCSS 토큰으로 선언하고 페이지별 하드코딩을 피합니다.</li>
+            <li>
+              상태는 색상만으로 전달하지 않고 disabled, aria-selected, aria-invalid 등 의미 속성을 함께 제공합니다.
+            </li>
+            <li>마우스 hover와 키보드 focus-visible을 각각 제공하며 공통 포커스 표시를 제거하지 않습니다.</li>
+            <li>Dialog는 네이티브 dialog 요소와 제목 연결, 닫기 후 포커스 복귀를 기본으로 합니다.</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/swiper.js"></script>
+    <script src="/assets/js/vendor/datepicker.js"></script>
+    <script src="/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/assets/js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <title>Form | KDHA Design System</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <main id="main-content" class="foundation-page form-system-page">
+      <header class="system-header">
+        <h1 class="system-header__title">Form</h1>
+        <p class="system-header__description">대표·교육원·영문·시도회에서 공통으로 사용하는 입력 컴포넌트입니다.</p>
+      </header>
+      <div class="foundation-page__content">
+        <section class="foundation-section">
+          <div class="foundation-section__heading">
+            <h2>Text Field</h2>
+            <p>Figma Input Field의 M 48px, L 56px와 기본·포커스·오류·비활성 상태입니다.</p>
+          </div>
+          <div class="form-specimen-grid">
+            <article>
+              <span>Default</span>
+              <label class="form-field form-field--helper">
+                <span>아이디</span>
+                <input type="text" placeholder="아이디를 입력해 주세요" />
+                <small>도움말을 입력해 주세요.</small>
+              </label>
+            </article>
+            <article>
+              <span>Value</span>
+              <label class="form-field is-focused">
+                <span>아이디</span>
+                <input type="text" value="kdha2026" aria-label="포커스 상태 아이디" />
+              </label>
+            </article>
+            <article>
+              <span>Disabled</span>
+              <label class="form-field form-field--large">
+                <span>이름</span>
+                <input type="text" value="홍길동" disabled />
+              </label>
+            </article>
+            <article>
+              <span>Readonly</span>
+              <label class="form-field form-field--large">
+                <span>생년월일</span>
+                <input type="text" value="1990-01-01" readonly />
+              </label>
+            </article>
+            <article>
+              <span>Error</span>
+              <label class="form-field has-error">
+                <span>비밀번호</span>
+                <input type="password" value="1234" aria-invalid="true" aria-describedby="form-password-error" />
+                <small id="form-password-error">영문 소문자와 숫자를 조합해 6~20자로 입력해 주세요.</small>
+              </label>
+            </article>
+          </div>
+        </section>
+        <section class="foundation-section" id="selection">
+          <div class="foundation-section__heading">
+            <h2>Select &amp; Textarea</h2>
+            <p>목록 선택과 여러 줄 입력에 사용하는 공통 형태입니다.</p>
+          </div>
+          <div class="form-specimen-grid">
+            <article>
+              <span>Select</span>
+              <label class="form-field">
+                <span>지역</span>
+                <select data-custom-select>
+                  <option>지역을 선택해 주세요</option>
+                  <option>서울특별시</option>
+                  <option>부산광역시</option>
+                </select>
+              </label>
+            </article>
+            <article class="form-specimen-grid__wide">
+              <span>Textarea</span>
+              <label class="form-field">
+                <span>문의 내용</span>
+                <textarea placeholder="내용을 입력해 주세요"></textarea>
+                <small>최대 1,000자까지 입력할 수 있습니다.</small>
+              </label>
+            </article>
+          </div>
+        </section>
+        <section class="foundation-section">
+          <div class="foundation-section__heading">
+            <h2>Input Action</h2>
+            <p>중복 확인, 주소 검색처럼 입력창과 버튼을 함께 사용하는 형태입니다.</p>
+          </div>
+          <article class="form-specimen-single">
+            <label class="form-field form-field--wide">
+              <span>주소</span>
+              <span class="form-input-action">
+                <input type="text" placeholder="주소찾기를 이용해 주세요" readonly />
+                <button class="form-action-button" type="button">주소찾기</button>
+              </span>
+              <input type="text" placeholder="상세주소를 입력해 주세요" />
+            </label>
+          </article>
+        </section>
+        <section class="foundation-section">
+          <div class="foundation-section__heading">
+            <h2>Selection</h2>
+            <p>체크박스와 라디오 버튼은 동일한 라벨 구조를 사용합니다.</p>
+          </div>
+          <div class="form-selection-preview">
+            <label class="form-check">
+              <input type="checkbox" checked />
+              선택됨
+            </label>
+            <label class="form-check">
+              <input type="checkbox" />
+              선택 안 됨
+            </label>
+            <label class="form-check">
+              <input type="radio" name="sample" checked />
+              동의함
+            </label>
+            <label class="form-check">
+              <input type="radio" name="sample" />
+              동의안함
+            </label>
+            <label class="form-check">
+              <input type="checkbox" disabled />
+              비활성
+            </label>
+          </div>
+        </section>
+        <section class="foundation-section">
+          <div class="foundation-section__heading"><h2>Class Guide</h2></div>
+          <div class="form-class-guide">
+            <code>.form-field</code>
+            <span>기본 필드</span>
+            <code>.form-field.has-error</code>
+            <span>오류 상태</span>
+            <code>.form-field--large</code>
+            <span>L 크기 입력창(56px)</span>
+            <code>.form-field--helper</code>
+            <span>도움말 노출</span>
+            <code>.form-field--wide</code>
+            <span>그리드 전체 너비</span>
+            <code>.form-input-action</code>
+            <span>입력창과 버튼 조합</span>
+            <code>.form-action-button</code>
+            <span>입력창 옆 공통 실행 버튼</span>
+            <code>select[data-custom-select]</code>
+            <span>공통 커스텀 셀렉트</span>
+            <code>.form-check</code>
+            <span>체크박스·라디오</span>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/swiper.js"></script>
+    <script src="/assets/js/vendor/datepicker.js"></script>
+    <script src="/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/assets/js/common.js"></script>
+  </body>
+</html>

@@ -3,102 +3,496 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/datepicker.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <title>교육원 소개 | 치위생교육원</title>
   </head>
   <body class="edu-site">
-    <header class="edu-header">
-      <div class="edu-header__utility">
-        <div class="edu-container edu-header__utility-inner">
-          <a href="/kdha/main/">대한치과위생사협회 대표사이트</a>
-          <div>
-            <a href="/kdha/mypage/">마이페이지</a>
-            <a href="/kdha/account/login/">로그인</a>
-          </div>
-        </div>
-      </div>
-      <div class="edu-container edu-header__main">
-        <a class="edu-brand" href="/kdha/edu/" aria-label="치위생교육원 홈">
-          <span class="edu-brand__mark" aria-hidden="true">KDHA</span>
-          <span>
-            <strong>치위생교육원</strong>
-            <small>KOREAN DENTAL HYGIENE EDUCATION INSTITUTE</small>
-          </span>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <header class="site-header">
+      <div class="site-header__inner layout-container">
+        <a class="site-logo site-logo--header" href="/" aria-label="대한치과위생사협회 페이지 인덱스">
+          <img
+            class="site-logo__image"
+            width="220"
+            height="42"
+            alt="대한치과위생사협회"
+            src="/assets/brand/logo-header-b.svg"
+          />
         </a>
-        <nav class="edu-nav" aria-label="교육원 주 메뉴">
-          <a href="/kdha/edu/about/">교육원 소개</a>
-          <div class="edu-nav__group">
-            <a href="/kdha/edu/guide/offline/">교육안내</a>
-            <div class="edu-nav__submenu">
-              <a href="/kdha/edu/guide/offline/">현장교육 안내</a>
-              <a href="/kdha/edu/guide/online/">사이버교육 안내</a>
+        <div class="site-header__navigation">
+          <nav class="utility-nav" aria-label="유틸리티 메뉴">
+            <div class="utility-nav__external">
+              <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
+                덴톡
+              </a>
+              <a
+                class="utility-nav__link"
+                href="http://kdhamall.or.kr/member/login.php?prev=%2F"
+                target="_blank"
+                rel="noreferrer"
+              >
+                KDHA mall
+              </a>
+              <a class="utility-nav__link" href="/en/">영문사이트</a>
             </div>
-          </div>
-          <a href="/kdha/edu/offline/">현장교육</a>
-          <a href="/kdha/edu/online/">사이버교육</a>
-          <a href="/kdha/edu/classroom/applications/">내 강의실</a>
-        </nav>
-        <a class="edu-header__cart" href="/kdha/edu/cart/" aria-label="장바구니">
-          <span class="material-symbols-outlined">shopping_cart</span>
-          <span>2</span>
-        </a>
+            <a class="utility-nav__login" href="/account/login/">로그인</a>
+          </nav>
+          <nav class="primary-nav" aria-label="주 메뉴">
+            <div class="primary-nav__links primary-nav__links--main">
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/news/schedule/">협회소식</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>협회소식</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/schedule/">협회일정</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/videos/">영상자료</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/reports/">연구보고서</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/newsletter/">치위협보</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/resources/">자료실</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/news/fund/">회관기금</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/career/jobs/">구인구직 상담</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>구인구직 상담</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/career/jobs/">구인ㆍ구직 게시판</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/career/contact/">1:1 상담</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/career/consulting/">법률ㆍ노무 상담</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/education/about/">치위생교육원</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>치위생교육원</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/about/">교육원 소개</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/guide/">교육안내</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/regulations/">관련법규소개</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/offline/">현장교육</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/education/online/">사이버교육</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/license/report/">면허센터</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>면허센터</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/license/report/">면허신고</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/license/exemption/">보수교육 면제ㆍ유예ㆍ비대상</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a
+                          class="primary-nav__submenu-link"
+                          href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          면허신고센터
+                          <span
+                            class="material-symbols-outlined material-icon"
+                            aria-hidden="true"
+                            style="font-size: 16px; width: 16px; height: 16px"
+                          >
+                            open_in_new
+                          </span>
+                        </a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a
+                          class="primary-nav__submenu-link"
+                          href="https://lic.mohw.go.kr/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          면허증 재교부/조회
+                          <span
+                            class="material-symbols-outlined material-icon"
+                            aria-hidden="true"
+                            style="font-size: 16px; width: 16px; height: 16px"
+                          >
+                            open_in_new
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/community/notices/">소통광장</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>소통광장</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/notices/">공지사항</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/faq/">자주하는 질문</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/surveys/">설문조사</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/organizations/">산하단체 게시판</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/executives/">
+                          시도회ㆍ산하단체 임원게시판
+                        </a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/volunteer/">봉사게시판</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/events/">이벤트</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/community/examiner-training/">
+                          국가시험 실기시험 채점자교육
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/introduce/greeting/">협회소개</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>협회소개</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/greeting/">인사말</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/history/">연혁</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/articles/">정관</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/organization#map">조직도</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/policybusiness/">주요정책사업</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/dentalhygienist#introduce">
+                          치과위생사소개
+                        </a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/ci/">CI</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/introduce/map/">찾아오시는 길</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="primary-nav__links primary-nav__links--education">
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/edu/about/">교육원 소개</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>대한치과위생사협회</span>
+                      <strong>교육원 소개</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/about/">교육원 소개</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/regulations/">관련법규 소개</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/edu/guide/offline/">교육안내</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>치위생교육원</span>
+                      <strong>교육안내</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/guide/offline/">현장교육 안내</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/guide/online/">사이버교육 안내</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="primary-nav__item"><a class="primary-nav__link" href="/edu/offline/">현장교육</a></div>
+              <div class="primary-nav__item"><a class="primary-nav__link" href="/edu/online/">사이버교육</a></div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/edu/classroom/applications/">내 강의실</a>
+                <div class="primary-nav__submenu">
+                  <div class="primary-nav__submenu-inner layout-container">
+                    <div class="primary-nav__submenu-heading">
+                      <span>치위생교육원</span>
+                      <strong>내 강의실</strong>
+                    </div>
+                    <ul class="primary-nav__submenu-list">
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/classroom/applications/">수강신청 현황</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/classroom/progress/">학습진도 현황</a>
+                      </li>
+                      <li class="primary-nav__submenu-item">
+                        <a class="primary-nav__submenu-link" href="/edu/classroom/completions/">교육이수 현황</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="primary-nav__icon-button primary-nav__education-cart" href="/edu/cart/" aria-label="장바구니">
+              <span
+                class="material-symbols-outlined material-icon"
+                aria-hidden="true"
+                style="font-size: 28px; width: 28px; height: 28px"
+              >
+                shopping_cart
+              </span>
+            </a>
+            <a class="primary-nav__main-login" href="/account/login/">로그인</a>
+            <button class="primary-nav__icon-button primary-nav__search" type="button" aria-label="검색">
+              <span
+                class="material-symbols-outlined material-icon"
+                aria-hidden="true"
+                style="font-size: 28px; width: 28px; height: 28px"
+              >
+                search
+              </span>
+            </button>
+            <button class="primary-nav__icon-button" type="button" aria-label="전체 메뉴">
+              <span
+                class="material-symbols-rounded material-icon"
+                aria-hidden="true"
+                style="font-size: 40px; width: 40px; height: 40px"
+              >
+                dehaze
+              </span>
+            </button>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="edu-sub">
+    <main id="main-content" class="edu-sub">
       <header class="edu-sub__hero">
         <div class="edu-container">
           <p>ABOUT US</p>
           <h1>교육원 소개</h1>
-          <span>치과위생사의 전문성과 국민 구강건강의 내일을 함께 만듭니다.</span>
+          <span>치위생교육원의 역할과 운영 목적을 안내합니다.</span>
         </div>
       </header>
       <div class="edu-container edu-content">
-        <section class="edu-intro">
-          <p class="edu-kicker">KOREAN DENTAL HYGIENE EDUCATION INSTITUTE</p>
-          <h2>
-            배움이 전문성을 만들고,
-            <br />
-            전문성이 더 나은 구강건강을 만듭니다.
-          </h2>
-          <p>
-            치위생교육원은 치과위생사가 변화하는 보건의료 환경에 능동적으로 대응할 수 있도록 현장 중심의 보수교육과 전문
-            역량 개발 교육을 제공합니다.
-          </p>
-          <div class="edu-values">
-            <article>
-              <span>01</span>
-              <strong>전문성</strong>
-              <p>근거 기반의 최신 교육과정을 제공합니다.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <strong>현장성</strong>
-              <p>실무에 바로 적용할 수 있는 배움을 설계합니다.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <strong>지속성</strong>
-              <p>생애주기별 성장을 꾸준히 지원합니다.</p>
-            </article>
+        <section class="legacy-public-content legacy-public-content--edu" aria-label="교육원 소개 상세 안내">
+          <!-- info_top -->
+          <div>
+            <div>
+              <div>
+                <div>
+                  <p>대 한 치 과 위 생 사 협 회</p>
+                  치위생교육원
+                </div>
+                <div>
+                  <p>Dental Hygiene Continuing Education Center</p>
+                  <p>홈페이지 방문을 환영합니다.</p>
+                </div>
+                <div>
+                  <span>
+                    <img
+                      src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_intro_info01.png"
+                      alt="안내 화면"
+                      loading="lazy"
+                    />
+                  </span>
+                  <span>
+                    <img
+                      src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_intro_info02.png"
+                      alt="안내 화면"
+                      loading="lazy"
+                    />
+                  </span>
+                  <span>
+                    <img
+                      src="https://www.kdha.or.kr/Common/template/cms/user/images/sub/ico_intro_info03.png"
+                      alt="안내 화면"
+                      loading="lazy"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // info_top -->
+          <div>
+            <!-- container -->
+            <div>
+              <!-- sub_each -->
+              <article>
+                <p>
+                  대한치과위생사협회 치위생교육원(Dental Hygiene Continuing Education Center, DH CEC)은 치과위생사
+                  여러분이 의무 보수교육을 초월하여 전문인으로서의 역량을 증진시키고 면허자로서의 소임에 충실할 수
+                  있도록
+                  <span>양질의 강의를 제공하기 위해 마련한 복합 통합교육 공간</span>
+                  입니다.
+                </p>
+                <p>
+                  치과위생사를 대상으로 한 온·오프라인 교육을 일목요연하게 확인하고 신청·참여할 수 있도록 원스톱
+                  교육센터로 진화된 치위생교육원에 여러분의 많은 애정과 참여를 부탁드립니다.
+                </p>
+                <p>
+                  치위생교육원은 늘 전문역량 강화에 매진하시는 치과위생사 여러분 모두를 진심으로 응원합니다. 감사합니다.
+                </p>
+              </article>
+              <!-- // sub_each -->
+            </div>
+            <!-- // container -->
           </div>
         </section>
-        <a class="edu-text-link" href="/kdha/edu/regulations/">관련법규 소개 보기 →</a>
       </div>
     </main>
-    <footer class="edu-footer">
-      <div class="edu-container edu-footer__inner">
-        <div>
-          <strong>치위생교육원</strong>
-          <p>서울특별시 동대문구 고산자로 566 치과위생사회관 · 02-2236-0914</p>
-        </div>
-        <div class="edu-footer__links">
-          <a href="/kdha/edu/privacy/">개인정보처리방침</a>
-          <a href="/kdha/main/">대표사이트</a>
+    <footer class="site-footer">
+      <div class="site-footer__inner layout-container">
+        <a class="site-logo site-logo--footer" href="/main/" aria-label="대한치과위생사협회 홈">
+          <img
+            class="site-logo__image"
+            width="290"
+            height="55"
+            alt="대한치과위생사협회"
+            src="/assets/brand/logo-footer.png"
+          />
+        </a>
+        <address class="site-footer__address">
+          105-82-07361(통신판매번호 : 제2010-서울동대문-0959호)　|　대표자 : 박정란
+          <br />
+          서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)
+        </address>
+        <p class="site-footer__contact">TEL. 02-2236-0914　 FAX. 02-2236-0915</p>
+        <div class="site-footer__bottom">
+          <div class="site-footer__legal">
+            <div class="site-footer__legal-links">
+              <a href="/privacy/">개인정보처리방침</a>
+              <a href="/remote-support/">원격지원</a>
+              <a href="/related-sites/">관련사이트</a>
+              <a href="/regional-sites">시도회 사이트</a>
+            </div>
+            <p>Copyright ⓒ 2026 KDHA. All rights Reserved</p>
+          </div>
+          <div class="social-links">
+            <a
+              class="social-links__item"
+              href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="대한치과위생사협회 공식 유튜브(새 창)"
+            >
+              <img class="social-links__image" width="20" height="20" alt="" src="/assets/social/sns-youtube.png" />
+            </a>
+            <a
+              class="social-links__item"
+              href="https://ko-kr.facebook.com/koreadha/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="대한치과위생사협회 페이스북(새 창)"
+            >
+              <img class="social-links__image" width="20" height="20" alt="" src="/assets/social/sns-facebook.png" />
+            </a>
+            <a
+              class="social-links__item"
+              href="https://www.instagram.com/krdha77/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="대한치과위생사협회 인스타그램(새 창)"
+            >
+              <img class="social-links__image" width="20" height="20" alt="" src="/assets/social/sns-instagram.png" />
+            </a>
+          </div>
         </div>
       </div>
-      <p class="edu-footer__copyright">COPYRIGHT © KDHA. ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/swiper.js"></script>
+    <script src="/assets/js/vendor/datepicker.js"></script>
+    <script src="/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/assets/js/common.js"></script>
   </body>
 </html>

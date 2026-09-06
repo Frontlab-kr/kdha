@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/datepicker.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <title>본인인증 | 로그인</title>
+  </head>
+  <body class="edu-site account-site account-verification-page">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <main id="main-content" class="account-login account-verification">
+      <div class="account-login__shell">
+        <header class="account-login__brand">
+          <a href="/main/" aria-label="대한치과위생사협회 대표사이트 홈으로 이동">
+            <img src="/assets/brand/logo-header-b.svg" width="220" height="42" alt="대한치과위생사협회" />
+          </a>
+          <span>KDHA 통합 회원서비스</span>
+        </header>
+
+        <div class="account-verification__main">
+          <section class="account-verification__card" data-tabs-root aria-labelledby="verification-title">
+            <header class="edu-account-card__heading">
+              <h1 id="verification-title">본인인증</h1>
+              <p>간단한 인증 한 번으로 더 새로워진 서비스를 이용해보세요.</p>
+            </header>
+
+            <div class="ds-tabs" data-tabs role="tablist" aria-label="본인인증 방식">
+              <button
+                class="ds-tabs__item"
+                id="verification-tab-phone"
+                data-tab
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="verification-phone"
+              >
+                휴대폰인증
+              </button>
+              <button
+                class="ds-tabs__item"
+                id="verification-tab-ipin"
+                data-tab
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="verification-ipin"
+                tabindex="-1"
+              >
+                아이핀인증
+              </button>
+            </div>
+
+            <div
+              class="account-verification__panel"
+              id="verification-phone"
+              role="tabpanel"
+              aria-labelledby="verification-tab-phone"
+            >
+              <div class="account-verification__method-copy">
+                <img
+                  class="account-verification__method-icon"
+                  src="/assets/account/verification-name-tag.svg"
+                  width="48"
+                  height="48"
+                  alt=""
+                />
+                <p class="account-verification__method-copy-pc">
+                  SKT, KT, LGT, 알뜰폰 사용자의 휴대폰으로
+                  <br />
+                  인증 후 가입하실 수 있습니다.
+                </p>
+                <p class="account-verification__method-copy-mobile">
+                  SKT, KT, LGT, 알뜰폰
+                  <br />
+                  사용자의 휴대폰으로 인증 후
+                  <br />
+                  가입하실 수 있습니다.
+                </p>
+              </div>
+              <a class="ds-button ds-button--primary ds-button--large" href="/account/login/">휴대폰인증</a>
+            </div>
+
+            <div
+              class="account-verification__panel"
+              id="verification-ipin"
+              role="tabpanel"
+              aria-labelledby="verification-tab-ipin"
+              hidden
+            >
+              <div class="account-verification__method-copy">
+                <img
+                  class="account-verification__method-icon"
+                  src="/assets/account/verification-name-tag.svg"
+                  width="48"
+                  height="48"
+                  alt=""
+                />
+                <p>아이핀인증으로 본인인증 후 가입하실 수 있습니다.</p>
+              </div>
+              <ul class="ds-guide-list">
+                <li class="ds-guide-list__item">
+                  <span class="ds-guide-list__content">아이핀은 한국인터넷진흥원에서 발급 받으실 수 있습니다.</span>
+                </li>
+              </ul>
+              <a class="ds-button ds-button--primary ds-button--large" href="/account/login/">간편인증</a>
+            </div>
+          </section>
+          <p class="account-login__copyright">
+            <span class="account-login__copyright-pc">
+              © Korean Dental Hygienists Association. All rights reserved.
+            </span>
+            <span class="account-login__copyright-mobile">© Korean Dental Hygienists Association</span>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="/assets/js/vendor/jquery.js"></script>
+
+    <script src="/assets/js/common.js"></script>
+  </body>
+</html>

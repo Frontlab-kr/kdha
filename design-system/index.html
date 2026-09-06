@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
-    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <title>대한치과위생사협회</title>
   </head>
   <body class="">
-    <main class="design-system-page">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <main id="main-content" class="design-system-page">
       <header class="design-system-page__header">
         <div class="design-system-page__header-inner">
           <a class="design-system-page__back" href="/">
@@ -90,30 +91,50 @@
         <section class="ds-section">
           <h2 class="ds-section__title">Components</h2>
           <div class="component-preview">
+            <a class="ds-surface-card component-preview__card" href="/design-system/components">
+              Components
+              <span>Figma 라이브러리와 퍼블리싱 공통 컴포넌트 맵</span>
+            </a>
+            <a class="ds-surface-card component-preview__card" href="/design-system/button">
+              Button
+              <span>Primary·Outline, L·M·S와 상호작용 상태</span>
+            </a>
             <div class="component-preview__row">
               <button class="ds-chip ds-chip--active" type="button">선택된 탭</button>
               <button class="ds-chip" type="button">기본 탭</button>
-              <a class="ds-text-link" href="#">
+              <a class="ds-link ds-link--more ds-link--medium" href="#">
                 더보기
-                <span
-                  class="material-symbols-outlined material-icon"
-                  aria-hidden="true"
-                  style="font-size: 20px; width: 20px; height: 20px"
-                >
-                  arrow_forward_ios
-                </span>
+                <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
               </a>
             </div>
             <a class="ds-surface-card component-preview__card" href="#">
               Surface Card
               <span>공통 카드 컴포넌트</span>
             </a>
+            <a class="ds-surface-card component-preview__card" href="/design-system/form/">
+              Form
+              <span>입력창, 선택, 오류 상태와 입력 버튼 조합</span>
+            </a>
+            <a class="ds-surface-card component-preview__card" href="/design-system/overlay/">
+              Overlay
+              <span>Dialog와 작은 Alert 레이어</span>
+            </a>
+            <a class="ds-surface-card component-preview__card" href="/design-system/components#guide-list">
+              Guide List
+              <span>보조 안내 문구와 인라인 텍스트 액션</span>
+            </a>
+            <a class="ds-surface-card component-preview__card" href="/design-system/icon/">
+              Icon
+              <span>사이트에서 사용하는 Google Material Symbols</span>
+            </a>
           </div>
         </section>
       </div>
     </main>
-    <script src="/kdha/assets/js/vendor/jquery.js"></script>
-    <script src="/kdha/assets/js/vendor/swiper.js"></script>
-    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/swiper.js"></script>
+    <script src="/assets/js/vendor/datepicker.js"></script>
+    <script src="/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/assets/js/common.js"></script>
   </body>
 </html>

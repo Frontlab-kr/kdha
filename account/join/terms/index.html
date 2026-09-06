@@ -3,590 +3,408 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
-    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/datepicker.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
-    <title>대한치과위생사협회</title>
+    <title>약관동의 | 회원가입</title>
   </head>
-  <body class="">
-    <div class="site user-page">
-      <header class="site-header">
-        <div class="site-header__inner layout-container">
-          <a class="site-logo site-logo--header" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
-            <img
-              class="site-logo__image"
-              width="220"
-              height="42"
-              alt="대한치과위생사협회"
-              src="/kdha/assets/brand/logo-header.png"
-            />
+  <body class="account-site account-join-page">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <main id="main-content" class="account-login account-join">
+      <div class="account-login__shell">
+        <header class="account-login__brand">
+          <a href="/main/" aria-label="대한치과위생사협회 대표사이트 홈으로 이동">
+            <img src="/assets/brand/logo-header-b.svg" width="220" height="42" alt="대한치과위생사협회" />
           </a>
-          <div class="site-header__navigation">
-            <nav class="utility-nav" aria-label="유틸리티 메뉴">
-              <div class="utility-nav__external">
-                <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
-                  덴톡
-                </a>
-                <a
-                  class="utility-nav__link"
-                  href="http://kdhamall.or.kr/member/login.php?prev=%2F"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  KDHA mall
-                </a>
-                <a class="utility-nav__link" href="/kdha/en/">영문사이트</a>
-              </div>
-              <a class="utility-nav__login" href="/kdha/account/login/">로그인</a>
-            </nav>
-            <nav class="primary-nav" aria-label="주 메뉴">
-              <div class="primary-nav__links">
-                <div class="primary-nav__item">
-                  <a class="primary-nav__link" href="/kdha/news/">협회소식</a>
-                  <div class="primary-nav__submenu">
-                    <div class="primary-nav__submenu-inner layout-container">
-                      <div class="primary-nav__submenu-heading">
-                        <span>대한치과위생사협회</span>
-                        <strong>협회소식</strong>
-                        <span
-                          class="material-symbols-outlined material-icon"
-                          aria-hidden="true"
-                          style="font-size: 24px; width: 24px; height: 24px"
-                        >
-                          arrow_forward
-                        </span>
-                      </div>
-                      <ul class="primary-nav__submenu-list">
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/news/schedule/">협회일정</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/news/videos/">영상자료</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/news/reports/">연구보고서</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/news/newsletter/">치위협보</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/news/resources/">자료실</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/news/fund/">회관기금</a>
-                          <ul class="primary-nav__tertiary-list">
-                            <li><a href="/kdha/news/fund/donate/">온라인기금 기부하기</a></li>
-                            <li><a href="/kdha/news/fund/history/">기금모금내역</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="primary-nav__item">
-                  <a class="primary-nav__link" href="/kdha/career/">구인구직 상담</a>
-                  <div class="primary-nav__submenu">
-                    <div class="primary-nav__submenu-inner layout-container">
-                      <div class="primary-nav__submenu-heading">
-                        <span>대한치과위생사협회</span>
-                        <strong>구인구직 상담</strong>
-                        <span
-                          class="material-symbols-outlined material-icon"
-                          aria-hidden="true"
-                          style="font-size: 24px; width: 24px; height: 24px"
-                        >
-                          arrow_forward
-                        </span>
-                      </div>
-                      <ul class="primary-nav__submenu-list">
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/career/jobs/">구인ㆍ구직 게시판</a>
-                          <ul class="primary-nav__tertiary-list">
-                            <li><a href="/kdha/career/jobs/recruit/">채용정보</a></li>
-                            <li><a href="/kdha/career/jobs/talent/">인재정보</a></li>
-                          </ul>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/career/contact/">1:1 상담</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/career/consulting/">법률ㆍ노무 상담</a>
-                          <ul class="primary-nav__tertiary-list">
-                            <li><a href="/kdha/career/consulting/guide/">서비스 안내</a></li>
-                            <li><a href="/kdha/career/consulting/legal/">법률상담</a></li>
-                            <li><a href="/kdha/career/consulting/medical-accident/">의료사고 및 소송</a></li>
-                            <li><a href="/kdha/career/consulting/medical-dispute/">의료분쟁</a></li>
-                            <li><a href="/kdha/career/consulting/violence/">폭력 및 성폭력ㆍ성희롱</a></li>
-                            <li><a href="/kdha/career/consulting/healthcare/">기타 보건의료 관련</a></li>
-                            <li><a href="/kdha/career/consulting/request/">상담하기</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="primary-nav__item">
-                  <a class="primary-nav__link" href="/kdha/education/">치위생교육원</a>
-                  <div class="primary-nav__submenu">
-                    <div class="primary-nav__submenu-inner layout-container">
-                      <div class="primary-nav__submenu-heading">
-                        <span>대한치과위생사협회</span>
-                        <strong>치위생교육원</strong>
-                        <span
-                          class="material-symbols-outlined material-icon"
-                          aria-hidden="true"
-                          style="font-size: 24px; width: 24px; height: 24px"
-                        >
-                          arrow_forward
-                        </span>
-                      </div>
-                      <ul class="primary-nav__submenu-list">
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/education/about/">교육원 소개</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/education/guide/">교육안내</a>
-                          <ul class="primary-nav__tertiary-list">
-                            <li><a href="/kdha/education/guide/offline/">현장교육 안내</a></li>
-                            <li><a href="/kdha/education/guide/online/">사이버교육 안내</a></li>
-                          </ul>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/education/regulations/">관련법규소개</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/education/offline/">현장교육</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/education/online/">사이버교육</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="primary-nav__item">
-                  <a class="primary-nav__link" href="/kdha/license/">면허센터</a>
-                  <div class="primary-nav__submenu">
-                    <div class="primary-nav__submenu-inner layout-container">
-                      <div class="primary-nav__submenu-heading">
-                        <span>대한치과위생사협회</span>
-                        <strong>면허센터</strong>
-                        <span
-                          class="material-symbols-outlined material-icon"
-                          aria-hidden="true"
-                          style="font-size: 24px; width: 24px; height: 24px"
-                        >
-                          arrow_forward
-                        </span>
-                      </div>
-                      <ul class="primary-nav__submenu-list">
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/license/report/">면허신고</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/license/exemption/">
-                            보수교육 면제ㆍ유예ㆍ비대상
-                          </a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a
-                            class="primary-nav__submenu-link"
-                            href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            면허신고센터
-                            <span
-                              class="material-symbols-outlined material-icon"
-                              aria-hidden="true"
-                              style="font-size: 16px; width: 16px; height: 16px"
-                            >
-                              open_in_new
-                            </span>
-                          </a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a
-                            class="primary-nav__submenu-link"
-                            href="https://lic.mohw.go.kr/"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            면허증 재교부/조회
-                            <span
-                              class="material-symbols-outlined material-icon"
-                              aria-hidden="true"
-                              style="font-size: 16px; width: 16px; height: 16px"
-                            >
-                              open_in_new
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="primary-nav__item">
-                  <a class="primary-nav__link" href="/kdha/community/">소통광장</a>
-                  <div class="primary-nav__submenu">
-                    <div class="primary-nav__submenu-inner layout-container">
-                      <div class="primary-nav__submenu-heading">
-                        <span>대한치과위생사협회</span>
-                        <strong>소통광장</strong>
-                        <span
-                          class="material-symbols-outlined material-icon"
-                          aria-hidden="true"
-                          style="font-size: 24px; width: 24px; height: 24px"
-                        >
-                          arrow_forward
-                        </span>
-                      </div>
-                      <ul class="primary-nav__submenu-list">
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/community/notices/">공지사항</a>
-                          <ul class="primary-nav__tertiary-list">
-                            <li><a href="/kdha/community/notices/association/">협회(중앙회)</a></li>
-                            <li><a href="/kdha/community/notices/education/">보수교육(카드뉴스)</a></li>
-                            <li><a href="/kdha/community/notices/license/">면허신고</a></li>
-                            <li><a href="/kdha/community/notices/branches/">시도회</a></li>
-                            <li><a href="/kdha/community/notices/organizations/">산하단체</a></li>
-                            <li><a href="/kdha/community/notices/societies/">산하학회</a></li>
-                          </ul>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/community/faq/">자주하는 질문</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/community/surveys/">설문조사</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/community/organizations/">산하단체 게시판</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/community/executives/">
-                            시도회ㆍ산하단체 임원게시판
-                          </a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/community/volunteer/">봉사게시판</a>
-                          <ul class="primary-nav__tertiary-list">
-                            <li><a href="/kdha/community/volunteer/guide/">봉사 정보</a></li>
-                            <li><a href="/kdha/community/volunteer/recruit/">봉사자 모집</a></li>
-                            <li><a href="/kdha/community/volunteer/gallery/">봉사 갤러리</a></li>
-                          </ul>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/community/events/">이벤트</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/community/examiner-training/">
-                            국가시험 실기시험 채점자교육
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="primary-nav__item">
-                  <a class="primary-nav__link" href="/kdha/about/">협회소개</a>
-                  <div class="primary-nav__submenu">
-                    <div class="primary-nav__submenu-inner layout-container">
-                      <div class="primary-nav__submenu-heading">
-                        <span>대한치과위생사협회</span>
-                        <strong>협회소개</strong>
-                        <span
-                          class="material-symbols-outlined material-icon"
-                          aria-hidden="true"
-                          style="font-size: 24px; width: 24px; height: 24px"
-                        >
-                          arrow_forward
-                        </span>
-                      </div>
-                      <ul class="primary-nav__submenu-list">
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/about/greeting/">인사말</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/about/history/">연혁</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/about/articles/">정관</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/about/organization/">조직도</a>
-                          <ul class="primary-nav__tertiary-list">
-                            <li><a href="/kdha/about/organization/chart/">조직도</a></li>
-                            <li><a href="/kdha/about/organization/committees/">위원회별 업무</a></li>
-                            <li><a href="/kdha/about/organization/executives/">임원 소개</a></li>
-                            <li><a href="/kdha/about/organization/branches/">시도회</a></li>
-                            <li><a href="/kdha/about/organization/organizations/">산하단체</a></li>
-                            <li><a href="/kdha/about/organization/societies/">학회</a></li>
-                          </ul>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/about/policies/">주요정책사업</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/about/dental-hygienist/">치과위생사소개</a>
-                          <ul class="primary-nav__tertiary-list">
-                            <li><a href="/kdha/about/dental-hygienist/introduction/">치과위생사 소개</a></li>
-                            <li><a href="/kdha/about/dental-hygienist/oath/">치과위생사 선서</a></li>
-                          </ul>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/about/ci/">CI</a>
-                        </li>
-                        <li class="primary-nav__submenu-item">
-                          <a class="primary-nav__submenu-link" href="/kdha/about/location/">찾아오시는 길</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="primary-nav__icon-button" type="button" aria-label="검색">
-                <span
-                  class="material-symbols-outlined material-icon"
-                  aria-hidden="true"
-                  style="font-size: 28px; width: 28px; height: 28px"
-                >
-                  search
-                </span>
-              </button>
-              <button class="primary-nav__icon-button" type="button" aria-label="전체 메뉴">
-                <span
-                  class="material-symbols-outlined material-icon"
-                  aria-hidden="true"
-                  style="font-size: 40px; width: 40px; height: 40px"
-                >
-                  dehaze
-                </span>
-              </button>
-            </nav>
-          </div>
-        </div>
-      </header>
+          <span>KDHA 통합 회원서비스</span>
+        </header>
 
-      <main class="user-page__main">
-        <div class="user-page__inner layout-container">
-          <nav class="user-page-breadcrumb" aria-label="현재 위치">
-            <a class="user-page-breadcrumb__home" href="/kdha/main/" aria-label="홈">
-              <span class="user-page-breadcrumb__home-icon material-symbols-rounded" aria-hidden="true">home</span>
-            </a>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
-              <a class="user-page-breadcrumb__link" href="/kdha/account/join/">회원가입</a>
-            </span>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
-              <span aria-current="page">약관동의</span>
-            </span>
-          </nav>
+        <div class="account-join__main">
+          <section class="account-join__card" aria-labelledby="join-title">
+            <ol class="account-join-steps account-join-steps--2" aria-label="회원가입 진행 단계">
+              <li class="is-complete">
+                <b>회원유형선택</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="is-current">
+                <b>약관동의</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="">
+                <b>본인인증</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="">
+                <b>회원정보입력</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="">
+                <b>가입완료</b>
+                <span aria-hidden="true"></span>
+              </li>
+            </ol>
+            <div class="account-mobile-progress" aria-label="약관동의 진행 단계: 5단계 중 2단계">
+              <div class="account-mobile-progress__heading">
+                <strong>약관동의</strong>
+                <span>2 / 5</span>
+              </div>
+              <ol class="account-mobile-progress__dots" aria-hidden="true">
+                <li class="is-complete"></li>
+                <li class="is-current"></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+              </ol>
+            </div>
 
-          <header class="user-page-hero">
-            <div>
-              <p class="user-page-hero__eyebrow">KDHA USER SITE</p>
-              <h1 class="user-page-hero__title">약관동의</h1>
-              <p class="user-page-hero__description">
-                기획설계서의 TO-BE 사용자 IA를 기준으로 연결한 임시 페이지입니다.
+            <header class="account-join__heading">
+              <h1 id="join-title">약관동의</h1>
+              <p>
+                대한치과위생사협회 홈페이지 가입을 위해
+                <span class="ds-joined-text">
+                  <strong>약관동의</strong>
+                  <span>를</span>
+                </span>
+                해주세요.
               </p>
-            </div>
-          </header>
-          <section class="user-content user-form" aria-label="약관동의 임시 입력 화면">
-            <div class="user-form__panel">
-              <h2>약관동의</h2>
-              <p>회원 서비스를 이용하기 위한 정보를 입력해 주세요.</p>
-              <label>
-                <span>아이디</span>
-                <input placeholder="아이디를 입력하세요" type="text" />
-              </label>
-              <label>
-                <span>비밀번호</span>
-                <input placeholder="비밀번호를 입력하세요" type="password" />
-              </label>
-              <button type="button">확인</button>
-            </div>
-          </section>
-        </div>
-      </main>
-      <section class="quick-links" aria-label="관련 서비스 바로가기">
-        <div class="quick-links__inner layout-container">
-          <a class="ds-surface-card quick-links__item" href="/kdha/related-sites/government/">
-            노인장기 요양보험
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-          <a class="ds-surface-card quick-links__item" href="/kdha/related-sites/government/">
-            보건복지부
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-          <a class="ds-surface-card quick-links__item" href="https://lic.mohw.go.kr/">
-            면허증 조회
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-          <a class="ds-surface-card quick-links__item" href="https://lic.mohw.go.kr/">
-            면허증 재교부 신청
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-          <a class="ds-surface-card quick-links__item" href="/kdha/mypage/member/profile/">
-            회원정보 변경 안내
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-          <a class="ds-surface-card quick-links__item" href="/kdha/mypage/classroom/completions/">
-            치위생교육원 교육이수 확인
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-          <a class="ds-surface-card quick-links__item" href="https://www.instagram.com/kdha_official/">
-            협회 공식 인스타그램
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-          <a class="ds-surface-card quick-links__item" href="https://www.facebook.com/kdhaofficial/">
-            협회 공식 페이스북
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-          <a class="ds-surface-card quick-links__item" href="https://www.youtube.com/@kdha_official">
-            협회 공식 유튜브 채널
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-          <a class="ds-surface-card quick-links__item" href="http://kdhamall.or.kr/member/login.php?prev=%2F">
-            KDHA mall
-            <span
-              class="material-symbols-outlined material-icon"
-              aria-hidden="true"
-              style="font-size: 15px; width: 15px; height: 15px"
-            >
-              arrow_forward_ios
-            </span>
-          </a>
-        </div>
-      </section>
-      <footer class="site-footer">
-        <div class="site-footer__inner layout-container">
-          <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
-            <img
-              class="site-logo__image"
-              width="290"
-              height="55"
-              alt="대한치과위생사협회"
-              src="/kdha/assets/brand/logo-footer.png"
-            />
-          </a>
-          <address class="site-footer__address">
-            105-82-07361(통신판매번호 : 제2010-서울동대문-0959호)　|　대표자 : 박정란
-            <br />
-            서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)
-          </address>
-          <p class="site-footer__contact">TEL. 02-2236-0914　 FAX. 02-2236-0915</p>
-          <div class="site-footer__bottom">
-            <div class="site-footer__legal">
-              <div class="site-footer__legal-links">
-                <a href="/kdha/privacy/">개인정보처리방침</a>
-                <a href="/kdha/remote-support/">원격지원</a>
-                <a href="/kdha/related-sites/">관련사이트</a>
-                <a href="/kdha/regional-sites">시도회 사이트</a>
+            </header>
+            <form class="account-join-terms" action="/account/join/verification/">
+              <div class="account-join-term">
+                <strong>[필수] 대한치과위생사협회 홈페이지 이용약관</strong>
+                <div class="account-join-term__control">
+                  <div class="account-join-term__radios">
+                    <label class="form-check">
+                      <input type="radio" name="serviceTerms" value="no" />
+                      동의안함
+                    </label>
+                    <label class="form-check">
+                      <input type="radio" name="serviceTerms" value="yes" data-required-term />
+                      동의함
+                    </label>
+                  </div>
+                  <button class="ds-link ds-link--text" type="button" data-dialog-open="terms-service">
+                    <span class="account-join-term__detail-pc">이용약관 상세보기</span>
+                    <span class="account-join-term__detail-mobile">이용약관</span>
+                  </button>
+                </div>
               </div>
-              <p>Copyright ⓒ 2026 KDHA. All rights Reserved</p>
-            </div>
-            <div class="social-links">
-              <a
-                class="social-links__item"
-                href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="youtube"
-              >
-                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-youtube.png" />
-              </a>
-              <a
-                class="social-links__item"
-                href="https://ko-kr.facebook.com/koreadha/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="facebook"
-              >
-                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-facebook.png" />
-              </a>
-              <a
-                class="social-links__item"
-                href="https://www.instagram.com/krdha77/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="instagram"
-              >
-                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-instagram.png" />
-              </a>
-            </div>
-          </div>
+              <div class="account-join-term">
+                <strong>[필수] 개인정보 수집 및 이용약관</strong>
+                <div class="account-join-term__control">
+                  <div class="account-join-term__radios">
+                    <label class="form-check">
+                      <input type="radio" name="privacyTerms" value="no" />
+                      동의안함
+                    </label>
+                    <label class="form-check">
+                      <input type="radio" name="privacyTerms" value="yes" data-required-term />
+                      동의함
+                    </label>
+                  </div>
+                  <button class="ds-link ds-link--text" type="button" data-dialog-open="terms-privacy">
+                    <span class="account-join-term__detail-pc">이용약관 상세보기</span>
+                    <span class="account-join-term__detail-mobile">이용약관</span>
+                  </button>
+                </div>
+              </div>
+              <label class="form-check account-join-terms__all">
+                <input type="checkbox" data-terms-all />
+                모두 동의합니다.
+              </label>
+              <div class="account-join__actions">
+                <a class="ds-button ds-button--outline ds-button--large" href="/account/join/">취소</a>
+                <button class="ds-button ds-button--primary ds-button--large" type="submit">다음</button>
+              </div>
+            </form>
+          </section>
+          <p class="account-login__copyright">
+            <span class="account-login__copyright-pc">
+              © Korean Dental Hygienists Association. All rights reserved.
+            </span>
+            <span class="account-login__copyright-mobile">© Korean Dental Hygienists Association</span>
+          </p>
         </div>
-      </footer>
-    </div>
-    <script src="/kdha/assets/js/vendor/jquery.js"></script>
-    <script src="/kdha/assets/js/vendor/swiper.js"></script>
-    <script src="/kdha/assets/js/common.js"></script>
+      </div>
+    </main>
+    <dialog
+      class="edu-dialog edu-dialog--auth account-join-terms-dialog"
+      id="terms-service"
+      aria-labelledby="terms-service-title"
+    >
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
+        close
+      </button>
+      <h2 id="terms-service-title">대한치과위생사협회 홈페이지 이용약관</h2>
+      <div class="edu-dialog__body edu-dialog__terms" tabindex="0">
+        <article class="edu-dialog__terms-content">
+          <strong class="edu-dialog__terms-title">- 대한치과위생사협회 홈페이지 이용약관 -</strong>
+
+          <h3>제1장 총칙</h3>
+          <h4>제1조 (목적)</h4>
+          <p>
+            이 약관은 사단법인 대한치과위생사협회(이하 “협회”라 합니다)가 제공하는 인터넷 서비스(이하 “서비스”라
+            합니다)를 이용함에 있어, 협회와 회원 간의 권리, 의무 및 책임사항을 정함을 목적으로 합니다.
+          </p>
+          <h4>제2조 (용어의 정의)</h4>
+          <p>이 약관에서 사용하는 용어의 정의는 각호와 같습니다.</p>
+          <p>1. 회원 : 홈페이지의 서비스 이용계약을 체결한 자</p>
+          <p>
+            2. 아이디(ID) : 회원이 홈페이지의 서비스 이용 중 회원식별을 위하여 회원이 정하고 협회가 승인한 문자 또는
+            숫자의 조합
+          </p>
+          <p>3. 비밀번호 : 회원의 개인정보보호와 서비스 이용을 위하여 회원이 정한 문자 또는 숫자의 조합</p>
+          <p>4. 서비스 : 협회가 만든 정보 서비스</p>
+
+          <h3>제2장 서비스 이용에 관한 절차</h3>
+          <h4>제3조 (회원의 서비스 이용에 관한 조건)</h4>
+          <p>
+            ① 홈페이지의 서비스를 이용하기 위해서는 협회와 서비스 이용계약을 체결하여 회원으로 가입하여야 합니다. 그러기
+            위해서는 우선 이 약관에 동의하고, 협회가 제시하는 소정의 양식을 작성하여 회원 가입신청을 하여야 합니다.
+          </p>
+          <p>
+            ② 협회는 위 가입신청에 대하여 상당한 결격사유가 없는 한 신청자가 정한 아이디(ID)와 비밀번호를 승인함으로써
+            이를 승낙하여야 합니다.
+          </p>
+          <p>
+            ③ 협회는 신청자의 가입신청 내용에 대한 확인이 필요한 정당한 사유가 있을 경우, 이에 대한 확인을 마칠 때까지
+            승낙을 유보할 수 있습니다.
+          </p>
+          <p>④ 서비스 이용계약의 성립 시기는 협회의 승낙이 신청자에게 도달한 시점으로 합니다.</p>
+          <h4>제4조 (회원가입 신청 거부와 해지)</h4>
+          <p>
+            협회는 아래 각호의 경우에는 회원 가입 신청을 거부하거나, 이미 회원으로 가입한 경우에는 해당 회원과의 서비스
+            이용계약을 즉시 해지할 수 있습니다.
+          </p>
+          <p>1. 회원 가입신청시 기재한 내용이 허위로 판명된 경우</p>
+          <p>2. 타인의 명의를 이용하여 회원 가입신청을 하는 경우</p>
+          <p>3. 회원 가입신청이 공공질서 또는 미풍양속을 저해할 목적이라고 인정되는 경우</p>
+          <p>4. 기타 회원 활동에 있어 부정한 방법을 사용하는 경우</p>
+          <h4>제5조 (홈페이지 내의 게시물 등)</h4>
+          <p>
+            ① 협회는 회원이 게시하거나 등록하는 홈페이지 내의 게시물 등의 내용이 각호에 해당한다고 판단되는 경우에
+            사전통지 없이 삭제할 수 있습니다.
+          </p>
+          <p>1. 다른 회원 또는 제3자를 비방하거나 중상모략으로 명예를 훼손하는 내용</p>
+          <p>2. 공공질서 또는 미풍양속에 반하는 내용</p>
+          <p>3. 협회 또는 제3자의 저작권 기타 권리를 침해하는 내용</p>
+          <p>4. 협회가 정한 게시기간을 초과한 경우</p>
+          <p>
+            5. 외설 음란물, 다른 음란물 사이트의 링크, 상업적 목적의 광고, 행운의 편지(chain letter), 다단계판매조직에의
+            가입을 권유하는 내용
+          </p>
+          <p>6. 관계법령에 위반된다고 판단되는 내용</p>
+          <p>7 기타 협회의 홈페이지 운영방침에 위배되는 내용</p>
+          <p>
+            ② 게시물에 대한 권리와 책임은 모두 게시자에게 있으며, 협회는 게시물이 제①항에 해당하지 아니하는 한, 게시자의
+            사전 동의 없이 이를 임의로 처리할 수 없습니다. 또한, 협회는 홈페이지 내의 게시물을 상업적 목적으로 이용할 수
+            없습니다.
+          </p>
+          <p>단, 비영리적인 목적인 경우 협회는 게시자의 동의 없이도 홈페이지 내에 이를 게재할 수 있습니다.</p>
+          <p>
+            ③ 회원은 협회가 제공하는 서비스를 이용하여 얻은 정보를 가공, 판매하는 행위 등 홈페이지 내에 게재된 자료를
+            상업적으로 이용할 수 없습니다.
+          </p>
+
+          <h3>제3장 권리와 의무</h3>
+          <h4>제6조 (협회의 의무)</h4>
+          <p>
+            ① 협회는 이 약관과 관련법령이 금하는 행위를 하여서는 아니 되며, 회원에게 지속적이고 적절한 서비스를 제공하기
+            위하여 노력합니다.
+          </p>
+          <p>
+            ② 협회는 회원에 대한 사전 공지 없이 일방적으로 서비스를 중단할 수 없습니다. 단, 천재지변, 갑작스런 정전,
+            시스템의 장애 등 협회가 통제할 수 없는 불가피한 사정이 있는 경우에는 그러하지 아니합니다.
+          </p>
+          <p>
+            ③ 시스템 점검 등을 위하여 필요한 경우, 협회는 이러한 사유를 미리 회원에게 공지하고 서비스 제공을 일시 중단할
+            수 있습니다.
+          </p>
+          <p>
+            ④ 시스템의 장애로 인하여 서비스가 중단된 경우 협회는 이를 신속하게 복구한 후 곧바로 이를 회원에게 공지하여야
+            합니다.
+          </p>
+          <p>
+            ⑤ 협회는 회원이 제시하는 불만이나 시정요구 사항이 타당한 경우, 즉시 이를 시정하여야 합니다. 단, 시정하는데
+            시간이 소요되는 경우에는 적절한 시정 조치를 위한 일정과 방법을 해당 회원에게 알려야 합니다.
+          </p>
+          <h4>제7조 (회원의 의무)</h4>
+          <p>① 회원은 홈페이지의 서비스를 이용할 때 각호의 행위를 하지 않아야 합니다.</p>
+          <p>1. 다른 회원의 아이디(ID)를 부정하게 도용하는 행위</p>
+          <p>
+            2. 협회가 제공하는 서비스에서 얻은 정보를 협회의 사전승낙 없이 회원으로서의 이용이외의 다른 목적으로
+            복제하거나, 이를 출판 방송 등에 사용하거나 제3자에게 제공하는 행위
+          </p>
+          <p>
+            3. 협회 또는 제3자의 저작권 등 기타 권리를 침해하거나 공공질서 및 미풍양속에 위반되는 내용의 정보, 문장,
+            그림, 사진, 동영상 등을 타인에게 유포하는 행위
+          </p>
+          <p>4. 범죄 목적으로 서비스를 이용하는 행위</p>
+          <p>
+            5. 어떠한 방법으로든지 소프트웨어를 수정하거나, 수정된 소프트웨어를 사용하거나, 또는 협회가 제공한
+            인터페이스 이외의 다른 방법을 통하여 홈페이지에 접속하는 행위
+          </p>
+          <p>6. 본 약관을 포함하여 기타 협회가 정한 이용조건 및 관계법령을 위반한 경우</p>
+          <p>
+            ② 회원은 자신의 아이디(ID) 및 비밀번호에 대한 관리 책임을 부담합니다. 회원은 자신의 아이디(ID)를 타인에게
+            대여 또는 양도할 수 없습니다.
+          </p>
+          <p>
+            ③ 회원은 이 약관에서 규정하는 사항, 서비스 이용안내, 주의사항, 협회의 공지사항, 별도로 통지한 이용제한조치를
+            반드시 준수하여야 합니다.
+          </p>
+          <p>
+            ④ 회원은 회원의 지위, 서비스의 이용권한, 기타 이용 계약상 지위를 타인에게 양도할 수 없으며, 이를 담보로
+            제공할 수 없습니다.
+          </p>
+
+          <h3>제4장 서비스 이용의 제한</h3>
+          <h4>제8조 (서비스 이용 제한의 사유)</h4>
+          <p>
+            협회는 홈페이지 서비스의 원활한 운영을 위하여 제3장 제7조(회원의 의무)를 불이행한 회원에게 이용제한 또는
+            서비스 이용계약의 취소나 해지를 할 수 있습니다.
+          </p>
+          <h4>제9조 (이용제한 조치의 절차)</h4>
+          <p>
+            ① 협회는 제8조에 해당하는 회원에게 이용제한 조치를 취하기 전에 전자우편 등의 방법을 통하여 이를 해당회원에게
+            통지해야 합니다.
+          </p>
+          <p>
+            ② 해당 회원은 협회의 이용제한 조치가 부당한 경우 타당한 근거를 들어 이에 대한 이의신청을 할 수 있습니다.
+          </p>
+          <p>
+            ③ 해당 회원의 이의신청이 있고, 협회가 이 이의신청에 대한 사실 확인이 필요하다고 판단하는 경우, 이용제한
+            조치를 한시적으로 유보할 수 있습니다.
+          </p>
+
+          <h3>제5장 개인정보보호 및 서비스 이용계약의 해지</h3>
+          <h4>제10조 (개인정보보호)</h4>
+          <p>① 협회는 관련법령에 따라 회원의 개인정보를 보호하기 위하여 노력합니다.</p>
+          <p>
+            ② 협회는 서비스의 제공과 관련하여, 협회가 알게 된 회원의 신상 정보를 이 약관에서 정한 이용범위를 벗어나 회원
+            본인의 사전 동의 없이 제3자에게 누설 또는 배포할 수 없습니다.
+          </p>
+          <h4>제11조 (회원정보의 변경 및 서비스 이용계약의 해지)</h4>
+          <p>
+            회원은 회원가입 신청 시 기재한 개인정보 등에 변동이 있는 경우 홈페이지 내 마이페이지(개인정보란)를 통하여
+            회원의 성명, 주민등록번호, 아이디(ID), 면허번호 및 면허취득일을 제외한 사항을 변경할 수 있으며, 회원 탈퇴를
+            원하실 경우 전자우편을 통하여 서비스 이용계약을 해지할 수 있습니다.
+          </p>
+
+          <h3>제6장 손해배상 및 기타</h3>
+          <h4>제12조 (손해배상)</h4>
+          <p>
+            ① 협회가 제공하는 서비스의 이용 중 회원에게 손해가 발생한 경우, 협회의 고의 또는 중대한 과실에 의한 경우를
+            제외하고는 협회는 이러한 손해에 대하여 책임을 부담하지 않습니다.
+          </p>
+          <p>
+            ② 협회가 손해에 대한 책임을 부담하는 경우 그 손해배상의 범위는 회원이 협회가 제공하는 서비스로부터 입은
+            직접적 손해에 한합니다.
+          </p>
+          <h4>제13조 (약관의 위반)</h4>
+          <p>
+            회원이 이 약관을 위반하여 협회에게 손해가 발생한 경우, 협회는 회원에게 손해의 배상을 청구할 수 있습니다.
+          </p>
+          <h4>제14조 (면책조항)</h4>
+          <p>협회는 각호에 관하여는 책임이 면제됩니다.</p>
+          <p>1. 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우</p>
+          <p>2. 회원의 귀책사유로 인하여 발생한 서비스 이용의 장애</p>
+          <p>3. 홈페이지의 서비스 제공으로부터 회원이 기대하는 이익을 얻지 못할 경우</p>
+          <p>4. 서비스를 통하여 얻은 자료로 인한 회원의 손해</p>
+          <h4>제15조 (관할법원)</h4>
+          <p>
+            홈페이지의 서비스 이용으로 인하여 발생한 분쟁에 관한 소송이 제기될 경우 협회의 소재지를 관할하는 법원을 전속
+            관할법원으로 합니다.
+          </p>
+          <h3>부 칙</h3>
+          <p>(시행일) 이 약관은 2011년 10월 17일부터 시행됩니다.</p>
+        </article>
+      </div>
+    </dialog>
+    <dialog
+      class="edu-dialog edu-dialog--auth account-join-terms-dialog"
+      id="terms-privacy"
+      aria-labelledby="terms-privacy-title"
+    >
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
+        close
+      </button>
+      <h2 id="terms-privacy-title">개인정보 수집 및 이용에 대한 안내</h2>
+      <div class="edu-dialog__body edu-dialog__terms" tabindex="0">
+        <article class="edu-dialog__terms-content">
+          <strong class="edu-dialog__terms-title">- 개인정보 수집 및 이용에 대한 안내 -</strong>
+
+          <h3>개인정보 수집·이용에 대한 동의</h3>
+          <p>
+            개인정보보호법 등의 규정에 따라 (사)대한치과위생사협회(이하 협회) 회원가입 시 수집하는 개인정보의 수집 항목
+            및 방법, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간, 개인정보 제공에 대해서 안내드립니다
+          </p>
+          <h4>가. 개인정보의 수집항목 및 방법</h4>
+          <p>
+            협회는 접수된 가입신청서를 통해 치과위생사의 면허활동 관련 정보안내, 회원가입 및 제반 상담과 각종 서비스
+            제공에 필요한 최소한의 개인정보로 성명, 출신학교, 생년월일, 홈페이지 희망ID, 이메일주소, 우편물수령지 주소,
+            자택전화번호, 휴대폰번호, 계좌정보를 수집합니다
+          </p>
+          <h4>나. 개인정보의 수집 및 이용목적</h4>
+          <p>
+            1. 회원가입업무 처리 및 회원에 대한 혜택부여, 의무부과 등 협회의 각종업무처리를 위한 본인확인 및 개인 식별
+          </p>
+          <p>2. 홈페이지의 개선과 보완을 위한 통계분석</p>
+          <p>3. 면허활동에 필요한 각종 공지사항 전달</p>
+          <p>
+            4. 협회회원증신한카드(신용카드기능탑재, 이하 회원증카드)를 운영할 목적으로 협회의 제휴회사 및 업무를 위탁한
+            수탁업체에 대한 개인(신용)정보를 제공, 활용
+          </p>
+          <h4>다 개인정보의 보유 및 이용기간</h4>
+          <p>귀하가 회원으로 활동하는 동안 개인정보를 보유 및 이용합니다</p>
+          <p>
+            ※ 귀하는 위 정보제공에 대한 동의를 거부할 수 있습니다. 단, 개인정보수집에 동의하지 않을 경우에는 협회 가입이
+            거부되거나 가입 후 회원에게 부여되는 각종 혜택의 제공이 제한 될 수 있습니다
+          </p>
+          <p>본인은 개인정보 수집ㆍ이용에 대해 충분히 이해했으며, 이에 동의합니다 (필수체크박스)</p>
+
+          <h3>개인정보 제공에 대한 동의</h3>
+          <p>
+            가. 제공 받는 자 : 신한카드 주식회사, 신한카드 주식회사로부터 업무를 위탁받은 TM업체, 신용카드 모집 대행업체
+          </p>
+          <p>나. 제공목적 : 회원증카드 소개 및 가입권유 등의 마케팅 활용 및 부대업무 제공목적</p>
+          <p>
+            다. 제공대상정보 : 성명, 생년월일, 주소, 휴대폰번호, 전화번호, 이메일주소, 계좌정보, 치과위생사 면허번호
+          </p>
+          <p>라. 제공받는 자의 개인정보 보유기간 : 정보를 제공받은 시점으로부터 3개월 이내</p>
+          <p>※ 귀하는 위 정보제공에 대한 동의를 거부할 수 있습니다</p>
+          <p>
+            단, 상기 제공에 대한 동의가 없을 경우, 보수교육 출결카드로도 사용되는 회원증카드의 발급이 어려울 수 있습니다
+          </p>
+        </article>
+      </div>
+    </dialog>
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="회원가입 화면 확인">
+        <a href="/account/join/terms/#terms-service">홈페이지 이용약관</a>
+        <a href="/account/join/terms/#terms-privacy">개인정보 수집 이용약관</a>
+        <a href="/account/join/verification/#join-history-dialog">가입이력 있음</a>
+        <a href="/account/join/verification/#pre-member-dialog">선가입회원 있음</a>
+        <a href="/account/join/verification/#pre-member-empty-dialog">선가입회원 미존재</a>
+        <a href="/account/join/verification/#verification-failed-dialog">본인인증 실패</a>
+        <a href="/account/join/information/#address-dialog">주소검색</a>
+      </nav>
+    </details>
+    <script src="/assets/js/vendor/jquery.js"></script>
+
+    <script src="/assets/js/education.js"></script>
   </body>
 </html>
