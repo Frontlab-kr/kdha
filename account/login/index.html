@@ -78,33 +78,33 @@
                   로그인
                 </button>
                 <p>
-                  로그인에 문제가 있다면
-                  <br />
-                  협회 사무국(02-2236-0914)으로 문의주세요.
+                  최초 SNS 연동 시 가입하신 아이디로 로그인 후
+                  <br class="account-login__mobile-break" />
+                  마이페이지에서 인증하여 주세요.
                 </p>
+                <div class="account-login__social" aria-label="SNS 로그인">
+                  <!-- 서버 연동 시 각 제공자의 인증 시작 처리를 연결합니다. -->
+                  <button class="ds-button ds-button--large ds-button--kakao" type="button" data-social-login="kakao">
+                    <img src="/kdha/assets/account/social-kakao.svg" width="24" height="24" alt="" />
+                    카카오로 로그인
+                  </button>
+                  <button class="ds-button ds-button--large ds-button--naver" type="button" data-social-login="naver">
+                    <img src="/kdha/assets/account/social-naver.svg" width="24" height="24" alt="" />
+                    네이버로 로그인
+                  </button>
+                </div>
               </div>
             </form>
-            <ul class="ds-guide-list">
-              <li class="ds-guide-list__item">
-                <span class="ds-guide-list__content">
-                  아직 회원이 아니신가요?
-                  <span class="ds-link-group">
-                    <a class="ds-link ds-link--text ds-link--medium" href="/kdha/account/join/">회원가입</a>
-                    <span class="ds-link-group__suffix"></span>
-                  </span>
-                </span>
-              </li>
-              <li class="ds-guide-list__item">
-                <span class="ds-guide-list__content">
-                  선가입 회원이라면
-                  <span class="ds-link-group">
-                    <a class="ds-link ds-link--text ds-link--medium" href="/kdha/account/login/verification/">회원등록</a>
-                    <span class="ds-link-group__suffix">을</span>
-                  </span>
-                  먼저 진행해 주세요.
-                </span>
-              </li>
-            </ul>
+            <div class="account-login__pre-member">
+              <p>
+                2027년 이전 선가입회원을 신청하신 분은
+                <br class="account-login__mobile-break" />
+                아래의 선가입회원 등록으로 진행해주세요.
+              </p>
+              <a class="ds-button ds-button--outline ds-button--small" href="/kdha/account/login/verification/">
+                선가입회원 등록
+              </a>
+            </div>
           </section>
           <p class="account-login__copyright">
             <span class="account-login__copyright-pc">

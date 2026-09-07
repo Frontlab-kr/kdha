@@ -182,6 +182,16 @@ button {
   background: #ebe9ff;
 }
 
+.ds-button--kakao {
+  color: #1b1f27;
+  background: #fee500;
+}
+
+.ds-button--naver {
+  color: #fff;
+  background: #03c75a;
+}
+
 .ds-button:disabled,
 .ds-button[aria-disabled=true],
 .dialog-button:disabled {
@@ -13947,10 +13957,11 @@ body.main-page .site .site-header__inner {
 
 .account-login__main {
   display: flex;
-  padding-top: 64px;
+  min-height: 848px;
+  padding-top: 0;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 0;
 }
 
@@ -14083,6 +14094,46 @@ body.main-page .site .site-header__inner {
 
 .edu-login-form__submit {
   width: 100%;
+}
+
+.account-login-page .account-login {
+  padding-bottom: 40px;
+}
+
+.account-login__social {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+.account-login__social .ds-button {
+  width: 100%;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.account-login__social img {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.account-login__pre-member {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.account-login__pre-member p {
+  margin: 0;
+  color: #505a67;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.account-login__mobile-break {
+  display: none;
 }
 
 .account-login__copyright {
@@ -14310,6 +14361,12 @@ body.main-page .site .site-header__inner {
     height: 48px;
     padding-inline: 20px;
     font-size: 16px;
+  }
+  .account-login__social .ds-button {
+    height: 48px;
+  }
+  .account-login__mobile-break {
+    display: block;
   }
   .account-login__copyright {
     margin-top: 24px;
