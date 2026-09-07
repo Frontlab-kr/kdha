@@ -61,6 +61,8 @@ $(function () {
       if ($range.data('datepicker-range-ready')) return;
 
       var rangePicker = new DateRangePicker(rangeElement, {
+        allowOneSidedRange: true,
+        container: document.body,
         language: 'ko',
         format: 'yyyy-mm-dd',
         prevArrow: '<span class="material-symbols-rounded" aria-hidden="true">chevron_left</span>',
@@ -74,6 +76,31 @@ $(function () {
 
       rangePicker.datepickers.forEach(function (datepicker) {
         datepicker.picker.element.classList.add('datepicker--day', 'datepicker--range');
+        datepicker.inputField.addEventListener('show', function () {
+          var calendar = datepicker.picker.element;
+          var maxLeft = document.documentElement.clientWidth - calendar.offsetWidth - 8;
+          var left = Math.max(8, Math.min(rangeElement.getBoundingClientRect().left, maxLeft));
+          calendar.style.left = left + window.scrollX + 'px';
+        });
+      });
+
+      var startInput = rangePicker.inputs[0];
+      var endInput = rangePicker.inputs[1];
+      // 시작일을 다시 누르면 기존 종료일을 비워 새 기간을 선택합니다.
+      startInput.addEventListener('show', function () {
+        if (endInput.value) {
+          rangePicker.datepickers[1].setDate({ clear: true });
+        }
+      });
+      // 시작일 선택 후 종료일 달력으로 이어서 이동합니다.
+      startInput.addEventListener('changeDate', function () {
+        if (!rangePicker.datepickers[0].picker.active || !startInput.value || rangePicker._updating) return;
+        window.setTimeout(function () {
+          if (!rangeElement.isConnected) return;
+          rangePicker.datepickers[0].hide();
+          endInput.focus();
+          rangePicker.datepickers[1].show();
+        }, 0);
       });
 
       $range.data({ 'datepicker-range-ready': true, 'datepicker-range': rangePicker });
@@ -81,7 +108,9 @@ $(function () {
         .find('[data-datepicker-range-trigger]')
         .off('click.kdhaDateRange')
         .on('click.kdhaDateRange', function () {
-          rangePicker.datepickers[0].show();
+          var index = startInput.value && !endInput.value ? 1 : 0;
+          rangePicker.inputs[index].focus();
+          rangePicker.datepickers[index].show();
         });
     });
   }

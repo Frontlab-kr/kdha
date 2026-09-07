@@ -188,6 +188,7 @@ $(function () {
 
   // 학력·협회임직경력 반복 카드 추가 및 삭제
   function cleanRepeatCardForTemplate($card) {
+    $card.find('.datepicker').remove();
     $card.find('.ds-select').remove();
     $card.find('select[data-custom-select]').each(function () {
       $(this)
@@ -242,7 +243,11 @@ $(function () {
     var $section = $(this).closest('[data-repeat-section]');
     if ($section.find('[data-repeat-list] > [data-repeat-card]').length <= 1) return;
 
-    $(this).closest('[data-repeat-card]').remove();
+    var $card = $(this).closest('[data-repeat-card]');
+    $card.find('[data-datepicker-range]').each(function () {
+      this.rangepicker?.destroy();
+    });
+    $card.remove();
     updateRepeatCardNumbers($section);
     $section.find('[data-repeat-add]').trigger('focus');
   });
