@@ -1,4 +1,54 @@
 $(function () {
+  // 취업현황에 따라 상세 선택지를 갱신하고 이전 선택은 초기화합니다.
+  var employmentDetails = {
+    '': ['선택'],
+    clinical: ['선택', '종합병원', '치과병원', '요양병원', '치과의원', '기타'],
+    'public-health': ['선택', '보건소', '보건지소', '기타'],
+    other: ['기타'],
+    unemployed: ['미취업'],
+  };
+  $('[data-employment-status]').on('change', function () {
+    var detail = $(this).closest('.account-form-row').find('[data-employment-detail]');
+    detail.empty();
+    (employmentDetails[this.value] || employmentDetails['']).forEach(function (label) {
+      var option = new Option(label, label === '선택' ? '' : label);
+      if (label !== '선택') option.setAttribute('data-placeholder', 'false');
+      detail.append(option);
+    });
+    detail.prop('selectedIndex', 0).trigger('change');
+  });
+
+  // 회원 유형을 약관 → 본인인증 → 해당 유형의 정보입력 화면까지 전달합니다.
+  if (document.body.classList.contains('account-join-page')) {
+    var joinPath = window.location.pathname;
+    var typeFromPath = joinPath.match(/\/information\/(dental|student|general)\/?$/);
+    var requestedType = new URLSearchParams(window.location.search).get('type');
+    var memberType = typeFromPath
+      ? typeFromPath[1]
+      : ['dental', 'student', 'general'].includes(requestedType)
+        ? requestedType
+        : 'dental';
+    var joinForm = document.querySelector('form[action*="/kdha/account/join/"]');
+    if (joinForm && !joinForm.querySelector('input[name="type"]')) {
+      var typeField = document.createElement('input');
+      typeField.type = 'hidden';
+      typeField.name = 'type';
+      typeField.value = memberType;
+      joinForm.appendChild(typeField);
+    }
+    document.querySelectorAll('main a[href], #pre-member-dialog a[href]').forEach(function (link) {
+      var target = new URL(link.href, window.location.href);
+      if (target.origin !== window.location.origin) return;
+      if (!/\/account\/join\/(information|verification)\/?$/.test(target.pathname)) return;
+      var targetType = link.closest('#pre-member-dialog') ? 'dental' : memberType;
+      if (/\/information\/?$/.test(target.pathname)) {
+        target.pathname = target.pathname.replace(/\/?$/, '/') + targetType + '/';
+      }
+      target.searchParams.set('type', targetType);
+      link.href = target.pathname + target.search + target.hash;
+    });
+  }
+
   // 교육 목록 카테고리 필터
   $('.edu-filter button').on('click', function () {
     var category = $(this).data('filter');

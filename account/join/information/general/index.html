@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/kdha/assets/css/datepicker.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
 
-    <title>선가입회원 회원가입</title>
+    <title>홈페이지회원 회원정보 입력 | 회원가입</title>
   </head>
   <body class="account-site account-join-page">
     <a class="skip-link" href="#main-content">본문 바로가기</a>
@@ -21,41 +21,66 @@
 
         <div class="account-join__main">
           <section class="account-join__card account-join__card--long" aria-labelledby="join-title">
+            <ol class="account-join-steps account-join-steps--4" aria-label="회원가입 진행 단계">
+              <li class="is-complete">
+                <b>회원유형선택</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="is-complete">
+                <b>약관동의</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="is-complete">
+                <b>본인인증</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="is-current">
+                <b>회원정보입력</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="">
+                <b>가입완료</b>
+                <span aria-hidden="true"></span>
+              </li>
+            </ol>
+            <div class="account-mobile-progress" aria-label="회원정보입력 진행 단계: 5단계 중 4단계">
+              <div class="account-mobile-progress__heading">
+                <strong>회원정보입력</strong>
+                <span>4 / 5</span>
+              </div>
+              <ol class="account-mobile-progress__dots" aria-hidden="true">
+                <li class="is-complete"></li>
+                <li class="is-complete"></li>
+                <li class="is-complete"></li>
+                <li class="is-current"></li>
+                <li class=""></li>
+              </ol>
+            </div>
+
             <header class="account-join__heading">
-              <h1 id="join-title">선가입회원 회원가입</h1>
-              <p>회원 상세정보를 입력해주세요.</p>
+              <h1 id="join-title">회원가입</h1>
+              <p>홈페이지회원 상세정보를 입력해주세요.</p>
             </header>
-            <form class="edu-member-form account-join-pre-member-form" action="/kdha/account/join/complete/">
+            <form class="edu-member-form" action="/kdha/account/join/complete/">
               <div class="edu-member-grid">
                 <label class="edu-field">
                   <span>이름</span>
-                  <input type="text" placeholder="이름 입력" required />
+                  <input value="홍길동" disabled />
                 </label>
-                <div class="edu-field form-datepicker">
-                  <label for="pre-birth-date">생년월일</label>
-                  <span class="form-datepicker__control">
-                    <input id="pre-birth-date" type="text" placeholder="YYYY-MM-DD" data-datepicker required />
-                    <button
-                      class="form-datepicker__button"
-                      type="button"
-                      data-datepicker-trigger
-                      aria-label="생년월일 달력 열기"
-                      aria-controls="pre-birth-date"
-                    >
-                      <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
-                    </button>
-                  </span>
-                </div>
+                <label class="edu-field">
+                  <span>생년월일</span>
+                  <input value="2000-01-01" disabled />
+                </label>
                 <label class="edu-field edu-field--wide">
                   <span>아이디</span>
                   <span class="edu-input-action">
-                    <input type="text" placeholder="4-12자 사이의 영문 또는 숫자" required />
+                    <input placeholder="4-12자 사이의 영문 또는 숫자" required />
                     <button class="form-action-button" type="button">중복체크</button>
                   </span>
                 </label>
                 <label class="edu-field edu-field--wide">
                   <span>비밀번호</span>
-                  <input type="password" placeholder="6-20자 사이의 영문 소문자, 숫자" required />
+                  <input type="password" placeholder="6-20자 영문 소문자, 숫자" required />
                 </label>
                 <label class="edu-field edu-field--wide has-error">
                   <span>비밀번호 확인</span>
@@ -63,123 +88,96 @@
                     type="password"
                     placeholder="비밀번호 재입력"
                     aria-invalid="true"
-                    aria-describedby="pre-password-error"
+                    aria-describedby="join-password-error"
                     required
                   />
-                  <small id="pre-password-error">비밀번호가 일치하지 않습니다.</small>
+                  <small id="join-password-error">비밀번호가 일치하지 않습니다.</small>
                 </label>
-                <div class="account-form-row account-form-row--school edu-field--wide">
-                  <label class="edu-field">
-                    <span>학교</span>
-                    <select required data-custom-select>
-                      <option value="">학제</option>
-                      <option value="2">2년제</option>
-                      <option value="3">3년제</option>
-                      <option value="4">4년제</option>
-                    </select>
-                  </label>
-                  <label class="edu-field account-form-row__unlabeled">
-                    <span class="sr-only">학교명</span>
-                    <select required data-custom-select>
-                      <option value="">학교</option>
-                    </select>
-                  </label>
-                </div>
-                <div class="edu-field form-datepicker">
-                  <label for="pre-graduation-date">졸업예정년도</label>
-                  <span class="form-datepicker__control">
-                    <input
-                      id="pre-graduation-date"
-                      type="text"
-                      inputmode="numeric"
-                      placeholder="YYYY"
-                      autocomplete="off"
-                      data-datepicker
-                      data-datepicker-view="year"
-                      required
-                    />
-                    <button
-                      class="form-datepicker__button"
-                      type="button"
-                      data-datepicker-trigger
-                      aria-label="졸업예정년도 달력 열기"
-                      aria-controls="pre-graduation-date"
-                    >
-                      <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
-                    </button>
-                  </span>
-                </div>
+                <label class="edu-field edu-field--wide">
+                  <span>영문명 (선택)</span>
+                  <input placeholder="영문명 입력" />
+                </label>
+
+                <label class="edu-field edu-field--wide">
+                  <span>직업구분</span>
+                  <select name="occupation" required data-custom-select>
+                    <option value="">선택</option>
+                    <option value="student">학생</option>
+                    <option value="reporter">기자</option>
+                    <option value="general">일반인</option>
+                    <option value="other">기타</option>
+                  </select>
+                </label>
                 <label class="edu-field">
                   <span>휴대폰번호</span>
                   <input type="tel" inputmode="numeric" placeholder="- 없이 숫자만 입력" required />
                 </label>
+                <label class="edu-field">
+                  <span>전화번호 (선택)</span>
+                  <input type="tel" inputmode="numeric" placeholder="- 없이 숫자만 입력" />
+                </label>
+                <div class="account-form-row account-form-row--email edu-field--wide">
+                  <label class="edu-field">
+                    <span>이메일 (선택)</span>
+                    <input type="email" placeholder="이메일 입력" />
+                  </label>
+                  <div class="account-email-domain account-form-row__unlabeled">
+                    <label class="edu-field account-email-domain__field">
+                      <span class="sr-only">이메일 도메인</span>
+                      <select data-custom-select>
+                        <option value="gmail.com">@ gmail.com</option>
+                        <option value="naver.com">@ naver.com</option>
+                        <option value="hanmail.net">@ hanmail.net</option>
+                      </select>
+                      <input
+                        type="text"
+                        inputmode="url"
+                        placeholder="@ 직접입력"
+                        aria-label="이메일 도메인 직접입력"
+                        data-email-domain-input
+                        hidden
+                      />
+                    </label>
+                    <button
+                      class="form-action-button account-email-domain__button"
+                      type="button"
+                      data-email-domain-toggle
+                    >
+                      직접입력
+                    </button>
+                  </div>
+                </div>
+                <fieldset class="account-choice-field edu-field--wide">
+                  <legend>알림서비스 (선택)</legend>
+                  <div class="account-choice-group">
+                    <label class="form-check">
+                      <input type="checkbox" />
+                      SMS
+                    </label>
+                    <label class="form-check">
+                      <input type="checkbox" checked />
+                      이메일
+                    </label>
+                  </div>
+                </fieldset>
                 <div class="edu-field edu-field--wide">
-                  <span>주소</span>
+                  <span>주소 (선택)</span>
                   <span class="edu-input-action">
-                    <input
-                      id="pre-member-address"
-                      aria-label="주소"
-                      value="06365 123-12 서울특별시 강남구 1길 1"
-                      readonly
-                    />
+                    <input id="member-address" aria-label="주소" placeholder="주소찾기를 이용해 주세요" readonly />
                     <button
                       class="form-action-button"
                       type="button"
                       data-dialog-open="address-dialog"
-                      data-address-target="pre-member-address"
+                      data-address-target="member-address"
                     >
                       주소찾기
                     </button>
                   </span>
-                  <input aria-label="상세주소" placeholder="상세주소 입력" required />
+                  <input aria-label="상세주소" placeholder="상세주소 입력" />
                 </div>
-              </div>
-              <div class="account-join-terms">
-                <div class="account-join-term">
-                  <strong>[필수] 대한치과위생사협회 홈페이지 이용약관</strong>
-                  <div class="account-join-term__control">
-                    <div class="account-join-term__radios">
-                      <label class="form-check">
-                        <input type="radio" name="preServiceTerms" value="no" />
-                        동의안함
-                      </label>
-                      <label class="form-check">
-                        <input type="radio" name="preServiceTerms" value="yes" data-required-term />
-                        동의함
-                      </label>
-                    </div>
-                    <a class="ds-link ds-link--text" href="/kdha/account/join/terms/#terms-service" data-dialog-link>
-                      <span class="account-join-term__detail-pc">이용약관 상세보기</span>
-                      <span class="account-join-term__detail-mobile">이용약관</span>
-                    </a>
-                  </div>
-                </div>
-                <div class="account-join-term">
-                  <strong>[필수] 개인정보 수집 및 이용약관</strong>
-                  <div class="account-join-term__control">
-                    <div class="account-join-term__radios">
-                      <label class="form-check">
-                        <input type="radio" name="prePrivacyTerms" value="no" />
-                        동의안함
-                      </label>
-                      <label class="form-check">
-                        <input type="radio" name="prePrivacyTerms" value="yes" data-required-term />
-                        동의함
-                      </label>
-                    </div>
-                    <a class="ds-link ds-link--text" href="/kdha/account/join/terms/#terms-privacy" data-dialog-link>
-                      <span class="account-join-term__detail-pc">이용약관 상세보기</span>
-                      <span class="account-join-term__detail-mobile">이용약관</span>
-                    </a>
-                  </div>
-                </div>
-                <label class="form-check account-join-terms__all">
-                  <input type="checkbox" data-terms-all />
-                  모두 동의합니다.
-                </label>
               </div>
               <footer class="account-join__actions">
-                <a class="ds-button ds-button--outline ds-button--large" href="/kdha/account/join/">취소</a>
+                <a class="ds-button ds-button--outline ds-button--large" href="/kdha/account/join/verification/">취소</a>
                 <button class="ds-button ds-button--primary ds-button--large" type="submit">완료</button>
               </footer>
             </form>

@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/kdha/assets/css/datepicker.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+
+    <title>치과위생사회원 회원정보 입력 | 회원가입</title>
+  </head>
+  <body class="account-site account-join-page">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <main id="main-content" class="account-login account-join account-join--long">
+      <div class="account-login__shell">
+        <header class="account-login__brand">
+          <a href="/kdha/main/" aria-label="대한치과위생사협회 대표사이트 홈으로 이동">
+            <img src="/kdha/assets/brand/logo-header-b.svg" width="220" height="42" alt="대한치과위생사협회" />
+          </a>
+          <span>KDHA 통합 회원서비스</span>
+        </header>
+
+        <div class="account-join__main">
+          <section class="account-join__card account-join__card--long" aria-labelledby="join-title">
+            <ol class="account-join-steps account-join-steps--4" aria-label="회원가입 진행 단계">
+              <li class="is-complete">
+                <b>회원유형선택</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="is-complete">
+                <b>약관동의</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="is-complete">
+                <b>본인인증</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="is-current">
+                <b>회원정보입력</b>
+                <span aria-hidden="true"></span>
+              </li>
+              <li class="">
+                <b>가입완료</b>
+                <span aria-hidden="true"></span>
+              </li>
+            </ol>
+            <div class="account-mobile-progress" aria-label="회원정보입력 진행 단계: 5단계 중 4단계">
+              <div class="account-mobile-progress__heading">
+                <strong>회원정보입력</strong>
+                <span>4 / 5</span>
+              </div>
+              <ol class="account-mobile-progress__dots" aria-hidden="true">
+                <li class="is-complete"></li>
+                <li class="is-complete"></li>
+                <li class="is-complete"></li>
+                <li class="is-current"></li>
+                <li class=""></li>
+              </ol>
+            </div>
+
+            <header class="account-join__heading">
+              <h1 id="join-title">회원가입</h1>
+              <p>치과위생사회원 상세정보를 입력해주세요.</p>
+            </header>
+            <form class="edu-member-form" action="/kdha/account/join/complete/">
+              <div class="edu-member-grid">
+                <label class="edu-field">
+                  <span>이름</span>
+                  <input value="홍길동" disabled />
+                </label>
+                <label class="edu-field">
+                  <span>생년월일</span>
+                  <input value="2000-01-01" disabled />
+                </label>
+                <label class="edu-field edu-field--wide">
+                  <span>아이디</span>
+                  <span class="edu-input-action">
+                    <input placeholder="4-12자 사이의 영문 또는 숫자" required />
+                    <button class="form-action-button" type="button">중복체크</button>
+                  </span>
+                </label>
+                <label class="edu-field edu-field--wide">
+                  <span>비밀번호</span>
+                  <input type="password" placeholder="6-20자 영문 소문자, 숫자" required />
+                </label>
+                <label class="edu-field edu-field--wide has-error">
+                  <span>비밀번호 확인</span>
+                  <input
+                    type="password"
+                    placeholder="비밀번호 재입력"
+                    aria-invalid="true"
+                    aria-describedby="join-password-error"
+                    required
+                  />
+                  <small id="join-password-error">비밀번호가 일치하지 않습니다.</small>
+                </label>
+                <label class="edu-field edu-field--wide">
+                  <span>영문명 (선택)</span>
+                  <input placeholder="영문명 입력" />
+                </label>
+                <div class="edu-field edu-field--wide">
+                  <span>학교</span>
+                  <div class="account-form-row account-form-row--school">
+                    <label class="edu-field">
+                      <span class="sr-only">학제</span>
+                      <select data-custom-select>
+                        <option value="">학제</option>
+                        <option value="2">2년제</option>
+                        <option value="3">3년제</option>
+                        <option value="4">4년제</option>
+                      </select>
+                    </label>
+                    <label class="edu-field">
+                      <span class="sr-only">학교명</span>
+                      <select data-custom-select>
+                        <option>학교</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="edu-field form-datepicker">
+                  <label for="admission-year">입학년도</label>
+                  <span class="form-datepicker__control">
+                    <input
+                      id="admission-year"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="YYYY"
+                      autocomplete="off"
+                      data-datepicker
+                      data-datepicker-view="year"
+                    />
+                    <button
+                      class="form-datepicker__button"
+                      type="button"
+                      data-datepicker-trigger
+                      aria-label="입학년도 선택기 열기"
+                      aria-controls="admission-year"
+                    >
+                      <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                    </button>
+                  </span>
+                </div>
+
+                <div class="edu-field form-datepicker">
+                  <label for="graduation-year">졸업년도</label>
+                  <span class="form-datepicker__control">
+                    <input
+                      id="graduation-year"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="YYYY"
+                      autocomplete="off"
+                      data-datepicker
+                      data-datepicker-view="year"
+                    />
+                    <button
+                      class="form-datepicker__button"
+                      type="button"
+                      data-datepicker-trigger
+                      aria-label="졸업년도 선택기 열기"
+                      aria-controls="graduation-year"
+                    >
+                      <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                    </button>
+                  </span>
+                </div>
+                <fieldset class="account-choice-field edu-field--wide">
+                  <legend>결혼유무 (선택)</legend>
+                  <div class="account-choice-group">
+                    <label class="form-check">
+                      <input type="radio" name="marriage" />
+                      미혼
+                    </label>
+                    <label class="form-check">
+                      <input type="radio" name="marriage" checked />
+                      기혼
+                    </label>
+                  </div>
+                </fieldset>
+                <div class="edu-field form-datepicker">
+                  <label for="exam-pass-year">시험합격년도</label>
+                  <span class="form-datepicker__control">
+                    <input
+                      id="exam-pass-year"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="YYYY"
+                      autocomplete="off"
+                      data-datepicker
+                      data-datepicker-view="year"
+                    />
+                    <button
+                      class="form-datepicker__button"
+                      type="button"
+                      data-datepicker-trigger
+                      aria-label="시험합격년도 선택기 열기"
+                      aria-controls="exam-pass-year"
+                    >
+                      <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                    </button>
+                  </span>
+                </div>
+                <div class="edu-field form-datepicker">
+                  <label for="license-issued-date">면허발행일</label>
+                  <span class="form-datepicker__control">
+                    <input
+                      id="license-issued-date"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="YYYY-MM-DD"
+                      autocomplete="off"
+                      data-datepicker
+                    />
+                    <button
+                      class="form-datepicker__button"
+                      type="button"
+                      data-datepicker-trigger
+                      aria-label="면허발행일 달력 열기"
+                      aria-controls="license-issued-date"
+                    >
+                      <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                    </button>
+                  </span>
+                </div>
+                <label class="edu-field edu-field--wide">
+                  <span>면허번호</span>
+                  <input placeholder="면허번호 입력" />
+                </label>
+                <div class="edu-field edu-field--wide">
+                  <span>면허증사본</span>
+                  <div class="account-file-upload">
+                    <p>
+                      이곳에 파일을 드래그 하거나
+                      <br />
+                      파일찾기 버튼으로 파일을 추가해주세요.
+                      <br />
+                      * 50MB 이하의 jpg, png, pdf 파일만 등록 가능합니다.
+                    </p>
+                    <label class="ds-button ds-button--outline ds-button--small" for="license-file">파일찾기</label>
+                    <input class="sr-only" id="license-file" type="file" accept=".jpg,.jpeg,.png,.pdf" />
+                  </div>
+                  <div class="account-file-upload__item" data-file-item hidden>
+                    <span data-file-name></span>
+                    <span class="account-file-upload__meta">
+                      <small data-file-size></small>
+                      <button type="button" data-file-remove aria-label="첨부파일 삭제">
+                        <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <label class="edu-field">
+                  <span>휴대폰번호</span>
+                  <input type="tel" inputmode="numeric" placeholder="- 없이 숫자만 입력" required />
+                </label>
+                <label class="edu-field">
+                  <span>전화번호 (선택)</span>
+                  <input type="tel" inputmode="numeric" placeholder="- 없이 숫자만 입력" />
+                </label>
+                <div class="account-form-row account-form-row--email edu-field--wide">
+                  <label class="edu-field">
+                    <span>이메일</span>
+                    <input type="email" placeholder="이메일 입력" required />
+                  </label>
+                  <div class="account-email-domain account-form-row__unlabeled">
+                    <label class="edu-field account-email-domain__field">
+                      <span class="sr-only">이메일 도메인</span>
+                      <select data-custom-select>
+                        <option value="gmail.com">@ gmail.com</option>
+                        <option value="naver.com">@ naver.com</option>
+                        <option value="hanmail.net">@ hanmail.net</option>
+                      </select>
+                      <input
+                        type="text"
+                        inputmode="url"
+                        placeholder="@ 직접입력"
+                        aria-label="이메일 도메인 직접입력"
+                        data-email-domain-input
+                        hidden
+                      />
+                    </label>
+                    <button
+                      class="form-action-button account-email-domain__button"
+                      type="button"
+                      data-email-domain-toggle
+                    >
+                      직접입력
+                    </button>
+                  </div>
+                </div>
+                <fieldset class="account-choice-field edu-field--wide">
+                  <legend>알림서비스 (선택)</legend>
+                  <div class="account-choice-group">
+                    <label class="form-check">
+                      <input type="checkbox" />
+                      SMS
+                    </label>
+                    <label class="form-check">
+                      <input type="checkbox" checked />
+                      이메일
+                    </label>
+                  </div>
+                </fieldset>
+                <div class="edu-field edu-field--wide">
+                  <span>주소</span>
+                  <span class="edu-input-action">
+                    <input
+                      id="member-address"
+                      aria-label="주소"
+                      placeholder="주소찾기를 이용해 주세요"
+                      readonly
+                      required
+                    />
+                    <button
+                      class="form-action-button"
+                      type="button"
+                      data-dialog-open="address-dialog"
+                      data-address-target="member-address"
+                    >
+                      주소찾기
+                    </button>
+                  </span>
+                  <input aria-label="상세주소" placeholder="상세주소 입력" required />
+                </div>
+
+                <div class="account-form-section edu-field--wide">
+                  <div class="account-form-row">
+                    <label class="edu-field">
+                      <span>취업현황</span>
+                      <select name="employmentStatus" data-employment-status data-custom-select>
+                        <option value="">선택</option>
+                        <option value="clinical">임상</option>
+                        <option value="public-health">보건</option>
+                        <option value="other">기타</option>
+                        <option value="unemployed">미취업</option>
+                      </select>
+                    </label>
+                    <label class="edu-field account-form-row__unlabeled">
+                      <span class="sr-only">취업현황 상세</span>
+                      <select name="employmentDetail" data-employment-detail data-custom-select>
+                        <option value="">선택</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="edu-field">
+                    <span>근무지주소</span>
+                    <span class="edu-input-action">
+                      <input
+                        id="work-address"
+                        aria-label="근무지주소"
+                        value="06365 123-12 서울특별시 강남구 1길 1"
+                        readonly
+                      />
+                      <button
+                        class="form-action-button"
+                        type="button"
+                        data-dialog-open="address-dialog"
+                        data-address-target="work-address"
+                      >
+                        주소찾기
+                      </button>
+                    </span>
+                    <input aria-label="근무지 상세주소" placeholder="상세주소 입력" />
+                  </div>
+                  <div class="account-form-row">
+                    <label class="edu-field">
+                      <span>근무처명</span>
+                      <input placeholder="근무처명 입력" />
+                    </label>
+                    <label class="edu-field">
+                      <span>직위 (선택)</span>
+                      <input placeholder="직위 입력" />
+                    </label>
+                  </div>
+                  <div class="account-form-row">
+                    <label class="edu-field">
+                      <span>직장 전화번호</span>
+                      <input placeholder="- 없이 숫자만 입력" />
+                    </label>
+                    <label class="edu-field">
+                      <span>팩스번호 (선택)</span>
+                      <input placeholder="- 없이 숫자만 입력" />
+                    </label>
+                  </div>
+                  <fieldset class="account-choice-field">
+                    <legend>산하단체</legend>
+                    <div class="account-choice-group account-choice-group--wrap">
+                      <label class="form-check">
+                        <input type="radio" name="affiliate" />
+                        없음
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="affiliate" checked />
+                        보건회
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="affiliate" />
+                        임상회
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="affiliate" />
+                        남자회
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="affiliate" />
+                        군진회
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="account-choice-field">
+                    <legend>학회</legend>
+                    <div class="account-choice-grid">
+                      <label class="form-check">
+                        <input type="checkbox" />
+                        없음
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" checked />
+                        대한치과위생학회
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" />
+                        한국치위생학회
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" />
+                        한국치위생과학회
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" />
+                        한국치위생감염관리학회
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="account-mailing">
+                    <legend>우편물</legend>
+                    <div>
+                      <strong>치위협보</strong>
+                      <label class="form-check">
+                        <input type="radio" name="mail1" checked />
+                        자택
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="mail1" />
+                        근무처
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="mail1" />
+                        미수령
+                      </label>
+                    </div>
+                    <div>
+                      <strong>다이어리</strong>
+                      <label class="form-check">
+                        <input type="radio" name="mail2" checked />
+                        자택
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="mail2" />
+                        근무처
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="mail2" />
+                        미수령
+                      </label>
+                    </div>
+                    <div>
+                      <strong>탁상달력</strong>
+                      <label class="form-check">
+                        <input type="radio" name="mail3" checked />
+                        자택
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="mail3" />
+                        근무처
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="mail3" />
+                        미수령
+                      </label>
+                    </div>
+                    <div>
+                      <strong class="account-mailing__label--justify" aria-label="기타">
+                        <span aria-hidden="true">기</span>
+                        <span aria-hidden="true">타</span>
+                      </strong>
+                      <label class="form-check">
+                        <input type="radio" name="mail4" checked />
+                        자택
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="mail4" />
+                        근무처
+                      </label>
+                      <label class="form-check">
+                        <input type="radio" name="mail4" />
+                        미수령
+                      </label>
+                    </div>
+                  </fieldset>
+                  <section
+                    class="account-repeat-section"
+                    aria-labelledby="education-history-title"
+                    data-repeat-section
+                    data-repeat-label="학력현황"
+                  >
+                    <div class="account-repeat-section__heading">
+                      <h2 id="education-history-title">학력현황 (선택)</h2>
+                      <button class="ds-button ds-button--outline ds-button--small" type="button" data-repeat-add>
+                        추가
+                        <span class="material-symbols-rounded" aria-hidden="true">add</span>
+                      </button>
+                    </div>
+                    <div class="account-repeat-list" data-repeat-list>
+                      <div class="account-repeat-card" data-repeat-card>
+                        <div class="account-repeat-card__heading">
+                          <strong>학력현황 1</strong>
+                          <button
+                            class="account-repeat-card__remove"
+                            type="button"
+                            aria-label="학력현황 1 삭제"
+                            data-repeat-remove
+                            disabled
+                          >
+                            <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                          </button>
+                        </div>
+                        <div class="account-repeat-card__form">
+                          <div class="account-form-row">
+                            <label class="edu-field">
+                              <span class="sr-only">학력구분</span>
+                              <select data-custom-select>
+                                <option value="">학력구분</option>
+                                <option value="doctor">박사</option>
+                                <option value="master">석사</option>
+                                <option value="bachelor">학사</option>
+                              </select>
+                            </label>
+                            <label class="edu-field">
+                              <span class="sr-only">학교</span>
+                              <input placeholder="학교" />
+                            </label>
+                          </div>
+                          <div class="account-form-row">
+                            <label class="edu-field">
+                              <span class="sr-only">전공</span>
+                              <input placeholder="전공" />
+                            </label>
+                            <label class="edu-field">
+                              <span class="sr-only">학위명</span>
+                              <input placeholder="학위명" />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section
+                    class="account-repeat-section"
+                    aria-labelledby="career-history-title"
+                    data-repeat-section
+                    data-repeat-label="협회임직경력"
+                  >
+                    <div class="account-repeat-section__heading">
+                      <h2 id="career-history-title">협회임직경력 (선택)</h2>
+                      <button class="ds-button ds-button--outline ds-button--small" type="button" data-repeat-add>
+                        추가
+                        <span class="material-symbols-rounded" aria-hidden="true">add</span>
+                      </button>
+                    </div>
+                    <div class="account-repeat-list" data-repeat-list>
+                      <div class="account-repeat-card" data-repeat-card>
+                        <div class="account-repeat-card__heading">
+                          <strong>협회임직경력 1</strong>
+                          <button
+                            class="account-repeat-card__remove"
+                            type="button"
+                            aria-label="협회임직경력 1 삭제"
+                            data-repeat-remove
+                            disabled
+                          >
+                            <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                          </button>
+                        </div>
+                        <div class="account-repeat-card__form">
+                          <div class="account-form-row">
+                            <label class="edu-field">
+                              <span class="sr-only">협회명</span>
+                              <select data-custom-select>
+                                <option>협회명</option>
+                              </select>
+                            </label>
+                            <label class="edu-field">
+                              <span class="sr-only">기간</span>
+                              <span class="account-repeat-date" data-datepicker-range>
+                                <input aria-label="임직 시작일" placeholder="YYYY-MM-DD" autocomplete="off" />
+                                <span class="account-repeat-date__separator" aria-hidden="true">~</span>
+                                <input aria-label="임직 종료일" placeholder="YYYY-MM-DD" autocomplete="off" />
+                                <button
+                                  class="account-repeat-date__button"
+                                  type="button"
+                                  data-datepicker-range-trigger
+                                  aria-label="임직 기간 선택기 열기"
+                                >
+                                  <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                                </button>
+                              </span>
+                            </label>
+                          </div>
+                          <label class="edu-field">
+                            <span class="sr-only">직위</span>
+                            <input placeholder="직위" />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <footer class="account-join__actions">
+                <a class="ds-button ds-button--outline ds-button--large" href="/kdha/account/join/verification/">취소</a>
+                <button class="ds-button ds-button--primary ds-button--large" type="submit">완료</button>
+              </footer>
+            </form>
+          </section>
+          <p class="account-login__copyright">
+            <span class="account-login__copyright-pc">
+              © Korean Dental Hygienists Association. All rights reserved.
+            </span>
+            <span class="account-login__copyright-mobile">© Korean Dental Hygienists Association</span>
+          </p>
+        </div>
+      </div>
+    </main>
+    <dialog class="edu-dialog edu-dialog--address" id="address-dialog" aria-labelledby="address-dialog-title">
+      <button
+        type="button"
+        class="edu-dialog__close material-symbols-rounded"
+        data-dialog-close
+        aria-label="주소검색 창 닫기"
+      >
+        close
+      </button>
+      <h2 id="address-dialog-title">주소검색</h2>
+      <form class="edu-address-search" role="search">
+        <label class="form-field form-field--large edu-address-search__field">
+          <span class="sr-only">주소 검색어</span>
+          <input placeholder="주소 입력" />
+        </label>
+        <button class="form-action-button" type="submit">검색</button>
+      </form>
+      <div class="edu-dialog__body edu-address-results" data-address-accordion hidden>
+        <article class="edu-address-result is-open" data-address-value="06774 서울특별시 서초구 강남대로 27">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="true">
+            <strong>서울특별시 서초구 강남대로 27 [양재동]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel">
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>06774</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 서초구 강남대로 27 [양재동]</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 서초구 양재동 232 AT 센터</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <article class="edu-address-result" data-address-value="06130 서울특별시 강남구 테헤란로 7길 12">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="false">
+            <strong>서울특별시 강남구 테헤란로 7길 12 [역삼동]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel" hidden>
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>06130</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 강남구 테헤란로 7길 12</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 강남구 역삼동 648-23</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <article class="edu-address-result" data-address-value="04524 서울특별시 중구 세종대로 110">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="false">
+            <strong>서울특별시 중구 세종대로 110 [태평로1가]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel" hidden>
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>04524</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 중구 세종대로 110</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 중구 태평로1가 31</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <article class="edu-address-result" data-address-value="03154 서울특별시 종로구 종로 1">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="false">
+            <strong>서울특별시 종로구 종로 1 [종로1가]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel" hidden>
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>03154</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 종로구 종로 1</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 종로구 종로1가 1</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <article class="edu-address-result" data-address-value="07236 서울특별시 영등포구 국회대로 76길 10">
+          <button class="edu-address-result__toggle" type="button" aria-expanded="false">
+            <strong>서울특별시 영등포구 국회대로 76길 10 [여의도동]</strong>
+            <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="edu-address-result__panel" hidden>
+            <dl>
+              <div>
+                <dt>우편번호</dt>
+                <dd>07236</dd>
+              </div>
+              <div>
+                <dt>도로명</dt>
+                <dd>서울특별시 영등포구 국회대로 76길 10</dd>
+              </div>
+              <div>
+                <dt>지번</dt>
+                <dd>서울특별시 영등포구 여의도동 17-8</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+      </div>
+      <button
+        class="ds-button ds-button--primary ds-button--large edu-address-select"
+        type="button"
+        data-address-select
+      >
+        선택
+      </button>
+    </dialog>
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="회원가입 화면 확인">
+        <a href="/kdha/account/join/information/dental/">치과위생사회원 정보입력</a>
+        <a href="/kdha/account/join/information/student/">학생회원 정보입력</a>
+        <a href="/kdha/account/join/information/general/">홈페이지회원 정보입력</a>
+        <a href="/kdha/account/join/terms/#terms-service">홈페이지 이용약관</a>
+        <a href="/kdha/account/join/terms/#terms-privacy">개인정보 수집 이용약관</a>
+        <a href="/kdha/account/join/verification/#join-history-dialog">가입이력 있음</a>
+        <a href="/kdha/account/join/verification/#pre-member-dialog">선가입회원 있음</a>
+        <a href="/kdha/account/join/verification/#pre-member-empty-dialog">선가입회원 미존재</a>
+        <a href="/kdha/account/join/verification/#verification-failed-dialog">본인인증 실패</a>
+        <a href="/kdha/account/join/information/dental/#address-dialog">주소검색</a>
+      </nav>
+    </details>
+
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+
+    <script src="/kdha/assets/js/education.js"></script>
+  </body>
+</html>

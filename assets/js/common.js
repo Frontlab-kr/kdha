@@ -457,17 +457,6 @@ $(function () {
       );
       var $list = $('<ul class="ds-select__list" role="listbox" hidden></ul>').attr('id', listId);
 
-      $native.find('option').each(function (optionIndex) {
-        var $option = $('<li class="ds-select__option" role="option" tabindex="-1"></li>')
-          .text($(this).text())
-          .attr({
-            'data-option-index': optionIndex,
-            'aria-selected': this.selected ? 'true' : 'false',
-            'aria-disabled': this.disabled ? 'true' : 'false',
-          });
-        $list.append($option);
-      });
-
       if (isRequired) {
         $native.prop('required', false).attr('data-custom-required', 'true');
         $button.attr('aria-required', 'true');
@@ -480,10 +469,24 @@ $(function () {
       $native.data('custom-select-ready', true);
 
       function syncCustomSelect() {
+        // 종속 셀렉트 등에서 원본 option이 바뀐 경우 펼침 목록도 동기화합니다.
+        $list.empty();
+        $native.find('option').each(function (optionIndex) {
+          $list.append(
+            $('<li class="ds-select__option" role="option" tabindex="-1"></li>')
+              .text($(this).text())
+              .attr({
+                'data-option-index': optionIndex,
+                'aria-selected': this.selected ? 'true' : 'false',
+                'aria-disabled': this.disabled ? 'true' : 'false',
+              }),
+          );
+        });
         var selectedIndex = $native.prop('selectedIndex');
         var selectedOption = $native.find('option').eq(selectedIndex);
         var selectedText = selectedOption.text();
-        var isPlaceholder = !selectedOption.val() || selectedIndex === 0;
+        var isPlaceholder =
+          selectedOption.attr('data-placeholder') !== 'false' && (!selectedOption.val() || selectedIndex === 0);
 
         $value.text(selectedText);
         $button

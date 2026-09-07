@@ -46,13 +46,32 @@
                   </label>
                 </div>
                 <div class="edu-login-form__utility">
-                  <label class="edu-check">
+                  <label class="form-check">
                     <input type="checkbox" name="rememberId" />
                     <span>아이디 저장</span>
                   </label>
-                  <nav class="edu-account-links" aria-label="계정 지원">
-                    <button type="button" data-dialog-open="find-id-dialog">아이디 찾기</button>
-                    <button type="button" data-dialog-open="find-password-dialog">비밀번호 찾기</button>
+                  <nav class="account-login__links" aria-label="계정 지원">
+                    <span class="ds-link-group">
+                      <button
+                        class="ds-link ds-link--text ds-link--medium"
+                        type="button"
+                        data-dialog-open="find-id-dialog"
+                      >
+                        아이디 찾기
+                      </button>
+                      <span class="ds-link-group__suffix"></span>
+                    </span>
+
+                    <span class="ds-link-group">
+                      <button
+                        class="ds-link ds-link--text ds-link--medium"
+                        type="button"
+                        data-dialog-open="find-password-dialog"
+                      >
+                        비밀번호 찾기
+                      </button>
+                      <span class="ds-link-group__suffix"></span>
+                    </span>
                   </nav>
                 </div>
               </div>
