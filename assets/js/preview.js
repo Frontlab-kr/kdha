@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
       image.setAttribute('aria-hidden', String(!isActive));
     });
 
-    nextButton.setAttribute('aria-label', '다음 시안 보기, 현재 ' + currentSlide + '/4');
+    nextButton.setAttribute('aria-label', '다음 시안 보기, 현재 ' + currentSlide + '/kdha/4');
     status.textContent = currentSlide + '번 시안이 표시되었습니다.';
   }
 

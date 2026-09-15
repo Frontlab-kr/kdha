@@ -3,7 +3,7 @@ $(function () {
   var news = {
     association: {
       label: '공지',
-      more: '/community/notices/association',
+      more: '/kdha/community/notices/association',
       items: [
         [
           '2026-08-03',
@@ -35,7 +35,7 @@ $(function () {
     },
     education: {
       label: '협회',
-      more: '/community/notices/association',
+      more: '/kdha/community/notices/association',
       items: [
         ['2026-08-06', '대한치과위생사협회 주요 사업 일정 안내', '협회의 하반기 주요 사업과 일정을 확인해 주세요.'],
         ['2026-07-28', '회원 서비스 개선을 위한 시스템 점검 안내', '더 나은 서비스 제공을 위해 시스템을 점검합니다.'],
@@ -44,7 +44,7 @@ $(function () {
     },
     legal: {
       label: '교육',
-      more: '/community/notices/education',
+      more: '/kdha/community/notices/education',
       items: [
         ['2026-08-05', '2026년 하반기 보수교육 일정 및 신청 안내', '하반기 현장교육 일정과 신청 방법을 안내합니다.'],
         ['2026-07-29', '사이버 보수교육 신규 과정 개설 안내', '감염관리와 노인 구강관리 신규 과정이 개설되었습니다.'],
@@ -53,7 +53,7 @@ $(function () {
     },
     labor: {
       label: '법률',
-      more: '/career/consulting/legal',
+      more: '/kdha/career/consulting/legal',
       items: [
         ['2026-08-04', '근로계약서에 포함되어야 하는 필수 항목', '계약기간, 임금, 근로시간과 휴일 항목을 안내합니다.'],
         ['2026-07-26', '진료기록과 개인정보 보호 관련 상담 사례', '환자 개인정보와 진료기록 관리 기준입니다.'],
@@ -62,7 +62,7 @@ $(function () {
     },
     schedule: {
       label: '노무',
-      more: '/career/consulting',
+      more: '/kdha/career/consulting',
       items: [
         ['2026-08-02', '연차휴가 발생 기준과 사용 방법', '근속기간에 따른 연차휴가 계산 방법입니다.'],
         ['2026-07-22', '퇴직금 산정 시 평균임금 계산 안내', '퇴직 전 3개월 임금을 기준으로 한 산정 사례입니다.'],
