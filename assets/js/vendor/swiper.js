@@ -7574,7 +7574,7 @@ var Swiper = (function () {
         }
         function getRandomNumber(size = 16) {
             const randomChar = () => Math.round(16 * Math.random()).toString(16);
-            return 'x'.repeat(size).replace(/kdha/x/g, randomChar);
+            return 'x'.repeat(size).replace(/x/g, randomChar);
         }
         function makeElFocusable(el) {
             const els = makeElementsArray(el);
