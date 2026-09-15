@@ -28,7 +28,7 @@ $(function () {
       : ['dental', 'student', 'general'].includes(requestedType)
         ? requestedType
         : 'dental';
-    var joinForm = document.querySelector('form[action*="/kdha/account/join/"]');
+    var joinForm = document.querySelector('form[action*="/account/join/"]');
     if (joinForm && !joinForm.querySelector('input[name="type"]')) {
       var typeField = document.createElement('input');
       typeField.type = 'hidden';

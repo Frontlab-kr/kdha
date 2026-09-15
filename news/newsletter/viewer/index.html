@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <title>치위협보 보기 | 대한치과위생사협회</title>
+  </head>
+  <body class="newsletter-viewer">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <main id="main-content" class="newsletter-viewer__main">
+      <header class="newsletter-viewer__header">
+        <h1 id="viewer-title">치위협보 보기</h1>
+        <a class="ds-button ds-button--outline ds-button--small" href="/news/newsletter/">목록으로</a>
+      </header>
+      <div class="newsletter-viewer__toolbar" aria-label="문서 도구">
+        <button class="ds-button ds-button--outline ds-button--small" type="button" data-book-first disabled>
+          첫 페이지
+        </button>
+        <form data-book-jump>
+          <label for="book-page">페이지</label>
+          <input id="book-page" type="number" min="1" value="1" disabled />
+          <span data-book-total>/ 0</span>
+          <button class="ds-button ds-button--outline ds-button--small" type="submit" disabled>이동</button>
+        </form>
+        <button class="ds-button ds-button--outline ds-button--small" type="button" data-book-last disabled>
+          끝 페이지
+        </button>
+        <a
+          class="ds-button ds-button--outline ds-button--small"
+          data-book-original
+          target="_blank"
+          rel="noopener"
+          hidden
+        >
+          일반 PDF 보기
+        </a>
+        <a class="ds-button ds-button--primary ds-button--small" data-book-download download hidden>PDF 다운로드</a>
+      </div>
+      <p class="newsletter-viewer__status" role="status" aria-live="polite" data-book-status>
+        PDF를 확인하고 있습니다.
+      </p>
+      <div class="newsletter-viewer__book" id="newsletter-book" tabindex="0" aria-label="치위협보 PDF 뷰어"></div>
+    </main>
+    <script src="/assets/js/newsletter-documents.js"></script>
+    <script type="module" src="/assets/js/newsletter-viewer.js"></script>
+  </body>
+</html>

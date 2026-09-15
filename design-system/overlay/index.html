@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
-    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <title>Overlay | KDHA Design System</title>
   </head>
@@ -46,7 +46,7 @@
           <article class="overlay-specimen">
             <div>
               <strong>Small alert dialog</strong>
-              <code>.dialog.dialog--alert</code>
+              <code>.ds-alert</code>
             </div>
             <button
               class="ds-button ds-button--medium ds-button--outline"
@@ -69,27 +69,37 @@
         <p>사용자에게 확인이 필요한 내용이나 간단한 입력 영역을 배치합니다.</p>
         <p>ESC 키, 닫기 버튼 또는 레이어 바깥 영역을 눌러 닫을 수 있습니다.</p>
       </div>
-      <div class="dialog__actions">
+      <div class="dialog__actions edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
 
-    <dialog class="dialog dialog--alert" id="overlay-alert" aria-labelledby="overlay-alert-title">
-      <button class="dialog__close material-symbols-outlined" type="button" data-dialog-close aria-label="Alert 닫기">
+    <dialog
+      class="ds-alert"
+      id="overlay-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="overlay-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
         close
       </button>
-      <h2 id="overlay-alert-title">알림</h2>
-      <div class="dialog__message">
-        <p>요청하신 작업이 완료되었습니다.</p>
+      <p class="ds-alert__message" id="overlay-alert-message">
+        더 안전하고 편리해진
+        <strong>대한치과위생사협회</strong>
+        에 오신 것을 환영합니다.
+      </p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--medium ds-button--outline" type="button" data-dialog-close>확인</button>
       </div>
-      <button class="ds-button ds-button--medium ds-button--primary" type="button" data-dialog-close>확인</button>
     </dialog>
 
-    <script src="/kdha/assets/js/vendor/jquery.js"></script>
-    <script src="/kdha/assets/js/vendor/swiper.js"></script>
-    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
-    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
-    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/swiper.js"></script>
+    <script src="/assets/js/vendor/datepicker.js"></script>
+    <script src="/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/site-menu.js"></script>
   </body>
 </html>

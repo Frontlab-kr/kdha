@@ -473,10 +473,14 @@ $(function () {
 
       var listId = ($native.attr('id') || 'ds-select-' + customSelectSequence++) + '-listbox';
       var fieldLabel = $.trim(
-        $native.closest('.form-field, .edu-field').children('span, label').first().text() || '선택',
+        $native[0].labels?.[0]?.textContent ||
+          $native.closest('.form-field, .edu-field').children('span, label').first().text() ||
+          '선택',
       );
       var isRequired = $native.prop('required');
       var $root = $('<div class="ds-select"></div>');
+      var selectSize = ($native.attr('data-select-size') || 'm').toLowerCase();
+      $root.addClass(selectSize === 'l' ? 'ds-select--large' : 'ds-select--medium');
       var $button = $(
         '<button class="ds-select__button" type="button" role="combobox" aria-haspopup="listbox" aria-expanded="false"></button>',
       );

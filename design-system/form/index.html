@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
-    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <title>Form | KDHA Design System</title>
   </head>
@@ -68,15 +68,27 @@
           </div>
           <div class="form-specimen-grid">
             <article>
-              <span>Select</span>
+              <span>Select M · 48px</span>
               <label class="form-field">
                 <span>지역</span>
-                <select data-custom-select>
+                <select data-custom-select data-select-size="m">
                   <option>지역을 선택해 주세요</option>
                   <option>서울특별시</option>
                   <option>부산광역시</option>
                 </select>
               </label>
+            </article>
+            <article>
+              <span>Select L · 56px</span>
+              <label class="form-field form-field--large">
+                <span>지역</span>
+                <select data-custom-select data-select-size="l">
+                  <option>지역을 선택해 주세요</option>
+                  <option>서울특별시</option>
+                  <option>부산광역시</option>
+                </select>
+              </label>
+              <p>data-select-size="m" 또는 "l"로 크기를 지정합니다. 기본값은 M입니다.</p>
             </article>
             <article class="form-specimen-grid__wide">
               <span>Textarea</span>
@@ -157,10 +169,11 @@
         </section>
       </div>
     </main>
-    <script src="/kdha/assets/js/vendor/jquery.js"></script>
-    <script src="/kdha/assets/js/vendor/swiper.js"></script>
-    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
-    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
-    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/vendor/swiper.js"></script>
+    <script src="/assets/js/vendor/datepicker.js"></script>
+    <script src="/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/site-menu.js"></script>
   </body>
 </html>
