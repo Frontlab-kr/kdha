@@ -13667,8 +13667,7 @@ body.main-page .site .site-header__inner {
 }
 
 .account-join-types a:hover,
-.account-join-types a:focus-visible,
-.account-join-types a.is-selected {
+.account-join-types a:focus-visible {
   border-color: #713acc;
 }
 
@@ -14056,8 +14055,9 @@ body.main-page .site .site-header__inner {
 }
 
 .account-mailing strong {
-  width: 49px;
-  flex: 0 0 49px;
+  width: 4em;
+  flex: 0 0 4em;
+  white-space: nowrap;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -14071,16 +14071,16 @@ body.main-page .site .site-header__inner {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .account-mailing label:nth-of-type(1) {
-  width: 53px;
-  flex: 0 0 53px;
+  min-width: 53px;
 }
 
 .account-mailing label:nth-of-type(n + 2) {
-  width: 65px;
-  flex: 0 0 65px;
+  min-width: 65px;
 }
 
 .account-mailing input {
@@ -14406,7 +14406,7 @@ body.main-page .site .site-header__inner {
     padding-top: 24px;
   }
   .account-mailing > div {
-    gap: 20px;
+    gap: clamp(4px, (100% - 239px) / 3, 8px);
   }
 }
 .account-login {
@@ -14620,7 +14620,13 @@ body.main-page .site .site-header__inner {
 }
 
 .account-login__mobile-break {
-  display: none;
+  display: block;
+}
+
+.account-login-page .edu-login-form__actions > p,
+.account-login__pre-member > p {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .account-login__copyright {
@@ -18011,14 +18017,14 @@ body.main-page .site .site-header__inner {
 .ofe-day__event {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   margin-top: 8px;
   border-radius: 8px;
   background: #f7f7ff;
   color: #44217d;
   font-size: 14px;
   text-align: left;
-  line-height: 1.5;
+  line-height: 20px;
   overflow-wrap: anywhere;
 }
 .ofe-day__event b {
@@ -18094,13 +18100,13 @@ body.main-page .site .site-header__inner {
   margin-top: 0;
 }
 .edu-dialog.ofe-schedule-dialog .ofe-day-course {
-  gap: 8px;
+  gap: 12px;
   padding: 24px;
   border-radius: 12px;
 }
 .edu-dialog.ofe-schedule-dialog .ofe-panel-heading {
   align-items: flex-start;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 .edu-dialog.ofe-schedule-dialog .ofe-status {
   flex-shrink: 0;
@@ -18485,6 +18491,49 @@ body.main-page .site .site-header__inner {
   flex-shrink: 0;
 }
 
+.ofe-payment-course-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ofe-payment-course-title > .ds-badge {
+  flex-shrink: 0;
+}
+
+.ofe-total.ofe-total--breakdown {
+  display: grid;
+  gap: 24px;
+  justify-content: stretch;
+}
+
+.ofe-total__details {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  font-size: 16px;
+}
+.ofe-total__details > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.ofe-total__details dt {
+  font-weight: 400;
+  color: #39414b;
+}
+.ofe-total__details dd {
+  text-align: right;
+}
+
+.ofe-total__amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid #e8ecf1;
+}
+
 .ofe-price-change {
   display: flex;
   align-items: center;
@@ -18518,6 +18567,50 @@ body.main-page .site .site-header__inner {
   font-weight: 700;
 }
 
+.edu-dialog.ofe-privacy-dialog {
+  width: min(560px, 100% - 40px);
+  padding: 40px;
+  border-radius: 20px;
+}
+.edu-dialog.ofe-privacy-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.edu-dialog.ofe-privacy-dialog h2 {
+  flex-shrink: 0;
+  margin: 0 32px 0 0;
+  font-size: 28px;
+  line-height: 1.4;
+}
+.edu-dialog.ofe-privacy-dialog .ofe-privacy-dialog__content {
+  max-height: 480px;
+  color: #505a67;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.edu-dialog.ofe-privacy-dialog .ofe-privacy-dialog__content p {
+  margin: 0;
+}
+.edu-dialog.ofe-privacy-dialog .ofe-privacy-dialog__content p + p {
+  margin-top: 16px;
+}
+
+@media (max-width: 767px) {
+  .edu-dialog.ofe-privacy-dialog {
+    width: min(320px, 100% - 40px);
+    padding: 40px 20px;
+  }
+  .edu-dialog.ofe-privacy-dialog[open] {
+    gap: 32px;
+  }
+  .edu-dialog.ofe-privacy-dialog h2 {
+    font-size: 24px;
+  }
+  .edu-dialog.ofe-privacy-dialog .ofe-privacy-dialog__content {
+    max-height: 380px;
+  }
+}
 .edu-dialog.ofe-coupon-dialog {
   width: min(560px, 100% - 40px);
   padding: 40px;
@@ -18675,15 +18768,15 @@ body.main-page .site .site-header__inner {
     padding: 24px 20px;
   }
   .edu-dialog.edu-dialog--member-switch > .edu-dialog__actions {
-    width: 232px;
+    width: 100%;
   }
   .edu-dialog.edu-dialog--member-switch > .edu-dialog__actions .ds-button {
-    height: 48px;
-    padding-inline: 20px;
-    font-size: 16px;
+    height: 52px;
+    padding-inline: 24px;
+    font-size: 18px;
   }
   .edu-dialog.ofe-coupon-dialog {
-    width: 100%;
+    width: min(320px, 100% - 40px);
     padding: 40px 20px;
   }
   .edu-dialog.ofe-coupon-dialog[open] {
@@ -19056,7 +19149,7 @@ body.main-page .site .site-header__inner {
     padding-block: 40px 40px;
   }
   .ofe-payment {
-    padding-top: 20px;
+    padding-top: 40px;
   }
   .ofe-payment--offline {
     padding-top: 40px;
@@ -19154,15 +19247,18 @@ body.main-page .site .site-header__inner {
     inset: 0;
     z-index: 150;
     background: rgba(0, 0, 0, 0.6);
-    padding-top: 124px;
+    padding-top: 27.375dvh;
     overflow-y: auto;
+  }
+  .ofe-apply-shell.is-open .ofe-application {
+    margin-top: 0;
   }
   .ofe-application {
     position: relative;
     width: 100%;
     max-width: 480px;
     border-radius: 24px 24px 0 0;
-    padding: 40px 24px 24px;
+    padding: 40px 24px;
     margin-top: 40px;
   }
   .ofe-actions {
@@ -19212,8 +19308,26 @@ body.main-page .site .site-header__inner {
     display: inline;
   }
   .ofe-payment-summary__course > h4 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
+  }
+  .ofe-payment-course-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .ofe-payment .ofe-total--breakdown {
+    padding: 24px 20px;
+    font-size: 18px;
+    gap: 24px;
+  }
+  .ofe-total__details {
+    gap: 4px;
+  }
+  .ofe-application > .form-field > span,
+  .ofe-application > .form-field > label,
+  .ofe-application legend {
+    font-size: 20px;
   }
   .ofe-payment .ofe-discounts .form-field > label {
     font-size: 18px;
@@ -19424,7 +19538,7 @@ body.main-page .site .site-header__inner {
 }
 @media (max-width: 767px) {
   .cbe-cart__item > header h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .cbe-cart__coupon .ds-button {
     margin-left: 0;
@@ -19437,7 +19551,11 @@ body.main-page .site .site-header__inner {
     font-size: 14px;
   }
 }
-/* 20260909_사이버교육: 현장교육(ofe) 공통 구조에서 달라지는 레이아웃만 정의합니다. */
+/* 20260915_사이버교육: 현장교육(ofe) 공통 구조에서 달라지는 레이아웃만 정의합니다. */
+.cbe-list-notice strong {
+  color: #f6606b;
+}
+
 .cbe-search .ofe-search__keyword {
   flex: 1;
 }
@@ -19447,6 +19565,7 @@ body.main-page .site .site-header__inner {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 40px 32px;
   margin-top: 80px;
+  align-items: stretch;
 }
 
 .ofe-card.cbe-card {
@@ -19493,6 +19612,7 @@ body.main-page .site .site-header__inner {
   justify-content: space-between;
   width: 100%;
   gap: 8px;
+  margin-top: auto;
 }
 .cbe-card__footer > .ds-button {
   margin-left: auto;
@@ -19659,12 +19779,48 @@ body.main-page .site .site-header__inner {
     grid-template-columns: 1fr;
   }
   .cbe-detail-head__thumb {
-    width: 100%;
+    width: min(280px, 100%);
     height: auto;
-    aspect-ratio: 1.45/1;
+    aspect-ratio: 1;
+    margin-inline: auto;
   }
   .ofe-features.cbe-features {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .ofe-features.cbe-features > div {
+    padding: 16px;
+    gap: 4px 16px;
+  }
+}
+.ofe-total.cbe-cart__total {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.ofe-total.cbe-cart__total strong {
+  font-size: 32px;
+}
+
+@media (max-width: 767px) {
+  .cbe-list-notice {
+    margin-top: 40px;
+  }
+  .cbe-payment-courses {
+    gap: 24px;
+  }
+  .cbe-payment-courses > .ofe-payment-summary__course + .ofe-payment-summary__course {
+    padding-top: 24px;
+  }
+  .ofe-total.cbe-cart__total {
+    font-size: 16px;
+  }
+  .ofe-total.cbe-cart__total strong {
+    font-size: 24px;
+  }
+  .cbe-cart__year {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -19747,6 +19903,7 @@ body.main-page .site .site-header__inner {
 
 .site-menu {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  clip-path: inset(0 0 -60px 0);
   position: absolute;
   top: 100%;
   left: 0;
@@ -19771,6 +19928,11 @@ body.main-page .site .site-header__inner {
   background: #44217d;
 }
 
+@media (min-width: 1101px) {
+  .site-menu {
+    box-shadow: inset 0 1px 0 #e8ecf1, 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
 .site-menu__top {
   display: flex;
   justify-content: flex-end;

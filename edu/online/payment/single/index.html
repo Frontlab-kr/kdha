@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" href="/kdha/assets/brand/logo-header-b.svg" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-    <title>사이버교육 결제 | 치위생교육원</title>
+    <title>사이버교육 단건 결제 | 치위생교육원</title>
   </head>
   <body class="edu-site">
     <a class="skip-link" href="#main-content">본문 바로가기</a>
@@ -177,80 +177,39 @@
         <h2 class="ofe-section-title">결제 진행</h2>
         <section class="ofe-panel ofe-payment-summary">
           <h3>결제 내역</h3>
-          <div class="cbe-payment-courses">
-            <div class="ofe-payment-summary__course">
-              <h4>청구오류 사례로 살펴보는 보험청구 : 사소하지만 자주하는 실수</h4>
-              <dl class="ofe-data ofe-data--two">
-                <div>
-                  <dt>수강료</dt>
-                  <dd class="ofe-price-change">
-                    <del>40,000원</del>
-                    <span class="material-symbols-rounded">arrow_right_alt</span>
-                    <strong>30,000원</strong>
-                  </dd>
-                </div>
-                <div class="ofe-data__coupon">
-                  <dt>쿠폰 할인</dt>
-                  <dd>
-                    <strong>신규 회원 할인 쿠폰 10,000원 할인</strong>
-                    <small>이 강좌에 적용됨</small>
-                  </dd>
-                  <button
-                    class="ds-button ds-button--small ds-button--outline"
-                    type="button"
-                    data-dialog-open="coupon-dialog"
-                  >
-                    쿠폰 변경
-                  </button>
-                </div>
-              </dl>
-            </div>
-            <div class="ofe-payment-summary__course">
-              <h4>청구오류 사례로 살펴보는 보험청구 : 사소하지만 자주하는 실수</h4>
-              <dl class="ofe-data ofe-data--two">
-                <div>
-                  <dt>수강료</dt>
-                  <dd><strong>40,000원</strong></dd>
-                </div>
-                <div class="ofe-data__coupon">
-                  <dt>쿠폰 할인</dt>
-                  <dd>
-                    <span class="cbe-coupon-message">이 강좌에 사용할 쿠폰을 선택해 주세요.</span>
-                    <small>사용 가능한 쿠폰 1장</small>
-                  </dd>
-                  <button
-                    class="ds-button ds-button--small ds-button--outline"
-                    type="button"
-                    data-dialog-open="coupon-dialog"
-                  >
-                    쿠폰 선택
-                  </button>
-                </div>
-              </dl>
-            </div>
-            <div class="ofe-payment-summary__course">
-              <h4 class="ofe-payment-course-title">
-                <span class="ds-badge ds-badge--danger ds-badge--outline">필수</span>
-                <span>청구오류 사례로 살펴보는 보험청구 : 사소하지만 자주하는 실수</span>
-              </h4>
-              <dl class="ofe-data ofe-data--two">
-                <div>
-                  <dt>수강료</dt>
-                  <dd><strong>40,000원</strong></dd>
-                </div>
-                <div class="ofe-data__coupon">
-                  <dt>쿠폰 할인</dt>
-                  <dd><span class="cbe-coupon-message">적용 가능한 쿠폰이 없습니다.</span></dd>
-                  <button class="ds-button ds-button--small ds-button--outline" type="button" disabled>
-                    쿠폰 선택
-                  </button>
-                </div>
-              </dl>
-            </div>
+          <div class="ofe-payment-summary__course">
+            <h4 class="ofe-payment-course-title">
+              <span class="ds-badge ds-badge--danger ds-badge--outline">필수</span>
+              <span>청구오류 사례로 살펴보는 보험청구 : 사소하지만 자주하는 실수</span>
+            </h4>
+            <dl class="ofe-data ofe-data--two">
+              <div>
+                <dt>수강료</dt>
+                <dd class="ofe-price-change">
+                  <del>40,000원</del>
+                  <span class="material-symbols-rounded">arrow_right_alt</span>
+                  <strong>30,000원</strong>
+                </dd>
+              </div>
+              <div class="ofe-data__coupon">
+                <dt>쿠폰 할인</dt>
+                <dd>
+                  <strong>신규 회원 할인 쿠폰 10,000원 할인</strong>
+                  <small>이 강좌에 적용됨</small>
+                </dd>
+                <button
+                  class="ds-button ds-button--small ds-button--outline"
+                  type="button"
+                  data-dialog-open="coupon-dialog"
+                >
+                  쿠폰 변경
+                </button>
+              </div>
+            </dl>
           </div>
         </section>
         <section class="ofe-panel">
-          <h3>마일리지 적용</h3>
+          <h3>마일리지 / 쿠폰 적용</h3>
           <div class="ofe-discounts">
             <div class="form-field form-field--large">
               <label for="cbe-mileage">
@@ -258,7 +217,7 @@
                 <small>보유 마일리지 16,500 P</small>
               </label>
               <span class="form-input-action">
-                <input id="cbe-mileage" type="text" placeholder="0 P" value="5,000" />
+                <input id="cbe-mileage" type="text" placeholder="0 P" />
                 <button class="form-action-button" type="button">전액 사용</button>
               </span>
             </div>

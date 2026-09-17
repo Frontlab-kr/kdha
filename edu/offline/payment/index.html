@@ -182,7 +182,10 @@
         <section class="ofe-panel ofe-payment-summary">
           <h3>결제 내역</h3>
           <div class="ofe-payment-summary__course">
-            <h4>청구오류 사례로 살펴보는 보험청구 : 사소하지만 자주하는 실수</h4>
+            <h4 class="ofe-payment-course-title">
+              <span class="ds-badge ds-badge--danger ds-badge--outline">필수</span>
+              <span>청구오류 사례로 살펴보는 보험청구 : 사소하지만 자주하는 실수</span>
+            </h4>
             <dl class="ofe-data ofe-data--two">
               <div>
                 <dt>신청 차시</dt>
@@ -212,15 +215,6 @@
               </div>
             </dl>
           </div>
-          <div class="ofe-payment-summary__result">
-            <ul class="ds-guide-list ofe-notice">
-              <li>한 강좌에 쿠폰 1개만 적용할 수 있습니다.</li>
-            </ul>
-            <div class="ofe-subtotal">
-              <span>쿠폰 적용 금액</span>
-              <strong>30,000원</strong>
-            </div>
-          </div>
         </section>
         <section class="ofe-panel">
           <h3>
@@ -244,10 +238,26 @@
             <li>마일리지는 100P 단위로 사용 가능합니다.</li>
           </ul>
         </section>
-        <div class="ofe-total" aria-live="polite">
-          <span>최종 결제 금액</span>
-          <strong>40,000원</strong>
-        </div>
+        <section class="ofe-total ofe-total--breakdown" aria-label="결제 금액 요약">
+          <dl class="ofe-total__details">
+            <div>
+              <dt>총 수강료</dt>
+              <dd>120,000원</dd>
+            </div>
+            <div>
+              <dt>쿠폰 할인</dt>
+              <dd>−10,000원</dd>
+            </div>
+            <div>
+              <dt>마일리지 사용 (5,000P)</dt>
+              <dd>−5,000원</dd>
+            </div>
+          </dl>
+          <div class="ofe-total__amount">
+            <span>최종 결제 금액</span>
+            <strong>105,000원</strong>
+          </div>
+        </section>
         <section class="ofe-panel">
           <h3>결제수단 선택</h3>
           <fieldset class="ofe-payment-method">
@@ -304,10 +314,7 @@
       </button>
       <div class="ofe-coupon-dialog__header">
         <h2 id="coupon-dialog-title">보유 쿠폰</h2>
-        <p id="coupon-dialog-description">
-          <span>사용할 쿠폰을 선택해 주세요.</span>
-          <span>한 강좌에 1개만 적용할 수 있습니다.</span>
-        </p>
+        <p id="coupon-dialog-description">사용할 쿠폰을 선택해 주세요. 한 강좌에 1개만 적용할 수 있습니다.</p>
       </div>
       <div class="edu-dialog__body ofe-coupon-list">
         <article class="ofe-coupon-card">
@@ -358,81 +365,9 @@
           </div>
           <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
         </article>
-
-        <article class="ofe-coupon-card">
-          <div class="ofe-coupon-card__ticket" aria-hidden="true">
-            <span>COUPON</span>
-            <strong>10,000</strong>
-          </div>
-          <div class="ofe-coupon-card__info">
-            <h3>신규 회원 할인 쿠폰</h3>
-            <strong>10,000원</strong>
-            <p>유효기간 : 2026년 12월 31일까지</p>
-          </div>
-          <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
-        </article>
-        <article class="ofe-coupon-card">
-          <div class="ofe-coupon-card__ticket" aria-hidden="true">
-            <span>COUPON</span>
-            <strong>10,000</strong>
-          </div>
-          <div class="ofe-coupon-card__info">
-            <h3>신규 회원 할인 쿠폰</h3>
-            <strong>10,000원</strong>
-            <p>유효기간 : 2026년 12월 31일까지</p>
-          </div>
-          <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
-        </article>
-        <article class="ofe-coupon-card">
-          <div class="ofe-coupon-card__ticket" aria-hidden="true">
-            <span>COUPON</span>
-            <strong>10,000</strong>
-          </div>
-          <div class="ofe-coupon-card__info">
-            <h3>신규 회원 할인 쿠폰</h3>
-            <strong>10,000원</strong>
-            <p>유효기간 : 2026년 12월 31일까지</p>
-          </div>
-          <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
-        </article>
-        <article class="ofe-coupon-card">
-          <div class="ofe-coupon-card__ticket" aria-hidden="true">
-            <span>COUPON</span>
-            <strong>10,000</strong>
-          </div>
-          <div class="ofe-coupon-card__info">
-            <h3>신규 회원 할인 쿠폰</h3>
-            <strong>10,000원</strong>
-            <p>유효기간 : 2026년 12월 31일까지</p>
-          </div>
-          <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
-        </article>
-        <article class="ofe-coupon-card">
-          <div class="ofe-coupon-card__ticket" aria-hidden="true">
-            <span>COUPON</span>
-            <strong>10,000</strong>
-          </div>
-          <div class="ofe-coupon-card__info">
-            <h3>신규 회원 할인 쿠폰</h3>
-            <strong>10,000원</strong>
-            <p>유효기간 : 2026년 12월 31일까지</p>
-          </div>
-          <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
-        </article>
-        <article class="ofe-coupon-card">
-          <div class="ofe-coupon-card__ticket" aria-hidden="true">
-            <span>COUPON</span>
-            <strong>10,000</strong>
-          </div>
-          <div class="ofe-coupon-card__info">
-            <h3>신규 회원 할인 쿠폰</h3>
-            <strong>10,000원</strong>
-            <p>유효기간 : 2026년 12월 31일까지</p>
-          </div>
-          <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
-        </article>
       </div>
     </dialog>
+
     <dialog
       class="ds-alert"
       id="capacity-dialog"
