@@ -105,16 +105,22 @@ button {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
   min-width: 0;
   padding: 24px 40px;
   border: 1px solid #d0d8e2;
   border-radius: 16px;
   background: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.5;
-  cursor: pointer;
+  cursor: pointer !important;
+  user-select: none;
+}
+.ds-choice-card *,
+.ds-choice-card *::before,
+.ds-choice-card *::after {
+  cursor: pointer !important;
 }
 .ds-choice-card > img {
   width: 48px;
@@ -149,6 +155,9 @@ button {
   .ds-choice-cards {
     grid-template-columns: minmax(0, 1fr);
     gap: 12px;
+  }
+  .ds-choice-card {
+    font-size: 16px;
   }
 }
 .ds-button,
@@ -357,6 +366,12 @@ button {
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  .ds-guide-list .ds-link {
+    margin-top: 2px;
+    margin-left: 0;
+  }
+}
 .ds-link-group {
   display: inline-flex;
   align-items: baseline;
@@ -2419,10 +2434,10 @@ body:not(.regional-site):not(.english-site) .site-header {
   color: #101418;
   background: #fff;
 }
-body:not(.regional-site):not(.english-site) .site-header__inner {
-  align-items: flex-end;
-  height: 102px;
-  padding: 40px 20px 20px;
+@media (min-width: 768px) and (max-width: 1100px) {
+  body:not(.regional-site):not(.english-site) .site-header {
+    height: auto;
+  }
 }
 body:not(.regional-site):not(.english-site) .site-header__navigation,
 body:not(.regional-site):not(.english-site) .primary-nav {
@@ -18118,6 +18133,7 @@ body.main-page .site .site-header__inner {
 }
 @media (max-width: 767px) {
   .edu-dialog.ofe-schedule-dialog {
+    width: 100%;
     padding: 40px 20px;
   }
   .edu-dialog.ofe-schedule-dialog > h2 {
@@ -18229,6 +18245,10 @@ body.main-page .site .site-header__inner {
   object-fit: contain;
 }
 .ofe-features dt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   color: #a7b2bf;
   font-weight: 700;
   font-size: 16px;
@@ -18364,13 +18384,8 @@ body.main-page .site .site-header__inner {
 .ofe-credit dl > div {
   width: 100%;
 }
-.ofe-credit dl hr {
-  width: 1px;
-  height: 32px;
-  margin: 0 8px;
-  border: 0;
-  border-radius: 0;
-  background-color: #e8ecf1;
+.ofe-credit dl > div + div {
+  border-left: 1px solid #e8ecf1;
 }
 .ofe-credit dt {
   color: #a7b2bf;
@@ -18479,6 +18494,12 @@ body.main-page .site .site-header__inner {
   gap: 24px;
 }
 .ofe-payment-summary .ofe-data__coupon dd {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 24px;
+}
+.ofe-payment-summary .ofe-data__coupon .ofe-data__coupon-copy {
   display: grid;
   flex: 1;
   gap: 4px;
@@ -18568,50 +18589,6 @@ body.main-page .site .site-header__inner {
   font-weight: 700;
 }
 
-.edu-dialog.ofe-privacy-dialog {
-  width: min(560px, 100% - 40px);
-  padding: 40px;
-  border-radius: 20px;
-}
-.edu-dialog.ofe-privacy-dialog[open] {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-.edu-dialog.ofe-privacy-dialog h2 {
-  flex-shrink: 0;
-  margin: 0 32px 0 0;
-  font-size: 28px;
-  line-height: 1.4;
-}
-.edu-dialog.ofe-privacy-dialog .ofe-privacy-dialog__content {
-  max-height: 480px;
-  color: #505a67;
-  font-size: 16px;
-  line-height: 1.5;
-}
-.edu-dialog.ofe-privacy-dialog .ofe-privacy-dialog__content p {
-  margin: 0;
-}
-.edu-dialog.ofe-privacy-dialog .ofe-privacy-dialog__content p + p {
-  margin-top: 16px;
-}
-
-@media (max-width: 767px) {
-  .edu-dialog.ofe-privacy-dialog {
-    width: min(320px, 100% - 40px);
-    padding: 40px 20px;
-  }
-  .edu-dialog.ofe-privacy-dialog[open] {
-    gap: 32px;
-  }
-  .edu-dialog.ofe-privacy-dialog h2 {
-    font-size: 24px;
-  }
-  .edu-dialog.ofe-privacy-dialog .ofe-privacy-dialog__content {
-    max-height: 380px;
-  }
-}
 .edu-dialog.ofe-coupon-dialog {
   width: min(560px, 100% - 40px);
   padding: 40px;
@@ -18643,6 +18620,11 @@ body.main-page .site .site-header__inner {
 }
 .edu-dialog.ofe-coupon-dialog__header > p > span {
   display: block;
+}
+
+.ofe-privacy-dialog .edu-dialog__terms {
+  width: 100%;
+  margin: 0;
 }
 
 .edu-dialog.edu-dialog--member-switch {
@@ -18751,7 +18733,7 @@ body.main-page .site .site-header__inner {
 
 @media (max-width: 767px) {
   .edu-dialog.edu-dialog--member-switch {
-    width: min(320px, 100% - 40px);
+    width: 100%;
     padding: 40px 20px;
   }
   .edu-dialog.edu-dialog--member-switch[open] {
@@ -18777,7 +18759,7 @@ body.main-page .site .site-header__inner {
     font-size: 18px;
   }
   .edu-dialog.ofe-coupon-dialog {
-    width: min(320px, 100% - 40px);
+    width: 100%;
     padding: 40px 20px;
   }
   .edu-dialog.ofe-coupon-dialog[open] {
@@ -19185,9 +19167,6 @@ body.main-page .site .site-header__inner {
   .ofe-detail-content .ofe-course-title {
     letter-spacing: -0.5px;
   }
-  .ofe-detail-content .ofe-notice li + li {
-    margin-top: 16px;
-  }
   .ofe-features {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -19203,9 +19182,15 @@ body.main-page .site .site-header__inner {
     grid-row: span 2;
   }
   .ofe-features dt {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 40px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
     font-size: 16px;
   }
   .ofe-features dd {
+    grid-column: 2;
     font-size: 16px;
     margin-top: 0;
   }
@@ -19237,7 +19222,10 @@ body.main-page .site .site-header__inner {
     font-size: 14px;
   }
   .ofe-notice.ds-guide-list {
-    padding: 20px;
+    padding: 16px;
+  }
+  .ofe-inquiry-link {
+    display: block;
   }
   .ofe-apply-shell {
     display: none;
@@ -19376,7 +19364,12 @@ body.main-page .site .site-header__inner {
     flex: 0 0 auto;
     margin-bottom: 0;
   }
-  .ofe-payment-summary .ofe-data__coupon > .ds-button {
+  .ofe-payment-summary .ofe-data__coupon dd {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ofe-payment-summary .ofe-data__coupon dd > .ds-button {
     width: 100%;
     margin-top: 8px;
   }
@@ -19700,6 +19693,12 @@ body.main-page .site .site-header__inner {
   color: #ff6575;
 }
 
+.cbe-joined-copy {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
 .cbe-apply-buttons {
   display: grid;
   gap: 16px;
@@ -19815,7 +19814,8 @@ body.main-page .site .site-header__inner {
     padding-top: 24px;
   }
   .ofe-total.cbe-cart__total {
-    font-size: 16px;
+    font-size: 18px;
+    padding: 20px;
   }
   .ofe-total.cbe-cart__total strong {
     font-size: 24px;
@@ -19832,7 +19832,6 @@ body.main-page .site .site-header__inner {
     z-index: 100;
     background: #fff;
     height: auto;
-    border-bottom: 0;
   }
   body:not(.regional-site):not(.english-site) .site-header.site-header--standard .site-header__inner,
   body.edu-site .site-header.site-header--education .site-header__inner {

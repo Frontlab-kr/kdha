@@ -195,13 +195,17 @@
               </header>
               <dl class="ofe-features">
                 <div>
-                  <img src="/kdha/assets/offline/credit.png" width="40" height="40" alt="" />
-                  <dt>평점</dt>
+                  <dt>
+                    <img src="/kdha/assets/offline/credit.png" width="40" height="40" alt="" />
+                    <span>평점</span>
+                  </dt>
                   <dd>2평점</dd>
                 </div>
                 <div>
-                  <img src="/kdha/assets/offline/fee.png" width="40" height="40" alt="" />
-                  <dt>수강료</dt>
+                  <dt>
+                    <img src="/kdha/assets/offline/fee.png" width="40" height="40" alt="" />
+                    <span>수강료</span>
+                  </dt>
                   <dd>
                     정회원 : 40,000원
                     <br />
@@ -209,8 +213,10 @@
                   </dd>
                 </div>
                 <div>
-                  <img src="/kdha/assets/offline/capacity.png" width="40" height="40" alt="" />
-                  <dt>정원</dt>
+                  <dt>
+                    <img src="/kdha/assets/offline/capacity.png" width="40" height="40" alt="" />
+                    <span>정원</span>
+                  </dt>
                   <dd>
                     총 30명
                     <br />
@@ -218,13 +224,17 @@
                   </dd>
                 </div>
                 <div>
-                  <img src="/kdha/assets/offline/member.png" width="40" height="40" alt="" />
-                  <dt>대상</dt>
+                  <dt>
+                    <img src="/kdha/assets/offline/member.png" width="40" height="40" alt="" />
+                    <span>대상</span>
+                  </dt>
                   <dd>등록정회원</dd>
                 </div>
                 <div>
-                  <img src="/kdha/assets/offline/lunch.png" width="40" height="40" alt="" />
-                  <dt>점심제공 여부</dt>
+                  <dt>
+                    <img src="/kdha/assets/offline/lunch.png" width="40" height="40" alt="" />
+                    <span>점심제공 여부</span>
+                  </dt>
                   <dd>제공</dd>
                 </div>
               </dl>
@@ -333,12 +343,10 @@
                     <dt>필요평점</dt>
                     <dd>8</dd>
                   </div>
-                  <hr />
                   <div>
                     <dt>취득평점</dt>
                     <dd>6</dd>
                   </div>
-                  <hr />
                   <div>
                     <dt>필수평점</dt>
                     <dd>0</dd>
@@ -383,7 +391,7 @@
           </aside>
         </div>
         <div class="ofe-actions">
-          <a class="ds-button ds-button--large ds-button--outline" href="/kdha/edu/offline/">목록</a>
+          <a class="ds-button ds-button--large ds-button--outline" href="/kdha/edu/offline/">목록으로 가기</a>
         </div>
       </div>
       <div class="ofe-mobile-apply">
@@ -426,31 +434,39 @@
         </div>
       </form>
     </dialog>
-    <dialog class="edu-dialog ofe-privacy-dialog" id="privacy-dialog" aria-labelledby="privacy-dialog-title">
+    <dialog
+      class="edu-dialog edu-dialog--auth ofe-privacy-dialog"
+      id="privacy-dialog"
+      aria-labelledby="privacy-dialog-title"
+    >
       <button type="button" class="edu-dialog__close material-symbols-rounded" data-dialog-close aria-label="닫기">
         close
       </button>
       <h2 id="privacy-dialog-title">개인정보 수집 및 이용동의</h2>
-      <div class="edu-dialog__body ofe-privacy-dialog__content" tabindex="0">
-        <p>
-          개인정보보호법에 따라 (사)대한치과위생사협회(이하 협회) ‘2026년도 하반기 강원특별자치도회 보수교육’에 등록하는
-          분들께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간을 안내 드리오니
-          자세히 읽은 후 동의하여 주시기 바랍니다.
-        </p>
-        <p>가. 수집하는 개인정보의 항목</p>
-        <p>
-          협회는 ‘2026년도 하반기 강원특별자치도회 보수교육’ 등록비 결제안내를 위해 최소한의 개인정보인 이름,
-          휴대폰번호, 이메일주소를 필수항목으로 수집하고 있습니다.
-        </p>
-        <p>나. 개인정보 수집방법</p>
-        <p>
-          협회는 ‘2026년도 하반기 강원특별자치도회 보수교육’ 등록비 결제안내를 위해 동 페이지를 통해서만 개인정보를
-          수집합니다.
-        </p>
-        <p>다. 이용기간</p>
-        <p>개인정보수집 및 이용목적이 달성된 후에 해당정보를 파기합니다.</p>
-        <p>단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다.</p>
-        <p>그 외의 사항은 대한치과위생사협회 개인정보 취급방침을 준수합니다.</p>
+      <div class="edu-dialog__body edu-dialog__terms" tabindex="0">
+        <article class="edu-dialog__terms-content">
+          <strong class="edu-dialog__terms-title">- 개인정보 수집 및 이용에 대한 안내 -</strong>
+          <h3>개인정보 수집·이용에 대한 동의</h3>
+          <p>
+            개인정보보호법에 따라 (사)대한치과위생사협회(이하 협회) ‘2026년도 하반기 강원특별자치도회 보수교육’에
+            등록하는 분들께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간을 안내
+            드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.
+          </p>
+          <h4>가. 수집하는 개인정보의 항목</h4>
+          <p>
+            협회는 ‘2026년도 하반기 강원특별자치도회 보수교육’ 등록비 결제안내를 위해 최소한의 개인정보인 이름,
+            휴대폰번호, 이메일주소를 필수항목으로 수집하고 있습니다.
+          </p>
+          <h4>나. 개인정보 수집방법</h4>
+          <p>
+            협회는 ‘2026년도 하반기 강원특별자치도회 보수교육’ 등록비 결제안내를 위해 동 페이지를 통해서만 개인정보를
+            수집합니다.
+          </p>
+          <h4>다. 이용기간</h4>
+          <p>개인정보수집 및 이용목적이 달성된 후에 해당정보를 파기합니다.</p>
+          <p>단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다.</p>
+          <p>그 외의 사항은 대한치과위생사협회 개인정보 취급방침을 준수합니다.</p>
+        </article>
       </div>
     </dialog>
     <dialog

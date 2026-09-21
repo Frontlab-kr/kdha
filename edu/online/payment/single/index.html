@@ -194,16 +194,18 @@
               <div class="ofe-data__coupon">
                 <dt>쿠폰 할인</dt>
                 <dd>
-                  <strong>신규 회원 할인 쿠폰 10,000원 할인</strong>
-                  <small>이 강좌에 적용됨</small>
+                  <span class="ofe-data__coupon-copy">
+                    <strong>신규 회원 할인 쿠폰 10,000원 할인</strong>
+                    <small>이 강좌에 적용됨</small>
+                  </span>
+                  <button
+                    class="ds-button ds-button--small ds-button--outline"
+                    type="button"
+                    data-dialog-open="coupon-dialog"
+                  >
+                    쿠폰 변경
+                  </button>
                 </dd>
-                <button
-                  class="ds-button ds-button--small ds-button--outline"
-                  type="button"
-                  data-dialog-open="coupon-dialog"
-                >
-                  쿠폰 변경
-                </button>
               </div>
             </dl>
           </div>
@@ -214,10 +216,10 @@
             <div class="form-field form-field--large">
               <label for="cbe-mileage">
                 보유 마일리지 사용
-                <small>보유 마일리지 16,500 P</small>
+                <small>보유 마일리지 16,500P</small>
               </label>
               <span class="form-input-action">
-                <input id="cbe-mileage" type="text" placeholder="0 P" />
+                <input id="cbe-mileage" type="text" placeholder="0P" />
                 <button class="form-action-button" type="button">전액 사용</button>
               </span>
             </div>
@@ -280,7 +282,11 @@
           <h2>치위협보 기사제보 · 광고문의</h2>
           <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
         </div>
-        <a href="mailto:press@kdha.or.kr">02-6213-2735 · press@kdha.or.kr</a>
+        <a href="mailto:press@kdha.or.kr">
+          02-6213-2735
+          <span>·</span>
+          press@kdha.or.kr
+        </a>
       </aside>
     </main>
     <dialog
@@ -297,6 +303,42 @@
         <p id="coupon-dialog-description">사용할 쿠폰을 선택해 주세요. 한 강좌에 1개만 적용할 수 있습니다.</p>
       </div>
       <div class="edu-dialog__body ofe-coupon-list">
+        <article class="ofe-coupon-card">
+          <div class="ofe-coupon-card__ticket" aria-hidden="true">
+            <span>COUPON</span>
+            <strong>10,000</strong>
+          </div>
+          <div class="ofe-coupon-card__info">
+            <h3>신규 회원 할인 쿠폰</h3>
+            <strong>10,000원</strong>
+            <p>유효기간 : 2026년 12월 31일까지</p>
+          </div>
+          <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
+        </article>
+        <article class="ofe-coupon-card">
+          <div class="ofe-coupon-card__ticket" aria-hidden="true">
+            <span>COUPON</span>
+            <strong>10,000</strong>
+          </div>
+          <div class="ofe-coupon-card__info">
+            <h3>신규 회원 할인 쿠폰</h3>
+            <strong>10,000원</strong>
+            <p>유효기간 : 2026년 12월 31일까지</p>
+          </div>
+          <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
+        </article>
+        <article class="ofe-coupon-card">
+          <div class="ofe-coupon-card__ticket" aria-hidden="true">
+            <span>COUPON</span>
+            <strong>10,000</strong>
+          </div>
+          <div class="ofe-coupon-card__info">
+            <h3>신규 회원 할인 쿠폰</h3>
+            <strong>10,000원</strong>
+            <p>유효기간 : 2026년 12월 31일까지</p>
+          </div>
+          <button type="button" class="ds-button ds-button--small ds-button--outline" data-dialog-close>적용</button>
+        </article>
         <article class="ofe-coupon-card">
           <div class="ofe-coupon-card__ticket" aria-hidden="true">
             <span>COUPON</span>
