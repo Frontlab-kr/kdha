@@ -3923,7 +3923,7 @@ body:not(.regional-site):not(.english-site) .primary-nav__icon-button {
   font-weight: 400;
 }
 
-body.main-page .layout-container {
+body.main-page .layout-container:not(.site-footer__inner) {
   width: min(1440px, 100% - 40px);
 }
 
@@ -4370,13 +4370,6 @@ body.main-page .primary-nav__main-login {
 body.main-page .primary-nav__icon-button {
   color: #101418;
 }
-body.main-page .site-footer {
-  height: 434.951px;
-  min-height: 434.951px;
-}
-body.main-page .site-footer__legal-links a:nth-child(n+3) {
-  display: none;
-}
 
 body.main-page .site .site-header {
   height: 101.687px;
@@ -4414,7 +4407,7 @@ body.main-page .site .site-header__inner {
   }
 }
 @media (max-width: 700px) {
-  body.main-page .layout-container {
+  body.main-page .layout-container:not(.site-footer__inner) {
     width: calc(100% - 40px);
   }
   body.main-page .site-header,
@@ -4446,48 +4439,6 @@ body.main-page .site .site-header__inner {
     width: 28px !important;
     height: 28px !important;
     font-size: 28px !important;
-  }
-  body.main-page .site-footer {
-    width: 100%;
-    height: 411.667px;
-    min-height: 411.667px;
-    padding: 40px 20px;
-  }
-  body.main-page .site-footer__inner {
-    width: 100%;
-    height: 331.667px;
-    min-height: 331.667px;
-  }
-  body.main-page .site-footer__address {
-    width: 300px;
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  body.main-page .site-footer__contact {
-    margin-top: 24px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  body.main-page .site-footer__bottom {
-    display: block;
-    margin-top: 17px;
-    padding-top: 17px;
-  }
-  body.main-page .site-footer__legal-links {
-    gap: 16px;
-    height: 40px;
-    overflow: hidden;
-    font-size: 14px;
-  }
-  body.main-page .site-footer__legal p {
-    margin-top: 56px;
-    font-size: 14px;
-    white-space: nowrap;
-  }
-  body.main-page .site-footer .social-links {
-    position: absolute;
-    margin-top: -77px;
   }
   body.main-page .site .site-header,
   body.main-page .site .site-header__inner {
