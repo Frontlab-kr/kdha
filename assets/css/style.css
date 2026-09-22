@@ -4408,7 +4408,7 @@ body.main-page .site .site-header__inner {
 }
 @media (max-width: 700px) {
   body.main-page .layout-container:not(.site-footer__inner) {
-    width: calc(100% - 40px);
+    width: 100%;
   }
   body.main-page .site-header,
   body.main-page .site-header__inner {
@@ -10701,15 +10701,26 @@ body.main-page .site .site-header__inner {
 .site-footer--standard .site-footer__site-selects .ds-select {
   width: 220px;
 }
+.site-footer--standard .site-footer__site-selects .ds-select__list {
+  top: auto;
+  bottom: calc(100% + 6px);
+}
 .site-footer--standard .site-footer__site-selects .ds-select__button {
   height: 48px;
   min-height: 48px;
-  padding-inline: 16px;
+  padding: 0 44px 0 16px;
   border: 1px solid #4d5866;
   border-radius: 4px;
   background: #232a31;
   color: #d0d8e2;
   font-size: 16px;
+}
+.site-footer--standard .site-footer__site-selects .ds-select__value {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .site-footer--standard .site-footer__bottom {
   align-items: flex-end;

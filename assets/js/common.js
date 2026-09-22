@@ -473,7 +473,8 @@ $(function () {
 
       var listId = ($native.attr('id') || 'ds-select-' + customSelectSequence++) + '-listbox';
       var fieldLabel = $.trim(
-        $native[0].labels?.[0]?.textContent ||
+        $native.attr('aria-label') ||
+          $native[0].labels?.[0]?.textContent ||
           $native.closest('.form-field, .edu-field').children('span, label').first().text() ||
           '선택',
       );
@@ -541,6 +542,11 @@ $(function () {
 
   window.KDHAComponents.initCustomSelects = initCustomSelects;
   initCustomSelects(document);
+
+  $(document).on('change', '.site-footer select[data-related-site]', function () {
+    if (!/^https?:\/\//i.test(this.value)) return;
+    window.open(this.value, '_blank', 'noopener,noreferrer');
+  });
 
   function closeCustomSelect($root, returnFocus) {
     if (!$root.length || !$root.hasClass('is-open')) return;
