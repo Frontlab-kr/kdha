@@ -117,6 +117,17 @@ $(function () {
 
   renderNews('association');
 
+  // 메인 배너 슬라이드 (Figma 최종 확정안 B안 4장)
+  if (typeof Swiper !== 'undefined' && document.querySelector('.main-b-hero__slider')) {
+    new Swiper('.main-b-hero__slider', {
+      loop: true,
+      speed: 700,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      pagination: { el: '.main-b-hero__pagination', clickable: true },
+      a11y: { paginationBulletMessage: '{{index}}번째 배너로 이동' },
+    });
+  }
+
   // 회원 지원 안내 슬라이드
   if (typeof Swiper !== 'undefined') {
     new Swiper('.main-b-promo', {

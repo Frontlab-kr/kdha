@@ -27,11 +27,11 @@
               <div class="utility-nav__external">
                 <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a
                   class="utility-nav__link"
@@ -40,7 +40,7 @@
                   rel="noreferrer"
                 >
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
             </nav>
@@ -130,15 +130,15 @@
               <div class="site-menu__external">
                 <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
               <div class="site-menu__account">
@@ -280,50 +280,20 @@
 
       <main id="main-content" class="user-page__main">
         <div class="user-page__inner layout-container">
-          <nav class="user-page-breadcrumb" aria-label="현재 위치">
-            <a class="user-page-breadcrumb__home" href="/kdha/main/" aria-label="홈">
-              <span class="user-page-breadcrumb__home-icon material-symbols-rounded" aria-hidden="true">home</span>
-            </a>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
+          <header class="ofe-hero">
+            <nav aria-label="현재 위치">
+              <a href="/kdha/main/" aria-label="홈">
+                <span class="material-symbols-rounded" aria-hidden="true">home</span>
+              </a>
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
               <a class="user-page-breadcrumb__link" href="/kdha/mypage/">마이페이지</a>
-            </span>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
               <a class="user-page-breadcrumb__link" href="/kdha/mypage/classroom/">내 강의실</a>
-            </span>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
               <span aria-current="page">학습진도 현황</span>
-            </span>
-          </nav>
-
-          <header class="user-page-hero">
-            <div>
-              <p class="user-page-hero__eyebrow">KDHA USER SITE</p>
-              <h1 class="user-page-hero__title">학습진도 현황</h1>
-              <p class="user-page-hero__description">
-                기획설계서의 TO-BE 사용자 IA를 기준으로 연결한 임시 페이지입니다.
-              </p>
-            </div>
+            </nav>
+            <h1>학습진도 현황</h1>
+            <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
           </header>
           <section class="user-content user-dashboard" aria-label="학습진도 현황 임시 현황">
             <div class="user-dashboard__summary">
@@ -371,56 +341,47 @@
             />
           </a>
           <address class="site-footer__address">
-            105-82-07361(통신판매번호 : 제2010-서울동대문-0959호)　|　대표자 : 박정란
-            <br />
-            서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)
+            <span class="site-footer__info-row">
+              <span>
+                105-82-07361
+                <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
+              </span>
+              <span>대표자 : 박정란</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
           </address>
-          <div class="site-footer__contact-row">
-            <p class="site-footer__contact">TEL. 02-2236-0914　 FAX. 02-2236-0915</p>
+          <p class="site-footer__contact">
+            <span>TEL. 02-2236-0914</span>
+            <span>FAX. 02-2236-0915</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/related-sites/">관련사이트</a>
+              <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
             <div class="site-footer__site-selects">
-              <select aria-label="관련사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">관련사이트</option>
-                <option value="http://www.longtermcare.or.kr/npbs/">노인장기요양보험</option>
-                <option value="https://www.mohw.go.kr/">보건복지부</option>
-                <option value="http://lic.mohw.go.kr/">면허번호 조회·면허증 재교부 신청</option>
-                <option value="https://www.kdha.or.kr/mypage/card.aspx">대한치과위생사협회 회원증카드 발급안내</option>
-                <option value="https://www.kdha.or.kr/education/refresher.aspx#institute">
-                  대한치과위생사협회 치위생교육원
-                </option>
-                <option value="https://www.instagram.com/krdha77/">대한치과위생사협회 공식 인스타그램</option>
-                <option value="https://ko-kr.facebook.com/koreadha/">대한치과위생사협회 공식 페이스북</option>
-                <option value="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w">
-                  대한치과위생사협회 공식 유튜브 채널
-                </option>
-                <option value="http://kdhamall.or.kr">KDHA mall</option>
-              </select>
-              <select aria-label="시도회사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">시도회사이트</option>
-                <option value="https://seoul.kdha.or.kr">서울특별시회</option>
-                <option value="https://gg.kdha.or.kr">경기도회</option>
-                <option value="https://incheon.kdha.or.kr">인천광역시회</option>
-                <option value="https://gangwon.kdha.or.kr">강원특별자치도회</option>
-                <option value="https://ds.kdha.or.kr">대전·세종회</option>
-                <option value="https://chungbuk.kdha.or.kr">충청북도회</option>
-                <option value="https://cn.kdha.or.kr">충청남도회</option>
-                <option value="https://busan.kdha.or.kr">부산광역시회</option>
-                <option value="https://dg.kdha.or.kr">대구·경북회</option>
-                <option value="https://gyeongnam.kdha.or.kr">경상남도회</option>
-                <option value="https://ulsan.kdha.or.kr">울산광역시회</option>
-                <option value="https://jeonbuk.kdha.or.kr">전북특별자치도회</option>
-                <option value="https://gj.kdha.or.kr">광주·전남회</option>
-                <option value="https://jeju.kdha.or.kr">제주특별자치도회</option>
+              <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">시도회 홈페이지</option>
+                <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
               </select>
             </div>
           </div>
           <div class="site-footer__bottom">
-            <div class="site-footer__legal">
-              <div class="site-footer__legal-links">
-                <a href="/kdha/privacy/">개인정보처리방침</a>
-                <a class="site-footer__mobile-link" href="/kdha/remote-support/">원격지원</a>
-              </div>
-              <p>Copyright ⓒ 2026 KDHA. All rights Reserved</p>
-            </div>
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
             <div class="social-links">
               <a
                 class="social-links__item"

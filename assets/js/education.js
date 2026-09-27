@@ -172,20 +172,6 @@ $(function () {
     $item.prop('hidden', true);
   });
 
-  // 이메일 도메인의 목록 선택과 직접입력 상태 전환
-  $(document).on('click', '[data-email-domain-toggle]', function () {
-    var $field = $(this).siblings('.account-email-domain__field');
-    var $select = $field.find('.ds-select');
-    var $input = $field.find('[data-email-domain-input]');
-    var showDirectInput = $input.prop('hidden');
-
-    $select.prop('hidden', showDirectInput);
-    $input.prop('hidden', !showDirectInput);
-    $(this).text(showDirectInput ? '목록선택' : '직접입력');
-    if (showDirectInput) $input.trigger('focus');
-    else $select.find('.ds-select__button').trigger('focus');
-  });
-
   // 학력·협회임직경력 반복 카드 추가 및 삭제
   function cleanRepeatCardForTemplate($card) {
     $card.find('.datepicker').remove();

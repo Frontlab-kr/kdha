@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-
     <title>공지사항 | 대한치과위생사협회</title>
   </head>
-  <body class="">
+  <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
-    <div class="site user-page">
+    <div class="site">
       <header class="site-header site-header--standard">
         <div class="site-header__inner layout-container">
           <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
@@ -27,11 +25,11 @@
               <div class="utility-nav__external">
                 <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a
                   class="utility-nav__link"
@@ -40,7 +38,7 @@
                   rel="noreferrer"
                 >
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
             </nav>
@@ -130,15 +128,15 @@
               <div class="site-menu__external">
                 <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
               <div class="site-menu__account">
@@ -278,417 +276,354 @@
         </nav>
       </header>
 
-      <main id="main-content" class="user-page__main">
-        <div class="user-page__inner layout-container">
-          <nav class="user-page-breadcrumb" aria-label="현재 위치">
-            <a class="user-page-breadcrumb__home" href="/kdha/main/" aria-label="홈">
-              <span class="user-page-breadcrumb__home-icon material-symbols-rounded" aria-hidden="true">home</span>
-            </a>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
-              <span>소통광장</span>
-            </span>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
-              <span aria-current="page">공지사항</span>
-            </span>
-          </nav>
-
-          <header class="user-page-hero">
-            <div>
-              <p class="user-page-hero__eyebrow">KDHA USER SITE</p>
-              <h1 class="user-page-hero__title">공지사항</h1>
-              <p class="user-page-hero__description">
-                협회, 보수교육, 면허신고, 시·도회와 산하단체의 공지를 확인할 수 있습니다.
-              </p>
-            </div>
-            <span class="user-page-hero__screen-id">KD-US-NOT-01-01</span>
-          </header>
-          <section class="user-content user-content--board" aria-label="협회 공지 목록">
-            <div class="user-content__toolbar">
-              <p class="user-content__count">
-                현재 화면
-                <strong>20</strong>
-                건
-              </p>
-              <form class="user-search" data-static-search>
-                <label class="sr-only" for="search-list-notice-center.html">목록 검색</label>
-                <input
-                  id="search-list-notice-center.html"
-                  class="user-search__input"
-                  type="search"
-                  placeholder="제목이나 내용 검색"
-                />
-                <button class="user-search__button" type="submit">검색</button>
-                <p class="sr-only" role="status" aria-live="polite" data-static-search-status></p>
+      <main id="main-content">
+        <div class="community-page">
+          <div class="community-container">
+            <header class="ofe-hero">
+              <nav aria-label="현재 위치">
+                <a href="/kdha/main/" aria-label="홈">
+                  <span class="material-symbols-rounded" aria-hidden="true">home</span>
+                </a>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span>소통광장</span>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span aria-current="page">공지사항</span>
+              </nav>
+              <h1>공지사항</h1>
+              <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
+            </header>
+            <section class="community-notices" aria-label="협회 공지사항" data-community-board>
+              <form class="community-search form-field form-field--large" role="search">
+                <select data-select-size="l" class="ds-select" data-custom-select name="field" aria-label="검색 조건">
+                  <option value="all">선택</option>
+                  <option value="title">제목</option>
+                  <option value="author">작성자</option>
+                </select>
+                <input type="search" name="query" aria-label="검색어" placeholder="검색어를 입력해 주세요" />
+                <button class="form-action-button" type="submit">검색</button>
               </form>
-            </div>
-            <div class="user-board">
-              <div class="user-board__row user-board__row--header" aria-hidden="true">
-                <span>번호</span>
-                <span>제목</span>
-                <span>등록 정보</span>
+              <nav class="ds-tabs" aria-label="공지사항 분류">
+                <a class="ds-tabs__item" href="/kdha/community/notices/association/" aria-current="page">협회(중앙회)</a>
+                <a class="ds-tabs__item" href="/kdha/community/notices/education/">보수교육(카드뉴스)</a>
+                <a class="ds-tabs__item" href="/kdha/community/notices/license/">면허신고</a>
+                <a class="ds-tabs__item" href="/kdha/community/notices/branches/">시도회</a>
+                <a class="ds-tabs__item" href="/kdha/community/notices/organizations/">산하단체</a>
+                <a class="ds-tabs__item" href="/kdha/community/notices/societies/">산하학회</a>
+              </nav>
+              <div class="community-list-tools">
+                <label class="sr-only" for="notice-limit">페이지당 목록 수</label>
+                <select id="notice-limit" data-community-limit data-custom-select>
+                  <option value="10">10개</option>
+                  <option value="20">20개</option>
+                </select>
               </div>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="2025년 회비 및 미납회비 캐시백, 25.12월분 사이버보수교육 캐시백 일부 회원 지급 지연 안내 원문 페이지로 새 창 이동합니다"
-                title="2025년 회비 및 미납회비 캐시백, 25.12월분 사이버보수교육 캐시백 일부 회원 지급 지연 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number"></span>
-                <span class="user-board__subject">
-                  <span>2025년 회비 및 미납회비 캐시백, 25.12월분 사이버보수교육 캐시백 일부 회원 지급 지연 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 김수연 · 조회 7035</small>
-                </span>
-                <time>2026-01-30</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="2026년도 보수교육 및 면허신고 이행 안내 원문 페이지로 새 창 이동합니다"
-                title="2026년도 보수교육 및 면허신고 이행 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number"></span>
-                <span class="user-board__subject">
-                  <span>2026년도 보수교육 및 면허신고 이행 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 치위협 · 조회 2525</small>
-                </span>
-                <time>2026-01-22</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="「의료기사 등에 관한 법률」 일부개정법률안 (남인순의원ㆍ최보윤의원 대표발의, 의안번호 2213546) 발의 안내 및 지지활동 참여 요청 원문 페이지로 새 창 이동합니다"
-                title="「의료기사 등에 관한 법률」 일부개정법률안 (남인순의원ㆍ최보윤의원 대표발의, 의안번호 2213546) 발의 안내 및 지지활동 참여 요청 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number"></span>
-                <span class="user-board__subject">
-                  <span>
-                    「의료기사 등에 관한 법률」 일부개정법률안 (남인순의원ㆍ최보윤의원 대표발의, 의안번호 2213546) 발의
-                    안내 및 지지활동 참여 요청
+              <div class="ds-board" role="table" aria-label="협회(중앙회) 공지 목록">
+                <div class="ds-board__head" role="row">
+                  <span role="columnheader">번호</span>
+                  <span role="columnheader">구분</span>
+                  <span role="columnheader">제목</span>
+                  <span role="columnheader">작성자</span>
+                  <span role="columnheader">등록일</span>
+                  <span role="columnheader">조회</span>
+                </div>
+                <div class="ds-board__row ds-board__row--pinned" role="row" data-community-row data-author="김수연">
+                  <span class="ds-board__number" role="cell">공지</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      2025년 회비 및 미납회비 캐시백, 25.12월분 사이버보수교육 캐시백 일부 회원 지급 지연 안내
+                    </a>
                   </span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 강보람 · 조회 6760</small>
-                </span>
-                <time>2025-10-16</time>
+                  <span class="ds-board__author" role="cell">김수연</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-01-30">2026-01-30</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    7,035
+                  </span>
+                </div>
+                <div class="ds-board__row ds-board__row--pinned" role="row" data-community-row data-author="치위협">
+                  <span class="ds-board__number" role="cell">공지</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">2026년도 보수교육 및 면허신고 이행 안내</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">치위협</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-01-22">2026-01-22</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    2,525
+                  </span>
+                </div>
+                <div class="ds-board__row ds-board__row--pinned" role="row" data-community-row data-author="강보람">
+                  <span class="ds-board__number" role="cell">공지</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      「의료기사 등에 관한 법률」 일부개정법률안 (남인순의원ㆍ최보윤의원 대표발의, 의안번호 2213546)
+                      발의 안내 및 지지활동 참여 요청
+                    </a>
+                  </span>
+                  <span class="ds-board__author" role="cell">강보람</span>
+                  <time class="ds-board__date" role="cell" datetime="2025-10-16">2025-10-16</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    6,760
+                  </span>
+                </div>
+                <div class="ds-board__row ds-board__row--pinned" role="row" data-community-row data-author="김수연">
+                  <span class="ds-board__number" role="cell">공지</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">2026년 회원증카드 결제 혜택 안내</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">김수연</span>
+                  <time class="ds-board__date" role="cell" datetime="2025-01-15">2025-01-15</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    14,863
+                  </span>
+                </div>
+                <div class="ds-board__row ds-board__row--pinned" role="row" data-community-row data-author="치위협">
+                  <span class="ds-board__number" role="cell">공지</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">★선가입회원 치과위생사회원전환 방법★</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">치위협</span>
+                  <time class="ds-board__date" role="cell" datetime="2024-12-26">2024-12-26</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    16,244
+                  </span>
+                </div>
+                <div class="ds-board__row ds-board__row--pinned" role="row" data-community-row data-author="치위협">
+                  <span class="ds-board__number" role="cell">공지</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">면허 미신고에 따른 면허효력정지 처분 알림 안내</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">치위협</span>
+                  <time class="ds-board__date" role="cell" datetime="2024-12-23">2024-12-23</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    14,172
+                  </span>
+                </div>
+                <div class="ds-board__row ds-board__row--pinned" role="row" data-community-row data-author="관리자">
+                  <span class="ds-board__number" role="cell">공지</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">문의유형에 따른 이메일 주소 안내</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">관리자</span>
+                  <time class="ds-board__date" role="cell" datetime="2023-08-16">2023-08-16</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    21,472
+                  </span>
+                </div>
+                <div class="ds-board__row ds-board__row--pinned" role="row" data-community-row data-author="치위협">
+                  <span class="ds-board__number" role="cell">공지</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">회원 등급 변경 안내</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">치위협</span>
+                  <time class="ds-board__date" role="cell" datetime="2019-01-02">2019-01-02</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    44,394
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="강보람">
+                  <span class="ds-board__number" role="cell">1235</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      ‘노인 방문 구강건강관리 사업 추진 전략 마련을 위한 공청회’ 안내
+                    </a>
+                  </span>
+                  <span class="ds-board__author" role="cell">강보람</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-08-24">2026-08-24</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    79
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="황보남희">
+                  <span class="ds-board__number" role="cell">1234</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      2026년 노인 · 장애인 전문치과위생사 강사 양성과정 안내
+                    </a>
+                  </span>
+                  <span class="ds-board__author" role="cell">황보남희</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-08-18">2026-08-18</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    809
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="박세빈">
+                  <span class="ds-board__number" role="cell">1233</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      [한국보건복지인재원] 9월 은퇴 후 국제보건분야 해외봉사 준비하기 홍보
+                    </a>
+                  </span>
+                  <span class="ds-board__author" role="cell">박세빈</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-08-14">2026-08-14</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    226
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="설유진">
+                  <span class="ds-board__number" role="cell">1232</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">[제48회 종합학술대회] 회원여러분 감사합니다.</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">설유진</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-08-13">2026-08-13</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    246
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="박세빈">
+                  <span class="ds-board__number" role="cell">1231</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      [한국보건복지인재원] 2026년 8월 국제보건복지분야 전문강사양성 홍보
+                    </a>
+                  </span>
+                  <span class="ds-board__author" role="cell">박세빈</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-08-12">2026-08-12</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    312
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="Master">
+                  <span class="ds-board__number" role="cell">1230</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">8/10 (월) 사무처 휴무 안내</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">Master</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-08-09">2026-08-09</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    328
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="강보람">
+                  <span class="ds-board__number" role="cell">1229</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      「보건의료인력기준 법제화」 범국민 서명운동 안내
+                    </a>
+                  </span>
+                  <span class="ds-board__author" role="cell">강보람</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-08-03">2026-08-03</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    526
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="강보람">
+                  <span class="ds-board__number" role="cell">1228</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      「치과위생사 고용환경에 관한 회원 실태조사」 안내
+                    </a>
+                  </span>
+                  <span class="ds-board__author" role="cell">강보람</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-07-24">2026-07-24</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    613
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="황보남희">
+                  <span class="ds-board__number" role="cell">1227</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">2027년도 다이어리 제작업체 선정 입찰 공고</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">황보남희</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-07-15">2026-07-15</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    694
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="황보남희">
+                  <span class="ds-board__number" role="cell">1226</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      [무료교육] 2026년도 신규치과위생사 역량강화교육 안내
+                    </a>
+                  </span>
+                  <span class="ds-board__author" role="cell">황보남희</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-07-13">2026-07-13</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    845
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="설유진">
+                  <span class="ds-board__number" role="cell">1225</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">제48회 종합학술대회 등록기간 연장 안내</a>
+                  </span>
+                  <span class="ds-board__author" role="cell">설유진</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-06-29">2026-06-29</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    1,140
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row" data-community-row data-author="강보람">
+                  <span class="ds-board__number" role="cell">1224</span>
+                  <span class="ds-board__category" role="cell">중앙회</span>
+                  <span class="ds-board__title" role="cell">
+                    <a href="/kdha/community/notices/association/detail/">
+                      [설문 참여 안내] 치과위생사 윤리강령 인식 및 활용 실태에 관한 조사연구
+                    </a>
+                  </span>
+                  <span class="ds-board__author" role="cell">강보람</span>
+                  <time class="ds-board__date" role="cell" datetime="2026-06-22">2026-06-22</time>
+                  <span class="ds-board__views" role="cell">
+                    <span>조회</span>
+                    1,275
+                  </span>
+                </div>
+              </div>
+              <p class="community-empty" hidden>검색 결과가 없습니다.</p>
+              <p class="sr-only" role="status" data-community-status></p>
+              <nav class="ds-pagination" aria-label="공지사항 페이지" data-community-pagination></nav>
+            </section>
+            <aside class="ofe-contact">
+              <div>
+                <h2>치위협보 기사제보 · 광고문의</h2>
+                <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+              </div>
+              <a href="mailto:press@kdha.or.kr">
+                02-6213-2735
+                <span>·</span>
+                press@kdha.or.kr
               </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="2026년 회원증카드 결제 혜택 안내 원문 페이지로 새 창 이동합니다"
-                title="2026년 회원증카드 결제 혜택 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number"></span>
-                <span class="user-board__subject">
-                  <span>2026년 회원증카드 결제 혜택 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 김수연 · 조회 14863</small>
-                </span>
-                <time>2025-01-15</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="★선가입회원 치과위생사회원전환 방법★ 원문 페이지로 새 창 이동합니다"
-                title="★선가입회원 치과위생사회원전환 방법★ 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number"></span>
-                <span class="user-board__subject">
-                  <span>★선가입회원 치과위생사회원전환 방법★</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 치위협 · 조회 16244</small>
-                </span>
-                <time>2024-12-26</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="면허 미신고에 따른 면허효력정지 처분 알림 안내 원문 페이지로 새 창 이동합니다"
-                title="면허 미신고에 따른 면허효력정지 처분 알림 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number"></span>
-                <span class="user-board__subject">
-                  <span>면허 미신고에 따른 면허효력정지 처분 알림 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 치위협 · 조회 14172</small>
-                </span>
-                <time>2024-12-23</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="문의유형에 따른 이메일 주소 안내 원문 페이지로 새 창 이동합니다"
-                title="문의유형에 따른 이메일 주소 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number"></span>
-                <span class="user-board__subject">
-                  <span>문의유형에 따른 이메일 주소 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 관리자 · 조회 21472</small>
-                </span>
-                <time>2023-08-16</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="회원 등급 변경 안내 원문 페이지로 새 창 이동합니다"
-                title="회원 등급 변경 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number"></span>
-                <span class="user-board__subject">
-                  <span>회원 등급 변경 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 치위협 · 조회 44394</small>
-                </span>
-                <time>2019-01-02</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="‘노인 방문 구강건강관리 사업 추진 전략 마련을 위한 공청회’ 안내 원문 페이지로 새 창 이동합니다"
-                title="‘노인 방문 구강건강관리 사업 추진 전략 마련을 위한 공청회’ 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1235</span>
-                <span class="user-board__subject">
-                  <span>‘노인 방문 구강건강관리 사업 추진 전략 마련을 위한 공청회’ 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 강보람 · 조회 79</small>
-                </span>
-                <time>2026-08-24</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="2026년 노인 · 장애인 전문치과위생사 강사 양성과정 안내 원문 페이지로 새 창 이동합니다"
-                title="2026년 노인 · 장애인 전문치과위생사 강사 양성과정 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1234</span>
-                <span class="user-board__subject">
-                  <span>2026년 노인 · 장애인 전문치과위생사 강사 양성과정 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 황보남희 · 조회 809</small>
-                </span>
-                <time>2026-08-18</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="[한국보건복지인재원] 9월 은퇴 후 국제보건분야 해외봉사 준비하기 홍보 원문 페이지로 새 창 이동합니다"
-                title="[한국보건복지인재원] 9월 은퇴 후 국제보건분야 해외봉사 준비하기 홍보 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1233</span>
-                <span class="user-board__subject">
-                  <span>[한국보건복지인재원] 9월 은퇴 후 국제보건분야 해외봉사 준비하기 홍보</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 박세빈 · 조회 226</small>
-                </span>
-                <time>2026-08-14</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="[제48회 종합학술대회] 회원여러분 감사합니다. 원문 페이지로 새 창 이동합니다"
-                title="[제48회 종합학술대회] 회원여러분 감사합니다. 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1232</span>
-                <span class="user-board__subject">
-                  <span>[제48회 종합학술대회] 회원여러분 감사합니다.</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 설유진 · 조회 246</small>
-                </span>
-                <time>2026-08-13</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="[한국보건복지인재원] 2026년 8월 국제보건복지분야 전문강사양성 홍보 원문 페이지로 새 창 이동합니다"
-                title="[한국보건복지인재원] 2026년 8월 국제보건복지분야 전문강사양성 홍보 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1231</span>
-                <span class="user-board__subject">
-                  <span>[한국보건복지인재원] 2026년 8월 국제보건복지분야 전문강사양성 홍보</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 박세빈 · 조회 312</small>
-                </span>
-                <time>2026-08-12</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="8/10 (월) 사무처 휴무 안내 원문 페이지로 새 창 이동합니다"
-                title="8/10 (월) 사무처 휴무 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1230</span>
-                <span class="user-board__subject">
-                  <span>8/10 (월) 사무처 휴무 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 Master · 조회 328</small>
-                </span>
-                <time>2026-08-09</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="「보건의료인력기준 법제화」 범국민 서명운동 안내 원문 페이지로 새 창 이동합니다"
-                title="「보건의료인력기준 법제화」 범국민 서명운동 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1229</span>
-                <span class="user-board__subject">
-                  <span>「보건의료인력기준 법제화」 범국민 서명운동 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 강보람 · 조회 526</small>
-                </span>
-                <time>2026-08-03</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="「치과위생사 고용환경에 관한 회원 실태조사」 안내 원문 페이지로 새 창 이동합니다"
-                title="「치과위생사 고용환경에 관한 회원 실태조사」 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1228</span>
-                <span class="user-board__subject">
-                  <span>「치과위생사 고용환경에 관한 회원 실태조사」 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 강보람 · 조회 613</small>
-                </span>
-                <time>2026-07-24</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="2027년도 다이어리 제작업체 선정 입찰 공고 원문 페이지로 새 창 이동합니다"
-                title="2027년도 다이어리 제작업체 선정 입찰 공고 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1227</span>
-                <span class="user-board__subject">
-                  <span>2027년도 다이어리 제작업체 선정 입찰 공고</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 황보남희 · 조회 694</small>
-                </span>
-                <time>2026-07-15</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="[무료교육] 2026년도 신규치과위생사 역량강화교육 안내 원문 페이지로 새 창 이동합니다"
-                title="[무료교육] 2026년도 신규치과위생사 역량강화교육 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1226</span>
-                <span class="user-board__subject">
-                  <span>[무료교육] 2026년도 신규치과위생사 역량강화교육 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 황보남희 · 조회 845</small>
-                </span>
-                <time>2026-07-13</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="제48회 종합학술대회 등록기간 연장 안내 원문 페이지로 새 창 이동합니다"
-                title="제48회 종합학술대회 등록기간 연장 안내 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1225</span>
-                <span class="user-board__subject">
-                  <span>제48회 종합학술대회 등록기간 연장 안내</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 설유진 · 조회 1140</small>
-                </span>
-                <time>2026-06-29</time>
-              </a>
-              <a
-                class="user-board__row"
-                href="https://www.kdha.or.kr/news/notice.aspx#center"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="[설문 참여 안내] 치과위생사 윤리강령 인식 및 활용 실태에 관한 조사연구 원문 페이지로 새 창 이동합니다"
-                title="[설문 참여 안내] 치과위생사 윤리강령 인식 및 활용 실태에 관한 조사연구 원문 페이지로 새 창 이동합니다"
-                data-static-search-item
-              >
-                <span class="user-board__number">1224</span>
-                <span class="user-board__subject">
-                  <span>[설문 참여 안내] 치과위생사 윤리강령 인식 및 활용 실태에 관한 조사연구</span>
-                  <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
-                  <small>구분 중앙회 · 작성자 강보람 · 조회 1275</small>
-                </span>
-                <time>2026-06-22</time>
-              </a>
-            </div>
-            <p class="public-source-note">
-              기존 사이트에 공개된 자료를 기준으로 구성했습니다. 상세 내용은 각 항목의 원문에서 확인할 수 있습니다.
-            </p>
-          </section>
+            </aside>
+          </div>
         </div>
       </main>
       <footer class="site-footer site-footer--standard">
@@ -703,56 +638,47 @@
             />
           </a>
           <address class="site-footer__address">
-            105-82-07361(통신판매번호 : 제2010-서울동대문-0959호)　|　대표자 : 박정란
-            <br />
-            서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)
+            <span class="site-footer__info-row">
+              <span>
+                105-82-07361
+                <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
+              </span>
+              <span>대표자 : 박정란</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
           </address>
-          <div class="site-footer__contact-row">
-            <p class="site-footer__contact">TEL. 02-2236-0914　 FAX. 02-2236-0915</p>
+          <p class="site-footer__contact">
+            <span>TEL. 02-2236-0914</span>
+            <span>FAX. 02-2236-0915</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/related-sites/">관련사이트</a>
+              <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
             <div class="site-footer__site-selects">
-              <select aria-label="관련사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">관련사이트</option>
-                <option value="http://www.longtermcare.or.kr/npbs/">노인장기요양보험</option>
-                <option value="https://www.mohw.go.kr/">보건복지부</option>
-                <option value="http://lic.mohw.go.kr/">면허번호 조회·면허증 재교부 신청</option>
-                <option value="https://www.kdha.or.kr/mypage/card.aspx">대한치과위생사협회 회원증카드 발급안내</option>
-                <option value="https://www.kdha.or.kr/education/refresher.aspx#institute">
-                  대한치과위생사협회 치위생교육원
-                </option>
-                <option value="https://www.instagram.com/krdha77/">대한치과위생사협회 공식 인스타그램</option>
-                <option value="https://ko-kr.facebook.com/koreadha/">대한치과위생사협회 공식 페이스북</option>
-                <option value="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w">
-                  대한치과위생사협회 공식 유튜브 채널
-                </option>
-                <option value="http://kdhamall.or.kr">KDHA mall</option>
-              </select>
-              <select aria-label="시도회사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">시도회사이트</option>
-                <option value="https://seoul.kdha.or.kr">서울특별시회</option>
-                <option value="https://gg.kdha.or.kr">경기도회</option>
-                <option value="https://incheon.kdha.or.kr">인천광역시회</option>
-                <option value="https://gangwon.kdha.or.kr">강원특별자치도회</option>
-                <option value="https://ds.kdha.or.kr">대전·세종회</option>
-                <option value="https://chungbuk.kdha.or.kr">충청북도회</option>
-                <option value="https://cn.kdha.or.kr">충청남도회</option>
-                <option value="https://busan.kdha.or.kr">부산광역시회</option>
-                <option value="https://dg.kdha.or.kr">대구·경북회</option>
-                <option value="https://gyeongnam.kdha.or.kr">경상남도회</option>
-                <option value="https://ulsan.kdha.or.kr">울산광역시회</option>
-                <option value="https://jeonbuk.kdha.or.kr">전북특별자치도회</option>
-                <option value="https://gj.kdha.or.kr">광주·전남회</option>
-                <option value="https://jeju.kdha.or.kr">제주특별자치도회</option>
+              <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">시도회 홈페이지</option>
+                <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
               </select>
             </div>
           </div>
           <div class="site-footer__bottom">
-            <div class="site-footer__legal">
-              <div class="site-footer__legal-links">
-                <a href="/kdha/privacy/">개인정보처리방침</a>
-                <a class="site-footer__mobile-link" href="/kdha/remote-support/">원격지원</a>
-              </div>
-              <p>Copyright ⓒ 2026 KDHA. All rights Reserved</p>
-            </div>
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
             <div class="social-links">
               <a
                 class="social-links__item"
@@ -792,5 +718,7 @@
     <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
     <script src="/kdha/assets/js/common.js"></script>
     <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/community.js"></script>
   </body>
 </html>

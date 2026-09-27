@@ -352,6 +352,17 @@ $(function () {
     }
   });
 
+  // URL hash로 지정된 dialog 레이어 열기(교육원 페이지는 education.js에서 처리)
+  if (!window.__kdhaHashDialog) {
+    window.__kdhaHashDialog = true;
+    var openDialogFromHash = function () {
+      var dialog = document.getElementById(window.location.hash.slice(1));
+      if (dialog && dialog.tagName === 'DIALOG' && !dialog.open) dialog.showModal();
+    };
+    $(openDialogFromHash);
+    $(window).on('hashchange', openDialogFromHash);
+  }
+
   // 공통 dialog·alert 레이어 열기 및 닫기
   $(document).on('click', '[data-dialog-open]', function () {
     var dialog = document.getElementById($(this).data('dialog-open'));
@@ -361,6 +372,14 @@ $(function () {
   $(document).on('click', '[data-dialog-close]', function () {
     var dialog = $(this).closest('dialog')[0];
     if (dialog) dialog.close();
+  });
+
+  // 현재 dialog를 닫고 연결된 다음 dialog를 엽니다. (교육원 페이지와 같은 동작)
+  $(document).on('click', '[data-dialog-switch]', function () {
+    var currentDialog = $(this).closest('dialog')[0];
+    var nextDialog = document.getElementById($(this).data('dialog-switch'));
+    if (currentDialog?.open) currentDialog.close();
+    if (nextDialog && !nextDialog.open) nextDialog.showModal();
   });
 
   $(document).on('click', 'dialog.dialog, dialog.edu-dialog', function (event) {
@@ -427,6 +446,14 @@ $(function () {
 
   $(document).on('click', '[data-public-tab]', function () {
     activatePublicTab($(this), false);
+  });
+
+  // 탭 밖의 버튼(이전·다음 장 등)으로 지정한 탭을 선택하고 탭 목록으로 이동합니다.
+  $(document).on('click', '[data-tab-target]', function () {
+    var $tab = $('#' + $(this).data('tab-target'));
+    if (!$tab.length) return;
+    activatePublicTab($tab, true);
+    $tab.closest('[role="tablist"]')[0]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   $(document).on('keydown', '[data-public-tab]', function (event) {
@@ -631,5 +658,54 @@ $(function () {
     event.preventDefault();
     var $field = $invalid.closest('.form-field, .edu-field').addClass('has-error');
     $field.find('.ds-select__button').attr('aria-invalid', 'true').trigger('focus');
+  });
+
+  // 공통: 이메일 도메인의 목록 선택과 직접입력 상태 전환
+  $(document).on('click', '[data-email-domain-toggle]', function () {
+    var $field = $(this).siblings('.account-email-domain__field');
+    var $select = $field.find('.ds-select');
+    var $input = $field.find('[data-email-domain-input]');
+    var showDirectInput = $input.prop('hidden');
+
+    $select.prop('hidden', showDirectInput);
+    $input.prop('hidden', !showDirectInput);
+    $(this).text(showDirectInput ? '목록선택' : '직접입력');
+    if (showDirectInput) $input.trigger('focus');
+    else $select.find('.ds-select__button').trigger('focus');
+  });
+
+  // 공통: 사진 갤러리(ds-gallery) 썸네일·이전/다음 전환
+  $('[data-gallery]').each(function () {
+    var $gallery = $(this);
+    var $main = $gallery.find('[data-gallery-main]');
+    var $thumbs = $gallery.find('[data-gallery-thumb]');
+    var $prev = $gallery.find('[data-gallery-prev]');
+    var $next = $gallery.find('[data-gallery-next]');
+    var $status = $gallery.find('[data-gallery-status]');
+    var baseAlt = ($main.attr('alt') || '').replace(/\s*\d+\s*\/\s*\d+$/, '');
+    var index = 0;
+
+    function show(nextIndex, announce) {
+      index = Math.max(0, Math.min(nextIndex, $thumbs.length - 1));
+      var $thumb = $thumbs.eq(index);
+      $main.attr({ src: $thumb.find('img').attr('src'), alt: baseAlt + ' ' + (index + 1) + ' / ' + $thumbs.length });
+      $thumbs.removeAttr('aria-current');
+      $thumb.attr('aria-current', 'true');
+      $thumb[0].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      $prev.prop('disabled', index === 0);
+      $next.prop('disabled', index === $thumbs.length - 1);
+      if (announce) $status.text($thumbs.length + '장 중 ' + (index + 1) + '번째 사진');
+    }
+
+    $thumbs.on('click', function () {
+      show($thumbs.index(this), true);
+    });
+    $prev.on('click', function () {
+      show(index - 1, true);
+    });
+    $next.on('click', function () {
+      show(index + 1, true);
+    });
+    show(0, false);
   });
 });

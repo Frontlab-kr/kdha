@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/kdha/assets/css/datepicker.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <title>봉사 게시판 | 대한치과위생사협회</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="site">
+      <header class="site-header site-header--standard">
+        <div class="site-header__inner layout-container">
+          <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
+            <img
+              class="site-logo__image"
+              width="220"
+              height="42"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-header-b.svg"
+            />
+          </a>
+          <div class="site-header__navigation">
+            <nav class="utility-nav" aria-label="유틸리티 메뉴">
+              <div class="utility-nav__external">
+                <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
+                  덴톡
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+                <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
+                  영문사이트
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+                <a
+                  class="utility-nav__link"
+                  href="http://kdhamall.or.kr/member/login.php?prev=%2F"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  KDHA mall
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+              </div>
+            </nav>
+            <nav class="primary-nav" aria-label="주 메뉴">
+              <div class="primary-nav__links primary-nav__links--main">
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/news/schedule/">협회소식</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/career/jobs/">구인구직 상담</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/education/about/">치위생교육원</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/license/report/">면허센터</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/community/notices/">소통광장</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/introduce/greeting/">협회소개</a>
+                </div>
+              </div>
+              <div class="primary-nav__links primary-nav__links--education">
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/about/">교육원 소개</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/guide/offline/">교육안내</a>
+                </div>
+                <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/offline/">현장교육</a></div>
+                <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/online/">사이버교육</a></div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/classroom/applications/">내 강의실</a>
+                </div>
+              </div>
+              <a class="primary-nav__icon-button primary-nav__education-cart" href="/kdha/edu/cart/" aria-label="장바구니">
+                <span
+                  class="material-symbols-outlined material-icon"
+                  aria-hidden="true"
+                  style="font-size: 28px; width: 28px; height: 28px"
+                >
+                  shopping_cart
+                </span>
+              </a>
+              <div class="site-menu__account">
+                <button type="button">로그아웃</button>
+                <a href="/kdha/account/mypage/">마이페이지</a>
+              </div>
+              <button class="primary-nav__icon-button primary-nav__search" type="button" aria-label="검색">
+                <span
+                  class="material-symbols-outlined material-icon"
+                  aria-hidden="true"
+                  style="font-size: 28px; width: 28px; height: 28px"
+                >
+                  search
+                </span>
+              </button>
+              <button
+                class="primary-nav__icon-button"
+                type="button"
+                aria-label="전체 메뉴"
+                data-site-menu-toggle
+                aria-expanded="false"
+                aria-controls="site-menu"
+              >
+                <span
+                  class="material-symbols-rounded material-icon"
+                  aria-hidden="true"
+                  style="font-size: 40px; width: 40px; height: 40px"
+                >
+                  dehaze
+                </span>
+              </button>
+            </nav>
+          </div>
+        </div>
+        <nav class="site-menu" id="site-menu" aria-label="전체 메뉴" hidden>
+          <div class="site-menu__inner layout-container">
+            <div class="site-menu__top">
+              <button class="site-menu__close" type="button" aria-label="전체 메뉴 닫기">
+                <span class="material-symbols-rounded" aria-hidden="true">close</span>
+              </button>
+            </div>
+            <div class="site-menu__mobile-tools">
+              <div class="site-menu__external">
+                <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
+                  덴톡
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+                <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
+                  영문사이트
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+                <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
+                  KDHA mall
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+              </div>
+              <div class="site-menu__account">
+                <button type="button">로그아웃</button>
+                <a href="/kdha/account/mypage/">마이페이지</a>
+              </div>
+            </div>
+            <div class="site-menu__groups">
+              <section class="site-menu__group is-expanded">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="site-menu-group-0"
+                  >
+                    협회소식
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-0">
+                  <li><a href="/kdha/news/schedule/">협회일정</a></li>
+                  <li><a href="/kdha/news/videos/">영상자료</a></li>
+                  <li><a href="/kdha/news/reports/">연구보고서</a></li>
+                  <li><a href="/kdha/news/newsletter/">치위협보</a></li>
+                  <li><a href="/kdha/news/resources/">자료실</a></li>
+                  <li><a href="/kdha/news/fund/">회관기금</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-1"
+                  >
+                    구인구직 상담
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-1">
+                  <li><a href="/kdha/career/jobs/">하이덴잡</a></li>
+                  <li><a href="/kdha/career/contact/">1:1 상담</a></li>
+                  <li><a href="/kdha/career/consulting/">법률ㆍ노무 상담</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-2"
+                  >
+                    치위생교육원
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-2">
+                  <li><a href="/kdha/education/about/">교육원 소개</a></li>
+                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
+                  <li><a href="/kdha/education/offline/">현장교육</a></li>
+                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-3"
+                  >
+                    면허센터
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-3">
+                  <li>
+                    <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
+                      면허신고센터
+                    </a>
+                  </li>
+                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-4"
+                  >
+                    소통광장
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-4">
+                  <li><a href="/kdha/community/notices/">공지사항</a></li>
+                  <li><a href="/kdha/community/faq/">자주하는 질문</a></li>
+                  <li><a href="/kdha/community/surveys/">설문조사</a></li>
+                  <li><a href="/kdha/community/organizations/">산하단체 게시판</a></li>
+                  <li><a href="/kdha/community/executives/">시도회ㆍ산하단체 임원게시판</a></li>
+                  <li><a href="/kdha/community/volunteer/">봉사게시판</a></li>
+                  <li><a href="/kdha/community/events/">이벤트</a></li>
+                  <li><a href="/kdha/community/examiner-training/">국가시험 실기시험 채점자교육</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-5"
+                  >
+                    협회소개
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-5">
+                  <li><a href="/kdha/introduce/greeting/">인사말</a></li>
+                  <li><a href="/kdha/introduce/history/">연혁</a></li>
+                  <li><a href="/kdha/introduce/articles/">정관</a></li>
+                  <li><a href="/kdha/introduce/organization#map">조직도</a></li>
+                  <li><a href="/kdha/introduce/policybusiness/">주요정책사업</a></li>
+                  <li><a href="/kdha/introduce/dentalhygienist#introduce">치과위생사소개</a></li>
+                  <li><a href="/kdha/introduce/ci/">CI</a></li>
+                  <li><a href="/kdha/introduce/map/">찾아오시는 길</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <div class="community-page">
+          <div class="community-container">
+            <header class="ofe-hero">
+              <nav aria-label="현재 위치">
+                <a href="/kdha/main/" aria-label="홈">
+                  <span class="material-symbols-rounded" aria-hidden="true">home</span>
+                </a>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span>소통광장</span>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span aria-current="page">봉사 게시판</span>
+              </nav>
+              <h1>봉사 게시판</h1>
+              <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
+            </header>
+            <form class="community-write volunteer-write" data-community-draft data-volunteer-write>
+              <p class="community-write__required">
+                <span class="community-required">*</span>
+                는 필수입력 항목입니다.
+              </p>
+              <div class="community-write__row form-field form-field--large">
+                <label for="post-title">
+                  제목
+                  <span class="community-required">*</span>
+                </label>
+                <input id="post-title" name="title" placeholder="제목 입력" maxlength="200" required />
+              </div>
+
+              <div class="community-write__row form-field form-field--large">
+                <label for="post-agency">
+                  기관명
+                  <span class="community-required">*</span>
+                </label>
+                <input id="post-agency" name="agency" required placeholder="기관명 입력" />
+              </div>
+              <fieldset class="volunteer-choice">
+                <legend>
+                  지역
+                  <span class="community-required">*</span>
+                </legend>
+                <div>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="서울" />
+                    <span>서울</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="경기" checked />
+                    <span>경기</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="인천" />
+                    <span>인천</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="강원" />
+                    <span>강원</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="충북" />
+                    <span>충북</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="충남" />
+                    <span>충남</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="대전" />
+                    <span>대전</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="세종" />
+                    <span>세종</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="대구" />
+                    <span>대구</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="경북" />
+                    <span>경북</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="경남" />
+                    <span>경남</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="전북" />
+                    <span>전북</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="광주" />
+                    <span>광주</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="전남" />
+                    <span>전남</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="부산" />
+                    <span>부산</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="울산" />
+                    <span>울산</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="제주" />
+                    <span>제주</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="region" value="해외" />
+                    <span>해외</span>
+                  </label>
+                </div>
+              </fieldset>
+              <hr class="community-write__divider" />
+              <fieldset class="volunteer-choice volunteer-choice--wide">
+                <legend>봉사분야</legend>
+                <div>
+                  <label class="form-check">
+                    <input type="checkbox" name="area" value="구강보건 상담 및 교육" />
+                    <span>구강보건 상담 및 교육</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="area" value="의료지원" checked />
+                    <span>의료지원</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="area" value="재가장애인 지원" />
+                    <span>재가장애인 지원</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="area" value="이주민·다문화지원" />
+                    <span>이주민·다문화지원</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="area" value="문화행사" />
+                    <span>문화행사</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="area" value="기타" />
+                    <span>기타</span>
+                  </label>
+                </div>
+              </fieldset>
+              <div class="volunteer-form-grid">
+                <div class="community-write__row form-field form-field--large">
+                  <label for="date-0-start">
+                    봉사기간
+                    <span class="community-required">*</span>
+                  </label>
+                  <div class="volunteer-date-range">
+                    <span class="form-datepicker form-datepicker__control">
+                      <input
+                        type="text"
+                        inputmode="numeric"
+                        placeholder="YYYY-MM-DD"
+                        autocomplete="off"
+                        data-datepicker
+                        id="date-0-start"
+                        name="volunteerStart"
+                        aria-label="봉사기간 시작일"
+                        required
+                      />
+                      <button
+                        class="form-datepicker__button"
+                        type="button"
+                        data-datepicker-trigger
+                        aria-label="봉사기간 시작일 선택기 열기"
+                      >
+                        <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                      </button>
+                    </span>
+                    <span aria-hidden="true">-</span>
+                    <span class="form-datepicker form-datepicker__control">
+                      <input
+                        type="text"
+                        inputmode="numeric"
+                        placeholder="YYYY-MM-DD"
+                        autocomplete="off"
+                        data-datepicker
+                        name="volunteerEnd"
+                        aria-label="봉사기간 종료일"
+                        required
+                      />
+                      <button
+                        class="form-datepicker__button"
+                        type="button"
+                        data-datepicker-trigger
+                        aria-label="봉사기간 종료일 선택기 열기"
+                      >
+                        <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <div class="community-write__row form-field form-field--large">
+                  <label for="date-1-start">
+                    접수기간
+                    <span class="community-required">*</span>
+                  </label>
+                  <div class="volunteer-date-range">
+                    <span class="form-datepicker form-datepicker__control">
+                      <input
+                        type="text"
+                        inputmode="numeric"
+                        placeholder="YYYY-MM-DD"
+                        autocomplete="off"
+                        data-datepicker
+                        id="date-1-start"
+                        name="applyStart"
+                        aria-label="접수기간 시작일"
+                        required
+                      />
+                      <button
+                        class="form-datepicker__button"
+                        type="button"
+                        data-datepicker-trigger
+                        aria-label="접수기간 시작일 선택기 열기"
+                      >
+                        <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                      </button>
+                    </span>
+                    <span aria-hidden="true">-</span>
+                    <span class="form-datepicker form-datepicker__control">
+                      <input
+                        type="text"
+                        inputmode="numeric"
+                        placeholder="YYYY-MM-DD"
+                        autocomplete="off"
+                        data-datepicker
+                        name="applyEnd"
+                        aria-label="접수기간 종료일"
+                        required
+                      />
+                      <button
+                        class="form-datepicker__button"
+                        type="button"
+                        data-datepicker-trigger
+                        aria-label="접수기간 종료일 선택기 열기"
+                      >
+                        <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <div class="community-write__row form-field form-field--large">
+                  <label for="volunteer-hours">
+                    봉사시간
+                    <span class="community-required">*</span>
+                  </label>
+                  <input id="volunteer-hours" name="hours" type="number" min="0" required placeholder="봉사시간 입력" />
+                </div>
+                <div class="community-write__row form-field form-field--large">
+                  <label for="volunteer-people">
+                    봉사인원
+                    <span class="community-required">*</span>
+                  </label>
+                  <input
+                    id="volunteer-people"
+                    name="people"
+                    type="number"
+                    min="0"
+                    step="1"
+                    required
+                    placeholder="봉사인원 입력"
+                  />
+                </div>
+              </div>
+              <hr class="community-write__divider" />
+              <div class="community-write__row form-field form-field--large">
+                <label for="post-content">
+                  내용
+                  <span class="community-required">*</span>
+                </label>
+                <textarea id="post-content" name="content" placeholder="내용 작성" required></textarea>
+              </div>
+              <div class="community-write__row">
+                <label for="post-files">파일</label>
+                <div class="community-upload">
+                  <div class="account-file-upload community-upload__drop">
+                    <p>
+                      이곳에 파일을 드래그 하거나 파일찾기 버튼으로 파일을 추가해주세요.
+                      <br />
+                      * 파일당 10MB 이하, 최대 5개까지 등록 가능합니다.
+                    </p>
+                    <label class="ds-button ds-button--outline ds-button--small" for="post-files">파일찾기</label>
+                    <input
+                      class="sr-only"
+                      type="file"
+                      id="post-files"
+                      name="files"
+                      multiple
+                      accept=".hwp,.hwpx,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.gif,.zip"
+                      aria-describedby="upload-guide"
+                    />
+                  </div>
+                  <ul class="community-upload__list" data-upload-list></ul>
+                  <ul class="ds-guide-list" id="upload-guide">
+                    <li class="ds-guide-list__item">
+                      <span class="ds-guide-list__content">파일은 최대 5개까지 업로드할 수 있습니다.</span>
+                    </li>
+                    <li class="ds-guide-list__item">
+                      <span class="ds-guide-list__content">
+                        업로드 가능 파일 형식: hwp, hwpx, pdf, doc, docx, xls, xlsx, ppt, pptx, jpg, jpeg, png, gif, zip
+                      </span>
+                    </li>
+                    <li class="ds-guide-list__item">
+                      <span class="ds-guide-list__content">파일당 최대 10MB까지 업로드할 수 있습니다.</span>
+                    </li>
+                  </ul>
+                  <p role="status" data-upload-status></p>
+                </div>
+              </div>
+              <hr class="community-write__divider" />
+              <div class="volunteer-form-grid">
+                <div class="community-write__row form-field form-field--large">
+                  <label for="volunteer-phone">연락처</label>
+                  <input
+                    id="volunteer-phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="- 없이 숫자만 입력"
+                    inputmode="numeric"
+                    pattern="[0-9]{9,11}"
+                  />
+                </div>
+                <div class="community-write__row form-field form-field--large">
+                  <label for="volunteer-email">이메일</label>
+                  <div class="account-form-row account-form-row--email">
+                    <input id="volunteer-email" type="text" name="emailId" placeholder="아이디" autocomplete="off" />
+                    <div class="account-email-domain">
+                      <label class="account-email-domain__field">
+                        <span class="sr-only">이메일 도메인</span>
+                        <select name="emailDomain" data-custom-select data-select-size="l">
+                          <option value="gmail.com">@ gmail.com</option>
+                          <option value="naver.com">@ naver.com</option>
+                          <option value="hanmail.net">@ hanmail.net</option>
+                        </select>
+                        <input
+                          type="text"
+                          inputmode="url"
+                          placeholder="@ 직접입력"
+                          aria-label="이메일 도메인 직접입력"
+                          data-email-domain-input
+                          hidden
+                        />
+                      </label>
+                      <button
+                        class="form-action-button account-email-domain__button"
+                        type="button"
+                        data-email-domain-toggle
+                      >
+                        직접입력
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="community-write__divider" />
+              <p role="status" data-draft-status hidden></p>
+              <div class="community-detail__actions community-survey-actions">
+                <a class="ds-button ds-button--outline ds-button--large" href="/kdha/community/volunteer/recruit/">취소</a>
+                <button class="ds-button ds-button--primary ds-button--large" type="submit">작성하기</button>
+              </div>
+            </form>
+            <aside class="ofe-contact">
+              <div>
+                <h2>치위협보 기사제보 · 광고문의</h2>
+                <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+              </div>
+              <a href="mailto:press@kdha.or.kr">
+                02-6213-2735
+                <span>·</span>
+                press@kdha.or.kr
+              </a>
+            </aside>
+          </div>
+        </div>
+      </main>
+      <footer class="site-footer site-footer--standard">
+        <div class="site-footer__inner layout-container">
+          <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
+            <img
+              class="site-logo__image"
+              width="290"
+              height="55"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-footer.png"
+            />
+          </a>
+          <address class="site-footer__address">
+            <span class="site-footer__info-row">
+              <span>
+                105-82-07361
+                <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
+              </span>
+              <span>대표자 : 박정란</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
+          </address>
+          <p class="site-footer__contact">
+            <span>TEL. 02-2236-0914</span>
+            <span>FAX. 02-2236-0915</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/related-sites/">관련사이트</a>
+              <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
+            <div class="site-footer__site-selects">
+              <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">시도회 홈페이지</option>
+                <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
+              </select>
+            </div>
+          </div>
+          <div class="site-footer__bottom">
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
+            <div class="social-links">
+              <a
+                class="social-links__item"
+                href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 공식 유튜브(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-youtube.png" />
+              </a>
+              <a
+                class="social-links__item"
+                href="https://ko-kr.facebook.com/koreadha/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 페이스북(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-facebook.png" />
+              </a>
+              <a
+                class="social-links__item"
+                href="https://www.instagram.com/krdha77/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 인스타그램(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-instagram.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/community.js"></script>
+  </body>
+</html>

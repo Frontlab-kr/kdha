@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-
     <title>치위협보 | 대한치과위생사협회</title>
   </head>
-  <body class="newsletter-page">
+  <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <div class="site">
       <header class="site-header site-header--standard">
@@ -27,11 +25,11 @@
               <div class="utility-nav__external">
                 <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a
                   class="utility-nav__link"
@@ -40,7 +38,7 @@
                   rel="noreferrer"
                 >
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
             </nav>
@@ -130,15 +128,15 @@
               <div class="site-menu__external">
                 <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
               <div class="site-menu__account">
@@ -279,421 +277,1636 @@
       </header>
 
       <main id="main-content">
-        <header class="newsletter-heading layout-container">
-          <nav class="user-page-breadcrumb" aria-label="현재 위치">
-            <a class="user-page-breadcrumb__home" href="/kdha/main/" aria-label="홈">
-              <span class="user-page-breadcrumb__home-icon material-symbols-rounded" aria-hidden="true">home</span>
-            </a>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
-              <span>협회소식</span>
-            </span>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
-              <span aria-current="page">치위협보</span>
-            </span>
-          </nav>
-
-          <div>
-            <h1>치위협보</h1>
-            <p>치과위생사의 오늘과 내일을 연결하는 대한치과위생사협회의 공식 소식지입니다.</p>
-          </div>
-        </header>
-        <section class="newsletter-latest layout-container" aria-labelledby="latest-title">
-          <div class="newsletter-latest__card">
-            <div class="newsletter-latest__copy">
+        <div class="community-page news-board">
+          <div class="community-container">
+            <!-- KD-US-OLD-01-01 -->
+            <header class="ofe-hero">
+              <nav aria-label="현재 위치">
+                <a href="/kdha/main/" aria-label="홈">
+                  <span class="material-symbols-rounded" aria-hidden="true">home</span>
+                </a>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span>협회소식</span>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span aria-current="page">치위협보</span>
+              </nav>
+              <h1>치위협보</h1>
+              <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
+            </header>
+            <section class="community-notices" data-community-board aria-label="치위협보 목록">
+              <form class="community-search form-field form-field--large" role="search">
+                <select data-select-size="l" data-custom-select name="field" aria-label="검색 조건">
+                  <option value="all">선택</option>
+                  <option value="title">제목</option>
+                  <option value="issue">호수</option>
+                </select>
+                <input type="search" name="query" aria-label="검색어" placeholder="검색어를 입력해 주세요" />
+                <button class="form-action-button" type="submit">검색</button>
+              </form>
+              <section class="newsletter-latest" aria-labelledby="latest-title">
+                <div class="newsletter-latest__card">
+                  <div class="newsletter-latest__copy">
+                    <div>
+                      <p class="newsletter-latest__eyebrow">LATEST ISSUE</p>
+                      <h2 id="latest-title">제356호 치위협보</h2>
+                      <p class="newsletter-latest__date">2026년 7월 29일 발행</p>
+                      <p class="newsletter-latest__description">
+                        치과위생사의 전문성과 현장의 목소리, 협회의 주요 활동을 한눈에 만나보세요.
+                      </p>
+                    </div>
+                    <div class="newsletter-latest__actions">
+                      <a
+                        class="ds-button ds-button--outline ds-button--large"
+                        href="/kdha/assets/newsletter/pdf/356.pdf"
+                        download="치위협보356호.pdf"
+                      >
+                        PDF 다운로드
+                        <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    class="newsletter-card__cover newsletter-latest__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=356"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.78%; --photo-left: -100.54%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle19.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제356호 치위협보 협보 보기(새 창)</span>
+                  </a>
+                </div>
+              </section>
+              <div class="community-list-tools">
+                <label class="sr-only" for="newsletter-limit">페이지당 목록 수</label>
+                <select id="newsletter-limit" data-community-limit data-custom-select>
+                  <option value="8">8개</option>
+                  <option value="16">16개</option>
+                </select>
+              </div>
+              <!-- 표지는 PDF 첫 페이지 썸네일입니다. 클릭 시 치위협보 보기(PDF 뷰어)로 이동합니다. -->
+              <div class="newsletter-grid">
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=355"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle18.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제355호 제48회 종합학술대회 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제355호</p>
+                    <h2 data-community-title>제48회 종합학술대회</h2>
+                    <time datetime="2026-06-26">2026년 6월 26일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보355호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제355호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=354"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle20.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제354호 구강보건의 날 기념행사 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제354호</p>
+                    <h2 data-community-title>구강보건의 날 기념행사</h2>
+                    <time datetime="2026-05-27">2026년 5월 27일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보354호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제354호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=353"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle21.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제353호 의료기사법 개정 촉구 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제353호</p>
+                    <h2 data-community-title>의료기사법 개정 촉구</h2>
+                    <time datetime="2026-04-28">2026년 4월 28일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보353호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제353호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=352"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 119.36%; --photo-left: -19.26%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle22.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제352호 예방 중심 구강건강관리 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제352호</p>
+                    <h2 data-community-title>예방 중심 구강건강관리</h2>
+                    <time datetime="2026-03-27">2026년 3월 27일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보352호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제352호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=351"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.78%; --photo-left: -88.72%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle23.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제351호 2026 회원 실무연수 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제351호</p>
+                    <h2 data-community-title>2026 회원 실무연수</h2>
+                    <time datetime="2026-02-25">2026년 2월 25일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보351호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제351호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=350"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 107.65%; --photo-height: 160.3%; --photo-left: -3.83%; --photo-top: -8.37%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle24.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제350호 새해, 협회의 새로운 출발 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제350호</p>
+                    <h2 data-community-title>새해, 협회의 새로운 출발</h2>
+                    <time datetime="2026-01-28">2026년 1월 28일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보350호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제350호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=349"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.68%; --photo-left: -77.17%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle25.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제349호 2025 치위협 주요 성과 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제349호</p>
+                    <h2 data-community-title>2025 치위협 주요 성과</h2>
+                    <time datetime="2025-12-29">2025년 12월 29일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보349호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제349호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=348"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.68%; --photo-left: -100.49%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle26.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제348호 치과위생사의 오늘 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제348호</p>
+                    <h2 data-community-title>치과위생사의 오늘</h2>
+                    <time datetime="2025-11-26">2025년 11월 26일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보348호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제348호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=347"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle18.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제347호 제48회 종합학술대회 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제347호</p>
+                    <h2 data-community-title>제48회 종합학술대회</h2>
+                    <time datetime="2026-06-26">2026년 6월 26일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보347호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제347호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=346"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle20.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제346호 구강보건의 날 기념행사 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제346호</p>
+                    <h2 data-community-title>구강보건의 날 기념행사</h2>
+                    <time datetime="2026-05-27">2026년 5월 27일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보346호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제346호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=345"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle21.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제345호 의료기사법 개정 촉구 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제345호</p>
+                    <h2 data-community-title>의료기사법 개정 촉구</h2>
+                    <time datetime="2026-04-28">2026년 4월 28일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보345호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제345호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=344"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 119.36%; --photo-left: -19.26%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle22.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제344호 예방 중심 구강건강관리 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제344호</p>
+                    <h2 data-community-title>예방 중심 구강건강관리</h2>
+                    <time datetime="2026-03-27">2026년 3월 27일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보344호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제344호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=343"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.78%; --photo-left: -88.72%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle23.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제343호 2026 회원 실무연수 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제343호</p>
+                    <h2 data-community-title>2026 회원 실무연수</h2>
+                    <time datetime="2026-02-25">2026년 2월 25일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보343호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제343호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=342"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 107.65%; --photo-height: 160.3%; --photo-left: -3.83%; --photo-top: -8.37%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle24.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제342호 새해, 협회의 새로운 출발 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제342호</p>
+                    <h2 data-community-title>새해, 협회의 새로운 출발</h2>
+                    <time datetime="2026-01-28">2026년 1월 28일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보342호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제342호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=341"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.68%; --photo-left: -77.17%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle25.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제341호 2025 치위협 주요 성과 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제341호</p>
+                    <h2 data-community-title>2025 치위협 주요 성과</h2>
+                    <time datetime="2025-12-29">2025년 12월 29일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보341호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제341호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.68%; --photo-left: -100.49%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle26.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제340호 치과위생사의 오늘 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제340호</p>
+                    <h2 data-community-title>치과위생사의 오늘</h2>
+                    <time datetime="2025-11-26">2025년 11월 26일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보340호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제340호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=339"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle18.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제339호 제48회 종합학술대회 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제339호</p>
+                    <h2 data-community-title>제48회 종합학술대회</h2>
+                    <time datetime="2026-06-26">2026년 6월 26일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보339호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제339호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=338"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle20.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제338호 구강보건의 날 기념행사 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제338호</p>
+                    <h2 data-community-title>구강보건의 날 기념행사</h2>
+                    <time datetime="2026-05-27">2026년 5월 27일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보338호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제338호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=337"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle21.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제337호 의료기사법 개정 촉구 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제337호</p>
+                    <h2 data-community-title>의료기사법 개정 촉구</h2>
+                    <time datetime="2026-04-28">2026년 4월 28일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보337호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제337호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=336"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 119.36%; --photo-left: -19.26%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle22.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제336호 예방 중심 구강건강관리 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제336호</p>
+                    <h2 data-community-title>예방 중심 구강건강관리</h2>
+                    <time datetime="2026-03-27">2026년 3월 27일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보336호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제336호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=335"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.78%; --photo-left: -88.72%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle23.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제335호 2026 회원 실무연수 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제335호</p>
+                    <h2 data-community-title>2026 회원 실무연수</h2>
+                    <time datetime="2026-02-25">2026년 2월 25일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보335호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제335호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=334"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 107.65%; --photo-height: 160.3%; --photo-left: -3.83%; --photo-top: -8.37%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle24.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제334호 새해, 협회의 새로운 출발 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제334호</p>
+                    <h2 data-community-title>새해, 협회의 새로운 출발</h2>
+                    <time datetime="2026-01-28">2026년 1월 28일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보334호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제334호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=333"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.68%; --photo-left: -77.17%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle25.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제333호 2025 치위협 주요 성과 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제333호</p>
+                    <h2 data-community-title>2025 치위협 주요 성과</h2>
+                    <time datetime="2025-12-29">2025년 12월 29일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보333호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제333호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=332"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.68%; --photo-left: -100.49%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle26.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제332호 치과위생사의 오늘 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제332호</p>
+                    <h2 data-community-title>치과위생사의 오늘</h2>
+                    <time datetime="2025-11-26">2025년 11월 26일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보332호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제332호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=331"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle18.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제331호 제48회 종합학술대회 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제331호</p>
+                    <h2 data-community-title>제48회 종합학술대회</h2>
+                    <time datetime="2026-06-26">2026년 6월 26일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보331호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제331호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=330"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle20.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제330호 구강보건의 날 기념행사 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제330호</p>
+                    <h2 data-community-title>구강보건의 날 기념행사</h2>
+                    <time datetime="2026-05-27">2026년 5월 27일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보330호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제330호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=329"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="newsletter-cover" aria-hidden="true">
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle21.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제329호 의료기사법 개정 촉구 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제329호</p>
+                    <h2 data-community-title>의료기사법 개정 촉구</h2>
+                    <time datetime="2026-04-28">2026년 4월 28일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보329호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제329호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=328"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 119.36%; --photo-left: -19.26%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle22.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제328호 예방 중심 구강건강관리 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제328호</p>
+                    <h2 data-community-title>예방 중심 구강건강관리</h2>
+                    <time datetime="2026-03-27">2026년 3월 27일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보328호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제328호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=327"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.78%; --photo-left: -88.72%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle23.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제327호 2026 회원 실무연수 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제327호</p>
+                    <h2 data-community-title>2026 회원 실무연수</h2>
+                    <time datetime="2026-02-25">2026년 2월 25일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보327호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제327호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=326"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 107.65%; --photo-height: 160.3%; --photo-left: -3.83%; --photo-top: -8.37%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle24.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제326호 새해, 협회의 새로운 출발 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제326호</p>
+                    <h2 data-community-title>새해, 협회의 새로운 출발</h2>
+                    <time datetime="2026-01-28">2026년 1월 28일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보326호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제326호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=325"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.68%; --photo-left: -77.17%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle25.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제325호 2025 치위협 주요 성과 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제325호</p>
+                    <h2 data-community-title>2025 치위협 주요 성과</h2>
+                    <time datetime="2025-12-29">2025년 12월 29일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보325호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제325호)</span>
+                  </a>
+                </article>
+                <article class="newsletter-card" data-community-row data-author="협회">
+                  <a
+                    class="newsletter-card__cover"
+                    href="/kdha/news/newsletter/viewer/?issue=324"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      class="newsletter-cover"
+                      style="--photo-width: 200.68%; --photo-left: -100.49%"
+                      aria-hidden="true"
+                    >
+                      <div class="newsletter-cover__sheet">
+                        <img
+                          class="newsletter-cover__logo"
+                          src="/kdha/assets/newsletter/design-imgImage3.png"
+                          width="166"
+                          height="74"
+                          alt=""
+                        />
+                        <div class="newsletter-cover__photo">
+                          <img
+                            src="/kdha/assets/newsletter/design-imgRectangle26.png"
+                            width="640"
+                            height="400"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="newsletter-card__view" aria-hidden="true">협보 보기</span>
+                    <span class="sr-only">제324호 치과위생사의 오늘 협보 보기(새 창)</span>
+                  </a>
+                  <div class="newsletter-card__copy">
+                    <p class="newsletter-card__issue">제324호</p>
+                    <h2 data-community-title>치과위생사의 오늘</h2>
+                    <time datetime="2025-11-26">2025년 11월 26일 발행</time>
+                  </div>
+                  <a
+                    class="ds-button ds-button--outline ds-button--small"
+                    href="/kdha/assets/newsletter/pdf/356.pdf"
+                    download="치위협보324호.pdf"
+                  >
+                    PDF 다운로드
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    <span class="sr-only">(제324호)</span>
+                  </a>
+                </article>
+              </div>
+              <p class="community-empty" hidden>검색 결과가 없습니다.</p>
+              <p class="sr-only" role="status" data-community-status></p>
+              <nav class="ds-pagination" aria-label="목록 페이지" data-community-pagination></nav>
+            </section>
+            <aside class="ofe-contact">
               <div>
-                <p class="newsletter-latest__eyebrow">LATEST ISSUE</p>
-                <h2 id="latest-title">제356호 치위협보</h2>
-                <p class="newsletter-latest__date">2026년 7월 29일 발행</p>
-                <p class="newsletter-latest__description">
-                  치과위생사의 전문성과 현장의 목소리, 협회의 주요 활동을 한눈에 만나보세요.
-                </p>
+                <h2>치위협보 기사제보 · 광고문의</h2>
+                <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
               </div>
-              <div class="newsletter-latest__actions">
-                <a
-                  class="ds-button ds-button--primary ds-button--large"
-                  href="/kdha/news/newsletter/viewer/?issue=356"
-                  title="PDF 뷰어"
-                >
-                  협보 보기
-                  <span class="material-symbols-rounded" aria-hidden="true">dictionary</span>
-                </a>
-                <a
-                  class="ds-button ds-button--outline ds-button--large"
-                  href="/kdha/assets/newsletter/pdf/356.pdf"
-                  download="치위협보356호.pdf"
-                >
-                  PDF 다운로드
-                  <span class="material-symbols-rounded" aria-hidden="true">download</span>
-                </a>
-              </div>
-            </div>
-            <div class="newsletter-cover" style="--photo-width: 200.78%; --photo-left: -100.54%" aria-hidden="true">
-              <div class="newsletter-cover__sheet">
-                <img
-                  class="newsletter-cover__logo"
-                  src="/kdha/assets/newsletter/design-imgImage3.png"
-                  width="166"
-                  height="74"
-                  alt=""
-                />
-                <div class="newsletter-cover__photo">
-                  <img
-                    src="/kdha/assets/newsletter/design-imgRectangle19.png"
-                    width="640"
-                    height="400"
-                    alt=""
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
+              <a href="mailto:press@kdha.or.kr">
+                02-6213-2735
+                <span>·</span>
+                press@kdha.or.kr
+              </a>
+            </aside>
           </div>
-        </section>
-        <section class="newsletter-archive layout-container" aria-labelledby="archive-title" data-newsletter>
-          <h2 id="archive-title">지난 치위협보</h2>
-          <div class="newsletter-archive__toolbar">
-            <div class="ds-tabs" role="group" aria-label="발행연도 필터">
-              <button class="ds-tabs__item" type="button" data-newsletter-year="all" aria-pressed="true">전체</button>
-              <button class="ds-tabs__item" type="button" data-newsletter-year="2026" aria-pressed="false">2026</button>
-              <button class="ds-tabs__item" type="button" data-newsletter-year="2025" aria-pressed="false">2025</button>
-              <button class="ds-tabs__item" type="button" data-newsletter-year="2024" aria-pressed="false">2024</button>
-              <button class="ds-tabs__item" type="button" data-newsletter-year="2023" aria-pressed="false">
-                2023~
-              </button>
-            </div>
-            <form class="ds-search" role="search" data-newsletter-search>
-              <label class="sr-only" for="newsletter-search">치위협보 검색</label>
-              <input id="newsletter-search" type="search" placeholder="내용을 입력해 주세요" />
-              <button type="submit" aria-label="검색">
-                <span class="material-symbols-rounded" aria-hidden="true">search</span>
-              </button>
-            </form>
-          </div>
-          <div class="newsletter-grid">
-            <a
-              class="newsletter-card"
-              href="/kdha/news/newsletter/viewer/?issue=355"
-              data-newsletter-item
-              data-year="2026"
-              aria-label="제355호 제48회 종합학술대회 PDF 뷰어"
-            >
-              <div class="newsletter-cover" style="" aria-hidden="true">
-                <div class="newsletter-cover__sheet">
-                  <img
-                    class="newsletter-cover__logo"
-                    src="/kdha/assets/newsletter/design-imgImage3.png"
-                    width="166"
-                    height="74"
-                    alt=""
-                  />
-                  <div class="newsletter-cover__photo">
-                    <img
-                      src="/kdha/assets/newsletter/design-imgRectangle18.png"
-                      width="640"
-                      height="400"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="newsletter-card__copy">
-                <p class="newsletter-card__category">학술·교육 · 제355호</p>
-                <h3>제48회 종합학술대회</h3>
-                <p>사전등록 일정과 주요 프로그램 안내</p>
-                <time datetime="2026-06-26">2026년 6월 26일 발행</time>
-              </div>
-            </a>
-            <a
-              class="newsletter-card"
-              href="/kdha/news/newsletter/viewer/?issue=354"
-              data-newsletter-item
-              data-year="2026"
-              aria-label="제354호 구강보건의 날 기념행사 PDF 뷰어"
-            >
-              <div class="newsletter-cover" style="" aria-hidden="true">
-                <div class="newsletter-cover__sheet">
-                  <img
-                    class="newsletter-cover__logo"
-                    src="/kdha/assets/newsletter/design-imgImage3.png"
-                    width="166"
-                    height="74"
-                    alt=""
-                  />
-                  <div class="newsletter-cover__photo">
-                    <img
-                      src="/kdha/assets/newsletter/design-imgRectangle20.png"
-                      width="640"
-                      height="400"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="newsletter-card__copy">
-                <p class="newsletter-card__category">구강보건 · 제354호</p>
-                <h3>구강보건의 날 기념행사</h3>
-                <p>국민 구강건강 증진을 위한 현장 소식</p>
-                <time datetime="2026-05-27">2026년 5월 27일 발행</time>
-              </div>
-            </a>
-            <a
-              class="newsletter-card"
-              href="/kdha/news/newsletter/viewer/?issue=353"
-              data-newsletter-item
-              data-year="2026"
-              aria-label="제353호 의료기사법 개정 촉구 PDF 뷰어"
-            >
-              <div class="newsletter-cover" style="" aria-hidden="true">
-                <div class="newsletter-cover__sheet">
-                  <img
-                    class="newsletter-cover__logo"
-                    src="/kdha/assets/newsletter/design-imgImage3.png"
-                    width="166"
-                    height="74"
-                    alt=""
-                  />
-                  <div class="newsletter-cover__photo">
-                    <img
-                      src="/kdha/assets/newsletter/design-imgRectangle21.png"
-                      width="640"
-                      height="400"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="newsletter-card__copy">
-                <p class="newsletter-card__category">정책·제도 · 제353호</p>
-                <h3>의료기사법 개정 촉구</h3>
-                <p>전문성 강화를 위한 협회의 정책 활동</p>
-                <time datetime="2026-04-28">2026년 4월 28일 발행</time>
-              </div>
-            </a>
-            <a
-              class="newsletter-card"
-              href="/kdha/news/newsletter/viewer/?issue=352"
-              data-newsletter-item
-              data-year="2026"
-              aria-label="제352호 예방 중심 구강건강관리 PDF 뷰어"
-            >
-              <div class="newsletter-cover" style="--photo-width: 119.36%; --photo-left: -19.26%" aria-hidden="true">
-                <div class="newsletter-cover__sheet">
-                  <img
-                    class="newsletter-cover__logo"
-                    src="/kdha/assets/newsletter/design-imgImage3.png"
-                    width="166"
-                    height="74"
-                    alt=""
-                  />
-                  <div class="newsletter-cover__photo">
-                    <img
-                      src="/kdha/assets/newsletter/design-imgRectangle22.png"
-                      width="640"
-                      height="400"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="newsletter-card__copy">
-                <p class="newsletter-card__category">예방관리 · 제352호</p>
-                <h3>예방 중심 구강건강관리</h3>
-                <p>생애주기별 예방관리 정책과 실천 방향</p>
-                <time datetime="2026-03-27">2026년 3월 27일 발행</time>
-              </div>
-            </a>
-            <a
-              class="newsletter-card"
-              href="/kdha/news/newsletter/viewer/?issue=351"
-              data-newsletter-item
-              data-year="2026"
-              aria-label="제351호 2026 회원 실무연수 PDF 뷰어"
-            >
-              <div class="newsletter-cover" style="--photo-width: 200.78%; --photo-left: -88.72%" aria-hidden="true">
-                <div class="newsletter-cover__sheet">
-                  <img
-                    class="newsletter-cover__logo"
-                    src="/kdha/assets/newsletter/design-imgImage3.png"
-                    width="166"
-                    height="74"
-                    alt=""
-                  />
-                  <div class="newsletter-cover__photo">
-                    <img
-                      src="/kdha/assets/newsletter/design-imgRectangle23.png"
-                      width="640"
-                      height="400"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="newsletter-card__copy">
-                <p class="newsletter-card__category">회원교육 · 제351호</p>
-                <h3>2026 회원 실무연수</h3>
-                <p>현장 역량을 높이는 교육 일정과 과정 안내</p>
-                <time datetime="2026-02-25">2026년 2월 25일 발행</time>
-              </div>
-            </a>
-            <a
-              class="newsletter-card"
-              href="/kdha/news/newsletter/viewer/?issue=350"
-              data-newsletter-item
-              data-year="2026"
-              aria-label="제350호 새해, 협회의 새로운 출발 PDF 뷰어"
-            >
-              <div
-                class="newsletter-cover"
-                style="--photo-width: 107.65%; --photo-height: 160.3%; --photo-left: -3.83%; --photo-top: -8.37%"
-                aria-hidden="true"
-              >
-                <div class="newsletter-cover__sheet">
-                  <img
-                    class="newsletter-cover__logo"
-                    src="/kdha/assets/newsletter/design-imgImage3.png"
-                    width="166"
-                    height="74"
-                    alt=""
-                  />
-                  <div class="newsletter-cover__photo">
-                    <img
-                      src="/kdha/assets/newsletter/design-imgRectangle24.png"
-                      width="640"
-                      height="400"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="newsletter-card__copy">
-                <p class="newsletter-card__category">협회소식 · 제350호</p>
-                <h3>새해, 협회의 새로운 출발</h3>
-                <p>신년사와 2026년 주요 사업 계획</p>
-                <time datetime="2026-01-28">2026년 1월 28일 발행</time>
-              </div>
-            </a>
-            <a
-              class="newsletter-card"
-              href="/kdha/news/newsletter/viewer/?issue=349"
-              data-newsletter-item
-              data-year="2025"
-              aria-label="제349호 2025 치위협 주요 성과 PDF 뷰어"
-            >
-              <div class="newsletter-cover" style="--photo-width: 200.68%; --photo-left: -77.17%" aria-hidden="true">
-                <div class="newsletter-cover__sheet">
-                  <img
-                    class="newsletter-cover__logo"
-                    src="/kdha/assets/newsletter/design-imgImage3.png"
-                    width="166"
-                    height="74"
-                    alt=""
-                  />
-                  <div class="newsletter-cover__photo">
-                    <img
-                      src="/kdha/assets/newsletter/design-imgRectangle25.png"
-                      width="640"
-                      height="400"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="newsletter-card__copy">
-                <p class="newsletter-card__category">연말결산 · 제349호</p>
-                <h3>2025 치위협 주요 성과</h3>
-                <p>한 해의 활동과 회원이 함께 만든 변화</p>
-                <time datetime="2025-12-29">2025년 12월 29일 발행</time>
-              </div>
-            </a>
-            <a
-              class="newsletter-card"
-              href="/kdha/news/newsletter/viewer/?issue=348"
-              data-newsletter-item
-              data-year="2025"
-              aria-label="제348호 치과위생사의 오늘 PDF 뷰어"
-            >
-              <div class="newsletter-cover" style="--photo-width: 200.68%; --photo-left: -100.49%" aria-hidden="true">
-                <div class="newsletter-cover__sheet">
-                  <img
-                    class="newsletter-cover__logo"
-                    src="/kdha/assets/newsletter/design-imgImage3.png"
-                    width="166"
-                    height="74"
-                    alt=""
-                  />
-                  <div class="newsletter-cover__photo">
-                    <img
-                      src="/kdha/assets/newsletter/design-imgRectangle26.png"
-                      width="640"
-                      height="400"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="newsletter-card__copy">
-                <p class="newsletter-card__category">현장인터뷰 · 제348호</p>
-                <h3>치과위생사의 오늘</h3>
-                <p>전문가 인터뷰로 만나는 생생한 현장 이야기</p>
-                <time datetime="2025-11-26">2025년 11월 26일 발행</time>
-              </div>
-            </a>
-          </div>
-          <p class="newsletter-empty" hidden>검색 결과가 없습니다.</p>
-          <p class="sr-only" role="status" aria-live="polite" data-newsletter-status></p>
-          <nav class="ds-pagination" aria-label="치위협보 페이지">
-            <button type="button" disabled aria-label="이전 페이지">
-              <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
-            </button>
-            <button type="button" aria-current="page">1</button>
-            <button type="button" disabled aria-label="다음 페이지">
-              <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            </button>
-          </nav>
-        </section>
-        <aside class="newsletter-contact layout-container" aria-labelledby="contact-title">
-          <div class="newsletter-contact__banner">
-            <div>
-              <h2 id="contact-title">치위협보 기사제보 · 광고문의</h2>
-              <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
-            </div>
-            <div class="newsletter-contact__links">
-              <a href="tel:0262132735">02-6213-2735</a>
-              <span aria-hidden="true">·</span>
-              <a href="mailto:press@kdha.or.kr">press@kdha.or.kr</a>
-            </div>
-          </div>
-        </aside>
+        </div>
       </main>
       <footer class="site-footer site-footer--standard">
         <div class="site-footer__inner layout-container">
@@ -707,56 +1920,47 @@
             />
           </a>
           <address class="site-footer__address">
-            105-82-07361(통신판매번호 : 제2010-서울동대문-0959호)　|　대표자 : 박정란
-            <br />
-            서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)
+            <span class="site-footer__info-row">
+              <span>
+                105-82-07361
+                <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
+              </span>
+              <span>대표자 : 박정란</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
           </address>
-          <div class="site-footer__contact-row">
-            <p class="site-footer__contact">TEL. 02-2236-0914　 FAX. 02-2236-0915</p>
+          <p class="site-footer__contact">
+            <span>TEL. 02-2236-0914</span>
+            <span>FAX. 02-2236-0915</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/related-sites/">관련사이트</a>
+              <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
             <div class="site-footer__site-selects">
-              <select aria-label="관련사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">관련사이트</option>
-                <option value="http://www.longtermcare.or.kr/npbs/">노인장기요양보험</option>
-                <option value="https://www.mohw.go.kr/">보건복지부</option>
-                <option value="http://lic.mohw.go.kr/">면허번호 조회·면허증 재교부 신청</option>
-                <option value="https://www.kdha.or.kr/mypage/card.aspx">대한치과위생사협회 회원증카드 발급안내</option>
-                <option value="https://www.kdha.or.kr/education/refresher.aspx#institute">
-                  대한치과위생사협회 치위생교육원
-                </option>
-                <option value="https://www.instagram.com/krdha77/">대한치과위생사협회 공식 인스타그램</option>
-                <option value="https://ko-kr.facebook.com/koreadha/">대한치과위생사협회 공식 페이스북</option>
-                <option value="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w">
-                  대한치과위생사협회 공식 유튜브 채널
-                </option>
-                <option value="http://kdhamall.or.kr">KDHA mall</option>
-              </select>
-              <select aria-label="시도회사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">시도회사이트</option>
-                <option value="https://seoul.kdha.or.kr">서울특별시회</option>
-                <option value="https://gg.kdha.or.kr">경기도회</option>
-                <option value="https://incheon.kdha.or.kr">인천광역시회</option>
-                <option value="https://gangwon.kdha.or.kr">강원특별자치도회</option>
-                <option value="https://ds.kdha.or.kr">대전·세종회</option>
-                <option value="https://chungbuk.kdha.or.kr">충청북도회</option>
-                <option value="https://cn.kdha.or.kr">충청남도회</option>
-                <option value="https://busan.kdha.or.kr">부산광역시회</option>
-                <option value="https://dg.kdha.or.kr">대구·경북회</option>
-                <option value="https://gyeongnam.kdha.or.kr">경상남도회</option>
-                <option value="https://ulsan.kdha.or.kr">울산광역시회</option>
-                <option value="https://jeonbuk.kdha.or.kr">전북특별자치도회</option>
-                <option value="https://gj.kdha.or.kr">광주·전남회</option>
-                <option value="https://jeju.kdha.or.kr">제주특별자치도회</option>
+              <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">시도회 홈페이지</option>
+                <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
               </select>
             </div>
           </div>
           <div class="site-footer__bottom">
-            <div class="site-footer__legal">
-              <div class="site-footer__legal-links">
-                <a href="/kdha/privacy/">개인정보처리방침</a>
-                <a class="site-footer__mobile-link" href="/kdha/remote-support/">원격지원</a>
-              </div>
-              <p>Copyright ⓒ 2026 KDHA. All rights Reserved</p>
-            </div>
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
             <div class="social-links">
               <a
                 class="social-links__item"
@@ -797,6 +2001,6 @@
     <script src="/kdha/assets/js/common.js"></script>
     <script src="/kdha/assets/js/site-menu.js"></script>
 
-    <script src="/kdha/assets/js/newsletter.js"></script>
+    <script src="/kdha/assets/js/community.js"></script>
   </body>
 </html>

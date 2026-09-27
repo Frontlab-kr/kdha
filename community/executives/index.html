@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-
-    <title>임원게시판 | 대한치과위생사협회</title>
+    <title>시·도회 산하단체임원 게시판 | 대한치과위생사협회</title>
   </head>
-  <body class="">
+  <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
-    <div class="site user-page">
+    <div class="site">
       <header class="site-header site-header--standard">
         <div class="site-header__inner layout-container">
           <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
@@ -27,11 +25,11 @@
               <div class="utility-nav__external">
                 <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a
                   class="utility-nav__link"
@@ -40,7 +38,7 @@
                   rel="noreferrer"
                 >
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
             </nav>
@@ -130,15 +128,15 @@
               <div class="site-menu__external">
                 <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
               <div class="site-menu__account">
@@ -278,1257 +276,96 @@
         </nav>
       </header>
 
-      <main id="main-content" class="user-page__main">
-        <div class="user-page__inner layout-container">
-          <nav class="user-page-breadcrumb" aria-label="현재 위치">
-            <a class="user-page-breadcrumb__home" href="/kdha/main/" aria-label="홈">
-              <span class="user-page-breadcrumb__home-icon material-symbols-rounded" aria-hidden="true">home</span>
-            </a>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
+      <main id="main-content">
+        <div class="community-page">
+          <div class="community-container">
+            <header class="ofe-hero">
+              <nav aria-label="현재 위치">
+                <a href="/kdha/main/" aria-label="홈">
+                  <span class="material-symbols-rounded" aria-hidden="true">home</span>
+                </a>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span>소통광장</span>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span aria-current="page">시·도회 산하단체임원 게시판</span>
+              </nav>
+              <h1>시·도회 산하단체임원 게시판</h1>
+              <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
+            </header>
+            <section class="community-notices" aria-label="시·도회 산하단체임원 게시판" data-community-board>
+              <form class="community-search form-field form-field--large" role="search">
+                <select data-select-size="l" data-custom-select name="field" aria-label="검색 조건">
+                  <option value="all">선택</option>
+                  <option value="title">제목</option>
+                  <option value="author">작성자</option>
+                </select>
+                <input type="search" name="query" aria-label="검색어" placeholder="검색어를 입력해 주세요" />
+                <button class="form-action-button" type="submit">검색</button>
+              </form>
+              <div class="community-list-tools community-list-tools--write">
+                <a class="ds-button ds-button--outline ds-button--small" href="/kdha/community/executives/write/">
+                  글쓰기
+                  <span class="material-symbols-rounded" aria-hidden="true">edit_square</span>
+                </a>
+                <select data-community-limit data-custom-select aria-label="페이지당 목록 수">
+                  <option value="10">10개</option>
+                  <option value="20">20개</option>
+                </select>
+              </div>
+              <!-- 목록 데이터는 Figma 예시이며 실제 회원 전용 데이터는 서버에서 권한 확인 후 제공합니다. -->
+              <div
+                class="ds-board community-organization-board"
+                role="table"
+                aria-label="시·도회 산하단체임원 게시판 목록"
               >
-                arrow_forward_ios
-              </span>
-              <span>소통광장</span>
-            </span>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
-              <span aria-current="page">임원게시판</span>
-            </span>
-          </nav>
-
-          <header class="user-page-hero">
-            <div>
-              <p class="user-page-hero__eyebrow">KDHA USER SITE</p>
-              <h1 class="user-page-hero__title">임원게시판</h1>
-              <p class="user-page-hero__description">협회 임원 전용 게시판 안내입니다.</p>
-            </div>
-            <span class="user-page-hero__screen-id">KD-US-BDM-02-01</span>
-          </header>
-          <section class="user-content legacy-public-content" aria-label="임원게시판 안내">
-            <div>
-              <div>
-                <div>
-                  <div>
-                    <!-- 슬라이드 PC 06 -->
-                    <div>
-                      <a
-                        href="https://www.kdha.or.kr/news/NoticeView.aspx?board_sq=24282&amp;board_categ=1&amp;pageNo=1/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/law_about_251016_web.svg"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <!-- 슬라이드 PC 05 -->
-                    <div>
-                      <a
-                        href="https://www.kdha.or.kr/consult/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/labor_restart_250826_pc.svg"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <!-- 슬라이드 PC 04 -->
-                    <div>
-                      <a
-                        href="https://matchingbank.career.co.kr/jobs/list.asp?chk_s=de"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/jobboard_matchingbank_250825_pc.svg"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <!-- 슬라이드 PC 03 -->
-                    <div>
-                      <a
-                        href="https://edu.kdha.or.kr/Application/support/notice_view.aspx?BFR=35446&amp;MRID=71&amp;URID=70"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/banner_license_250304_pc.png"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <!-- 슬라이드 PC 02 -->
-                    <!-- <div><a href="https://www.kdha.or.kr/news/NoticeView.aspx?board_sq=23914&board_categ=1&pageNo=1"><img src="/files/main2025/banner_prejoin_250324_pc.png" alt=""></a></div> -->
-                    <!-- 슬라이드 PC 01 -->
-                    <div>
-                      <a
-                        href="https://edu.kdha.or.kr/Application/support/notice_view.aspx?BFR=35944&amp;MRID=71&amp;URID=70"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/banner_license_260120_pc.png"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-
-                    <!-- 슬라이드 PC 01 -->
-                    <!--<div><a href="javascript:;"><img src="/files/main2020/slide_img01.jpg" alt=""></a></div>-->
-                    <!-- /슬라이드 PC 01 -->
-                  </div>
-
-                  <div>
-                    <!-- 슬라이드 Mobile 06 -->
-                    <div>
-                      <a
-                        href="https://www.kdha.or.kr/news/NoticeView.aspx?board_sq=24282&amp;board_categ=1&amp;pageNo=1/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/law_about_251016_mobile.svg"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <!-- 슬라이드 Mobile 05 -->
-                    <div>
-                      <a
-                        href="https://www.kdha.or.kr/consult/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/labor_restart_250826_mobile.svg"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <!-- 슬라이드 Mobile 04 -->
-                    <div>
-                      <a
-                        href="https://matchingbank.career.co.kr/jobs/list.asp?chk_s=de"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/jobboard_matchingbank_250825_mobile.svg"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <!-- 슬라이드 Mobile 03 -->
-                    <div>
-                      <a
-                        href="https://edu.kdha.or.kr/Application/support/notice_view.aspx?BFR=35446&amp;MRID=71&amp;URID=70"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/banner_license_20250304_mobile.png"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <!-- 슬라이드 Mobile 02 -->
-                    <!-- <div><a href="https://www.kdha.or.kr/news/NoticeView.aspx?board_sq=23914&board_categ=1&pageNo=1" ><img src="/files/main2025/banner_prejoin_250324_mobile.png" alt=""></a></div> -->
-                    <!-- 슬라이드 Mobile 01 -->
-                    <div>
-                      <a
-                        href="https://edu.kdha.or.kr/Application/support/notice_view.aspx?BFR=35944&amp;MRID=71&amp;URID=70"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2025/banner_license_260120_mobile.png"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-
-                    <!-- 슬라이드 Mobile 01 -->
-                    <!--<div><a href="javascript:;"><img src="/files/main2020/m_slide_img01.jpg" alt=""></a></div>-->
-                    <!-- /슬라이드 Mobile 01 -->
-                  </div>
+                <div class="ds-board__head" role="row">
+                  <span role="columnheader">번호</span>
+                  <span role="columnheader">제목</span>
+                  <span role="columnheader">작성자</span>
+                  <span role="columnheader">등록일</span>
+                  <span role="columnheader">조회</span>
+                </div>
+                <div role="row" class="ds-board__row" data-community-row data-author="김수연">
+                  <span role="cell" class="ds-board__number">5</span>
+                  <span role="cell" class="ds-board__title">
+                    <a href="/kdha/community/executives/detail/">2026년 2분기 시도회 보조금 지급 (26/07/10일)</a>
+                  </span>
+                  <span role="cell" class="ds-board__author">김수연</span>
+                  <time role="cell" class="ds-board__date" datetime="2026-01-30">2026-01-30</time>
+                  <span role="cell" class="ds-board__views">
+                    <span>조회</span>
+                    7,024
+                  </span>
+                </div>
+                <div role="row" class="ds-board__row" data-community-row data-author="김수연">
+                  <span role="cell" class="ds-board__number">4</span>
+                  <span role="cell" class="ds-board__title">
+                    <a href="/kdha/community/executives/detail/">2026년 2분기 시도회 보조금 지급 (26/07/10일)</a>
+                  </span>
+                  <span role="cell" class="ds-board__author">김수연</span>
+                  <time role="cell" class="ds-board__date" datetime="2026-01-30">2026-01-30</time>
+                  <span role="cell" class="ds-board__views">
+                    <span>조회</span>
+                    7,024
+                  </span>
                 </div>
               </div>
-              <!--wrap_cont01-->
-
+              <p class="community-empty" hidden>등록된 게시물이 없습니다.</p>
+              <p class="sr-only" role="status" data-community-status></p>
+              <nav class="ds-pagination" aria-label="게시판 페이지" data-community-pagination></nav>
+            </section>
+            <aside class="ofe-contact">
               <div>
-                <div>
-                  <div>
-                    <span>협회 회원</span>
-                    <span>빠른 서비스</span>
-                  </div>
-                  <div>
-                    <span>로그인·회원 가입 후</span>
-                    <span>더 많은 정보를 확인하세요</span>
-                  </div>
-                  <div>로그인 회원가입</div>
-                </div>
-                <div>
-                  <div>
-                    <div>
-                      <div>
-                        <span>면허신고센터</span>
-                        <span>바로가기</span>
-                      </div>
-                      <div>
-                        <span>치과위생사 여러분!</span>
-                        <span>면허신고는 필수입니다.</span>
-                      </div>
-                    </div>
-                    <div>
-                      <a
-                        href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/icn_plus.png" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <div>
-                      <div>
-                        <span>회원증 카드 발급</span>
-                        <span>바로가기</span>
-                      </div>
-                      <div>
-                        <span>대한치과위생사협회</span>
-                        <span>회원증 카드를 발급 받으세요.</span>
-                      </div>
-                    </div>
-                    <div>
-                      <a
-                        href="https://www.kdha.or.kr/mypage/card.aspx"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/icn_plus.png" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <div>
-                      <div>
-                        <span>면허증 재교부 및</span>
-                        <span>면허번호 조회</span>
-                      </div>
-                      <div>
-                        <span>온라인으로</span>
-                        <span>간편하게 발급, 조회하세요.</span>
-                      </div>
-                    </div>
-                    <div>
-                      <a
-                        href="https://lic.mohw.go.kr/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/icn_plus.png" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <div>
-                      <div><span>법률상담</span></div>
-                      <div>
-                        <span>여러분의 법률 문제를</span>
-                        <span>해결하세요.</span>
-                      </div>
-                    </div>
-                    <div>
-                      <a
-                        href="https://www.kdha.or.kr/consult/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/icn_plus.png" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <div>
-                      <div><span>노무상담</span></div>
-                      <div>
-                        <span>여러분의 노무 문제를</span>
-                        <span>해결하세요.</span>
-                      </div>
-                    </div>
-                    <div>
-                      <a
-                        href="https://www.kdha.or.kr/consult/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/icn_plus.png" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <div>
-                      <div><span>치위생교육원</span></div>
-                      <div>
-                        <span>원스톱으로 보수교육</span>
-                        <span>관련 내용을 확인하세요</span>
-                      </div>
-                    </div>
-                    <div>
-                      <a
-                        href="http://edu.kdha.or.kr/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/icn_plus.png" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <h2>치위협보 기사제보 · 광고문의</h2>
+                <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
               </div>
-              <!--wrap_cont02-->
-
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      공지사항
-                      <div>
-                        <div>
-                          <a
-                            href="https://www.kdha.or.kr/news/notice.aspx#center"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="관련 정보 페이지로 새 창 이동합니다"
-                            title="관련 정보 페이지로 새 창 이동합니다"
-                          >
-                            <img
-                              src="https://www.kdha.or.kr/files/main2020/icn_plus.png"
-                              alt="안내 화면"
-                              loading="lazy"
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <div>‘노인 방문 구강건강관리 사업 추진 전략 마련을 위한 공청회’ 안내</div>
-                        <div>2026-08-24</div>
-                      </div>
-
-                      <div>
-                        <div>2026년 노인 · 장애인 전문치과위생사 강사 양성과정 안내</div>
-                        <div>2026-08-18</div>
-                      </div>
-
-                      <div>
-                        <div>[한국보건복지인재원] 9월 은퇴 후 국제보건분야 해외봉사 준비하기 홍보</div>
-                        <div>2026-08-14</div>
-                      </div>
-                    </div>
-                    <!--board_set-->
-                  </div>
-                  <!--notice_set-->
-                </div>
-
-                <div>
-                  <div>
-                    <div>
-                      보수교육 공지사항
-                      <div>
-                        <div>
-                          <a
-                            href="https://www.kdha.or.kr/news/notice.aspx#education"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="관련 정보 페이지로 새 창 이동합니다"
-                            title="관련 정보 페이지로 새 창 이동합니다"
-                          >
-                            <img
-                              src="https://www.kdha.or.kr/files/main2020/icn_plus.png"
-                              alt="안내 화면"
-                              loading="lazy"
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <div>2026년도 보수교육 및 면허신고 이행 안내</div>
-                        <div>2026-04-29</div>
-                      </div>
-
-                      <div>
-                        <div>2026년 제1차 디지털덴티스트리 교육 안내</div>
-                        <div>2026-04-08</div>
-                      </div>
-
-                      <div>
-                        <div>2026년도 보수교육 자주하는 질문</div>
-                        <div>2026-01-21</div>
-                      </div>
-                    </div>
-                    <!--board_set-->
-                  </div>
-                  <!--notice_set-->
-                </div>
-              </div>
-              <!--wrap_cont03-->
-
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      회원 권익·복지 상담센터 자주 묻는 질문 - 법률상담
-                      <div>
-                        <div>
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/icn_plus.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <div>
-                          이전 직장 동료의 폭언 등 행위에 관한 모욕죄, 허위사실 유포로 인한 명예훼손 성립여부와
-                          민·형사적 고소 가능여부 등에 관한 질의
-                        </div>
-                        <div>2021-06-22</div>
-                        <!--2025.06.27 main.css에 안보이게 수정-->
-                      </div>
-
-                      <div>
-                        <div>
-                          회원이 근무하는 병원 원장의 성적 발언 및 행동을 회원이 촬영하여 고용노동부에 신고하는 과정에서
-                          원장이 자신의 동의 없이 촬영한 것을 문제 삼아 형사고소를 진행한다고 주장하는데, 이때의 대응
-                          방법
-                        </div>
-                        <div>2021-06-22</div>
-                        <!--2025.06.27 main.css에 안보이게 수정-->
-                      </div>
-
-                      <div>
-                        <div>의료인이 아닌 사람이 진료기록부, 전자의무기록을 거짓 작성하는 경우 처벌받는지</div>
-                        <div>2021-02-26</div>
-                        <!--2025.06.27 main.css에 안보이게 수정-->
-                      </div>
-                    </div>
-                    <!--board_set-->
-                  </div>
-                  <!--notice_set-->
-
-                  <div>
-                    <div>
-                      회원 권익·복지 상담센터 자주 묻는 질문 - 노무상담
-                      <div>
-                        <div>
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/icn_plus.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <div>직장 내 괴롭힘에 해당하는 사항과 조치할 수 있는 방법</div>
-                        <div>2021-06-22</div>
-                      </div>
-
-                      <div>
-                        <div>상시 5인 미만의 직원이 근무하는 사업장의 연ㆍ월차휴가</div>
-                        <div>2021-06-22</div>
-                      </div>
-
-                      <div>
-                        <div>코로나-19 관련 사업주가 근로자에게 KF94 마스크 지원이 필수인가요?</div>
-                        <div>2021-06-22</div>
-                      </div>
-                    </div>
-                    <!--board_set-->
-                  </div>
-                  <!--notice_set-->
-                </div>
-                <div>
-                  <div>
-                    <div>치위협보</div>
-                    <div>
-                      <div>
-                        <a
-                          href="https://www.kdha.or.kr/news/oldmagazine.aspx"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="관련 정보 페이지로 새 창 이동합니다"
-                          title="관련 정보 페이지로 새 창 이동합니다"
-                        >
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/icn_plus.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <span>
-                          <img
-                            src="https://www.kdha.or.kr/files/news/magazine_banner/20260805034034_banner_24753.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                          <span>
-                            <img
-                              src="https://www.kdha.or.kr/files/main2020/icn_plus_wh.png"
-                              alt="안내 화면"
-                              loading="lazy"
-                            />
-                          </span>
-                        </span>
-                        <span>제356호 2026년 7월 29일(수)</span>
-                      </div>
-
-                      <div>
-                        <span>
-                          <img
-                            src="https://www.kdha.or.kr/files/news/magazine_banner/20260630045157_banner_24723.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                          <span>
-                            <img
-                              src="https://www.kdha.or.kr/files/main2020/icn_plus_wh.png"
-                              alt="안내 화면"
-                              loading="lazy"
-                            />
-                          </span>
-                        </span>
-                        <span>제355호 2026년 6월 26일(금)</span>
-                      </div>
-
-                      <div>
-                        <span>
-                          <img
-                            src="https://www.kdha.or.kr/files/news/magazine_banner/20260612113437_banner_24707.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                          <span>
-                            <img
-                              src="https://www.kdha.or.kr/files/main2020/icn_plus_wh.png"
-                              alt="안내 화면"
-                              loading="lazy"
-                            />
-                          </span>
-                        </span>
-                        <span>제354호 2026년 5월 27일(수)</span>
-                      </div>
-                    </div>
-                    <!--collateral_slide_set-->
-                  </div>
-                  <!--collateral_set-->
-                  <div>
-                    <div>협회 일정 안내</div>
-                    <div>
-                      <div>
-                        <a
-                          href="https://www.kdha.or.kr/news/CalendarSchedule.aspx"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="관련 정보 페이지로 새 창 이동합니다"
-                          title="관련 정보 페이지로 새 창 이동합니다"
-                        >
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/icn_plus.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--calendar_set-->
-                </div>
-              </div>
-              <!-- wrap_cont05 -->
-
-              <div>
-                <div>
-                  <div>
-                    <!-- 슬라이드 -->
-                    <div>
-                      <div>
-                        <a
-                          href="https://news.kdha.or.kr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="관련 정보 페이지로 새 창 이동합니다"
-                          title="관련 정보 페이지로 새 창 이동합니다"
-                        >
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/bottom_banner_left.jpg"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                      <div>
-                        <img
-                          src="https://www.kdha.or.kr/files/main2020/bottom_banner_right.jpg"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div>
-                        <a
-                          href="https://news.kdha.or.kr"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="관련 정보 페이지로 새 창 이동합니다"
-                          title="관련 정보 페이지로 새 창 이동합니다"
-                        >
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/bottom_banner_left.jpg"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </a>
-                      </div>
-                      <div>
-                        <img
-                          src="https://www.kdha.or.kr/files/main2020/bottom_banner_right.jpg"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <div>
-                      구인·구직
-                      <div>
-                        <div>
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/icn_plus.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <!--board_set-->
-                  </div>
-                  <!--notice_set-->
-                </div>
-              </div>
-              <!--wrap_cont04-->
-
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <a
-                        href="http://www.longtermcare.or.kr/npbs/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/bn1.jpg" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-                    <div>
-                      <a
-                        href="https://www.mohw.go.kr/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/bn2.jpg" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-                    <div>
-                      <a
-                        href="http://lic.mohw.go.kr/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/bn3.jpg" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-
-                    <div>
-                      <img src="https://www.kdha.or.kr/files/main2020/bn5.jpg" alt="안내 화면" loading="lazy" />
-                    </div>
-                    <div>
-                      <a
-                        href="https://www.kdha.or.kr/education/refresher.aspx#institute"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img src="https://www.kdha.or.kr/files/main2020/bn6.jpg" alt="안내 화면" loading="lazy" />
-                      </a>
-                    </div>
-
-                    <div>
-                      <a
-                        href="https://www.instagram.com/krdha77/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2020/btn_instagram.png"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <div>
-                      <a
-                        href="https://ko-kr.facebook.com/koreadha/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2020/btn_facebook.png"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <div>
-                      <a
-                        href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2020/btn_youtube.png"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                    <div>
-                      <a
-                        href="http://kdhamall.or.kr"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="관련 정보 페이지로 새 창 이동합니다"
-                        title="관련 정보 페이지로 새 창 이동합니다"
-                      >
-                        <img
-                          src="https://www.kdha.or.kr/files/main2020/btn_kdhamall.png"
-                          alt="안내 화면"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <!--wrap_banner-->
-              </div>
-              <!--content-->
-
-              <!--2025.05.21 팝업 -->
-
-              <!--2025.06-14 임시총회 이후 종료 제20대 선거 -->
-              <!-- <div class="top_fixed_popup" id="popup1">
-					<div class="inner">
-				
-					<div class="popup_group">
-						<button type="button" class="popup_group_close">×</button>
-				
-						<div class="box show" data-idx="1">
-						<button type="button" class="popup_close">×</button>
-						<a href="javascript:;">
-							<img src="/files/popup/election_popup_no1_250520.jpg" class="popup_img" alt="팝업1" />
-						</a>
-						</div>
-				
-						<div class="box show" data-idx="2">
-						<button type="button" class="popup_close">×</button>
-						<a href="javascript:;">
-							<img src="/files/popup/election_popup_no2_250516.jpg" class="popup_img" alt="팝업2" />
-						</a>
-						</div>
-				
-						<button type="button" class="js-popup-skip skip-idx2">
-						24시간 동안 다시 열람하지 않습니다.
-						</button>
-					</div> -->
-
-              <!-- <div class="box" data-idx="3" style="display:none;">
-						<button type="button" class="popup_close">×</button>
-						<a href="javascript:;">
-						<img src="/files/popup/illegal_election_20250515.jpg" class="popup_img" alt="팝업3" />
-						</a>
-						<div class="box-footer">
-						<button type="button" class="js-popup-skip">24시간 동안 다시 열람하지 않습니다.</button>
-						<button type="button" class="popup_close2">
-							닫기 ×
-						</button>
-						</div>
-						</div>
-					
-						</div>
-					</div>
-							<div class="popup_lightbox" id="popupLightbox">
-								<button type="button" class="close-btn">&times;</button>
-								<div class="img-wrapper">
-								<img src="" alt="확대 팝업 이미지" />
-							</div> -->
-
-              <!-- <div class="box" data-idx="3">
-		<button type="button" class="popup_close">×</button>
-		<a href="javascript:;"><img src="/files/popup/illegal_election_20250515.jpg" alt="" class="popup_img" /></a>
-
-		<div class="box-footer">
-			<button type="button" class="js-popup-skip">24시간 동안 다시 열람하지 않습니다.</b utton>
-			<button type="button" class="js-popup-close">닫기 ×</button>
-		</div>
-	</div> -->
-              <!--2026.06.16. 제48회 종합학술대회 팝업 추가-->
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <div>
-                        <div>
-                          <a
-                            href="https://www.kdha.or.kr/news/NoticeView.aspx?board_sq=24508&amp;board_categ=1&amp;pageNo=1"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="관련 정보 페이지로 새 창 이동합니다"
-                            title="관련 정보 페이지로 새 창 이동합니다"
-                          >
-                            <img
-                              src="https://www.kdha.or.kr/files/main2026/popup_license_kdha_260422.jpeg"
-                              alt="왼쪽 배너"
-                              width="900"
-                              height="1200"
-                              loading="lazy"
-                            />
-                          </a>
-                        </div>
-
-                        <!-- <div class="box" data-idx="2">
-					<a href="https://edu.kdha.or.kr/Application/offline_edu/edu_list.aspx?MRID=66&URID=63" class="pop-link" target="_blank" rel="noopener">
-					<img src="/files/main2026/popup_kdhex2026_260616.jpg"
-						alt="오른쪽 배너" class="popup_img" width="2525" height="3571" decoding="async" />
-					</a>
-				</div> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- === 가운데 듀얼 팝업 (상단 팝업 닫은 뒤 노출) === -->
-              <!-- <div id="miniPair" class="mini_pair" aria-live="polite" style="display:none">
-  <button type="button" class="mini_pair_close" aria-label="닫기">×</button>
-
-	<div class="mini_pair_body">
-	<div class="img_wrap"><img src="/files/popup/renew_address_251024_1.png" alt="안내 배너 1" loading="lazy"></div>
-	<div class="img_wrap"><img src="/files/popup/renew_address_251024_2.png" alt="안내 배너 2" loading="lazy"></div>
-	</div>
-
-
-  <div class="mini_pair_footer">
-    <button type="button" class="mini_pair_skip_day">오늘 하루 보지 않기</button>
-  </div>
-</div> -->
-
-              <!-- ===== Single Popup (PC 900x1200 / Mobile 600x800) 2026.01.22. 면허신고 보수교육 안내 팝업===== -->
-              <!-- 오른쪽 위 X 닫기 -->
-              <!-- ✅ 팝업(이미지) 클릭 시 이동 -->
-              <!-- 
-			<div class="top_fixed_popup" id="singlePopup">
-				<div class="single_panel" role="dialog" aria-modal="true" aria-label="안내 팝업">
-
-					<button type="button" class="single_close" aria-label="닫기">×</button>
-
-					<a class="single_body single_link"
-					href="https://www.kdha.or.kr/news/NoticeView.aspx?board_sq=24508&board_categ=1&pageNo=1">
-					<img src="/files/main2026/popup_license_kdha_260422.jpeg" class="single_img" alt="안내 팝업" />
-					</a>
-
-					<div class="single_footer">
-					<button type="button" class="single_skip_day">오늘 하루 보지 않기</button>
-					<button type="button" class="single_close_btn">닫기</button>
-					</div>
-
-				</div>
-			</div> -->
-
-              <!--2025.05.21 팝업 형태 끝-->
-
-              <div>
-                <div>
-                  <i></i>
-                  <h4>일정보기</h4>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <div>
-                  <ul>
-                    <li>사단법인 대한치과위생사협회</li>
-                    <li>TEL. 02-2236-0914</li>
-                    <li>FAX. 02-2236-0915</li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <a
-                        href="https://www.kdha.or.kr/introduce/Privacy_Policy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="개인정보처리방침 페이지로 새 창 이동합니다"
-                        title="개인정보처리방침 페이지로 새 창 이동합니다"
-                      >
-                        개인정보처리방침
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.kdha.or.kr/community/faq.aspx?faq_categ=8#accordiontab-notifications-committe-11"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="원격지원 페이지로 새 창 이동합니다"
-                        title="원격지원 페이지로 새 창 이동합니다"
-                      >
-                        원격지원
-                      </a>
-                    </li>
-                    <li>
-                      <div>
-                        시도회 홈페이지
-                        <div>
-                          <dl>
-                            <!--<dt>시도회 홈페이지</dt>-->
-
-                            <dd>
-                              <a
-                                href="http://seoul.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="서울특별시회 페이지로 새 창 이동합니다"
-                                title="서울특별시회 페이지로 새 창 이동합니다"
-                              >
-                                서울특별시회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://gg.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="경기도회 페이지로 새 창 이동합니다"
-                                title="경기도회 페이지로 새 창 이동합니다"
-                              >
-                                경기도회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://incheon.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="인천광역시회 페이지로 새 창 이동합니다"
-                                title="인천광역시회 페이지로 새 창 이동합니다"
-                              >
-                                인천광역시회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://gangwon.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="강원특별자치도회 페이지로 새 창 이동합니다"
-                                title="강원특별자치도회 페이지로 새 창 이동합니다"
-                              >
-                                강원특별자치도회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://ds.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="대전·세종회 페이지로 새 창 이동합니다"
-                                title="대전·세종회 페이지로 새 창 이동합니다"
-                              >
-                                대전·세종회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://chungbuk.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="충청북도회 페이지로 새 창 이동합니다"
-                                title="충청북도회 페이지로 새 창 이동합니다"
-                              >
-                                충청북도회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://cn.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="충청남도회 페이지로 새 창 이동합니다"
-                                title="충청남도회 페이지로 새 창 이동합니다"
-                              >
-                                충청남도회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://busan.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="부산광역시회 페이지로 새 창 이동합니다"
-                                title="부산광역시회 페이지로 새 창 이동합니다"
-                              >
-                                부산광역시회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://dg.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="대구·경북회 페이지로 새 창 이동합니다"
-                                title="대구·경북회 페이지로 새 창 이동합니다"
-                              >
-                                대구·경북회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://gyeongnam.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="경상남도회 페이지로 새 창 이동합니다"
-                                title="경상남도회 페이지로 새 창 이동합니다"
-                              >
-                                경상남도회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://ulsan.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="울산광역시회 페이지로 새 창 이동합니다"
-                                title="울산광역시회 페이지로 새 창 이동합니다"
-                              >
-                                울산광역시회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://jeonbuk.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="전북특별자치도회 페이지로 새 창 이동합니다"
-                                title="전북특별자치도회 페이지로 새 창 이동합니다"
-                              >
-                                전북특별자치도회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://gj.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="광주·전남회 페이지로 새 창 이동합니다"
-                                title="광주·전남회 페이지로 새 창 이동합니다"
-                              >
-                                광주·전남회
-                              </a>
-                            </dd>
-
-                            <dd>
-                              <a
-                                href="http://jeju.kdha.or.kr"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="제주특별자치도회 페이지로 새 창 이동합니다"
-                                title="제주특별자치도회 페이지로 새 창 이동합니다"
-                              >
-                                제주특별자치도회
-                              </a>
-                            </dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div>
-                    <p>105-82-07361(통신판매번호 : 제2010-서울동대문-0959호) | 대표자 : 박정란</p>
-                    <p>서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</p>
-                  </div>
-                  <div>
-                    <div>
-                      <div>Copyright ⓒ 2016 KDHA. All rights Reserved</div>
-                      <div>
-                        <a
-                          href="https://ko-kr.facebook.com/koreadha/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="관련 정보 페이지로 새 창 이동합니다"
-                          title="관련 정보 페이지로 새 창 이동합니다"
-                        >
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/icn_sns_facebook.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </a>
-                        <a
-                          href="https://www.instagram.com/krdha77/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="관련 정보 페이지로 새 창 이동합니다"
-                          title="관련 정보 페이지로 새 창 이동합니다"
-                        >
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/icn_sns_instragram.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </a>
-                        <a
-                          href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="관련 정보 페이지로 새 창 이동합니다"
-                          title="관련 정보 페이지로 새 창 이동합니다"
-                        >
-                          <img
-                            src="https://www.kdha.or.kr/files/main2020/icn_sns_youtube.png"
-                            alt="안내 화면"
-                            loading="lazy"
-                          />
-                        </a>
-                        <!--<a href="http://www.twitter.com/koreadha" target="_blank"><img src="/files/main2020/icn_sns_twitter.png" alt=""></a>-->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--footer_btm_wrap-->
-            </div>
-            <!--footer_set-->
-            <p class="public-source-note">
-              <a
-                href="https://www.kdha.or.kr/community/boardmember.aspx"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="임원게시판 페이지로 새 창 이동합니다"
-                title="임원게시판 페이지로 새 창 이동합니다"
-              >
-                임원게시판 기존 사이트에서 확인
-                <span class="material-symbols-outlined public-external-icon" aria-hidden="true">open_in_new</span>
+              <a href="mailto:press@kdha.or.kr">
+                02-6213-2735
+                <span>·</span>
+                press@kdha.or.kr
               </a>
-            </p>
-          </section>
+            </aside>
+          </div>
         </div>
       </main>
       <footer class="site-footer site-footer--standard">
@@ -1543,56 +380,47 @@
             />
           </a>
           <address class="site-footer__address">
-            105-82-07361(통신판매번호 : 제2010-서울동대문-0959호)　|　대표자 : 박정란
-            <br />
-            서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)
+            <span class="site-footer__info-row">
+              <span>
+                105-82-07361
+                <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
+              </span>
+              <span>대표자 : 박정란</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
           </address>
-          <div class="site-footer__contact-row">
-            <p class="site-footer__contact">TEL. 02-2236-0914　 FAX. 02-2236-0915</p>
+          <p class="site-footer__contact">
+            <span>TEL. 02-2236-0914</span>
+            <span>FAX. 02-2236-0915</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/related-sites/">관련사이트</a>
+              <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
             <div class="site-footer__site-selects">
-              <select aria-label="관련사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">관련사이트</option>
-                <option value="http://www.longtermcare.or.kr/npbs/">노인장기요양보험</option>
-                <option value="https://www.mohw.go.kr/">보건복지부</option>
-                <option value="http://lic.mohw.go.kr/">면허번호 조회·면허증 재교부 신청</option>
-                <option value="https://www.kdha.or.kr/mypage/card.aspx">대한치과위생사협회 회원증카드 발급안내</option>
-                <option value="https://www.kdha.or.kr/education/refresher.aspx#institute">
-                  대한치과위생사협회 치위생교육원
-                </option>
-                <option value="https://www.instagram.com/krdha77/">대한치과위생사협회 공식 인스타그램</option>
-                <option value="https://ko-kr.facebook.com/koreadha/">대한치과위생사협회 공식 페이스북</option>
-                <option value="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w">
-                  대한치과위생사협회 공식 유튜브 채널
-                </option>
-                <option value="http://kdhamall.or.kr">KDHA mall</option>
-              </select>
-              <select aria-label="시도회사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">시도회사이트</option>
-                <option value="https://seoul.kdha.or.kr">서울특별시회</option>
-                <option value="https://gg.kdha.or.kr">경기도회</option>
-                <option value="https://incheon.kdha.or.kr">인천광역시회</option>
-                <option value="https://gangwon.kdha.or.kr">강원특별자치도회</option>
-                <option value="https://ds.kdha.or.kr">대전·세종회</option>
-                <option value="https://chungbuk.kdha.or.kr">충청북도회</option>
-                <option value="https://cn.kdha.or.kr">충청남도회</option>
-                <option value="https://busan.kdha.or.kr">부산광역시회</option>
-                <option value="https://dg.kdha.or.kr">대구·경북회</option>
-                <option value="https://gyeongnam.kdha.or.kr">경상남도회</option>
-                <option value="https://ulsan.kdha.or.kr">울산광역시회</option>
-                <option value="https://jeonbuk.kdha.or.kr">전북특별자치도회</option>
-                <option value="https://gj.kdha.or.kr">광주·전남회</option>
-                <option value="https://jeju.kdha.or.kr">제주특별자치도회</option>
+              <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">시도회 홈페이지</option>
+                <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
               </select>
             </div>
           </div>
           <div class="site-footer__bottom">
-            <div class="site-footer__legal">
-              <div class="site-footer__legal-links">
-                <a href="/kdha/privacy/">개인정보처리방침</a>
-                <a class="site-footer__mobile-link" href="/kdha/remote-support/">원격지원</a>
-              </div>
-              <p>Copyright ⓒ 2026 KDHA. All rights Reserved</p>
-            </div>
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
             <div class="social-links">
               <a
                 class="social-links__item"
@@ -1632,5 +460,7 @@
     <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
     <script src="/kdha/assets/js/common.js"></script>
     <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/community.js"></script>
   </body>
 </html>

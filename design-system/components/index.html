@@ -47,7 +47,12 @@
             <a class="component-inventory-card" href="#tabs">
               <span class="component-inventory-card__category">Navigation</span>
               <strong>Tab</strong>
-              <p>PC / MO · tab_on / tab_off. 페이지 내 동일 레벨 콘텐츠 전환에 사용합니다.</p>
+              <p>PC / MO · tab_on / tab_off. 콘텐츠 전환 · 목록 필터 · 페이지 이동 탭에 공통 사용합니다.</p>
+            </a>
+            <a class="component-inventory-card" href="#pagination">
+              <span class="component-inventory-card__category">Navigation</span>
+              <strong>Pagination</strong>
+              <p>PC 44px / MO 40px · 이전·다음 화살표 · 버튼형 / 링크형. 모든 목록에서 ds-pagination만 사용합니다.</p>
             </a>
             <a class="component-inventory-card" href="#link">
               <span class="component-inventory-card__category">Action</span>
@@ -57,7 +62,7 @@
             <article class="component-inventory-card component-inventory-card--reference">
               <span class="component-inventory-card__category">Status</span>
               <strong>Badge / Chip</strong>
-              <p>배경형 30px / 테두리형 32px · 5개 색상. ds-badge 공통 컴포넌트를 사용합니다.</p>
+              <p>배경형 · 테두리형 30px · 6개 색상. 진행 중·종료 등 상태 뱃지도 ds-badge 공통 컴포넌트를 사용합니다.</p>
             </article>
             <a class="component-inventory-card" href="#guide-list">
               <span class="component-inventory-card__category">Content</span>
@@ -76,28 +81,69 @@
           <div class="foundation-section__heading">
             <h2>Badge / Chip</h2>
             <p>
-              12px SemiBold · 패딩 6px 10px · 배경형 30px / 테두리형 32px. ds-badge에 색상 modifier와
-              ds-badge--outline을 조합합니다.
+              Figma chip1(배경형) · chip2(테두리형) · 12px SemiBold · 높이 30px(여백 6px 10px, 테두리형은 선이 안쪽에
+              포함) · 6개 색상. ds-badge에 색상 modifier와 ds-badge--outline을 조합하며, 상태 뱃지를 페이지별로 새로
+              만들지 않습니다.
             </p>
           </div>
           <div class="form-specimen-grid">
             <article>
-              <h3>배경형</h3>
-              <div class="ds-badge ds-badge--primary">primary</div>
+              <h3>배경형 (chip1)</h3>
+              <div class="ds-badge">primary</div>
               <div class="ds-badge ds-badge--secondary">secondary</div>
               <div class="ds-badge ds-badge--success">success</div>
               <div class="ds-badge ds-badge--warning">warning</div>
               <div class="ds-badge ds-badge--danger">danger</div>
+              <div class="ds-badge ds-badge--neutral">neutral</div>
             </article>
             <article>
-              <h3>테두리형</h3>
-              <div class="ds-badge ds-badge--primary ds-badge--outline">primary</div>
+              <h3>테두리형 (chip2)</h3>
+              <div class="ds-badge ds-badge--outline">primary</div>
               <div class="ds-badge ds-badge--secondary ds-badge--outline">secondary</div>
               <div class="ds-badge ds-badge--success ds-badge--outline">success</div>
               <div class="ds-badge ds-badge--warning ds-badge--outline">warning</div>
               <div class="ds-badge ds-badge--danger ds-badge--outline">danger</div>
+              <div class="ds-badge ds-badge--neutral ds-badge--outline">neutral</div>
             </article>
           </div>
+          <table class="component-usage-table">
+            <thead>
+              <tr>
+                <th scope="col">상태</th>
+                <th scope="col">클래스</th>
+                <th scope="col">사용 예</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="ds-badge ds-badge--danger ds-badge--outline">진행 중</span></td>
+                <td>ds-badge ds-badge--danger ds-badge--outline</td>
+                <td>설문·이벤트 진행 중, 봉사 접수 중, 교육 필수</td>
+              </tr>
+              <tr>
+                <td><span class="ds-badge ds-badge--secondary ds-badge--outline">진행 예정</span></td>
+                <td>ds-badge ds-badge--secondary ds-badge--outline</td>
+                <td>이벤트 진행 예정</td>
+              </tr>
+              <tr>
+                <td><span class="ds-badge ds-badge--outline">답변</span></td>
+                <td>ds-badge ds-badge--outline</td>
+                <td>게시판 답변, 이벤트 신청 완료</td>
+              </tr>
+              <tr>
+                <td><span class="ds-badge ds-badge--neutral ds-badge--outline">종료</span></td>
+                <td>ds-badge ds-badge--neutral ds-badge--outline</td>
+                <td>설문 종료, 봉사 마감, 이벤트 종료</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre
+            class="component-code"
+          ><code>&lt;span class="ds-badge ds-badge--danger ds-badge--outline"&gt;진행 중&lt;/span&gt;
+&lt;span class="ds-badge ds-badge--neutral ds-badge--outline"&gt;종료&lt;/span&gt;
+
+/* 뱃지 주변 간격은 페이지 클래스에서만 조정합니다. */
+.event-card .ds-badge { margin-bottom: 8px; }</code></pre>
         </section>
         <section class="foundation-section" id="link">
           <div class="foundation-section__heading">
@@ -207,8 +253,41 @@
         <section class="foundation-section" id="tabs" data-tabs-root>
           <div class="foundation-section__heading">
             <h2>Tab</h2>
-            <p>같은 영역의 콘텐츠를 전환하며 마우스·터치·키보드에서 동일하게 사용할 수 있습니다.</p>
+            <p>
+              Figma tab1 · 20px Bold · 선택 시 gray-800 + 2px 밑줄 · PC 높이 34px / MO 31px. 콘텐츠 전환·목록
+              필터·페이지 이동 탭 모두 ds-tabs 하나로 구현하고, 선택 상태는 용도에 맞는 ARIA 속성으로 표시합니다.
+            </p>
           </div>
+          <table class="component-usage-table">
+            <thead>
+              <tr>
+                <th scope="col">용도</th>
+                <th scope="col">요소</th>
+                <th scope="col">선택 상태</th>
+                <th scope="col">예시</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>같은 화면의 콘텐츠 전환</td>
+                <td>button + role="tab"</td>
+                <td>aria-selected="true"</td>
+                <td>본인인증, 자주하는 질문</td>
+              </tr>
+              <tr>
+                <td>목록 필터</td>
+                <td>button</td>
+                <td>aria-pressed="true"</td>
+                <td>이벤트, 설문조사, 치위협보</td>
+              </tr>
+              <tr>
+                <td>하위 페이지 이동</td>
+                <td>a</td>
+                <td>aria-current="page"</td>
+                <td>공지사항 분류</td>
+              </tr>
+            </tbody>
+          </table>
           <div class="tabs-specimen">
             <div class="ds-tabs" data-tabs role="tablist" aria-label="탭 컴포넌트 예시">
               <button
@@ -262,7 +341,68 @@
     &lt;button class="ds-tabs__item" data-tab role="tab" aria-selected="true" aria-controls="panel-1"&gt;탭 1&lt;/button&gt;
   &lt;/div&gt;
   &lt;div id="panel-1" role="tabpanel"&gt;콘텐츠&lt;/div&gt;
-&lt;/section&gt;</code></pre>
+&lt;/section&gt;
+
+&lt;!-- 목록 필터 --&gt;
+&lt;div class="ds-tabs" role="group" aria-label="진행 상태"&gt;
+  &lt;button class="ds-tabs__item" type="button" aria-pressed="true"&gt;전체&lt;/button&gt;
+  &lt;button class="ds-tabs__item" type="button" aria-pressed="false"&gt;진행중&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- 하위 페이지 이동 --&gt;
+&lt;nav class="ds-tabs" aria-label="공지사항 분류"&gt;
+  &lt;a class="ds-tabs__item" href="/kdha/community/notices/association/" aria-current="page"&gt;협회(중앙회)&lt;/a&gt;
+  &lt;a class="ds-tabs__item" href="/kdha/community/notices/education/"&gt;보수교육&lt;/a&gt;
+&lt;/nav&gt;
+
+/* 탭 사이 간격·위아래 여백은 페이지 클래스에서만 조정합니다. */
+.community-page .ds-tabs { gap: 32px; margin-bottom: 32px; }</code></pre>
+        </section>
+
+        <section class="foundation-section" id="pagination">
+          <div class="foundation-section__heading">
+            <h2>Pagination</h2>
+            <p>
+              Figma 페이지네이션_PC / 페이지네이션_MO · 원형 44px(MO 40px) · 번호 간격 8px(MO 4px) · 화살표와 번호 사이
+              20px · 현재 페이지 #25262b. 목록 하단 여백은 상위 페이지 클래스에서 지정합니다.
+            </p>
+          </div>
+          <div class="pagination-specimen">
+            <nav class="ds-pagination" aria-label="페이지네이션 예시 (버튼형)">
+              <button type="button" aria-label="이전 페이지" disabled>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+              </button>
+              <button type="button" aria-current="page">1</button>
+              <button type="button">2</button>
+              <button type="button">3</button>
+              <button type="button">4</button>
+              <button type="button">5</button>
+              <button type="button" aria-label="다음 페이지">
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+              </button>
+            </nav>
+          </div>
+          <pre class="component-code"><code>&lt;!-- 버튼형: 화면 안에서 목록을 다시 그릴 때 --&gt;
+&lt;nav class="ds-pagination" aria-label="목록 페이지"&gt;
+  &lt;button type="button" aria-label="이전 페이지" disabled&gt;
+    &lt;span class="material-symbols-rounded" aria-hidden="true"&gt;arrow_back_ios_new&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button type="button" aria-current="page"&gt;1&lt;/button&gt;
+  &lt;button type="button"&gt;2&lt;/button&gt;
+  &lt;button type="button" aria-label="다음 페이지"&gt;
+    &lt;span class="material-symbols-rounded" aria-hidden="true"&gt;arrow_forward_ios&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/nav&gt;
+
+&lt;!-- 링크형: 서버에서 페이지를 이동할 때 --&gt;
+&lt;nav class="ds-pagination" aria-label="목록 페이지"&gt;
+  &lt;a href="?page=1" aria-current="page"&gt;1&lt;/a&gt;
+  &lt;a href="?page=2"&gt;2&lt;/a&gt;
+&lt;/nav&gt;
+
+/* 페이지별 간격은 상위 클래스에서만 조정합니다. */
+.community-notices { padding-bottom: 120px; }
+.regional-site .ds-pagination { margin-top: 34px; }</code></pre>
         </section>
 
         <section class="foundation-section" id="guide-list">
@@ -325,6 +465,11 @@
             </li>
             <li>마우스 hover와 키보드 focus-visible을 각각 제공하며 공통 포커스 표시를 제거하지 않습니다.</li>
             <li>Dialog는 네이티브 dialog 요소와 제목 연결, 닫기 후 포커스 복귀를 기본으로 합니다.</li>
+            <li>
+              탭·페이지네이션·게시판 목록은 ds-tabs · ds-pagination · ds-board만 사용하고, community-tabs처럼 페이지
+              이름을 붙인 컴포넌트를 새로 만들지 않습니다.
+            </li>
+            <li>페이지별 간격·배치 차이는 상위 페이지 클래스(예: .community-page .ds-tabs)에서만 조정합니다.</li>
           </ul>
         </section>
       </div>

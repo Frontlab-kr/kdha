@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-
-    <title>대한치과위생사협회</title>
+    <title>치과위생사 소개 | 대한치과위생사협회</title>
   </head>
-  <body class="about-page">
+  <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
-    <div class="site user-page">
+    <div class="site">
       <header class="site-header site-header--standard">
         <div class="site-header__inner layout-container">
           <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
@@ -27,11 +25,11 @@
               <div class="utility-nav__external">
                 <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a
                   class="utility-nav__link"
@@ -40,7 +38,7 @@
                   rel="noreferrer"
                 >
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
             </nav>
@@ -130,15 +128,15 @@
               <div class="site-menu__external">
                 <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
                   덴톡
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                   영문사이트
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
                 <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
                   KDHA mall
-                  <img src="/kdha/assets/online/external-link.svg" width="16" height="16" alt="" />
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                 </a>
               </div>
               <div class="site-menu__account">
@@ -278,296 +276,309 @@
         </nav>
       </header>
 
-      <main id="main-content" class="user-page__main">
-        <div class="user-page__inner layout-container">
-          <nav class="user-page-breadcrumb" aria-label="현재 위치">
-            <a class="user-page-breadcrumb__home" href="/kdha/main/" aria-label="홈">
-              <span class="user-page-breadcrumb__home-icon material-symbols-rounded" aria-hidden="true">home</span>
-            </a>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
-              <a class="user-page-breadcrumb__link" href="/about/">협회소개</a>
-            </span>
-            <span class="user-page-breadcrumb__item">
-              <span
-                class="material-symbols-outlined material-icon"
-                aria-hidden="true"
-                style="font-size: 16px; width: 16px; height: 16px"
-              >
-                arrow_forward_ios
-              </span>
-              <span aria-current="page">치과위생사소개</span>
-            </span>
-          </nav>
-
-          <header class="user-page-hero">
-            <div>
-              <p class="user-page-hero__eyebrow">KDHA USER SITE</p>
-              <h1 class="user-page-hero__title">치과위생사소개</h1>
-              <p class="user-page-hero__description">KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
-            </div>
-            <span class="user-page-hero__screen-id">KD-US-DEN-01-01</span>
-          </header>
-          <div class="about-dental-layout">
-            <nav class="about-dental-side-nav" aria-label="치과위생사 소개 메뉴">
-              <a href="/kdha/introduce/dentalhygienist#introduce">치과위생사 소개</a>
-              <a href="/kdha/introduce/dentalhygienist#doctrine_oath">치과위생사 선서</a>
-            </nav>
-
-            <div class="about-dental-layout__content">
-              <div id="introduce">
-                <section class="about-content about-dental" aria-label="치과위생사 소개 상세">
-                  <div class="about-dental-tabs" role="tablist" aria-label="치과위생사 소개 상세 메뉴">
-                    <button
-                      type="button"
-                      role="tab"
-                      id="dental-tab-definition"
-                      aria-controls="dental-panel-definition"
-                      aria-selected="true"
-                      tabindex="0"
-                      data-dental-tab="dental-panel-definition"
-                    >
-                      치과위생사
-                    </button>
-                    <button
-                      type="button"
-                      role="tab"
-                      id="dental-tab-role"
-                      aria-controls="dental-panel-role"
-                      aria-selected="false"
-                      tabindex="-1"
-                      data-dental-tab="dental-panel-role"
-                    >
-                      역할
-                    </button>
-                    <button
-                      type="button"
-                      role="tab"
-                      id="dental-tab-system"
-                      aria-controls="dental-panel-system"
-                      aria-selected="false"
-                      tabindex="-1"
-                      data-dental-tab="dental-panel-system"
-                    >
-                      제도
-                    </button>
-                    <button
-                      type="button"
-                      role="tab"
-                      id="dental-tab-association"
-                      aria-controls="dental-panel-association"
-                      aria-selected="false"
-                      tabindex="-1"
-                      data-dental-tab="dental-panel-association"
-                    >
-                      대한치과위생사협회
-                    </button>
-                  </div>
-                  <section
-                    class="about-dental__section"
-                    id="dental-panel-definition"
-                    role="tabpanel"
-                    aria-labelledby="dental-tab-definition"
-                    data-dental-panel
-                  >
-                    <h2>치과위생사</h2>
-                    <dl class="about-dental__description-list">
-                      <div>
-                        <dt>정의</dt>
-                        <dd>
-                          치과위생사는 지역주민과 치과질환을 가진 사람을 대상으로 구강보건교육, 예방치과처치,
-                          치과진료협조 및 경영관리를 지원하여 국민의 구강건강증진의 일익을 담당하는 전문직업인이다.
-                        </dd>
-                      </div>
-                      <div>
-                        <dt>관련법률</dt>
-                        <dd>
-                          치과위생사는 「의료기사 등에 관한 법률」에 근거하여 치아 및 구강질환의 예방과 위생 관리 등의
-                          업무를 수행한다. 치과위생사의 구체적인 업무 범위는 「의료기사 등에 관한 법률 시행령」의 제2조
-                          ‘별표1’에 따르며, 교정용 호선의 장착·제거, 불소 바르기, 보건기관 또는 의료기관에서 수행하는
-                          구내진단용 방사선 촬영, 임시충전, 임시 부착물의 장착, 부착물의 제거, 치석 등 침착물의 제거,
-                          치아 본뜨기, 그 밖에 치아 및 구강질환의 예방과 위생 관리에 관한 업무이다.
-                        </dd>
-                      </div>
-                      <div>
-                        <dt>활동분야</dt>
-                        <dd>
-                          치과위생사는 일반인들이 치과진료실에서 반드시 만나게 되는 치과계 전문인력으로 치과병·의원,
-                          종합병원을 비롯하여 지역사회 보건(지)소, 국공립의료기관, 산업체의무실, 학교구강보건실,
-                          구강보건연구기관 및 유관단체 등에서 교육적, 임상적, 치료적 서비스를 제공하여 구강건강을
-                          증진시킴으로써 최적의 전신건강을 유지하도록 하는 일에 종사하고 있다.
-                        </dd>
-                      </div>
-                    </dl>
-                    <section class="about-dental__videos" aria-labelledby="dental-promotion-title">
-                      <h3 id="dental-promotion-title">치과위생사 홍보영상</h3>
-                      <div class="about-dental__video-grid">
-                        <div
-                          class="about-dental__video-placeholder"
-                          role="img"
-                          aria-label="치과위생사 홍보영상 첫 번째 YouTube 영상 영역"
-                        >
-                          <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>
-                          <strong>YouTube</strong>
-                        </div>
-                        <div
-                          class="about-dental__video-placeholder"
-                          role="img"
-                          aria-label="치과위생사 홍보영상 두 번째 YouTube 영상 영역"
-                        >
-                          <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>
-                          <strong>YouTube</strong>
-                        </div>
-                      </div>
-                    </section>
-                  </section>
-                  <section
-                    class="about-dental__section"
-                    id="dental-panel-role"
-                    role="tabpanel"
-                    aria-labelledby="dental-tab-role"
-                    data-dental-panel
-                    hidden
-                  >
-                    <h2>역할</h2>
-                    <div class="about-dental__roles">
-                      <article>
-                        <h3>구강건강증진 및 교육연구가</h3>
-                        <p>
-                          국민의 구강건강증진을 위해 학교 사업장 및 영유아 노인 장애인 임산부 등을 대상으로 한
-                          공중구강보건사업에 있어 중추적 역할을 수행하며, 수돗물 불소화사업, 불소용액양치사업,
-                          구강보건교육자료 개발 등을 담당한다.
-                        </p>
-                      </article>
-                      <article>
-                        <h3>예방치과 처치자</h3>
-                        <p>
-                          잇몸병 및 충치 예방을 위해 치석제거(Scaling)와 치태조절, 치아홈메우기, 불소도포,
-                          구강위생용품사용법 및 칫솔질 교습, 식이조절 등을 수행하여 환자가 최적의 구강건강을 유지하도록
-                          하는 역할을 담당한다.
-                        </p>
-                      </article>
-                      <article>
-                        <h3>치과진료 협조자</h3>
-                        <p>
-                          치과의사의 지도에 따라 환자의 구강내외 치과방사선촬영 및 현상, 환자의 치료계획수립과 치료 전
-                          교육, 진료과정협조 및 치료 후 유의사항과 계속관리 교육 등을 실시하며 효율적인 치과진료가
-                          이루어지도록 진료실의 전반적인 유지관리를 담당한다.
-                        </p>
-                      </article>
-                      <article>
-                        <h3>병원관리자</h3>
-                        <p>
-                          진료에 관계되는 물적 인적 자원 관리를 담당하는 것으로 효율적 환자진료 시간배정, 진료절차관리,
-                          환자요양급여 및 의무기록 관리, 요양급여비용 청구 및 심사관리, 재료 및 약재관리, 계속관리제도
-                          운영 등 전반적인 병원관리자로서의 역할을 수행한다.
-                        </p>
-                      </article>
-                    </div>
-                  </section>
-                  <section
-                    class="about-dental__section"
-                    id="dental-panel-system"
-                    role="tabpanel"
-                    aria-labelledby="dental-tab-system"
-                    data-dental-panel
-                    hidden
-                  >
-                    <h2>제도</h2>
-                    <div class="about-dental__info">
-                      <article>
-                        <h3>치과위생사 교육제도</h3>
-                        <p>
-                          우리나라 치과위생사 교육은 1965년 연세대학교 의학기술학과에서 시작되어 현재는 전국 88개
-                          대학(교)에서 매년 5,000여 명의 학사 및 보건학사가 배출되고 있다. 치과위생사로 활동하기
-                          위해서는 반드시 치과위생사 면허를 취득하여야 하며, 치과위생사 면허 국가시험의 응시자격은
-                          치위생(학)과를 졸업하여 학위를 취득한 자에 한하여 주어진다.
-                        </p>
-                      </article>
-                      <article>
-                        <h3>치과위생사 면허제도</h3>
-                        <p>
-                          잇몸병 및 충치 예방을 위해 치석제거(Scaling)와 치태조절, 치아홈메우기, 불소도포,
-                          구강위생용품사용법 및 칫솔질 교습, 식이조절 등을 수행하여 환자가 최적의 구강건강을 유지하도록
-                          하는 역할을 담당한다.
-                        </p>
-                      </article>
-                    </div>
-                  </section>
-                  <section
-                    class="about-dental__section"
-                    id="dental-panel-association"
-                    role="tabpanel"
-                    aria-labelledby="dental-tab-association"
-                    data-dental-panel
-                    hidden
-                  >
-                    <h2>대한치과위생사협회</h2>
-                    <div class="about-dental__association">
-                      <p>
-                        1977년에 설립한 대한 치과위생사협회는 1982년 사단법인으로 인가된 보건복지부 산하단체로, 전국
-                        14개 시도회를 비롯한 2개의 산하단체와 4개의 학회 등의 조직으로 구성된 전국조직망을 통해 국민의
-                        구강건강증진과 치과위생사의 진보적인 학술연마 및 윤리확립, 권익향상, 복리증진 등의 사업을
-                        추진하고 있다.
-                      </p>
-                      <p>
-                        대한치과위생사협회는 1989년 세계치과위생사연맹(IFDH)에 가입하였으며, 인류에게 전신건강의 기초인
-                        구강보건 분야에 질 높은 예방 서비스를 제공하고 전 세계 치과위생사간의 지식과 정보교류를 통한
-                        치과위생사의 발전을 목적으로 설립된 IFDH는 현재 25개국의 치과위생사들이 참여하여 활동하고 있는
-                        국제단체이다.
-                      </p>
-                    </div>
-                  </section>
-                </section>
+      <main id="main-content">
+        <div class="community-page about-page">
+          <div class="community-container">
+            <!-- KD-US-DEN-01-01 · KD-US-DEN-02-01 -->
+            <header class="ofe-hero">
+              <nav aria-label="현재 위치">
+                <a href="/kdha/main/" aria-label="홈">
+                  <span class="material-symbols-rounded" aria-hidden="true">home</span>
+                </a>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span>협회소개</span>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                <span aria-current="page">치과위생사 소개</span>
+              </nav>
+              <h1>치과위생사 소개</h1>
+              <p>국민의 구강건강증진을 위해 함께하는 구강보건 전문인, 치과위생사를 소개합니다.</p>
+            </header>
+            <div class="about-dental">
+              <div class="ds-tabs ds-tabs--box" role="tablist" aria-label="치과위생사 소개 메뉴">
+                <button
+                  class="ds-tabs__item"
+                  id="dental-tab-intro"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="dental-panel-intro"
+                  tabindex="0"
+                  data-public-tab
+                >
+                  치과위생사 소개
+                </button>
+                <button
+                  class="ds-tabs__item"
+                  id="dental-tab-oath"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="dental-panel-oath"
+                  tabindex="-1"
+                  data-public-tab
+                >
+                  치과위생사 선서
+                </button>
               </div>
-              <section id="doctrine_oath" class="about-content about-oath" aria-labelledby="doctrine-oath-title" hidden>
-                <section class="about-oath__section">
-                  <h2 id="doctrine-oath-title">치과위생사 윤리강령</h2>
-                  <p class="about-oath__intro">
-                    우리 치과위생사는 구강보건교육, 예방치과처치, 치과진료협조 및 경영관리를 지원함으로써
-                    국민구강건강증진을 도모하여 궁극적으로 인간 생명의 존엄성과 의료복지의 구현에 일익을 담당하는
-                    전문인으로 치과위생사의 직무윤리 확립과 권익보호를 위해 다음의 윤리강령을 다짐한다.
-                  </p>
-                  <ul>
-                    <li>
-                      하나. 우리는 국민의 한사람으로서 준법정신에 투철하며 전문인으로서 직업적 품위와 사회적 신뢰를
-                      손상시키는 일체의 행위를 하지 않는다.
-                    </li>
-                    <li>하나. 우리는 모든 인종적·신앙적·경제적 배경을 초월하여 인류의 구강건강증진에 헌신한다.</li>
-                    <li>하나. 우리는 대상자의 가치관 관습을 존중하며, 업무상 습득한 사적인 정보를 누설하지 않는다.</li>
-                    <li>
-                      하나. 우리는 학리상 인도주의상 허용되지 아니하는 업무의 수행을 거부할 권리가 있으며, 관련직종
-                      종사자들의 고유업무를 존중하고 협력한다.
-                    </li>
-                    <li>
-                      하나. 우리는 수행업무의 질적 향상과 치위생학의 학문적 발전을 꾀하기 위해 지속적인 연구 활동을
-                      경주한다.
-                    </li>
-                    <li>
-                      하나. 우리는 치과위생사의 사회적 지위와 권익향상을 위해 공조하며, 전문성 확립을 위한 조직적 활동에
-                      적극 동참한다.
-                    </li>
-                    <li>
-                      하나. 우리는 사회적 경제적으로 공정한 취업상태를 보장받을 권리가 있으며, 비인도적인 관행에는
-                      적극적으로 대처한다.
-                    </li>
-                  </ul>
-                </section>
-                <section class="about-oath__section">
-                  <h2>치과위생사 선서문</h2>
-                  <div class="about-oath__pledge">
-                    <p>나는 나의 생애를 인류봉사를 위하여 바칠 것을 엄숙히 맹세합니다.</p>
-                    <p>나는 치과위생사의 명예와 존엄성을 유지할 것이며, 회원으로써 책임과 의무를 다할 것입니다.</p>
-                    <p>나는 인류의 구강건강증진을 위하여 박애와 봉사정신으로 헌신할 것입니다.</p>
-                    <p>나는 가르침을 잊지 않고 치과위생학의 발전을 위하여 정진할 것입니다.</p>
-                    <p>이상의 선서를 충실히 행할 것을 맹세코 선서합니다.</p>
+              <section
+                id="dental-panel-intro"
+                role="tabpanel"
+                aria-labelledby="dental-tab-intro"
+                class="about-dental__intro-panel"
+              >
+                <div class="ds-tabs" role="tablist" aria-label="치과위생사 소개 상세 메뉴">
+                  <button
+                    class="ds-tabs__item"
+                    id="dental-tab-definition"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="dental-panel-definition"
+                    tabindex="0"
+                    data-public-tab
+                  >
+                    치과위생사
+                  </button>
+                  <button
+                    class="ds-tabs__item"
+                    id="dental-tab-role"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="dental-panel-role"
+                    tabindex="-1"
+                    data-public-tab
+                  >
+                    역할
+                  </button>
+                  <button
+                    class="ds-tabs__item"
+                    id="dental-tab-system"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="dental-panel-system"
+                    tabindex="-1"
+                    data-public-tab
+                  >
+                    제도
+                  </button>
+                  <button
+                    class="ds-tabs__item"
+                    id="dental-tab-association"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="dental-panel-association"
+                    tabindex="-1"
+                    data-public-tab
+                  >
+                    대한치과위생사협회
+                  </button>
+                </div>
+                <section
+                  id="dental-panel-definition"
+                  role="tabpanel"
+                  aria-labelledby="dental-tab-definition"
+                  class="about-dental__panel"
+                >
+                  <div class="about-dental__intro">
+                    <img src="/kdha/assets/images/about/dental-hygienist-icon.svg" width="80" height="80" alt="" />
+                    <div>
+                      <h2>구강건강을 지키는 전문인</h2>
+                      <p>
+                        치과위생사는 지역주민과 치과질환을 가진 사람을 대상으로 구강보건교육, 예방치과처치, 치과진료협조
+                        및 경영관리를 지원하여 국민의 구강건강증진의 일익을 담당하는 전문직업인이다.
+                      </p>
+                    </div>
                   </div>
+                  <section class="about-dental__block">
+                    <h3>관련법률</h3>
+                    <p>
+                      치과위생사는 「의료기사 등에 관한 법률」에 근거하여 치아 및 구강질환의 예방과 위생 관리 등의
+                      업무를 수행한다. 치과위생사의 구체적인 업무 범위는 「의료기사 등에 관한 법률 시행령」의 제2조
+                      ‘별표1’에 따르며, 교정용 호선의 장착·제거, 불소 바르기, 보건기관 또는 의료기관에서 수행하는
+                      구내진단용 방사선 촬영, 임시충전, 임시 부착물의 장착, 부착물의 제거, 치석 등 침착물의 제거, 치아
+                      본뜨기, 그 밖에 치아 및 구강질환의 예방과 위생 관리에 관한 업무이다.
+                    </p>
+                  </section>
+                  <section class="about-dental__block">
+                    <h3>활동분야</h3>
+                    <p>
+                      치과위생사는 일반인들이 치과진료실에서 반드시 만나게 되는 치과계 전문인력으로 치과병·의원,
+                      종합병원을 비롯하여 지역사회 보건(지)소, 국공립의료기관, 산업체의무실, 학교구강보건실,
+                      구강보건연구기관 및 유관단체 등에서 교육적, 임상적, 치료적 서비스를 제공하여 구강건강을
+                      증진시킴으로써 최적의 전신건강을 유지하도록 하는 일에 종사하고 있다.
+                    </p>
+                  </section>
+                  <section class="about-dental__block about-dental__videos">
+                    <h3>홍보영상</h3>
+                    <p>영상으로 만나는 치과위생사의 이야기</p>
+                    <div>
+                      <a
+                        class="about-dental__video"
+                        href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src="/kdha/assets/images/news/video-thumbnail.jpg" width="690" height="423" alt="" />
+                        <span class="sr-only">치과위생사 홍보영상 1 유튜브에서 보기(새 창)</span>
+                      </a>
+                      <a
+                        class="about-dental__video"
+                        href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src="/kdha/assets/images/news/video-thumbnail.jpg" width="690" height="423" alt="" />
+                        <span class="sr-only">치과위생사 홍보영상 2 유튜브에서 보기(새 창)</span>
+                      </a>
+                    </div>
+                  </section>
+                </section>
+                <section
+                  id="dental-panel-role"
+                  role="tabpanel"
+                  aria-labelledby="dental-tab-role"
+                  class="about-dental__panel"
+                  hidden
+                >
+                  <h2 class="sr-only">역할</h2>
+                  <section class="about-dental__block">
+                    <h3>구강건강증진 및 교육연구가</h3>
+                    <p>
+                      국민의 구강건강증진을 위해 학교 사업장 및 영유아 노인 장애인 임산부 등을 대상으로 한
+                      공중구강보건사업에 있어 중추적 역할을 수행하며, 수돗물 불소화사업, 불소용액양치사업,
+                      구강보건교육자료 개발 등을 담당한다.
+                    </p>
+                  </section>
+                  <section class="about-dental__block">
+                    <h3>예방치과 처치자</h3>
+                    <p>
+                      잇몸병 및 충치 예방을 위해 치석제거(Scaling)와 치태조절, 치아홈메우기, 불소도포,
+                      구강위생용품사용법 및 칫솔질 교습, 식이조절 등을 수행하여 환자가 최적의 구강건강을 유지하도록 하는
+                      역할을 담당한다.
+                    </p>
+                  </section>
+                  <section class="about-dental__block">
+                    <h3>치과진료 협조자</h3>
+                    <p>
+                      치과의사의 지도에 따라 환자의 구강내외 치과방사선촬영 및 현상, 환자의 치료계획수립과 치료 전 교육,
+                      진료과정협조 및 치료 후 유의사항과 계속관리 교육 등을 실시하며 효율적인 치과진료가 이루어지도록
+                      진료실의 전반적인 유지관리를 담당한다.
+                    </p>
+                  </section>
+                  <section class="about-dental__block">
+                    <h3>병원관리자</h3>
+                    <p>
+                      진료에 관계되는 물적 인적 자원 관리를 담당하는 것으로 효율적 환자진료 시간배정, 진료절차관리,
+                      환자요양급여 및 의무기록 관리, 요양급여비용 청구 및 심사관리, 재료 및 약재관리, 계속관리제도 운영
+                      등 전반적인 병원관리자로서의 역할을 수행한다.
+                    </p>
+                  </section>
+                </section>
+                <section
+                  id="dental-panel-system"
+                  role="tabpanel"
+                  aria-labelledby="dental-tab-system"
+                  class="about-dental__panel"
+                  hidden
+                >
+                  <h2 class="sr-only">제도</h2>
+                  <section class="about-dental__block">
+                    <h3>치과위생사 교육제도</h3>
+                    <p>
+                      우리나라 치과위생사 교육은 1965년 연세대학교 의학기술학과에서 시작되어 현재는 전국 88개
+                      대학(교)에서 매년 5,000여 명의 학사 및 보건학사가 배출되고 있다. 치과위생사로 활동하기 위해서는
+                      반드시 치과위생사 면허를 취득하여야 하며, 치과위생사 면허 국가시험의 응시자격은 치위생(학)과를
+                      졸업하여 학위를 취득한 자에 한하여 주어진다.
+                    </p>
+                  </section>
+                  <section class="about-dental__block">
+                    <h3>치과위생사 면허제도</h3>
+                    <p>
+                      잇몸병 및 충치 예방을 위해 치석제거(Scaling)와 치태조절, 치아홈메우기, 불소도포,
+                      구강위생용품사용법 및 칫솔질 교습, 식이조절 등을 수행하여 환자가 최적의 구강건강을 유지하도록 하는
+                      역할을 담당한다.
+                    </p>
+                  </section>
+                </section>
+                <section
+                  id="dental-panel-association"
+                  role="tabpanel"
+                  aria-labelledby="dental-tab-association"
+                  class="about-dental__panel"
+                  hidden
+                >
+                  <h2 class="sr-only">대한치과위생사협회</h2>
+                  <p class="about-dental__text">
+                    1977년에 설립한 대한 치과위생사협회는 1982년 사단법인으로 인가된 보건복지부 산하단체로, 전국 14개
+                    시도회를 비롯한 2개의 산하단체와 4개의 학회 등의 조직으로 구성된 전국조직망을 통해 국민의
+                    구강건강증진과 치과위생사의 진보적인 학술연마 및 윤리확립, 권익향상, 복리증진 등의 사업을 추진하고
+                    있다.
+                  </p>
+                  <p class="about-dental__text">
+                    대한치과위생사협회는 1989년 세계치과위생사연맹(IFDH)에 가입하였으며, 인류에게 전신건강의 기초인
+                    구강보건 분야에 질 높은 예방 서비스를 제공하고 전 세계 치과위생사간의 지식과 정보교류를 통한
+                    치과위생사의 발전을 목적으로 설립된 IFDH는 현재 25개국의 치과위생사들이 참여하여 활동하고 있는
+                    국제단체이다.
+                  </p>
+                </section>
+              </section>
+              <section
+                id="dental-panel-oath"
+                role="tabpanel"
+                aria-labelledby="dental-tab-oath"
+                class="about-oath"
+                hidden
+              >
+                <h2>치과위생사 윤리강령</h2>
+                <p class="about-oath__preface">
+                  우리 치과위생사는 구강보건교육, 예방치과처치, 치과진료협조 및 경영관리를 지원함으로써
+                  국민구강건강증진을 도모하여 궁극적으로 인간 생명의 존엄성과 의료복지의 구현에 일익을 담당하는
+                  전문인으로 치과위생사의 직무윤리 확립과 권익보호를 위해 다음의 윤리강령을 다짐한다.
+                </p>
+                <ol class="about-oath__ethics">
+                  <li>
+                    <span aria-hidden="true">하나.</span>
+                    우리는 국민의 한사람으로서 준법정신에 투철하며 전문인으로서 직업적 품위와 사회적 신뢰를 손상시키는
+                    일체의 행위를 하지 않는다.
+                  </li>
+                  <li>
+                    <span aria-hidden="true">하나.</span>
+                    우리는 모든 인종적·신앙적·경제적 배경을 초월하여 인류의 구강건강증진에 헌신한다.
+                  </li>
+                  <li>
+                    <span aria-hidden="true">하나.</span>
+                    우리는 대상자의 가치관 관습을 존중하며, 업무상 습득한 사적인 정보를 누설하지 않는다.
+                  </li>
+                  <li>
+                    <span aria-hidden="true">하나.</span>
+                    우리는 학리상 인도주의상 허용되지 아니하는 업무의 수행을 거부할 권리가 있으며, 관련직종 종사자들의
+                    고유업무를 존중하고 협력한다.
+                  </li>
+                  <li>
+                    <span aria-hidden="true">하나.</span>
+                    우리는 수행업무의 질적 향상과 치위생학의 학문적 발전을 꾀하기 위해 지속적인 연구 활동을 경주한다.
+                  </li>
+                  <li>
+                    <span aria-hidden="true">하나.</span>
+                    우리는 치과위생사의 사회적 지위와 권익향상을 위해 공조하며, 전문성 확립을 위한 조직적 활동에 적극
+                    동참한다.
+                  </li>
+                  <li>
+                    <span aria-hidden="true">하나.</span>
+                    우리는 사회적 경제적으로 공정한 취업상태를 보장받을 권리가 있으며, 비인도적인 관행에는 적극적으로
+                    대처한다.
+                  </li>
+                </ol>
+                <section class="about-oath__pledge" aria-labelledby="dental-pledge-title">
+                  <h3 id="dental-pledge-title">치과위생사 선서문</h3>
+                  <p>나는 나의 생애를 인류봉사를 위하여 바칠 것을 엄숙히 맹세합니다.</p>
+                  <p>나는 치과위생사의 명예와 존엄성을 유지할 것이며, 회원으로써 책임과 의무를 다할 것입니다.</p>
+                  <p>나는 인류의 구강건강증진을 위하여 박애와 봉사정신으로 헌신할 것입니다.</p>
+                  <p>나는 가르침을 잊지 않고 치과위생학의 발전을 위하여 정진할 것입니다.</p>
+                  <p>이상의 선서를 충실히 행할 것을 맹세코 선서합니다.</p>
                 </section>
               </section>
             </div>
@@ -586,56 +597,47 @@
             />
           </a>
           <address class="site-footer__address">
-            105-82-07361(통신판매번호 : 제2010-서울동대문-0959호)　|　대표자 : 박정란
-            <br />
-            서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)
+            <span class="site-footer__info-row">
+              <span>
+                105-82-07361
+                <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
+              </span>
+              <span>대표자 : 박정란</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
           </address>
-          <div class="site-footer__contact-row">
-            <p class="site-footer__contact">TEL. 02-2236-0914　 FAX. 02-2236-0915</p>
+          <p class="site-footer__contact">
+            <span>TEL. 02-2236-0914</span>
+            <span>FAX. 02-2236-0915</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/related-sites/">관련사이트</a>
+              <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
             <div class="site-footer__site-selects">
-              <select aria-label="관련사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">관련사이트</option>
-                <option value="http://www.longtermcare.or.kr/npbs/">노인장기요양보험</option>
-                <option value="https://www.mohw.go.kr/">보건복지부</option>
-                <option value="http://lic.mohw.go.kr/">면허번호 조회·면허증 재교부 신청</option>
-                <option value="https://www.kdha.or.kr/mypage/card.aspx">대한치과위생사협회 회원증카드 발급안내</option>
-                <option value="https://www.kdha.or.kr/education/refresher.aspx#institute">
-                  대한치과위생사협회 치위생교육원
-                </option>
-                <option value="https://www.instagram.com/krdha77/">대한치과위생사협회 공식 인스타그램</option>
-                <option value="https://ko-kr.facebook.com/koreadha/">대한치과위생사협회 공식 페이스북</option>
-                <option value="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w">
-                  대한치과위생사협회 공식 유튜브 채널
-                </option>
-                <option value="http://kdhamall.or.kr">KDHA mall</option>
-              </select>
-              <select aria-label="시도회사이트 (선택 시 새 창)" data-custom-select data-related-site>
-                <option value="">시도회사이트</option>
-                <option value="https://seoul.kdha.or.kr">서울특별시회</option>
-                <option value="https://gg.kdha.or.kr">경기도회</option>
-                <option value="https://incheon.kdha.or.kr">인천광역시회</option>
-                <option value="https://gangwon.kdha.or.kr">강원특별자치도회</option>
-                <option value="https://ds.kdha.or.kr">대전·세종회</option>
-                <option value="https://chungbuk.kdha.or.kr">충청북도회</option>
-                <option value="https://cn.kdha.or.kr">충청남도회</option>
-                <option value="https://busan.kdha.or.kr">부산광역시회</option>
-                <option value="https://dg.kdha.or.kr">대구·경북회</option>
-                <option value="https://gyeongnam.kdha.or.kr">경상남도회</option>
-                <option value="https://ulsan.kdha.or.kr">울산광역시회</option>
-                <option value="https://jeonbuk.kdha.or.kr">전북특별자치도회</option>
-                <option value="https://gj.kdha.or.kr">광주·전남회</option>
-                <option value="https://jeju.kdha.or.kr">제주특별자치도회</option>
+              <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">시도회 홈페이지</option>
+                <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
               </select>
             </div>
           </div>
           <div class="site-footer__bottom">
-            <div class="site-footer__legal">
-              <div class="site-footer__legal-links">
-                <a href="/kdha/privacy/">개인정보처리방침</a>
-                <a class="site-footer__mobile-link" href="/kdha/remote-support/">원격지원</a>
-              </div>
-              <p>Copyright ⓒ 2026 KDHA. All rights Reserved</p>
-            </div>
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
             <div class="social-links">
               <a
                 class="social-links__item"
@@ -675,5 +677,7 @@
     <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
     <script src="/kdha/assets/js/common.js"></script>
     <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/about.js"></script>
   </body>
 </html>

@@ -19,8 +19,35 @@
         <section class="foundation-section">
           <div class="foundation-section__heading">
             <h2>Text Field</h2>
-            <p>Figma Input Field의 M 48px, L 56px와 기본·포커스·오류·비활성 상태입니다.</p>
+            <p>
+              Figma Input Field의 M 48px, L 56px와 기본·포커스·오류·비활성 상태입니다. L(--large)은 모바일(767px
+              이하)에서 컴포넌트가 자동으로 M 48px로 줄이므로 페이지별로 모바일 높이를 다시 지정하지 않습니다.
+            </p>
           </div>
+          <table class="component-usage-table">
+            <thead>
+              <tr>
+                <th scope="col">크기</th>
+                <th scope="col">PC</th>
+                <th scope="col">모바일</th>
+                <th scope="col">클래스</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>M</td>
+                <td>48px</td>
+                <td>48px</td>
+                <td>.form-field · select[data-select-size="m"] · .ds-search--medium</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td>56px</td>
+                <td>48px (자동)</td>
+                <td>.form-field--large · select[data-select-size="l"] · .form-action-button · .ds-search</td>
+              </tr>
+            </tbody>
+          </table>
           <div class="form-specimen-grid">
             <article>
               <span>Default</span>
@@ -116,6 +143,97 @@
             </label>
           </article>
         </section>
+        <section class="foundation-section" id="search">
+          <div class="foundation-section__heading">
+            <h2>Search</h2>
+            <p>
+              Figma Search · 알약형 L 56px / M 48px(모바일은 M). 셀렉트·입력·버튼을 묶은 조회 박스는 공통 컴포넌트를
+              조합하고, 박스 배경·배치만 페이지 클래스에서 지정합니다.
+            </p>
+          </div>
+          <div class="form-specimen-grid">
+            <article>
+              <span>Search L · 56px</span>
+              <form class="ds-search" role="search" onsubmit="return false;">
+                <label class="sr-only" for="ds-search-l">검색어</label>
+                <input id="ds-search-l" type="search" placeholder="내용을 입력해 주세요" />
+                <button type="submit" aria-label="검색">
+                  <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                </button>
+              </form>
+            </article>
+            <article>
+              <span>Search M · 48px</span>
+              <form class="ds-search ds-search--medium" role="search" onsubmit="return false;">
+                <label class="sr-only" for="ds-search-m">검색어</label>
+                <input id="ds-search-m" type="search" placeholder="내용을 입력해 주세요" />
+                <button type="submit" aria-label="검색">
+                  <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                </button>
+              </form>
+            </article>
+            <article class="form-specimen-grid__wide">
+              <span>조회 박스 (Select L + Input L + Action Button)</span>
+              <form class="community-search form-field form-field--large" role="search" onsubmit="return false;">
+                <select data-custom-select data-select-size="l" aria-label="검색 조건">
+                  <option value="all">선택</option>
+                  <option value="title">제목</option>
+                </select>
+                <input type="search" aria-label="검색어" placeholder="검색어를 입력해 주세요" />
+                <button class="form-action-button" type="submit">검색</button>
+              </form>
+            </article>
+          </div>
+          <pre class="component-code"><code>&lt;!-- 알약형 검색 --&gt;
+&lt;form class="ds-search" role="search"&gt;
+  &lt;input type="search" placeholder="내용을 입력해 주세요" /&gt;
+  &lt;button type="submit" aria-label="검색"&gt;&lt;span class="material-symbols-rounded" aria-hidden="true"&gt;search&lt;/span&gt;&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;!-- 조회 박스: 공통 컴포넌트 조합 + 페이지 배치 클래스 --&gt;
+&lt;form class="community-search form-field form-field--large" role="search"&gt;
+  &lt;select data-custom-select data-select-size="l"&gt;...&lt;/select&gt;
+  &lt;input type="search" /&gt;
+  &lt;button class="form-action-button" type="submit"&gt;검색&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </section>
+        <section class="foundation-section" id="upload">
+          <div class="foundation-section__heading">
+            <h2>File Upload &amp; Guide</h2>
+            <p>
+              드래그 영역·파일 항목(44px)·안내 문구(설명문구). 안내 문구는 ds-guide-list를 사용하며, 화면별 여백 차이는
+              페이지 클래스에서 조정합니다.
+            </p>
+          </div>
+          <div class="form-specimen-single upload-specimen">
+            <div class="account-file-upload">
+              <p>
+                이곳에 파일을 드래그 하거나 파일찾기 버튼으로 파일을 추가해주세요.
+                <br />
+                * 파일당 10MB 이하, 최대 5개까지 등록 가능합니다.
+              </p>
+              <label class="ds-button ds-button--outline ds-button--small" for="ds-upload-sample">파일찾기</label>
+              <input class="sr-only" id="ds-upload-sample" type="file" />
+            </div>
+            <div class="account-file-upload__item">
+              <span data-file-name>파일명.pdf</span>
+              <span class="account-file-upload__meta">
+                <small>1.2MB</small>
+                <button type="button" aria-label="파일명.pdf 삭제">
+                  <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                </button>
+              </span>
+            </div>
+            <ul class="ds-guide-list">
+              <li class="ds-guide-list__item">
+                <span class="ds-guide-list__content">파일은 최대 5개까지 업로드할 수 있습니다.</span>
+              </li>
+              <li class="ds-guide-list__item">
+                <span class="ds-guide-list__content">파일당 최대 10MB까지 업로드할 수 있습니다.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
         <section class="foundation-section">
           <div class="foundation-section__heading">
             <h2>Selection</h2>
@@ -152,7 +270,7 @@
             <code>.form-field.has-error</code>
             <span>오류 상태</span>
             <code>.form-field--large</code>
-            <span>L 크기 입력창(56px)</span>
+            <span>L 크기 입력창(PC 56px · 모바일 48px 자동)</span>
             <code>.form-field--helper</code>
             <span>도움말 노출</span>
             <code>.form-field--wide</code>
@@ -165,6 +283,14 @@
             <span>공통 커스텀 셀렉트</span>
             <code>.form-check</code>
             <span>체크박스·라디오</span>
+            <code>.form-datepicker</code>
+            <span>날짜 선택 입력</span>
+            <code>.ds-search</code>
+            <span>알약형 검색 L(56px) · --medium M(48px)</span>
+            <code>.account-file-upload</code>
+            <span>파일 드래그 영역 · __item 파일 항목</span>
+            <code>.ds-guide-list</code>
+            <span>안내 문구(설명문구)</span>
           </div>
         </section>
       </div>
