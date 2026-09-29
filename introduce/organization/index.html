@@ -9,7 +9,7 @@
   <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <div class="site">
-      <header class="site-header site-header--standard">
+      <header class="site-header">
         <div class="site-header__inner layout-container">
           <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
             <img
@@ -277,22 +277,22 @@
       </header>
 
       <main id="main-content">
-        <div class="community-page about-page">
-          <div class="community-container">
+        <header class="page-hero">
+          <nav aria-label="현재 위치">
+            <a href="/kdha/main/" aria-label="홈">
+              <span class="material-symbols-rounded" aria-hidden="true">home</span>
+            </a>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span>협회소개</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span aria-current="page">협회조직</span>
+          </nav>
+          <h1>협회조직</h1>
+          <p>대한치과위생사협회를 이끌어가는 조직과 임원을 소개합니다.</p>
+        </header>
+        <div id="main-body" class="main-body">
+          <div class="about-page">
             <!-- KD-US-ORG-01-01 -->
-            <header class="ofe-hero">
-              <nav aria-label="현재 위치">
-                <a href="/kdha/main/" aria-label="홈">
-                  <span class="material-symbols-rounded" aria-hidden="true">home</span>
-                </a>
-                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-                <span>협회소개</span>
-                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-                <span aria-current="page">협회조직</span>
-              </nav>
-              <h1>협회조직</h1>
-              <p>대한치과위생사협회를 이끌어가는 조직과 임원을 소개합니다.</p>
-            </header>
             <div class="about-organization" data-about-organization>
               <!-- 보라색 항목(회장·분과위원회·시도회·산하단체·학회)을 선택하면 아래에 상세 내용을 표시합니다. -->
               <nav class="about-org-chart" aria-label="협회 조직도">
@@ -1160,8 +1160,19 @@
             </div>
           </div>
         </div>
+        <aside class="page-banner">
+          <div>
+            <h2>치위협보 기사제보 · 광고문의</h2>
+            <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+          </div>
+          <a href="mailto:press@kdha.or.kr">
+            02-6213-2735
+            <span>·</span>
+            press@kdha.or.kr
+          </a>
+        </aside>
       </main>
-      <footer class="site-footer site-footer--standard">
+      <footer class="site-footer">
         <div class="site-footer__inner layout-container">
           <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
             <img

@@ -9,7 +9,7 @@
   <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <div class="site">
-      <header class="site-header site-header--standard">
+      <header class="site-header">
         <div class="site-header__inner layout-container">
           <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
             <img
@@ -277,24 +277,24 @@
       </header>
 
       <main id="main-content">
-        <div class="community-page about-page">
-          <div class="community-container">
+        <header class="page-hero">
+          <nav aria-label="현재 위치">
+            <a href="/kdha/main/" aria-label="홈">
+              <span class="material-symbols-rounded" aria-hidden="true">home</span>
+            </a>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span>협회소개</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span aria-current="page">치과위생사 소개</span>
+          </nav>
+          <h1>치과위생사 소개</h1>
+          <p>국민의 구강건강증진을 위해 함께하는 구강보건 전문인, 치과위생사를 소개합니다.</p>
+        </header>
+        <div id="main-body" class="main-body">
+          <div class="about-page">
             <!-- KD-US-DEN-01-01 · KD-US-DEN-02-01 -->
-            <header class="ofe-hero">
-              <nav aria-label="현재 위치">
-                <a href="/kdha/main/" aria-label="홈">
-                  <span class="material-symbols-rounded" aria-hidden="true">home</span>
-                </a>
-                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-                <span>협회소개</span>
-                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-                <span aria-current="page">치과위생사 소개</span>
-              </nav>
-              <h1>치과위생사 소개</h1>
-              <p>국민의 구강건강증진을 위해 함께하는 구강보건 전문인, 치과위생사를 소개합니다.</p>
-            </header>
             <div class="about-dental">
-              <div class="ds-tabs ds-tabs--box" role="tablist" aria-label="치과위생사 소개 메뉴">
+              <div class="ds-tabs ds-tabs--box ds-tabs--fill" role="tablist" aria-label="치과위생사 소개 메뉴">
                 <button
                   class="ds-tabs__item"
                   id="dental-tab-intro"
@@ -415,24 +415,40 @@
                     <h3>홍보영상</h3>
                     <p>영상으로 만나는 치과위생사의 이야기</p>
                     <div>
-                      <a
-                        class="about-dental__video"
-                        href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img src="/kdha/assets/images/news/video-thumbnail.jpg" width="690" height="423" alt="" />
-                        <span class="sr-only">치과위생사 홍보영상 1 유튜브에서 보기(새 창)</span>
-                      </a>
-                      <a
-                        class="about-dental__video"
-                        href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img src="/kdha/assets/images/news/video-thumbnail.jpg" width="690" height="423" alt="" />
-                        <span class="sr-only">치과위생사 홍보영상 2 유튜브에서 보기(새 창)</span>
-                      </a>
+                      <div class="about-dental__video">
+                        <iframe
+                          src="https://www.youtube-nocookie.com/embed/dpLLW8Xfou4"
+                          title="치과위생사 홍보영상 1"
+                          loading="lazy"
+                          allow="
+                            accelerometer;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share;
+                          "
+                          referrerpolicy="strict-origin-when-cross-origin"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                      <div class="about-dental__video">
+                        <iframe
+                          src="https://www.youtube-nocookie.com/embed/nveNsG0coT0"
+                          title="치과위생사 홍보영상 2"
+                          loading="lazy"
+                          allow="
+                            accelerometer;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share;
+                          "
+                          referrerpolicy="strict-origin-when-cross-origin"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
                     </div>
                   </section>
                 </section>
@@ -584,8 +600,19 @@
             </div>
           </div>
         </div>
+        <aside class="page-banner">
+          <div>
+            <h2>치위협보 기사제보 · 광고문의</h2>
+            <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+          </div>
+          <a href="mailto:press@kdha.or.kr">
+            02-6213-2735
+            <span>·</span>
+            press@kdha.or.kr
+          </a>
+        </aside>
       </main>
-      <footer class="site-footer site-footer--standard">
+      <footer class="site-footer">
         <div class="site-footer__inner layout-container">
           <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
             <img

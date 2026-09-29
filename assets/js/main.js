@@ -122,6 +122,8 @@ $(function () {
     new Swiper('.main-b-hero__slider', {
       loop: true,
       speed: 700,
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
       autoplay: { delay: 5000, disableOnInteraction: false },
       pagination: { el: '.main-b-hero__pagination', clickable: true },
       a11y: { paginationBulletMessage: '{{index}}번째 배너로 이동' },

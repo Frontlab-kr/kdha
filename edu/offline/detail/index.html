@@ -11,7 +11,7 @@
   </head>
   <body class="edu-site">
     <a class="skip-link" href="#main-content">본문 바로가기</a>
-    <header class="site-header site-header--education">
+    <header class="site-header">
       <div class="site-header__inner layout-container">
         <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
           <img
@@ -166,19 +166,19 @@
     </header>
 
     <main id="main-content">
-      <div class="ofe-page">
-        <header class="ofe-hero ofe-container">
-          <nav aria-label="현재 위치">
-            <a href="/kdha/edu/" aria-label="교육원 홈">
-              <span class="material-symbols-rounded" aria-hidden="true">home</span>
-            </a>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <span>현장교육</span>
-          </nav>
-          <h1>현장교육</h1>
-          <p>치과위생사를 위한 현장교육 정보와 신청 서비스를 편리하게 이용하세요.</p>
-        </header>
-        <div class="ofe-container ofe-detail-layout">
+      <header class="page-hero">
+        <nav aria-label="현재 위치">
+          <a href="/kdha/edu/" aria-label="교육원 홈">
+            <span class="material-symbols-rounded" aria-hidden="true">home</span>
+          </a>
+          <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+          <span>현장교육</span>
+        </nav>
+        <h1>현장교육</h1>
+        <p>치과위생사를 위한 현장교육 정보와 신청 서비스를 편리하게 이용하세요.</p>
+      </header>
+      <div id="main-body" class="main-body">
+        <div class="ofe-detail-layout">
           <div class="ofe-detail-layout__body">
             <div class="ofe-detail-content">
               <article class="ofe-panel">
@@ -310,30 +310,59 @@
                     <option value="2024">2024년</option>
                   </select>
                 </div>
-                <div class="form-field">
-                  <h2 class="ofe-application__title"><label for="ofe-room">강의실 선택</label></h2>
-                  <span class="form-input-action">
-                    <input id="ofe-room" name="room" placeholder="강의실을 선택해 주세요" readonly />
-                    <button
-                      type="button"
-                      class="form-action-button form-action-button--medium"
-                      data-dialog-open="classroom-dialog"
-                    >
-                      선택
-                    </button>
-                  </span>
-                </div>
-                <fieldset>
-                  <legend><h2 class="ofe-application__title">이수 희망 평점 선택</h2></legend>
-                  <div class="ofe-checks">
-                    <label class="form-check">
-                      <input type="checkbox" name="session" value="1" />
-                      1교시 (2평점)
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="session" value="2" />
-                      2교시 (2평점)
-                    </label>
+                <fieldset class="ofe-rooms" data-ofe-rooms>
+                  <legend><h2 class="ofe-application__title">강의실별 교시 선택</h2></legend>
+                  <p class="ofe-rooms__desc">오전 1교시 선택 시 2교시도 함께 선택됩니다.</p>
+                  <div class="ofe-room">
+                    <h3 class="ofe-room__name">101호</h3>
+                    <div class="ofe-room__part">
+                      <h4>오전</h4>
+                      <div class="ofe-slots">
+                        <label class="ofe-slot">
+                          <input type="checkbox" name="session" value="101-am-1" data-part="am" data-order="1" />
+                          <strong>1교시 (2평점)</strong>
+                          <span>09:00~10:00</span>
+                        </label>
+                        <label class="ofe-slot">
+                          <input type="checkbox" name="session" value="101-am-2" data-part="am" data-order="2" />
+                          <strong>2교시 (2평점)</strong>
+                          <span>11:00~12:00</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="ofe-room__part">
+                      <h4>오후</h4>
+                      <div class="ofe-slots">
+                        <label class="ofe-slot">
+                          <input type="checkbox" name="session" value="101-pm-1" data-part="pm" data-order="1" />
+                          <strong>1교시 (2평점)</strong>
+                          <span>13:00~14:00</span>
+                        </label>
+                        <label class="ofe-slot">
+                          <input type="checkbox" name="session" value="101-pm-2" data-part="pm" data-order="2" />
+                          <strong>2교시 (2평점)</strong>
+                          <span>14:00~15:00</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ofe-room">
+                    <h3 class="ofe-room__name">102호</h3>
+                    <div class="ofe-room__part">
+                      <h4>오전</h4>
+                      <div class="ofe-slots">
+                        <label class="ofe-slot">
+                          <input type="checkbox" name="session" value="102-am-1" data-part="am" data-order="1" />
+                          <strong>1교시 (2평점)</strong>
+                          <span>09:00~10:00</span>
+                        </label>
+                        <label class="ofe-slot">
+                          <input type="checkbox" name="session" value="102-am-2" data-part="am" data-order="2" />
+                          <strong>2교시 (2평점)</strong>
+                          <span>11:00~12:00</span>
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 </fieldset>
                 <div class="ofe-credit">
@@ -390,7 +419,7 @@
                 </section>
                 <p class="ofe-error" id="ofe-apply-error" role="alert" hidden></p>
                 <a class="ds-button ds-button--large ds-button--primary" href="/kdha/edu/offline/payment/">
-                  수강 신청 및 결제
+                  수강 신청 및 결제하기
                 </a>
               </form>
             </aside>
@@ -404,42 +433,19 @@
             수강 신청 및 결제
           </button>
         </div>
-        <aside class="ofe-contact ofe-container">
-          <div>
-            <h2>치위협보 기사제보 · 광고문의</h2>
-            <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
-          </div>
-          <a href="mailto:press@kdha.or.kr">
-            02-6213-2735
-            <span>·</span>
-            press@kdha.or.kr
-          </a>
-        </aside>
       </div>
+      <aside class="page-banner">
+        <div>
+          <h2>치위협보 기사제보 · 광고문의</h2>
+          <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+        </div>
+        <a href="mailto:press@kdha.or.kr">
+          02-6213-2735
+          <span>·</span>
+          press@kdha.or.kr
+        </a>
+      </aside>
     </main>
-    <dialog class="edu-dialog ofe-dialog" id="classroom-dialog" aria-labelledby="classroom-dialog-title">
-      <button type="button" class="edu-dialog__close material-symbols-rounded" data-dialog-close aria-label="닫기">
-        close
-      </button>
-      <h2 id="classroom-dialog-title">강의실 선택</h2>
-      <form id="ofe-classroom-form">
-        <div class="ofe-room-options">
-          <label class="form-check">
-            <input type="radio" name="classroom" value="협회 교육장" required />
-            협회 교육장
-          </label>
-          <label class="form-check">
-            <input type="radio" name="classroom" value="제2강의실" />
-            제2강의실
-          </label>
-        </div>
-        <div class="edu-dialog__actions">
-          <button type="button" class="ds-button ds-button--large ds-button--primary" data-dialog-close>
-            선택 완료
-          </button>
-        </div>
-      </form>
-    </dialog>
     <dialog
       class="edu-dialog edu-dialog--auth ofe-privacy-dialog"
       id="privacy-dialog"
@@ -496,7 +502,7 @@
         <a class="ds-button ds-button--large ds-button--primary" href="#">치과위생사회원 전환 신청</a>
       </div>
     </dialog>
-    <footer class="site-footer site-footer--standard">
+    <footer class="site-footer">
       <div class="site-footer__inner layout-container">
         <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
           <img

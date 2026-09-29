@@ -9,7 +9,7 @@
   </head>
   <body class="edu-site">
     <a class="skip-link" href="#main-content">본문 바로가기</a>
-    <header class="site-header site-header--education">
+    <header class="site-header">
       <div class="site-header__inner layout-container">
         <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
           <img
@@ -164,132 +164,134 @@
     </header>
 
     <main id="main-content">
-      <div class="ofe-page cbe-page">
-        <header class="ofe-hero ofe-container">
-          <nav aria-label="현재 위치">
-            <a href="/kdha/edu/"><span class="material-symbols-rounded">home</span></a>
-            <span class="material-symbols-rounded">arrow_forward_ios</span>
-            <span>사이버교육</span>
-          </nav>
-          <h1>사이버교육</h1>
-          <p>치과위생사를 위한 사이버교육 정보와 신청 서비스를 편리하게 이용하세요.</p>
-        </header>
-        <form class="ofe-container ofe-payment">
-          <h2 class="ofe-section-title">결제 진행</h2>
-          <section class="ofe-panel ofe-payment-summary">
-            <h3>결제 내역</h3>
-            <div class="ofe-payment-summary__course">
-              <h4 class="ofe-payment-course-title">
-                <span class="ds-badge ds-badge--danger ds-badge--outline">필수</span>
-                <span>청구오류 사례로 살펴보는 보험청구 : 사소하지만 자주하는 실수</span>
-              </h4>
-              <dl class="ofe-data ofe-data--two">
-                <div>
-                  <dt>수강료</dt>
-                  <dd class="ofe-price-change">
-                    <del>40,000원</del>
-                    <span class="material-symbols-rounded">arrow_right_alt</span>
-                    <strong>30,000원</strong>
-                  </dd>
+      <header class="page-hero">
+        <nav aria-label="현재 위치">
+          <a href="/kdha/edu/"><span class="material-symbols-rounded">home</span></a>
+          <span class="material-symbols-rounded">arrow_forward_ios</span>
+          <span>사이버교육</span>
+        </nav>
+        <h1>사이버교육</h1>
+        <p>치과위생사를 위한 사이버교육 정보와 신청 서비스를 편리하게 이용하세요.</p>
+      </header>
+      <div id="main-body" class="main-body">
+        <div class="cbe-page">
+          <form class="ofe-payment">
+            <h2 class="ofe-section-title">결제 진행</h2>
+            <section class="ofe-panel ofe-payment-summary">
+              <h3>결제 내역</h3>
+              <div class="ofe-payment-summary__course">
+                <h4 class="ofe-payment-course-title">
+                  <span class="ds-badge ds-badge--danger ds-badge--outline">필수</span>
+                  <span>청구오류 사례로 살펴보는 보험청구 : 사소하지만 자주하는 실수</span>
+                </h4>
+                <dl class="ofe-data ofe-data--two">
+                  <div>
+                    <dt>수강료</dt>
+                    <dd class="ofe-price-change">
+                      <del>40,000원</del>
+                      <span class="material-symbols-rounded">arrow_right_alt</span>
+                      <strong>30,000원</strong>
+                    </dd>
+                  </div>
+                  <div class="ofe-data__coupon">
+                    <dt>쿠폰 할인</dt>
+                    <dd>
+                      <span class="ofe-data__coupon-copy">
+                        <strong>신규 회원 할인 쿠폰 10,000원 할인</strong>
+                        <small>이 강좌에 적용됨</small>
+                      </span>
+                      <button
+                        class="ds-button ds-button--small ds-button--outline"
+                        type="button"
+                        data-dialog-open="coupon-dialog"
+                      >
+                        쿠폰 변경
+                      </button>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </section>
+            <section class="ofe-panel">
+              <h3>마일리지 / 쿠폰 적용</h3>
+              <div class="ofe-discounts">
+                <div class="form-field form-field--large">
+                  <label for="cbe-mileage">
+                    보유 마일리지 사용
+                    <small>보유 마일리지 16,500P</small>
+                  </label>
+                  <span class="form-input-action">
+                    <input id="cbe-mileage" type="text" placeholder="0P" />
+                    <button class="form-action-button" type="button">전액 사용</button>
+                  </span>
                 </div>
-                <div class="ofe-data__coupon">
+              </div>
+              <ul class="ds-guide-list ofe-notice">
+                <li>마일리지는 100P 단위로 사용 가능합니다.</li>
+                <li>쿠폰과 마일리지 중복 사용이 가능합니다.</li>
+              </ul>
+            </section>
+            <section class="ofe-total ofe-total--breakdown" aria-label="결제 금액 요약">
+              <dl class="ofe-total__details">
+                <div>
+                  <dt>총 수강료</dt>
+                  <dd>120,000원</dd>
+                </div>
+                <div>
                   <dt>쿠폰 할인</dt>
-                  <dd>
-                    <span class="ofe-data__coupon-copy">
-                      <strong>신규 회원 할인 쿠폰 10,000원 할인</strong>
-                      <small>이 강좌에 적용됨</small>
-                    </span>
-                    <button
-                      class="ds-button ds-button--small ds-button--outline"
-                      type="button"
-                      data-dialog-open="coupon-dialog"
-                    >
-                      쿠폰 변경
-                    </button>
-                  </dd>
+                  <dd>−10,000원</dd>
+                </div>
+                <div>
+                  <dt>마일리지 사용 (5,000P)</dt>
+                  <dd>−5,000원</dd>
                 </div>
               </dl>
+              <div class="ofe-total__amount">
+                <span>최종 결제 금액</span>
+                <strong>105,000원</strong>
+              </div>
+            </section>
+            <section class="ofe-panel">
+              <h3>결제수단 선택</h3>
+              <fieldset class="ofe-payment-method">
+                <legend class="ofe-sr">결제수단</legend>
+                <div class="ds-choice-cards">
+                  <label class="ds-choice-card">
+                    <input class="ofe-sr" type="radio" name="pay" value="card" checked />
+                    <img src="/kdha/assets/online/payment-card.png" width="48" height="48" alt="" />
+                    <span>신용카드</span>
+                  </label>
+                  <label class="ds-choice-card">
+                    <input class="ofe-sr" type="radio" name="pay" value="easy" />
+                    <img src="/kdha/assets/online/payment-easy.png" width="48" height="48" alt="" />
+                    <span>간편결제</span>
+                  </label>
+                  <label class="ds-choice-card">
+                    <input class="ofe-sr" type="radio" name="pay" value="transfer" />
+                    <img src="/kdha/assets/online/payment-transfer.png" width="48" height="48" alt="" />
+                    <span>계좌이체</span>
+                  </label>
+                </div>
+              </fieldset>
+            </section>
+            <div class="ofe-actions">
+              <a class="ds-button ds-button--large ds-button--outline" href="/kdha/edu/online/detail/">이전</a>
+              <a class="ds-button ds-button--large ds-button--primary" href="/kdha/edu/online/complete/">결제</a>
             </div>
-          </section>
-          <section class="ofe-panel">
-            <h3>마일리지 / 쿠폰 적용</h3>
-            <div class="ofe-discounts">
-              <div class="form-field form-field--large">
-                <label for="cbe-mileage">
-                  보유 마일리지 사용
-                  <small>보유 마일리지 16,500P</small>
-                </label>
-                <span class="form-input-action">
-                  <input id="cbe-mileage" type="text" placeholder="0P" />
-                  <button class="form-action-button" type="button">전액 사용</button>
-                </span>
-              </div>
-            </div>
-            <ul class="ds-guide-list ofe-notice">
-              <li>마일리지는 100P 단위로 사용 가능합니다.</li>
-              <li>쿠폰과 마일리지 중복 사용이 가능합니다.</li>
-            </ul>
-          </section>
-          <section class="ofe-total ofe-total--breakdown" aria-label="결제 금액 요약">
-            <dl class="ofe-total__details">
-              <div>
-                <dt>총 수강료</dt>
-                <dd>120,000원</dd>
-              </div>
-              <div>
-                <dt>쿠폰 할인</dt>
-                <dd>−10,000원</dd>
-              </div>
-              <div>
-                <dt>마일리지 사용 (5,000P)</dt>
-                <dd>−5,000원</dd>
-              </div>
-            </dl>
-            <div class="ofe-total__amount">
-              <span>최종 결제 금액</span>
-              <strong>105,000원</strong>
-            </div>
-          </section>
-          <section class="ofe-panel">
-            <h3>결제수단 선택</h3>
-            <fieldset class="ofe-payment-method">
-              <legend class="ofe-sr">결제수단</legend>
-              <div class="ds-choice-cards">
-                <label class="ds-choice-card">
-                  <input class="ofe-sr" type="radio" name="pay" value="card" checked />
-                  <img src="/kdha/assets/online/payment-card.png" width="48" height="48" alt="" />
-                  <span>신용카드</span>
-                </label>
-                <label class="ds-choice-card">
-                  <input class="ofe-sr" type="radio" name="pay" value="easy" />
-                  <img src="/kdha/assets/online/payment-easy.png" width="48" height="48" alt="" />
-                  <span>간편결제</span>
-                </label>
-                <label class="ds-choice-card">
-                  <input class="ofe-sr" type="radio" name="pay" value="transfer" />
-                  <img src="/kdha/assets/online/payment-transfer.png" width="48" height="48" alt="" />
-                  <span>계좌이체</span>
-                </label>
-              </div>
-            </fieldset>
-          </section>
-          <div class="ofe-actions">
-            <a class="ds-button ds-button--large ds-button--outline" href="/kdha/edu/online/detail/">이전</a>
-            <a class="ds-button ds-button--large ds-button--primary" href="/kdha/edu/online/complete/">결제</a>
-          </div>
-        </form>
-        <aside class="ofe-contact ofe-container">
-          <div>
-            <h2>치위협보 기사제보 · 광고문의</h2>
-            <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
-          </div>
-          <a href="mailto:press@kdha.or.kr">
-            02-6213-2735
-            <span>·</span>
-            press@kdha.or.kr
-          </a>
-        </aside>
+          </form>
+        </div>
       </div>
+      <aside class="page-banner">
+        <div>
+          <h2>치위협보 기사제보 · 광고문의</h2>
+          <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+        </div>
+        <a href="mailto:press@kdha.or.kr">
+          02-6213-2735
+          <span>·</span>
+          press@kdha.or.kr
+        </a>
+      </aside>
     </main>
     <dialog
       class="edu-dialog ofe-coupon-dialog"
@@ -391,7 +393,7 @@
         </article>
       </div>
     </dialog>
-    <footer class="site-footer site-footer--standard">
+    <footer class="site-footer">
       <div class="site-footer__inner layout-container">
         <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
           <img

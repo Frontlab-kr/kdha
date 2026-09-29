@@ -9,7 +9,7 @@
   <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <div class="site user-page">
-      <header class="site-header site-header--standard">
+      <header class="site-header">
         <div class="site-header__inner layout-container">
           <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
             <img
@@ -277,128 +277,130 @@
       </header>
 
       <main id="main-content" class="user-page__main">
-        <div class="user-page__inner layout-container related-sites">
-          <!-- KD-US-REL-02-01 -->
-          <header class="ofe-hero">
-            <nav aria-label="현재 위치">
-              <a href="/kdha/main/" aria-label="홈">
-                <span class="material-symbols-rounded" aria-hidden="true">home</span>
-              </a>
-              <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-              <span aria-current="page">관련사이트</span>
-            </nav>
-            <h1>관련사이트</h1>
-            <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
-          </header>
-          <div class="related-sites__body">
-            <nav class="ds-tabs" aria-label="관련사이트 분류">
-              <a class="ds-tabs__item" href="/kdha/related-sites/">전체</a>
-              <a class="ds-tabs__item" href="/kdha/related-sites/government/" aria-current="page">정부</a>
-              <a class="ds-tabs__item" href="/kdha/related-sites/organizations/">유관단체</a>
-              <a class="ds-tabs__item" href="/kdha/related-sites/education/">교육기관</a>
-            </nav>
-            <ul class="related-site-grid">
-              <li>
-                <a
-                  class="related-site-card"
-                  href="https://www.moe.go.kr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="교육부 새 창 열림"
-                >
-                  <span class="ds-badge">정부</span>
-                  <strong>교육부</strong>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="related-site-card"
-                  href="https://www.nhic.or.kr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="국민건강보험공단 새 창 열림"
-                >
-                  <span class="ds-badge">정부</span>
-                  <strong>국민건강보험공단</strong>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="related-site-card"
-                  href="https://www.nps.or.kr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="국민연금공단 새 창 열림"
-                >
-                  <span class="ds-badge">정부</span>
-                  <strong>국민연금공단</strong>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="related-site-card"
-                  href="https://www.moel.go.kr/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="고용노동부 새 창 열림"
-                >
-                  <span class="ds-badge">정부</span>
-                  <strong>고용노동부</strong>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="related-site-card"
-                  href="https://www.mohw.go.kr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="보건복지부 새 창 열림"
-                >
-                  <span class="ds-badge">정부</span>
-                  <strong>보건복지부</strong>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="related-site-card"
-                  href="https://www.mogef.go.kr/index.jsp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="여성가족부 새 창 열림"
-                >
-                  <span class="ds-badge">정부</span>
-                  <strong>여성가족부</strong>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="related-site-card"
-                  href="https://www.kuksiwon.or.kr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="한국보건의료인국가시험원 새 창 열림"
-                >
-                  <span class="ds-badge">정부</span>
-                  <strong>한국보건의료인국가시험원</strong>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="related-site-card"
-                  href="https://www.mois.go.kr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="행정자치부 새 창 열림"
-                >
-                  <span class="ds-badge">정부</span>
-                  <strong>행정자치부</strong>
-                </a>
-              </li>
-            </ul>
+        <header class="page-hero">
+          <nav aria-label="현재 위치">
+            <a href="/kdha/main/" aria-label="홈">
+              <span class="material-symbols-rounded" aria-hidden="true">home</span>
+            </a>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span aria-current="page">관련사이트</span>
+          </nav>
+          <h1>관련사이트</h1>
+          <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
+        </header>
+        <div id="main-body" class="main-body">
+          <div class="user-page__inner related-sites">
+            <!-- KD-US-REL-02-01 -->
+            <div class="related-sites__body">
+              <nav class="ds-tabs" aria-label="관련사이트 분류">
+                <a class="ds-tabs__item" href="/kdha/related-sites/">전체</a>
+                <a class="ds-tabs__item" href="/kdha/related-sites/government/" aria-current="page">정부</a>
+                <a class="ds-tabs__item" href="/kdha/related-sites/organizations/">유관단체</a>
+                <a class="ds-tabs__item" href="/kdha/related-sites/education/">교육기관</a>
+              </nav>
+              <ul class="related-site-grid">
+                <li>
+                  <a
+                    class="related-site-card"
+                    href="https://www.moe.go.kr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="교육부 새 창 열림"
+                  >
+                    <span class="ds-badge">정부</span>
+                    <strong>교육부</strong>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="related-site-card"
+                    href="https://www.nhic.or.kr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="국민건강보험공단 새 창 열림"
+                  >
+                    <span class="ds-badge">정부</span>
+                    <strong>국민건강보험공단</strong>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="related-site-card"
+                    href="https://www.nps.or.kr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="국민연금공단 새 창 열림"
+                  >
+                    <span class="ds-badge">정부</span>
+                    <strong>국민연금공단</strong>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="related-site-card"
+                    href="https://www.moel.go.kr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="고용노동부 새 창 열림"
+                  >
+                    <span class="ds-badge">정부</span>
+                    <strong>고용노동부</strong>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="related-site-card"
+                    href="https://www.mohw.go.kr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="보건복지부 새 창 열림"
+                  >
+                    <span class="ds-badge">정부</span>
+                    <strong>보건복지부</strong>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="related-site-card"
+                    href="https://www.mogef.go.kr/index.jsp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="여성가족부 새 창 열림"
+                  >
+                    <span class="ds-badge">정부</span>
+                    <strong>여성가족부</strong>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="related-site-card"
+                    href="https://www.kuksiwon.or.kr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="한국보건의료인국가시험원 새 창 열림"
+                  >
+                    <span class="ds-badge">정부</span>
+                    <strong>한국보건의료인국가시험원</strong>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="related-site-card"
+                    href="https://www.mois.go.kr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="행정자치부 새 창 열림"
+                  >
+                    <span class="ds-badge">정부</span>
+                    <strong>행정자치부</strong>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </main>
-      <footer class="site-footer site-footer--standard">
+      <footer class="site-footer">
         <div class="site-footer__inner layout-container">
           <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
             <img

@@ -11,7 +11,7 @@
   </head>
   <body class="edu-site">
     <a class="skip-link" href="#main-content">본문 바로가기</a>
-    <header class="site-header site-header--education">
+    <header class="site-header">
       <div class="site-header__inner layout-container">
         <a class="site-logo site-logo--header" href="/kdha/" aria-label="대한치과위생사협회 페이지 인덱스">
           <img
@@ -166,19 +166,19 @@
     </header>
 
     <main id="main-content">
-      <div class="ofe-page">
-        <header class="ofe-hero ofe-container">
-          <nav aria-label="현재 위치">
-            <a href="/kdha/edu/" aria-label="교육원 홈">
-              <span class="material-symbols-rounded" aria-hidden="true">home</span>
-            </a>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <span>현장교육</span>
-          </nav>
-          <h1>현장교육</h1>
-          <p>치과위생사를 위한 현장교육 정보와 신청 서비스를 편리하게 이용하세요.</p>
-        </header>
-        <form id="ofe-payment" class="ofe-container ofe-payment ofe-payment--offline">
+      <header class="page-hero">
+        <nav aria-label="현재 위치">
+          <a href="/kdha/edu/" aria-label="교육원 홈">
+            <span class="material-symbols-rounded" aria-hidden="true">home</span>
+          </a>
+          <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+          <span>현장교육</span>
+        </nav>
+        <h1>현장교육</h1>
+        <p>치과위생사를 위한 현장교육 정보와 신청 서비스를 편리하게 이용하세요.</p>
+      </header>
+      <div id="main-body" class="main-body">
+        <form id="ofe-payment" class="ofe-payment ofe-payment--offline">
           <h2 class="ofe-section-title">결제 진행</h2>
           <section class="ofe-panel ofe-payment-summary">
             <h3>결제 내역</h3>
@@ -297,18 +297,18 @@
             <a class="ds-button ds-button--large ds-button--primary" href="/kdha/edu/offline/complete/">결제</a>
           </div>
         </form>
-        <aside class="ofe-contact ofe-container">
-          <div>
-            <h2>치위협보 기사제보 · 광고문의</h2>
-            <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
-          </div>
-          <a href="mailto:press@kdha.or.kr">
-            02-6213-2735
-            <span>·</span>
-            press@kdha.or.kr
-          </a>
-        </aside>
       </div>
+      <aside class="page-banner">
+        <div>
+          <h2>치위협보 기사제보 · 광고문의</h2>
+          <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+        </div>
+        <a href="mailto:press@kdha.or.kr">
+          02-6213-2735
+          <span>·</span>
+          press@kdha.or.kr
+        </a>
+      </aside>
     </main>
     <dialog
       class="edu-dialog ofe-coupon-dialog"
@@ -426,7 +426,7 @@
         <button class="ds-button ds-button--medium ds-button--outline" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
-    <footer class="site-footer site-footer--standard">
+    <footer class="site-footer">
       <div class="site-footer__inner layout-container">
         <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
           <img

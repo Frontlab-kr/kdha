@@ -49,6 +49,26 @@ $(function () {
     });
   }
 
+  // 현장교육 강의실별 교시 선택: 오전 1교시 선택 시 2교시 함께 선택, 1교시 선택 중 2교시 해제 불가
+  $('[data-ofe-rooms]').on('change', 'input[name="session"]', function () {
+    var $input = $(this);
+    var $room = $input.closest('.ofe-room');
+    var part = $input.data('part');
+    var order = Number($input.data('order'));
+    var $pair = $room.find('input[data-part="' + part + '"][data-order="' + (order === 1 ? 2 : 1) + '"]');
+
+    if (this.checked) {
+      // 같은 시간대의 다른 강의실 선택은 해제
+      $('[data-ofe-rooms] .ofe-room')
+        .not($room)
+        .find('input[data-part="' + part + '"]')
+        .prop('checked', false);
+      if (part === 'am' && order === 1) $pair.prop('checked', true);
+    } else if (part === 'am' && order === 2 && $pair.prop('checked')) {
+      this.checked = true;
+    }
+  });
+
   // 교육 목록 카테고리 필터
   $('.edu-filter button').on('click', function () {
     var category = $(this).data('filter');
