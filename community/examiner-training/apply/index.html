@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-    <title>설문조사 상세 | 대한치과위생사협회</title>
+    <title>채점자교육 신청서 작성 | 대한치과위생사협회</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
@@ -285,53 +285,358 @@
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
             <span>소통광장</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <span aria-current="page">설문조사</span>
+            <span aria-current="page">채점자교육 신청</span>
           </nav>
-          <h1>설문조사</h1>
+          <h1>
+            <span class="examiner-title examiner-title--pc">
+              2027년도 치과위생사 국가고시
+              <br />
+              실기시험 채점자교육 신청
+            </span>
+            <span class="examiner-title examiner-title--mo">채점자교육 신청</span>
+          </h1>
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <div class="community-page">
-            <article class="community-detail community-survey-detail" aria-labelledby="survey-heading">
-              <header class="community-detail__header">
-                <span class="ds-badge ds-badge--danger ds-badge--outline">진행 중</span>
-                <h2 id="survey-heading">협회 창립 제43주년 기념 제42회 학술대회 만족도 설문지</h2>
-                <div class="community-detail__meta">
-                  <span>협회</span>
-                  <span>설문기간 2026-08-01 ~ 2026-09-01</span>
+          <div class="community-page examiner-apply">
+            <form
+              class="examiner-apply__form"
+              action="/kdha/community/examiner-training/complete/"
+              novalidate
+              data-examiner-apply
+            >
+              <section class="examiner-apply__section" aria-labelledby="examiner-applicant-title">
+                <div class="examiner-apply__head">
+                  <h2 id="examiner-applicant-title">신청자 정보</h2>
+                  <p class="examiner-apply__required">
+                    <span class="community-required" aria-hidden="true">*</span>
+                    <span>표시는 필수입력 항목입니다.</span>
+                  </p>
                 </div>
-              </header>
-              <div class="community-detail__body">
-                <h3>학술대회 만족도 설문조사</h3>
-                <p>
-                  학술대회에 참여해 주셔서 감사합니다.
-                  <br />
-                  학술대회와 프로그램에 대한 의견을 들려주세요.
-                </p>
+                <div class="examiner-apply__fields">
+                  <div class="examiner-apply__pair">
+                    <div class="community-write__row form-field form-field--large">
+                      <label for="examiner-type">신청 구분</label>
+                      <input
+                        id="examiner-type"
+                        name="type"
+                        value="[신규교육] 교직용 – 전임, 겸임, 외래교수"
+                        readonly
+                        data-examiner-type
+                      />
+                    </div>
+                    <div class="community-write__row form-field form-field--large">
+                      <label for="examiner-name">성명</label>
+                      <input id="examiner-name" name="name" value="홍길동" readonly />
+                    </div>
+                  </div>
+                  <div class="examiner-apply__pair">
+                    <div class="community-write__row form-field form-field--large">
+                      <label for="examiner-license">면허번호</label>
+                      <input id="examiner-license" name="license" value="1234567" readonly />
+                    </div>
+                    <div class="community-write__row form-field form-field--large">
+                      <label for="examiner-birth">생년월일</label>
+                      <input id="examiner-birth" name="birth" value="1986-05-05" readonly />
+                    </div>
+                  </div>
+                  <div class="community-write__row form-field form-field--large">
+                    <label for="examiner-organization">
+                      소속(대학(교))
+                      <span class="community-required">*</span>
+                    </label>
+                    <input
+                      id="examiner-organization"
+                      name="organization"
+                      placeholder="소속을 입력하세요."
+                      maxlength="100"
+                      required
+                    />
+                  </div>
+                  <div class="community-write__row form-field form-field--large">
+                    <label for="examiner-position">
+                      직급
+                      <span class="community-required">*</span>
+                    </label>
+                    <input
+                      id="examiner-position"
+                      name="position"
+                      placeholder="직급을 입력하세요. (전임/겸임/초빙/외래 등)"
+                      maxlength="50"
+                      required
+                    />
+                  </div>
+                  <div class="community-write__row form-field form-field--large examiner-apply__row--top">
+                    <label for="examiner-subject">
+                      담당교과목
+                      <span class="community-required">*</span>
+                    </label>
+                    <div class="examiner-apply__control">
+                      <input
+                        id="examiner-subject"
+                        name="subject"
+                        placeholder="최근 3년 이내 담당교과목을 입력하세요."
+                        maxlength="200"
+                        aria-describedby="examiner-subject-guide"
+                        required
+                      />
+                      <div class="ds-guide-list examiner-apply__guide" id="examiner-subject-guide">
+                        <p class="examiner-apply__guide-title">※ 담당교과목 작성 예시</p>
+                        <ul>
+                          <li class="ds-guide-list__item">
+                            <span class="ds-guide-list__content">2018년 2학기 ~ 2019년 2학기 포괄치위생학실습</span>
+                          </li>
+                          <li class="ds-guide-list__item">
+                            <span class="ds-guide-list__content">2020년 1학기 치면세마론</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="community-write__row form-field form-field--large examiner-apply__group"
+                    role="group"
+                    aria-labelledby="examiner-period-label"
+                  >
+                    <span class="examiner-apply__label" id="examiner-period-label">
+                      근무기간
+                      <span class="community-required">*</span>
+                    </span>
+                    <div class="examiner-apply__split">
+                      <div class="form-field">
+                        <label class="examiner-apply__sub-label" for="examiner-period-current">
+                          현 직장 근무기간
+                          <span class="community-required">*</span>
+                        </label>
+                        <select
+                          id="examiner-period-current"
+                          name="periodCurrent"
+                          aria-label="현 직장 근무기간"
+                          data-custom-select
+                          data-select-size="l"
+                          required
+                        >
+                          <option value="">현 직장 근무기간 선택</option>
+                          <option value="1">1년 미만</option>
+                          <option value="1-3">1년 이상 ~ 3년 미만</option>
+                          <option value="3-5">3년 이상 ~ 5년 미만</option>
+                          <option value="5-10">5년 이상 ~ 10년 미만</option>
+                          <option value="10">10년 이상</option>
+                        </select>
+                      </div>
+                      <div class="form-field">
+                        <label class="examiner-apply__sub-label" for="examiner-period-total">
+                          총 근무기간
+                          <span class="community-required">*</span>
+                        </label>
+                        <select
+                          id="examiner-period-total"
+                          name="periodTotal"
+                          aria-label="총 근무기간"
+                          data-custom-select
+                          data-select-size="l"
+                          required
+                        >
+                          <option value="">총 근무기간 선택</option>
+                          <option value="1">1년 미만</option>
+                          <option value="1-3">1년 이상 ~ 3년 미만</option>
+                          <option value="3-5">3년 이상 ~ 5년 미만</option>
+                          <option value="5-10">5년 이상 ~ 10년 미만</option>
+                          <option value="10">10년 이상</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="community-write__row form-field form-field--large">
+                    <label for="examiner-office-tel">근무처 연락처</label>
+                    <input
+                      id="examiner-office-tel"
+                      name="officeTel"
+                      type="tel"
+                      inputmode="numeric"
+                      autocomplete="tel"
+                      placeholder="- 을 제외한 숫자만 입력하세요."
+                    />
+                  </div>
+                  <div class="community-write__row form-field form-field--large">
+                    <label for="examiner-mobile">
+                      휴대폰
+                      <span class="community-required">*</span>
+                    </label>
+                    <input
+                      id="examiner-mobile"
+                      name="mobile"
+                      type="tel"
+                      inputmode="numeric"
+                      autocomplete="tel"
+                      placeholder="- 을 제외한 숫자만 입력하세요."
+                      required
+                    />
+                  </div>
+                  <div class="community-write__row form-field form-field--large">
+                    <label for="examiner-email">
+                      이메일
+                      <span class="community-required">*</span>
+                    </label>
+                    <div class="account-form-row account-form-row--email">
+                      <input
+                        id="examiner-email"
+                        type="text"
+                        name="emailId"
+                        placeholder="아이디"
+                        autocomplete="off"
+                        required
+                      />
+                      <div class="account-email-domain">
+                        <label class="account-email-domain__field">
+                          <span class="sr-only">이메일 도메인</span>
+                          <select name="emailDomain" aria-label="이메일 도메인" data-custom-select data-select-size="l">
+                            <option value="gmail.com">@ gmail.com</option>
+                            <option value="naver.com">@ naver.com</option>
+                            <option value="hanmail.net">@ hanmail.net</option>
+                          </select>
+                          <input
+                            type="text"
+                            inputmode="url"
+                            placeholder="@ 직접입력"
+                            aria-label="이메일 도메인 직접입력"
+                            data-email-domain-input
+                            hidden
+                          />
+                        </label>
+                        <button
+                          class="form-action-button account-email-domain__button"
+                          type="button"
+                          data-email-domain-toggle
+                        >
+                          직접입력
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="examiner-apply__section" aria-labelledby="examiner-course-title">
+                <div class="examiner-apply__head">
+                  <h2 id="examiner-course-title">교육 신청 정보</h2>
+                </div>
+                <div class="examiner-apply__fields">
+                  <div class="community-write__row form-field form-field--large">
+                    <label for="examiner-region">
+                      신청 지역
+                      <span class="community-required">*</span>
+                    </label>
+                    <select
+                      id="examiner-region"
+                      name="region"
+                      aria-label="신청 지역"
+                      data-custom-select
+                      data-select-size="l"
+                      data-examiner-region
+                      required
+                    >
+                      <option value="">신청지역 선택</option>
+                      <option value="seoul">서울</option>
+                      <option value="daejeon">대전</option>
+                      <option value="gwangju">광주</option>
+                      <option value="busan">부산</option>
+                    </select>
+                  </div>
+                  <div class="community-write__row form-field form-field--large">
+                    <label for="examiner-schedule-1">
+                      교육일정 1순위
+                      <span class="community-required">*</span>
+                    </label>
+                    <select
+                      id="examiner-schedule-1"
+                      name="schedule1"
+                      aria-label="교육일정 1순위"
+                      data-custom-select
+                      data-select-size="l"
+                      data-examiner-schedule
+                      disabled
+                      required
+                    >
+                      <option value="">신청지역을 먼저 선택해 주세요.</option>
+                    </select>
+                  </div>
+                  <div class="community-write__row form-field form-field--large">
+                    <label for="examiner-schedule-2">
+                      교육일정 2순위
+                      <span class="community-required">*</span>
+                    </label>
+                    <select
+                      id="examiner-schedule-2"
+                      name="schedule2"
+                      aria-label="교육일정 2순위"
+                      data-custom-select
+                      data-select-size="l"
+                      data-examiner-schedule
+                      disabled
+                      required
+                    >
+                      <option value="">신청지역을 먼저 선택해 주세요.</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+
+              <section class="examiner-apply__section" aria-labelledby="examiner-privacy-title">
+                <div class="examiner-apply__head">
+                  <h2 id="examiner-privacy-title">개인정보 이용에 관한 동의(필수)</h2>
+                </div>
+                <div class="examiner-apply__fields examiner-apply__fields--agree">
+                  <div class="examiner-apply__terms">
+                    <p>
+                      정보통신망법 규정에 따라 2027년도 치과위생사 국가고시 실기시험 채점자교육 신규교육(이하
+                      신규교육)을 신청하는 분들께 수집하는 개인정보의 항목, 개인정보의 수집방법을 안내하오니 자세히 읽은
+                      후 동의하여 주시기 바랍니다.
+                    </p>
+                    <div>
+                      <h3>1. 수집하는 개인정보의 항목</h3>
+                      <p>
+                        한국치과위생사교육협의회는 신규교육 신청을 위해 최소한의 개인정보인 성명, 면허번호, 생년월일,
+                        소속, 직급, 담당교과목, 근무기간, 연락처(근무처, 휴대폰, E-Mail)를 필수항목으로 수집하고
+                        있습니다.
+                      </p>
+                    </div>
+                    <div>
+                      <h3>2. 개인정보 수집방법</h3>
+                      <p>한국치과위생사교육협의회는 신규교육을 위해 동 신청서를 통해서만 개인정보를 수집합니다.</p>
+                    </div>
+                    <div>
+                      <h3>3. 제3자 개인정보 제공</h3>
+                      <p>
+                        개인정보를 제공받는 자 : 한국보건의료인국가시험원
+                        <br />
+                        제공하는 개인정보의 항목 : 성명, 면허번호, 생년월일, 소속, 연락처(근무처, 휴대폰, E-Mail)
+                        <br />
+                        개인정보를 제공받는 자의 개인정보 이용목적 : 신규교육 참가 신청 시 개인식별 절차에 이용 및
+                        한국보건의료인국가시험원장 명의 수료증 발급에 이용
+                        <br />
+                        개인정보 제공받는 자의 개인정보 이용기간 및 유지기간 : 5년
+                      </p>
+                    </div>
+                  </div>
+                  <label class="form-check">
+                    <input type="checkbox" name="privacyAgree" required />
+                    <span>개인정보 이용 및 수집에 동의합니다.</span>
+                  </label>
+                </div>
+              </section>
+
+              <div class="community-detail__actions community-survey-actions">
+                <button
+                  class="ds-button ds-button--outline ds-button--large"
+                  type="button"
+                  data-dialog-open="examiner-cancel-dialog"
+                >
+                  취소
+                </button>
+                <button class="ds-button ds-button--primary ds-button--large" type="submit">접수하기</button>
               </div>
-              <!-- 첨부파일 목록은 서버 연동 시 전달된 데이터로 구성합니다. -->
-              <div class="community-detail__files">
-                <strong>첨부파일</strong>
-                <ul>
-                  <li>
-                    <a href="#" download>
-                      첨부파일명.pdf
-                      <span class="material-symbols-rounded" aria-hidden="true">download</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <div class="community-detail__actions community-survey-actions">
-              <a class="ds-button ds-button--outline ds-button--large" href="/kdha/community/surveys/">목록으로 가기</a>
-              <button
-                class="ds-button ds-button--primary ds-button--large"
-                type="button"
-                data-dialog-open="survey-dialog"
-              >
-                참여하기
-              </button>
-            </div>
+            </form>
           </div>
         </div>
         <aside class="page-banner">
@@ -432,120 +737,55 @@
         </div>
       </footer>
     </div>
-    <dialog class="edu-dialog community-survey-dialog" id="survey-dialog" aria-labelledby="survey-dialog-title">
-      <header class="community-survey-dialog__header">
-        <button
-          type="button"
-          class="edu-dialog__close material-symbols-rounded"
-          data-dialog-close
-          aria-label="설문조사 닫기"
-        >
-          close
-        </button>
-        <h2 id="survey-dialog-title">협회 창립 제43주년 기념 제42회 학술대회 만족도 설문지</h2>
-        <div class="community-survey-dialog__meta">
-          <span>설문기간 2026-08-01 ~ 2026-09-01</span>
-          <span>총 3문항</span>
-        </div>
-      </header>
-      <form data-survey-form novalidate>
-        <div class="edu-dialog__body community-survey-dialog__questions">
-          <fieldset>
-            <legend>
-              01 학술대회 전반에 대해 얼마나 만족하셨습니까?
-              <span class="community-required" aria-hidden="true">*</span>
-              <span class="sr-only">(필수)</span>
-            </legend>
-            <div class="community-survey-choices">
-              <label class="form-check">
-                <input type="radio" name="satisfaction" value="1" required />
-                <span>매우 만족</span>
-              </label>
-              <label class="form-check">
-                <input type="radio" name="satisfaction" value="2" required />
-                <span>만족</span>
-              </label>
-              <label class="form-check">
-                <input type="radio" name="satisfaction" value="3" required />
-                <span>보통</span>
-              </label>
-              <label class="form-check">
-                <input type="radio" name="satisfaction" value="4" required />
-                <span>불만족</span>
-              </label>
-              <label class="form-check">
-                <input type="radio" name="satisfaction" value="5" required />
-                <span>매우 불만족</span>
-              </label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>
-              02 가장 만족스러웠던 프로그램을 선택해 주세요.
-              <span class="community-required" aria-hidden="true">*</span>
-              <span class="sr-only">(필수)</span>
-            </legend>
-            <div class="community-survey-choices community-survey-choices--program">
-              <label class="form-check">
-                <input type="radio" name="program" value="1" required />
-                <span>학술 강연</span>
-              </label>
-              <label class="form-check">
-                <input type="radio" name="program" value="2" required />
-                <span>전시 및 부스</span>
-              </label>
-              <label class="form-check">
-                <input type="radio" name="program" value="3" required />
-                <span>기타</span>
-              </label>
-            </div>
-          </fieldset>
-          <div class="form-field">
-            <label for="survey-opinion">03 기타 의견이 있으시면 자유롭게 작성해 주세요.</label>
-            <textarea
-              id="survey-opinion"
-              name="opinion"
-              rows="5"
-              maxlength="2000"
-              placeholder="의견을 입력해 주세요."
-            ></textarea>
-          </div>
-          <p class="community-survey-message" role="status" data-survey-message hidden></p>
-        </div>
-        <div class="community-survey-dialog__actions">
-          <a class="ds-button ds-button--outline ds-button--large" href="/kdha/community/surveys/">목록으로 가기</a>
-          <button class="ds-button ds-button--primary ds-button--large" type="submit">제출하기</button>
-        </div>
-      </form>
-    </dialog>
     <dialog
       class="ds-alert community-alert"
-      id="survey-complete-dialog"
+      id="examiner-submit-dialog"
       role="alertdialog"
-      aria-label="설문이 제출되었습니다."
-      aria-describedby="survey-complete-dialog-message"
+      aria-label="입력한 내용으로 교육 신청을 접수하시겠습니까?"
+      aria-describedby="examiner-submit-dialog-message"
     >
       <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
         close
       </button>
-      <p class="ds-alert__message" id="survey-complete-dialog-message">설문이 제출되었습니다.</p>
+      <p class="ds-alert__message" id="examiner-submit-dialog-message">입력한 내용으로 교육 신청을 접수하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <a class="ds-button ds-button--large ds-button--primary" href="/kdha/community/examiner-training/complete/">확인</a>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert community-alert"
+      id="examiner-required-dialog"
+      role="alertdialog"
+      aria-label="필수 항목을 모두 입력해주세요."
+      aria-describedby="examiner-required-dialog-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="examiner-required-dialog-message">필수 항목을 모두 입력해주세요.</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
       class="ds-alert community-alert"
-      id="survey-required-dialog"
+      id="examiner-cancel-dialog"
       role="alertdialog"
-      aria-label="필수 문항에 모두 응답해 주세요."
-      aria-describedby="survey-required-dialog-message"
+      aria-label="신청을 취소하시겠습니까? 작성 중인 내용은 저장되지 않습니다."
+      aria-describedby="examiner-cancel-dialog-message"
     >
       <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
         close
       </button>
-      <p class="ds-alert__message" id="survey-required-dialog-message">필수 문항에 모두 응답해 주세요.</p>
+      <p class="ds-alert__message" id="examiner-cancel-dialog-message">
+        신청을 취소하시겠습니까?
+        <br />
+        작성 중인 내용은 저장되지 않습니다.
+      </p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <a class="ds-button ds-button--large ds-button--primary" href="/kdha/community/examiner-training/">확인</a>
       </div>
     </dialog>
     <details class="account-layer-menu">
@@ -553,10 +793,10 @@
         <span class="material-symbols-outlined" aria-hidden="true">layers</span>
         화면 확인
       </summary>
-      <nav aria-label="소통광장 레이어 확인">
-        <a href="/kdha/community/surveys/detail/#survey-dialog">설문조사 참여</a>
-        <a href="/kdha/community/surveys/detail/#survey-complete-dialog">설문 제출 완료</a>
-        <a href="/kdha/community/surveys/detail/#survey-required-dialog">설문 제출 실패</a>
+      <nav aria-label="채점자교육 신청 레이어 확인">
+        <a href="/kdha/community/examiner-training/apply/#examiner-submit-dialog">접수 확인</a>
+        <a href="/kdha/community/examiner-training/apply/#examiner-required-dialog">필수 항목 미입력</a>
+        <a href="/kdha/community/examiner-training/apply/#examiner-cancel-dialog">신청 취소 확인</a>
       </nav>
     </details>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>

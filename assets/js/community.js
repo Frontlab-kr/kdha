@@ -300,4 +300,69 @@
       });
     });
   }
+
+  // 채점자교육 신청서: 신청 구분 표시, 지역 선택 후 교육일정 활성화, 필수 항목 확인 후 접수 알림
+  if (window.jQuery) {
+    var $ = window.jQuery;
+    // 공통 셀렉트(common.js)가 만들어진 뒤 실행합니다.
+    $(function () {
+      $('[data-examiner-apply]').each(function () {
+        var $form = $(this);
+        var typeLabels = {
+          'new-faculty': '[신규교육] 교직용 – 전임, 겸임, 외래교수',
+          'new-clinical': '[신규교육] 임상 및 보건치과위생사용',
+          're-faculty': '[재교육] 교직용 – 전임, 겸임, 외래교수',
+          're-clinical': '[재교육] 임상 및 보건치과위생사용',
+        };
+        var type = new URLSearchParams(window.location.search).get('type');
+        if (typeLabels[type]) $form.find('[data-examiner-type]').val(typeLabels[type]);
+
+        // 지역별 교육일정(퍼블리싱 샘플 데이터, 개발 시 서버 데이터로 교체)
+        var schedules = {
+          seoul: ['2027-01-09(토) 서울 치과위생사회관', '2027-01-16(토) 서울 치과위생사회관'],
+          daejeon: ['2027-01-09(토) 대전 교육장', '2027-01-23(토) 대전 교육장'],
+          gwangju: ['2027-01-16(토) 광주 교육장', '2027-01-30(토) 광주 교육장'],
+          busan: ['2027-01-23(토) 부산 교육장', '2027-02-06(토) 부산 교육장'],
+        };
+        var $schedules = $form.find('[data-examiner-schedule]');
+
+        function setScheduleState($select, enabled) {
+          $select.prop('disabled', !enabled);
+          $select.next('.ds-select').find('.ds-select__button').prop('disabled', !enabled);
+        }
+        $schedules.each(function () {
+          setScheduleState($(this), false);
+        });
+
+        $form.find('[data-examiner-region]').on('change', function () {
+          var list = schedules[this.value] || [];
+          $schedules.each(function () {
+            var $select = $(this);
+            $select
+              .empty()
+              .append(
+                $('<option value=""></option>').text(list.length ? '교육일정 선택' : '신청지역을 먼저 선택해 주세요.'),
+              );
+            list.forEach(function (item) {
+              $select.append($('<option></option>').val(item).text(item));
+            });
+            setScheduleState($select, list.length > 0);
+            $select.trigger('change');
+          });
+        });
+
+        $form.on('submit', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          var isEmpty = false;
+          $form.find('input[required], select[required], select[data-custom-required]').each(function () {
+            var empty = this.type === 'checkbox' ? !this.checked : !$.trim(this.value);
+            if (empty) isEmpty = true;
+          });
+          var dialog = document.getElementById(isEmpty ? 'examiner-required-dialog' : 'examiner-submit-dialog');
+          if (dialog && !dialog.open) dialog.showModal();
+        });
+      });
+    });
+  }
 })();
