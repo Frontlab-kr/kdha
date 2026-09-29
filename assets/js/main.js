@@ -135,6 +135,8 @@ $(function () {
     new Swiper('.main-b-promo', {
       loop: true,
       speed: 600,
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
       autoplay: { delay: 5000, disableOnInteraction: false },
       pagination: { el: '.main-b-promo__pagination', clickable: true },
       a11y: { paginationBulletMessage: '{{index}}번째 안내로 이동' },

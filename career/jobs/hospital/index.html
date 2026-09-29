@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <title>병원 정보 등록 | 대한치과위생사협회</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="site user-page">
+      <header class="site-header">
+        <div class="site-header__inner layout-container">
+          <a class="site-logo site-logo--header" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
+            <img
+              class="site-logo__image"
+              width="220"
+              height="42"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-header-b.svg"
+            />
+          </a>
+          <div class="site-header__navigation">
+            <nav class="utility-nav" aria-label="유틸리티 메뉴">
+              <div class="utility-nav__external">
+                <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
+                  덴톡
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+                <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
+                  영문사이트
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+                <a
+                  class="utility-nav__link"
+                  href="http://kdhamall.or.kr/member/login.php?prev=%2F"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  KDHA mall
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+              </div>
+            </nav>
+            <nav class="primary-nav" aria-label="주 메뉴">
+              <div class="primary-nav__links primary-nav__links--main">
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/news/schedule/">협회소식</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/career/jobs/">구인구직 상담</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/education/about/">치위생교육원</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/license/report/">면허센터</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/community/notices/">소통광장</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/introduce/greeting/">협회소개</a>
+                </div>
+              </div>
+              <div class="primary-nav__links primary-nav__links--education">
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/about/">교육원 소개</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/guide/offline/">교육안내</a>
+                </div>
+                <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/offline/">현장교육</a></div>
+                <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/online/">사이버교육</a></div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/classroom/applications/">내 강의실</a>
+                </div>
+              </div>
+              <a class="primary-nav__icon-button primary-nav__education-cart" href="/kdha/edu/cart/" aria-label="장바구니">
+                <span
+                  class="material-symbols-outlined material-icon"
+                  aria-hidden="true"
+                  style="font-size: 28px; width: 28px; height: 28px"
+                >
+                  shopping_cart
+                </span>
+              </a>
+              <div class="site-menu__account">
+                <button type="button">로그아웃</button>
+                <a href="/kdha/account/mypage/">마이페이지</a>
+              </div>
+              <button class="primary-nav__icon-button primary-nav__search" type="button" aria-label="검색">
+                <span
+                  class="material-symbols-outlined material-icon"
+                  aria-hidden="true"
+                  style="font-size: 28px; width: 28px; height: 28px"
+                >
+                  search
+                </span>
+              </button>
+              <button
+                class="primary-nav__icon-button"
+                type="button"
+                aria-label="전체 메뉴"
+                data-site-menu-toggle
+                aria-expanded="false"
+                aria-controls="site-menu"
+              >
+                <span
+                  class="material-symbols-rounded material-icon"
+                  aria-hidden="true"
+                  style="font-size: 40px; width: 40px; height: 40px"
+                >
+                  dehaze
+                </span>
+              </button>
+            </nav>
+          </div>
+        </div>
+        <nav class="site-menu" id="site-menu" aria-label="전체 메뉴" hidden>
+          <div class="site-menu__inner layout-container">
+            <div class="site-menu__top">
+              <button class="site-menu__close" type="button" aria-label="전체 메뉴 닫기">
+                <span class="material-symbols-rounded" aria-hidden="true">close</span>
+              </button>
+            </div>
+            <div class="site-menu__mobile-tools">
+              <div class="site-menu__external">
+                <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
+                  덴톡
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+                <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
+                  영문사이트
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+                <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
+                  KDHA mall
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+              </div>
+              <div class="site-menu__account">
+                <button type="button">로그아웃</button>
+                <a href="/kdha/account/mypage/">마이페이지</a>
+              </div>
+            </div>
+            <div class="site-menu__groups">
+              <section class="site-menu__group is-expanded">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="site-menu-group-0"
+                  >
+                    협회소식
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-0">
+                  <li><a href="/kdha/news/schedule/">협회일정</a></li>
+                  <li><a href="/kdha/news/videos/">영상자료</a></li>
+                  <li><a href="/kdha/news/reports/">연구보고서</a></li>
+                  <li><a href="/kdha/news/newsletter/">치위협보</a></li>
+                  <li><a href="/kdha/news/resources/">자료실</a></li>
+                  <li><a href="/kdha/news/fund/">회관기금</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-1"
+                  >
+                    구인구직 상담
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-1">
+                  <li><a href="/kdha/career/jobs/">하이덴잡</a></li>
+                  <li><a href="/kdha/career/contact/">1:1 상담</a></li>
+                  <li><a href="/kdha/career/consulting/">법률ㆍ노무 상담</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-2"
+                  >
+                    치위생교육원
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-2">
+                  <li><a href="/kdha/education/about/">교육원 소개</a></li>
+                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
+                  <li><a href="/kdha/education/offline/">현장교육</a></li>
+                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-3"
+                  >
+                    면허센터
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-3">
+                  <li>
+                    <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
+                      면허신고센터
+                    </a>
+                  </li>
+                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-4"
+                  >
+                    소통광장
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-4">
+                  <li><a href="/kdha/community/notices/">공지사항</a></li>
+                  <li><a href="/kdha/community/faq/">자주하는 질문</a></li>
+                  <li><a href="/kdha/community/surveys/">설문조사</a></li>
+                  <li><a href="/kdha/community/organizations/">산하단체 게시판</a></li>
+                  <li><a href="/kdha/community/executives/">시도회ㆍ산하단체 임원게시판</a></li>
+                  <li><a href="/kdha/community/volunteer/">봉사게시판</a></li>
+                  <li><a href="/kdha/community/events/">이벤트</a></li>
+                  <li><a href="/kdha/community/examiner-training/">국가시험 실기시험 채점자교육</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-5"
+                  >
+                    협회소개
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-5">
+                  <li><a href="/kdha/introduce/greeting/">인사말</a></li>
+                  <li><a href="/kdha/introduce/history/">연혁</a></li>
+                  <li><a href="/kdha/introduce/articles/">정관</a></li>
+                  <li><a href="/kdha/introduce/organization#map">조직도</a></li>
+                  <li><a href="/kdha/introduce/policybusiness/">주요정책사업</a></li>
+                  <li><a href="/kdha/introduce/dentalhygienist#introduce">치과위생사소개</a></li>
+                  <li><a href="/kdha/introduce/ci/">CI</a></li>
+                  <li><a href="/kdha/introduce/map/">찾아오시는 길</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main id="main-content" class="user-page__main">
+        <header class="page-hero">
+          <nav aria-label="현재 위치">
+            <a href="/kdha/main/" aria-label="홈">
+              <span class="material-symbols-rounded" aria-hidden="true">home</span>
+            </a>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span>구인구직 상담</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span aria-current="page">구인구직</span>
+          </nav>
+          <h1>병원 정보 등록</h1>
+          <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
+        </header>
+        <div id="main-body" class="main-body">
+          <!-- KD-US-REC-02-01 -->
+          <form class="career-jobs career-jobs--form" novalidate data-jobs-form data-jobs-invalid="jobs-required-alert">
+            <p class="jobs-alert-text">※ 승인 받은 병원만 공고를 등록할 수 있습니다.</p>
+            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-basic">
+              <div class="jobs-card__head">
+                <h2 id="hospital-basic">기본정보</h2>
+              </div>
+              <div class="jobs-photo-row">
+                <label class="jobs-photo">
+                  대표 사진 등록
+                  <input class="sr-only" type="file" name="hospitalPhoto" accept="image/*" />
+                </label>
+                <div class="jobs-grid">
+                  <div class="jobs-field form-field form-field--large">
+                    <label for="hospital-name">
+                      병원명
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <input id="hospital-name" name="hospital-name" type="text" placeholder="병원명 입력" required />
+                  </div>
+                  <div class="jobs-field form-field form-field--large">
+                    <label for="hospital-tel">
+                      연락처
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      id="hospital-tel"
+                      name="hospital-tel"
+                      type="tel"
+                      placeholder="- 없이 숫자만 입력"
+                      required
+                      inputmode="numeric"
+                    />
+                  </div>
+                  <div class="jobs-field form-field form-field--large">
+                    <label for="hospital-ceo">
+                      대표자명
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <input id="hospital-ceo" name="hospital-ceo" type="text" placeholder="대표자명 입력" required />
+                  </div>
+                  <div class="jobs-field form-field form-field--large">
+                    <label for="hospital-bizno">
+                      사업자등록번호
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-inline">
+                      <input
+                        id="hospital-bizno"
+                        name="hospital-bizno"
+                        type="text"
+                        placeholder="숫자만 입력"
+                        required
+                        inputmode="numeric"
+                      />
+                      <button
+                        class="ds-button ds-button--large ds-button--outline"
+                        type="button"
+                        data-dialog-open="jobs-bizno-alert"
+                      >
+                        사업자등록번호 확인
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-address-title">
+              <div class="jobs-card__head">
+                <h2 id="hospital-address-title">
+                  병원 주소
+                  <span class="jobs-required" aria-hidden="true">*</span>
+                </h2>
+                <p>채용공고 내 근무위치로 노출됩니다.</p>
+              </div>
+              <div class="jobs-inline form-field form-field--large">
+                <label class="sr-only" for="hospital-address">주소</label>
+                <input
+                  id="hospital-address"
+                  name="hospitalAddress"
+                  placeholder="주소 찾기를 눌러 주소를 검색하세요."
+                  readonly
+                  required
+                />
+                <button class="ds-button ds-button--large ds-button--outline" type="button">주소 찾기</button>
+              </div>
+              <div class="form-field form-field--large">
+                <label class="sr-only" for="hospital-address-detail">상세주소</label>
+                <input id="hospital-address-detail" name="hospitalAddressDetail" placeholder="상세주소 입력" />
+              </div>
+            </section>
+            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-sns">
+              <div class="jobs-card__head">
+                <h2 id="hospital-sns">병원 홈페이지 혹은 SNS</h2>
+              </div>
+              <div class="jobs-grid">
+                <div class="jobs-field form-field form-field--large">
+                  <label for="hospital-homepage">홈페이지</label>
+                  <input
+                    id="hospital-homepage"
+                    name="hospital-homepage"
+                    type="url"
+                    placeholder="https://samsung-miso.com/"
+                  />
+                </div>
+                <div class="jobs-field form-field form-field--large">
+                  <label for="hospital-instagram">인스타그램</label>
+                  <input
+                    id="hospital-instagram"
+                    name="hospital-instagram"
+                    type="url"
+                    placeholder="인스타그램 주소를 입력하세요."
+                  />
+                </div>
+                <div class="jobs-field form-field form-field--large">
+                  <label for="hospital-youtube">유튜브</label>
+                  <input
+                    id="hospital-youtube"
+                    name="hospital-youtube"
+                    type="url"
+                    placeholder="유튜브 주소를 입력하세요."
+                  />
+                </div>
+              </div>
+            </section>
+            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-photos">
+              <div class="jobs-card__head">
+                <h2 id="hospital-photos">병원소개 사진</h2>
+                <p>로고, 병원 내부·외부 사진 (최대 5장)</p>
+              </div>
+              <div class="jobs-photos">
+                <label class="jobs-photo jobs-photo--square">
+                  사진 등록
+                  <small>1/5</small>
+                  <input class="sr-only" type="file" name="hospitalPhotos" accept="image/*" multiple />
+                </label>
+                <span class="jobs-photos__item" role="img" aria-label="등록된 사진"></span>
+              </div>
+            </section>
+            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-intro-title">
+              <div class="jobs-card__head">
+                <h2 id="hospital-intro-title">병원소개</h2>
+                <p>(100자 제한)</p>
+              </div>
+              <div class="form-field">
+                <label class="sr-only" for="hospital-intro">병원소개</label>
+                <textarea
+                  id="hospital-intro"
+                  name="hospitalIntro"
+                  maxlength="100"
+                  placeholder="병원에 대한 소개글을 입력해 주세요."
+                  data-jobs-count="hospital-intro-count"
+                ></textarea>
+              </div>
+              <p class="jobs-counter" id="hospital-intro-count" aria-live="polite">0 / 100</p>
+            </section>
+            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-agree">
+              <div class="jobs-card__head">
+                <h2 id="hospital-agree">구인공고 작성을 위한 개인정보 수집 및 이용 동의</h2>
+              </div>
+              <div class="jobs-agree">
+                <label class="form-check">
+                  <input type="checkbox" name="hospitalAgreeRequired" required checked />
+                  <span>[필수] 필수 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
+                </label>
+                <button type="button" data-dialog-open="jobs-privacy-dialog">자세히 보기 ›</button>
+              </div>
+              <div class="jobs-agree">
+                <label class="form-check">
+                  <input type="checkbox" name="hospitalAgreeOptional" />
+                  <span>[선택] 선택 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
+                </label>
+                <button type="button" data-dialog-open="jobs-privacy-dialog">자세히 보기 ›</button>
+              </div>
+            </section>
+            <div class="jobs-actions">
+              <a class="ds-button ds-button--large ds-button--outline" href="/kdha/career/jobs/">취소</a>
+              <button class="ds-button ds-button--large ds-button--outline jobs-danger" type="button">삭제</button>
+              <button class="ds-button ds-button--large ds-button--primary" type="submit">저장</button>
+            </div>
+          </form>
+        </div>
+        <aside class="page-banner">
+          <div>
+            <h2>치위협보 기사제보 · 광고문의</h2>
+            <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+          </div>
+          <a href="mailto:press@kdha.or.kr">
+            02-6213-2735
+            <span>·</span>
+            press@kdha.or.kr
+          </a>
+        </aside>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__inner layout-container">
+          <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
+            <img
+              class="site-logo__image"
+              width="290"
+              height="55"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-footer.png"
+            />
+          </a>
+          <address class="site-footer__address">
+            <span class="site-footer__info-row">
+              <span>
+                105-82-07361
+                <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
+              </span>
+              <span>대표자 : 박정란</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
+          </address>
+          <p class="site-footer__contact">
+            <span>TEL. 02-2236-0914</span>
+            <span>FAX. 02-2236-0915</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/related-sites/">관련사이트</a>
+              <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
+            <div class="site-footer__site-selects">
+              <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">시도회 홈페이지</option>
+                <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
+              </select>
+            </div>
+          </div>
+          <div class="site-footer__bottom">
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
+            <div class="social-links">
+              <a
+                class="social-links__item"
+                href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 공식 유튜브(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-youtube.png" />
+              </a>
+              <a
+                class="social-links__item"
+                href="https://ko-kr.facebook.com/koreadha/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 페이스북(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-facebook.png" />
+              </a>
+              <a
+                class="social-links__item"
+                href="https://www.instagram.com/krdha77/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 인스타그램(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-instagram.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <dialog class="edu-dialog jobs-dialog" id="jobs-privacy-dialog" aria-labelledby="jobs-privacy-dialog-title">
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="jobs-privacy-dialog-title">개인정보 수집 및 이용 동의</h2>
+      <section class="jobs-dialog__terms">
+        <h3>필수항목에 대한 개인정보 수집 및 이용 동의</h3>
+        <dl>
+          <div>
+            <dt>수집항목</dt>
+            <dd>병원명, 대표자명, 연락처, 사업자등록번호, 병원주소</dd>
+          </div>
+          <div>
+            <dt>수집 및 이용목적</dt>
+            <dd>구인공고 등록을 통한 각종 맞춤형 취업 서비스 제공</dd>
+          </div>
+          <div>
+            <dt>이용 및 보유기간</dt>
+            <dd>병원정보 삭제 또는 회원 탈퇴 시 파기</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="jobs-dialog__terms">
+        <h3>선택항목에 대한 개인정보 수집 및 이용 동의</h3>
+        <dl>
+          <div>
+            <dt>수집항목</dt>
+            <dd>병원 홈페이지 혹은 SNS, 병원소개 사진, 병원소개</dd>
+          </div>
+          <div>
+            <dt>수집 및 이용목적</dt>
+            <dd>구인공고 등록을 통한 각종 맞춤형 취업 서비스 제공</dd>
+          </div>
+          <div>
+            <dt>이용 및 보유기간</dt>
+            <dd>병원정보 삭제 또는 회원 탈퇴 시 파기</dd>
+          </div>
+        </dl>
+      </section>
+      <p class="jobs-dialog__note">※ 위 동의를 거부할 권리가 있으며, 동의 거부 시 구인공고 등록이 불가능합니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="jobs-bizno-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="jobs-bizno-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="jobs-bizno-alert-message">유효한 사업자등록번호입니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="jobs-required-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="jobs-required-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="jobs-required-alert-message">필수 항목을 모두 입력해 주세요.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="구인구직 레이어 확인">
+        <a href="/kdha/career/jobs/hospital/#jobs-privacy-dialog">개인정보 수집 및 이용 동의</a>
+        <a href="/kdha/career/jobs/hospital/#jobs-bizno-alert">알림 · 사업자등록번호 확인</a>
+        <a href="/kdha/career/jobs/hospital/#jobs-required-alert">알림 · 필수 항목</a>
+      </nav>
+    </details>
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/career-jobs.js"></script>
+  </body>
+</html>
