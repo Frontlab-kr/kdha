@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-    <title>결제 내역 | 마이페이지 | 대한치과위생사협회</title>
+    <title>상담 상세 | 마이페이지 | 대한치과위생사협회</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
@@ -285,236 +285,104 @@
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
             <span>마이페이지</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <span aria-current="page">결제관리</span>
+            <span aria-current="page">상담관리</span>
           </nav>
-          <h1>결제관리</h1>
+          <h1>상담 관리</h1>
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <!-- KD-US-MYP-06-02_PC_결제관리_결제 내역 -->
-          <div class="mypage mypage-payments">
-            <nav class="ds-tabs ds-tabs--box" aria-label="마이페이지 메뉴" data-mypage-tabs>
-              <a class="ds-tabs__item" href="/kdha/mypage/">마이페이지</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/classroom/">내 강의실</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/license/">면허신고현황</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/payments/" aria-current="page">결제관리</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/points/">쿠폰·마일리지</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/volunteer/">봉사관리</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/consulting/legal/">상담관리</a>
-            </nav>
-            <nav class="ds-tabs" aria-label="결제관리 하위 메뉴">
-              <a class="ds-tabs__item" href="/kdha/mypage/payments/dues/">회비 내역</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/payments/" aria-current="page">결제 내역</a>
-              <a class="ds-tabs__item" href="#none">회관기금 내역</a>
-            </nav>
-            <section class="mypage-card mypage-card--summary" aria-labelledby="payments-summary-title">
-              <h2 class="sr-only" id="payments-summary-title">결제 현황</h2>
-              <dl class="mypage-stats mypage-stats--summary">
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">전체 결제내역</dt>
-                  <dd class="mypage-stats__value mypage-stats__value--accent">10건</dd>
+          <!-- KD-US-BOA-01-01_PC_답변 (상담 상세·답변, Figma 상세 화면에는 마이페이지 탭이 없음) -->
+          <div class="mypage mypage-consult mypage-consult--detail">
+            <article class="consult-detail" aria-labelledby="consult-detail-title">
+              <header class="consult-detail__header">
+                <span class="ds-badge">법률상담</span>
+                <h2 id="consult-detail-title">육아휴직 관련한 법령 규정 사항</h2>
+                <div class="consult-detail__meta">
+                  <span>
+                    <span class="sr-only">작성자</span>
+                    hong1234
+                  </span>
+                  <span>
+                    작성일
+                    <time datetime="2026-08-30">2026.08.30</time>
+                  </span>
+                  <span>
+                    <span class="sr-only">분류</span>
+                    의료사고 및 소송
+                  </span>
+                  <span>
+                    <span class="sr-only">답변상태</span>
+                    답변 완료
+                  </span>
                 </div>
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">결제완료</dt>
-                  <dd class="mypage-stats__value">10건</dd>
-                </div>
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">환불신청</dt>
-                  <dd class="mypage-stats__value">10건</dd>
-                </div>
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">환불완료</dt>
-                  <dd class="mypage-stats__value">10건</dd>
-                </div>
-              </dl>
-            </section>
-            <section class="mypage-ledger" aria-labelledby="payments-list-title">
-              <h2 class="sr-only" id="payments-list-title">결제 내역</h2>
-              <div class="mypage-ledger__list">
-                <div class="mypage-ledger__toolbar">
-                  <div class="mypage-filter" role="group" aria-label="결제상태" data-mypage-filter="payments-list">
-                    <button type="button" aria-pressed="true" data-filter-value="all">전체</button>
-                    <button type="button" aria-pressed="false" data-filter-value="paid">결제완료</button>
-                    <button type="button" aria-pressed="false" data-filter-value="refund-request">환불신청</button>
-                    <button type="button" aria-pressed="false" data-filter-value="refunded">환불완료</button>
-                    <button type="button" aria-pressed="false" data-filter-value="canceled">결제취소</button>
-                    <button type="button" aria-pressed="false" data-filter-value="rejected">환불거절</button>
-                  </div>
-
-                  <form
-                    class="mypage-ledger__search form-field form-field--large"
-                    role="search"
-                    action="/kdha/mypage/payments/"
-                    method="get"
-                  >
-                    <label class="sr-only" for="payments-keyword">상품명 검색</label>
-                    <input id="payments-keyword" type="search" name="keyword" placeholder="상품명을 입력해 주세요." />
-                    <button class="form-action-button" type="submit">검색</button>
-                  </form>
-                </div>
-                <div
-                  class="ds-board mypage-ledger__board"
-                  id="payments-list"
-                  role="table"
-                  aria-labelledby="payments-list-title"
-                >
-                  <div class="ds-board__head" role="row">
-                    <span role="columnheader">번호</span>
-                    <span role="columnheader">구분</span>
-                    <span role="columnheader">상품명</span>
-                    <span role="columnheader">결제금액</span>
-                    <span role="columnheader">결제수단</span>
-                    <span role="columnheader">결제상태</span>
-                    <span role="columnheader">처리일자</span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="paid">
-                    <span class="ds-board__number" role="cell">6</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell"><span class="ds-badge">결제완료</span></span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="refund-request">
-                    <span class="ds-board__number" role="cell">5</span>
-                    <span class="mypage-ledger__meta" role="cell">현장교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--success">환불신청</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="refund-request">
-                    <span class="ds-board__number" role="cell">4</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--success">환불신청</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="canceled">
-                    <span class="ds-board__number" role="cell">3</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--neutral">결제취소</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="refunded">
-                    <span class="ds-board__number" role="cell">2</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--neutral">환불완료</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="rejected">
-                    <span class="ds-board__number" role="cell">1</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--danger">환불거절</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                </div>
+              </header>
+              <section class="consult-detail__body" aria-labelledby="consult-question-title">
+                <h3 id="consult-question-title">본문내용</h3>
+                <p>본문내용</p>
+              </section>
+              <div class="consult-files consult-files--bar">
+                <strong>첨부파일</strong>
+                <ul>
+                  <li>
+                    <a href="#" download>
+                      첨부파일명.pdf
+                      <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <nav class="ds-pagination" aria-label="결제 내역 페이지 이동">
-                <button type="button" aria-label="이전 페이지" disabled>
-                  <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
-                </button>
-                <a href="#" aria-current="page">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#" aria-label="다음 페이지">
-                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-                </a>
-              </nav>
+            </article>
+
+            <section class="consult-answer" aria-labelledby="consult-answer-title">
+              <div class="mypage-consult__answer-body">
+                <div class="mypage-consult__answer-head">
+                  <h3 id="consult-answer-title">답변 내용</h3>
+                  <p>
+                    <span class="sr-only">답변일</span>
+                    <time datetime="2026-08-27">2026.08.27</time>
+                  </p>
+                </div>
+                <p>답변드립니다</p>
+              </div>
+              <ul class="mypage-consult__answer-files" aria-label="답변 첨부파일">
+                <li>
+                  <a href="#" download>
+                    첨부파일명.pdf
+                    <span class="material-symbols-rounded" aria-hidden="true">download</span>
+                  </a>
+                </li>
+              </ul>
             </section>
+
+            <div class="consult-actions">
+              <a class="ds-button ds-button--large ds-button--outline" href="/kdha/mypage/consulting/legal/">
+                목록으로 가기
+              </a>
+              <button
+                class="ds-button ds-button--large ds-button--outline"
+                type="button"
+                aria-haspopup="dialog"
+                data-dialog-open="consult-delete-alert"
+              >
+                삭제하기
+              </button>
+              <a class="ds-button ds-button--large ds-button--primary" href="/kdha/mypage/consulting/legal/write/">
+                수정하기
+              </a>
+            </div>
           </div>
         </div>
+        <aside class="page-banner">
+          <div>
+            <h2>치위협보 기사제보 · 광고문의</h2>
+            <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+          </div>
+          <a href="mailto:press@kdha.or.kr">
+            02-6213-2735
+            <span>·</span>
+            press@kdha.or.kr
+          </a>
+        </aside>
       </main>
       <footer class="site-footer">
         <div class="site-footer__inner layout-container">
@@ -602,6 +470,56 @@
         </div>
       </footer>
     </div>
+
+    <!-- 얼럿(Figma 알림 모음 · 상담): 삭제 확인 → 삭제 완료 -->
+    <dialog
+      class="ds-alert"
+      id="consult-delete-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="consult-delete-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="consult-delete-alert-message">해당 상담 내용을 삭제하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="consult-deleted-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="consult-deleted-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="consult-deleted-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="consult-deleted-alert-message">상담 내용이 삭제되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="상담 상세 레이어 확인">
+        <a href="/kdha/mypage/consulting/legal/detail/#consult-delete-alert">알림 · 상담 삭제 확인</a>
+        <a href="/kdha/mypage/consulting/legal/detail/#consult-deleted-alert">알림 · 상담 삭제 완료</a>
+      </nav>
+    </details>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>

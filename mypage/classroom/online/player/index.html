@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <title>사이버강의 플레이어 | 마이페이지 | 대한치과위생사협회</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <!-- KD-US-MYP-03-05_PC_사이버강의 플레이어 (GNB·푸터 없는 전체 화면) -->
+    <div class="mypage-player" data-player>
+      <header class="mypage-player__header">
+        <div class="mypage-player__heading">
+          <p>의료윤리와 법정의무</p>
+          <h1>1강. 의료윤리와 법정의무</h1>
+        </div>
+        <a class="ds-button ds-button--small ds-button--outline" href="/kdha/mypage/classroom/online/detail/">
+          강의실로 나가기
+        </a>
+      </header>
+      <main id="main-content" class="mypage-player__main">
+        <section class="mypage-player__video" aria-label="강의 영상">
+          <!-- 영상 플레이어 영역(서버 연동 시 video/iframe으로 교체) -->
+          <div class="mypage-player__screen">
+            <button class="mypage-player__play" type="button" aria-label="재생" data-player-toggle>
+              <span class="material-symbols-rounded" aria-hidden="true">play_arrow</span>
+            </button>
+          </div>
+          <div class="mypage-player__controls">
+            <button class="mypage-player__control" type="button" aria-label="재생" data-player-toggle>
+              <span class="material-symbols-rounded" aria-hidden="true">play_arrow</span>
+            </button>
+            <span class="mypage-player__time">
+              <span class="sr-only">재생 시간</span>
+              12:40 / 33:00
+            </span>
+            <progress class="mypage-progress__bar" max="1980" value="760" aria-label="재생 위치">12분 40초</progress>
+            <span class="mypage-player__options">
+              <button class="mypage-player__control" type="button" aria-label="재생 속도 1.0배">1.0x</button>
+              <button class="mypage-player__control" type="button">전체화면</button>
+            </span>
+          </div>
+        </section>
+        <aside class="mypage-player__toc" aria-labelledby="player-toc-title">
+          <div class="mypage-player__progress">
+            <h2 id="player-toc-title">학습 목차</h2>
+            <div class="mypage-progress">
+              <progress class="mypage-progress__bar" max="100" value="50" aria-label="진도율">50%</progress>
+              <span class="mypage-progress__value" aria-hidden="true">50%</span>
+            </div>
+          </div>
+          <ol class="mypage-player__lessons">
+            <li>
+              <a href="/kdha/mypage/classroom/online/player/" aria-current="true">
+                <span class="mypage-player__lesson-title">1강. 의료윤리와 법정의무</span>
+                <span class="mypage-player__lesson-state">수강중 · 33분</span>
+              </a>
+            </li>
+            <li>
+              <a href="/kdha/mypage/classroom/online/player/">
+                <span class="mypage-player__lesson-title">2강. 의료윤리와 법정의무</span>
+                <span class="mypage-player__lesson-state mypage-player__lesson-state--done">수강완료 · 33분</span>
+              </a>
+            </li>
+            <li>
+              <a href="/kdha/mypage/classroom/online/player/">
+                <span class="mypage-player__lesson-title">3강. 의료윤리와 법정의무</span>
+                <span class="mypage-player__lesson-state">미수강 · 33분</span>
+              </a>
+            </li>
+            <li>
+              <a href="/kdha/mypage/classroom/online/player/">
+                <span class="mypage-player__lesson-title">4강. 의료윤리와 법정의무</span>
+                <span class="mypage-player__lesson-state">미수강 · 33분</span>
+              </a>
+            </li>
+          </ol>
+          <div class="mypage-player__actions">
+            <!-- 시험·설문 팝업은 교육 상세 화면에 있습니다. -->
+            <a
+              class="ds-button ds-button--medium ds-button--primary"
+              href="/kdha/mypage/classroom/online/detail/#classroom-exam-intro-dialog"
+            >
+              시험보기
+            </a>
+            <a
+              class="ds-button ds-button--medium ds-button--outline"
+              href="/kdha/mypage/classroom/online/detail/#classroom-survey-dialog"
+            >
+              설문참여
+            </a>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/mypage-classroom.js"></script>
+  </body>
+</html>

@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/datepicker.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-
-    <title>대한치과위생사협회</title>
+    <title>마이페이지 | 대한치과위생사협회</title>
   </head>
-  <body class="">
+  <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <div class="site user-page">
       <header class="site-header">
@@ -280,7 +279,6 @@
 
       <main id="main-content" class="user-page__main">
         <header class="page-hero">
-          <!-- KD-US-MYP-00-01 -->
           <nav aria-label="현재 위치">
             <a href="/kdha/main/" aria-label="홈">
               <span class="material-symbols-rounded" aria-hidden="true">home</span>
@@ -292,81 +290,299 @@
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <div class="user-page__inner">
-            <section class="user-page-menu" aria-labelledby="user-page-menu-title">
-              <div class="user-page-menu__heading">
-                <h2 id="user-page-menu-title">마이페이지 메뉴</h2>
-                <span>8개</span>
+          <!-- KD-US-MYP-01-01_PC_마이페이지 메인 -->
+          <div class="mypage mypage-home">
+            <nav class="ds-tabs ds-tabs--box" aria-label="마이페이지 메뉴" data-mypage-tabs>
+              <a class="ds-tabs__item" href="/kdha/mypage/" aria-current="page">마이페이지</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/classroom/">내 강의실</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/license/">면허신고현황</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/payments/">결제관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/points/">쿠폰·마일리지</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/volunteer/">봉사관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/consulting/legal/">상담관리</a>
+            </nav>
+
+            <div class="mypage-home__body">
+              <section class="mypage-card mypage-card--accent mypage-profile" aria-labelledby="mypage-profile-title">
+                <h2 class="sr-only" id="mypage-profile-title">회원정보</h2>
+                <div class="mypage-profile__info">
+                  <div class="mypage-profile__head">
+                    <span class="ds-badge">학생회원</span>
+                  </div>
+                  <p class="mypage-profile__name">홍길동</p>
+                  <ul class="mypage-profile__contact">
+                    <li>
+                      <span class="sr-only">휴대폰번호</span>
+                      010-1234-5678
+                    </li>
+                    <li>
+                      <span class="sr-only">이메일</span>
+                      dha1234@gmail.com
+                    </li>
+                    <li>
+                      <span class="sr-only">전화번호</span>
+                      010-1234-5678
+                    </li>
+                  </ul>
+                  <a class="ds-link ds-link--text" href="/kdha/mypage/member/student/">개인정보 수정</a>
+                </div>
+                <div class="mypage-profile__side">
+                  <dl class="mypage-profile__license">
+                    <dt>면허번호 -</dt>
+                    <dd>0001234</dd>
+                  </dl>
+                  <div class="mypage-profile__actions">
+                    <button
+                      class="ds-button ds-button--small ds-button--outline"
+                      type="button"
+                      aria-haspopup="dialog"
+                      data-dialog-open="mypage-convert-dialog"
+                    >
+                      치과위생사회원 전환 신청
+                    </button>
+                    <button
+                      class="ds-button ds-button--small ds-button--primary"
+                      type="button"
+                      aria-haspopup="dialog"
+                      data-dialog-open="mypage-card-dialog"
+                    >
+                      회원증
+                    </button>
+                  </div>
+                </div>
+              </section>
+
+              <section class="mypage-card" aria-labelledby="mypage-edu-title">
+                <h2 class="mypage-card__title" id="mypage-edu-title">교육 현황</h2>
+                <div class="mypage-edu">
+                  <dl class="mypage-stats">
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">신청교육</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">이수완료</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">수강중</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">미이수</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                  </dl>
+                  <span class="mypage-edu__divider" aria-hidden="true"></span>
+                  <div class="mypage-recent">
+                    <p class="mypage-recent__label">최근 교육 이수 현황</p>
+                    <p class="mypage-recent__title">2026 치과위생사 법정 보수교육</p>
+                    <p class="mypage-recent__deadline">
+                      <span>수강마감일</span>
+                      <time datetime="2026-09-30">2026-09-30</time>
+                    </p>
+                    <div class="mypage-progress">
+                      <progress class="mypage-progress__bar" max="100" value="80" aria-label="진도율">80%</progress>
+                      <span class="mypage-progress__value" aria-hidden="true">80%</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="mypage-card__more" href="/kdha/mypage/classroom/">교육 이수 현황 보기</a>
+              </section>
+
+              <div class="mypage-home__row">
+                <section class="mypage-card" aria-labelledby="mypage-payment-title">
+                  <h2 class="mypage-card__title" id="mypage-payment-title">결제 현황</h2>
+                  <dl class="mypage-stats mypage-stats--compact">
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">결제완료</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">결제대기</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">환불</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                  </dl>
+                  <a class="mypage-card__more" href="/kdha/mypage/payments/">결제 현황 보기</a>
+                </section>
+                <section class="mypage-card" aria-labelledby="mypage-dues-title">
+                  <h2 class="mypage-card__title" id="mypage-dues-title">회비납부 현황</h2>
+                  <dl class="mypage-stats mypage-stats--compact">
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">최근 결제일</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">결제금액</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                    <div class="mypage-stats__item">
+                      <dt class="mypage-stats__label">결제상태</dt>
+                      <dd class="mypage-stats__value">10건</dd>
+                    </div>
+                  </dl>
+                  <a class="mypage-card__more" href="/kdha/mypage/payments/dues/">회비납부 현황 보기</a>
+                </section>
               </div>
-              <div class="user-page-menu__grid">
-                <a class="user-page-menu__link" href="/kdha/mypage/classroom/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">내 강의실</strong>
-                    <span class="user-page-menu__meta">하위 메뉴</span>
-                  </span>
-                </a>
-                <a class="user-page-menu__link" href="/kdha/mypage/member/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">회원정보 관리</strong>
-                    <span class="user-page-menu__meta">하위 메뉴</span>
-                  </span>
-                </a>
-                <a class="user-page-menu__link" href="/kdha/mypage/payments/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">결제내역</strong>
-                    <span class="user-page-menu__meta">하위 메뉴</span>
-                  </span>
-                </a>
-                <a class="user-page-menu__link" href="/kdha/mypage/member-card/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">회원증카드 안내</strong>
-                    <span class="user-page-menu__meta">KD-US-MYP-08-01</span>
-                  </span>
-                </a>
-                <a class="user-page-menu__link" href="/kdha/mypage/volunteer/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">봉사관리</strong>
-                    <span class="user-page-menu__meta">하위 메뉴</span>
-                  </span>
-                </a>
-                <a class="user-page-menu__link" href="/kdha/mypage/certificates/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">제증명서발급</strong>
-                    <span class="user-page-menu__meta">KD-US-MYP-09-01</span>
-                  </span>
-                </a>
-                <a class="user-page-menu__link" href="/kdha/mypage/consultations/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">상담신청내역</strong>
-                    <span class="user-page-menu__meta">하위 메뉴</span>
-                  </span>
-                </a>
-                <a class="user-page-menu__link" href="/kdha/mypage/questions/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">1:1 상담</strong>
-                    <span class="user-page-menu__meta">ED-US-QNA-01-01</span>
-                  </span>
-                </a>
-              </div>
-            </section>
-            <section class="user-content user-article" aria-label="마이페이지 임시 안내">
-              <p class="user-article__lead">
-                대한치과위생사협회는 국민의 구강건강 증진과 치과위생사의 전문성 향상을 위해 노력합니다.
-              </p>
-              <div class="user-article__body">
-                <h2>마이페이지 안내</h2>
-                <p>
-                  이 페이지는 기존 사이트의 정보 구조와 기획설계서의 화면 구성을 참고해 만든 임시 콘텐츠입니다. 서비스
-                  정책과 세부 자료가 확정되면 실제 내용으로 교체됩니다.
-                </p>
-                <h3>주요 안내사항</h3>
-                <ul>
-                  <li>회원과 국민이 필요한 정보를 쉽고 빠르게 찾을 수 있도록 구성합니다.</li>
-                  <li>신청 및 조회가 필요한 서비스는 로그인 후 이용할 수 있습니다.</li>
-                  <li>문의사항은 협회 대표전화 또는 관련 상담 메뉴를 이용해 주세요.</li>
-                </ul>
-              </div>
-            </section>
+
+              <section class="mypage-card" aria-labelledby="mypage-training-title">
+                <h2 class="mypage-card__title" id="mypage-training-title">보수교육 현황</h2>
+                <div class="ds-board mypage-home__board" role="table" aria-labelledby="mypage-training-title">
+                  <div class="ds-board__head" role="row">
+                    <span role="columnheader">연도</span>
+                    <span role="columnheader">구분</span>
+                    <span role="columnheader">기준평점</span>
+                    <span role="columnheader">취득평점</span>
+                    <span role="columnheader">필수과목</span>
+                    <span role="columnheader">이수여부</span>
+                    <span role="columnheader">수료증</span>
+                    <span role="columnheader">이수증</span>
+                  </div>
+                  <div class="ds-board__row" role="row">
+                    <span class="mypage-home__year" role="cell">2026</span>
+                    <span class="mypage-home__type" role="cell">대상자</span>
+                    <span class="mypage-home__info" role="cell">
+                      <span class="mypage-mo-only">기준평점</span>
+                      <span>8점</span>
+                    </span>
+                    <span class="mypage-home__info" role="cell">
+                      <span class="mypage-mo-only">취득평점</span>
+                      <button
+                        class="mypage-home__score"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="mypage-score-dialog"
+                      >
+                        8점
+                      </button>
+                    </span>
+                    <span class="mypage-home__info" role="cell">
+                      <span class="mypage-mo-only">필수과목</span>
+                      <span>2</span>
+                    </span>
+                    <span class="mypage-home__status mypage-status mypage-status--success" role="cell">이수완료</span>
+                    <span class="mypage-home__print" role="cell">
+                      <button
+                        class="ds-button ds-button--small ds-button--outline"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="mypage-certificate-dialog"
+                      >
+                        <span class="mypage-pc-only">출력하기</span>
+                        <span class="mypage-mo-only">수료증 출력</span>
+                      </button>
+                    </span>
+                    <span class="mypage-home__print" role="cell">
+                      <button
+                        class="ds-button ds-button--small ds-button--outline"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="mypage-completion-dialog"
+                      >
+                        <span class="mypage-pc-only">출력하기</span>
+                        <span class="mypage-mo-only">이수증 출력</span>
+                      </button>
+                    </span>
+                  </div>
+                  <div class="ds-board__row" role="row">
+                    <span class="mypage-home__year" role="cell">2026</span>
+                    <span class="mypage-home__type" role="cell">대상자</span>
+                    <span class="mypage-home__info" role="cell">
+                      <span class="mypage-mo-only">기준평점</span>
+                      <span>8점</span>
+                    </span>
+                    <span class="mypage-home__info" role="cell">
+                      <span class="mypage-mo-only">취득평점</span>
+                      <button
+                        class="mypage-home__score"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="mypage-score-dialog"
+                      >
+                        2점
+                      </button>
+                    </span>
+                    <span class="mypage-home__info" role="cell">
+                      <span class="mypage-mo-only">필수과목</span>
+                      <span>0</span>
+                    </span>
+                    <span class="mypage-home__status mypage-status mypage-status--danger" role="cell">미이수</span>
+                    <span class="mypage-home__print" role="cell">
+                      <button
+                        class="ds-button ds-button--small ds-button--outline"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="mypage-certificate-dialog"
+                      >
+                        <span class="mypage-pc-only">출력하기</span>
+                        <span class="mypage-mo-only">수료증 출력</span>
+                      </button>
+                    </span>
+                    <span class="mypage-home__print" role="cell">
+                      <button
+                        class="ds-button ds-button--small ds-button--outline"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="mypage-completion-dialog"
+                      >
+                        <span class="mypage-pc-only">출력하기</span>
+                        <span class="mypage-mo-only">이수증 출력</span>
+                      </button>
+                    </span>
+                  </div>
+                  <div class="ds-board__row" role="row">
+                    <span class="mypage-home__year" role="cell">2024</span>
+                    <span class="mypage-home__type" role="cell">대상자</span>
+                    <span class="mypage-home__info" role="cell">
+                      <span class="mypage-mo-only">기준평점</span>
+                      <span>8점</span>
+                    </span>
+                    <span class="mypage-home__info" role="cell">
+                      <span class="mypage-mo-only">취득평점</span>
+                      <button
+                        class="mypage-home__score"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="mypage-score-dialog"
+                      >
+                        0점
+                      </button>
+                    </span>
+                    <span class="mypage-home__info" role="cell">
+                      <span class="mypage-mo-only">필수과목</span>
+                      <span>0</span>
+                    </span>
+                    <span class="mypage-home__status mypage-status mypage-status--danger" role="cell">미이수</span>
+                    <span class="mypage-home__print" role="cell">
+                      <button
+                        class="ds-button ds-button--small ds-button--outline"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="mypage-certificate-dialog"
+                      >
+                        <span class="mypage-pc-only">출력하기</span>
+                        <span class="mypage-mo-only">수료증 출력</span>
+                      </button>
+                    </span>
+                    <span class="mypage-home__print" role="cell">
+                      <button
+                        class="ds-button ds-button--small ds-button--outline"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="mypage-completion-dialog"
+                      >
+                        <span class="mypage-pc-only">출력하기</span>
+                        <span class="mypage-mo-only">이수증 출력</span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </main>
@@ -456,11 +672,577 @@
         </div>
       </footer>
     </div>
+
+    <!-- KD-US-MYP-01-01P 치과위생사회원 전환 신청 -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--wide"
+      id="mypage-convert-dialog"
+      aria-labelledby="mypage-convert-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="mypage-convert-title">치과위생사회원 전환 신청</h2>
+      <form class="mypage-dialog__form" method="dialog">
+        <div class="edu-dialog__body mypage-form">
+          <div class="form-field form-field--large" role="group" aria-labelledby="mypage-convert-school-label">
+            <span id="mypage-convert-school-label">학교</span>
+            <div class="mypage-form__split mypage-form__split--lead">
+              <select name="schoolType" aria-label="학제" data-custom-select data-select-size="l">
+                <option value="">학제</option>
+                <option value="2">2년제</option>
+                <option value="3">3년제</option>
+                <option value="4">4년제</option>
+              </select>
+              <select name="school" aria-label="학교" data-custom-select data-select-size="l">
+                <option value="">학교</option>
+              </select>
+            </div>
+          </div>
+          <div class="mypage-form__row">
+            <div class="form-field form-field--large form-datepicker">
+              <label for="mypage-convert-admission">입학년도</label>
+              <span class="form-datepicker__control">
+                <input
+                  id="mypage-convert-admission"
+                  name="admissionYear"
+                  type="text"
+                  inputmode="numeric"
+                  placeholder="YYYY"
+                  autocomplete="off"
+                  data-datepicker
+                  data-datepicker-view="year"
+                />
+                <button
+                  class="form-datepicker__button"
+                  type="button"
+                  data-datepicker-trigger
+                  aria-label="입학년도 선택기 열기"
+                  aria-controls="mypage-convert-admission"
+                >
+                  <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                </button>
+              </span>
+            </div>
+            <div class="form-field form-field--large form-datepicker">
+              <label for="mypage-convert-graduation">졸업년도</label>
+              <span class="form-datepicker__control">
+                <input
+                  id="mypage-convert-graduation"
+                  name="graduationYear"
+                  type="text"
+                  inputmode="numeric"
+                  placeholder="YYYY"
+                  autocomplete="off"
+                  data-datepicker
+                  data-datepicker-view="year"
+                />
+                <button
+                  class="form-datepicker__button"
+                  type="button"
+                  data-datepicker-trigger
+                  aria-label="졸업년도 선택기 열기"
+                  aria-controls="mypage-convert-graduation"
+                >
+                  <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <fieldset class="account-choice-field">
+            <legend>결혼유무 (선택)</legend>
+            <div class="account-choice-group">
+              <label class="form-check">
+                <input type="radio" name="marriage" value="single" />
+                미혼
+              </label>
+              <label class="form-check">
+                <input type="radio" name="marriage" value="married" checked />
+                기혼
+              </label>
+            </div>
+          </fieldset>
+          <div class="mypage-form__row">
+            <div class="form-field form-field--large form-datepicker">
+              <label for="mypage-convert-exam">시험합격일자</label>
+              <span class="form-datepicker__control">
+                <input
+                  id="mypage-convert-exam"
+                  name="examPassYear"
+                  type="text"
+                  inputmode="numeric"
+                  placeholder="YYYY"
+                  autocomplete="off"
+                  data-datepicker
+                  data-datepicker-view="year"
+                />
+                <button
+                  class="form-datepicker__button"
+                  type="button"
+                  data-datepicker-trigger
+                  aria-label="시험합격일자 선택기 열기"
+                  aria-controls="mypage-convert-exam"
+                >
+                  <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                </button>
+              </span>
+            </div>
+            <div class="form-field form-field--large form-datepicker">
+              <label for="mypage-convert-issued">면허발행일</label>
+              <span class="form-datepicker__control">
+                <input
+                  id="mypage-convert-issued"
+                  name="licenseIssuedDate"
+                  type="text"
+                  inputmode="numeric"
+                  placeholder="YYYY-MM-DD"
+                  autocomplete="off"
+                  data-datepicker
+                />
+                <button
+                  class="form-datepicker__button"
+                  type="button"
+                  data-datepicker-trigger
+                  aria-label="면허발행일 달력 열기"
+                  aria-controls="mypage-convert-issued"
+                >
+                  <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div class="form-field form-field--large">
+            <label for="mypage-convert-license">면허번호</label>
+            <input id="mypage-convert-license" name="licenseNumber" placeholder="면허번호 입력" />
+          </div>
+          <div class="form-field" role="group" aria-labelledby="mypage-convert-file-label" data-mypage-upload>
+            <span id="mypage-convert-file-label">면허증사본</span>
+            <div class="account-file-upload">
+              <p>
+                이곳에 파일을 드래그 하거나
+                <br />
+                파일찾기 버튼으로 파일을 추가해주세요.
+                <br />
+                * 50MB 이하의 jpg, png, pdf 파일만 등록 가능합니다.
+              </p>
+              <label class="ds-button ds-button--outline ds-button--small" for="mypage-convert-file">파일찾기</label>
+              <input
+                class="sr-only"
+                id="mypage-convert-file"
+                name="licenseFile"
+                type="file"
+                accept=".jpg,.jpeg,.png,.pdf"
+              />
+            </div>
+            <div class="account-file-upload__item" data-file-item>
+              <span data-file-name>파일명.jpg</span>
+              <span class="account-file-upload__meta">
+                <small data-file-size>20MB</small>
+                <button type="button" data-file-remove aria-label="파일명.jpg 삭제">
+                  <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div class="mypage-form__row">
+            <div class="form-field form-field--large">
+              <label for="mypage-convert-mobile">휴대폰번호</label>
+              <input
+                id="mypage-convert-mobile"
+                name="mobile"
+                type="tel"
+                inputmode="numeric"
+                placeholder="- 없이 숫자만 입력"
+              />
+            </div>
+            <div class="form-field form-field--large">
+              <label for="mypage-convert-tel">전화번호 (선택)</label>
+              <input
+                id="mypage-convert-tel"
+                name="tel"
+                type="tel"
+                inputmode="numeric"
+                placeholder="- 없이 숫자만 입력"
+              />
+            </div>
+          </div>
+          <div class="form-field form-field--large">
+            <label for="mypage-convert-email">이메일</label>
+            <div class="account-form-row account-form-row--email">
+              <input id="mypage-convert-email" name="emailId" type="text" placeholder="아이디" autocomplete="off" />
+              <div class="account-email-domain">
+                <label class="account-email-domain__field">
+                  <span class="sr-only">이메일 도메인</span>
+                  <select name="emailDomain" aria-label="이메일 도메인" data-custom-select data-select-size="l">
+                    <option value="gmail.com">@ gmail.com</option>
+                    <option value="naver.com">@ naver.com</option>
+                    <option value="hanmail.net">@ hanmail.net</option>
+                  </select>
+                  <input
+                    type="text"
+                    inputmode="url"
+                    placeholder="@ 직접입력"
+                    aria-label="이메일 도메인 직접입력"
+                    data-email-domain-input
+                    hidden
+                  />
+                </label>
+                <button class="form-action-button account-email-domain__button" type="button" data-email-domain-toggle>
+                  직접입력
+                </button>
+              </div>
+            </div>
+          </div>
+          <fieldset class="account-choice-field">
+            <legend>알림서비스 (선택)</legend>
+            <div class="account-choice-group">
+              <label class="form-check">
+                <input type="checkbox" name="notice" value="sms" />
+                SMS
+              </label>
+              <label class="form-check">
+                <input type="checkbox" name="notice" value="email" checked />
+                이메일
+              </label>
+            </div>
+          </fieldset>
+          <div class="form-field form-field--large">
+            <label for="mypage-convert-address">주소</label>
+            <span class="form-input-action">
+              <input id="mypage-convert-address" name="address" value="06365 123-12 서울특별시 강남구 1길 1" readonly />
+              <button type="button">주소찾기</button>
+            </span>
+            <input name="addressDetail" aria-label="상세주소" placeholder="상세주소 입력" />
+          </div>
+          <div class="form-field form-field--large" role="group" aria-labelledby="mypage-convert-job-label">
+            <span id="mypage-convert-job-label">취업현황</span>
+            <div class="mypage-form__split">
+              <select
+                name="employmentStatus"
+                aria-label="취업현황"
+                data-custom-select
+                data-select-size="l"
+                data-mypage-employment
+              >
+                <option value="">선택</option>
+                <option value="clinical">임상</option>
+                <option value="public-health">보건</option>
+                <option value="other">기타</option>
+                <option value="unemployed">미취업</option>
+              </select>
+              <select
+                name="employmentDetail"
+                aria-label="취업현황 상세"
+                data-custom-select
+                data-select-size="l"
+                data-mypage-employment-detail
+              >
+                <option value="">취업현황상세</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="edu-dialog__actions">
+          <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+          <button class="ds-button ds-button--large ds-button--primary" type="submit">전환 신청</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- KD-US-MYP-01-02P 회원증 -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--wide"
+      id="mypage-card-dialog"
+      aria-labelledby="mypage-card-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="mypage-card-title">대한치과위생사협회 회원증</h2>
+      <div class="edu-dialog__body">
+        <!-- 회원증 이미지 영역(서버 연동 시 img로 교체) -->
+        <div class="mypage-member-card"></div>
+      </div>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+
+    <!-- KD-US-MYP-01-03P 취득 평점 목록 -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--xl"
+      id="mypage-score-dialog"
+      aria-labelledby="mypage-score-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="mypage-score-title">취득 평점 목록</h2>
+      <div class="edu-dialog__body">
+        <div class="ds-board mypage-score-board" role="table" aria-labelledby="mypage-score-title">
+          <div class="ds-board__head" role="row">
+            <span role="columnheader">교육일자</span>
+            <span role="columnheader">교육명</span>
+            <span role="columnheader">기관명</span>
+            <span role="columnheader">취득평점</span>
+            <span role="columnheader">필수과목</span>
+          </div>
+          <div class="ds-board__row" role="row">
+            <span role="cell">
+              <span class="mypage-mo-only">교육일자</span>
+              <time datetime="2026-07-14">2026-07-14</time>
+            </span>
+            <span class="mypage-score-board__title" role="cell">2025년 학술대회</span>
+            <span role="cell">
+              <span class="mypage-mo-only">기관명</span>
+              협회
+            </span>
+            <span role="cell">
+              <span class="mypage-mo-only">취득평점</span>
+              <span class="mypage-score-board__point">2</span>
+            </span>
+            <span role="cell">
+              <span class="mypage-mo-only">필수과목</span>
+              2
+            </span>
+          </div>
+          <div class="ds-board__row" role="row">
+            <span role="cell">
+              <span class="mypage-mo-only">교육일자</span>
+              <time datetime="2026-07-14">2026-07-14</time>
+            </span>
+            <span class="mypage-score-board__title" role="cell">치과 경영의 첫걸음</span>
+            <span role="cell">
+              <span class="mypage-mo-only">기관명</span>
+              협회
+            </span>
+            <span role="cell">
+              <span class="mypage-mo-only">취득평점</span>
+              <span class="mypage-score-board__point">2</span>
+            </span>
+            <span role="cell">
+              <span class="mypage-mo-only">필수과목</span>
+              0
+            </span>
+          </div>
+          <div class="ds-board__row" role="row">
+            <span role="cell">
+              <span class="mypage-mo-only">교육일자</span>
+              <time datetime="2026-07-14">2026-07-14</time>
+            </span>
+            <span class="mypage-score-board__title" role="cell">장애인 치과진료 및 구강보건 교육</span>
+            <span role="cell">
+              <span class="mypage-mo-only">기관명</span>
+              협회
+            </span>
+            <span role="cell">
+              <span class="mypage-mo-only">취득평점</span>
+              <span class="mypage-score-board__point">2</span>
+            </span>
+            <span role="cell">
+              <span class="mypage-mo-only">필수과목</span>
+              2
+            </span>
+          </div>
+          <div class="ds-board__row" role="row">
+            <span role="cell">
+              <span class="mypage-mo-only">교육일자</span>
+              <time datetime="2026-07-14">2026-07-14</time>
+            </span>
+            <span class="mypage-score-board__title" role="cell">치과건강보험 청구 가이드</span>
+            <span role="cell">
+              <span class="mypage-mo-only">기관명</span>
+              협회
+            </span>
+            <span role="cell">
+              <span class="mypage-mo-only">취득평점</span>
+              <span class="mypage-score-board__point">2</span>
+            </span>
+            <span role="cell">
+              <span class="mypage-mo-only">필수과목</span>
+              0
+            </span>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- KD-US-MYP-01-04P 이수증 -->
+    <dialog class="edu-dialog mypage-cert" id="mypage-completion-dialog" aria-labelledby="mypage-completion-title">
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 class="mypage-cert__title" id="mypage-completion-title">
+        <span aria-hidden="true">이 수 증</span>
+        <span class="sr-only">이수증</span>
+      </h2>
+      <dl class="mypage-cert__info">
+        <div class="mypage-cert__row">
+          <dt>성명</dt>
+          <dd>test</dd>
+        </div>
+        <div class="mypage-cert__row">
+          <dt>생년월일</dt>
+          <dd>1994-08-18</dd>
+        </div>
+        <div class="mypage-cert__row mypage-cert__row--wide">
+          <dt>주소</dt>
+          <dd>경기도 김포시 김포대로 지하852 (사우동) 3층</dd>
+        </div>
+        <div class="mypage-cert__row">
+          <dt>면허종류</dt>
+          <dd>치과위생사</dd>
+        </div>
+        <div class="mypage-cert__row">
+          <dt>면허번호</dt>
+          <dd>000000</dd>
+        </div>
+      </dl>
+      <p class="mypage-cert__statement">
+        귀하는 2025년도 보수교육의 모든 과정을 마쳤으므로
+        <br class="mypage-pc-only" />
+        「의료기사 등에 관한 법률」 제20조 및 같은 법 시행규칙 제19조제3항에
+        <br class="mypage-pc-only" />
+        따라 이수증을 수여합니다.
+      </p>
+      <p class="mypage-cert__date">2026년 9월 16일</p>
+      <p class="mypage-cert__issuer">
+        사단법인
+        <strong>대한치과위생사협회장</strong>
+        <span class="mypage-cert__seal">직인</span>
+      </p>
+      <p class="mypage-cert__number">발급번호 : KDHA-E00705511</p>
+    </dialog>
+
+    <!-- KD-US-MYP-01-04P 수료증 -->
+    <dialog class="edu-dialog mypage-cert" id="mypage-certificate-dialog" aria-labelledby="mypage-certificate-title">
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 class="mypage-cert__title" id="mypage-certificate-title">
+        <span aria-hidden="true">수 료 증</span>
+        <span class="sr-only">수료증</span>
+      </h2>
+      <dl class="mypage-cert__info">
+        <div class="mypage-cert__row">
+          <dt>성명</dt>
+          <dd>test</dd>
+        </div>
+        <div class="mypage-cert__row">
+          <dt>생년월일</dt>
+          <dd>1994-08-18</dd>
+        </div>
+        <div class="mypage-cert__row mypage-cert__row--wide">
+          <dt>주소</dt>
+          <dd>경기도 김포시 김포대로 지하852 (사우동) 3층</dd>
+        </div>
+        <div class="mypage-cert__row">
+          <dt>일시</dt>
+          <dd>2026-07-14</dd>
+        </div>
+        <div class="mypage-cert__row">
+          <dt>장소</dt>
+          <dd>협회</dd>
+        </div>
+        <div class="mypage-cert__row mypage-cert__row--wide">
+          <dt>교육명</dt>
+          <dd>(2025년 학술대회) 치과위생사가 알아야 할 치과임상에서의 의료분쟁사례 분석과 실천적 대응방안</dd>
+        </div>
+        <div class="mypage-cert__row mypage-cert__row--wide">
+          <dt>평점</dt>
+          <dd>2</dd>
+        </div>
+      </dl>
+      <p class="mypage-cert__statement">귀하는 상기 교육을 수료하였으므로 이 수료증을 수여합니다.</p>
+      <p class="mypage-cert__date">2026년 9월 16일</p>
+      <p class="mypage-cert__issuer">
+        사단법인
+        <strong>대한치과위생사협회장</strong>
+        <span class="mypage-cert__seal">직인</span>
+      </p>
+      <p class="mypage-cert__number">발급번호 : KDHA-E00705511</p>
+    </dialog>
+
+    <!-- QR 회원증 (Modal/PC 3540:148616) -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--modal"
+      id="mypage-qr-dialog"
+      aria-labelledby="mypage-qr-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="mypage-qr-title">QR 코드</h2>
+      <div class="mypage-qr">
+        <div class="mypage-qr__person">
+          <p class="mypage-qr__name">홍길동</p>
+          <p class="mypage-qr__meta">면허번호 - 001234</p>
+        </div>
+        <div class="mypage-qr__code">
+          <!-- QR 이미지 영역(서버 연동 시 img로 교체) -->
+          <div class="mypage-qr__image"></div>
+          <p class="mypage-qr__date"><time datetime="2026-10-01">2026-10-01</time></p>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- 본인인증 (Modal/PC 3540:148627) -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--modal"
+      id="mypage-verify-dialog"
+      aria-labelledby="mypage-verify-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="mypage-verify-title">본인인증</h2>
+      <div class="edu-dialog__result-content">
+        <dl class="edu-dialog__account-result">
+          <div>
+            <dt>이름</dt>
+            <dd>홍길동</dd>
+          </div>
+          <div>
+            <dt>면허번호</dt>
+            <dd>0001234</dd>
+          </div>
+        </dl>
+        <p>
+          죄송합니다.
+          <br />
+          회원님은 해당 교육 대상자에 포함되지 않습니다.
+          <br />
+          수강 신청 내역을 확인해주세요.
+        </p>
+      </div>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>닫기</button>
+      </div>
+    </dialog>
+
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="마이페이지 레이어 확인">
+        <a href="/kdha/mypage/#mypage-convert-dialog">팝업 · 치과위생사회원 전환 신청</a>
+        <a href="/kdha/mypage/#mypage-card-dialog">팝업 · 회원증</a>
+        <a href="/kdha/mypage/#mypage-score-dialog">팝업 · 취득 평점 목록</a>
+        <a href="/kdha/mypage/#mypage-completion-dialog">팝업 · 이수증</a>
+        <a href="/kdha/mypage/#mypage-certificate-dialog">팝업 · 수료증</a>
+        <a href="/kdha/mypage/#mypage-qr-dialog">팝업 · QR 회원증</a>
+        <a href="/kdha/mypage/#mypage-verify-dialog">팝업 · 본인인증</a>
+      </nav>
+    </details>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
     <script src="/kdha/assets/js/common.js"></script>
     <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/mypage.js"></script>
   </body>
 </html>

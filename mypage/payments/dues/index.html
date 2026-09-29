@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-
-    <title>대한치과위생사협회</title>
+    <title>회비 내역 | 마이페이지 | 대한치과위생사협회</title>
   </head>
-  <body class="">
+  <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <div class="site user-page">
       <header class="site-header">
@@ -280,55 +278,354 @@
 
       <main id="main-content" class="user-page__main">
         <header class="page-hero">
-          <!-- KD-US-MYP-03-01 -->
           <nav aria-label="현재 위치">
             <a href="/kdha/main/" aria-label="홈">
               <span class="material-symbols-rounded" aria-hidden="true">home</span>
             </a>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <a class="user-page-breadcrumb__link" href="/kdha/mypage/">마이페이지</a>
+            <span>마이페이지</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <a class="user-page-breadcrumb__link" href="/kdha/mypage/payments/">결제내역</a>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <span aria-current="page">회비납부/내역 조회</span>
+            <span aria-current="page">결제관리</span>
           </nav>
-          <h1>회비납부/내역 조회</h1>
+          <h1>결제관리</h1>
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <div class="user-page__inner">
-            <section class="user-content user-dashboard" aria-label="회비납부/내역 조회 임시 현황">
-              <div class="user-dashboard__summary">
-                <span
-                  class="material-symbols-outlined material-icon"
-                  aria-hidden="true"
-                  style="font-size: 44px; width: 44px; height: 44px"
-                >
-                  account_circle
-                </span>
-                <div>
-                  <strong>정회원 홍길동님</strong>
-                  <p>회원님의 회비납부/내역 조회 정보를 확인할 수 있습니다.</p>
+          <!-- KD-US-MYP-06-01_PC_결제관리_회비 내역 -->
+          <div class="mypage mypage-dues">
+            <nav class="ds-tabs ds-tabs--box" aria-label="마이페이지 메뉴" data-mypage-tabs>
+              <a class="ds-tabs__item" href="/kdha/mypage/">마이페이지</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/classroom/">내 강의실</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/license/">면허신고현황</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/payments/" aria-current="page">결제관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/points/">쿠폰·마일리지</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/volunteer/">봉사관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/consulting/legal/">상담관리</a>
+            </nav>
+            <nav class="ds-tabs" aria-label="결제관리 하위 메뉴">
+              <a class="ds-tabs__item" href="/kdha/mypage/payments/dues/" aria-current="page">회비 내역</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/payments/">결제 내역</a>
+              <a class="ds-tabs__item" href="#none">회관기금 내역</a>
+            </nav>
+            <div class="ds-guide-list mypage-pay-note mypage-pay-note--accent">
+              <p class="mypage-pay-note__title">영수증발급안내</p>
+              <ul class="mypage-pay-note__list">
+                <li class="ds-guide-list__item">
+                  <span class="ds-guide-list__content">
+                    온라인 결제 이용 고객에 한해 관련 사이트로 이동하여 직접 영수증을 출력하시면 됩니다.
+                  </span>
+                </li>
+                <li class="ds-guide-list__item">
+                  <span class="ds-guide-list__content">
+                    해당 영수증 서비스는 2015.09.14 이후부터 서비스 됨을 알려드리며, 이전 영수증을 요청하시는 분들은
+                    joinqna@kdha.or.kr로 문의해주시면 감사드립니다.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <section class="mypage-ledger" aria-labelledby="dues-list-title">
+              <h2 class="sr-only" id="dues-list-title">회비 내역</h2>
+              <div class="ds-board mypage-ledger__board" id="dues-list" role="table" aria-labelledby="dues-list-title">
+                <div class="ds-board__head" role="row">
+                  <span class="mypage-ledger__check" role="columnheader">
+                    <label class="form-check">
+                      <input type="checkbox" aria-label="회비 내역 전체 선택" data-dues-check-all />
+                    </label>
+                  </span>
+                  <span role="columnheader">구분</span>
+                  <span role="columnheader">년도</span>
+                  <span role="columnheader">금액</span>
+                  <span role="columnheader">납부상태</span>
+                  <span role="columnheader">비고</span>
+                </div>
+                <div class="ds-board__row" role="row">
+                  <span class="mypage-ledger__check" role="cell">
+                    <label class="form-check">
+                      <input
+                        type="checkbox"
+                        name="dues"
+                        value="2027-1"
+                        aria-label="2027년 연회비 미납 선택"
+                        data-dues-check
+                      />
+                    </label>
+                  </span>
+                  <span
+                    class="mypage-ledger__title mypage-ledger__title--plain mypage-ledger__title--center"
+                    role="cell"
+                  >
+                    연회비
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">년도</span>
+                    2027년
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">금액</span>
+                    80,000원
+                  </span>
+                  <span class="mypage-ledger__status" role="cell">
+                    <span class="ds-badge ds-badge--warning">미납</span>
+                  </span>
+                  <span class="mypage-ledger__action mypage-pc-only" role="cell">-</span>
+                </div>
+                <div class="ds-board__row" role="row">
+                  <span class="mypage-ledger__check" role="cell">
+                    <label class="form-check">
+                      <input
+                        type="checkbox"
+                        name="dues"
+                        value="2027-2"
+                        aria-label="2027년 연회비 납부완료 선택"
+                        data-dues-check
+                      />
+                    </label>
+                  </span>
+                  <span
+                    class="mypage-ledger__title mypage-ledger__title--plain mypage-ledger__title--center"
+                    role="cell"
+                  >
+                    연회비
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">년도</span>
+                    2027년
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">금액</span>
+                    80,000원
+                  </span>
+                  <span class="mypage-ledger__status" role="cell"><span class="ds-badge">납부완료</span></span>
+                  <span class="mypage-ledger__action" role="cell">
+                    <button class="ds-button ds-button--small ds-button--outline" type="button">영수증 출력</button>
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row">
+                  <span class="mypage-ledger__check" role="cell">
+                    <label class="form-check">
+                      <input
+                        type="checkbox"
+                        name="dues"
+                        value="2027-3"
+                        aria-label="2027년 연회비 환불요청중 선택"
+                        data-dues-check
+                      />
+                    </label>
+                  </span>
+                  <span
+                    class="mypage-ledger__title mypage-ledger__title--plain mypage-ledger__title--center"
+                    role="cell"
+                  >
+                    연회비
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">년도</span>
+                    2027년
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">금액</span>
+                    80,000원
+                  </span>
+                  <span class="mypage-ledger__status" role="cell">
+                    <span class="ds-badge ds-badge--success">환불요청중</span>
+                  </span>
+                  <span class="mypage-ledger__action mypage-pc-only" role="cell">-</span>
+                </div>
+                <div class="ds-board__row" role="row">
+                  <span class="mypage-ledger__check" role="cell">
+                    <label class="form-check">
+                      <input
+                        type="checkbox"
+                        name="dues"
+                        value="2027-4"
+                        aria-label="2027년 연회비 환불완료 선택"
+                        data-dues-check
+                        disabled
+                      />
+                    </label>
+                  </span>
+                  <span
+                    class="mypage-ledger__title mypage-ledger__title--plain mypage-ledger__title--center"
+                    role="cell"
+                  >
+                    연회비
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">년도</span>
+                    2027년
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">금액</span>
+                    80,000원
+                  </span>
+                  <span class="mypage-ledger__status" role="cell">
+                    <span class="ds-badge ds-badge--neutral">환불완료</span>
+                  </span>
+                  <span class="mypage-ledger__action mypage-pc-only" role="cell">-</span>
+                </div>
+                <div class="ds-board__row" role="row">
+                  <span class="mypage-ledger__check" role="cell">
+                    <label class="form-check">
+                      <input
+                        type="checkbox"
+                        name="dues"
+                        value="2027-5"
+                        aria-label="2027년 연회비 환불거절 선택"
+                        data-dues-check
+                        disabled
+                      />
+                    </label>
+                  </span>
+                  <span
+                    class="mypage-ledger__title mypage-ledger__title--plain mypage-ledger__title--center"
+                    role="cell"
+                  >
+                    연회비
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">년도</span>
+                    2027년
+                  </span>
+                  <span class="mypage-ledger__info" role="cell">
+                    <span class="mypage-mo-only">금액</span>
+                    80,000원
+                  </span>
+                  <span class="mypage-ledger__status" role="cell">
+                    <span class="ds-badge ds-badge--danger">환불거절</span>
+                  </span>
+                  <span class="mypage-ledger__action" role="cell">
+                    <button class="ds-button ds-button--small ds-button--outline" type="button">상세 보기</button>
+                  </span>
                 </div>
               </div>
-              <div class="user-dashboard__cards">
-                <article>
-                  <span>신청</span>
-                  <strong>1</strong>
-                  <small>건</small>
-                </article>
-                <article>
-                  <span>처리 중</span>
-                  <strong>2</strong>
-                  <small>건</small>
-                </article>
-                <article>
-                  <span>완료</span>
-                  <strong>3</strong>
-                  <small>건</small>
-                </article>
-              </div>
+              <nav class="ds-pagination" aria-label="회비 내역 페이지 이동">
+                <button type="button" aria-label="이전 페이지" disabled>
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+                </button>
+                <a href="#" aria-current="page">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" aria-label="다음 페이지">
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                </a>
+              </nav>
             </section>
+            <div class="mypage-dues__pay">
+              <section class="mypage-card mypage-dues__method" aria-labelledby="dues-method-title">
+                <h2 class="mypage-card__title" id="dues-method-title">결제 수단</h2>
+                <fieldset class="mypage-dues__methods">
+                  <legend class="sr-only">회비 결제 수단 선택</legend>
+                  <div class="ds-choice-cards">
+                    <label class="ds-choice-card">
+                      <input class="sr-only" type="radio" name="duesMethod" value="card" checked />
+                      <img src="/kdha/assets/images/mypage/payment-card.svg" width="48" height="48" alt="" />
+                      <span>신용카드</span>
+                    </label>
+                    <label class="ds-choice-card">
+                      <input class="sr-only" type="radio" name="duesMethod" value="transfer" />
+                      <img src="/kdha/assets/images/mypage/payment-transfer.svg" width="48" height="48" alt="" />
+                      <span>계좌이체</span>
+                    </label>
+                    <label class="ds-choice-card">
+                      <input class="sr-only" type="radio" name="duesMethod" value="bank" />
+                      <img src="/kdha/assets/images/mypage/payment-bank.svg" width="48" height="48" alt="" />
+                      <span>무통장입금</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <div class="ds-guide-list mypage-pay-note">
+                  <p class="mypage-pay-note__lead">국민은행 048437-04-004839 (사)대한치과위생사협회</p>
+                  <ul class="mypage-pay-note__list mypage-pay-note__list--danger">
+                    <li class="ds-guide-list__item">
+                      <span class="ds-guide-list__content">7일 이내에 입금이 확인되지 않으면 DATA가 삭제됩니다.</span>
+                    </li>
+                    <li class="ds-guide-list__item">
+                      <span class="ds-guide-list__content">회비반영 소요시간 (월~목 : 1일, 금~일 : 3일)</span>
+                    </li>
+                    <li class="ds-guide-list__item">
+                      <span class="ds-guide-list__content">
+                        휴일에는 회비 등록처리가 되지 않습니다. 보수교육 신청전에는 카드결제 또는 계좌이체 이용바랍니다.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mypage-dues__actions">
+                  <button
+                    class="ds-button ds-button--medium ds-button--primary"
+                    type="button"
+                    aria-haspopup="dialog"
+                    data-dialog-open="dues-pay-alert"
+                  >
+                    회비 납부하기
+                  </button>
+                </div>
+              </section>
+              <section class="mypage-card mypage-dues__autopay" aria-labelledby="dues-autopay-title">
+                <div class="mypage-dues__autopay-text">
+                  <h2 class="mypage-card__title" id="dues-autopay-title">회비 자동납부</h2>
+                  <div class="mypage-dues__autopay-desc">
+                    <p>등록된 결제수단으로 정기 회비를 자동 납부하는 기능입니다.</p>
+                    <p>자동납부 신청/해지 및 등록 결제수단을 관리할 수 있습니다.</p>
+                  </div>
+                </div>
+                <div class="mypage-dues__autopay-actions">
+                  <button
+                    class="ds-button ds-button--medium ds-button--outline"
+                    type="button"
+                    aria-haspopup="dialog"
+                    data-dialog-open="dues-autopay-cancel-alert"
+                  >
+                    해지 하기
+                  </button>
+                  <button
+                    class="ds-button ds-button--medium ds-button--outline"
+                    type="button"
+                    aria-haspopup="dialog"
+                    data-dialog-open="dues-autopay-apply-alert"
+                  >
+                    신청 하기
+                  </button>
+                  <button class="ds-button ds-button--medium ds-button--primary" type="button">관리 하기</button>
+                </div>
+              </section>
+            </div>
+            <div class="ds-guide-list mypage-pay-note">
+              <ul class="mypage-pay-note__list">
+                <li class="ds-guide-list__item">
+                  <span class="ds-guide-list__content">
+                    제 187호 회원규정에 의하여 회비 환불은 납부일로부터
+                    <em>1개월</em>
+                    이내에 가능하며, 등록정회원 자격 취득 후
+                    <span class="ds-text-join">
+                      <em>보수교육</em>
+                      <span>을</span>
+                    </span>
+                    등록한 자는
+                    <span class="ds-text-join">
+                      <em>환불불가</em>
+                      <span>합니다.</span>
+                    </span>
+                  </span>
+                </li>
+                <li class="ds-guide-list__item">
+                  <span class="ds-guide-list__content">
+                    위 내용을 확인하신 후 환불(취소) 신청을 진행해 주시기 바랍니다.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="mypage-dues__refund">
+              <button
+                class="ds-button ds-button--large ds-button--primary"
+                type="button"
+                aria-haspopup="dialog"
+                data-dues-refund
+              >
+                환불 신청하기
+              </button>
+            </div>
           </div>
         </div>
       </main>
@@ -418,11 +715,228 @@
         </div>
       </footer>
     </div>
+    <!-- 알림 모음(KD-US-MYP_PC_알림 모음) · 결제·환불 -->
+    <dialog
+      class="ds-alert"
+      id="dues-pay-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-pay-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-pay-alert-message">회비를 납부하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-period-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-period-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-period-alert-message">회비 납부일로부터 1개월 이내만 신청 가능합니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-training-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-training-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-training-alert-message">보수교육 결제 이력이 존재하여 환불 불가합니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-refund-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-refund-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-refund-alert-message">환불 신청하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="dues-refund-done-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-refund-item-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-refund-item-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-refund-item-alert-message">해당 내역을 환불 신청하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="dues-refund-done-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-refund-done-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-refund-done-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-refund-done-alert-message">환불신청이 완료되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-required-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-required-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-required-alert-message">필수 항목을 모두 입력해 주세요.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-autopay-apply-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-autopay-apply-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-autopay-apply-alert-message">회비 자동납부를 신청하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="dues-autopay-applied-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-autopay-applied-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-autopay-applied-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-autopay-applied-alert-message">회비 자동납부가 신청되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-autopay-cancel-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-autopay-cancel-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-autopay-cancel-alert-message">회비 자동납부를 해지하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="dues-autopay-canceled-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="dues-autopay-canceled-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="dues-autopay-canceled-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="dues-autopay-canceled-alert-message">회비 자동납부가 해지되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="회비 내역 레이어 확인">
+        <a href="/kdha/mypage/payments/dues/#dues-pay-alert">알림 · 회비 납부 확인</a>
+        <a href="/kdha/mypage/payments/dues/#dues-period-alert">알림 · 환불 신청 기간 안내</a>
+        <a href="/kdha/mypage/payments/dues/#dues-training-alert">알림 · 환불 불가 안내</a>
+        <a href="/kdha/mypage/payments/dues/#dues-refund-alert">알림 · 환불 신청 확인</a>
+        <a href="/kdha/mypage/payments/dues/#dues-refund-item-alert">알림 · 선택 내역 환불 신청 확인</a>
+        <a href="/kdha/mypage/payments/dues/#dues-refund-done-alert">알림 · 환불 신청 완료</a>
+        <a href="/kdha/mypage/payments/dues/#dues-required-alert">알림 · 필수 항목 미입력</a>
+        <a href="/kdha/mypage/payments/dues/#dues-autopay-apply-alert">알림 · 자동납부 신청 확인</a>
+        <a href="/kdha/mypage/payments/dues/#dues-autopay-applied-alert">알림 · 자동납부 신청 완료</a>
+        <a href="/kdha/mypage/payments/dues/#dues-autopay-cancel-alert">알림 · 자동납부 해지 확인</a>
+        <a href="/kdha/mypage/payments/dues/#dues-autopay-canceled-alert">알림 · 자동납부 해지 완료</a>
+      </nav>
+    </details>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
     <script src="/kdha/assets/js/common.js"></script>
     <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/mypage.js"></script>
+    <script src="/kdha/assets/js/mypage-payments.js"></script>
   </body>
 </html>

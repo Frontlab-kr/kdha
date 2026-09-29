@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-    <title>결제 내역 | 마이페이지 | 대한치과위생사협회</title>
+    <title>회원정보수정(홈페이지회원) | 마이페이지 | 대한치과위생사협회</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
@@ -285,234 +285,213 @@
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
             <span>마이페이지</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <span aria-current="page">결제관리</span>
+            <span aria-current="page">회원정보수정</span>
           </nav>
-          <h1>결제관리</h1>
+          <h1>회원정보수정</h1>
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <!-- KD-US-MYP-06-02_PC_결제관리_결제 내역 -->
-          <div class="mypage mypage-payments">
+          <!-- KD-US-MYP-02-03_PC_회원정보수정_홈페이지회원 -->
+          <div class="mypage mypage-member">
             <nav class="ds-tabs ds-tabs--box" aria-label="마이페이지 메뉴" data-mypage-tabs>
-              <a class="ds-tabs__item" href="/kdha/mypage/">마이페이지</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/" aria-current="page">마이페이지</a>
               <a class="ds-tabs__item" href="/kdha/mypage/classroom/">내 강의실</a>
               <a class="ds-tabs__item" href="/kdha/mypage/license/">면허신고현황</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/payments/" aria-current="page">결제관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/payments/">결제관리</a>
               <a class="ds-tabs__item" href="/kdha/mypage/points/">쿠폰·마일리지</a>
               <a class="ds-tabs__item" href="/kdha/mypage/volunteer/">봉사관리</a>
               <a class="ds-tabs__item" href="/kdha/mypage/consulting/legal/">상담관리</a>
             </nav>
-            <nav class="ds-tabs" aria-label="결제관리 하위 메뉴">
-              <a class="ds-tabs__item" href="/kdha/mypage/payments/dues/">회비 내역</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/payments/" aria-current="page">결제 내역</a>
-              <a class="ds-tabs__item" href="#none">회관기금 내역</a>
-            </nav>
-            <section class="mypage-card mypage-card--summary" aria-labelledby="payments-summary-title">
-              <h2 class="sr-only" id="payments-summary-title">결제 현황</h2>
-              <dl class="mypage-stats mypage-stats--summary">
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">전체 결제내역</dt>
-                  <dd class="mypage-stats__value mypage-stats__value--accent">10건</dd>
-                </div>
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">결제완료</dt>
-                  <dd class="mypage-stats__value">10건</dd>
-                </div>
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">환불신청</dt>
-                  <dd class="mypage-stats__value">10건</dd>
-                </div>
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">환불완료</dt>
-                  <dd class="mypage-stats__value">10건</dd>
-                </div>
-              </dl>
-            </section>
-            <section class="mypage-ledger" aria-labelledby="payments-list-title">
-              <h2 class="sr-only" id="payments-list-title">결제 내역</h2>
-              <div class="mypage-ledger__list">
-                <div class="mypage-ledger__toolbar">
-                  <div class="mypage-filter" role="group" aria-label="결제상태" data-mypage-filter="payments-list">
-                    <button type="button" aria-pressed="true" data-filter-value="all">전체</button>
-                    <button type="button" aria-pressed="false" data-filter-value="paid">결제완료</button>
-                    <button type="button" aria-pressed="false" data-filter-value="refund-request">환불신청</button>
-                    <button type="button" aria-pressed="false" data-filter-value="refunded">환불완료</button>
-                    <button type="button" aria-pressed="false" data-filter-value="canceled">결제취소</button>
-                    <button type="button" aria-pressed="false" data-filter-value="rejected">환불거절</button>
-                  </div>
 
-                  <form
-                    class="mypage-ledger__search form-field form-field--large"
-                    role="search"
-                    action="/kdha/mypage/payments/"
-                    method="get"
-                  >
-                    <label class="sr-only" for="payments-keyword">상품명 검색</label>
-                    <input id="payments-keyword" type="search" name="keyword" placeholder="상품명을 입력해 주세요." />
-                    <button class="form-action-button" type="submit">검색</button>
-                  </form>
+            <form
+              class="mypage-member__form"
+              action="/kdha/mypage/member/general/"
+              method="post"
+              novalidate
+              data-mypage-member-form
+              data-confirm="member-save-confirm-alert"
+            >
+              <section class="mypage-section mypage-member__section" aria-labelledby="member-type-title">
+                <h2 class="mypage-section__title" id="member-type-title">홈페이지회원</h2>
+                <div class="mypage-member__cards">
+                  <!-- 기본정보 -->
+                  <fieldset class="mypage-card mypage-member__card">
+                    <legend class="sr-only">기본정보</legend>
+                    <div class="mypage-member__pair">
+                      <div class="form-field form-field--large mypage-member__field mypage-member__field--fixed">
+                        <label class="mypage-member__label" for="member-name">이름</label>
+                        <input id="member-name" name="name" value="홍길동" readonly />
+                      </div>
+                      <div class="form-field form-field--large mypage-member__field mypage-member__field--fixed">
+                        <label class="mypage-member__label" for="member-birth">생년월일</label>
+                        <input id="member-birth" name="birthDate" value="2000-01-01" readonly />
+                      </div>
+                    </div>
+                    <div class="form-field form-field--large mypage-member__field mypage-member__field--fixed">
+                      <label class="mypage-member__label" for="member-id">아이디</label>
+                      <input id="member-id" name="userId" value="kdha1234" readonly />
+                    </div>
+                    <div
+                      class="form-field form-field--large mypage-member__field"
+                      role="group"
+                      aria-labelledby="member-password-label"
+                    >
+                      <span class="mypage-member__label" id="member-password-label">비밀번호</span>
+                      <div class="mypage-member__password">
+                        <input
+                          name="newPassword"
+                          type="password"
+                          placeholder="새 비밀번호"
+                          aria-label="새 비밀번호"
+                          autocomplete="new-password"
+                        />
+                        <span class="form-input-action">
+                          <input
+                            name="newPasswordConfirm"
+                            type="password"
+                            placeholder="새 비밀번호 확인"
+                            aria-label="새 비밀번호 확인"
+                            autocomplete="new-password"
+                          />
+                          <button
+                            class="form-action-button"
+                            type="button"
+                            aria-haspopup="dialog"
+                            data-dialog-open="member-password-confirm-alert"
+                          >
+                            비밀번호 수정
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-field form-field--large mypage-member__field">
+                      <label class="mypage-member__label" for="member-english-name">영문명 (선택)</label>
+                      <input id="member-english-name" name="englishName" placeholder="영문명 입력" />
+                    </div>
+                    <div class="form-field form-field--large mypage-member__field">
+                      <label class="mypage-member__label" for="member-occupation">직업구분</label>
+                      <select id="member-occupation" name="occupation" data-custom-select data-select-size="l">
+                        <option value="">선택</option>
+                        <option value="student">학생</option>
+                        <option value="reporter">기자</option>
+                        <option value="general">일반인</option>
+                        <option value="other">기타</option>
+                      </select>
+                    </div>
+                  </fieldset>
+
+                  <!-- 연락처 -->
+                  <fieldset class="mypage-card mypage-member__card">
+                    <legend class="sr-only">연락처</legend>
+                    <div class="mypage-member__pair">
+                      <div class="form-field form-field--large mypage-member__field">
+                        <label class="mypage-member__label" for="member-tel">전화번호 (선택)</label>
+                        <input
+                          id="member-tel"
+                          name="tel"
+                          type="tel"
+                          inputmode="numeric"
+                          placeholder="- 없이 숫자만 입력"
+                        />
+                      </div>
+                      <div class="form-field form-field--large mypage-member__field">
+                        <label class="mypage-member__label" for="member-mobile">휴대폰번호</label>
+                        <input
+                          id="member-mobile"
+                          name="mobile"
+                          type="tel"
+                          inputmode="numeric"
+                          placeholder="- 없이 숫자만 입력"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="form-field form-field--large mypage-member__field"
+                      role="group"
+                      aria-labelledby="member-email-label"
+                    >
+                      <span class="mypage-member__label" id="member-email-label">이메일</span>
+                      <div class="account-form-row account-form-row--email">
+                        <input
+                          name="emailId"
+                          type="text"
+                          placeholder="아이디"
+                          aria-label="이메일 아이디"
+                          autocomplete="off"
+                        />
+                        <div class="account-email-domain">
+                          <label class="account-email-domain__field">
+                            <span class="sr-only">이메일 도메인</span>
+                            <select
+                              name="emailDomain"
+                              aria-label="이메일 도메인"
+                              data-custom-select
+                              data-select-size="l"
+                            >
+                              <option value="gmail.com">@ gmail.com</option>
+                              <option value="naver.com">@ naver.com</option>
+                              <option value="hanmail.net">@ hanmail.net</option>
+                            </select>
+                            <input
+                              type="text"
+                              inputmode="url"
+                              placeholder="@ 직접입력"
+                              aria-label="이메일 도메인 직접입력"
+                              data-email-domain-input
+                              hidden
+                            />
+                          </label>
+                          <button
+                            class="form-action-button account-email-domain__button"
+                            type="button"
+                            data-email-domain-toggle
+                          >
+                            직접입력
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mypage-member__field" role="group" aria-labelledby="member-notice-label">
+                      <span class="mypage-member__label" id="member-notice-label">알림서비스 (선택)</span>
+                      <div class="account-choice-group">
+                        <label class="form-check">
+                          <input type="checkbox" name="notice" value="sms" checked />
+                          SMS
+                        </label>
+                        <label class="form-check">
+                          <input type="checkbox" name="notice" value="email" />
+                          이메일
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      class="form-field form-field--large mypage-member__field"
+                      role="group"
+                      aria-labelledby="member-address-label"
+                    >
+                      <span class="mypage-member__label" id="member-address-label">주소</span>
+                      <div class="mypage-member__stack">
+                        <span class="form-input-action">
+                          <input
+                            name="address"
+                            value="06365 123-12 서울특별시 강남구 1길 1"
+                            aria-label="주소"
+                            readonly
+                          />
+                          <button class="form-action-button" type="button">주소찾기</button>
+                        </span>
+                        <input name="addressDetail" placeholder="상세주소 입력" aria-label="상세주소" />
+                      </div>
+                    </div>
+                  </fieldset>
                 </div>
-                <div
-                  class="ds-board mypage-ledger__board"
-                  id="payments-list"
-                  role="table"
-                  aria-labelledby="payments-list-title"
-                >
-                  <div class="ds-board__head" role="row">
-                    <span role="columnheader">번호</span>
-                    <span role="columnheader">구분</span>
-                    <span role="columnheader">상품명</span>
-                    <span role="columnheader">결제금액</span>
-                    <span role="columnheader">결제수단</span>
-                    <span role="columnheader">결제상태</span>
-                    <span role="columnheader">처리일자</span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="paid">
-                    <span class="ds-board__number" role="cell">6</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell"><span class="ds-badge">결제완료</span></span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="refund-request">
-                    <span class="ds-board__number" role="cell">5</span>
-                    <span class="mypage-ledger__meta" role="cell">현장교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--success">환불신청</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="refund-request">
-                    <span class="ds-board__number" role="cell">4</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--success">환불신청</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="canceled">
-                    <span class="ds-board__number" role="cell">3</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--neutral">결제취소</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="refunded">
-                    <span class="ds-board__number" role="cell">2</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--neutral">환불완료</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="rejected">
-                    <span class="ds-board__number" role="cell">1</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--danger">환불거절</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                </div>
+              </section>
+
+              <div class="mypage-member__actions">
+                <a class="ds-button ds-button--outline ds-button--large" href="/kdha/mypage/">취소</a>
+                <button class="ds-button ds-button--primary ds-button--large" type="submit">저장하기</button>
               </div>
-              <nav class="ds-pagination" aria-label="결제 내역 페이지 이동">
-                <button type="button" aria-label="이전 페이지" disabled>
-                  <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
-                </button>
-                <a href="#" aria-current="page">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#" aria-label="다음 페이지">
-                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-                </a>
-              </nav>
-            </section>
+            </form>
           </div>
         </div>
       </main>
@@ -602,6 +581,95 @@
         </div>
       </footer>
     </div>
+
+    <!-- 알림(Figma KD-US-MYP_PC_알림 모음 · 회원정보) -->
+    <dialog
+      class="ds-alert"
+      id="member-password-confirm-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="member-password-confirm-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="member-password-confirm-alert-message">새로운 비밀번호로 설정하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="member-password-done-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="member-password-done-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="member-password-done-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="member-password-done-alert-message">비밀번호가 변경되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="member-save-confirm-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="member-save-confirm-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="member-save-confirm-alert-message">변경된 내역을 저장하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="member-save-done-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="member-save-done-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="member-save-done-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="member-save-done-alert-message">저장되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="회원정보수정 레이어 확인">
+        <a href="/kdha/mypage/member/general/#member-password-confirm-alert">알림 · 비밀번호 변경 확인</a>
+        <a href="/kdha/mypage/member/general/#member-password-done-alert">알림 · 비밀번호 변경 완료</a>
+        <a href="/kdha/mypage/member/general/#member-save-confirm-alert">알림 · 변경 내역 저장 확인</a>
+        <a href="/kdha/mypage/member/general/#member-save-done-alert">알림 · 저장 완료</a>
+      </nav>
+    </details>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>
@@ -610,5 +678,6 @@
     <script src="/kdha/assets/js/site-menu.js"></script>
 
     <script src="/kdha/assets/js/mypage.js"></script>
+    <script src="/kdha/assets/js/mypage-member.js"></script>
   </body>
 </html>

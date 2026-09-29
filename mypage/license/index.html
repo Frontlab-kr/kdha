@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-    <title>결제 내역 | 마이페이지 | 대한치과위생사협회</title>
+    <title>면허신고현황 | 마이페이지 | 대한치과위생사협회</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
@@ -285,233 +285,150 @@
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
             <span>마이페이지</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <span aria-current="page">결제관리</span>
+            <span aria-current="page">면허신고현황</span>
           </nav>
-          <h1>결제관리</h1>
+          <h1>면허신고현황</h1>
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <!-- KD-US-MYP-06-02_PC_결제관리_결제 내역 -->
-          <div class="mypage mypage-payments">
+          <!-- KD-US-MYP-04-01_PC_면허신고현황 -->
+          <div class="mypage mypage-license">
             <nav class="ds-tabs ds-tabs--box" aria-label="마이페이지 메뉴" data-mypage-tabs>
               <a class="ds-tabs__item" href="/kdha/mypage/">마이페이지</a>
               <a class="ds-tabs__item" href="/kdha/mypage/classroom/">내 강의실</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/license/">면허신고현황</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/payments/" aria-current="page">결제관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/license/" aria-current="page">면허신고현황</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/payments/">결제관리</a>
               <a class="ds-tabs__item" href="/kdha/mypage/points/">쿠폰·마일리지</a>
               <a class="ds-tabs__item" href="/kdha/mypage/volunteer/">봉사관리</a>
               <a class="ds-tabs__item" href="/kdha/mypage/consulting/legal/">상담관리</a>
             </nav>
-            <nav class="ds-tabs" aria-label="결제관리 하위 메뉴">
-              <a class="ds-tabs__item" href="/kdha/mypage/payments/dues/">회비 내역</a>
-              <a class="ds-tabs__item" href="/kdha/mypage/payments/" aria-current="page">결제 내역</a>
-              <a class="ds-tabs__item" href="#none">회관기금 내역</a>
-            </nav>
-            <section class="mypage-card mypage-card--summary" aria-labelledby="payments-summary-title">
-              <h2 class="sr-only" id="payments-summary-title">결제 현황</h2>
-              <dl class="mypage-stats mypage-stats--summary">
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">전체 결제내역</dt>
-                  <dd class="mypage-stats__value mypage-stats__value--accent">10건</dd>
-                </div>
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">결제완료</dt>
-                  <dd class="mypage-stats__value">10건</dd>
-                </div>
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">환불신청</dt>
-                  <dd class="mypage-stats__value">10건</dd>
-                </div>
-                <div class="mypage-stats__item">
-                  <dt class="mypage-stats__label">환불완료</dt>
-                  <dd class="mypage-stats__value">10건</dd>
-                </div>
-              </dl>
-            </section>
-            <section class="mypage-ledger" aria-labelledby="payments-list-title">
-              <h2 class="sr-only" id="payments-list-title">결제 내역</h2>
-              <div class="mypage-ledger__list">
-                <div class="mypage-ledger__toolbar">
-                  <div class="mypage-filter" role="group" aria-label="결제상태" data-mypage-filter="payments-list">
-                    <button type="button" aria-pressed="true" data-filter-value="all">전체</button>
-                    <button type="button" aria-pressed="false" data-filter-value="paid">결제완료</button>
-                    <button type="button" aria-pressed="false" data-filter-value="refund-request">환불신청</button>
-                    <button type="button" aria-pressed="false" data-filter-value="refunded">환불완료</button>
-                    <button type="button" aria-pressed="false" data-filter-value="canceled">결제취소</button>
-                    <button type="button" aria-pressed="false" data-filter-value="rejected">환불거절</button>
-                  </div>
 
-                  <form
-                    class="mypage-ledger__search form-field form-field--large"
-                    role="search"
-                    action="/kdha/mypage/payments/"
-                    method="get"
-                  >
-                    <label class="sr-only" for="payments-keyword">상품명 검색</label>
-                    <input id="payments-keyword" type="search" name="keyword" placeholder="상품명을 입력해 주세요." />
-                    <button class="form-action-button" type="submit">검색</button>
-                  </form>
+            <section class="mypage-card mypage-card--accent mypage-license__banner" aria-label="면허신고 안내">
+              <p class="mypage-license__message">
+                회원님은 당해년도
+                <br class="mypage-mo-only" />
+                면허신고
+                <span class="ds-text-join">
+                  <strong>대상자</strong>
+                  <span>입니다.</span>
+                </span>
+                <br />
+                <span class="ds-text-join">
+                  <strong>면허신고센터</strong>
+                  <span>에서</span>
+                </span>
+                <br class="mypage-mo-only" />
+                면허신고 및 갱신을 해주세요.
+              </p>
+              <a class="ds-button ds-button--medium ds-button--primary" href="/kdha/license/report/">
+                면허신고센터 바로가기
+              </a>
+            </section>
+
+            <section aria-labelledby="license-history-title">
+              <h2 class="sr-only" id="license-history-title">연도별 면허신고 현황</h2>
+              <div class="ds-board mypage-license__board" role="table" aria-labelledby="license-history-title">
+                <div class="ds-board__head" role="row">
+                  <span role="columnheader">년도</span>
+                  <span role="columnheader">대상여부</span>
+                  <span role="columnheader">신고현황</span>
+                  <span role="columnheader">신고일</span>
+                  <span role="columnheader">보수교육 이수여부</span>
+                  <span role="columnheader">필수과목 점수</span>
                 </div>
-                <div
-                  class="ds-board mypage-ledger__board"
-                  id="payments-list"
-                  role="table"
-                  aria-labelledby="payments-list-title"
-                >
-                  <div class="ds-board__head" role="row">
-                    <span role="columnheader">번호</span>
-                    <span role="columnheader">구분</span>
-                    <span role="columnheader">상품명</span>
-                    <span role="columnheader">결제금액</span>
-                    <span role="columnheader">결제수단</span>
-                    <span role="columnheader">결제상태</span>
-                    <span role="columnheader">처리일자</span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="paid">
-                    <span class="ds-board__number" role="cell">6</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell"><span class="ds-badge">결제완료</span></span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="refund-request">
-                    <span class="ds-board__number" role="cell">5</span>
-                    <span class="mypage-ledger__meta" role="cell">현장교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--success">환불신청</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="refund-request">
-                    <span class="ds-board__number" role="cell">4</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--success">환불신청</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="canceled">
-                    <span class="ds-board__number" role="cell">3</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--neutral">결제취소</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="refunded">
-                    <span class="ds-board__number" role="cell">2</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--neutral">환불완료</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row" data-filter-item="rejected">
-                    <span class="ds-board__number" role="cell">1</span>
-                    <span class="mypage-ledger__meta" role="cell">사이버교육</span>
-                    <span class="mypage-ledger__title" role="cell">
-                      (2025년 학술대회) 치과위생사가 알아야 할 치과임상 의료분쟁 외 3건
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제금액</span>
-                      1,000원
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">결제수단</span>
-                      신용카드
-                    </span>
-                    <span class="mypage-ledger__status" role="cell">
-                      <span class="ds-badge ds-badge--danger">환불거절</span>
-                    </span>
-                    <span class="mypage-ledger__info" role="cell">
-                      <span class="mypage-mo-only">처리일자</span>
-                      <time datetime="2026-06-30">2026.06.30</time>
-                    </span>
-                  </div>
+                <div class="ds-board__row" role="row">
+                  <span class="mypage-license__year" role="cell">2026</span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">대상여부</span>
+                    <span class="mypage-status mypage-status--primary">대상</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">신고현황</span>
+                    <span class="mypage-status mypage-status--primary">신고불가능</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">신고일</span>
+                    <span>-</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">보수교육 이수여부</span>
+                    <span>-</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">필수과목 점수</span>
+                    <span>-</span>
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row">
+                  <span class="mypage-license__year" role="cell">2025</span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">대상여부</span>
+                    <span>비대상</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">신고현황</span>
+                    <span>-</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">신고일</span>
+                    <span>-</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">보수교육 이수여부</span>
+                    <span class="mypage-status mypage-status--success">이수</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">필수과목 점수</span>
+                    <span>4</span>
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row">
+                  <span class="mypage-license__year" role="cell">2024</span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">대상여부</span>
+                    <span>비대상</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">신고현황</span>
+                    <span>-</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">신고일</span>
+                    <span>-</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">보수교육 이수여부</span>
+                    <span class="mypage-status mypage-status--danger">미이수</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">필수과목 점수</span>
+                    <span>2</span>
+                  </span>
+                </div>
+                <div class="ds-board__row" role="row">
+                  <span class="mypage-license__year" role="cell">2023</span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">대상여부</span>
+                    <span>비대상</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">신고현황</span>
+                    <span>면허취득</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">신고일</span>
+                    <time datetime="2023-12-31">2023-12-31</time>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">보수교육 이수여부</span>
+                    <span class="mypage-status mypage-status--danger">미이수</span>
+                  </span>
+                  <span role="cell">
+                    <span class="mypage-mo-only">필수과목 점수</span>
+                    <span>0</span>
+                  </span>
                 </div>
               </div>
-              <nav class="ds-pagination" aria-label="결제 내역 페이지 이동">
-                <button type="button" aria-label="이전 페이지" disabled>
-                  <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
-                </button>
-                <a href="#" aria-current="page">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#" aria-label="다음 페이지">
-                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-                </a>
-              </nav>
             </section>
           </div>
         </div>

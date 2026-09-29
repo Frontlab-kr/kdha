@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-
-    <title>대한치과위생사협회</title>
+    <title>봉사관리 | 마이페이지 | 대한치과위생사협회</title>
   </head>
-  <body class="">
+  <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <div class="site user-page">
       <header class="site-header">
@@ -285,7 +283,7 @@
               <span class="material-symbols-rounded" aria-hidden="true">home</span>
             </a>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <a class="user-page-breadcrumb__link" href="/kdha/mypage/">마이페이지</a>
+            <span>마이페이지</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
             <span aria-current="page">봉사관리</span>
           </nav>
@@ -293,63 +291,170 @@
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <div class="user-page__inner">
-            <section class="user-page-menu" aria-labelledby="user-page-menu-title">
-              <div class="user-page-menu__heading">
-                <h2 id="user-page-menu-title">봉사관리 메뉴</h2>
-                <span>3개</span>
-              </div>
-              <div class="user-page-menu__grid">
-                <a class="user-page-menu__link" href="/kdha/mypage/volunteer/register/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">봉사자 등록</strong>
-                    <span class="user-page-menu__meta">KD-US-MYP-12-01</span>
-                  </span>
-                </a>
-                <a class="user-page-menu__link" href="/kdha/mypage/volunteer/applications/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">봉사신청 현황</strong>
-                    <span class="user-page-menu__meta">KD-US-MYP-13-01</span>
-                  </span>
-                </a>
-                <a class="user-page-menu__link" href="/kdha/mypage/volunteer/history/">
-                  <span class="user-page-menu__copy">
-                    <strong class="user-page-menu__title">봉사이력조회</strong>
-                    <span class="user-page-menu__meta">KD-US-MYP-14-01</span>
-                  </span>
-                </a>
-              </div>
+          <!-- KD-US-MYP-08-01_PC_봉사관리 -->
+          <div class="mypage mypage-volunteer">
+            <nav class="ds-tabs ds-tabs--box" aria-label="마이페이지 메뉴" data-mypage-tabs>
+              <a class="ds-tabs__item" href="/kdha/mypage/">마이페이지</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/classroom/">내 강의실</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/license/">면허신고현황</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/payments/">결제관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/points/">쿠폰·마일리지</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/volunteer/" aria-current="page">봉사관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/consulting/legal/">상담관리</a>
+            </nav>
+            <section class="mypage-card mypage-card--summary" aria-labelledby="volunteer-summary-title">
+              <h2 class="sr-only" id="volunteer-summary-title">봉사 현황</h2>
+              <dl class="mypage-stats mypage-stats--summary mypage-stats--single">
+                <div class="mypage-stats__item">
+                  <dt class="mypage-stats__label">봉사자 등록 상태</dt>
+                  <dd class="mypage-stats__value">등록완료</dd>
+                </div>
+                <div class="mypage-stats__item">
+                  <dt class="mypage-stats__label">신청중인 봉사</dt>
+                  <dd class="mypage-stats__value">2건</dd>
+                </div>
+                <div class="mypage-stats__item">
+                  <dt class="mypage-stats__label">완료한 봉사</dt>
+                  <dd class="mypage-stats__value">5건</dd>
+                </div>
+              </dl>
             </section>
-            <section class="user-content user-dashboard" aria-label="봉사관리 임시 현황">
-              <div class="user-dashboard__summary">
-                <span
-                  class="material-symbols-outlined material-icon"
-                  aria-hidden="true"
-                  style="font-size: 44px; width: 44px; height: 44px"
-                >
-                  account_circle
-                </span>
-                <div>
-                  <strong>정회원 홍길동님</strong>
-                  <p>회원님의 봉사관리 정보를 확인할 수 있습니다.</p>
+            <section class="mypage-section" aria-labelledby="volunteer-info-title">
+              <div class="mypage-section__head">
+                <h2 class="mypage-section__title" id="volunteer-info-title">봉사자 등록정보</h2>
+                <div class="mypage-section__aside">
+                  <button
+                    class="ds-button ds-button--small ds-button--outline"
+                    type="button"
+                    aria-haspopup="dialog"
+                    data-dialog-open="volunteer-unregister-alert"
+                  >
+                    등록취소
+                  </button>
+                  <a class="ds-button ds-button--small ds-button--primary" href="#none">수정</a>
                 </div>
               </div>
-              <div class="user-dashboard__cards">
-                <article>
-                  <span>신청</span>
-                  <strong>1</strong>
-                  <small>건</small>
-                </article>
-                <article>
-                  <span>처리 중</span>
-                  <strong>2</strong>
-                  <small>건</small>
-                </article>
-                <article>
-                  <span>완료</span>
-                  <strong>3</strong>
-                  <small>건</small>
-                </article>
+              <dl class="mypage-info">
+                <div class="mypage-info__row">
+                  <dt>희망요일</dt>
+                  <dd>토, 일</dd>
+                </div>
+                <div class="mypage-info__row">
+                  <dt>희망지역</dt>
+                  <dd>서울, 경기</dd>
+                </div>
+                <div class="mypage-info__row">
+                  <dt>봉사경력</dt>
+                  <dd>경력있음</dd>
+                </div>
+                <div class="mypage-info__row">
+                  <dt>봉사경력년수</dt>
+                  <dd>3년</dd>
+                </div>
+                <div class="mypage-info__row mypage-info__row--wide">
+                  <dt>봉사분야</dt>
+                  <dd>구강보건 상담 및 교육, 의료지원</dd>
+                </div>
+              </dl>
+            </section>
+            <section class="mypage-section" aria-labelledby="volunteer-list-title">
+              <div class="mypage-section__head">
+                <h2 class="mypage-section__title" id="volunteer-list-title">봉사 신청/결과 목록</h2>
+              </div>
+              <div class="mypage-ledger">
+                <div
+                  class="ds-board mypage-ledger__board"
+                  id="volunteer-list"
+                  role="table"
+                  aria-labelledby="volunteer-list-title"
+                >
+                  <div class="ds-board__head" role="row">
+                    <span role="columnheader">번호</span>
+                    <span role="columnheader">기관명</span>
+                    <span role="columnheader">제목</span>
+                    <span role="columnheader">지역</span>
+                    <span role="columnheader">봉사일</span>
+                    <span role="columnheader">상태</span>
+                    <span role="columnheader">비고</span>
+                  </div>
+                  <div class="ds-board__row" role="row">
+                    <span class="ds-board__number" role="cell">3</span>
+                    <span class="mypage-ledger__meta" role="cell">서울시회</span>
+                    <span class="mypage-ledger__title" role="cell">아동 구강보건 교육 봉사</span>
+                    <span class="mypage-ledger__info" role="cell">
+                      <span class="mypage-mo-only">지역</span>
+                      서울
+                    </span>
+                    <span class="mypage-ledger__info" role="cell">
+                      <span class="mypage-mo-only">봉사일</span>
+                      <time datetime="2026-09-30">2026.09.30</time>
+                    </span>
+                    <span class="mypage-ledger__status" role="cell">
+                      <span class="ds-badge ds-badge--neutral">활동완료</span>
+                    </span>
+                    <span class="mypage-ledger__action" role="cell">
+                      <button class="ds-button ds-button--small ds-button--primary" type="button">확인서 출력</button>
+                    </span>
+                  </div>
+                  <div class="ds-board__row" role="row">
+                    <span class="ds-board__number" role="cell">2</span>
+                    <span class="mypage-ledger__meta" role="cell">서울시회</span>
+                    <span class="mypage-ledger__title" role="cell">아동 구강보건 교육 봉사</span>
+                    <span class="mypage-ledger__info" role="cell">
+                      <span class="mypage-mo-only">지역</span>
+                      서울
+                    </span>
+                    <span class="mypage-ledger__info" role="cell">
+                      <span class="mypage-mo-only">봉사일</span>
+                      <time datetime="2026-09-30">2026.09.30</time>
+                    </span>
+                    <span class="mypage-ledger__status" role="cell">
+                      <span class="ds-badge ds-badge--success">신청중</span>
+                    </span>
+                    <span class="mypage-ledger__action" role="cell">
+                      <button
+                        class="ds-button ds-button--small ds-button--outline"
+                        type="button"
+                        aria-haspopup="dialog"
+                        data-dialog-open="volunteer-cancel-alert"
+                      >
+                        신청취소
+                      </button>
+                    </span>
+                  </div>
+                  <div class="ds-board__row" role="row">
+                    <span class="ds-board__number" role="cell">1</span>
+                    <span class="mypage-ledger__meta" role="cell">서울시회</span>
+                    <span class="mypage-ledger__title" role="cell">아동 구강보건 교육 봉사</span>
+                    <span class="mypage-ledger__info" role="cell">
+                      <span class="mypage-mo-only">지역</span>
+                      서울
+                    </span>
+                    <span class="mypage-ledger__info" role="cell">
+                      <span class="mypage-mo-only">봉사일</span>
+                      <time datetime="2026-09-30">2026.09.30</time>
+                    </span>
+                    <span class="mypage-ledger__status" role="cell"><span class="ds-badge">승인</span></span>
+                    <span class="mypage-ledger__action" role="cell">
+                      <button class="ds-button ds-button--small ds-button--outline" type="button" disabled>
+                        취소완료
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <nav class="ds-pagination" aria-label="봉사 신청/결과 목록 페이지 이동">
+                  <button type="button" aria-label="이전 페이지" disabled>
+                    <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+                  </button>
+                  <a href="#" aria-current="page">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#" aria-label="다음 페이지">
+                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                  </a>
+                </nav>
               </div>
             </section>
           </div>
@@ -441,11 +546,116 @@
         </div>
       </footer>
     </div>
+    <!-- 알림 모음(KD-US-MYP_PC_알림 모음) · 봉사 -->
+    <dialog
+      class="ds-alert"
+      id="volunteer-unregister-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-unregister-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-unregister-alert-message">봉사자 정보를 등록 취소하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="volunteer-unregistered-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="volunteer-unregistered-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-unregistered-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-unregistered-alert-message">봉사자 정보가 등록 취소되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="volunteer-updated-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-updated-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-updated-alert-message">봉사자 정보가 수정 완료되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="volunteer-cancel-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-cancel-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-cancel-alert-message">봉사 신청을 취소하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="volunteer-canceled-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="volunteer-canceled-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-canceled-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-canceled-alert-message">봉사 신청이 취소되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="봉사관리 레이어 확인">
+        <a href="/kdha/mypage/volunteer/#volunteer-unregister-alert">알림 · 봉사자 등록 취소 확인</a>
+        <a href="/kdha/mypage/volunteer/#volunteer-unregistered-alert">알림 · 봉사자 등록 취소 완료</a>
+        <a href="/kdha/mypage/volunteer/#volunteer-updated-alert">알림 · 봉사자 정보 수정 완료</a>
+        <a href="/kdha/mypage/volunteer/#volunteer-cancel-alert">알림 · 봉사 신청 취소 확인</a>
+        <a href="/kdha/mypage/volunteer/#volunteer-canceled-alert">알림 · 봉사 신청 취소 완료</a>
+      </nav>
+    </details>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
     <script src="/kdha/assets/js/common.js"></script>
     <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/mypage.js"></script>
   </body>
 </html>
