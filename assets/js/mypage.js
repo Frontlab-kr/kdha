@@ -1,14 +1,14 @@
 $(function () {
   // 마이페이지 공통 동작 (다이얼로그 열기·닫기, 날짜 선택기, 커스텀 셀렉트, 이메일 직접입력은 common.js 공통 동작 사용)
 
-  // 모바일 알약형 탭: 현재 섹션 탭이 가로 스크롤 영역의 왼쪽에 보이도록 위치를 맞춥니다.
+  // 모바일 알약형 탭: 현재 섹션 탭이 가로 스크롤 영역의 왼쪽에 보이도록 위치를 맞춥니다(앞 탭이 12px 보이게).
   $('[data-mypage-tabs]').each(function () {
     var nav = this;
     var current = nav.querySelector('[aria-current="page"]');
     if (!current || nav.scrollWidth <= nav.clientWidth) return;
     var paddingLeft = parseFloat(window.getComputedStyle(nav).paddingLeft) || 0;
     var offset = current.getBoundingClientRect().left - nav.getBoundingClientRect().left + nav.scrollLeft;
-    nav.scrollLeft = Math.max(0, offset - paddingLeft);
+    nav.scrollLeft = Math.max(0, offset - paddingLeft - 12);
   });
 
   // 화면 확인 메뉴: 이미 같은 해시가 주소에 있어도 다시 누르면 레이어를 엽니다.

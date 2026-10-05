@@ -199,10 +199,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -221,9 +231,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -292,7 +308,7 @@
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <!-- KD-US-MYP-03-02_PC_교육 상세_현장교육 (3540:148810 · 강의별 등록비·담당강사가 있는 과정) -->
+          <!-- KD-US-MYP-03-02_PC_교육 상세_현장교육 (3803:36431 · SB 20 통합 상세 · 강의별 신청 과정) -->
           <div class="mypage mypage-classroom">
             <nav class="ds-tabs ds-tabs--box" aria-label="마이페이지 메뉴" data-mypage-tabs>
               <a class="ds-tabs__item" href="/kdha/mypage/">마이페이지</a>
@@ -331,6 +347,7 @@
                     </div>
                   </dl>
                 </div>
+                <!-- 이수 완료 시 이수년도 입력·달력·변경 버튼에 disabled를 적용합니다(SB 20). -->
                 <div class="form-field form-datepicker mypage-course-year">
                   <label for="classroom-lectures-year">이수년도</label>
                   <span class="form-input-action">
@@ -362,7 +379,7 @@
               </div>
             </section>
 
-            <!-- 학습 목차(강의별 등록비·담당강사·이수평점) -->
+            <!-- 학습 목차(강의별 등록비·담당강사·이수평점 · 상태/QR/실시간 스트리밍) -->
             <section class="mypage-section" aria-labelledby="classroom-lectures-title">
               <div class="mypage-section__head mypage-section__head--line">
                 <h2 class="mypage-section__title" id="classroom-lectures-title">학습 목차</h2>
@@ -370,12 +387,66 @@
                   <p class="mypage-classroom__summary">2개 강의 · 총 1시간</p>
                 </div>
               </div>
+              <!--
+                수강 액션 영역(마지막 열)은 강의 상태에 따라 하나만 표시합니다. (SB 20)
+                · 교육 전·교육 중: 'QR 코드'(QR 팝업) 또는 '실시간 스트리밍' Primary S 버튼
+                · 교육기간 종료: 실시간 스트리밍 버튼을 숨기고 이수완료/미이수 상태를 텍스트로 표시합니다.
+              -->
               <ol class="ds-board mypage-lessons mypage-lessons--detail">
                 <li class="ds-board__row">
                   <span class="mypage-lessons__no">01</span>
                   <span class="mypage-lessons__title">의료윤리와 법정의무</span>
                   <span class="mypage-lessons__time">30분</span>
                   <span class="mypage-lessons__status mypage-status mypage-status--success">이수완료</span>
+                  <dl class="mypage-course__meta mypage-lessons__meta">
+                    <div>
+                      <dt>등록비</dt>
+                      <dd>80,000원 (직접비 40,000원 / 간접비 40,000원)</dd>
+                    </div>
+                    <div>
+                      <dt>담당강사</dt>
+                      <dd>홍길동</dd>
+                    </div>
+                    <div>
+                      <dt>이수평점</dt>
+                      <dd>2평점</dd>
+                    </div>
+                  </dl>
+                </li>
+                <li class="ds-board__row">
+                  <span class="mypage-lessons__no">01</span>
+                  <span class="mypage-lessons__title">의료윤리와 법정의무</span>
+                  <span class="mypage-lessons__time">30분</span>
+                  <span class="mypage-lessons__status mypage-status mypage-status--danger">미이수</span>
+                  <dl class="mypage-course__meta mypage-lessons__meta">
+                    <div>
+                      <dt>등록비</dt>
+                      <dd>80,000원 (직접비 40,000원 / 간접비 40,000원)</dd>
+                    </div>
+                    <div>
+                      <dt>담당강사</dt>
+                      <dd>홍길동</dd>
+                    </div>
+                    <div>
+                      <dt>이수평점</dt>
+                      <dd>2평점</dd>
+                    </div>
+                  </dl>
+                </li>
+                <li class="ds-board__row">
+                  <span class="mypage-lessons__no">02</span>
+                  <span class="mypage-lessons__title">의료윤리와 법정의무</span>
+                  <span class="mypage-lessons__time">30분</span>
+                  <span class="mypage-lessons__action">
+                    <button
+                      class="ds-button ds-button--small ds-button--primary"
+                      type="button"
+                      aria-haspopup="dialog"
+                      data-dialog-open="classroom-qr-dialog"
+                    >
+                      QR 코드
+                    </button>
+                  </span>
                   <dl class="mypage-course__meta mypage-lessons__meta">
                     <div>
                       <dt>등록비</dt>
@@ -523,6 +594,39 @@
         </div>
       </footer>
     </div>
+
+    <!-- QR 코드 (SB 20 · Modal/PC 3803:36237 · 마이페이지 메인과 같은 mypage-qr 마크업) : 학습 목차의 'QR 코드'에서 엽니다. 이름·면허번호·QR 이미지·교육일자를 표시합니다. -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--modal"
+      id="classroom-qr-dialog"
+      aria-labelledby="classroom-qr-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="classroom-qr-title">QR 코드</h2>
+      <div class="mypage-qr">
+        <div class="mypage-qr__person">
+          <p class="mypage-qr__name">홍길동</p>
+          <p class="mypage-qr__meta">면허번호 - 001234</p>
+        </div>
+        <div class="mypage-qr__code">
+          <!-- QR 이미지 영역(서버 연동 시 img로 교체) -->
+          <div class="mypage-qr__image"></div>
+          <p class="mypage-qr__date"><time datetime="2026-10-01">2026-10-01</time></p>
+        </div>
+      </div>
+    </dialog>
+
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="교육 상세 현장교육(강의별) 레이어 확인">
+        <a href="/kdha/mypage/classroom/offline/detail/lectures/#classroom-qr-dialog">팝업 · QR 코드</a>
+      </nav>
+    </details>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>

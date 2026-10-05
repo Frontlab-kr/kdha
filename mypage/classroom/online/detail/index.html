@@ -199,10 +199,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -221,9 +231,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -292,7 +308,7 @@
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <!-- KD-US-MYP-03-02_PC_교육 상세_사이버교육 -->
+          <!-- KD-US-MYP-03-02_PC_교육 상세_사이버교육 (3803:35943 · SB 15) -->
           <div class="mypage mypage-classroom">
             <nav class="ds-tabs ds-tabs--box" aria-label="마이페이지 메뉴" data-mypage-tabs>
               <a class="ds-tabs__item" href="/kdha/mypage/">마이페이지</a>
@@ -355,6 +371,7 @@
                     <span>(직접비 40,000원 / 간접비 40,000원)</span>
                   </dd>
                 </dl>
+                <!-- 이수 완료 시 이수년도 입력·달력·변경 버튼에 disabled를 적용합니다(SB 15). -->
                 <div class="form-field form-datepicker mypage-course-year">
                   <label for="classroom-course-year">이수년도</label>
                   <span class="form-input-action">
@@ -394,6 +411,15 @@
                   <p class="mypage-classroom__summary">4개 강의 · 총 2시간</p>
                 </div>
               </div>
+              <!--
+                수강 액션 영역(마지막 열)은 강의 상태에 따라 아래 중 하나만 표시합니다. (SB 15 · 연장 상태별 액션 명세 3803:57832)
+                · 수강 가능 / 연장 승인 완료: 이어보기(Primary S) 또는 수강하기(Outline S) 링크
+                · 최초 연장 대상: '수강연장' Outline S 버튼 (최초 1회 7일 자동 연장, 서버 처리)
+                · 별도 연장 신청 가능: '연장신청' Outline S 버튼 + data-dialog-open="classroom-extend-dialog"
+                · 승인 대기: '연장신청중' Outline S 버튼 + disabled (중복 신청 방지)
+                · 승인 거절: '승인거절' Outline S 버튼 + mypage-lessons__rejected 클래스 + data-dialog-open="classroom-extend-result-dialog"
+                · 교육기간 종료·미이수: 이어보기·수강하기를 표시하지 않습니다.
+              -->
               <ol class="ds-board mypage-lessons">
                 <li class="ds-board__row">
                   <span class="mypage-lessons__no">01</span>
@@ -574,7 +600,7 @@
       </footer>
     </div>
 
-    <!-- KD-US-MYP-03-02P 과정공지 -->
+    <!-- KD-US-MYP-03-02P 과정공지 (3803:36183) -->
     <dialog class="edu-dialog mypage-dialog" id="classroom-notice-dialog" aria-labelledby="classroom-notice-title">
       <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
         close
@@ -630,7 +656,89 @@
       </div>
     </dialog>
 
-    <!-- 사이버강의 시험 · 응시 안내 (3540:148740) -->
+    <!-- 수강기간 연장 신청 (SB 13 · Modal/PC 3803:36264) : 학습 목차의 '연장신청'에서 엽니다. 제출하면 해당 강의는 '연장신청중' 상태로 바뀝니다(서버 처리). -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--modal mypage-extend"
+      id="classroom-extend-dialog"
+      aria-labelledby="classroom-extend-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="classroom-extend-title">수강기간 연장 신청</h2>
+      <form class="mypage-dialog__form" method="dialog">
+        <div class="edu-dialog__body mypage-extend__body">
+          <dl class="edu-dialog__account-result">
+            <div>
+              <dt>교육명</dt>
+              <dd>의료윤리와 법정의무</dd>
+            </div>
+            <div>
+              <dt>이수년도</dt>
+              <dd>2025</dd>
+            </div>
+          </dl>
+          <div class="form-field mypage-classroom-field">
+            <label for="classroom-extend-reason">연장 사유</label>
+            <textarea
+              id="classroom-extend-reason"
+              name="extendReason"
+              maxlength="500"
+              placeholder="연장 사유를 입력해주세요."
+            ></textarea>
+          </div>
+          <ul class="ds-guide-list">
+            <li class="ds-guide-list__item">입력한 내용은 학습기간 연장 승인 검토에 사용됩니다.</li>
+          </ul>
+        </div>
+        <div class="edu-dialog__actions">
+          <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+          <button class="ds-button ds-button--large ds-button--primary" type="submit">연장신청</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- 수강기간 연장 신청결과 (SB 14 · Modal/PC 3803:36282) : 학습 목차의 '승인거절'에서 엽니다. 연장 사유를 고쳐 재요청하면 '연장신청중' 상태로 바뀝니다(서버 처리). -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--modal mypage-extend"
+      id="classroom-extend-result-dialog"
+      aria-labelledby="classroom-extend-result-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="classroom-extend-result-title">수강기간 연장 신청결과</h2>
+      <form class="mypage-dialog__form" method="dialog">
+        <div class="edu-dialog__body mypage-extend__body">
+          <dl class="edu-dialog__account-result">
+            <div>
+              <dt>교육명</dt>
+              <dd>의료윤리와 법정의무</dd>
+            </div>
+            <div>
+              <dt>이수년도</dt>
+              <dd>2025</dd>
+            </div>
+          </dl>
+          <div class="form-field mypage-classroom-field">
+            <label for="classroom-extend-result-reason">연장 사유</label>
+            <textarea id="classroom-extend-result-reason" name="extendReason" maxlength="500">
+재요청 드립니다.&#10;연장 부탁드립니다.</textarea>
+          </div>
+          <div class="form-field mypage-classroom-field">
+            <label for="classroom-extend-result-rejected">승인거절 사유</label>
+            <textarea id="classroom-extend-result-rejected" class="mypage-extend__rejected" readonly>
+죄송합니다.</textarea>
+          </div>
+        </div>
+        <div class="edu-dialog__actions">
+          <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+          <button class="ds-button ds-button--large ds-button--primary" type="submit">재요청</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- 사이버강의 시험 · 응시 안내 (3803:36361) -->
     <dialog
       class="edu-dialog mypage-dialog mypage-dialog--modal mypage-exam-intro"
       id="classroom-exam-intro-dialog"
@@ -679,7 +787,7 @@
       </div>
     </dialog>
 
-    <!-- 사이버강의 시험 · 응시 (3540:148680) -->
+    <!-- 사이버강의 시험 · 응시 (3803:36301) -->
     <dialog
       class="edu-dialog mypage-dialog mypage-dialog--modal"
       id="classroom-exam-dialog"
@@ -816,7 +924,7 @@
       </form>
     </dialog>
 
-    <!-- 사이버강의 시험 · 결과(이수) (3540:148717) -->
+    <!-- 사이버강의 시험 · 결과(이수) (3803:36338) -->
     <dialog
       class="edu-dialog mypage-dialog mypage-dialog--modal"
       id="classroom-exam-pass-dialog"
@@ -849,7 +957,7 @@
       </div>
     </dialog>
 
-    <!-- 사이버강의 시험 · 결과(미이수) (3540:148728) -->
+    <!-- 사이버강의 시험 · 결과(미이수) (3803:36349) -->
     <dialog
       class="edu-dialog mypage-dialog mypage-dialog--modal"
       id="classroom-exam-fail-dialog"
@@ -902,7 +1010,7 @@
       </div>
     </dialog>
 
-    <!-- 사이버강의 설문조사 (3540:148759) -->
+    <!-- 사이버강의 설문조사 (3803:36380) -->
     <dialog
       class="edu-dialog mypage-dialog mypage-dialog--modal"
       id="classroom-survey-dialog"
@@ -1022,7 +1130,7 @@
       </form>
     </dialog>
 
-    <!-- 알림 모음(3540:149601) · 시험·설문 -->
+    <!-- 알림 모음(3803:37222) · 시험·설문 -->
     <dialog
       class="ds-alert"
       id="classroom-exam-start-alert"
@@ -1236,6 +1344,8 @@
       </summary>
       <nav aria-label="교육 상세 사이버교육 레이어 확인">
         <a href="/kdha/mypage/classroom/online/detail/#classroom-notice-dialog">팝업 · 과정공지</a>
+        <a href="/kdha/mypage/classroom/online/detail/#classroom-extend-dialog">팝업 · 수강기간 연장 신청</a>
+        <a href="/kdha/mypage/classroom/online/detail/#classroom-extend-result-dialog">팝업 · 수강기간 연장 신청결과</a>
         <a href="/kdha/mypage/classroom/online/detail/#classroom-exam-intro-dialog">팝업 · 사이버강의 시험(응시 안내)</a>
         <a href="/kdha/mypage/classroom/online/detail/#classroom-exam-dialog">팝업 · 사이버강의 시험(문항)</a>
         <a href="/kdha/mypage/classroom/online/detail/#classroom-exam-pass-dialog">팝업 · 사이버강의 시험(이수)</a>

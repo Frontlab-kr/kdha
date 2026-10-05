@@ -198,10 +198,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -220,9 +230,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -546,18 +562,24 @@
         </div>
       </footer>
     </div>
-    <!-- 알림 모음(KD-US-MYP_PC_알림 모음) · 봉사 -->
+    <!-- 알림(Figma KD-US-MYP_PC_알림 모음 · 봉사): 마이페이지 공통 알림 dialog.edu-dialog.mypage-dialog--alert -->
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="volunteer-unregister-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="volunteer-unregister-alert-title"
       aria-describedby="volunteer-unregister-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="volunteer-unregister-alert-message">봉사자 정보를 등록 취소하시겠습니까?</p>
+      <h2 id="volunteer-unregister-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="volunteer-unregister-alert-message">봉사자 정보를 등록 취소하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button
@@ -570,46 +592,64 @@
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="volunteer-unregistered-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="volunteer-unregistered-alert-title"
       aria-describedby="volunteer-unregistered-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="volunteer-unregistered-alert-message">봉사자 정보가 등록 취소되었습니다.</p>
+      <h2 id="volunteer-unregistered-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="volunteer-unregistered-alert-message">봉사자 정보가 등록 취소되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="volunteer-updated-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="volunteer-updated-alert-title"
       aria-describedby="volunteer-updated-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="volunteer-updated-alert-message">봉사자 정보가 수정 완료되었습니다.</p>
+      <h2 id="volunteer-updated-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="volunteer-updated-alert-message">봉사자 정보가 수정 완료되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="volunteer-cancel-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="volunteer-cancel-alert-title"
       aria-describedby="volunteer-cancel-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="volunteer-cancel-alert-message">봉사 신청을 취소하시겠습니까?</p>
+      <h2 id="volunteer-cancel-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="volunteer-cancel-alert-message">봉사 신청을 취소하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button
@@ -622,18 +662,24 @@
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="volunteer-canceled-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="volunteer-canceled-alert-title"
       aria-describedby="volunteer-canceled-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="volunteer-canceled-alert-message">봉사 신청이 취소되었습니다.</p>
+      <h2 id="volunteer-canceled-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="volunteer-canceled-alert-message">봉사 신청이 취소되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <details class="account-layer-menu">

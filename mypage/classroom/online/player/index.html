@@ -28,12 +28,19 @@
             </button>
           </div>
           <div class="mypage-player__controls">
-            <button class="mypage-player__control" type="button" aria-label="재생" data-player-toggle>
-              <span class="material-symbols-rounded" aria-hidden="true">play_arrow</span>
-            </button>
-            <span class="mypage-player__time">
-              <span class="sr-only">재생 시간</span>
-              12:40 / 33:00
+            <span class="mypage-player__playback">
+              <button
+                class="mypage-player__control mypage-player__control--play"
+                type="button"
+                aria-label="재생"
+                data-player-toggle
+              >
+                <span class="material-symbols-rounded" aria-hidden="true">play_arrow</span>
+              </button>
+              <span class="mypage-player__time">
+                <span class="sr-only">재생 시간</span>
+                12:40 / 33:00
+              </span>
             </span>
             <progress class="mypage-progress__bar" max="1980" value="760" aria-label="재생 위치">12분 40초</progress>
             <span class="mypage-player__options">

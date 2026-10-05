@@ -198,10 +198,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -220,9 +230,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -353,23 +369,12 @@
                 </div>
               </div>
               <div class="jobs-field">
-                <label for="recruit-content">
+                <label id="recruit-content-label">
                   상세내용
                   <span class="jobs-required" aria-hidden="true">*</span>
                 </label>
-                <div class="jobs-editor form-field">
-                  <div class="jobs-editor__toolbar" role="toolbar" aria-label="상세내용 편집 도구">
-                    <button type="button">본문 ▾</button>
-                    <button type="button">B</button>
-                    <button type="button">I</button>
-                    <button type="button">U</button>
-                    <button type="button">글머리 기호</button>
-                    <button type="button">링크</button>
-                    <button type="button">이미지</button>
-                    <button type="button">표</button>
-                  </div>
-                  <textarea id="recruit-content" name="recruit-content" placeholder="내용 입력" required></textarea>
-                </div>
+                <!-- 에디터 삽입 영역: 개발 시 이 안에 에디터를 넣습니다. -->
+                <div class="jobs-editor" id="recruit-content" data-editor aria-labelledby="recruit-content-label"></div>
               </div>
             </section>
             <section class="jobs-card" aria-labelledby="recruit-requirements">

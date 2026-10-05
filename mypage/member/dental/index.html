@@ -199,10 +199,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -221,9 +231,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -759,7 +775,7 @@
                     <legend class="sr-only">소속 및 우편물</legend>
                     <div class="mypage-member__field" role="radiogroup" aria-labelledby="member-affiliate-label">
                       <span class="mypage-member__label" id="member-affiliate-label">산하단체</span>
-                      <div class="account-choice-group">
+                      <div class="account-choice-group account-choice-group--wrap">
                         <label class="form-check">
                           <input type="radio" name="affiliate" value="none" />
                           없음
@@ -784,7 +800,7 @@
                     </div>
                     <div class="mypage-member__field" role="group" aria-labelledby="member-society-label">
                       <span class="mypage-member__label" id="member-society-label">학회</span>
-                      <div class="account-choice-group">
+                      <div class="account-choice-group account-choice-group--wrap">
                         <label class="form-check">
                           <input type="checkbox" name="society" value="none" checked />
                           없음
@@ -1002,14 +1018,14 @@
                                 <input
                                   name="careerStart"
                                   aria-label="임직 시작일"
-                                  placeholder="YYYY-MM-DD"
+                                  placeholder="2024-03-02"
                                   autocomplete="off"
                                 />
                                 <span class="account-repeat-date__separator" aria-hidden="true">~</span>
                                 <input
                                   name="careerEnd"
                                   aria-label="임직 종료일"
-                                  placeholder="YYYY-MM-DD"
+                                  placeholder="2024-03-02"
                                   autocomplete="off"
                                 />
                                 <button
@@ -1054,14 +1070,14 @@
                                 <input
                                   name="careerStart"
                                   aria-label="임직 시작일"
-                                  placeholder="YYYY-MM-DD"
+                                  placeholder="2024-03-02"
                                   autocomplete="off"
                                 />
                                 <span class="account-repeat-date__separator" aria-hidden="true">~</span>
                                 <input
                                   name="careerEnd"
                                   aria-label="임직 종료일"
-                                  placeholder="YYYY-MM-DD"
+                                  placeholder="2024-03-02"
                                   autocomplete="off"
                                 />
                                 <button
@@ -1177,18 +1193,24 @@
       </footer>
     </div>
 
-    <!-- 알림(Figma KD-US-MYP_PC_알림 모음 · 회원정보) -->
+    <!-- 알림(Figma KD-US-MYP_PC_알림 모음 · 회원정보): 마이페이지 공통 알림 dialog.edu-dialog.mypage-dialog--alert -->
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="member-password-confirm-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="member-password-confirm-alert-title"
       aria-describedby="member-password-confirm-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="member-password-confirm-alert-message">새로운 비밀번호로 설정하시겠습니까?</p>
+      <h2 id="member-password-confirm-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="member-password-confirm-alert-message">새로운 비밀번호로 설정하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button
@@ -1201,31 +1223,43 @@
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="member-password-done-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="member-password-done-alert-title"
       aria-describedby="member-password-done-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="member-password-done-alert-message">비밀번호가 변경되었습니다.</p>
+      <h2 id="member-password-done-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="member-password-done-alert-message">비밀번호가 변경되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="member-save-confirm-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="member-save-confirm-alert-title"
       aria-describedby="member-save-confirm-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="member-save-confirm-alert-message">변경된 내역을 저장하시겠습니까?</p>
+      <h2 id="member-save-confirm-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="member-save-confirm-alert-message">변경된 내역을 저장하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button
@@ -1238,18 +1272,24 @@
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="member-save-done-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="member-save-done-alert-title"
       aria-describedby="member-save-done-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="member-save-done-alert-message">저장되었습니다.</p>
+      <h2 id="member-save-done-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="member-save-done-alert-message">저장되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
 

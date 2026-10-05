@@ -179,14 +179,24 @@
       </header>
       <div id="main-body" class="main-body">
         <div class="edu-guide">
+          <!-- 소개 패널 -->
           <section class="edu-guide__intro" aria-labelledby="edu-guide-intro-title">
-            <img src="/kdha/assets/images/edu/about-visual@2x.png" alt="" width="1024" height="384" />
-            <div>
-              <h2 id="edu-guide-intro-title">2026년 치과위생사 보수교육 안내</h2>
+            <hgroup class="edu-guide__heading">
+              <p>전문성을 높이는 배움, 함께 이어가는 성장</p>
+              <h2 id="edu-guide-intro-title">
+                <span>2026년 치과위생사</span>
+                <span>보수교육 안내</span>
+              </h2>
+            </hgroup>
+            <div class="edu-guide__text">
               <p>
                 의료기사 등에 관한 법률 제20조 및 동법 시행령 제11조에 의거하여,
-                <strong>치과위생사는 법정 보수교육을 연 8시간(8평점) 이상 이수</strong>
-                하여야 합니다.
+                <strong>치과위생사는 법정 보수교육을 연 8시간(8평점) 이상</strong>
+                <span class="ds-text-join">
+                  <strong>이수</strong>
+                  <span>하여야</span>
+                </span>
+                합니다.
               </p>
               <p>
                 미이수자는 의료관계 행정처분규칙-행정처분기준에 따라 보건복지부장관의 경고 및 면허자격정지 등의
@@ -198,563 +208,591 @@
               </p>
             </div>
           </section>
+
+          <!-- 연간 보수교육 평점 인정 기준 -->
           <section class="edu-guide__section" aria-labelledby="edu-guide-score">
-            <h2 class="edu-guide__title" id="edu-guide-score">
-              <span>01</span>
-              연간 보수교육 평점 인정 기준
-            </h2>
-            <div
-              class="edu-table edu-table--grid edu-table--score"
-              tabindex="0"
-              role="region"
-              aria-label="연간 보수교육 평점 인정 기준 (좌우로 스크롤)"
-            >
-              <table>
-                <caption class="sr-only">연간 보수교육 평점 인정 기준</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">보수교육 종류</th>
-                    <th scope="col">평점</th>
-                    <th scope="col">연(年) 상한</th>
-                    <th scope="col">비고</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">협회주최 교육 · 현장교육(대면 교육)</th>
-                    <td>1일, 1회 개최 시 상한 8평점</td>
-                    <td>8평점</td>
-                    <td>학술대회, 치위생교육원(DH CEC) 교육 등</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">협회주최 교육 · 사이버 교육</th>
-                    <td>1~8평점</td>
-                    <td>8평점</td>
-                    <td>동일과목 중복이수 시 합산 불가</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">협회 승인 교육 · 시도회 / 산하단체(임상회, 보건회, 남자회) / 산하학회</th>
-                    <td>1회 상한 6평점</td>
-                    <td>8평점</td>
-                    <td>협회가 주최하고 3개 단체 이상 연합하여 주관하는 경우, 1회 개최 시 8평점 가능</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">협회 승인 교육 · 기타 승인된 교육</th>
-                    <td>1회 상한 2평점</td>
-                    <td>2평점</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">논문 게재</th>
-                    <td>
-                      학진 등재(후보)지 및 SCI(E) 등재학술지
-                      <br />
-                      - 제1저자 및 교신저자 : 1편/4점
-                      <br />
-                      - 공동저자 : 1편/2점
-                      <br />
-                      기타 학술지
-                      <br />
-                      - 제1저자 및 교신저자 : 1편/2점
-                      <br />
-                      - 공동저자 : 1편/1점
-                    </td>
-                    <td>4평점</td>
-                    <td>
-                      당해 연도 이내에 이수 사실을 증명하는 서류를 제출하여 연수위원회의 심의 후 인정 통보를 받아야
-                      합니다.
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">협회가 인정하는 국제학술대회</th>
-                    <td>1~6평점</td>
-                    <td>6평점</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+            <h2 class="edu-guide__title" id="edu-guide-score">연간 보수교육 평점 인정 기준</h2>
+            <table class="edu-table edu-table--score" role="table">
+              <caption class="sr-only">연간 보수교육 평점 인정 기준</caption>
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th scope="col" role="columnheader">보수교육 종류</th>
+                  <th scope="col" role="columnheader">평점</th>
+                  <th scope="col" role="columnheader">연(年) 상한</th>
+                  <th scope="col" role="columnheader">비고</th>
+                </tr>
+              </thead>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <th scope="row" role="rowheader">협회주최 교육 · 현장교육(대면 교육)</th>
+                  <td role="cell" data-label="평점">1일, 1회 개최 시 상한 8평점</td>
+                  <td role="cell" data-label="연(年) 상한">8평점</td>
+                  <td role="cell" class="edu-table__stack" data-label="비고">학술대회, 치위생교육원(DH CEC) 교육 등</td>
+                </tr>
+                <tr role="row">
+                  <th scope="row" role="rowheader">협회주최 교육 · 사이버 교육</th>
+                  <td role="cell" data-label="평점">1~8평점</td>
+                  <td role="cell" data-label="연(年) 상한">8평점</td>
+                  <td role="cell" class="edu-table__stack" data-label="비고">동일과목 중복이수 시 합산 불가</td>
+                </tr>
+                <tr role="row">
+                  <th scope="row" role="rowheader">
+                    협회 승인 교육 · 시도회 / 산하단체(임상회, 보건회, 남자회) / 산하학회
+                  </th>
+                  <td role="cell" data-label="평점">1회 상한 6평점</td>
+                  <td role="cell" data-label="연(年) 상한">8평점</td>
+                  <td role="cell" class="edu-table__stack" data-label="비고">
+                    협회가 주최하고 3개 단체 이상 연합하여 주관하는 경우, 1회 개최 시 8평점 가능
+                  </td>
+                </tr>
+                <tr role="row">
+                  <th scope="row" role="rowheader">협회 승인 교육 · 기타 승인된 교육</th>
+                  <td role="cell" data-label="평점">1회 상한 2평점</td>
+                  <td role="cell" data-label="연(年) 상한">2평점</td>
+                  <td role="cell" class="edu-table__stack" data-label="비고"></td>
+                </tr>
+                <tr role="row">
+                  <th scope="row" role="rowheader">논문 게재</th>
+                  <td role="cell" class="edu-table__stack edu-table__left" data-label="평점">
+                    학진 등재(후보)지 및 SCI(E) 등재학술지
+                    <br />
+                    - 제1저자 및 교신저자 : 1편/4점
+                    <br />
+                    - 공동저자 : 1편/2점
+                    <br />
+                    기타 학술지
+                    <br />
+                    - 제1저자 및 교신저자 : 1편/2점
+                    <br />
+                    - 공동저자 : 1편/1점
+                  </td>
+                  <td role="cell" data-label="연(年) 상한">4평점</td>
+                  <td role="cell" class="edu-table__stack" data-label="비고">
+                    당해 연도 이내에 이수 사실을 증명하는 서류를 제출하여 연수위원회의 심의 후 인정 통보를 받아야
+                    합니다.
+                  </td>
+                </tr>
+                <tr role="row">
+                  <th scope="row" role="rowheader">협회가 인정하는 국제학술대회</th>
+                  <td role="cell" data-label="평점">1~6평점</td>
+                  <td role="cell" data-label="연(年) 상한">6평점</td>
+                  <td role="cell" class="edu-table__stack" data-label="비고"></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- 교육대상 및 신청평점 -->
+          <section class="edu-guide__section" aria-labelledby="edu-guide-target">
+            <h2 class="edu-guide__title" id="edu-guide-target">교육대상 및 신청평점</h2>
+            <table class="edu-table edu-table--info" role="table">
+              <caption class="sr-only">교육대상 및 신청평점</caption>
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <th scope="row" role="rowheader">교육대상</th>
+                  <td role="cell">보수교육 수강 희망자</td>
+                </tr>
+                <tr role="row">
+                  <th scope="row" role="rowheader">신청평점</th>
+                  <td role="cell">원하는 교육 접수</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- 교육 유형별 안내: 현장/사이버 탭은 두 페이지 사이 이동 링크 -->
+          <section class="edu-guide__section" aria-labelledby="edu-guide-type">
+            <h2 class="edu-guide__title" id="edu-guide-type">교육 유형별 안내</h2>
+            <div class="edu-guide__type">
+              <nav class="ds-tabs ds-tabs--box" aria-label="교육 유형">
+                <a class="ds-tabs__item" href="/kdha/edu/guide/offline/#edu-guide-type">현장교육 안내</a>
+                <a class="ds-tabs__item" href="/kdha/edu/guide/online/#edu-guide-type" aria-current="page">
+                  사이버교육 안내
+                </a>
+              </nav>
+              <div class="edu-guide__groups">
+                <section class="edu-guide__group" aria-labelledby="edu-guide-proc">
+                  <h3 class="edu-guide__subtitle" id="edu-guide-proc">신청방법</h3>
+                  <ol class="edu-flow edu-flow--four">
+                    <li>
+                      <span class="edu-flow__badge">
+                        <span>STEP</span>
+                        <span>01</span>
+                      </span>
+                      <strong class="edu-flow__title">협회홈페이지 접속</strong>
+                      <p>
+                        대한치과위생사협회
+                        <br class="edu-flow__pc-br" />
+                        홈페이지에 접속합니다.
+                      </p>
+                      <span class="edu-flow__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                      <span class="edu-flow__badge">
+                        <span>STEP</span>
+                        <span>02</span>
+                      </span>
+                      <strong class="edu-flow__title">치위생교육원 접속</strong>
+                      <p>치위생교육원으로 이동한 뒤 로그인합니다.</p>
+                      <span class="edu-flow__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                      <span class="edu-flow__badge">
+                        <span>STEP</span>
+                        <span>03</span>
+                      </span>
+                      <strong class="edu-flow__title">교육 수강 신청</strong>
+                      <p>
+                        사이버교육 &gt; 교육등록에서
+                        <br class="edu-flow__mo-br" />
+                        원하는 교육 수강 신청을 합니다.
+                      </p>
+                      <span class="edu-flow__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                      <span class="edu-flow__badge">
+                        <span>STEP</span>
+                        <span>04</span>
+                      </span>
+                      <strong class="edu-flow__title">이수년도 설정 및 결제</strong>
+                      <p>
+                        이수년도를 설정하고 카드 또는
+                        <br class="edu-flow__mo-br" />
+                        가상계좌로 결제합니다.
+                      </p>
+                      <span class="edu-flow__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                      <span class="edu-flow__badge">
+                        <span>STEP</span>
+                        <span>05</span>
+                      </span>
+                      <strong class="edu-flow__title">교육 참여</strong>
+                      <p>
+                        마이페이지 &gt; 사이버교육 강의실에서
+                        <br class="edu-flow__mo-br" />
+                        결제한 교육을 클릭합니다.
+                      </p>
+                      <span class="edu-flow__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                      <span class="edu-flow__badge">
+                        <span>STEP</span>
+                        <span>06</span>
+                      </span>
+                      <strong class="edu-flow__title">14일 동안 수강</strong>
+                      <p>수강기간 동안 진도율이 체크됩니다.</p>
+                      <span class="edu-flow__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                      <span class="edu-flow__badge">
+                        <span>STEP</span>
+                        <span>07</span>
+                      </span>
+                      <strong class="edu-flow__title">보수교육현황 확인</strong>
+                      <p>
+                        수강이 완료되면 마이페이지 &gt;
+                        <br class="edu-flow__mo-br" />
+                        보수교육 현황에서 확인합니다.
+                      </p>
+                    </li>
+                  </ol>
+                </section>
+                <section class="edu-guide__group" aria-labelledby="edu-guide-fee">
+                  <h3 class="edu-guide__subtitle" id="edu-guide-fee">보수 교육 등록비</h3>
+                  <div class="edu-guide__blocks">
+                    <div class="edu-guide__fee">
+                      <ol class="edu-guide__tiles">
+                        <li>
+                          <span class="edu-guide__badge" aria-hidden="true">01</span>
+                          <p>교육과정 운영에 지출하는 비용을 직접비와 간접비로 산정하여 부과합니다.</p>
+                        </li>
+                        <li>
+                          <span class="edu-guide__badge" aria-hidden="true">02</span>
+                          <p>보수교육 직접비는 협회비 완납 회원과 미납 회원에게 동일하게 부과합니다.</p>
+                        </li>
+                        <li>
+                          <span class="edu-guide__badge" aria-hidden="true">03</span>
+                          <p>간접비는 합리적으로 산정하여 협회비 미납 회원에게 부과합니다.</p>
+                        </li>
+                      </ol>
+                      <dl class="edu-guide__info">
+                        <div>
+                          <dt>회비 완납 회원 · 1평점</dt>
+                          <dd class="edu-guide__info-value">10,000원</dd>
+                          <dd>등록정회원, 평생회원, 임시정회원 : 직접비</dd>
+                        </div>
+                        <div>
+                          <dt>회비 미납 회원 · 1평점</dt>
+                          <dd class="edu-guide__info-value">20,000원</dd>
+                          <dd>등록준회원, 미등록회원 : 직접비 + 간접비</dd>
+                        </div>
+                      </dl>
+                      <div class="edu-guide__card">
+                        <span class="edu-guide__icon">
+                          <img src="/kdha/assets/images/edu/guide-direct-cost.svg" alt="" width="48" height="48" />
+                        </span>
+                        <div class="edu-guide__card-text">
+                          <h4>직접비</h4>
+                          <p>
+                            각 교육 별로 강사료, 교재비, 임차료 등 교육에 직접 소요되는 비용 전체를 총 교육대상자 수로
+                            나누어 1인당 비용을 산정합니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="edu-guide__basis">
+                      <h4 class="edu-guide__caption" id="edu-guide-basis">직접비 산정근거</h4>
+                      <div class="edu-guide__basis-row">
+                        <table class="edu-table edu-table--basis" role="table">
+                          <caption class="sr-only">직접비 산정근거</caption>
+                          <thead role="rowgroup">
+                            <tr role="row">
+                              <th scope="col" role="columnheader">구분</th>
+                              <th scope="col" role="columnheader">항목</th>
+                              <th scope="col" role="columnheader">소계(천원)</th>
+                            </tr>
+                          </thead>
+                          <tbody role="rowgroup">
+                            <tr role="row">
+                              <th scope="row" role="rowheader">교육개발비</th>
+                              <td role="cell" data-label="항목">콘텐츠 개발비</td>
+                              <td role="cell" data-label="소계(천원)">200,000</td>
+                            </tr>
+                            <tr role="row">
+                              <th scope="row" role="rowheader">교육개발비</th>
+                              <td role="cell" data-label="항목">연자료</td>
+                              <td role="cell" data-label="소계(천원)">40,000</td>
+                            </tr>
+                            <tr role="row">
+                              <th scope="row" role="rowheader">일반수용비</th>
+                              <td role="cell" data-label="항목">홈페이지유지보수비</td>
+                              <td role="cell" data-label="소계(천원)">30,000</td>
+                            </tr>
+                            <tr role="row">
+                              <th scope="row" role="rowheader">일반수용비</th>
+                              <td role="cell" data-label="항목">서버운영 비용</td>
+                              <td role="cell" data-label="소계(천원)">600,000</td>
+                            </tr>
+                            <tr role="row">
+                              <th scope="row" role="rowheader">합계</th>
+                              <td role="cell" data-label="항목"></td>
+                              <td role="cell" class="edu-table__total" data-label="소계(천원)">870,000</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="edu-guide__calc">
+                          <h5>세부산출 근거</h5>
+                          <ul>
+                            <li>- 2026년 사이버보수교육 예상 이수점수 87,000점</li>
+                            <li>- 2026년 사이버보수교육 관련 직접비 지출 870,000천원</li>
+                            <li>- 870,000천원 ÷ 87,000점 = 직접비(1점) 10,000원</li>
+                          </ul>
+                          <p>
+                            ※ 정회원·평생회원의 경우, 협회 회원증 카드로 사이버보수교육비 결제 시 10% 캐시백 (결제월
+                            익월말)
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="edu-guide__group" aria-labelledby="edu-guide-period">
+                  <h3 class="edu-guide__subtitle" id="edu-guide-period">접수 및 수강 기간</h3>
+                  <dl class="edu-guide__info">
+                    <div>
+                      <dt>접수기간</dt>
+                      <dd class="edu-guide__info-value">상시 접수</dd>
+                      <dd>2026년도 사이버보수교육 오픈 일정은 정해지는 대로 공지 예정입니다.</dd>
+                    </div>
+                    <div>
+                      <dt>수강기간</dt>
+                      <dd class="edu-guide__info-value">결제일로부터 14일</dd>
+                      <dd>결제 후, 수강종료일을 반드시 확인해 주세요.</dd>
+                    </div>
+                  </dl>
+                </section>
+              </div>
             </div>
           </section>
-          <section class="edu-guide__section" aria-labelledby="edu-guide-target">
-            <h2 class="edu-guide__title" id="edu-guide-target">
-              <span>02</span>
-              교육대상 및 신청평점
-            </h2>
-            <p class="edu-guide__lead">보수교육 수강 희망자, 원하는 교육 접수</p>
-          </section>
-          <section class="edu-guide__section" aria-labelledby="edu-guide-type">
-            <h2 class="edu-guide__title" id="edu-guide-type">
-              <span>03</span>
-              교육 유형별 안내
-            </h2>
-            <nav class="edu-guide__types" aria-label="교육 유형 선택">
-              <a href="/kdha/edu/guide/offline/">
-                <strong>현장교육 안내</strong>
-                <span>교육 절차, 보수 교육 등록비, 교육 수료 기준</span>
-              </a>
-              <a href="/kdha/edu/guide/online/" aria-current="page">
-                <strong>사이버교육 안내</strong>
-                <span>신청 방법, 보수 교육 등록비, 접수 및 수강 기간</span>
-              </a>
-            </nav>
-            <div class="edu-guide__detail">
-              <section aria-labelledby="edu-guide-proc">
-                <h3 class="edu-guide__heading" id="edu-guide-proc">
-                  <span>01</span>
-                  신청방법
-                </h3>
-                <ol class="edu-flow">
-                  <li>
-                    <div class="edu-flow__head">
-                      <img src="/kdha/assets/images/edu/icon-connect.svg" alt="" width="48" height="48" />
-                      <p>
-                        <span>STEP 01</span>
-                        <strong>협회홈페이지 접속</strong>
-                      </p>
-                    </div>
-                    <p>대한치과위생사협회 홈페이지에 접속합니다.</p>
-                  </li>
-                  <li>
-                    <div class="edu-flow__head">
-                      <img src="/kdha/assets/images/edu/icon-school.svg" alt="" width="48" height="48" />
-                      <p>
-                        <span>STEP 02</span>
-                        <strong>치위생교육원 접속</strong>
-                      </p>
-                    </div>
-                    <p>치위생교육원으로 이동한 뒤 로그인합니다.</p>
-                  </li>
-                  <li>
-                    <div class="edu-flow__head">
-                      <img src="/kdha/assets/images/edu/icon-apply.svg" alt="" width="48" height="48" />
-                      <p>
-                        <span>STEP 03</span>
-                        <strong>교육 수강 신청</strong>
-                      </p>
-                    </div>
-                    <p>사이버교육 &gt; 교육등록에서 원하는 교육 수강 신청을 합니다.</p>
-                  </li>
-                  <li>
-                    <div class="edu-flow__head">
-                      <img src="/kdha/assets/images/edu/icon-badge.svg" alt="" width="48" height="48" />
-                      <p>
-                        <span>STEP 04</span>
-                        <strong>이수년도 설정 및 결제</strong>
-                      </p>
-                    </div>
-                    <p>이수년도를 설정하고 카드 또는 가상계좌로 결제합니다.</p>
-                  </li>
-                  <li>
-                    <div class="edu-flow__head">
-                      <img src="/kdha/assets/images/edu/icon-elearning.svg" alt="" width="48" height="48" />
-                      <p>
-                        <span>STEP 05</span>
-                        <strong>교육 참여</strong>
-                      </p>
-                    </div>
-                    <p>마이페이지 &gt; 사이버교육 강의실에서 결제한 교육을 클릭합니다.</p>
-                  </li>
-                  <li>
-                    <div class="edu-flow__head">
-                      <img src="/kdha/assets/images/edu/icon-calendar.svg" alt="" width="48" height="48" />
-                      <p>
-                        <span>STEP 06</span>
-                        <strong>14일 동안 수강</strong>
-                      </p>
-                    </div>
-                    <p>수강기간 동안 진도율이 체크됩니다.</p>
-                  </li>
-                  <li>
-                    <div class="edu-flow__head">
-                      <img src="/kdha/assets/images/edu/icon-check.svg" alt="" width="48" height="48" />
-                      <p>
-                        <span>STEP 07</span>
-                        <strong>보수교육현황 확인</strong>
-                      </p>
-                    </div>
-                    <p>수강이 완료되면 마이페이지 &gt; 보수교육 현황에서 확인합니다.</p>
-                  </li>
-                </ol>
+
+          <!-- 환불 안내 -->
+          <section class="edu-guide__section" aria-labelledby="edu-guide-refund">
+            <h2 class="edu-guide__title" id="edu-guide-refund">환불 안내</h2>
+            <div class="edu-guide__groups">
+              <section class="edu-guide__group" aria-labelledby="edu-guide-refund-offline">
+                <h3 class="edu-guide__subtitle" id="edu-guide-refund-offline">현장교육 환불 기준</h3>
+                <table class="edu-table" role="table">
+                  <caption class="sr-only">현장교육 환불 기준</caption>
+                  <thead role="rowgroup">
+                    <tr role="row">
+                      <th scope="col" role="columnheader">구분</th>
+                      <th scope="col" role="columnheader">회비 완납 회원</th>
+                      <th scope="col" role="columnheader">회비 미납 회원</th>
+                    </tr>
+                  </thead>
+                  <tbody role="rowgroup">
+                    <tr role="row">
+                      <th scope="row" role="rowheader">교육 7일 전까지</th>
+                      <td role="cell" data-label="회비 완납 회원">전액환불</td>
+                      <td role="cell" data-label="회비 미납 회원">전액환불</td>
+                    </tr>
+                    <tr role="row">
+                      <th scope="row" role="rowheader">교육 6일 전부터 ~ 당일</th>
+                      <td role="cell" data-label="회비 완납 회원">환불불가</td>
+                      <td role="cell" data-label="회비 미납 회원">간접비만 환불</td>
+                    </tr>
+                  </tbody>
+                </table>
               </section>
-              <section aria-labelledby="edu-guide-fee">
-                <h3 class="edu-guide__heading" id="edu-guide-fee">
-                  <span>02</span>
-                  보수 교육 등록비
-                </h3>
-                <ol class="edu-guide__principles">
-                  <li>
-                    <span aria-hidden="true">01</span>
-                    <p>교육과정 운영에 지출하는 비용을 직접비와 간접비로 산정하여 부과합니다.</p>
-                  </li>
-                  <li>
-                    <span aria-hidden="true">02</span>
-                    <p>보수교육 직접비는 협회비 완납 회원과 미납 회원에게 동일하게 부과합니다.</p>
-                  </li>
-                  <li>
-                    <span aria-hidden="true">03</span>
-                    <p>간접비는 합리적으로 산정하여 협회비 미납 회원에게 부과합니다.</p>
-                  </li>
-                </ol>
-                <dl class="edu-guide__prices">
-                  <div class="is-primary">
-                    <dt>회비 완납 회원 · 1평점</dt>
-                    <dd>
-                      <strong>10,000원</strong>
-                      <span>등록정회원, 평생회원, 임시정회원 : 직접비</span>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>회비 미납 회원 · 1평점</dt>
-                    <dd>
-                      <strong>20,000원</strong>
-                      <span>등록준회원, 미등록회원 : 직접비 + 간접비</span>
-                    </dd>
-                  </div>
-                </dl>
-                <div class="edu-guide__box">
-                  <h4>
-                    <img src="/kdha/assets/images/edu/icon-document.svg" alt="" width="36" height="36" />
-                    직접비
-                  </h4>
-                  <p>
-                    각 교육 별로 강사료, 교재비, 임차료 등 교육에 직접 소요되는 비용 전체를 총 교육대상자 수로 나누어
-                    1인당 비용을 산정합니다.
-                  </p>
-                  <div class="edu-guide__basis">
-                    <div
-                      class="edu-table edu-table--compact"
-                      tabindex="0"
-                      role="region"
-                      aria-label="직접비 산정근거 (좌우로 스크롤)"
-                    >
-                      <table>
-                        <caption class="sr-only">직접비 산정근거</caption>
-                        <thead>
-                          <tr>
-                            <th scope="col">구분</th>
-                            <th scope="col">항목</th>
-                            <th scope="col">소계(천원)</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">교육개발비</th>
-                            <td>콘텐츠 개발비</td>
-                            <td>200,000</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">교육개발비</th>
-                            <td>연자료</td>
-                            <td>40,000</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">일반수용비</th>
-                            <td>홈페이지유지보수비</td>
-                            <td>30,000</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">일반수용비</th>
-                            <td>서버운영 비용</td>
-                            <td>600,000</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">합계</th>
-                            <td></td>
-                            <td>870,000</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="edu-guide__calc">
-                      <h5>세부산출 근거</h5>
-                      <p>- 2026년 사이버보수교육 예상 이수점수 87,000점</p>
-                      <p>- 2026년 사이버보수교육 관련 직접비 지출 870,000천원</p>
-                      <p>- 870,000천원 ÷ 87,000점 = 직접비(1점) 10,000원</p>
-                      <p class="edu-guide__point">
-                        ※ 정회원·평생회원의 경우, 협회 회원증 카드로 사이버보수교육비 결제 시 10% 캐시백 (결제월 익월말)
-                      </p>
-                    </div>
+              <section class="edu-guide__group" aria-labelledby="edu-guide-refund-online">
+                <h3 class="edu-guide__subtitle" id="edu-guide-refund-online">사이버교육 환불 기준</h3>
+                <div class="edu-guide__table-notes">
+                  <table class="edu-table edu-table--refund" role="table">
+                    <caption class="sr-only">사이버교육 환불 기준</caption>
+                    <thead role="rowgroup">
+                      <tr role="row">
+                        <th scope="col" role="columnheader">환불신청일</th>
+                        <th scope="col" role="columnheader">수강기간 / 수강진도율</th>
+                        <th scope="col" role="columnheader">환불금액</th>
+                      </tr>
+                    </thead>
+                    <tbody role="rowgroup">
+                      <tr role="row">
+                        <th scope="row" role="rowheader">결제 후 1개월 이내</th>
+                        <td role="cell" class="edu-table__stack" data-label="수강기간 / 수강진도율">수강 전</td>
+                        <td role="cell" data-label="환불금액">등록비 전액</td>
+                      </tr>
+                      <tr role="row">
+                        <th scope="row" role="rowheader">결제 후 1개월 이내</th>
+                        <td role="cell" class="edu-table__stack" data-label="수강기간 / 수강진도율">
+                          수강기간(또는 수강진도율) 1/3이 지나기 전
+                        </td>
+                        <td role="cell" data-label="환불금액">등록비의 2/3에 해당하는 비용</td>
+                      </tr>
+                      <tr role="row">
+                        <th scope="row" role="rowheader">결제 후 1개월 이내</th>
+                        <td role="cell" class="edu-table__stack" data-label="수강기간 / 수강진도율">
+                          수강기간(또는 수강진도율) 1/3이 지난 후 1/2이 지나기 이전
+                        </td>
+                        <td role="cell" data-label="환불금액">등록비의 1/2에 해당하는 비용</td>
+                      </tr>
+                      <tr role="row">
+                        <th scope="row" role="rowheader">결제 후 1개월 이내</th>
+                        <td role="cell" class="edu-table__stack" data-label="수강기간 / 수강진도율">
+                          수강기간(또는 수강진도율) 1/2이 지난 후
+                        </td>
+                        <td role="cell" data-label="환불금액">환불 불가</td>
+                      </tr>
+                      <tr role="row">
+                        <th scope="row" role="rowheader">결제 후 1개월 이후</th>
+                        <td role="cell" class="edu-table__stack" data-label="수강기간 / 수강진도율">무관</td>
+                        <td role="cell" data-label="환불금액">환불 불가</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="edu-guide__notes">
+                    <p>
+                      ※ 수강신청 취소/환불은
+                      <strong>[치위생교육원 &gt; 마이페이지 &gt; 결제정보 &gt;</strong>
+                      <span class="ds-text-join">
+                        <strong>결제내역]</strong>
+                        <span>에서</span>
+                      </span>
+                      진행하실 수 있습니다.
+                    </p>
+                    <p>
+                      ※ 치위생교육원 내 환불처리는 주말, 공휴일 제외 최대 7일 소요됩니다. (신용카드의 경우, 카드사별로
+                      처리기간 상이)
+                    </p>
                   </div>
                 </div>
               </section>
-              <section aria-labelledby="edu-guide-period">
-                <h3 class="edu-guide__heading" id="edu-guide-period">
-                  <span>03</span>
-                  접수 및 수강 기간
-                </h3>
-                <dl class="edu-guide__periods">
-                  <div>
-                    <dt>접수기간</dt>
-                    <dd>
-                      <strong>상시 접수</strong>
-                      <span>2026년도 사이버보수교육 오픈 일정은 정해지는 대로 공지 예정입니다.</span>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>수강기간</dt>
-                    <dd>
-                      <strong>결제일로부터 14일</strong>
-                      <span>결제 후, 수강종료일을 반드시 확인해 주세요.</span>
-                    </dd>
-                  </div>
-                </dl>
+              <section class="edu-guide__group" aria-labelledby="edu-guide-refund-note">
+                <h3 class="edu-guide__subtitle" id="edu-guide-refund-note">환불 유의사항</h3>
+                <ol class="edu-guide__list">
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">01</span>
+                    <p>인터넷콘텐츠업에 명시된 규정 및 평생교육법 학습비 반환기준을 근거하여 운영합니다.</p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">02</span>
+                    <p>수강하신 과목에 대해서는 환불이 절대 불가합니다.</p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">03</span>
+                    <p>
+                      환불은 절차에 따라 주말, 공휴일 제외 최대 7일 소요될 수 있습니다. (신용카드의 경우, 카드사별로
+                      처리 기간 상이)
+                    </p>
+                  </li>
+                </ol>
               </section>
             </div>
           </section>
-          <section class="edu-guide__section" aria-labelledby="edu-guide-refund">
-            <h2 class="edu-guide__title" id="edu-guide-refund">
-              <span>04</span>
-              환불 안내
-            </h2>
-            <div class="edu-guide__group">
-              <h3 class="edu-guide__subtitle">현장교육 환불 기준</h3>
-              <div class="edu-table" tabindex="0" role="region" aria-label="현장교육 환불 기준 (좌우로 스크롤)">
-                <table>
-                  <caption class="sr-only">현장교육 환불 기준</caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">구분</th>
-                      <th scope="col">회비 완납 회원</th>
-                      <th scope="col">회비 미납 회원</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">교육 7일 전까지</th>
-                      <td>전액환불</td>
-                      <td>전액환불</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">교육 6일 전부터 ~ 당일</th>
-                      <td>환불불가</td>
-                      <td>간접비만 환불</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="edu-guide__group">
-              <h3 class="edu-guide__subtitle">사이버교육 환불 기준</h3>
-              <div class="edu-table" tabindex="0" role="region" aria-label="사이버교육 환불 기준 (좌우로 스크롤)">
-                <table>
-                  <caption class="sr-only">사이버교육 환불 기준</caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">환불신청일</th>
-                      <th scope="col">수강기간 / 수강진도율</th>
-                      <th scope="col">환불금액</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">결제 후 1개월 이내</th>
-                      <td>수강 전</td>
-                      <td>등록비 전액</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">결제 후 1개월 이내</th>
-                      <td>수강기간(또는 수강진도율) 1/3이 지나기 전</td>
-                      <td>등록비의 2/3에 해당하는 비용</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">결제 후 1개월 이내</th>
-                      <td>수강기간(또는 수강진도율) 1/3이 지난 후 1/2이 지나기 이전</td>
-                      <td>등록비의 1/2에 해당하는 비용</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">결제 후 1개월 이내</th>
-                      <td>수강기간(또는 수강진도율) 1/2이 지난 후</td>
-                      <td>환불 불가</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">결제 후 1개월 이후</th>
-                      <td>무관</td>
-                      <td>환불 불가</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="edu-guide__notice">
-                <p>
-                  ※ 수강신청 취소/환불은
-                  <strong>[치위생교육원 &gt; 마이페이지 &gt; 결제정보 &gt; 결제내역]</strong>
-                  에서 진행하실 수 있습니다.
-                </p>
-                <p>
-                  ※ 치위생교육원 내 환불처리는 주말, 공휴일 제외 최대 7일 소요됩니다. (신용카드의 경우, 카드사별로
-                  처리기간 상이)
-                </p>
-              </div>
-            </div>
-            <div class="edu-guide__group edu-guide__group--list">
-              <h3 class="edu-guide__subtitle">환불 유의사항</h3>
-              <ol class="edu-guide__notes">
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">01</span>
-                  <p>인터넷콘텐츠업에 명시된 규정 및 평생교육법 학습비 반환기준을 근거하여 운영합니다.</p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">02</span>
-                  <p>수강하신 과목에 대해서는 환불이 절대 불가합니다.</p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">03</span>
-                  <p>
-                    환불은 절차에 따라 주말, 공휴일 제외 최대 7일 소요될 수 있습니다. (신용카드의 경우, 카드사별로 처리
-                    기간 상이)
-                  </p>
-                </li>
-              </ol>
-            </div>
-          </section>
+
+          <!-- 수료증 및 이수증 출력 -->
           <section class="edu-guide__section" aria-labelledby="edu-guide-cert">
-            <h2 class="edu-guide__title" id="edu-guide-cert">
-              <span>05</span>
-              수료증 및 이수증 출력
-            </h2>
-            <ol class="edu-guide__path">
+            <h2 class="edu-guide__title" id="edu-guide-cert">수료증 및 이수증 출력</h2>
+            <ol class="edu-flow edu-flow--four">
               <li>
-                <span aria-hidden="true">01</span>
-                치위생교육원 로그인
+                <span class="edu-flow__badge">
+                  <span>STEP</span>
+                  <span>01</span>
+                </span>
+                <strong class="edu-flow__title">치위생교육원 로그인</strong>
+                <span class="edu-flow__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
               </li>
               <li>
-                <span aria-hidden="true">02</span>
-                마이페이지
+                <span class="edu-flow__badge">
+                  <span>STEP</span>
+                  <span>02</span>
+                </span>
+                <strong class="edu-flow__title">마이페이지</strong>
+                <span class="edu-flow__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
               </li>
               <li>
-                <span aria-hidden="true">03</span>
-                보수교육현황
+                <span class="edu-flow__badge">
+                  <span>STEP</span>
+                  <span>03</span>
+                </span>
+                <strong class="edu-flow__title">보수교육현황</strong>
+                <span class="edu-flow__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
               </li>
-              <li class="is-active">
-                <span aria-hidden="true">04</span>
-                수료증 및 이수증 출력
+              <li>
+                <span class="edu-flow__badge">
+                  <span>STEP</span>
+                  <span>04</span>
+                </span>
+                <strong class="edu-flow__title">수료증 및 이수증 출력</strong>
               </li>
             </ol>
           </section>
+
+          <!-- 기타 안내 -->
           <section class="edu-guide__section" aria-labelledby="edu-guide-etc">
-            <h2 class="edu-guide__title" id="edu-guide-etc">
-              <span>06</span>
-              기타 안내
-            </h2>
-            <ol class="edu-guide__notes">
-              <li>
-                <span class="edu-guide__num" aria-hidden="true">01</span>
-                <p>
-                  협회홈페이지 개인정보에 면허번호가 등록(치과위생사회원 전환)된 회원만 "면허신고센터 및 치위생교육원
-                  보수교육현황"에서 교육내역 확인이 가능하오니, 반드시 협회홈페이지에 면허번호를 등록하여 주시기
-                  바랍니다.
-                </p>
-              </li>
-              <li>
-                <span class="edu-guide__num" aria-hidden="true">02</span>
-                <p>
-                  2025.1.1(회원등급 변경 기준일) 이후 등록일 현재 회원등급이 재확인·적용되오니 회원등급 확인 후 수강
-                  신청을 진행하여 주시기 바랍니다.
-                </p>
-              </li>
-            </ol>
-            <div class="edu-guide__group edu-guide__group--list">
-              <h3 class="edu-guide__subtitle">현장교육</h3>
-              <ol class="edu-guide__notes">
+            <h2 class="edu-guide__title" id="edu-guide-etc">기타 안내</h2>
+            <div class="edu-guide__groups">
+              <ol class="edu-guide__list">
                 <li>
                   <span class="edu-guide__num" aria-hidden="true">01</span>
                   <p>
-                    기타 승인된 교육의 평점 인정은 본 협회와 협의를 거친 교육에 한하므로 참석 전 반드시 확인하여 주시기
+                    협회홈페이지 개인정보에 면허번호가 등록(치과위생사회원 전환)된 회원만 "면허신고센터 및 치위생교육원
+                    보수교육현황"에서 교육내역 확인이 가능하오니, 반드시 협회홈페이지에 면허번호를 등록하여 주시기
                     바랍니다.
                   </p>
                 </li>
                 <li>
                   <span class="edu-guide__num" aria-hidden="true">02</span>
                   <p>
-                    모든 현장교육은 사전등록 및 선착순 접수가 원칙이므로, 등록인원과 기간을 사전에 확인하시어 접수하여
-                    주시기 바랍니다.
-                  </p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">03</span>
-                  <p>
-                    교육일정에 등록된 교육은 아직 승인되지 않았으며, 교육기관의 사정으로 변동될 수 있습니다. 일정 및
-                    내용이 수정될 경우 상시 수정하여 공지 예정입니다.
-                  </p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">04</span>
-                  <p>보수교육 세부사항은 해당 교육 문의처로 문의하여 주시기 바랍니다.</p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">05</span>
-                  <p>
-                    정확한 이수자 관리를 위하여 현장 보수교육은 전자출결시스템을 도입하여 운영합니다. 협회회원증카드
-                    혹은 임시출결카드를 사용하여 강연장 입·퇴실 때마다 정확하게 태그하여 주시기 바랍니다.
+                    2025.1.1(회원등급 변경 기준일) 이후 등록일 현재 회원등급이 재확인·적용되오니 회원등급 확인 후 수강
+                    신청을 진행하여 주시기 바랍니다.
                   </p>
                 </li>
               </ol>
-            </div>
-            <div class="edu-guide__group edu-guide__group--list">
-              <h3 class="edu-guide__subtitle">사이버교육</h3>
-              <ol class="edu-guide__notes">
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">01</span>
-                  <p>
-                    실시간 스트리밍 시스템을 이용한 온라인교육 수강을 위하여 핸드폰 본인인증이 필요하며 본인 명의의
-                    핸드폰으로, 번호가 협회에 등록되어 있는 경우에만 인증이 가능합니다.
-                  </p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">02</span>
-                  <p>
-                    실시간 스트리밍 시스템을 이용한 온라인교육 수강 시, PC·핸드폰·태블릿 등으로 모두 수강이 가능합니다.
-                    단, PC 수강 시 크롬 또는 엣지 브라우저를 사용하고, 핸드폰 및 태블릿은 소프트웨어를 최신 버전으로
-                    업데이트해 주세요. (아이폰 iOS 14.1 이상, 안드로이드 10 이상)
-                  </p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">03</span>
-                  <p>
-                    이전에 사이버보수교육으로 수강하신 과목을 재수강하는 경우, 평점인정이 불가하오니
-                    [치위생교육원-마이페이지-보수교육현황]을 확인하시어 수강하신 과목은 피해주시기 바랍니다.
-                  </p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">04</span>
-                  <p>모바일로도 교육을 수강하실 수 있습니다.</p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">05</span>
-                  <p>
-                    수강기간 내에 수강하지 못한 경우, 신청 시 1회에 한하여 수강종료일로부터 일주일동안 기간연장이
-                    가능합니다.
-                  </p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">06</span>
-                  <p>
-                    설정했던 이수년도의 변경을 원하는 경우, [치위생교육원-마이페이지-교육등록현황]에서 교육명 클릭 시
-                    직접 변경이 가능합니다. (단, 수강이 완료된 강의는 변경 불가)
-                  </p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">07</span>
-                  <p>
-                    교육 수강완료 후 다음 날 [치위생교육원-마이페이지-보수교육현황]에서 반영된 점수를 확인하실 수
-                    있습니다.
-                  </p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">08</span>
-                  <p>
-                    교육영상 시청 시 다양한 팝업창이 생성되는데 창의 확인버튼을 누르지 않으면 영상이 다시 재생되지
-                    않습니다.
-                  </p>
-                </li>
-                <li>
-                  <span class="edu-guide__num" aria-hidden="true">09</span>
-                  <p>
-                    강의 중간 강의내용에 대한 퀴즈 풀이가 있습니다. 총 2번의 기회가 주어지며, 모두 오답일 경우 영상이
-                    이전 시점으로 돌아가게 되오니 집중하여 수강해 주시기 바랍니다.
-                  </p>
-                </li>
-              </ol>
+              <section class="edu-guide__group" aria-labelledby="edu-guide-etc-offline">
+                <h3 class="edu-guide__subtitle" id="edu-guide-etc-offline">현장교육</h3>
+                <ol class="edu-guide__list">
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">01</span>
+                    <p>
+                      기타 승인된 교육의 평점 인정은 본 협회와 협의를 거친 교육에 한하므로 참석 전 반드시 확인하여
+                      주시기 바랍니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">02</span>
+                    <p>
+                      모든 현장교육은 사전등록 및 선착순 접수가 원칙이므로, 등록인원과 기간을 사전에 확인하시어 접수하여
+                      주시기 바랍니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">03</span>
+                    <p>
+                      교육일정에 등록된 교육은 아직 승인되지 않았으며, 교육기관의 사정으로 변동될 수 있습니다. 일정 및
+                      내용이 수정될 경우 상시 수정하여 공지 예정입니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">04</span>
+                    <p>보수교육 세부사항은 해당 교육 문의처로 문의하여 주시기 바랍니다.</p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">05</span>
+                    <p>
+                      정확한 이수자 관리를 위하여 현장 보수교육은 전자출결시스템을 도입하여 운영합니다. 협회회원증카드
+                      혹은 임시출결카드를 사용하여 강연장 입·퇴실 때마다 정확하게 태그하여 주시기 바랍니다.
+                    </p>
+                  </li>
+                </ol>
+              </section>
+              <section class="edu-guide__group" aria-labelledby="edu-guide-etc-online">
+                <h3 class="edu-guide__subtitle" id="edu-guide-etc-online">사이버교육</h3>
+                <ol class="edu-guide__list">
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">01</span>
+                    <p>
+                      실시간 스트리밍 시스템을 이용한 온라인교육 수강을 위하여 핸드폰 본인인증이 필요하며 본인 명의의
+                      핸드폰으로, 번호가 협회에 등록되어 있는 경우에만 인증이 가능합니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">02</span>
+                    <p>
+                      실시간 스트리밍 시스템을 이용한 온라인교육 수강 시, PC·핸드폰·태블릿 등으로 모두 수강이
+                      가능합니다. 단, PC 수강 시 크롬 또는 엣지 브라우저를 사용하고, 핸드폰 및 태블릿은 소프트웨어를
+                      최신 버전으로 업데이트해 주세요. (아이폰 iOS 14.1 이상, 안드로이드 10 이상)
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">03</span>
+                    <p>
+                      이전에 사이버보수교육으로 수강하신 과목을 재수강하는 경우, 평점인정이 불가하오니
+                      [치위생교육원-마이페이지-보수교육현황]을 확인하시어 수강하신 과목은 피해주시기 바랍니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">04</span>
+                    <p>모바일로도 교육을 수강하실 수 있습니다.</p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">05</span>
+                    <p>
+                      수강기간 내에 수강하지 못한 경우, 신청 시 1회에 한하여 수강종료일로부터 일주일동안 기간연장이
+                      가능합니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">06</span>
+                    <p>
+                      설정했던 이수년도의 변경을 원하는 경우, [치위생교육원-마이페이지-교육등록현황]에서 교육명 클릭 시
+                      직접 변경이 가능합니다. (단, 수강이 완료된 강의는 변경 불가)
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">07</span>
+                    <p>
+                      교육 수강완료 후 다음 날 [치위생교육원-마이페이지-보수교육현황]에서 반영된 점수를 확인하실 수
+                      있습니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">08</span>
+                    <p>
+                      교육영상 시청 시 다양한 팝업창이 생성되는데 창의 확인버튼을 누르지 않으면 영상이 다시 재생되지
+                      않습니다.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="edu-guide__num" aria-hidden="true">09</span>
+                    <p>
+                      강의 중간 강의내용에 대한 퀴즈 풀이가 있습니다. 총 2번의 기회가 주어지며, 모두 오답일 경우 영상이
+                      이전 시점으로 돌아가게 되오니 집중하여 수강해 주시기 바랍니다.
+                    </p>
+                  </li>
+                </ol>
+              </section>
             </div>
           </section>
         </div>

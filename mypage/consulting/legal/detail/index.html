@@ -198,10 +198,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -220,9 +230,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -471,18 +487,24 @@
       </footer>
     </div>
 
-    <!-- 얼럿(Figma 알림 모음 · 상담): 삭제 확인 → 삭제 완료 -->
+    <!-- 알림(Figma 알림 모음 · 상담, 폭 400 · 제목 '알림'): 삭제 확인 → 삭제 완료 -->
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-consult__alert"
       id="consult-delete-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="consult-delete-alert-title"
       aria-describedby="consult-delete-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="consult-delete-alert-message">해당 상담 내용을 삭제하시겠습니까?</p>
+      <h2 id="consult-delete-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="consult-delete-alert-message">해당 상담 내용을 삭제하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button
@@ -495,18 +517,24 @@
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-consult__alert"
       id="consult-deleted-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="consult-deleted-alert-title"
       aria-describedby="consult-deleted-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="consult-deleted-alert-message">상담 내용이 삭제되었습니다.</p>
+      <h2 id="consult-deleted-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="consult-deleted-alert-message">상담 내용이 삭제되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
 

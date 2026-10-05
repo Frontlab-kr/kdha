@@ -3,9 +3,9 @@
 
   // 면허센터 > 면허신고(KD-US-LIC-01-01)
 
-  // 연도 선택: aria-pressed 버튼으로 대상 기준 패널 전환
+  // 연도 선택(ds-tabs--box): aria-pressed 버튼으로 대상 기준 패널 전환
   document.querySelectorAll('[data-license-year]').forEach(function (root) {
-    var buttons = root.querySelectorAll('[aria-controls]');
+    var buttons = root.querySelectorAll('button[aria-controls]');
     buttons.forEach(function (button) {
       button.addEventListener('click', function () {
         buttons.forEach(function (item) {
@@ -14,6 +14,11 @@
           var panel = document.getElementById(item.getAttribute('aria-controls'));
           if (panel) panel.hidden = !selected;
         });
+        // 모바일 가로 스크롤 칩에서 선택한 항목이 보이도록
+        var list = button.parentElement;
+        if (list && list.scrollWidth > list.clientWidth) {
+          list.scrollTo({ left: button.offsetLeft - list.offsetLeft - 12, behavior: 'smooth' });
+        }
       });
     });
   });
@@ -65,7 +70,7 @@
           window.requestAnimationFrame(update);
         }
       },
-      { passive: true }
+      { passive: true },
     );
 
     links.forEach(function (link) {

@@ -199,10 +199,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -221,9 +231,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -283,6 +299,8 @@
             <a href="/kdha/main/" aria-label="홈">
               <span class="material-symbols-rounded" aria-hidden="true">home</span>
             </a>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span>마이페이지</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
             <span aria-current="page">마이페이지</span>
           </nav>
@@ -431,156 +449,161 @@
 
               <section class="mypage-card" aria-labelledby="mypage-training-title">
                 <h2 class="mypage-card__title" id="mypage-training-title">보수교육 현황</h2>
-                <div class="ds-board mypage-home__board" role="table" aria-labelledby="mypage-training-title">
-                  <div class="ds-board__head" role="row">
-                    <span role="columnheader">연도</span>
-                    <span role="columnheader">구분</span>
-                    <span role="columnheader">기준평점</span>
-                    <span role="columnheader">취득평점</span>
-                    <span role="columnheader">필수과목</span>
-                    <span role="columnheader">이수여부</span>
-                    <span role="columnheader">수료증</span>
-                    <span role="columnheader">이수증</span>
-                  </div>
-                  <div class="ds-board__row" role="row">
-                    <span class="mypage-home__year" role="cell">2026</span>
-                    <span class="mypage-home__type" role="cell">대상자</span>
-                    <span class="mypage-home__info" role="cell">
-                      <span class="mypage-mo-only">기준평점</span>
-                      <span>8점</span>
-                    </span>
-                    <span class="mypage-home__info" role="cell">
-                      <span class="mypage-mo-only">취득평점</span>
-                      <button
-                        class="mypage-home__score"
-                        type="button"
-                        aria-haspopup="dialog"
-                        data-dialog-open="mypage-score-dialog"
-                      >
-                        8점
-                      </button>
-                    </span>
-                    <span class="mypage-home__info" role="cell">
-                      <span class="mypage-mo-only">필수과목</span>
-                      <span>2</span>
-                    </span>
-                    <span class="mypage-home__status mypage-status mypage-status--success" role="cell">이수완료</span>
-                    <span class="mypage-home__print" role="cell">
-                      <button
-                        class="ds-button ds-button--small ds-button--outline"
-                        type="button"
-                        aria-haspopup="dialog"
-                        data-dialog-open="mypage-certificate-dialog"
-                      >
-                        <span class="mypage-pc-only">출력하기</span>
-                        <span class="mypage-mo-only">수료증 출력</span>
-                      </button>
-                    </span>
-                    <span class="mypage-home__print" role="cell">
-                      <button
-                        class="ds-button ds-button--small ds-button--outline"
-                        type="button"
-                        aria-haspopup="dialog"
-                        data-dialog-open="mypage-completion-dialog"
-                      >
-                        <span class="mypage-pc-only">출력하기</span>
-                        <span class="mypage-mo-only">이수증 출력</span>
-                      </button>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row">
-                    <span class="mypage-home__year" role="cell">2026</span>
-                    <span class="mypage-home__type" role="cell">대상자</span>
-                    <span class="mypage-home__info" role="cell">
-                      <span class="mypage-mo-only">기준평점</span>
-                      <span>8점</span>
-                    </span>
-                    <span class="mypage-home__info" role="cell">
-                      <span class="mypage-mo-only">취득평점</span>
-                      <button
-                        class="mypage-home__score"
-                        type="button"
-                        aria-haspopup="dialog"
-                        data-dialog-open="mypage-score-dialog"
-                      >
-                        2점
-                      </button>
-                    </span>
-                    <span class="mypage-home__info" role="cell">
-                      <span class="mypage-mo-only">필수과목</span>
-                      <span>0</span>
-                    </span>
-                    <span class="mypage-home__status mypage-status mypage-status--danger" role="cell">미이수</span>
-                    <span class="mypage-home__print" role="cell">
-                      <button
-                        class="ds-button ds-button--small ds-button--outline"
-                        type="button"
-                        aria-haspopup="dialog"
-                        data-dialog-open="mypage-certificate-dialog"
-                      >
-                        <span class="mypage-pc-only">출력하기</span>
-                        <span class="mypage-mo-only">수료증 출력</span>
-                      </button>
-                    </span>
-                    <span class="mypage-home__print" role="cell">
-                      <button
-                        class="ds-button ds-button--small ds-button--outline"
-                        type="button"
-                        aria-haspopup="dialog"
-                        data-dialog-open="mypage-completion-dialog"
-                      >
-                        <span class="mypage-pc-only">출력하기</span>
-                        <span class="mypage-mo-only">이수증 출력</span>
-                      </button>
-                    </span>
-                  </div>
-                  <div class="ds-board__row" role="row">
-                    <span class="mypage-home__year" role="cell">2024</span>
-                    <span class="mypage-home__type" role="cell">대상자</span>
-                    <span class="mypage-home__info" role="cell">
-                      <span class="mypage-mo-only">기준평점</span>
-                      <span>8점</span>
-                    </span>
-                    <span class="mypage-home__info" role="cell">
-                      <span class="mypage-mo-only">취득평점</span>
-                      <button
-                        class="mypage-home__score"
-                        type="button"
-                        aria-haspopup="dialog"
-                        data-dialog-open="mypage-score-dialog"
-                      >
-                        0점
-                      </button>
-                    </span>
-                    <span class="mypage-home__info" role="cell">
-                      <span class="mypage-mo-only">필수과목</span>
-                      <span>0</span>
-                    </span>
-                    <span class="mypage-home__status mypage-status mypage-status--danger" role="cell">미이수</span>
-                    <span class="mypage-home__print" role="cell">
-                      <button
-                        class="ds-button ds-button--small ds-button--outline"
-                        type="button"
-                        aria-haspopup="dialog"
-                        data-dialog-open="mypage-certificate-dialog"
-                      >
-                        <span class="mypage-pc-only">출력하기</span>
-                        <span class="mypage-mo-only">수료증 출력</span>
-                      </button>
-                    </span>
-                    <span class="mypage-home__print" role="cell">
-                      <button
-                        class="ds-button ds-button--small ds-button--outline"
-                        type="button"
-                        aria-haspopup="dialog"
-                        data-dialog-open="mypage-completion-dialog"
-                      >
-                        <span class="mypage-pc-only">출력하기</span>
-                        <span class="mypage-mo-only">이수증 출력</span>
-                      </button>
-                    </span>
-                  </div>
-                </div>
+                <table class="ds-board mypage-home__board" role="table">
+                  <caption class="sr-only">연도별 보수교육 현황</caption>
+                  <thead role="rowgroup">
+                    <tr class="ds-board__head" role="row">
+                      <th scope="col" role="columnheader">연도</th>
+                      <th scope="col" role="columnheader">구분</th>
+                      <th scope="col" role="columnheader">기준평점</th>
+                      <th scope="col" role="columnheader">취득평점</th>
+                      <th scope="col" role="columnheader">필수과목</th>
+                      <th scope="col" role="columnheader">이수여부</th>
+                      <th scope="col" role="columnheader">수료증</th>
+                      <th scope="col" role="columnheader">이수증</th>
+                    </tr>
+                  </thead>
+                  <tbody role="rowgroup">
+                    <tr class="ds-board__row" role="row">
+                      <td class="mypage-home__year" role="cell">2026</td>
+                      <td class="mypage-home__type" role="cell">대상자</td>
+                      <td class="mypage-home__info" role="cell">
+                        <span class="mypage-mo-only">기준평점</span>
+                        <span>8점</span>
+                      </td>
+                      <td class="mypage-home__info" role="cell">
+                        <span class="mypage-mo-only">취득평점</span>
+                        <button
+                          class="mypage-home__score"
+                          type="button"
+                          aria-haspopup="dialog"
+                          data-dialog-open="mypage-score-dialog"
+                        >
+                          8점
+                        </button>
+                      </td>
+                      <td class="mypage-home__info" role="cell">
+                        <span class="mypage-mo-only">필수과목</span>
+                        <span>2</span>
+                      </td>
+                      <td class="mypage-home__status mypage-status mypage-status--success" role="cell">이수완료</td>
+                      <td class="mypage-home__print" role="cell">
+                        <button
+                          class="ds-button ds-button--small ds-button--outline"
+                          type="button"
+                          aria-haspopup="dialog"
+                          data-dialog-open="mypage-certificate-dialog"
+                        >
+                          <span class="mypage-pc-only">출력하기</span>
+                          <span class="mypage-mo-only">수료증 출력</span>
+                        </button>
+                      </td>
+                      <td class="mypage-home__print" role="cell">
+                        <button
+                          class="ds-button ds-button--small ds-button--outline"
+                          type="button"
+                          aria-haspopup="dialog"
+                          data-dialog-open="mypage-completion-dialog"
+                        >
+                          <span class="mypage-pc-only">출력하기</span>
+                          <span class="mypage-mo-only">이수증 출력</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="ds-board__row" role="row">
+                      <td class="mypage-home__year" role="cell">2026</td>
+                      <td class="mypage-home__type" role="cell">대상자</td>
+                      <td class="mypage-home__info" role="cell">
+                        <span class="mypage-mo-only">기준평점</span>
+                        <span>8점</span>
+                      </td>
+                      <td class="mypage-home__info" role="cell">
+                        <span class="mypage-mo-only">취득평점</span>
+                        <button
+                          class="mypage-home__score"
+                          type="button"
+                          aria-haspopup="dialog"
+                          data-dialog-open="mypage-score-dialog"
+                        >
+                          2점
+                        </button>
+                      </td>
+                      <td class="mypage-home__info" role="cell">
+                        <span class="mypage-mo-only">필수과목</span>
+                        <span>0</span>
+                      </td>
+                      <td class="mypage-home__status mypage-status mypage-status--danger" role="cell">미이수</td>
+                      <td class="mypage-home__print" role="cell">
+                        <button
+                          class="ds-button ds-button--small ds-button--outline"
+                          type="button"
+                          aria-haspopup="dialog"
+                          data-dialog-open="mypage-certificate-dialog"
+                        >
+                          <span class="mypage-pc-only">출력하기</span>
+                          <span class="mypage-mo-only">수료증 출력</span>
+                        </button>
+                      </td>
+                      <td class="mypage-home__print" role="cell">
+                        <button
+                          class="ds-button ds-button--small ds-button--outline"
+                          type="button"
+                          aria-haspopup="dialog"
+                          data-dialog-open="mypage-completion-dialog"
+                        >
+                          <span class="mypage-pc-only">출력하기</span>
+                          <span class="mypage-mo-only">이수증 출력</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="ds-board__row" role="row">
+                      <td class="mypage-home__year" role="cell">2024</td>
+                      <td class="mypage-home__type" role="cell">대상자</td>
+                      <td class="mypage-home__info" role="cell">
+                        <span class="mypage-mo-only">기준평점</span>
+                        <span>8점</span>
+                      </td>
+                      <td class="mypage-home__info" role="cell">
+                        <span class="mypage-mo-only">취득평점</span>
+                        <button
+                          class="mypage-home__score"
+                          type="button"
+                          aria-haspopup="dialog"
+                          data-dialog-open="mypage-score-dialog"
+                        >
+                          0점
+                        </button>
+                      </td>
+                      <td class="mypage-home__info" role="cell">
+                        <span class="mypage-mo-only">필수과목</span>
+                        <span>0</span>
+                      </td>
+                      <td class="mypage-home__status mypage-status mypage-status--danger" role="cell">미이수</td>
+                      <td class="mypage-home__print" role="cell">
+                        <button
+                          class="ds-button ds-button--small ds-button--outline"
+                          type="button"
+                          aria-haspopup="dialog"
+                          data-dialog-open="mypage-certificate-dialog"
+                        >
+                          <span class="mypage-pc-only">출력하기</span>
+                          <span class="mypage-mo-only">수료증 출력</span>
+                        </button>
+                      </td>
+                      <td class="mypage-home__print" role="cell">
+                        <button
+                          class="ds-button ds-button--small ds-button--outline"
+                          type="button"
+                          aria-haspopup="dialog"
+                          data-dialog-open="mypage-completion-dialog"
+                        >
+                          <span class="mypage-pc-only">출력하기</span>
+                          <span class="mypage-mo-only">이수증 출력</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </section>
             </div>
           </div>
@@ -980,91 +1003,96 @@
       </button>
       <h2 id="mypage-score-title">취득 평점 목록</h2>
       <div class="edu-dialog__body">
-        <div class="ds-board mypage-score-board" role="table" aria-labelledby="mypage-score-title">
-          <div class="ds-board__head" role="row">
-            <span role="columnheader">교육일자</span>
-            <span role="columnheader">교육명</span>
-            <span role="columnheader">기관명</span>
-            <span role="columnheader">취득평점</span>
-            <span role="columnheader">필수과목</span>
-          </div>
-          <div class="ds-board__row" role="row">
-            <span role="cell">
-              <span class="mypage-mo-only">교육일자</span>
-              <time datetime="2026-07-14">2026-07-14</time>
-            </span>
-            <span class="mypage-score-board__title" role="cell">2025년 학술대회</span>
-            <span role="cell">
-              <span class="mypage-mo-only">기관명</span>
-              협회
-            </span>
-            <span role="cell">
-              <span class="mypage-mo-only">취득평점</span>
-              <span class="mypage-score-board__point">2</span>
-            </span>
-            <span role="cell">
-              <span class="mypage-mo-only">필수과목</span>
-              2
-            </span>
-          </div>
-          <div class="ds-board__row" role="row">
-            <span role="cell">
-              <span class="mypage-mo-only">교육일자</span>
-              <time datetime="2026-07-14">2026-07-14</time>
-            </span>
-            <span class="mypage-score-board__title" role="cell">치과 경영의 첫걸음</span>
-            <span role="cell">
-              <span class="mypage-mo-only">기관명</span>
-              협회
-            </span>
-            <span role="cell">
-              <span class="mypage-mo-only">취득평점</span>
-              <span class="mypage-score-board__point">2</span>
-            </span>
-            <span role="cell">
-              <span class="mypage-mo-only">필수과목</span>
-              0
-            </span>
-          </div>
-          <div class="ds-board__row" role="row">
-            <span role="cell">
-              <span class="mypage-mo-only">교육일자</span>
-              <time datetime="2026-07-14">2026-07-14</time>
-            </span>
-            <span class="mypage-score-board__title" role="cell">장애인 치과진료 및 구강보건 교육</span>
-            <span role="cell">
-              <span class="mypage-mo-only">기관명</span>
-              협회
-            </span>
-            <span role="cell">
-              <span class="mypage-mo-only">취득평점</span>
-              <span class="mypage-score-board__point">2</span>
-            </span>
-            <span role="cell">
-              <span class="mypage-mo-only">필수과목</span>
-              2
-            </span>
-          </div>
-          <div class="ds-board__row" role="row">
-            <span role="cell">
-              <span class="mypage-mo-only">교육일자</span>
-              <time datetime="2026-07-14">2026-07-14</time>
-            </span>
-            <span class="mypage-score-board__title" role="cell">치과건강보험 청구 가이드</span>
-            <span role="cell">
-              <span class="mypage-mo-only">기관명</span>
-              협회
-            </span>
-            <span role="cell">
-              <span class="mypage-mo-only">취득평점</span>
-              <span class="mypage-score-board__point">2</span>
-            </span>
-            <span role="cell">
-              <span class="mypage-mo-only">필수과목</span>
-              0
-            </span>
-          </div>
-        </div>
+        <table class="ds-board mypage-score-board" role="table">
+          <caption class="sr-only">교육별 취득 평점 목록</caption>
+          <thead role="rowgroup">
+            <tr class="ds-board__head" role="row">
+              <th scope="col" role="columnheader">교육일자</th>
+              <th scope="col" role="columnheader">교육명</th>
+              <th scope="col" role="columnheader">기관명</th>
+              <th scope="col" role="columnheader">취득평점</th>
+              <th scope="col" role="columnheader">필수과목</th>
+            </tr>
+          </thead>
+          <tbody role="rowgroup">
+            <tr class="ds-board__row" role="row">
+              <td class="mypage-score-board__date" role="cell">
+                <span class="mypage-mo-only">교육일자</span>
+                <time datetime="2026-07-14">2026-07-14</time>
+              </td>
+              <td class="mypage-score-board__title" role="cell">2025년 학술대회</td>
+              <td class="mypage-score-board__org" role="cell">
+                <span class="mypage-mo-only">기관명</span>
+                <span>협회</span>
+              </td>
+              <td class="mypage-score-board__score" role="cell">
+                <span class="mypage-mo-only">취득평점</span>
+                <span class="mypage-score-board__point">2</span>
+              </td>
+              <td class="mypage-score-board__required" role="cell">
+                <span class="mypage-mo-only">필수과목</span>
+                <span>2</span>
+              </td>
+            </tr>
+            <tr class="ds-board__row" role="row">
+              <td class="mypage-score-board__date" role="cell">
+                <span class="mypage-mo-only">교육일자</span>
+                <time datetime="2026-07-14">2026-07-14</time>
+              </td>
+              <td class="mypage-score-board__title" role="cell">치과 경영의 첫걸음</td>
+              <td class="mypage-score-board__org" role="cell">
+                <span class="mypage-mo-only">기관명</span>
+                <span>협회</span>
+              </td>
+              <td class="mypage-score-board__score" role="cell">
+                <span class="mypage-mo-only">취득평점</span>
+                <span class="mypage-score-board__point">2</span>
+              </td>
+              <td class="mypage-score-board__required" role="cell">
+                <span class="mypage-mo-only">필수과목</span>
+                <span>0</span>
+              </td>
+            </tr>
+            <tr class="ds-board__row" role="row">
+              <td class="mypage-score-board__date" role="cell">
+                <span class="mypage-mo-only">교육일자</span>
+                <time datetime="2026-07-14">2026-07-14</time>
+              </td>
+              <td class="mypage-score-board__title" role="cell">장애인 치과진료 및 구강보건 교육</td>
+              <td class="mypage-score-board__org" role="cell">
+                <span class="mypage-mo-only">기관명</span>
+                <span>협회</span>
+              </td>
+              <td class="mypage-score-board__score" role="cell">
+                <span class="mypage-mo-only">취득평점</span>
+                <span class="mypage-score-board__point">2</span>
+              </td>
+              <td class="mypage-score-board__required" role="cell">
+                <span class="mypage-mo-only">필수과목</span>
+                <span>2</span>
+              </td>
+            </tr>
+            <tr class="ds-board__row" role="row">
+              <td class="mypage-score-board__date" role="cell">
+                <span class="mypage-mo-only">교육일자</span>
+                <time datetime="2026-07-14">2026-07-14</time>
+              </td>
+              <td class="mypage-score-board__title" role="cell">치과건강보험 청구 가이드</td>
+              <td class="mypage-score-board__org" role="cell">
+                <span class="mypage-mo-only">기관명</span>
+                <span>협회</span>
+              </td>
+              <td class="mypage-score-board__score" role="cell">
+                <span class="mypage-mo-only">취득평점</span>
+                <span class="mypage-score-board__point">2</span>
+              </td>
+              <td class="mypage-score-board__required" role="cell">
+                <span class="mypage-mo-only">필수과목</span>
+                <span>0</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </dialog>
 

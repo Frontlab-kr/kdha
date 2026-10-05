@@ -198,10 +198,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -220,9 +230,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -602,44 +618,8 @@
         <span aria-hidden="true">수 료 증</span>
         <span class="sr-only">수료증</span>
       </h2>
-      <dl class="mypage-cert__info">
-        <div class="mypage-cert__row">
-          <dt>성명</dt>
-          <dd>test</dd>
-        </div>
-        <div class="mypage-cert__row">
-          <dt>생년월일</dt>
-          <dd>1994-08-18</dd>
-        </div>
-        <div class="mypage-cert__row mypage-cert__row--wide">
-          <dt>주소</dt>
-          <dd>경기도 김포시 김포대로 지하852 (사우동) 3층</dd>
-        </div>
-        <div class="mypage-cert__row">
-          <dt>일시</dt>
-          <dd>2026-08-08</dd>
-        </div>
-        <div class="mypage-cert__row">
-          <dt>장소</dt>
-          <dd>충청북도회</dd>
-        </div>
-        <div class="mypage-cert__row mypage-cert__row--wide">
-          <dt>교육명</dt>
-          <dd>의료윤리와 법정의무</dd>
-        </div>
-        <div class="mypage-cert__row mypage-cert__row--wide">
-          <dt>평점</dt>
-          <dd>2</dd>
-        </div>
-      </dl>
-      <p class="mypage-cert__statement">귀하는 상기 교육을 수료하였으므로 이 수료증을 수여합니다.</p>
-      <p class="mypage-cert__date">2026년 9월 16일</p>
-      <p class="mypage-cert__issuer">
-        사단법인
-        <strong>대한치과위생사협회장</strong>
-        <span class="mypage-cert__seal">직인</span>
-      </p>
-      <p class="mypage-cert__number">발급번호 : KDHA-E00705511</p>
+      <!-- 수료증 영역: 개발 시 기존 수료증 코드를 넣습니다. -->
+      <div class="mypage-cert__slot" data-certificate></div>
     </dialog>
 
     <details class="account-layer-menu">

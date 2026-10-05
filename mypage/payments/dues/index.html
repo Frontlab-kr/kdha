@@ -198,10 +198,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -220,9 +230,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -715,64 +731,88 @@
         </div>
       </footer>
     </div>
-    <!-- 알림 모음(KD-US-MYP_PC_알림 모음) · 결제·환불 -->
+    <!-- 알림(Figma KD-US-MYP_PC_알림 모음 · 결제·환불): 마이페이지 공통 알림 dialog.edu-dialog.mypage-dialog--alert -->
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-pay-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-pay-alert-title"
       aria-describedby="dues-pay-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-pay-alert-message">회비를 납부하시겠습니까?</p>
+      <h2 id="dues-pay-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-pay-alert-message">회비를 납부하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-period-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-period-alert-title"
       aria-describedby="dues-period-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-period-alert-message">회비 납부일로부터 1개월 이내만 신청 가능합니다.</p>
+      <h2 id="dues-period-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-period-alert-message">회비 납부일로부터 1개월 이내만 신청 가능합니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-training-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-training-alert-title"
       aria-describedby="dues-training-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-training-alert-message">보수교육 결제 이력이 존재하여 환불 불가합니다.</p>
+      <h2 id="dues-training-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-training-alert-message">보수교육 결제 이력이 존재하여 환불 불가합니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-refund-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-refund-alert-title"
       aria-describedby="dues-refund-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-refund-alert-message">환불 신청하시겠습니까?</p>
+      <h2 id="dues-refund-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-refund-alert-message">환불 신청하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button
@@ -785,16 +825,22 @@
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-refund-item-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-refund-item-alert-title"
       aria-describedby="dues-refund-item-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-refund-item-alert-message">해당 내역을 환불 신청하시겠습니까?</p>
+      <h2 id="dues-refund-item-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-refund-item-alert-message">해당 내역을 환불 신청하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button
@@ -807,46 +853,64 @@
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-refund-done-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-refund-done-alert-title"
       aria-describedby="dues-refund-done-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-refund-done-alert-message">환불신청이 완료되었습니다.</p>
+      <h2 id="dues-refund-done-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-refund-done-alert-message">환불신청이 완료되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-required-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-required-alert-title"
       aria-describedby="dues-required-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-required-alert-message">필수 항목을 모두 입력해 주세요.</p>
+      <h2 id="dues-required-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-required-alert-message">필수 항목을 모두 입력해 주세요.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-autopay-apply-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-autopay-apply-alert-title"
       aria-describedby="dues-autopay-apply-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-autopay-apply-alert-message">회비 자동납부를 신청하시겠습니까?</p>
+      <h2 id="dues-autopay-apply-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-autopay-apply-alert-message">회비 자동납부를 신청하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button
@@ -859,31 +923,43 @@
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-autopay-applied-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-autopay-applied-alert-title"
       aria-describedby="dues-autopay-applied-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-autopay-applied-alert-message">회비 자동납부가 신청되었습니다.</p>
+      <h2 id="dues-autopay-applied-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-autopay-applied-alert-message">회비 자동납부가 신청되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-autopay-cancel-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-autopay-cancel-alert-title"
       aria-describedby="dues-autopay-cancel-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-autopay-cancel-alert-message">회비 자동납부를 해지하시겠습니까?</p>
+      <h2 id="dues-autopay-cancel-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-autopay-cancel-alert-message">회비 자동납부를 해지하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
         <button
@@ -896,18 +972,24 @@
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="edu-dialog mypage-dialog mypage-dialog--alert"
       id="dues-autopay-canceled-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="dues-autopay-canceled-alert-title"
       aria-describedby="dues-autopay-canceled-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
         close
       </button>
-      <p class="ds-alert__message" id="dues-autopay-canceled-alert-message">회비 자동납부가 해지되었습니다.</p>
+      <h2 id="dues-autopay-canceled-alert-title">알림</h2>
+      <p class="edu-dialog__message" id="dues-autopay-canceled-alert-message">회비 자동납부가 해지되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <details class="account-layer-menu">

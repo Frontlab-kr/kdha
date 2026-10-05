@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
-
-    <title>대한치과위생사협회</title>
+    <title>회원증카드 안내 | 대한치과위생사협회</title>
   </head>
-  <body class="">
+  <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <div class="site user-page">
       <header class="site-header">
@@ -200,10 +198,20 @@
                 </h2>
                 <ul id="site-menu-group-2">
                   <li><a href="/kdha/education/about/">교육원 소개</a></li>
-                  <li><a href="/kdha/education/guide/">교육안내</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
-                  <li><a href="/kdha/education/offline/">현장교육</a></li>
-                  <li><a href="/kdha/education/online/">사이버교육</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -222,9 +230,15 @@
                   <li>
                     <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
                       면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
                     </a>
                   </li>
-                  <li><a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">면허증 재교부/조회</a></li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부/조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                    </a>
+                  </li>
                 </ul>
               </section>
               <section class="site-menu__group">
@@ -280,13 +294,12 @@
 
       <main id="main-content" class="user-page__main">
         <header class="page-hero">
-          <!-- KD-US-MYP-08-01 -->
           <nav aria-label="현재 위치">
             <a href="/kdha/main/" aria-label="홈">
               <span class="material-symbols-rounded" aria-hidden="true">home</span>
             </a>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            <a class="user-page-breadcrumb__link" href="/kdha/mypage/">마이페이지</a>
+            <span>마이페이지</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
             <span aria-current="page">회원증카드 안내</span>
           </nav>
@@ -294,41 +307,327 @@
           <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
         </header>
         <div id="main-body" class="main-body">
-          <div class="user-page__inner">
-            <section class="user-content user-dashboard" aria-label="회원증카드 안내 임시 현황">
-              <div class="user-dashboard__summary">
-                <span
-                  class="material-symbols-outlined material-icon"
-                  aria-hidden="true"
-                  style="font-size: 44px; width: 44px; height: 44px"
-                >
-                  account_circle
-                </span>
-                <div>
-                  <strong>정회원 홍길동님</strong>
-                  <p>회원님의 회원증카드 안내 정보를 확인할 수 있습니다.</p>
+          <!-- KD-US-MYP-08-01(IA) · Figma KD-US-MYP-07-01_PC_회원증카드 안내 -->
+          <div class="mypage mypage-membership">
+            <!-- 회원증카드 소개: 혜택 목록 + 카드별 발급신청 -->
+            <section class="mypage-membership__intro" aria-labelledby="member-card-intro-title">
+              <div class="mypage-membership__intro-body">
+                <div class="mypage-membership__intro-head">
+                  <p class="mypage-membership__eyebrow">KDHA MEMBERSHIP CARD</p>
+                  <h2 class="mypage-membership__intro-title" id="member-card-intro-title">
+                    대한치과위생사협회
+                    <br />
+                    회원증카드 안내
+                  </h2>
                 </div>
+                <ul class="mypage-membership__perks">
+                  <li>
+                    <span class="mypage-membership__perk-icon">
+                      <img src="/kdha/assets/images/mypage/member-card-attendance.svg" width="32" height="32" alt="" />
+                    </span>
+                    종합학술대회/현장보수교육 출결카드 기능
+                  </li>
+                  <li>
+                    <span class="mypage-membership__perk-icon">
+                      <img src="/kdha/assets/images/mypage/member-card-trophy.svg" width="32" height="32" alt="" />
+                    </span>
+                    종합학술대회 캐쉬백
+                  </li>
+                  <li>
+                    <span class="mypage-membership__perk-icon">
+                      <img src="/kdha/assets/images/mypage/member-card-annual-fee.svg" width="32" height="32" alt="" />
+                    </span>
+                    치과위생사협회 연회비 캐쉬백
+                  </li>
+                  <li>
+                    <span class="mypage-membership__perk-icon">
+                      <img src="/kdha/assets/images/mypage/member-card-cyber-education.svg" width="32" height="32" alt="" />
+                    </span>
+                    사이버보수교육비 캐쉬백
+                  </li>
+                </ul>
               </div>
-              <div class="user-dashboard__cards">
-                <article>
-                  <span>신청</span>
-                  <strong>1</strong>
-                  <small>건</small>
-                </article>
-                <article>
-                  <span>처리 중</span>
-                  <strong>2</strong>
-                  <small>건</small>
-                </article>
-                <article>
-                  <span>완료</span>
-                  <strong>3</strong>
-                  <small>건</small>
-                </article>
+
+              <!-- 발급신청: 신한카드 신청 페이지로 이동(새 창) -->
+              <ul class="mypage-membership__cards">
+                <li class="mypage-membership__card-item">
+                  <div class="mypage-membership__card mypage-membership__card--lady">
+                    <span aria-hidden="true">KDHA</span>
+                    <strong>Lady 회원증카드</strong>
+                  </div>
+                  <a
+                    class="ds-button ds-button--large ds-button--primary"
+                    href="https://www.shinhancard.com/pconts/html/card/apply/credit/1195600_2207.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Lady 발급신청
+                    <span class="sr-only">(새 창)</span>
+                  </a>
+                </li>
+                <li class="mypage-membership__card-item">
+                  <div class="mypage-membership__card mypage-membership__card--bigplus">
+                    <span aria-hidden="true">KDHA</span>
+                    <strong>BigPlus 회원증카드</strong>
+                  </div>
+                  <a
+                    class="ds-button ds-button--large ds-button--primary"
+                    href="https://www.shinhancard.com/pconts/html/card/apply/credit/1197429_2207.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    BigPlus 발급신청
+                    <span class="sr-only">(새 창)</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <!-- 회원증카드 도입배경 -->
+            <section class="mypage-membership__section" aria-labelledby="member-card-background-title">
+              <h2 class="mypage-membership__title" id="member-card-background-title">회원증카드 도입배경</h2>
+              <div class="mypage-card mypage-membership__background">
+                <p>
+                  우리 협회는 기존 회원증카드의 활용도를 높이기 위하여 다양한 혜택을 추가시킨 신용카드 겸용의 제휴카드로
+                  교체 발급하기로 하고 '회원증카드화사업'을 추진키로 하였습니다.
+                </p>
+                <p>
+                  회원증 카드화가 실현되면 제휴카드만의 차별화된 부가 서비스 제공과 함께 정보화 시대에 걸맞은 체계적이고
+                  효율적인 회원 관리가 가능해져 신속한 정보교류를 비롯하여, 카드사용에 따른 일정 수익금을 회원의 부담
+                  없이 협회 재원으로 확보할 수 있게 되는 등 여러 가지 이점이 있습니다.
+                </p>
+                <p>
+                  회원 여러분과 협회 모두에게 유익한 성과를 가져다 줄 '회원증카드화사업'에 치과위생사 여러분의 적극적인
+                  협조를 부탁 드립니다.
+                </p>
+              </div>
+            </section>
+
+            <!-- 회원증 카드의 장점 -->
+            <section class="mypage-membership__section" aria-labelledby="member-card-merit-title">
+              <h2 class="mypage-membership__title" id="member-card-merit-title">회원증 카드의 장점</h2>
+              <ol class="mypage-membership__merits">
+                <li>
+                  <span class="mypage-membership__merit-num" aria-hidden="true">01</span>
+                  <p>대한치과위생사협회 회원정보 데이터베이스가 신속하고 정확하게 관리됩니다.</p>
+                </li>
+                <li>
+                  <span class="mypage-membership__merit-num" aria-hidden="true">02</span>
+                  <p>회원들에게 신용카드 사용에 따른 부가 혜택이 주어집니다.</p>
+                </li>
+                <li>
+                  <span class="mypage-membership__merit-num" aria-hidden="true">03</span>
+                  <p>회원 복지사업이 더욱 강화됩니다.</p>
+                </li>
+                <li>
+                  <span class="mypage-membership__merit-num" aria-hidden="true">04</span>
+                  <p>
+                    제휴카드 사업을 통해 중앙회 및 시도회에 지원될 수익금은 회원복지와 협회 발전을 위해 사용되게 합니다.
+                  </p>
+                </li>
+                <li>
+                  <span class="mypage-membership__merit-num" aria-hidden="true">05</span>
+                  <p>치과위생사들의 정체성이 강화되고 사회적 이미지가 개선됩니다.</p>
+                </li>
+              </ol>
+            </section>
+
+            <!-- 회원증 신한카드 혜택 -->
+            <section class="mypage-membership__section" aria-labelledby="member-card-benefit-title">
+              <h2 class="mypage-membership__title" id="member-card-benefit-title">회원증 신한카드 혜택</h2>
+              <ol class="mypage-membership__benefits">
+                <li>
+                  <span class="mypage-membership__benefit-num" aria-hidden="true">01</span>
+                  <div class="mypage-membership__benefit-body">
+                    <h3>보수교육 출/결 System(RF ID 카드)</h3>
+                    <p>
+                      신용카드 기능 외 보수교육 이수 시 출/결 체크가 가능한 RFID 기능이 탑재되어 회원정보, 보수교육 이수
+                      사항 등을 확인할 수 있으며, 회원증 겸용으로 사용
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span class="mypage-membership__benefit-num" aria-hidden="true">02</span>
+                  <div class="mypage-membership__benefit-body">
+                    <h3>무이자할부</h3>
+                    <p>연회비, 창립기념행사 등록비 납부 시 무이자 3개월 할부제공</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="mypage-membership__benefit-num" aria-hidden="true">03</span>
+                  <div class="mypage-membership__benefit-body">
+                    <h3>후불교통기능 탑재</h3>
+                  </div>
+                </li>
+                <li>
+                  <span class="mypage-membership__benefit-num" aria-hidden="true">04</span>
+                  <div class="mypage-membership__benefit-body">
+                    <h3>롯데, 현대, 신세계 백화점/할인점 무이자 할부(2~3개월)</h3>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <!-- 회원증 카드의 종류 -->
+            <section class="mypage-membership__section" aria-labelledby="member-card-type-title">
+              <h2 class="mypage-membership__title" id="member-card-type-title">회원증 카드의 종류</h2>
+              <table class="mypage-membership__types" role="table">
+                <caption class="sr-only">회원증 카드의 종류와 발급 대상</caption>
+                <tbody role="rowgroup">
+                  <tr role="row">
+                    <th scope="row" role="rowheader">회원 신용카드</th>
+                    <td role="cell">
+                      <strong>협회 회원일 경우</strong>
+                      <p>
+                        ※ 신용카드 발급 불가자는 직불카드 기능이 있는 회원증 체크카드로 발급 받으실 수 있습니다.
+                        <br />
+                        단, 보수교육 출결 기능은 활용이 불가능합니다.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <!-- 회원증 발급 절차 -->
+            <section class="mypage-membership__section" aria-labelledby="member-card-step-title">
+              <div class="mypage-membership__head mypage-membership__head--line">
+                <h2 class="mypage-membership__title" id="member-card-step-title">회원증 발급 절차</h2>
+              </div>
+              <ol class="mypage-membership__steps">
+                <li>
+                  <span class="mypage-membership__step-badge" aria-hidden="true">
+                    STEP
+                    <span>01</span>
+                  </span>
+                  <h3>홈페이지에서 신청</h3>
+                  <p>
+                    대한치과위생사협회 (WWW.KDHA.OR.KR)
+                    <br />
+                    일반적으로 신청 후 1주일 이내 수령 가능
+                  </p>
+                </li>
+                <li>
+                  <span class="material-symbols-rounded mypage-membership__step-arrow" aria-hidden="true">
+                    arrow_forward_ios
+                  </span>
+                  <span class="mypage-membership__step-badge" aria-hidden="true">
+                    STEP
+                    <span>02</span>
+                  </span>
+                  <h3>본인확인전화 실시</h3>
+                  <p>
+                    신한카드사 (1544-7000)
+                    <br />
+                    본인확인 전화를 받아야 카드 발급 가능
+                  </p>
+                </li>
+                <li>
+                  <span class="material-symbols-rounded mypage-membership__step-arrow" aria-hidden="true">
+                    arrow_forward_ios
+                  </span>
+                  <span class="mypage-membership__step-badge" aria-hidden="true">
+                    STEP
+                    <span>03</span>
+                  </span>
+                  <h3>회원카드 수령</h3>
+                  <p>신청하신 주소로 회원증카드가 배송됩니다.</p>
+                </li>
+              </ol>
+            </section>
+
+            <!-- 회원증관련 Q&A: details/summary 아코디언(첫 항목 펼침) -->
+            <section class="mypage-membership__section" aria-labelledby="member-card-qna-title">
+              <h2 class="mypage-membership__title" id="member-card-qna-title">회원증관련 Q&amp;A</h2>
+              <div class="mypage-membership__qna">
+                <details class="mypage-membership__qna-item" open>
+                  <summary>
+                    <span class="mypage-membership__qna-mark" aria-hidden="true">Q</span>
+                    <span class="mypage-membership__qna-question">회원증카드 신청은 어떻게 하나요?</span>
+                    <span class="material-symbols-rounded mypage-membership__qna-icon" aria-hidden="true">
+                      keyboard_arrow_down
+                    </span>
+                  </summary>
+                  <div class="mypage-membership__qna-answer">
+                    <p>대한치과위생사협회 홈페이지에서 신청(WWW.KDHA.OR.KR)</p>
+                    <p>- 일반적으로 신청 후 1주일 이내 수령 가능</p>
+                    <p>- 신청 본인확인 전화를 받아야 카드 발급 가능 (1544-7000)</p>
+                  </div>
+                </details>
+                <details class="mypage-membership__qna-item">
+                  <summary>
+                    <span class="mypage-membership__qna-mark" aria-hidden="true">Q</span>
+                    <span class="mypage-membership__qna-question">연회비는 얼마인가요?</span>
+                    <span class="material-symbols-rounded mypage-membership__qna-icon" aria-hidden="true">
+                      keyboard_arrow_down
+                    </span>
+                  </summary>
+                  <div class="mypage-membership__qna-answer">
+                    <p>회원증 카드 연회비는 연7천원입니다.</p>
+                    <p>
+                      단, 신한카드 신규고객의 경우 발급 월 이후 3개월 내 7만원 이상 사용 시 7천원이 캐시백되며, 카드
+                      발급 2년차 부터는 연1회 이상만 사용 할 경우 연회비가 면제되어 부담 없이 사용 할 수 있습니다.
+                    </p>
+                  </div>
+                </details>
+                <details class="mypage-membership__qna-item">
+                  <summary>
+                    <span class="mypage-membership__qna-mark" aria-hidden="true">Q</span>
+                    <span class="mypage-membership__qna-question">
+                      회원증카드 분실/훼손으로 인한 재발급은 어떻게 하나요?
+                    </span>
+                    <span class="material-symbols-rounded mypage-membership__qna-icon" aria-hidden="true">
+                      keyboard_arrow_down
+                    </span>
+                  </summary>
+                  <div class="mypage-membership__qna-answer">
+                    <p>신한카드 대표번호를 통한 유선 재발급 신청(1544-7000)</p>
+                  </div>
+                </details>
+                <details class="mypage-membership__qna-item">
+                  <summary>
+                    <span class="mypage-membership__qna-mark" aria-hidden="true">Q</span>
+                    <span class="mypage-membership__qna-question">체크카드는 이용한도가 있나요?</span>
+                    <span class="material-symbols-rounded mypage-membership__qna-icon" aria-hidden="true">
+                      keyboard_arrow_down
+                    </span>
+                  </summary>
+                  <div class="mypage-membership__qna-answer">
+                    <p>은행계좌 잔고범위에서 사용가능하며 1일 500만원, 월 2,000만원 내에서 사용 가능합니다.</p>
+                  </div>
+                </details>
+                <details class="mypage-membership__qna-item">
+                  <summary>
+                    <span class="mypage-membership__qna-mark" aria-hidden="true">Q</span>
+                    <span class="mypage-membership__qna-question">협회비 카드자동이체 신청은 어떻게 하나요?</span>
+                    <span class="material-symbols-rounded mypage-membership__qna-icon" aria-hidden="true">
+                      keyboard_arrow_down
+                    </span>
+                  </summary>
+                  <div class="mypage-membership__qna-answer">
+                    <p>회원증카드 발급받은 후 협회 (02-2236-0914)로 자동 납부신청</p>
+                    <p>- 신청 시 확인사항 : 카드번호/성명/면허번호/할부개월수/휴대폰번호</p>
+                    <p>
+                      - 연중 신청가능하나, 당해 연도 년 회비부터 자동결제를 원하는 경우 1월 15일 이전까지 신청해야
+                      합니다.
+                    </p>
+                  </div>
+                </details>
               </div>
             </section>
           </div>
         </div>
+        <aside class="page-banner">
+          <div>
+            <h2>치위협보 기사제보 · 광고문의</h2>
+            <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+          </div>
+          <a href="mailto:press@kdha.or.kr">
+            02-6213-2735
+            <span>·</span>
+            press@kdha.or.kr
+          </a>
+        </aside>
       </main>
       <footer class="site-footer">
         <div class="site-footer__inner layout-container">
