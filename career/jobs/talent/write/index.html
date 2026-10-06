@@ -309,518 +309,648 @@
         <div id="main-body" class="main-body">
           <!-- KD-US-FIN-03-01 -->
           <form class="career-jobs career-jobs--form" novalidate data-jobs-form data-jobs-invalid="jobs-required-alert">
-            <section class="jobs-card" aria-labelledby="talent-basic">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="talent-basic">
+              <div class="jobs-form-head">
                 <h2 id="talent-basic">기본정보</h2>
+                <p class="jobs-form-head__note">
+                  <span class="jobs-required">*</span>
+                  표시는 필수입력 항목입니다.
+                </p>
               </div>
-              <div class="jobs-field form-field form-field--large">
-                <label for="talent-title">
-                  이력서 제목
-                  <span class="jobs-required" aria-hidden="true">*</span>
-                </label>
-                <input
-                  id="talent-title"
-                  name="talent-title"
-                  type="text"
-                  placeholder="이력서 제목을 작성하세요. (최소 5자 이상)"
-                  required
-                  minlength="5"
-                />
-              </div>
-              <div class="jobs-photo-row">
-                <label class="jobs-photo jobs-photo--portrait">
-                  사진 등록
-                  <input class="sr-only" type="file" name="talentPhoto" accept="image/*" />
-                </label>
-                <div class="jobs-member">
-                  <div class="jobs-info__row">
-                    <dl class="jobs-info__item">
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="talent-title">
+                    이력서 제목
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <input
+                      id="talent-title"
+                      name="talent-title"
+                      type="text"
+                      placeholder="이력서 제목을 작성하세요. (최소 5자 이상)"
+                      minlength="5"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="talent-photo-label">사진</p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="talent-photo-label">
+                    <label class="jobs-photo jobs-photo--portrait">
+                      <span class="material-symbols-rounded" aria-hidden="true">add</span>
+                      사진 등록
+                      <input class="sr-only" type="file" name="talentPhoto" accept="image/*" />
+                    </label>
+                  </div>
+                </div>
+                <div class="jobs-form-rows jobs-pc-only">
+                  <div class="jobs-form-cols">
+                    <div class="jobs-form-row">
+                      <label class="jobs-form-row__label" for="talent-name">이름/나이</label>
+                      <div class="jobs-form-row__slot form-field form-field--large">
+                        <input id="talent-name" type="text" value="홍길동 · 24세 (2003년생)" readonly />
+                      </div>
+                    </div>
+                    <div class="jobs-form-row">
+                      <label class="jobs-form-row__label" for="talent-license-no">면허번호</label>
+                      <div class="jobs-form-row__slot form-field form-field--large">
+                        <input id="talent-license-no" type="text" value="00000" readonly />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobs-form-cols">
+                    <div class="jobs-form-row">
+                      <label class="jobs-form-row__label" for="talent-phone">휴대폰번호</label>
+                      <div class="jobs-form-row__slot form-field form-field--large">
+                        <input id="talent-phone" type="text" value="010-1234-5678" readonly />
+                      </div>
+                    </div>
+                    <div class="jobs-form-row">
+                      <label class="jobs-form-row__label" for="talent-email">이메일</label>
+                      <div class="jobs-form-row__slot form-field form-field--large">
+                        <input id="talent-email" type="text" value="system@kdha.or.kr" readonly />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="talent-address">주소</label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <input
+                        id="talent-address"
+                        type="text"
+                        value="경기도 김포시 김포대로 지하852 (사우동) 3층"
+                        readonly
+                        aria-describedby="talent-member-hint"
+                      />
+                      <p class="jobs-hint" id="talent-member-hint">※ 회원정보는 마이페이지에서 수정할 수 있습니다.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-row jobs-mo-only">
+                  <p class="jobs-form-row__label">회원정보</p>
+                  <div class="jobs-form-row__slot">
+                    <dl class="jobs-member-view">
                       <dt>이름/나이</dt>
                       <dd>홍길동 · 24세 (2003년생)</dd>
-                    </dl>
-                    <dl class="jobs-info__item">
                       <dt>면허번호</dt>
                       <dd>00000</dd>
-                    </dl>
-                  </div>
-                  <div class="jobs-info__row">
-                    <dl class="jobs-info__item">
                       <dt>휴대폰번호</dt>
                       <dd>010-1234-5678</dd>
-                    </dl>
-                    <dl class="jobs-info__item">
                       <dt>이메일</dt>
                       <dd>system@kdha.or.kr</dd>
-                    </dl>
-                  </div>
-                  <div class="jobs-info__row">
-                    <dl class="jobs-info__item">
                       <dt>주소</dt>
                       <dd>경기도 김포시 김포대로 지하852 (사우동) 3층</dd>
                     </dl>
+                    <p class="jobs-hint">※ 회원정보는 마이페이지에서 수정할 수 있습니다.</p>
                   </div>
-                  <p>※ 회원정보는 마이페이지에서 수정할 수 있습니다.</p>
                 </div>
               </div>
             </section>
-            <section class="jobs-card" aria-labelledby="talent-condition">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="talent-condition">
+              <div class="jobs-form-head">
                 <h2 id="talent-condition">희망근무조건</h2>
               </div>
-              <fieldset class="jobs-field">
-                <legend>
-                  업무
-                  <span class="jobs-required" aria-hidden="true">*</span>
-                </legend>
-                <div class="jobs-checks">
-                  <label class="form-check">
-                    <input type="checkbox" name="task" value="진료실" />
-                    <span>진료실</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="task" value="진료전반" checked />
-                    <span>진료전반</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="task" value="데스크" />
-                    <span>데스크</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="task" value="상담/코디" checked />
-                    <span>상담/코디</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="task" value="교정" />
-                    <span>교정</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="task" value="치과기공" />
-                    <span>치과기공</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="task" value="보철/보존" />
-                    <span>보철/보존</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="task" value="경영지원" />
-                    <span>경영지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="task" value="기타" />
-                    <span>기타</span>
-                  </label>
-                </div>
-              </fieldset>
-              <fieldset class="jobs-field">
-                <legend>
-                  근무형태
-                  <span class="jobs-required" aria-hidden="true">*</span>
-                </legend>
-                <div class="jobs-checks">
-                  <label class="form-check">
-                    <input type="checkbox" name="workType" value="정규직" />
-                    <span>정규직</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="workType" value="비정규직" checked />
-                    <span>비정규직</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="workType" value="계약직" />
-                    <span>계약직</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="workType" value="아르바이트" checked />
-                    <span>아르바이트</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="workType" value="프리랜서" checked />
-                    <span>프리랜서</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="workType" value="협의가능" />
-                    <span>협의가능</span>
-                  </label>
-                </div>
-              </fieldset>
-              <div class="jobs-grid">
-                <div class="jobs-field form-field form-field--large">
-                  <label for="talent-pay">
-                    희망급여
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="talent-task-label">
+                    업무
                     <span class="jobs-required" aria-hidden="true">*</span>
-                  </label>
-                  <select id="talent-pay" name="talent-pay" data-custom-select data-select-size="l" required>
-                    <option value="">선택</option>
-                    <option value="회사 내규에 따름">회사 내규에 따름</option>
-                    <option value="면접 후 결정">면접 후 결정</option>
-                    <option value="월급">월급</option>
-                    <option value="연봉">연봉</option>
-                    <option value="시급">시급</option>
-                  </select>
-                </div>
-                <div class="jobs-field form-field form-field--large">
-                  <label for="talent-sido">
-                    근무지역
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </label>
-                  <div class="jobs-inline">
-                    <select
-                      id="talent-sido"
-                      name="talent-sido"
-                      aria-label="시/도"
-                      data-custom-select
-                      data-select-size="l"
-                      required
-                    >
-                      <option value="">시/도</option>
-                      <option value="서울">서울</option>
-                      <option value="경기">경기</option>
-                      <option value="인천">인천</option>
-                      <option value="부산">부산</option>
-                      <option value="대구">대구</option>
-                      <option value="광주">광주</option>
-                      <option value="대전">대전</option>
-                      <option value="울산">울산</option>
-                      <option value="세종">세종</option>
-                      <option value="강원">강원</option>
-                      <option value="충북">충북</option>
-                      <option value="충남">충남</option>
-                      <option value="전북">전북</option>
-                      <option value="전남">전남</option>
-                      <option value="경북">경북</option>
-                      <option value="경남">경남</option>
-                      <option value="제주">제주</option>
-                    </select>
-                    <select aria-label="시/군/구" data-custom-select data-select-size="l" required>
-                      <option value="">시/군/구</option>
-                      <option value="강남구">강남구</option>
-                      <option value="강동구">강동구</option>
-                      <option value="노원구">노원구</option>
-                      <option value="송파구">송파구</option>
-                    </select>
+                  </p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="talent-task-label">
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="진료실" />
+                        <span>진료실</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="진료전반" checked />
+                        <span>진료전반</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="데스크" />
+                        <span>데스크</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="상담/코디" checked />
+                        <span>상담/코디</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="교정" />
+                        <span>교정</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="치과기공" />
+                        <span>치과기공</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="보철/보존" />
+                        <span>보철/보존</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="경영지원" />
+                        <span>경영지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="기타" />
+                        <span>기타</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
-                <div class="jobs-field form-field form-field--large">
-                  <label for="talent-time">
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="talent-worktype-label">
+                    근무형태
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="talent-worktype-label">
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="정규직" />
+                        <span>정규직</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="비정규직" checked />
+                        <span>비정규직</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="계약직" />
+                        <span>계약직</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="아르바이트" checked />
+                        <span>아르바이트</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="프리랜서" checked />
+                        <span>프리랜서</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="협의가능" />
+                        <span>협의가능</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-cols">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="talent-pay">
+                      희망급여
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <select id="talent-pay" name="talent-pay" required data-custom-select data-select-size="l">
+                        <option value="">선택</option>
+                        <option value="회사 내규에 따름" selected>회사 내규에 따름</option>
+                        <option value="면접 후 결정">면접 후 결정</option>
+                        <option value="월급">월급</option>
+                        <option value="연봉">연봉</option>
+                        <option value="시급">시급</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="talent-sido">
+                      근무지역
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <div class="jobs-inline">
+                        <select
+                          id="talent-sido"
+                          name="talent-sido"
+                          aria-label="시/도"
+                          required
+                          data-custom-select
+                          data-select-size="l"
+                        >
+                          <option value="">시/도</option>
+                          <option value="서울" selected>서울</option>
+                          <option value="경기">경기</option>
+                          <option value="인천">인천</option>
+                          <option value="부산">부산</option>
+                          <option value="대구">대구</option>
+                          <option value="광주">광주</option>
+                          <option value="대전">대전</option>
+                          <option value="울산">울산</option>
+                          <option value="세종">세종</option>
+                          <option value="강원">강원</option>
+                          <option value="충북">충북</option>
+                          <option value="충남">충남</option>
+                          <option value="전북">전북</option>
+                          <option value="전남">전남</option>
+                          <option value="경북">경북</option>
+                          <option value="경남">경남</option>
+                          <option value="제주">제주</option>
+                        </select>
+                        <select aria-label="시/군/구" required data-custom-select data-select-size="l">
+                          <option value="">시/군/구</option>
+                          <option value="강남구" selected>강남구</option>
+                          <option value="강동구">강동구</option>
+                          <option value="노원구">노원구</option>
+                          <option value="송파구">송파구</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="talent-time">
                     근무시간
                     <span class="jobs-required" aria-hidden="true">*</span>
                   </label>
-                  <div class="jobs-inline">
-                    <select
-                      id="talent-time"
-                      name="talent-time"
-                      aria-label="근무요일"
-                      data-custom-select
-                      data-select-size="l"
-                      required
-                    >
-                      <option value="">근무시간 선택</option>
-                      <option value="월~토(주5일)">월~토(주5일)</option>
-                      <option value="월~토(주40시간)">월~토(주40시간)</option>
-                      <option value="월~토(토요일격주근무)">월~토(토요일격주근무)</option>
-                      <option value="월~토">월~토</option>
-                      <option value="월~일">월~일</option>
-                      <option value="주 1일">주 1일</option>
-                      <option value="주 3일">주 3일</option>
-                      <option value="주 5일">주 5일</option>
-                    </select>
-                    <select aria-label="근무시간대" data-custom-select data-select-size="l">
-                      <option value="">시간 선택</option>
-                      <option value="협의가능">협의가능</option>
-                      <option value="오전">오전</option>
-                      <option value="오후">오후</option>
-                      <option value="종일">종일</option>
-                    </select>
-                    <input type="text" placeholder="직접 입력" aria-label="근무시간 직접 입력" disabled />
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <div class="jobs-inline jobs-inline--time">
+                      <select
+                        id="talent-time"
+                        name="talent-time"
+                        aria-label="근무요일"
+                        required
+                        data-custom-select
+                        data-select-size="l"
+                      >
+                        <option value="">근무시간 선택</option>
+                        <option value="월~토(주5일)">월~토(주5일)</option>
+                        <option value="월~토(주40시간)">월~토(주40시간)</option>
+                        <option value="월~토(토요일격주근무)" selected>월~토(토요일격주근무)</option>
+                        <option value="월~토">월~토</option>
+                        <option value="월~일">월~일</option>
+                        <option value="주 1일">주 1일</option>
+                        <option value="주 3일">주 3일</option>
+                        <option value="주 5일">주 5일</option>
+                      </select>
+                      <select aria-label="근무시간대" data-custom-select data-select-size="l">
+                        <option value="">시간 선택</option>
+                        <option value="협의가능" selected>협의가능</option>
+                        <option value="오전">오전</option>
+                        <option value="오후">오후</option>
+                        <option value="종일">종일</option>
+                      </select>
+                      <input type="text" placeholder="직접 입력" aria-label="근무시간 직접 입력" disabled />
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
-            <section class="jobs-card" aria-labelledby="talent-education">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="talent-education" data-jobs-repeat>
+              <div class="jobs-form-head">
                 <h2 id="talent-education">학력사항</h2>
-              </div>
-              <div class="jobs-repeat" data-jobs-repeat>
-                <div class="form-field form-field--large jobs-inline">
-                  <select aria-label="학력" data-custom-select data-select-size="l">
-                    <option value="">학력 선택</option>
-                    <option value="고등학교">고등학교</option>
-                    <option value="대학교(2, 3년)">대학교(2, 3년)</option>
-                    <option value="대학교(4년)">대학교(4년)</option>
-                    <option value="대학원">대학원</option>
-                  </select>
-                  <select aria-label="졸업여부" data-custom-select data-select-size="l">
-                    <option value="">졸업여부 선택</option>
-                    <option value="졸업">졸업</option>
-                    <option value="재학">재학</option>
-                    <option value="휴학">휴학</option>
-                    <option value="중퇴">중퇴</option>
-                  </select>
-                </div>
-                <div class="jobs-repeat__row form-field form-field--large" data-jobs-repeat-row>
-                  <input type="text" placeholder="학교명" aria-label="학교명" />
-                  <input type="text" placeholder="입학년월" aria-label="입학년월" />
-                  <input type="text" placeholder="졸업년월" aria-label="졸업년월" />
-                  <select aria-label="학교 지역" data-custom-select data-select-size="l">
-                    <option value="">지역</option>
-                    <option value="서울">서울</option>
-                    <option value="경기">경기</option>
-                    <option value="인천">인천</option>
-                    <option value="부산">부산</option>
-                    <option value="대구">대구</option>
-                    <option value="광주">광주</option>
-                    <option value="대전">대전</option>
-                    <option value="울산">울산</option>
-                    <option value="세종">세종</option>
-                    <option value="강원">강원</option>
-                    <option value="충북">충북</option>
-                    <option value="충남">충남</option>
-                    <option value="전북">전북</option>
-                    <option value="전남">전남</option>
-                    <option value="경북">경북</option>
-                    <option value="경남">경남</option>
-                    <option value="제주">제주</option>
-                  </select>
-                  <input type="text" placeholder="학점" aria-label="학점" />
-                  <select aria-label="기준학점" data-custom-select data-select-size="l">
-                    <option value="">기준학점</option>
-                    <option value="4.5">4.5</option>
-                    <option value="4.3">4.3</option>
-                    <option value="4.0">4.0</option>
-                    <option value="100">100</option>
-                  </select>
-                  <button
-                    class="ds-button ds-button--large ds-button--outline"
-                    type="button"
-                    aria-label="학력 삭제"
-                    data-jobs-repeat-remove
-                  >
-                    <span class="material-symbols-rounded" aria-hidden="true">close</span>
-                  </button>
-                </div>
-                <button
-                  class="ds-button ds-button--large ds-button--outline jobs-repeat__add"
-                  type="button"
-                  data-jobs-repeat-add
-                >
-                  + 학력 추가
+                <button class="ds-button ds-button--small ds-button--outline" type="button" data-jobs-repeat-add>
+                  학력 추가
+                  <span class="material-symbols-rounded" aria-hidden="true">add</span>
                 </button>
               </div>
+              <div class="jobs-form-rows jobs-repeat__item" data-jobs-repeat-row>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="talent-edu-type-label">학력구분</p>
+                  <div
+                    class="jobs-form-row__slot form-field form-field--large"
+                    role="group"
+                    aria-labelledby="talent-edu-type-label"
+                  >
+                    <div class="jobs-inline">
+                      <select aria-label="학력" data-custom-select data-select-size="l">
+                        <option value="">학력 선택</option>
+                        <option value="고등학교">고등학교</option>
+                        <option value="대학교(2, 3년)">대학교(2, 3년)</option>
+                        <option value="대학교(4년)">대학교(4년)</option>
+                        <option value="대학원">대학원</option>
+                      </select>
+                      <select aria-label="졸업여부" data-custom-select data-select-size="l">
+                        <option value="">졸업여부 선택</option>
+                        <option value="졸업">졸업</option>
+                        <option value="재학">재학</option>
+                        <option value="휴학">휴학</option>
+                        <option value="중퇴">중퇴</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="talent-edu-school-label">학교정보</p>
+                  <div
+                    class="jobs-form-row__slot form-field form-field--large"
+                    role="group"
+                    aria-labelledby="talent-edu-school-label"
+                  >
+                    <div class="jobs-inline jobs-inline--repeat">
+                      <input type="text" placeholder="학교명" aria-label="학교명" />
+                      <input type="text" placeholder="입학년월" aria-label="입학년월" />
+                      <input type="text" placeholder="졸업년월" aria-label="졸업년월" />
+                      <select aria-label="학교 지역" data-custom-select data-select-size="l">
+                        <option value="">지역</option>
+                        <option value="서울">서울</option>
+                        <option value="경기">경기</option>
+                        <option value="인천">인천</option>
+                        <option value="부산">부산</option>
+                        <option value="대구">대구</option>
+                        <option value="광주">광주</option>
+                        <option value="대전">대전</option>
+                        <option value="울산">울산</option>
+                        <option value="세종">세종</option>
+                        <option value="강원">강원</option>
+                        <option value="충북">충북</option>
+                        <option value="충남">충남</option>
+                        <option value="전북">전북</option>
+                        <option value="전남">전남</option>
+                        <option value="경북">경북</option>
+                        <option value="경남">경남</option>
+                        <option value="제주">제주</option>
+                      </select>
+                      <input type="text" placeholder="학점" aria-label="학점" />
+                      <select aria-label="기준학점" data-custom-select data-select-size="l">
+                        <option value="">기준학점</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4.3">4.3</option>
+                        <option value="4.0">4.0</option>
+                        <option value="100">100</option>
+                      </select>
+                      <button class="form-action-button" type="button" data-jobs-repeat-remove>삭제</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
-            <section class="jobs-card" aria-labelledby="talent-career">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="talent-career" data-jobs-repeat>
+              <div class="jobs-form-head">
                 <h2 id="talent-career">경력사항</h2>
-              </div>
-              <div class="jobs-repeat" data-jobs-repeat>
-                <div class="form-field form-field--large jobs-inline">
-                  <select aria-label="경력" data-custom-select data-select-size="l">
-                    <option value="">경력 선택</option>
-                    <option value="신입">신입</option>
-                    <option value="경력">경력</option>
-                  </select>
-                </div>
-                <div class="jobs-repeat__row form-field form-field--large" data-jobs-repeat-row>
-                  <input type="text" placeholder="사업장명" aria-label="사업장명" />
-                  <input type="text" placeholder="입사년월" aria-label="입사년월" />
-                  <input type="text" placeholder="퇴사년월" aria-label="퇴사년월" />
-                  <select aria-label="사업장 지역" data-custom-select data-select-size="l">
-                    <option value="">지역</option>
-                    <option value="서울">서울</option>
-                    <option value="경기">경기</option>
-                    <option value="인천">인천</option>
-                    <option value="부산">부산</option>
-                    <option value="대구">대구</option>
-                    <option value="광주">광주</option>
-                    <option value="대전">대전</option>
-                    <option value="울산">울산</option>
-                    <option value="세종">세종</option>
-                    <option value="강원">강원</option>
-                    <option value="충북">충북</option>
-                    <option value="충남">충남</option>
-                    <option value="전북">전북</option>
-                    <option value="전남">전남</option>
-                    <option value="경북">경북</option>
-                    <option value="경남">경남</option>
-                    <option value="제주">제주</option>
-                  </select>
-                  <input type="text" placeholder="직무" aria-label="직무" />
-                  <input type="text" placeholder="직책" aria-label="직책" />
-                  <button
-                    class="ds-button ds-button--large ds-button--outline"
-                    type="button"
-                    aria-label="경력 삭제"
-                    data-jobs-repeat-remove
-                  >
-                    <span class="material-symbols-rounded" aria-hidden="true">close</span>
-                  </button>
-                </div>
-                <button
-                  class="ds-button ds-button--large ds-button--outline jobs-repeat__add"
-                  type="button"
-                  data-jobs-repeat-add
-                >
-                  + 경력 추가
+                <button class="ds-button ds-button--small ds-button--outline" type="button" data-jobs-repeat-add>
+                  경력 추가
+                  <span class="material-symbols-rounded" aria-hidden="true">add</span>
                 </button>
               </div>
-            </section>
-            <section class="jobs-card" aria-labelledby="talent-intro-title">
-              <div class="jobs-card__head">
-                <h2 id="talent-intro-title">자기소개</h2>
+              <div class="jobs-form-rows jobs-repeat__item" data-jobs-repeat-row>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="talent-career-type-label">경력구분</p>
+                  <div
+                    class="jobs-form-row__slot form-field form-field--large"
+                    role="group"
+                    aria-labelledby="talent-career-type-label"
+                  >
+                    <select aria-label="경력" data-custom-select data-select-size="l">
+                      <option value="">경력 선택</option>
+                      <option value="신입">신입</option>
+                      <option value="경력">경력</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="talent-career-info-label">경력정보</p>
+                  <div
+                    class="jobs-form-row__slot form-field form-field--large"
+                    role="group"
+                    aria-labelledby="talent-career-info-label"
+                  >
+                    <div class="jobs-inline jobs-inline--repeat">
+                      <input type="text" placeholder="사업장명" aria-label="사업장명" />
+                      <input type="text" placeholder="입사년월" aria-label="입사년월" />
+                      <input type="text" placeholder="퇴사년월" aria-label="퇴사년월" />
+                      <select aria-label="사업장 지역" data-custom-select data-select-size="l">
+                        <option value="">지역</option>
+                        <option value="서울">서울</option>
+                        <option value="경기">경기</option>
+                        <option value="인천">인천</option>
+                        <option value="부산">부산</option>
+                        <option value="대구">대구</option>
+                        <option value="광주">광주</option>
+                        <option value="대전">대전</option>
+                        <option value="울산">울산</option>
+                        <option value="세종">세종</option>
+                        <option value="강원">강원</option>
+                        <option value="충북">충북</option>
+                        <option value="충남">충남</option>
+                        <option value="전북">전북</option>
+                        <option value="전남">전남</option>
+                        <option value="경북">경북</option>
+                        <option value="경남">경남</option>
+                        <option value="제주">제주</option>
+                      </select>
+                      <input type="text" placeholder="직무" aria-label="직무" />
+                      <input type="text" placeholder="직책" aria-label="직책" />
+                      <button class="form-action-button" type="button" data-jobs-repeat-remove>삭제</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <!-- 에디터 삽입 영역: 개발 시 이 안에 에디터를 넣습니다. -->
-              <div
-                class="jobs-editor jobs-editor--short"
-                id="talent-intro"
-                data-editor
-                aria-labelledby="talent-intro-title"
-              ></div>
             </section>
-            <div class="jobs-attach">
-              <section class="jobs-card" aria-labelledby="talent-resume">
-                <h2 id="talent-resume">이력서 / 포트폴리오</h2>
-                <div class="jobs-drop jobs-drop--compact" data-jobs-drop>
-                  <p>파일을 드래그하거나 파일찾기로 추가해 주세요.</p>
-                  <small>pdf, zip, hwp, doc, docx, ppt, pptx, jpg, png · 5MB 이하</small>
-                  <label class="ds-button ds-button--large ds-button--outline" for="talent-resume-file">파일찾기</label>
-                  <input
-                    class="sr-only"
-                    type="file"
-                    id="talent-resume-file"
-                    name="talent-resume-file"
-                    accept=".pdf,.zip,.hwp,.doc,.docx,.ppt,.pptx,.jpg,.png"
-                  />
-                  <p class="jobs-drop__list" data-jobs-drop-list aria-live="polite"></p>
+            <section class="jobs-form-section" aria-labelledby="talent-intro-title">
+              <div class="jobs-form-head">
+                <h2 id="talent-intro-title">자기소개 및 첨부파일</h2>
+              </div>
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="talent-intro-label">자기소개</p>
+                  <div class="jobs-form-row__slot">
+                    <!-- 에디터 삽입 영역: 개발 시 이 안에 에디터를 넣습니다. -->
+                    <div class="jobs-editor" id="talent-intro" data-editor aria-labelledby="talent-intro-label"></div>
+                  </div>
                 </div>
-              </section>
-              <section class="jobs-card" aria-labelledby="talent-license">
-                <h2 id="talent-license">면허증 또는 자격증</h2>
-                <div class="jobs-drop jobs-drop--compact" data-jobs-drop>
-                  <p>파일을 드래그하거나 파일찾기로 추가해 주세요.</p>
-                  <small>pdf, zip, hwp, doc, docx, ppt, pptx, jpg, png · 5MB 이하</small>
-                  <label class="ds-button ds-button--large ds-button--outline" for="talent-license-file">
-                    파일찾기
-                  </label>
-                  <input
-                    class="sr-only"
-                    type="file"
-                    id="talent-license-file"
-                    name="talent-license-file"
-                    accept=".pdf,.zip,.hwp,.doc,.docx,.ppt,.pptx,.jpg,.png"
-                  />
-                  <p class="jobs-drop__list" data-jobs-drop-list aria-live="polite"></p>
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="talent-resume-file">이력서 / 포트폴리오</label>
+                  <div class="jobs-form-row__slot">
+                    <div class="jobs-drop" data-jobs-drop>
+                      <p>
+                        파일을 드래그하거나 파일찾기로 추가해 주세요.
+                        <br />
+                        pdf, zip, hwp, doc, docx, ppt, pptx, jpg, png · 5MB 이하
+                      </p>
+                      <label class="ds-button ds-button--small ds-button--outline" for="talent-resume-file">
+                        파일찾기
+                      </label>
+                      <input
+                        class="sr-only"
+                        type="file"
+                        id="talent-resume-file"
+                        name="talent-resume-file"
+                        accept=".pdf,.zip,.hwp,.doc,.docx,.ppt,.pptx,.jpg,.png"
+                      />
+                      <p class="jobs-drop__list" data-jobs-drop-list aria-live="polite"></p>
+                    </div>
+                  </div>
                 </div>
-              </section>
-            </div>
-            <section class="jobs-card" aria-labelledby="talent-agree">
-              <div class="jobs-card__head">
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="talent-license-file">면허증 또는 자격증</label>
+                  <div class="jobs-form-row__slot">
+                    <div class="jobs-drop" data-jobs-drop>
+                      <p>
+                        파일을 드래그하거나 파일찾기로 추가해 주세요.
+                        <br />
+                        pdf, zip, hwp, doc, docx, ppt, pptx, jpg, png · 5MB 이하
+                      </p>
+                      <label class="ds-button ds-button--small ds-button--outline" for="talent-license-file">
+                        파일찾기
+                      </label>
+                      <input
+                        class="sr-only"
+                        type="file"
+                        id="talent-license-file"
+                        name="talent-license-file"
+                        accept=".pdf,.zip,.hwp,.doc,.docx,.ppt,.pptx,.jpg,.png"
+                      />
+                      <p class="jobs-drop__list" data-jobs-drop-list aria-live="polite"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="jobs-form-section" aria-labelledby="talent-agree">
+              <div class="jobs-form-head">
                 <h2 id="talent-agree">이력서 작성을 위한 개인정보 수집 및 이용 동의</h2>
               </div>
-              <div class="jobs-agree">
-                <label class="form-check">
-                  <input type="checkbox" name="talentAgreeRequired" required checked />
-                  <span>[필수] 필수 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
-                </label>
-                <button type="button" data-dialog-open="jobs-privacy-dialog">자세히 보기 ›</button>
-              </div>
-              <div class="jobs-agree">
-                <label class="form-check">
-                  <input type="checkbox" name="talentAgreeOptional" />
-                  <span>[선택] 선택 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
-                </label>
-                <button type="button" data-dialog-open="jobs-privacy-dialog">자세히 보기 ›</button>
+              <div class="jobs-agree-list jobs-agree-list--box">
+                <div class="jobs-agree">
+                  <label class="form-check">
+                    <input type="checkbox" name="talentAgreeRequired" required checked />
+                    <span>[필수] 필수 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
+                  </label>
+                  <button
+                    class="ds-link ds-link--text ds-link--medium"
+                    type="button"
+                    data-dialog-open="jobs-privacy-dialog"
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+                <div class="jobs-agree">
+                  <label class="form-check">
+                    <input type="checkbox" name="talentAgreeOptional" />
+                    <span>[선택] 선택 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
+                  </label>
+                  <button
+                    class="ds-link ds-link--text ds-link--medium"
+                    type="button"
+                    data-dialog-open="jobs-privacy-optional-dialog"
+                  >
+                    자세히 보기
+                  </button>
+                </div>
               </div>
             </section>
-            <section class="jobs-card" aria-labelledby="talent-skill">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="talent-skill">
+              <div class="jobs-form-head">
                 <h2 id="talent-skill">업무능력</h2>
-                <p>항목별로 본인의 업무 역량을 10점 만점으로 선택해 주세요.</p>
               </div>
-              <div class="jobs-skill-input" data-jobs-skill>
-                <span class="jobs-skill-input__name" id="skill-1">기본진료 및 보존진료 협조</span>
-                <progress class="jobs-meter" max="10" value="8" aria-labelledby="skill-1">8 / 10</progress>
-                <span class="jobs-score" aria-live="polite">
-                  <strong data-jobs-skill-value>8</strong>
-                  / 10
-                </span>
-                <input type="hidden" name="skill1" value="8" />
-                <div class="jobs-stepper">
-                  <button type="button" aria-label="기본진료 및 보존진료 협조 점수 낮추기" data-jobs-skill-step="-1">
-                    −
-                  </button>
-                  <button type="button" aria-label="기본진료 및 보존진료 협조 점수 높이기" data-jobs-skill-step="1">
-                    +
-                  </button>
-                </div>
-              </div>
-              <div class="jobs-skill-input" data-jobs-skill>
-                <span class="jobs-skill-input__name" id="skill-2">치과교정과 진료협조</span>
-                <progress class="jobs-meter" max="10" value="7" aria-labelledby="skill-2">7 / 10</progress>
-                <span class="jobs-score" aria-live="polite">
-                  <strong data-jobs-skill-value>7</strong>
-                  / 10
-                </span>
-                <input type="hidden" name="skill2" value="7" />
-                <div class="jobs-stepper">
-                  <button type="button" aria-label="치과교정과 진료협조 점수 낮추기" data-jobs-skill-step="-1">
-                    −
-                  </button>
-                  <button type="button" aria-label="치과교정과 진료협조 점수 높이기" data-jobs-skill-step="1">+</button>
-                </div>
-              </div>
-              <div class="jobs-skill-input" data-jobs-skill>
-                <span class="jobs-skill-input__name" id="skill-3">임플란트 진료협조</span>
-                <progress class="jobs-meter" max="10" value="8" aria-labelledby="skill-3">8 / 10</progress>
-                <span class="jobs-score" aria-live="polite">
-                  <strong data-jobs-skill-value>8</strong>
-                  / 10
-                </span>
-                <input type="hidden" name="skill3" value="8" />
-                <div class="jobs-stepper">
-                  <button type="button" aria-label="임플란트 진료협조 점수 낮추기" data-jobs-skill-step="-1">−</button>
-                  <button type="button" aria-label="임플란트 진료협조 점수 높이기" data-jobs-skill-step="1">+</button>
-                </div>
-              </div>
-              <div class="jobs-skill-input" data-jobs-skill>
-                <span class="jobs-skill-input__name" id="skill-4">구강예방관리 및 교육</span>
-                <progress class="jobs-meter" max="10" value="9" aria-labelledby="skill-4">9 / 10</progress>
-                <span class="jobs-score" aria-live="polite">
-                  <strong data-jobs-skill-value>9</strong>
-                  / 10
-                </span>
-                <input type="hidden" name="skill4" value="9" />
-                <div class="jobs-stepper">
-                  <button type="button" aria-label="구강예방관리 및 교육 점수 낮추기" data-jobs-skill-step="-1">
-                    −
-                  </button>
-                  <button type="button" aria-label="구강예방관리 및 교육 점수 높이기" data-jobs-skill-step="1">
-                    +
-                  </button>
-                </div>
-              </div>
-              <div class="jobs-skill-input" data-jobs-skill>
-                <span class="jobs-skill-input__name" id="skill-5">치료 계획 및 상담</span>
-                <progress class="jobs-meter" max="10" value="6" aria-labelledby="skill-5">6 / 10</progress>
-                <span class="jobs-score" aria-live="polite">
-                  <strong data-jobs-skill-value>6</strong>
-                  / 10
-                </span>
-                <input type="hidden" name="skill5" value="6" />
-                <div class="jobs-stepper">
-                  <button type="button" aria-label="치료 계획 및 상담 점수 낮추기" data-jobs-skill-step="-1">−</button>
-                  <button type="button" aria-label="치료 계획 및 상담 점수 높이기" data-jobs-skill-step="1">+</button>
-                </div>
-              </div>
-              <div class="jobs-skill-input" data-jobs-skill>
-                <span class="jobs-skill-input__name" id="skill-6">고객 관리</span>
-                <progress class="jobs-meter" max="10" value="8" aria-labelledby="skill-6">8 / 10</progress>
-                <span class="jobs-score" aria-live="polite">
-                  <strong data-jobs-skill-value>8</strong>
-                  / 10
-                </span>
-                <input type="hidden" name="skill6" value="8" />
-                <div class="jobs-stepper">
-                  <button type="button" aria-label="고객 관리 점수 낮추기" data-jobs-skill-step="-1">−</button>
-                  <button type="button" aria-label="고객 관리 점수 높이기" data-jobs-skill-step="1">+</button>
+              <div class="jobs-skill-form">
+                <p class="jobs-skill-form__desc">항목별로 본인의 업무 역량을 10점 만점으로 선택해 주세요.</p>
+                <div class="jobs-skill-grid">
+                  <div class="jobs-skill-input" data-jobs-skill>
+                    <span class="jobs-skill-input__name" id="skill-1">기본진료 및 보존진료 협조</span>
+                    <div class="jobs-skill-input__control">
+                      <progress class="jobs-meter" max="10" value="8" aria-labelledby="skill-1">8 / 10</progress>
+                      <span class="jobs-score" aria-live="polite">
+                        <strong data-jobs-skill-value>8</strong>
+                        / 10
+                      </span>
+                      <input type="hidden" name="skill1" value="8" />
+                      <div class="jobs-stepper">
+                        <button
+                          type="button"
+                          aria-label="기본진료 및 보존진료 협조 점수 낮추기"
+                          data-jobs-skill-step="-1"
+                        >
+                          −
+                        </button>
+                        <button
+                          type="button"
+                          aria-label="기본진료 및 보존진료 협조 점수 높이기"
+                          data-jobs-skill-step="1"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobs-skill-input" data-jobs-skill>
+                    <span class="jobs-skill-input__name" id="skill-2">치과교정과 진료협조</span>
+                    <div class="jobs-skill-input__control">
+                      <progress class="jobs-meter" max="10" value="7" aria-labelledby="skill-2">7 / 10</progress>
+                      <span class="jobs-score" aria-live="polite">
+                        <strong data-jobs-skill-value>7</strong>
+                        / 10
+                      </span>
+                      <input type="hidden" name="skill2" value="7" />
+                      <div class="jobs-stepper">
+                        <button type="button" aria-label="치과교정과 진료협조 점수 낮추기" data-jobs-skill-step="-1">
+                          −
+                        </button>
+                        <button type="button" aria-label="치과교정과 진료협조 점수 높이기" data-jobs-skill-step="1">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobs-skill-input" data-jobs-skill>
+                    <span class="jobs-skill-input__name" id="skill-3">임플란트 진료협조</span>
+                    <div class="jobs-skill-input__control">
+                      <progress class="jobs-meter" max="10" value="8" aria-labelledby="skill-3">8 / 10</progress>
+                      <span class="jobs-score" aria-live="polite">
+                        <strong data-jobs-skill-value>8</strong>
+                        / 10
+                      </span>
+                      <input type="hidden" name="skill3" value="8" />
+                      <div class="jobs-stepper">
+                        <button type="button" aria-label="임플란트 진료협조 점수 낮추기" data-jobs-skill-step="-1">
+                          −
+                        </button>
+                        <button type="button" aria-label="임플란트 진료협조 점수 높이기" data-jobs-skill-step="1">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobs-skill-input" data-jobs-skill>
+                    <span class="jobs-skill-input__name" id="skill-4">구강예방관리 및 교육</span>
+                    <div class="jobs-skill-input__control">
+                      <progress class="jobs-meter" max="10" value="9" aria-labelledby="skill-4">9 / 10</progress>
+                      <span class="jobs-score" aria-live="polite">
+                        <strong data-jobs-skill-value>9</strong>
+                        / 10
+                      </span>
+                      <input type="hidden" name="skill4" value="9" />
+                      <div class="jobs-stepper">
+                        <button type="button" aria-label="구강예방관리 및 교육 점수 낮추기" data-jobs-skill-step="-1">
+                          −
+                        </button>
+                        <button type="button" aria-label="구강예방관리 및 교육 점수 높이기" data-jobs-skill-step="1">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobs-skill-input" data-jobs-skill>
+                    <span class="jobs-skill-input__name" id="skill-5">치료 계획 및 상담</span>
+                    <div class="jobs-skill-input__control">
+                      <progress class="jobs-meter" max="10" value="6" aria-labelledby="skill-5">6 / 10</progress>
+                      <span class="jobs-score" aria-live="polite">
+                        <strong data-jobs-skill-value>6</strong>
+                        / 10
+                      </span>
+                      <input type="hidden" name="skill5" value="6" />
+                      <div class="jobs-stepper">
+                        <button type="button" aria-label="치료 계획 및 상담 점수 낮추기" data-jobs-skill-step="-1">
+                          −
+                        </button>
+                        <button type="button" aria-label="치료 계획 및 상담 점수 높이기" data-jobs-skill-step="1">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobs-skill-input" data-jobs-skill>
+                    <span class="jobs-skill-input__name" id="skill-6">고객 관리</span>
+                    <div class="jobs-skill-input__control">
+                      <progress class="jobs-meter" max="10" value="8" aria-labelledby="skill-6">8 / 10</progress>
+                      <span class="jobs-score" aria-live="polite">
+                        <strong data-jobs-skill-value>8</strong>
+                        / 10
+                      </span>
+                      <input type="hidden" name="skill6" value="8" />
+                      <div class="jobs-stepper">
+                        <button type="button" aria-label="고객 관리 점수 낮추기" data-jobs-skill-step="-1">−</button>
+                        <button type="button" aria-label="고객 관리 점수 높이기" data-jobs-skill-step="1">+</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -928,63 +1058,96 @@
         </div>
       </footer>
     </div>
-    <dialog class="edu-dialog jobs-dialog" id="jobs-privacy-dialog" aria-labelledby="jobs-privacy-dialog-title">
+    <dialog
+      class="edu-dialog jobs-dialog jobs-dialog--wide"
+      id="jobs-privacy-dialog"
+      aria-labelledby="jobs-privacy-dialog-title"
+    >
       <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
         close
       </button>
-      <h2 id="jobs-privacy-dialog-title">개인정보 수집 및 이용 동의</h2>
-      <section class="jobs-dialog__terms">
-        <h3>필수항목에 대한 개인정보 수집 및 이용 동의</h3>
-        <dl>
-          <div>
-            <dt>수집항목</dt>
-            <dd>이름, 생년월일, 성별, 휴대폰번호, 이메일, 주소, 면허번호, 학력·경력사항</dd>
-          </div>
-          <div>
-            <dt>수집 및 이용목적</dt>
-            <dd>이력서 등록을 통한 각종 맞춤형 취업 서비스 제공</dd>
-          </div>
-          <div>
-            <dt>이용 및 보유기간</dt>
-            <dd>인재정보 삭제 또는 회원 탈퇴 시 파기</dd>
-          </div>
-        </dl>
-      </section>
-      <section class="jobs-dialog__terms">
-        <h3>선택항목에 대한 개인정보 수집 및 이용 동의</h3>
-        <dl>
-          <div>
-            <dt>수집항목</dt>
-            <dd>사진, 자기소개, 이력서·포트폴리오, 면허증·자격증 사본, 업무능력</dd>
-          </div>
-          <div>
-            <dt>수집 및 이용목적</dt>
-            <dd>이력서 등록을 통한 각종 맞춤형 취업 서비스 제공</dd>
-          </div>
-          <div>
-            <dt>이용 및 보유기간</dt>
-            <dd>인재정보 삭제 또는 회원 탈퇴 시 파기</dd>
-          </div>
-        </dl>
-      </section>
-      <p class="jobs-dialog__note">※ 위 동의를 거부할 권리가 있으며, 동의 거부 시 이력서 등록이 불가능합니다.</p>
+      <h2 id="jobs-privacy-dialog-title">필수항목에 대한 개인정보 수집 및 이용 동의</h2>
+      <div class="edu-dialog__body jobs-dialog__body jobs-dialog__body--terms">
+        <table class="jobs-detail-table jobs-detail-table--stack" role="table">
+          <caption class="sr-only">개인정보 수집 및 이용 동의 내용</caption>
+          <colgroup>
+            <col class="jobs-detail-table__th" />
+            <col />
+          </colgroup>
+          <tbody role="rowgroup">
+            <tr role="row">
+              <th scope="row" role="rowheader">수집항목</th>
+              <td role="cell">이름, 생년월일, 성별, 휴대폰번호, 이메일, 주소, 면허번호, 학력·경력사항</td>
+            </tr>
+            <tr role="row">
+              <th scope="row" role="rowheader">수집 및 이용목적</th>
+              <td role="cell">이력서 등록을 통한 각종 맞춤형 취업 서비스 제공</td>
+            </tr>
+            <tr role="row">
+              <th scope="row" role="rowheader">이용 및 보유기간</th>
+              <td role="cell">인재정보 삭제 또는 회원 탈퇴 시 파기</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="jobs-dialog__note">※ 위 동의를 거부할 권리가 있으며, 동의 거부 시 이력서 등록이 불가능합니다.</p>
+      </div>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
-      id="jobs-required-alert"
-      role="alertdialog"
-      aria-label="알림"
-      aria-describedby="jobs-required-alert-message"
+      class="edu-dialog jobs-dialog jobs-dialog--wide"
+      id="jobs-privacy-optional-dialog"
+      aria-labelledby="jobs-privacy-optional-dialog-title"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
         close
       </button>
+      <h2 id="jobs-privacy-optional-dialog-title">선택항목에 대한 개인정보 수집 및 이용 동의</h2>
+      <div class="edu-dialog__body jobs-dialog__body jobs-dialog__body--terms">
+        <table class="jobs-detail-table jobs-detail-table--stack" role="table">
+          <caption class="sr-only">개인정보 수집 및 이용 동의 내용</caption>
+          <colgroup>
+            <col class="jobs-detail-table__th" />
+            <col />
+          </colgroup>
+          <tbody role="rowgroup">
+            <tr role="row">
+              <th scope="row" role="rowheader">수집항목</th>
+              <td role="cell">사진, 자기소개, 이력서·포트폴리오, 면허증·자격증 사본, 업무능력</td>
+            </tr>
+            <tr role="row">
+              <th scope="row" role="rowheader">수집 및 이용목적</th>
+              <td role="cell">이력서 등록을 통한 각종 맞춤형 취업 서비스 제공</td>
+            </tr>
+            <tr role="row">
+              <th scope="row" role="rowheader">이용 및 보유기간</th>
+              <td role="cell">인재정보 삭제 또는 회원 탈퇴 시 파기</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="jobs-dialog__note">※ 위 동의를 거부할 권리가 있으며, 동의 거부 시 이력서 등록이 불가능합니다.</p>
+      </div>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert jobs-alert"
+      id="jobs-required-alert"
+      role="alertdialog"
+      aria-labelledby="jobs-required-alert-title"
+      aria-describedby="jobs-required-alert-message"
+    >
+      <div class="jobs-alert__head">
+        <h2 class="jobs-alert__title" id="jobs-required-alert-title">알림</h2>
+        <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+          close
+        </button>
+      </div>
       <p class="ds-alert__message" id="jobs-required-alert-message">필수 항목을 모두 입력해 주세요.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <details class="account-layer-menu">
@@ -993,7 +1156,8 @@
         화면 확인
       </summary>
       <nav aria-label="구인구직 레이어 확인">
-        <a href="/kdha/career/jobs/talent/write/#jobs-privacy-dialog">개인정보 수집 및 이용 동의</a>
+        <a href="/kdha/career/jobs/talent/write/#jobs-privacy-dialog">개인정보 수집 및 이용 동의(필수)</a>
+        <a href="/kdha/career/jobs/talent/write/#jobs-privacy-optional-dialog">개인정보 수집 및 이용 동의(선택)</a>
         <a href="/kdha/career/jobs/talent/write/#jobs-required-alert">알림 · 필수 항목</a>
       </nav>
     </details>

@@ -309,182 +309,263 @@
         <div id="main-body" class="main-body">
           <!-- KD-US-REC-02-01 -->
           <form class="career-jobs career-jobs--form" novalidate data-jobs-form data-jobs-invalid="jobs-required-alert">
-            <p class="jobs-alert-text">※ 승인 받은 병원만 공고를 등록할 수 있습니다.</p>
-            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-basic">
-              <div class="jobs-card__head">
+            <ul class="ds-guide-list jobs-form-notice">
+              <li class="ds-guide-list__item">
+                <span class="ds-guide-list__content">
+                  <strong>승인 받은 병원만</strong>
+                  공고를 등록할 수 있습니다.
+                </span>
+              </li>
+            </ul>
+            <section class="jobs-form-section" aria-labelledby="hospital-basic">
+              <div class="jobs-form-head">
                 <h2 id="hospital-basic">기본정보</h2>
+                <p class="jobs-form-head__note">
+                  <span class="jobs-required">*</span>
+                  표시는 필수입력 항목입니다.
+                </p>
               </div>
-              <div class="jobs-photo-row">
-                <label class="jobs-photo">
-                  대표 사진 등록
-                  <input class="sr-only" type="file" name="hospitalPhoto" accept="image/*" />
-                </label>
-                <div class="jobs-grid">
-                  <div class="jobs-field form-field form-field--large">
-                    <label for="hospital-name">
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="hospital-photo-label">대표 사진</p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="hospital-photo-label">
+                    <label class="jobs-photo">
+                      <span class="material-symbols-rounded" aria-hidden="true">add</span>
+                      대표 사진 등록
+                      <input class="sr-only" type="file" name="hospitalPhoto" accept="image/*" />
+                    </label>
+                  </div>
+                </div>
+                <div class="jobs-form-cols">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="hospital-name">
                       병원명
                       <span class="jobs-required" aria-hidden="true">*</span>
                     </label>
-                    <input id="hospital-name" name="hospital-name" type="text" placeholder="병원명 입력" required />
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <input id="hospital-name" name="hospital-name" type="text" placeholder="병원명 입력" required />
+                    </div>
                   </div>
-                  <div class="jobs-field form-field form-field--large">
-                    <label for="hospital-tel">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="hospital-tel">
                       연락처
                       <span class="jobs-required" aria-hidden="true">*</span>
                     </label>
-                    <input
-                      id="hospital-tel"
-                      name="hospital-tel"
-                      type="tel"
-                      placeholder="- 없이 숫자만 입력"
-                      required
-                      inputmode="numeric"
-                    />
-                  </div>
-                  <div class="jobs-field form-field form-field--large">
-                    <label for="hospital-ceo">
-                      대표자명
-                      <span class="jobs-required" aria-hidden="true">*</span>
-                    </label>
-                    <input id="hospital-ceo" name="hospital-ceo" type="text" placeholder="대표자명 입력" required />
-                  </div>
-                  <div class="jobs-field form-field form-field--large">
-                    <label for="hospital-bizno">
-                      사업자등록번호
-                      <span class="jobs-required" aria-hidden="true">*</span>
-                    </label>
-                    <div class="jobs-inline">
+                    <div class="jobs-form-row__slot form-field form-field--large">
                       <input
-                        id="hospital-bizno"
-                        name="hospital-bizno"
-                        type="text"
-                        placeholder="숫자만 입력"
+                        id="hospital-tel"
+                        name="hospital-tel"
+                        type="tel"
+                        placeholder="- 없이 숫자만 입력"
                         required
                         inputmode="numeric"
                       />
-                      <button
-                        class="ds-button ds-button--large ds-button--outline"
-                        type="button"
-                        data-dialog-open="jobs-bizno-alert"
-                      >
-                        사업자등록번호 확인
-                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-cols">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="hospital-ceo">
+                      대표자명
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <input id="hospital-ceo" name="hospital-ceo" type="text" placeholder="대표자명 입력" required />
+                    </div>
+                  </div>
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="hospital-bizno">
+                      사업자등록번호
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <div class="form-input-action">
+                        <input
+                          id="hospital-bizno"
+                          name="hospital-bizno"
+                          type="text"
+                          placeholder="숫자만 입력"
+                          required
+                          inputmode="numeric"
+                        />
+                        <button class="form-action-button" type="button" data-dialog-open="jobs-bizno-alert">
+                          사업자등록번호 확인
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-address-title">
-              <div class="jobs-card__head">
-                <h2 id="hospital-address-title">
-                  병원 주소
-                  <span class="jobs-required" aria-hidden="true">*</span>
-                </h2>
-                <p>채용공고 내 근무위치로 노출됩니다.</p>
+            <section class="jobs-form-section" aria-labelledby="hospital-address-title">
+              <div class="jobs-form-head">
+                <h2 id="hospital-address-title">병원 주소</h2>
               </div>
-              <div class="jobs-inline form-field form-field--large">
-                <label class="sr-only" for="hospital-address">주소</label>
-                <input
-                  id="hospital-address"
-                  name="hospitalAddress"
-                  placeholder="주소 찾기를 눌러 주소를 검색하세요."
-                  readonly
-                  required
-                />
-                <button class="ds-button ds-button--large ds-button--outline" type="button">주소 찾기</button>
-              </div>
-              <div class="form-field form-field--large">
-                <label class="sr-only" for="hospital-address-detail">상세주소</label>
-                <input id="hospital-address-detail" name="hospitalAddressDetail" placeholder="상세주소 입력" />
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="hospital-address">
+                    주소
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <div class="form-input-action jobs-address">
+                      <input
+                        id="hospital-address"
+                        name="hospitalAddress"
+                        placeholder="주소 찾기를 눌러 주소를 검색하세요."
+                        readonly
+                        required
+                        aria-describedby="hospital-address-hint"
+                      />
+                      <button class="form-action-button" type="button">주소 찾기</button>
+                    </div>
+                    <p class="jobs-hint" id="hospital-address-hint">채용공고 내 근무위치로 노출됩니다.</p>
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="hospital-address-detail">
+                    상세주소
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <input
+                      id="hospital-address-detail"
+                      name="hospitalAddressDetail"
+                      type="text"
+                      placeholder="상세주소 입력"
+                      required
+                    />
+                  </div>
+                </div>
               </div>
             </section>
-            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-sns">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="hospital-sns">
+              <div class="jobs-form-head">
                 <h2 id="hospital-sns">병원 홈페이지 혹은 SNS</h2>
               </div>
-              <div class="jobs-grid">
-                <div class="jobs-field form-field form-field--large">
-                  <label for="hospital-homepage">홈페이지</label>
-                  <input
-                    id="hospital-homepage"
-                    name="hospital-homepage"
-                    type="url"
-                    placeholder="https://samsung-miso.com/"
-                  />
+              <div class="jobs-form-rows">
+                <div class="jobs-form-cols">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="hospital-homepage">홈페이지</label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <input
+                        id="hospital-homepage"
+                        name="hospital-homepage"
+                        type="url"
+                        value="https://samsung-miso.com/"
+                        placeholder="홈페이지 주소를 입력하세요."
+                      />
+                    </div>
+                  </div>
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="hospital-instagram">인스타그램</label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <input
+                        id="hospital-instagram"
+                        name="hospital-instagram"
+                        type="url"
+                        placeholder="인스타그램 주소를 입력하세요."
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div class="jobs-field form-field form-field--large">
-                  <label for="hospital-instagram">인스타그램</label>
-                  <input
-                    id="hospital-instagram"
-                    name="hospital-instagram"
-                    type="url"
-                    placeholder="인스타그램 주소를 입력하세요."
-                  />
-                </div>
-                <div class="jobs-field form-field form-field--large">
-                  <label for="hospital-youtube">유튜브</label>
-                  <input
-                    id="hospital-youtube"
-                    name="hospital-youtube"
-                    type="url"
-                    placeholder="유튜브 주소를 입력하세요."
-                  />
+                <div class="jobs-form-cols">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="hospital-youtube">유튜브</label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <input
+                        id="hospital-youtube"
+                        name="hospital-youtube"
+                        type="url"
+                        placeholder="유튜브 주소를 입력하세요."
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
-            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-photos">
-              <div class="jobs-card__head">
-                <h2 id="hospital-photos">병원소개 사진</h2>
-                <p>로고, 병원 내부·외부 사진 (최대 5장)</p>
+            <section class="jobs-form-section" aria-labelledby="hospital-intro-section">
+              <div class="jobs-form-head">
+                <h2 id="hospital-intro-section">병원 소개</h2>
               </div>
-              <div class="jobs-photos">
-                <label class="jobs-photo jobs-photo--square">
-                  사진 등록
-                  <small>1/5</small>
-                  <input class="sr-only" type="file" name="hospitalPhotos" accept="image/*" multiple />
-                </label>
-                <span class="jobs-photos__item" role="img" aria-label="등록된 사진"></span>
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="hospital-photos-label">병원소개 사진</p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="hospital-photos-label">
+                    <div class="jobs-photos">
+                      <label class="jobs-photo">
+                        <span class="material-symbols-rounded" aria-hidden="true">add</span>
+                        사진 등록
+                        <small>1/5</small>
+                        <input
+                          class="sr-only"
+                          type="file"
+                          name="hospitalPhotos"
+                          accept="image/*"
+                          multiple
+                          aria-describedby="hospital-photos-hint"
+                        />
+                      </label>
+                      <span class="jobs-photos__item" role="img" aria-label="등록된 사진"></span>
+                    </div>
+                    <p class="jobs-hint" id="hospital-photos-hint">로고, 병원 내부·외부 사진 (최대 5장)</p>
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="hospital-intro">병원소개</label>
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <textarea
+                      id="hospital-intro"
+                      name="hospitalIntro"
+                      maxlength="100"
+                      placeholder="병원에 대한 소개글을 입력해 주세요."
+                      aria-describedby="hospital-intro-hint"
+                      data-jobs-count="hospital-intro-count"
+                    ></textarea>
+                    <div class="jobs-hint jobs-hint--split">
+                      <p id="hospital-intro-hint">100자 이내로 입력해 주세요.</p>
+                      <p id="hospital-intro-count" aria-live="polite">0 / 100</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-intro-title">
-              <div class="jobs-card__head">
-                <h2 id="hospital-intro-title">병원소개</h2>
-                <p>(100자 제한)</p>
-              </div>
-              <div class="form-field">
-                <label class="sr-only" for="hospital-intro">병원소개</label>
-                <textarea
-                  id="hospital-intro"
-                  name="hospitalIntro"
-                  maxlength="100"
-                  placeholder="병원에 대한 소개글을 입력해 주세요."
-                  data-jobs-count="hospital-intro-count"
-                ></textarea>
-              </div>
-              <p class="jobs-counter" id="hospital-intro-count" aria-live="polite">0 / 100</p>
-            </section>
-            <section class="jobs-card jobs-card--compact" aria-labelledby="hospital-agree">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="hospital-agree">
+              <div class="jobs-form-head">
                 <h2 id="hospital-agree">구인공고 작성을 위한 개인정보 수집 및 이용 동의</h2>
               </div>
-              <div class="jobs-agree">
-                <label class="form-check">
-                  <input type="checkbox" name="hospitalAgreeRequired" required checked />
-                  <span>[필수] 필수 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
-                </label>
-                <button type="button" data-dialog-open="jobs-privacy-dialog">자세히 보기 ›</button>
-              </div>
-              <div class="jobs-agree">
-                <label class="form-check">
-                  <input type="checkbox" name="hospitalAgreeOptional" />
-                  <span>[선택] 선택 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
-                </label>
-                <button type="button" data-dialog-open="jobs-privacy-dialog">자세히 보기 ›</button>
+              <div class="jobs-agree-list">
+                <div class="jobs-agree">
+                  <label class="form-check">
+                    <input type="checkbox" name="hospitalAgreeRequired" required checked />
+                    <span>[필수] 필수 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
+                  </label>
+                  <button
+                    class="ds-link ds-link--text ds-link--medium"
+                    type="button"
+                    data-dialog-open="jobs-privacy-dialog"
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+                <div class="jobs-agree">
+                  <label class="form-check">
+                    <input type="checkbox" name="hospitalAgreeOptional" />
+                    <span>[선택] 선택 항목에 대한 개인정보 수집 및 이용에 동의합니다.</span>
+                  </label>
+                  <button
+                    class="ds-link ds-link--text ds-link--medium"
+                    type="button"
+                    data-dialog-open="jobs-privacy-optional-dialog"
+                  >
+                    자세히 보기
+                  </button>
+                </div>
               </div>
             </section>
             <div class="jobs-actions">
               <a class="ds-button ds-button--large ds-button--outline" href="/kdha/career/jobs/">취소</a>
-              <button class="ds-button ds-button--large ds-button--outline jobs-danger" type="button">삭제</button>
+              <button class="ds-button ds-button--large ds-button--outline" type="button">삭제</button>
               <button class="ds-button ds-button--large ds-button--primary" type="submit">저장</button>
             </div>
           </form>
@@ -587,78 +668,114 @@
         </div>
       </footer>
     </div>
-    <dialog class="edu-dialog jobs-dialog" id="jobs-privacy-dialog" aria-labelledby="jobs-privacy-dialog-title">
+    <dialog
+      class="edu-dialog jobs-dialog jobs-dialog--wide"
+      id="jobs-privacy-dialog"
+      aria-labelledby="jobs-privacy-dialog-title"
+    >
       <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
         close
       </button>
-      <h2 id="jobs-privacy-dialog-title">개인정보 수집 및 이용 동의</h2>
-      <section class="jobs-dialog__terms">
-        <h3>필수항목에 대한 개인정보 수집 및 이용 동의</h3>
-        <dl>
-          <div>
-            <dt>수집항목</dt>
-            <dd>병원명, 대표자명, 연락처, 사업자등록번호, 병원주소</dd>
-          </div>
-          <div>
-            <dt>수집 및 이용목적</dt>
-            <dd>구인공고 등록을 통한 각종 맞춤형 취업 서비스 제공</dd>
-          </div>
-          <div>
-            <dt>이용 및 보유기간</dt>
-            <dd>병원정보 삭제 또는 회원 탈퇴 시 파기</dd>
-          </div>
-        </dl>
-      </section>
-      <section class="jobs-dialog__terms">
-        <h3>선택항목에 대한 개인정보 수집 및 이용 동의</h3>
-        <dl>
-          <div>
-            <dt>수집항목</dt>
-            <dd>병원 홈페이지 혹은 SNS, 병원소개 사진, 병원소개</dd>
-          </div>
-          <div>
-            <dt>수집 및 이용목적</dt>
-            <dd>구인공고 등록을 통한 각종 맞춤형 취업 서비스 제공</dd>
-          </div>
-          <div>
-            <dt>이용 및 보유기간</dt>
-            <dd>병원정보 삭제 또는 회원 탈퇴 시 파기</dd>
-          </div>
-        </dl>
-      </section>
-      <p class="jobs-dialog__note">※ 위 동의를 거부할 권리가 있으며, 동의 거부 시 구인공고 등록이 불가능합니다.</p>
+      <h2 id="jobs-privacy-dialog-title">필수항목에 대한 개인정보 수집 및 이용 동의</h2>
+      <div class="edu-dialog__body jobs-dialog__body jobs-dialog__body--terms">
+        <table class="jobs-detail-table jobs-detail-table--stack" role="table">
+          <caption class="sr-only">개인정보 수집 및 이용 동의 내용</caption>
+          <colgroup>
+            <col class="jobs-detail-table__th" />
+            <col />
+          </colgroup>
+          <tbody role="rowgroup">
+            <tr role="row">
+              <th scope="row" role="rowheader">수집항목</th>
+              <td role="cell">병원명, 대표자명, 연락처, 사업자등록번호, 병원주소</td>
+            </tr>
+            <tr role="row">
+              <th scope="row" role="rowheader">수집 및 이용목적</th>
+              <td role="cell">구인공고 등록을 통한 각종 맞춤형 취업 서비스 제공</td>
+            </tr>
+            <tr role="row">
+              <th scope="row" role="rowheader">이용 및 보유기간</th>
+              <td role="cell">병원정보 삭제 또는 회원 탈퇴 시 파기</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="jobs-dialog__note">※ 위 동의를 거부할 권리가 있으며, 동의 거부 시 구인공고 등록이 불가능합니다.</p>
+      </div>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
-      id="jobs-bizno-alert"
-      role="alertdialog"
-      aria-label="알림"
-      aria-describedby="jobs-bizno-alert-message"
+      class="edu-dialog jobs-dialog jobs-dialog--wide"
+      id="jobs-privacy-optional-dialog"
+      aria-labelledby="jobs-privacy-optional-dialog-title"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
         close
       </button>
-      <p class="ds-alert__message" id="jobs-bizno-alert-message">유효한 사업자등록번호입니다.</p>
+      <h2 id="jobs-privacy-optional-dialog-title">필수항목에 대한 개인정보 수집 및 이용 동의</h2>
+      <div class="edu-dialog__body jobs-dialog__body jobs-dialog__body--terms">
+        <table class="jobs-detail-table jobs-detail-table--stack" role="table">
+          <caption class="sr-only">개인정보 수집 및 이용 동의 내용</caption>
+          <colgroup>
+            <col class="jobs-detail-table__th" />
+            <col />
+          </colgroup>
+          <tbody role="rowgroup">
+            <tr role="row">
+              <th scope="row" role="rowheader">수집항목</th>
+              <td role="cell">병원 홈페이지 혹은 SNS, 병원소개 사진, 병원소개</td>
+            </tr>
+            <tr role="row">
+              <th scope="row" role="rowheader">수집 및 이용목적</th>
+              <td role="cell">구인공고 등록을 통한 각종 맞춤형 취업 서비스 제공</td>
+            </tr>
+            <tr role="row">
+              <th scope="row" role="rowheader">이용 및 보유기간</th>
+              <td role="cell">병원정보 삭제 또는 회원 탈퇴 시 파기</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="jobs-dialog__note">※ 위 동의를 거부할 권리가 있으며, 동의 거부 시 구인공고 등록이 불가능합니다.</p>
+      </div>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="ds-alert jobs-alert"
+      id="jobs-bizno-alert"
+      role="alertdialog"
+      aria-labelledby="jobs-bizno-alert-title"
+      aria-describedby="jobs-bizno-alert-message"
+    >
+      <div class="jobs-alert__head">
+        <h2 class="jobs-alert__title" id="jobs-bizno-alert-title">알림</h2>
+        <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+          close
+        </button>
+      </div>
+      <p class="ds-alert__message" id="jobs-bizno-alert-message">유효한 사업자등록번호입니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert jobs-alert"
       id="jobs-required-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="jobs-required-alert-title"
       aria-describedby="jobs-required-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
-        close
-      </button>
+      <div class="jobs-alert__head">
+        <h2 class="jobs-alert__title" id="jobs-required-alert-title">알림</h2>
+        <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+          close
+        </button>
+      </div>
       <p class="ds-alert__message" id="jobs-required-alert-message">필수 항목을 모두 입력해 주세요.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <details class="account-layer-menu">
@@ -667,7 +784,8 @@
         화면 확인
       </summary>
       <nav aria-label="구인구직 레이어 확인">
-        <a href="/kdha/career/jobs/hospital/#jobs-privacy-dialog">개인정보 수집 및 이용 동의</a>
+        <a href="/kdha/career/jobs/hospital/#jobs-privacy-dialog">개인정보 수집 및 이용 동의(필수)</a>
+        <a href="/kdha/career/jobs/hospital/#jobs-privacy-optional-dialog">개인정보 수집 및 이용 동의(선택)</a>
         <a href="/kdha/career/jobs/hospital/#jobs-bizno-alert">알림 · 사업자등록번호 확인</a>
         <a href="/kdha/career/jobs/hospital/#jobs-required-alert">알림 · 필수 항목</a>
       </nav>

@@ -309,14 +309,10 @@
         <div id="main-body" class="main-body">
           <!-- KD-US-FIN-02-01 내지원현황 -->
           <div class="career-jobs career-jobs--table">
-            <p class="jobs-total">
-              총
-              <strong>3건</strong>
-            </p>
             <div class="ds-board jobs-table jobs-table--applications" role="table" aria-label="내 지원 현황">
               <div class="ds-board__head" role="row">
                 <span role="columnheader">공고명</span>
-                <span role="columnheader">지원일시</span>
+                <span role="columnheader">등록일</span>
                 <span role="columnheader">병원명</span>
                 <span role="columnheader">마감일</span>
                 <span role="columnheader">지원 취소</span>
@@ -325,19 +321,19 @@
                 <span class="ds-board__title" role="cell">
                   <a href="/kdha/career/jobs/recruit/detail/">강남역 1번출구 바로 옆 포샤르치과 구인합니다.</a>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">지원일시</span>
                   <time datetime="2026-06-30">2026-06-30</time>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta jobs-table__hospital" role="cell">
                   <span class="jobs-table__label">병원명</span>
                   포샤르치과
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">마감일</span>
                   <time datetime="2026-07-05">2026-07-05</time>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__action" role="cell">
                   <button
                     class="ds-button ds-button--small ds-button--outline"
                     type="button"
@@ -351,19 +347,19 @@
                 <span class="ds-board__title" role="cell">
                   <a href="/kdha/career/jobs/recruit/detail/">이사랑치과 진료실 인재 채용 공고</a>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">지원일시</span>
                   <time datetime="2026-06-28">2026-06-28</time>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta jobs-table__hospital" role="cell">
                   <span class="jobs-table__label">병원명</span>
                   이사랑치과
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">마감일</span>
                   <time datetime="2026-07-10">2026-07-10</time>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__action" role="cell">
                   <button
                     class="ds-button ds-button--small ds-button--outline"
                     type="button"
@@ -377,19 +373,19 @@
                 <span class="ds-board__title" role="cell">
                   <a href="/kdha/career/jobs/recruit/detail/">노원구보건소 월계보건지소 치과위생사 채용 공고</a>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">지원일시</span>
                   <time datetime="2026-06-25">2026-06-25</time>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta jobs-table__hospital" role="cell">
                   <span class="jobs-table__label">병원명</span>
                   노원구보건소
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">마감일</span>
                   <time datetime="2026-07-07">2026-07-07</time>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__action" role="cell">
                   <button
                     class="ds-button ds-button--small ds-button--outline"
                     type="button"
@@ -501,15 +497,18 @@
       </footer>
     </div>
     <dialog
-      class="ds-alert"
+      class="ds-alert jobs-alert"
       id="jobs-cancel-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="jobs-cancel-alert-title"
       aria-describedby="jobs-cancel-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
-        close
-      </button>
+      <div class="jobs-alert__head">
+        <h2 class="jobs-alert__title" id="jobs-cancel-alert-title">알림</h2>
+        <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+          close
+        </button>
+      </div>
       <p class="ds-alert__message" id="jobs-cancel-alert-message">지원을 취소하시겠습니까?</p>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>

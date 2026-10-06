@@ -308,28 +308,20 @@
         </header>
         <div id="main-body" class="main-body">
           <!-- KD-US-REC-01-01 (채용공고 전체 보기, 피그마 별도 프레임 없음) -->
-          <div class="career-jobs">
-            <div class="jobs-top">
-              <div class="jobs-top__intro">
-                <nav class="jobs-switch" aria-label="구인구직 구분">
-                  <a href="/kdha/career/jobs/" aria-current="page">구인정보</a>
-                  <a href="/kdha/career/jobs/talent/">구직정보</a>
-                </nav>
-              </div>
-              <p class="jobs-status">병원정보가 승인된 회원입니다.</p>
-            </div>
+          <div class="career-jobs career-jobs--list career-jobs--all">
+            <nav class="ds-tabs ds-tabs--box ds-tabs--fill jobs-switch" aria-label="구인구직 구분">
+              <a class="ds-tabs__item" href="/kdha/career/jobs/" aria-current="page">구인정보</a>
+              <a class="ds-tabs__item" href="/kdha/career/jobs/talent/">구직정보</a>
+            </nav>
             <section class="jobs-results" aria-labelledby="jobs-results-title">
               <div class="jobs-results__head">
-                <div class="jobs-heading">
-                  <h2 id="jobs-results-title">전체 채용공고</h2>
-                  <p>
-                    <strong>124</strong>
-                    개의 채용목록
-                  </p>
-                </div>
-                <button class="jobs-notice-button" type="button" data-dialog-open="jobs-notice-dialog">
+                <h2 id="jobs-results-title">전체 채용공고</h2>
+                <button
+                  class="ds-button ds-button--small ds-button--outline"
+                  type="button"
+                  data-dialog-open="jobs-notice-dialog"
+                >
                   구인 게시판 공지사항
-                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                 </button>
               </div>
               <div class="jobs-toolbar">
@@ -340,11 +332,11 @@
                     <span>전체</span>
                   </label>
                   <label class="form-check">
-                    <input type="radio" name="bank" value="only" />
+                    <input type="checkbox" name="bank-only" />
                     <span>인재채움뱅크(만)</span>
                   </label>
                   <label class="form-check">
-                    <input type="radio" name="bank" value="except" />
+                    <input type="checkbox" name="bank-except" />
                     <span>인재채움뱅크 제외</span>
                   </label>
                   <label class="form-check">
@@ -352,153 +344,238 @@
                     <span>마감 제외</span>
                   </label>
                 </fieldset>
-                <div class="jobs-sort" role="group" aria-label="정렬" data-jobs-toggle-group>
+                <div class="jobs-sort jobs-pc-only" role="group" aria-label="정렬" data-jobs-toggle-group>
                   <button type="button" aria-pressed="true">최신순</button>
                   <button type="button" aria-pressed="false">마감임박순</button>
                 </div>
               </div>
+              <div class="jobs-sort-select jobs-mo-only">
+                <select aria-label="정렬" data-custom-select>
+                  <option data-placeholder="false" selected>최신순</option>
+                  <option>마감임박순</option>
+                </select>
+              </div>
               <ul class="jobs-list">
                 <li>
                   <a class="jobs-item" href="/kdha/career/jobs/recruit/detail/">
+                    <span class="jobs-item__body">
+                      <span class="jobs-item__heading">
+                        <span class="jobs-item__hospital jobs-pc-only">이사랑치과의원</span>
+                      </span>
+                      <span class="jobs-item__title">진료실 치과위생사 선생님을 모십니다.</span>
+                      <span class="jobs-item__meta">
+                        <span class="jobs-mo-only">이사랑치과의원</span>
+                        <span>서울 송파구</span>
+                        <span>경력무관</span>
+                        <span>학력무관</span>
+                        <span>정규직</span>
+                      </span>
+                    </span>
                     <span class="jobs-item__deadline">
                       <strong>D-3</strong>
-                      <time datetime="2026-09-23">09.23</time>
-                    </span>
-                    <span class="jobs-item__body">
-                      <span class="jobs-item__heading">
-                        <span class="jobs-item__title">진료실 치과위생사 선생님을 모십니다.</span>
+                      <span>
+                        <time datetime="2026-09-23">09.23</time>
+                        <span class="jobs-pc-only">마감</span>
                       </span>
-                      <span class="jobs-item__meta">이사랑치과의원 · 서울 송파구 · 경력무관 · 학력무관 · 정규직</span>
                     </span>
-                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    <span class="jobs-item__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                   </a>
                 </li>
                 <li>
                   <a class="jobs-item" href="/kdha/career/jobs/recruit/detail/">
+                    <span class="jobs-item__body">
+                      <span class="jobs-item__heading">
+                        <span class="jobs-item__hospital jobs-pc-only">포샤르치과의원</span>
+                        <span class="ds-badge ds-badge--secondary">인재채움뱅크</span>
+                      </span>
+                      <span class="jobs-item__title">강남역 1번출구 바로 옆 포샤르치과 구인합니다.</span>
+                      <span class="jobs-item__meta">
+                        <span class="jobs-mo-only">포샤르치과의원</span>
+                        <span>서울 강남구</span>
+                        <span>경력 1년 이상</span>
+                        <span>정규직</span>
+                      </span>
+                    </span>
                     <span class="jobs-item__deadline">
                       <strong>D-5</strong>
-                      <time datetime="2026-09-25">09.25</time>
-                    </span>
-                    <span class="jobs-item__body">
-                      <span class="jobs-item__heading">
-                        <span class="ds-badge ds-badge--secondary">인재채움뱅크</span>
-                        <span class="jobs-item__title">강남역 1번출구 바로 옆 포샤르치과 구인합니다.</span>
+                      <span>
+                        <time datetime="2026-09-25">09.25</time>
+                        <span class="jobs-pc-only">마감</span>
                       </span>
-                      <span class="jobs-item__meta">포샤르치과의원 · 서울 강남구 · 경력 1년 이상 · 정규직</span>
                     </span>
-                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    <span class="jobs-item__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                   </a>
                 </li>
                 <li>
                   <a class="jobs-item" href="/kdha/career/jobs/recruit/detail/">
+                    <span class="jobs-item__body">
+                      <span class="jobs-item__heading">
+                        <span class="jobs-item__hospital jobs-pc-only">노원구보건소</span>
+                      </span>
+                      <span class="jobs-item__title">노원구보건소 월계보건지소 치과위생사 채용 공고</span>
+                      <span class="jobs-item__meta">
+                        <span class="jobs-mo-only">노원구보건소</span>
+                        <span>서울 노원구</span>
+                        <span>경력무관</span>
+                        <span>시간선택제</span>
+                      </span>
+                    </span>
                     <span class="jobs-item__deadline">
                       <strong>D-12</strong>
-                      <time datetime="2026-10-02">10.02</time>
-                    </span>
-                    <span class="jobs-item__body">
-                      <span class="jobs-item__heading">
-                        <span class="jobs-item__title">노원구보건소 월계보건지소 치과위생사 채용 공고</span>
+                      <span>
+                        <time datetime="2026-10-02">10.02</time>
+                        <span class="jobs-pc-only">마감</span>
                       </span>
-                      <span class="jobs-item__meta">노원구보건소 · 서울 노원구 · 경력무관 · 시간선택제</span>
                     </span>
-                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    <span class="jobs-item__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                   </a>
                 </li>
                 <li>
                   <a class="jobs-item" href="/kdha/career/jobs/recruit/detail/">
+                    <span class="jobs-item__body">
+                      <span class="jobs-item__heading">
+                        <span class="jobs-item__hospital jobs-pc-only">미소가득치과</span>
+                      </span>
+                      <span class="jobs-item__title">주 3일 근무 가능한 치과위생사 선생님 구합니다.</span>
+                      <span class="jobs-item__meta">
+                        <span class="jobs-mo-only">미소가득치과</span>
+                        <span>경기 성남시</span>
+                        <span>경력무관</span>
+                        <span>아르바이트</span>
+                      </span>
+                    </span>
                     <span class="jobs-item__deadline">
                       <strong>D-20</strong>
-                      <time datetime="2026-10-10">10.10</time>
-                    </span>
-                    <span class="jobs-item__body">
-                      <span class="jobs-item__heading">
-                        <span class="jobs-item__title">주 3일 근무 가능한 치과위생사 선생님 구합니다.</span>
+                      <span>
+                        <time datetime="2026-10-10">10.10</time>
+                        <span class="jobs-pc-only">마감</span>
                       </span>
-                      <span class="jobs-item__meta">미소가득치과 · 경기 성남시 · 경력무관 · 아르바이트</span>
                     </span>
-                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    <span class="jobs-item__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                   </a>
                 </li>
                 <li>
                   <a class="jobs-item" href="/kdha/career/jobs/recruit/detail/">
+                    <span class="jobs-item__body">
+                      <span class="jobs-item__heading">
+                        <span class="jobs-item__hospital jobs-pc-only">바른이치과교정과의원</span>
+                      </span>
+                      <span class="jobs-item__title">교정 전문 치과 진료실 치과위생사 모집</span>
+                      <span class="jobs-item__meta">
+                        <span class="jobs-mo-only">바른이치과교정과의원</span>
+                        <span>서울 서초구</span>
+                        <span>경력 2년 이상</span>
+                        <span>정규직</span>
+                      </span>
+                    </span>
                     <span class="jobs-item__deadline">
                       <strong>D-22</strong>
-                      <time datetime="2026-10-12">10.12</time>
-                    </span>
-                    <span class="jobs-item__body">
-                      <span class="jobs-item__heading">
-                        <span class="jobs-item__title">교정 전문 치과 진료실 치과위생사 모집</span>
+                      <span>
+                        <time datetime="2026-10-12">10.12</time>
+                        <span class="jobs-pc-only">마감</span>
                       </span>
-                      <span class="jobs-item__meta">바른이치과교정과의원 · 서울 서초구 · 경력 2년 이상 · 정규직</span>
                     </span>
-                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    <span class="jobs-item__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                   </a>
                 </li>
                 <li>
                   <a class="jobs-item" href="/kdha/career/jobs/recruit/detail/">
+                    <span class="jobs-item__body">
+                      <span class="jobs-item__heading">
+                        <span class="jobs-item__hospital jobs-pc-only">○○대학교병원</span>
+                        <span class="ds-badge ds-badge--secondary">인재채움뱅크</span>
+                      </span>
+                      <span class="jobs-item__title">대학병원 치과 계약직 치과위생사 채용</span>
+                      <span class="jobs-item__meta">
+                        <span class="jobs-mo-only">○○대학교병원</span>
+                        <span>경기 수원시</span>
+                        <span>경력무관</span>
+                        <span>계약직</span>
+                      </span>
+                    </span>
                     <span class="jobs-item__deadline">
                       <strong>D-25</strong>
-                      <time datetime="2026-10-15">10.15</time>
-                    </span>
-                    <span class="jobs-item__body">
-                      <span class="jobs-item__heading">
-                        <span class="ds-badge ds-badge--secondary">인재채움뱅크</span>
-                        <span class="jobs-item__title">대학병원 치과 계약직 치과위생사 채용</span>
+                      <span>
+                        <time datetime="2026-10-15">10.15</time>
+                        <span class="jobs-pc-only">마감</span>
                       </span>
-                      <span class="jobs-item__meta">○○대학교병원 · 경기 수원시 · 경력무관 · 계약직</span>
                     </span>
-                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    <span class="jobs-item__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                   </a>
                 </li>
                 <li>
                   <a class="jobs-item" href="/kdha/career/jobs/recruit/detail/">
+                    <span class="jobs-item__body">
+                      <span class="jobs-item__heading">
+                        <span class="jobs-item__hospital jobs-pc-only">해맑은치과의원</span>
+                      </span>
+                      <span class="jobs-item__title">데스크·상담 가능한 선생님 모십니다.</span>
+                      <span class="jobs-item__meta">
+                        <span class="jobs-mo-only">해맑은치과의원</span>
+                        <span>인천 연수구</span>
+                        <span>경력 3년 이상</span>
+                        <span>정규직</span>
+                      </span>
+                    </span>
                     <span class="jobs-item__deadline">
                       <strong>D-27</strong>
-                      <time datetime="2026-10-17">10.17</time>
-                    </span>
-                    <span class="jobs-item__body">
-                      <span class="jobs-item__heading">
-                        <span class="jobs-item__title">데스크·상담 가능한 선생님 모십니다.</span>
+                      <span>
+                        <time datetime="2026-10-17">10.17</time>
+                        <span class="jobs-pc-only">마감</span>
                       </span>
-                      <span class="jobs-item__meta">해맑은치과의원 · 인천 연수구 · 경력 3년 이상 · 정규직</span>
                     </span>
-                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    <span class="jobs-item__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                   </a>
                 </li>
                 <li>
                   <a class="jobs-item" href="/kdha/career/jobs/recruit/detail/">
-                    <span class="jobs-item__deadline">
-                      <strong>D-30</strong>
-                      <time datetime="2026-10-20">10.20</time>
-                    </span>
                     <span class="jobs-item__body">
                       <span class="jobs-item__heading">
-                        <span class="jobs-item__title">토요일 격주 근무 치과위생사 구인</span>
+                        <span class="jobs-item__hospital jobs-pc-only">서울미소치과의원</span>
                       </span>
-                      <span class="jobs-item__meta">서울미소치과의원 · 서울 마포구 · 경력무관 · 정규직</span>
+                      <span class="jobs-item__title">토요일 격주 근무 치과위생사 구인</span>
+                      <span class="jobs-item__meta">
+                        <span class="jobs-mo-only">서울미소치과의원</span>
+                        <span>서울 마포구</span>
+                        <span>경력무관</span>
+                        <span>정규직</span>
+                      </span>
                     </span>
-                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    <span class="jobs-item__deadline">
+                      <strong>D-30</strong>
+                      <span>
+                        <time datetime="2026-10-20">10.20</time>
+                        <span class="jobs-pc-only">마감</span>
+                      </span>
+                    </span>
+                    <span class="jobs-item__arrow material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                   </a>
                 </li>
               </ul>
-              <div class="jobs-buttons">
-                <a class="ds-button ds-button--large ds-button--outline" href="/kdha/career/jobs/hospital/">병원등록</a>
-                <a class="ds-button ds-button--large ds-button--primary" href="/kdha/career/jobs/recruit/write/">채용등록</a>
-              </div>
               <nav class="ds-pagination" aria-label="채용공고 목록 페이지">
                 <button type="button" aria-label="이전 페이지">
-                  <span class="material-symbols-rounded">chevron_left</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
                 </button>
-                <button class="is-current" type="button" aria-current="page">1</button>
+                <button type="button" aria-current="page">1</button>
                 <button type="button">2</button>
                 <button type="button">3</button>
                 <button type="button">4</button>
                 <button type="button">5</button>
                 <button type="button" aria-label="다음 페이지">
-                  <span class="material-symbols-rounded">chevron_right</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                 </button>
               </nav>
             </section>
+            <div class="jobs-buttons jobs-buttons--center">
+              <a class="ds-button ds-button--large ds-button--outline" href="/kdha/career/jobs/hospital/">
+                <span class="jobs-pc-only">병원 등록 바로가기</span>
+                <span class="jobs-mo-only">병원 등록</span>
+              </a>
+              <a class="ds-button ds-button--large ds-button--primary" href="/kdha/career/jobs/recruit/write/">
+                <span class="jobs-pc-only">채용등록 바로가기</span>
+                <span class="jobs-mo-only">채용 등록</span>
+              </a>
+            </div>
           </div>
         </div>
         <aside class="page-banner">
@@ -599,38 +676,63 @@
         </div>
       </footer>
     </div>
-    <dialog class="edu-dialog jobs-dialog" id="jobs-notice-dialog" aria-labelledby="jobs-notice-dialog-title">
+    <dialog
+      class="edu-dialog jobs-dialog jobs-dialog--wide"
+      id="jobs-notice-dialog"
+      aria-labelledby="jobs-notice-dialog-title"
+    >
       <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
         close
       </button>
       <h2 id="jobs-notice-dialog-title">구인 게시판 이용공지</h2>
-      <p class="jobs-dialog__lead">
-        본 게시판은 대한치과위생사협회에서 운영하는 치과위생사 전용 구인 게시판이므로 치과위생사 구인 이외의 목적으로는
-        이용할 수 없습니다.
-      </p>
-      <ul class="jobs-dialog__rules">
-        <li>
-          본 게시판은 구인회원 간 형평성을 고려하여 1개 계정으로 1개 등록만 가능합니다. 추가 등록 시 자동으로 이전 글이
-          삭제됩니다.
-        </li>
-        <li>
-          2개소 이상의 개설 형태로 운영하는 의료기관(그룹, 연합, 네트워크 등)은 연합형태를 1기관으로 간주하므로 각
-          개소별 구인글을 취합하여 하나의 게시글로 게시해야 합니다.
-        </li>
-        <li>
-          금지어를 비롯한 도배성, 불법성, 음란성, 광고성 글 게재행위가 총 3회 이상 반복되는 경우 강제 탈퇴되며, 재가입
-          및 해당 기관의 게시판 이용이 금지됩니다.
-        </li>
-        <li>게시글은 모집기간 종료 후 자동 삭제되며, 본 협회는 게시글에 대하여 보관의 의무를 가지지 않습니다.</li>
-        <li>
-          건전한 게시판 운영을 위하여 금지어가 설정되어 일부 단어를 사용하는 경우 게시되지 않습니다. (금지어 예시 :
-          "최고연봉" "페금" 등)
-        </li>
-      </ul>
-      <p class="jobs-dialog__sign">
-        <span>시행일 2013.04.01 · 개정 2019.02.14</span>
-        <strong>사단법인 대한치과위생사협회 정보통신위원회</strong>
-      </p>
+      <div class="edu-dialog__body jobs-dialog__body">
+        <p class="jobs-dialog__lead">
+          본 게시판은 대한치과위생사협회에서 운영하는
+          <span class="ds-text-join">
+            <strong>치과위생사 전용 구인 게시판</strong>
+            <span>이므로</span>
+          </span>
+          치과위생사 구인 이외의 목적으로는 이용할 수 없습니다.
+        </p>
+        <ol class="jobs-dialog__rules">
+          <li>
+            <span class="jobs-dialog__number" aria-hidden="true">01</span>
+            <p>
+              본 게시판은 구인회원 간 형평성을 고려하여 1개 계정으로 1개 등록만 가능합니다. 추가 등록 시 자동으로 이전
+              글이 삭제됩니다.
+            </p>
+          </li>
+          <li>
+            <span class="jobs-dialog__number" aria-hidden="true">02</span>
+            <p>
+              2개소 이상의 개설 형태로 운영하는 의료기관(그룹, 연합, 네트워크 등)은 연합형태를 1기관으로 간주하므로 각
+              개소별 구인글을 취합하여 하나의 게시글로 게시해야 합니다.
+            </p>
+          </li>
+          <li>
+            <span class="jobs-dialog__number" aria-hidden="true">03</span>
+            <p>
+              금지어를 비롯한 도배성, 불법성, 음란성, 광고성 글 게재행위가 총 3회 이상 반복되는 경우 강제 탈퇴되며,
+              재가입 및 해당 기관의 게시판 이용이 금지됩니다.
+            </p>
+          </li>
+          <li>
+            <span class="jobs-dialog__number" aria-hidden="true">04</span>
+            <p>게시글은 모집기간 종료 후 자동 삭제되며, 본 협회는 게시글에 대하여 보관의 의무를 가지지 않습니다.</p>
+          </li>
+          <li>
+            <span class="jobs-dialog__number" aria-hidden="true">05</span>
+            <p>
+              건전한 게시판 운영을 위하여 금지어가 설정되어 일부 단어를 사용하는 경우 게시되지 않습니다. (금지어 예시 :
+              "최고연봉" "페금" 등)
+            </p>
+          </li>
+        </ol>
+        <p class="jobs-dialog__sign">
+          <span>시행일 2013.04.01 · 개정 2019.02.14</span>
+          <strong>사단법인 대한치과위생사협회 정보통신위원회</strong>
+        </p>
+      </div>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>

@@ -315,575 +315,678 @@
             data-jobs-invalid="jobs-required-alert"
             data-jobs-success="jobs-registered-alert"
           >
-            <p class="jobs-alert-text">
-              ※ 작성된 글은 30일 후 자동으로 삭제됩니다. 이후에도 구인 중이라면 공고를 재작성 해주시기 바랍니다.
-            </p>
-            <section class="jobs-card" aria-labelledby="recruit-basic">
-              <div class="jobs-card__head">
+            <ul class="ds-guide-list">
+              <li class="ds-guide-list__item">
+                <span class="ds-guide-list__content">
+                  작성된 글은 30일 후 자동으로 삭제됩니다. 이후에도 구인 중이라면 공고를 재작성 해주시기 바랍니다.
+                </span>
+              </li>
+            </ul>
+            <section class="jobs-form-section" aria-labelledby="recruit-basic">
+              <div class="jobs-form-head">
                 <h2 id="recruit-basic">공고 기본정보</h2>
+                <p class="jobs-form-head__note">
+                  <span class="jobs-required">*</span>
+                  표시는 필수입력 항목입니다.
+                </p>
               </div>
-              <div class="jobs-field form-field form-field--large">
-                <label for="recruit-title">
-                  공고제목
-                  <span class="jobs-required" aria-hidden="true">*</span>
-                </label>
-                <input id="recruit-title" name="recruit-title" type="text" placeholder="제목 입력" required />
-              </div>
-              <div class="jobs-grid">
-                <div class="jobs-field form-field form-field--large">
-                  <label for="recruit-start">
-                    접수기간
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="recruit-title">
+                    공고제목
                     <span class="jobs-required" aria-hidden="true">*</span>
                   </label>
-                  <div class="jobs-inline jobs-inline--wide">
-                    <input
-                      id="recruit-start"
-                      name="recruitStart"
-                      type="text"
-                      inputmode="numeric"
-                      placeholder="YYYY.MM.DD"
-                      aria-label="접수 시작일"
-                      required
-                    />
-                    <span class="jobs-inline__text" aria-hidden="true">~</span>
-                    <input
-                      name="recruitEnd"
-                      type="text"
-                      inputmode="numeric"
-                      placeholder="YYYY.MM.DD"
-                      aria-label="접수 마감일"
-                      required
-                    />
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <input id="recruit-title" name="recruit-title" type="text" placeholder="제목 입력" required />
                   </div>
                 </div>
-                <div class="jobs-field form-field form-field--large">
-                  <label for="recruit-status">
-                    채용상태
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </label>
-                  <select id="recruit-status" name="recruit-status" data-custom-select data-select-size="l" required>
-                    <option value="">선택</option>
-                    <option value="구인중">구인중</option>
-                    <option value="마감">마감</option>
-                  </select>
-                </div>
-              </div>
-              <div class="jobs-field">
-                <label id="recruit-content-label">
-                  상세내용
-                  <span class="jobs-required" aria-hidden="true">*</span>
-                </label>
-                <!-- 에디터 삽입 영역: 개발 시 이 안에 에디터를 넣습니다. -->
-                <div class="jobs-editor" id="recruit-content" data-editor aria-labelledby="recruit-content-label"></div>
-              </div>
-            </section>
-            <section class="jobs-card" aria-labelledby="recruit-requirements">
-              <div class="jobs-card__head">
-                <h2 id="recruit-requirements">모집요강</h2>
-              </div>
-              <div class="jobs-grid">
-                <fieldset class="jobs-field">
-                  <legend>
-                    업무
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </legend>
-                  <div class="jobs-checks">
-                    <label class="form-check">
-                      <input type="checkbox" name="task" value="진료실" />
-                      <span>진료실</span>
+                <div class="jobs-form-cols">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="recruit-start">
+                      접수기간
+                      <span class="jobs-required" aria-hidden="true">*</span>
                     </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="task" value="진료전반" checked />
-                      <span>진료전반</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="task" value="데스크" />
-                      <span>데스크</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="task" value="상담/코디" checked />
-                      <span>상담/코디</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="task" value="교정" />
-                      <span>교정</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="task" value="치과기공" />
-                      <span>치과기공</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="task" value="보철/보존" />
-                      <span>보철/보존</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="task" value="경영지원" />
-                      <span>경영지원</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="task" value="기타" />
-                      <span>기타</span>
-                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <div class="jobs-inline jobs-inline--period">
+                        <input
+                          id="recruit-start"
+                          name="recruitStart"
+                          type="text"
+                          inputmode="numeric"
+                          placeholder="YYYY.MM.DD"
+                          aria-label="접수 시작일"
+                          required
+                        />
+                        <span class="jobs-inline__text" aria-hidden="true">~</span>
+                        <input
+                          name="recruitEnd"
+                          type="text"
+                          inputmode="numeric"
+                          placeholder="YYYY.MM.DD"
+                          aria-label="접수 마감일"
+                          required
+                        />
+                      </div>
+                    </div>
                   </div>
-                </fieldset>
-                <fieldset class="jobs-field">
-                  <legend>
-                    근무형태
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </legend>
-                  <div class="jobs-checks">
-                    <label class="form-check">
-                      <input type="checkbox" name="workType" value="정규직" checked />
-                      <span>정규직</span>
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="recruit-status">
+                      채용상태
+                      <span class="jobs-required" aria-hidden="true">*</span>
                     </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="workType" value="비정규직" />
-                      <span>비정규직</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="workType" value="계약직" />
-                      <span>계약직</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="workType" value="아르바이트" />
-                      <span>아르바이트</span>
-                    </label>
-                    <label class="form-check">
-                      <input type="checkbox" name="workType" value="프리랜서" />
-                      <span>프리랜서</span>
-                    </label>
-                  </div>
-                </fieldset>
-                <div class="jobs-field form-field form-field--large">
-                  <label for="recruit-time">
-                    근무시간
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </label>
-                  <div class="jobs-inline">
-                    <select
-                      id="recruit-time"
-                      name="recruit-time"
-                      aria-label="근무요일"
-                      data-custom-select
-                      data-select-size="l"
-                      required
-                    >
-                      <option value="">근무시간 선택</option>
-                      <option value="월~토(주5일)">월~토(주5일)</option>
-                      <option value="월~토(주40시간)">월~토(주40시간)</option>
-                      <option value="월~토(토요일격주근무)">월~토(토요일격주근무)</option>
-                      <option value="월~토">월~토</option>
-                      <option value="월~일">월~일</option>
-                      <option value="주 1일">주 1일</option>
-                      <option value="주 3일">주 3일</option>
-                      <option value="주 5일">주 5일</option>
-                    </select>
-                    <select aria-label="근무시간대" data-custom-select data-select-size="l">
-                      <option value="">시간 선택</option>
-                      <option value="협의가능">협의가능</option>
-                      <option value="오전">오전</option>
-                      <option value="오후">오후</option>
-                      <option value="종일">종일</option>
-                    </select>
-                    <input type="text" placeholder="직접 입력" aria-label="근무시간 직접 입력" disabled />
-                  </div>
-                </div>
-                <div class="jobs-field form-field form-field--large">
-                  <label for="recruit-sido">
-                    근무지역
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </label>
-                  <div class="jobs-inline">
-                    <select
-                      id="recruit-sido"
-                      name="recruit-sido"
-                      aria-label="시/도"
-                      data-custom-select
-                      data-select-size="l"
-                      required
-                    >
-                      <option value="">시/도</option>
-                      <option value="서울">서울</option>
-                      <option value="경기">경기</option>
-                      <option value="인천">인천</option>
-                      <option value="부산">부산</option>
-                      <option value="대구">대구</option>
-                      <option value="광주">광주</option>
-                      <option value="대전">대전</option>
-                      <option value="울산">울산</option>
-                      <option value="세종">세종</option>
-                      <option value="강원">강원</option>
-                      <option value="충북">충북</option>
-                      <option value="충남">충남</option>
-                      <option value="전북">전북</option>
-                      <option value="전남">전남</option>
-                      <option value="경북">경북</option>
-                      <option value="경남">경남</option>
-                      <option value="제주">제주</option>
-                    </select>
-                    <select aria-label="시/군/구" data-custom-select data-select-size="l" required>
-                      <option value="">시/군/구</option>
-                      <option value="강남구">강남구</option>
-                      <option value="강동구">강동구</option>
-                      <option value="노원구">노원구</option>
-                      <option value="송파구">송파구</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="jobs-field form-field form-field--large">
-                  <label for="recruit-pay">
-                    급여
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </label>
-                  <div class="jobs-inline">
-                    <select id="recruit-pay" name="recruit-pay" data-custom-select data-select-size="l" required>
-                      <option value="">급여 선택</option>
-                      <option value="회사 내규에 따름">회사 내규에 따름</option>
-                      <option value="면접 후 결정">면접 후 결정</option>
-                      <option value="월급">월급</option>
-                      <option value="연봉">연봉</option>
-                      <option value="시급">시급</option>
-                    </select>
-                    <input type="text" placeholder="직접 입력" aria-label="급여 직접 입력" disabled />
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="jobs-card" aria-labelledby="recruit-welfare">
-              <div class="jobs-card__head">
-                <h2 id="recruit-welfare">근무환경 및 우대사항</h2>
-              </div>
-              <fieldset class="jobs-field">
-                <legend>편의지원</legend>
-                <div class="jobs-checks">
-                  <label class="form-check">
-                    <input type="checkbox" name="support" value="중식 지원" />
-                    <span>중식 지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="support" value="석식 지원" checked />
-                    <span>석식 지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="support" value="간식 지원" />
-                    <span>간식 지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="support" value="기숙사 제공" checked />
-                    <span>기숙사 제공</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="support" value="소독 인력" />
-                    <span>소독 인력</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="support" value="청소 인력" />
-                    <span>청소 인력</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="support" value="직원 휴게실" />
-                    <span>직원 휴게실</span>
-                  </label>
-                </div>
-              </fieldset>
-              <fieldset class="jobs-field">
-                <legend>복리후생</legend>
-                <div class="jobs-checks">
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="연차지급" />
-                    <span>연차지급</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="퇴직금" checked />
-                    <span>퇴직금</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="여름휴가" />
-                    <span>여름휴가</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="자기개발비 지원" />
-                    <span>자기개발비 지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="휴가비 지원" />
-                    <span>휴가비 지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="4대보험 지원" />
-                    <span>4대보험 지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="본인 및 가족 치료비 할인" />
-                    <span>본인 및 가족 치료비 할인</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="우수사원 포상" />
-                    <span>우수사원 포상</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="경조사 지원" />
-                    <span>경조사 지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="인센티브제" />
-                    <span>인센티브제</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="연장근무/야근 수당 지원" />
-                    <span>연장근무/야근 수당 지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="장기근속사원 포상" />
-                    <span>장기근속사원 포상</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="세미나 및 교육지원" />
-                    <span>세미나 및 교육지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="명절비 지원" />
-                    <span>명절비 지원</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="welfare" value="기타" checked />
-                    <span>기타</span>
-                  </label>
-                </div>
-              </fieldset>
-            </section>
-            <section class="jobs-card" aria-labelledby="recruit-qualify">
-              <div class="jobs-card__head">
-                <h2 id="recruit-qualify">지원자격</h2>
-              </div>
-              <div class="jobs-grid">
-                <div class="jobs-field form-field form-field--large">
-                  <label for="recruit-career">
-                    경력
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </label>
-                  <select id="recruit-career" name="recruit-career" data-custom-select data-select-size="l" required>
-                    <option value="">선택</option>
-                    <option value="경력무관">경력무관</option>
-                    <option value="신입">신입</option>
-                    <option value="1년 이상">1년 이상</option>
-                    <option value="3년 이상">3년 이상</option>
-                    <option value="5년 이상">5년 이상</option>
-                  </select>
-                </div>
-                <div class="jobs-field form-field form-field--large">
-                  <label for="recruit-edu">
-                    학력
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </label>
-                  <select id="recruit-edu" name="recruit-edu" data-custom-select data-select-size="l" required>
-                    <option value="">선택</option>
-                    <option value="학력무관">학력무관</option>
-                    <option value="대학교(2, 3년) 졸업">대학교(2, 3년) 졸업</option>
-                    <option value="대학교(4년) 졸업">대학교(4년) 졸업</option>
-                  </select>
-                </div>
-              </div>
-              <fieldset class="jobs-field">
-                <legend>면허증 및 자격증 소지</legend>
-                <div class="jobs-checks">
-                  <label class="form-check">
-                    <input type="checkbox" name="license" value="치과위생사" checked />
-                    <span>치과위생사</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="license" value="치과기공사" />
-                    <span>치과기공사</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="license" value="간호조무사" />
-                    <span>간호조무사</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="license" value="코디네이터" />
-                    <span>코디네이터</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="license" value="무관" />
-                    <span>무관</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="license" value="기타" checked />
-                    <span>기타</span>
-                  </label>
-                  <div class="form-field form-field--large">
-                    <input type="text" name="licenseEtc" placeholder="기타 입력" aria-label="기타 면허·자격증 입력" />
-                  </div>
-                </div>
-              </fieldset>
-            </section>
-            <section class="jobs-card" aria-labelledby="recruit-docs">
-              <div class="jobs-card__head">
-                <h2 id="recruit-docs">제출서류 및 지원방법</h2>
-              </div>
-              <fieldset class="jobs-field">
-                <legend>제출서류</legend>
-                <div class="jobs-checks">
-                  <label class="form-check">
-                    <input type="checkbox" name="documents" value="이력서(사진포함)" checked />
-                    <span>이력서(사진포함)</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="documents" value="면허증/자격증 사본" checked />
-                    <span>면허증/자격증 사본</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="documents" value="자기소개서" />
-                    <span>자기소개서</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="documents" value="주민등록등본" />
-                    <span>주민등록등본</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="documents" value="성적증명서" />
-                    <span>성적증명서</span>
-                  </label>
-                  <label class="form-check">
-                    <input type="checkbox" name="documents" value="기타" checked />
-                    <span>기타</span>
-                  </label>
-                  <div class="form-field form-field--large">
-                    <input type="text" name="documentsEtc" placeholder="기타 입력" aria-label="기타 제출서류 입력" />
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="jobs-field">
-                <legend>
-                  지원방법
-                  <span class="jobs-required" aria-hidden="true">*</span>
-                </legend>
-                <div class="jobs-methods">
-                  <div class="jobs-method">
-                    <label class="form-check">
-                      <input type="checkbox" name="applyMethod" value="협회 채용정보 접수" checked />
-                      <span>협회 채용정보 접수</span>
-                    </label>
-                  </div>
-                  <div class="jobs-method">
-                    <label class="form-check">
-                      <input type="checkbox" name="applyMethod" value="이메일 접수" checked />
-                      <span>이메일 접수</span>
-                    </label>
-                    <div class="jobs-inline form-field form-field--large">
-                      <input
-                        type="text"
-                        placeholder="이메일 아이디"
-                        value="dental.recruit"
-                        aria-label="이메일 아이디"
-                      />
-                      <span class="jobs-inline__text" aria-hidden="true">@</span>
-                      <input type="text" placeholder="도메인" value="gmail.com" aria-label="이메일 도메인" />
-                      <select aria-label="이메일 도메인 선택" data-custom-select data-select-size="l">
-                        <option value="">직접입력</option>
-                        <option value="gmail.com">gmail.com</option>
-                        <option value="naver.com">naver.com</option>
-                        <option value="hanmail.net">hanmail.net</option>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <select
+                        id="recruit-status"
+                        name="recruit-status"
+                        required
+                        data-custom-select
+                        data-select-size="l"
+                      >
+                        <option value="">선택</option>
+                        <option value="구인중">구인중</option>
+                        <option value="마감">마감</option>
                       </select>
                     </div>
                   </div>
-                  <div class="jobs-method">
-                    <label class="form-check">
-                      <input type="checkbox" name="applyMethod" value="전화 접수" />
-                      <span>전화 접수</span>
-                    </label>
-                    <div class="form-field form-field--large">
-                      <input type="text" placeholder="- 없이 숫자만 입력" aria-label="전화번호" />
-                    </div>
+                </div>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-content-label">
+                    상세내용
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </p>
+                  <div class="jobs-form-row__slot">
+                    <!-- 에디터 삽입 영역: 개발 시 이 안에 에디터를 넣습니다. -->
+                    <div
+                      class="jobs-editor"
+                      id="recruit-content"
+                      data-editor
+                      aria-labelledby="recruit-content-label"
+                    ></div>
                   </div>
-                  <div class="jobs-method">
-                    <label class="form-check">
-                      <input type="checkbox" name="applyMethod" value="FAX 접수" />
-                      <span>FAX 접수</span>
-                    </label>
-                    <div class="form-field form-field--large">
-                      <input type="text" placeholder="FAX 번호 입력" aria-label="FAX 번호" />
-                    </div>
-                  </div>
-                  <div class="jobs-method">
-                    <label class="form-check">
-                      <input type="checkbox" name="applyMethod" value="우편 접수" />
-                      <span>우편 접수</span>
-                    </label>
-                    <div class="form-field form-field--large">
-                      <input type="text" placeholder="주소 입력" aria-label="우편 접수 주소" />
-                    </div>
-                  </div>
-                  <div class="jobs-method">
-                    <label class="form-check">
-                      <input type="checkbox" name="applyMethod" value="방문 접수" />
-                      <span>방문 접수</span>
-                    </label>
-                    <div class="form-field form-field--large">
-                      <input type="text" placeholder="주소 입력" aria-label="방문 접수 주소" />
-                    </div>
-                  </div>
-                  <div class="jobs-method">
-                    <label class="form-check">
-                      <input type="checkbox" name="applyMethod" value="홈페이지 접수" />
-                      <span>홈페이지 접수</span>
-                    </label>
-                    <div class="form-field form-field--large">
-                      <input type="text" placeholder="홈페이지 주소(URL) 입력" aria-label="홈페이지 주소" />
+                </div>
+              </div>
+            </section>
+            <section class="jobs-form-section" aria-labelledby="recruit-requirements">
+              <div class="jobs-form-head">
+                <h2 id="recruit-requirements">모집요강</h2>
+              </div>
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-task-label">
+                    업무
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-task-label">
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="진료실" />
+                        <span>진료실</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="진료전반" checked />
+                        <span>진료전반</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="데스크" />
+                        <span>데스크</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="상담/코디" checked />
+                        <span>상담/코디</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="교정" />
+                        <span>교정</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="치과기공" />
+                        <span>치과기공</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="보철/보존" />
+                        <span>보철/보존</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="경영지원" />
+                        <span>경영지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="기타" />
+                        <span>기타</span>
+                      </label>
                     </div>
                   </div>
                 </div>
-              </fieldset>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-worktype-label">
+                    근무형태
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-worktype-label">
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="정규직" checked />
+                        <span>정규직</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="비정규직" />
+                        <span>비정규직</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="계약직" />
+                        <span>계약직</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="아르바이트" />
+                        <span>아르바이트</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="프리랜서" />
+                        <span>프리랜서</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="recruit-time">
+                    근무시간
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <div class="jobs-inline jobs-inline--time">
+                      <select
+                        id="recruit-time"
+                        name="recruit-time"
+                        aria-label="근무요일"
+                        required
+                        data-custom-select
+                        data-select-size="l"
+                      >
+                        <option value="">근무시간 선택</option>
+                        <option value="월~토(주5일)">월~토(주5일)</option>
+                        <option value="월~토(주40시간)">월~토(주40시간)</option>
+                        <option value="월~토(토요일격주근무)" selected>월~토(토요일격주근무)</option>
+                        <option value="월~토">월~토</option>
+                        <option value="월~일">월~일</option>
+                        <option value="주 1일">주 1일</option>
+                        <option value="주 3일">주 3일</option>
+                        <option value="주 5일">주 5일</option>
+                      </select>
+                      <select aria-label="근무시간대" data-custom-select data-select-size="l">
+                        <option value="">시간 선택</option>
+                        <option value="협의가능" selected>협의가능</option>
+                        <option value="오전">오전</option>
+                        <option value="오후">오후</option>
+                        <option value="종일">종일</option>
+                      </select>
+                      <input type="text" placeholder="직접 입력" aria-label="근무시간 직접 입력" disabled />
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-cols">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="recruit-sido">
+                      근무지역
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <div class="jobs-inline">
+                        <select
+                          id="recruit-sido"
+                          name="recruit-sido"
+                          aria-label="시/도"
+                          required
+                          data-custom-select
+                          data-select-size="l"
+                        >
+                          <option value="">시/도</option>
+                          <option value="서울">서울</option>
+                          <option value="경기">경기</option>
+                          <option value="인천">인천</option>
+                          <option value="부산">부산</option>
+                          <option value="대구">대구</option>
+                          <option value="광주">광주</option>
+                          <option value="대전">대전</option>
+                          <option value="울산">울산</option>
+                          <option value="세종">세종</option>
+                          <option value="강원">강원</option>
+                          <option value="충북">충북</option>
+                          <option value="충남">충남</option>
+                          <option value="전북">전북</option>
+                          <option value="전남">전남</option>
+                          <option value="경북">경북</option>
+                          <option value="경남">경남</option>
+                          <option value="제주">제주</option>
+                        </select>
+                        <select aria-label="시/군/구" required data-custom-select data-select-size="l">
+                          <option value="">시/군/구</option>
+                          <option value="강남구">강남구</option>
+                          <option value="강동구">강동구</option>
+                          <option value="노원구">노원구</option>
+                          <option value="송파구">송파구</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="recruit-pay">
+                      급여
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <div class="jobs-inline jobs-inline--pay">
+                        <select id="recruit-pay" name="recruit-pay" required data-custom-select data-select-size="l">
+                          <option value="">급여 선택</option>
+                          <option value="회사 내규에 따름">회사 내규에 따름</option>
+                          <option value="면접 후 결정">면접 후 결정</option>
+                          <option value="월급">월급</option>
+                          <option value="연봉">연봉</option>
+                          <option value="시급">시급</option>
+                        </select>
+                        <input type="text" placeholder="직접 입력" aria-label="급여 직접 입력" disabled />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
-            <section class="jobs-card" aria-labelledby="recruit-subway">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="recruit-welfare">
+              <div class="jobs-form-head">
+                <h2 id="recruit-welfare">근무환경 및 우대사항</h2>
+              </div>
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-support-label">편의지원</p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-support-label">
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="support" value="중식 지원" />
+                        <span>중식 지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="support" value="석식 지원" checked />
+                        <span>석식 지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="support" value="간식 지원" />
+                        <span>간식 지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="support" value="기숙사 제공" checked />
+                        <span>기숙사 제공</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="support" value="소독 인력" />
+                        <span>소독 인력</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="support" value="청소 인력" />
+                        <span>청소 인력</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="support" value="직원 휴게실" />
+                        <span>직원 휴게실</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-benefit-label">복리후생</p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-benefit-label">
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="연차지급" />
+                        <span>연차지급</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="퇴직금" checked />
+                        <span>퇴직금</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="여름휴가" />
+                        <span>여름휴가</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="자기개발비 지원" />
+                        <span>자기개발비 지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="휴가비 지원" />
+                        <span>휴가비 지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="4대보험 지원" />
+                        <span>4대보험 지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="본인 및 가족 치료비 할인" />
+                        <span>본인 및 가족 치료비 할인</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="우수사원 포상" />
+                        <span>우수사원 포상</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="경조사 지원" />
+                        <span>경조사 지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="인센티브제" />
+                        <span>인센티브제</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="연장근무/야근 수당 지원" />
+                        <span>연장근무/야근 수당 지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="장기근속사원 포상" />
+                        <span>장기근속사원 포상</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="세미나 및 교육지원" />
+                        <span>세미나 및 교육지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="명절비 지원" />
+                        <span>명절비 지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="welfare" value="기타" checked />
+                        <span>기타</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="jobs-form-section" aria-labelledby="recruit-qualify">
+              <div class="jobs-form-head">
+                <h2 id="recruit-qualify">지원자격</h2>
+              </div>
+              <div class="jobs-form-rows">
+                <div class="jobs-form-cols">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="recruit-career">
+                      경력
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <select
+                        id="recruit-career"
+                        name="recruit-career"
+                        required
+                        data-custom-select
+                        data-select-size="l"
+                      >
+                        <option value="">선택</option>
+                        <option value="경력무관">경력무관</option>
+                        <option value="신입">신입</option>
+                        <option value="1년 이상">1년 이상</option>
+                        <option value="3년 이상">3년 이상</option>
+                        <option value="5년 이상">5년 이상</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="recruit-edu">
+                      학력
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <select id="recruit-edu" name="recruit-edu" required data-custom-select data-select-size="l">
+                        <option value="">선택</option>
+                        <option value="학력무관">학력무관</option>
+                        <option value="대학교(2, 3년) 졸업">대학교(2, 3년) 졸업</option>
+                        <option value="대학교(4년) 졸업">대학교(4년) 졸업</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-row jobs-form-row--wrap">
+                  <p class="jobs-form-row__label" id="recruit-license-label">
+                    면허증 및
+                    <br />
+                    자격증 소지
+                  </p>
+                  <div
+                    class="jobs-form-row__slot form-field form-field--large"
+                    role="group"
+                    aria-labelledby="recruit-license-label"
+                  >
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="license" value="치과위생사" checked />
+                        <span>치과위생사</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="license" value="치과기공사" />
+                        <span>치과기공사</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="license" value="간호조무사" />
+                        <span>간호조무사</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="license" value="코디네이터" />
+                        <span>코디네이터</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="license" value="무관" />
+                        <span>무관</span>
+                      </label>
+                      <span class="jobs-choices__etc">
+                        <label class="form-check">
+                          <input type="checkbox" name="license" value="기타" checked />
+                          <span>기타</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="licenseEtc"
+                          placeholder="기타 입력"
+                          aria-label="기타 면허·자격증 입력"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="jobs-form-section" aria-labelledby="recruit-docs">
+              <div class="jobs-form-head">
+                <h2 id="recruit-docs">제출서류 및 지원방법</h2>
+              </div>
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row jobs-form-row--wrap">
+                  <p class="jobs-form-row__label" id="recruit-documents-label">제출서류</p>
+                  <div
+                    class="jobs-form-row__slot form-field form-field--large"
+                    role="group"
+                    aria-labelledby="recruit-documents-label"
+                  >
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="documents" value="이력서(사진포함)" checked />
+                        <span>이력서(사진포함)</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="documents" value="면허증/자격증 사본" checked />
+                        <span>면허증/자격증 사본</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="documents" value="자기소개서" />
+                        <span>자기소개서</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="documents" value="주민등록등본" />
+                        <span>주민등록등본</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="documents" value="성적증명서" />
+                        <span>성적증명서</span>
+                      </label>
+                      <span class="jobs-choices__etc">
+                        <label class="form-check">
+                          <input type="checkbox" name="documents" value="기타" checked />
+                          <span>기타</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="documentsEtc"
+                          placeholder="기타 입력"
+                          aria-label="기타 제출서류 입력"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-method-label">
+                    지원방법
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </p>
+                  <div
+                    class="jobs-form-row__slot form-field form-field--large"
+                    role="group"
+                    aria-labelledby="recruit-method-label"
+                  >
+                    <div class="jobs-methods">
+                      <div class="jobs-method">
+                        <label class="form-check">
+                          <input type="checkbox" name="applyMethod" value="협회 채용정보 접수" checked />
+                          <span>협회 채용정보 접수</span>
+                        </label>
+                      </div>
+                      <div class="jobs-method">
+                        <label class="form-check">
+                          <input type="checkbox" name="applyMethod" value="이메일 접수" checked />
+                          <span>이메일 접수</span>
+                        </label>
+                        <div class="jobs-inline jobs-inline--email">
+                          <input
+                            type="text"
+                            value="dental.recruit"
+                            placeholder="이메일 아이디"
+                            aria-label="이메일 아이디"
+                          />
+                          <span class="jobs-inline__text" aria-hidden="true">@</span>
+                          <input type="text" value="gmail.com" placeholder="도메인" aria-label="이메일 도메인" />
+                          <select aria-label="이메일 도메인 선택" data-custom-select data-select-size="l">
+                            <option value="">직접입력</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="hanmail.net">hanmail.net</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="jobs-method">
+                        <label class="form-check">
+                          <input type="checkbox" name="applyMethod" value="전화 접수" />
+                          <span>전화 접수</span>
+                        </label>
+                        <input type="text" placeholder="- 없이 숫자만 입력" aria-label="전화번호" />
+                      </div>
+                      <div class="jobs-method">
+                        <label class="form-check">
+                          <input type="checkbox" name="applyMethod" value="FAX 접수" />
+                          <span>FAX 접수</span>
+                        </label>
+                        <input type="text" placeholder="FAX 번호 입력" aria-label="FAX 번호" />
+                      </div>
+                      <div class="jobs-method">
+                        <label class="form-check">
+                          <input type="checkbox" name="applyMethod" value="우편 접수" />
+                          <span>우편 접수</span>
+                        </label>
+                        <input type="text" placeholder="주소 입력" aria-label="우편 접수 주소" />
+                      </div>
+                      <div class="jobs-method">
+                        <label class="form-check">
+                          <input type="checkbox" name="applyMethod" value="방문 접수" />
+                          <span>방문 접수</span>
+                        </label>
+                        <input type="text" placeholder="주소 입력" aria-label="방문 접수 주소" />
+                      </div>
+                      <div class="jobs-method">
+                        <label class="form-check">
+                          <input type="checkbox" name="applyMethod" value="홈페이지 접수" />
+                          <span>홈페이지 접수</span>
+                        </label>
+                        <input type="text" placeholder="홈페이지 주소(URL) 입력" aria-label="홈페이지 주소" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="jobs-form-section" aria-labelledby="recruit-subway">
+              <div class="jobs-form-head">
                 <h2 id="recruit-subway">지하철역 정보</h2>
               </div>
-              <div class="jobs-inline jobs-inline--wide">
-                <select aria-label="지하철 노선" data-custom-select data-select-size="l">
-                  <option value="">노선 선택</option>
-                  <option value="1호선">1호선</option>
-                  <option value="2호선">2호선</option>
-                  <option value="3호선">3호선</option>
-                  <option value="4호선">4호선</option>
-                  <option value="5호선">5호선</option>
-                  <option value="6호선">6호선</option>
-                  <option value="7호선">7호선</option>
-                  <option value="8호선">8호선</option>
-                  <option value="9호선">9호선</option>
-                </select>
-                <select aria-label="지하철역" data-custom-select data-select-size="l">
-                  <option value="">역 선택</option>
-                  <option value="월계역">월계역</option>
-                  <option value="광운대역">광운대역</option>
-                  <option value="석계역">석계역</option>
-                </select>
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="recruit-line">지하철역</label>
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <div class="jobs-inline jobs-inline--even">
+                      <select id="recruit-line" aria-label="지하철 노선" data-custom-select data-select-size="l">
+                        <option value="">노선 선택</option>
+                        <option value="1호선" selected>1호선</option>
+                        <option value="2호선">2호선</option>
+                        <option value="3호선">3호선</option>
+                        <option value="4호선">4호선</option>
+                        <option value="5호선">5호선</option>
+                        <option value="6호선">6호선</option>
+                        <option value="7호선">7호선</option>
+                        <option value="8호선">8호선</option>
+                        <option value="9호선">9호선</option>
+                      </select>
+                      <select aria-label="지하철역" data-custom-select data-select-size="l">
+                        <option value="">역 선택</option>
+                        <option value="월계역">월계역</option>
+                        <option value="광운대역">광운대역</option>
+                        <option value="석계역">석계역</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-            <section class="jobs-card" aria-labelledby="recruit-attach">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="recruit-attach">
+              <div class="jobs-form-head">
                 <h2 id="recruit-attach">별도 공고 첨부</h2>
-                <p>등록 가능 파일 형식 : pdf, zip, hwp, doc, docx, ppt, pptx, jpg, png</p>
               </div>
-              <div class="jobs-drop" data-jobs-drop>
-                <p>이곳에 파일을 드래그 하거나, 파일찾기 버튼으로 파일을 추가해 주세요.</p>
-                <small>※ 100MB 이하의 파일만 등록할 수 있습니다.</small>
-                <label class="ds-button ds-button--large ds-button--outline" for="recruit-file">파일찾기</label>
-                <input
-                  class="sr-only"
-                  type="file"
-                  id="recruit-file"
-                  name="recruit-file"
-                  accept=".pdf,.zip,.hwp,.doc,.docx,.ppt,.pptx,.jpg,.png"
-                />
-                <p class="jobs-drop__list" data-jobs-drop-list aria-live="polite"></p>
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-file-label">첨부파일</p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-file-label">
+                    <div class="jobs-drop" data-jobs-drop>
+                      <p>
+                        이곳에 파일을 드래그 하거나, 파일찾기 버튼으로 파일을 추가해 주세요.
+                        <br />
+                        ※ 100MB 이하의 파일만 등록할 수 있습니다.
+                      </p>
+                      <label class="ds-button ds-button--small ds-button--outline" for="recruit-file">파일찾기</label>
+                      <input
+                        class="sr-only"
+                        type="file"
+                        id="recruit-file"
+                        name="recruit-file"
+                        accept=".pdf,.zip,.hwp,.doc,.docx,.ppt,.pptx,.jpg,.png"
+                        aria-describedby="recruit-file-hint"
+                      />
+                      <p class="jobs-drop__list" data-jobs-drop-list aria-live="polite"></p>
+                    </div>
+                    <p class="jobs-hint" id="recruit-file-hint">
+                      등록 가능 파일 형식 : pdf, zip, hwp, doc, docx, ppt, pptx, jpg, png
+                    </p>
+                  </div>
+                </div>
               </div>
             </section>
-            <section class="jobs-card" aria-labelledby="recruit-fact">
-              <div class="jobs-card__head">
+            <section class="jobs-form-section" aria-labelledby="recruit-fact">
+              <div class="jobs-form-head">
                 <h2 id="recruit-fact">제공정보 사실 확인 동의</h2>
               </div>
-              <label class="form-check">
+              <label class="form-check jobs-fact">
                 <input type="checkbox" name="factAgree" required />
                 <span>위 입력 내용에 대한 사실 확인에 동의합니다.</span>
               </label>
@@ -993,33 +1096,39 @@
       </footer>
     </div>
     <dialog
-      class="ds-alert"
+      class="ds-alert jobs-alert"
       id="jobs-registered-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="jobs-registered-alert-title"
       aria-describedby="jobs-registered-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
-        close
-      </button>
+      <div class="jobs-alert__head">
+        <h2 class="jobs-alert__title" id="jobs-registered-alert-title">알림</h2>
+        <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+          close
+        </button>
+      </div>
       <p class="ds-alert__message" id="jobs-registered-alert-message">채용정보가 등록되었습니다.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <dialog
-      class="ds-alert"
+      class="ds-alert jobs-alert"
       id="jobs-required-alert"
       role="alertdialog"
-      aria-label="알림"
+      aria-labelledby="jobs-required-alert-title"
       aria-describedby="jobs-required-alert-message"
     >
-      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
-        close
-      </button>
+      <div class="jobs-alert__head">
+        <h2 class="jobs-alert__title" id="jobs-required-alert-title">알림</h2>
+        <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+          close
+        </button>
+      </div>
       <p class="ds-alert__message" id="jobs-required-alert-message">필수 항목을 모두 입력해 주세요.</p>
       <div class="edu-dialog__actions">
-        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>확인</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
     </dialog>
     <details class="account-layer-menu">

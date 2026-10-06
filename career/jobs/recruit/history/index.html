@@ -309,10 +309,6 @@
         <div id="main-body" class="main-body">
           <!-- KD-US-REC-03-01 -->
           <div class="career-jobs career-jobs--table">
-            <p class="jobs-total">
-              총
-              <strong>3건</strong>
-            </p>
             <div class="ds-board jobs-table jobs-table--history" role="table" aria-label="채용공고 내역">
               <div class="ds-board__head" role="row">
                 <span role="columnheader">공고명</span>
@@ -325,26 +321,27 @@
                 <span class="ds-board__title" role="cell">
                   <a href="/kdha/career/jobs/recruit/detail/">강남역 1번출구 바로 옆 포샤르치과 구인합니다.</a>
                 </span>
-                <span class="jobs-table__count" role="cell">
-                  <span class="jobs-table__label">지원자</span>
+                <span class="jobs-table__applicants-cell" role="cell">
                   <button
                     class="jobs-table__applicants"
                     type="button"
                     data-dialog-open="jobs-applicants-dialog"
                     aria-label="지원자 2명 목록 보기"
                   >
+                    <span class="jobs-mo-only">지원자</span>
                     2
+                    <span class="jobs-mo-only">명 보기</span>
                   </button>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">등록일</span>
                   <time datetime="2026-06-30">2026-06-30</time>
                 </span>
-                <span class="jobs-table__count" role="cell">
+                <span class="jobs-table__meta jobs-table__count" role="cell">
                   <span class="jobs-table__label">지원현황</span>
                   12
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">조회수</span>
                   50
                 </span>
@@ -353,58 +350,60 @@
                 <span class="ds-board__title" role="cell">
                   <a href="/kdha/career/jobs/recruit/detail/">이사랑치과 진료실 인재 채용 공고</a>
                 </span>
-                <span class="jobs-table__count" role="cell">
-                  <span class="jobs-table__label">지원자</span>
+                <span class="jobs-table__applicants-cell" role="cell">
                   <button
                     class="jobs-table__applicants"
                     type="button"
                     data-dialog-open="jobs-applicants-dialog"
                     aria-label="지원자 12명 목록 보기"
                   >
+                    <span class="jobs-mo-only">지원자</span>
                     12
+                    <span class="jobs-mo-only">명 보기</span>
                   </button>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">등록일</span>
                   <time datetime="2026-06-30">2026-06-30</time>
                 </span>
-                <span class="jobs-table__count" role="cell">
+                <span class="jobs-table__meta jobs-table__count" role="cell">
                   <span class="jobs-table__label">지원현황</span>
                   1
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">조회수</span>
                   53
                 </span>
               </div>
               <div class="ds-board__row" role="row">
                 <span class="ds-board__title" role="cell"><a href="/kdha/career/jobs/recruit/detail/">채용 공고</a></span>
-                <span class="jobs-table__count" role="cell">
-                  <span class="jobs-table__label">지원자</span>
+                <span class="jobs-table__applicants-cell" role="cell">
                   <button
                     class="jobs-table__applicants"
                     type="button"
                     data-dialog-open="jobs-applicants-dialog"
                     aria-label="지원자 21명 목록 보기"
                   >
+                    <span class="jobs-mo-only">지원자</span>
                     21
+                    <span class="jobs-mo-only">명 보기</span>
                   </button>
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">등록일</span>
                   <time datetime="2026-06-30">2026-06-30</time>
                 </span>
-                <span class="jobs-table__count" role="cell">
+                <span class="jobs-table__meta jobs-table__count" role="cell">
                   <span class="jobs-table__label">지원현황</span>
                   2
                 </span>
-                <span role="cell">
+                <span class="jobs-table__meta" role="cell">
                   <span class="jobs-table__label">조회수</span>
                   5
                 </span>
               </div>
             </div>
-            <div class="jobs-buttons">
+            <div class="jobs-buttons jobs-buttons--center">
               <a class="ds-button ds-button--large ds-button--primary" href="/kdha/career/jobs/recruit/write/">
                 채용정보 등록하기
               </a>
@@ -511,7 +510,7 @@
     </div>
 
     <dialog
-      class="edu-dialog jobs-dialog jobs-dialog--applicants"
+      class="edu-dialog jobs-dialog jobs-dialog--wide"
       id="jobs-applicants-dialog"
       aria-labelledby="jobs-applicants-dialog-title"
     >
@@ -519,84 +518,77 @@
         close
       </button>
       <h2 id="jobs-applicants-dialog-title">지원자 리스트</h2>
-      <div class="jobs-dialog__post">
-        <strong>판교메디피움치과 진료실 정규직 (계약직)</strong>
-        <p>해당 채용공고에 지원한 지원자 목록입니다.</p>
+      <div class="edu-dialog__body jobs-dialog__body">
+        <div class="jobs-dialog__post">
+          <strong>판교메디피움치과 진료실 정규직 (계약직)</strong>
+          <p>해당 채용공고에 지원한 지원자 목록입니다.</p>
+        </div>
+        <div class="jobs-dialog__list">
+          <div class="jobs-dialog__toolbar">
+            <select aria-label="페이지당 목록" data-custom-select>
+              <option value="10" data-placeholder="false" selected>10개</option>
+              <option value="20">20개</option>
+            </select>
+          </div>
+          <div class="ds-board jobs-table jobs-table--applicants-list" role="table" aria-label="지원자 리스트">
+            <div class="ds-board__head" role="row">
+              <span role="columnheader">번호</span>
+              <span role="columnheader">지원자명</span>
+              <span role="columnheader">면허번호</span>
+              <span role="columnheader">연락처</span>
+              <span role="columnheader">지원일</span>
+            </div>
+            <div class="ds-board__row" role="row">
+              <span class="jobs-table__number" role="cell">2</span>
+              <span class="ds-board__title" role="cell"><a href="/kdha/career/jobs/talent/detail/">홍길동</a></span>
+              <span role="cell">
+                <span class="jobs-table__label">면허번호</span>
+                1234567
+              </span>
+              <span role="cell">
+                <span class="jobs-table__label">연락처</span>
+                010-1234-5468
+              </span>
+              <span role="cell">
+                <span class="jobs-table__label">지원일</span>
+                <time datetime="2026-09-25">2026-09-25</time>
+              </span>
+            </div>
+            <div class="ds-board__row" role="row">
+              <span class="jobs-table__number" role="cell">1</span>
+              <span class="ds-board__title" role="cell"><a href="/kdha/career/jobs/talent/detail/">홍길이</a></span>
+              <span role="cell">
+                <span class="jobs-table__label">면허번호</span>
+                1234567
+              </span>
+              <span role="cell">
+                <span class="jobs-table__label">연락처</span>
+                010-1234-5468
+              </span>
+              <span role="cell">
+                <span class="jobs-table__label">지원일</span>
+                <time datetime="2026-09-24">2026-09-24</time>
+              </span>
+            </div>
+          </div>
+        </div>
+        <nav class="ds-pagination" aria-label="지원자 목록 페이지">
+          <button type="button" aria-label="이전 페이지">
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+          </button>
+          <button type="button" aria-current="page">1</button>
+          <button type="button">2</button>
+          <button type="button">3</button>
+          <button type="button">4</button>
+          <button type="button">5</button>
+          <button type="button" aria-label="다음 페이지">
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+          </button>
+        </nav>
       </div>
-      <div class="jobs-dialog__toolbar">
-        <p class="jobs-total">
-          지원자 총
-          <strong>2명</strong>
-        </p>
-        <div class="jobs-talent-list__limit">
-          <label for="jobs-applicants-limit">페이지당 목록</label>
-          <select id="jobs-applicants-limit" data-custom-select>
-            <option value="10">10개</option>
-            <option value="20">20개</option>
-          </select>
-          <button class="ds-button ds-button--medium ds-button--outline" type="button">변경</button>
-        </div>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
-      <div class="ds-board jobs-table jobs-table--applicants-list" role="table" aria-label="지원자 리스트">
-        <div class="ds-board__head" role="row">
-          <span role="columnheader">번호</span>
-          <span role="columnheader">지원자명</span>
-          <span role="columnheader">면허번호</span>
-          <span role="columnheader">연락처</span>
-          <span role="columnheader">지원일</span>
-        </div>
-        <div class="ds-board__row" role="row">
-          <span role="cell">
-            <span class="jobs-table__label">번호</span>
-            2
-          </span>
-          <span class="ds-board__title" role="cell"><a href="/kdha/career/jobs/talent/detail/">홍길동</a></span>
-          <span role="cell">
-            <span class="jobs-table__label">면허번호</span>
-            1234567
-          </span>
-          <span role="cell">
-            <span class="jobs-table__label">연락처</span>
-            010-1234-5468
-          </span>
-          <span role="cell">
-            <span class="jobs-table__label">지원일</span>
-            <time datetime="2026-09-25">2026-09-25</time>
-          </span>
-        </div>
-        <div class="ds-board__row" role="row">
-          <span role="cell">
-            <span class="jobs-table__label">번호</span>
-            1
-          </span>
-          <span class="ds-board__title" role="cell"><a href="/kdha/career/jobs/talent/detail/">홍길이</a></span>
-          <span role="cell">
-            <span class="jobs-table__label">면허번호</span>
-            1234567
-          </span>
-          <span role="cell">
-            <span class="jobs-table__label">연락처</span>
-            010-1234-5468
-          </span>
-          <span role="cell">
-            <span class="jobs-table__label">지원일</span>
-            <time datetime="2026-09-24">2026-09-24</time>
-          </span>
-        </div>
-      </div>
-      <nav class="ds-pagination" aria-label="지원자 목록 페이지">
-        <button type="button" aria-label="이전 페이지">
-          <span class="material-symbols-rounded">chevron_left</span>
-        </button>
-        <button class="is-current" type="button" aria-current="page">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button type="button">4</button>
-        <button type="button">5</button>
-        <button type="button" aria-label="다음 페이지">
-          <span class="material-symbols-rounded">chevron_right</span>
-        </button>
-      </nav>
     </dialog>
     <details class="account-layer-menu">
       <summary>

@@ -16,8 +16,9 @@
       group.querySelectorAll('button').forEach(function (item) {
         item.setAttribute('aria-pressed', String(item === button));
       });
-      var heading = group.parentElement.querySelector('.jobs-tree__items > h4');
-      if (heading) heading.textContent = button.textContent.trim();
+      // 2단계 목록 제목(예: 서울 · 시군구)을 선택한 1단계 항목으로 바꿉니다.
+      var heading = group.parentElement.querySelector('[data-jobs-group-heading]');
+      if (heading) heading.textContent = button.textContent.trim() + heading.dataset.jobsGroupHeading;
     });
   });
 
@@ -83,7 +84,12 @@
         filter.querySelectorAll('.jobs-filter__value').forEach(function (value) {
           value.textContent = '';
         });
-        if (chips) chips.innerHTML = '';
+        // 선택 칩만 지우고 '선택한 조건이 없습니다' 안내 문구는 남깁니다.
+        if (chips) {
+          chips.querySelectorAll('button').forEach(function (chip) {
+            chip.remove();
+          });
+        }
       });
     }
   });
@@ -111,14 +117,24 @@
     });
   });
 
-  // 학력·경력 행 추가/삭제
+  // 학력·경력 행 추가/삭제(제목 행의 추가 버튼 · 행의 삭제 버튼)
+  var repeatSequence = 0;
   document.querySelectorAll('[data-jobs-repeat]').forEach(function (repeat) {
     var template = repeat.querySelector('[data-jobs-repeat-row]').cloneNode(true);
     repeat.addEventListener('click', function (event) {
       if (event.target.closest('[data-jobs-repeat-add]')) {
         var row = template.cloneNode(true);
+        var rows = repeat.querySelectorAll('[data-jobs-repeat-row]');
+        repeatSequence += 1;
         row.querySelectorAll('input').forEach(function (input) {
           input.value = '';
+        });
+        // 복제한 행의 id와 연결 속성이 겹치지 않게 번호를 붙입니다.
+        row.querySelectorAll('[id]').forEach(function (node) {
+          node.id = node.id + '-' + repeatSequence;
+        });
+        row.querySelectorAll('[aria-labelledby]').forEach(function (node) {
+          node.setAttribute('aria-labelledby', node.getAttribute('aria-labelledby') + '-' + repeatSequence);
         });
         // 복제한 행의 셀렉트는 공통 커스텀 셀렉트를 다시 만듭니다.
         row.querySelectorAll('.ds-select').forEach(function (custom) {
@@ -130,7 +146,7 @@
           native.removeAttribute('aria-hidden');
           native.selectedIndex = 0;
         });
-        repeat.insertBefore(row, event.target.closest('[data-jobs-repeat-add]'));
+        rows[rows.length - 1].after(row);
         if (window.KDHAComponents && window.KDHAComponents.initCustomSelects) {
           window.KDHAComponents.initCustomSelects(row);
         }

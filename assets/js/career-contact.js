@@ -9,6 +9,14 @@
     if (dialog && dialog.tagName === 'DIALOG' && !dialog.open) dialog.showModal();
   }
 
+  // 모바일 상담 탭: 가로 스크롤 안에서 현재 탭이 보이도록 위치를 맞춥니다.
+  document.querySelectorAll('.consult-tabs').forEach(function (tabs) {
+    var current = tabs.querySelector('[aria-current]');
+    if (!current || tabs.scrollWidth <= tabs.clientWidth) return;
+    var overflow = current.getBoundingClientRect().right - tabs.getBoundingClientRect().right;
+    if (overflow > 0) tabs.scrollLeft += overflow;
+  });
+
   // 답변상태 필터(전체 · 답변대기 · 답변완료)
   document.querySelectorAll('[data-consult-filter]').forEach(function (filter) {
     var scope = filter.closest('.career-contact') || document;

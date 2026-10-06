@@ -308,302 +308,545 @@
         </header>
         <div id="main-body" class="main-body">
           <!-- KD-US-FIN-01-01 -->
-          <div class="career-jobs">
-            <nav class="jobs-switch" aria-label="구인구직 구분">
-              <a href="/kdha/career/jobs/">구인정보</a>
-              <a href="/kdha/career/jobs/talent/" aria-current="page">구직정보</a>
+          <div class="career-jobs career-jobs--list career-jobs--talent">
+            <nav class="ds-tabs ds-tabs--box ds-tabs--fill jobs-switch" aria-label="구인구직 구분">
+              <a class="ds-tabs__item" href="/kdha/career/jobs/">구인정보</a>
+              <a class="ds-tabs__item" href="/kdha/career/jobs/talent/" aria-current="page">구직정보</a>
             </nav>
-            <section class="jobs-talent-search" aria-labelledby="jobs-talent-search-title">
-              <div class="jobs-talent-search__intro">
-                <h2 id="jobs-talent-search-title">
-                  <span class="jobs-nowrap">
-                    나에게 맞는&nbsp;
-                    <em>인재</em>
-                    를 찾아보세요.
-                  </span>
-                </h2>
-                <p>근무지역과 업무 조건을 선택해 등록된 인재정보를 검색할 수 있습니다.</p>
+            <div class="jobs-search">
+              <div class="jobs-top">
+                <div class="jobs-top__intro">
+                  <h2 class="jobs-top__title">인재를 찾아보세요</h2>
+                  <p class="jobs-top__desc">근무지역과 업무 조건을 선택해 등록된 인재정보를 검색할 수 있습니다.</p>
+                </div>
+                <div class="jobs-top__links">
+                  <button
+                    class="ds-button ds-button--medium ds-button--outline"
+                    type="button"
+                    data-dialog-open="jobs-tip-dialog"
+                  >
+                    인재정보 이용 Tip
+                  </button>
+                  <a class="ds-button ds-button--medium ds-button--outline" href="/kdha/career/jobs/applications/">
+                    지원현황
+                  </a>
+                  <a class="ds-button ds-button--medium ds-button--outline" href="/kdha/career/jobs/talent/write/">
+                    인재정보 등록하기
+                  </a>
+                </div>
               </div>
-              <form role="search">
-                <select aria-label="근무지역" data-custom-select data-select-size="l">
-                  <option value="">근무지역</option>
-                  <option value="서울">서울</option>
-                  <option value="경기">경기</option>
-                  <option value="인천">인천</option>
-                  <option value="부산">부산</option>
-                  <option value="대구">대구</option>
-                  <option value="광주">광주</option>
-                  <option value="대전">대전</option>
-                  <option value="울산">울산</option>
-                  <option value="세종">세종</option>
-                  <option value="강원">강원</option>
-                  <option value="충북">충북</option>
-                  <option value="충남">충남</option>
-                  <option value="전북">전북</option>
-                  <option value="전남">전남</option>
-                  <option value="경북">경북</option>
-                  <option value="경남">경남</option>
-                  <option value="제주">제주</option>
-                </select>
-                <select aria-label="지하철 노선" data-custom-select data-select-size="l">
-                  <option value="">노선</option>
-                  <option value="1호선">1호선</option>
-                  <option value="2호선">2호선</option>
-                  <option value="3호선">3호선</option>
-                  <option value="4호선">4호선</option>
-                  <option value="5호선">5호선</option>
-                  <option value="6호선">6호선</option>
-                  <option value="7호선">7호선</option>
-                  <option value="8호선">8호선</option>
-                  <option value="9호선">9호선</option>
-                </select>
-                <select aria-label="업무" data-custom-select data-select-size="l">
-                  <option value="">업무</option>
-                  <option value="진료실">진료실</option>
-                  <option value="진료전반">진료전반</option>
-                  <option value="데스크">데스크</option>
-                  <option value="상담/코디">상담/코디</option>
-                  <option value="교정">교정</option>
-                  <option value="치과기공">치과기공</option>
-                  <option value="보철/보존">보철/보존</option>
-                  <option value="경영지원">경영지원</option>
-                  <option value="기타">기타</option>
-                </select>
-                <button class="ds-button ds-button--large ds-button--outline" type="button">상세 (0)</button>
-                <button class="ds-button ds-button--large ds-button--primary" type="submit">검색하기</button>
-              </form>
-              <div class="jobs-buttons jobs-buttons--center">
-                <button
-                  class="ds-button ds-button--large ds-button--outline"
-                  type="button"
-                  data-dialog-open="jobs-tip-dialog"
+              <section class="jobs-filter jobs-filter--talent" aria-label="인재정보 검색 조건" data-jobs-filter>
+                <div class="jobs-filter__steps" role="tablist" aria-label="검색 조건">
+                  <button
+                    class="jobs-filter__step"
+                    id="talent-step-region"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="talent-filter-region"
+                  >
+                    <img
+                      class="jobs-filter__icon"
+                      src="/kdha/assets/images/career/jobs-icon-region.svg"
+                      width="40"
+                      height="40"
+                      alt=""
+                    />
+                    <span class="jobs-filter__text">
+                      <span class="jobs-filter__label">근무지역</span>
+                      <span class="jobs-filter__value"></span>
+                    </span>
+                  </button>
+                  <button
+                    class="jobs-filter__step"
+                    id="talent-step-subway"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="talent-filter-subway"
+                  >
+                    <img
+                      class="jobs-filter__icon"
+                      src="/kdha/assets/images/career/jobs-icon-subway.svg"
+                      width="40"
+                      height="40"
+                      alt=""
+                    />
+                    <span class="jobs-filter__text">
+                      <span class="jobs-filter__label">지하철노선</span>
+                      <span class="jobs-filter__value"></span>
+                    </span>
+                  </button>
+                  <button
+                    class="jobs-filter__step"
+                    id="talent-step-task"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="talent-filter-task"
+                  >
+                    <img
+                      class="jobs-filter__icon"
+                      src="/kdha/assets/images/career/jobs-icon-task.svg"
+                      width="40"
+                      height="40"
+                      alt=""
+                    />
+                    <span class="jobs-filter__text">
+                      <span class="jobs-filter__label">업무</span>
+                      <span class="jobs-filter__value"></span>
+                    </span>
+                  </button>
+                  <button
+                    class="jobs-filter__step jobs-filter__step--more"
+                    id="talent-step-detail"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="talent-filter-detail"
+                  >
+                    <img
+                      class="jobs-filter__icon jobs-mo-only"
+                      src="/kdha/assets/images/career/jobs-icon-task.svg"
+                      width="40"
+                      height="40"
+                      alt=""
+                    />
+                    <span class="jobs-filter__text">
+                      <span class="jobs-filter__label">상세 조건 (0)</span>
+                      <span class="jobs-filter__value jobs-mo-only"></span>
+                    </span>
+                    <span class="jobs-filter__arrow material-symbols-rounded" aria-hidden="true">
+                      arrow_forward_ios
+                    </span>
+                  </button>
+                </div>
+                <div
+                  class="jobs-filter__panel"
+                  id="talent-filter-region"
+                  role="tabpanel"
+                  aria-labelledby="talent-step-region"
+                  hidden
                 >
-                  인재정보 이용 Tip
-                </button>
-                <a class="ds-button ds-button--large ds-button--outline" href="/kdha/career/jobs/applications/">지원현황</a>
-                <a class="ds-button ds-button--large ds-button--outline" href="/kdha/career/jobs/talent/write/">
-                  + 인재정보 등록하기
-                </a>
-              </div>
-            </section>
-            <section class="jobs-section" aria-labelledby="jobs-talent-recommend">
+                  <div class="jobs-filter__head">
+                    <h3>근무지역 선택</h3>
+                    <span class="jobs-filter__toggle material-symbols-rounded" aria-hidden="true">
+                      keyboard_arrow_up
+                    </span>
+                  </div>
+                  <p class="jobs-filter__desc">시·도를 선택한 후 희망 근무지역을 선택해 주세요.</p>
+                  <div class="form-field form-field--large">
+                    <label class="sr-only" for="talent-region-keyword">지역명 입력</label>
+                    <input id="talent-region-keyword" type="search" placeholder="지역명 입력" />
+                  </div>
+                  <div class="jobs-options" role="group" aria-label="시·도" data-jobs-toggle-group>
+                    <button class="jobs-option" type="button" aria-pressed="false">전국</button>
+                    <button class="jobs-option" type="button" aria-pressed="true">서울</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">경기</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">인천</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">부산</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">대구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">광주</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">대전</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">울산</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">강원</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">충북</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">충남</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">전북</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">전남</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">경북</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">경남</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">제주</button>
+                  </div>
+                  <h4 class="jobs-filter__subtitle" data-jobs-group-heading=" · 시군구">서울 · 시군구</h4>
+                  <div class="jobs-options" data-jobs-options>
+                    <button class="jobs-option" type="button" aria-pressed="false">전체</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">강남구</button>
+                    <button class="jobs-option" type="button" aria-pressed="true">강동구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">강북구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">강서구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">관악구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">광진구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">구로구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">금천구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">노원구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">도봉구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">동대문구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">동작구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">마포구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">서대문구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">서초구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">성동구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">성북구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">송파구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">양천구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">영등포구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">용산구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">은평구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">종로구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">중구</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">중랑구</button>
+                  </div>
+                </div>
+                <div
+                  class="jobs-filter__panel"
+                  id="talent-filter-subway"
+                  role="tabpanel"
+                  aria-labelledby="talent-step-subway"
+                  hidden
+                >
+                  <div class="jobs-filter__head">
+                    <h3>지하철노선 선택</h3>
+                    <span class="jobs-filter__toggle material-symbols-rounded" aria-hidden="true">
+                      keyboard_arrow_up
+                    </span>
+                  </div>
+                  <p class="jobs-filter__desc">노선을 선택한 후 희망 근무역을 선택해 주세요.</p>
+                  <div class="form-field form-field--large">
+                    <label class="sr-only" for="talent-subway-keyword">역명 입력</label>
+                    <input id="talent-subway-keyword" type="search" placeholder="역명 입력" />
+                  </div>
+                  <div class="jobs-options" role="group" aria-label="노선" data-jobs-toggle-group>
+                    <button class="jobs-option" type="button" aria-pressed="true">1호선</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">2호선</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">3호선</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">4호선</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">5호선</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">6호선</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">7호선</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">8호선</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">9호선</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">GTX-A</button>
+                  </div>
+                  <h4 class="jobs-filter__subtitle" data-jobs-group-heading=" · 역">1호선 · 역</h4>
+                  <div class="jobs-options" data-jobs-options>
+                    <button class="jobs-option" type="button" aria-pressed="false">전체</button>
+                    <button class="jobs-option" type="button" aria-pressed="true">가산디지털단지</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">간석</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">개봉</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">관악</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">광명</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">광운대</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">구로</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">구일</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">군포</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">금정</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">금천구청</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">남영</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">노량진</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">녹양</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">녹천</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">당정</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">대방</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">덕계</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">도봉</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">도봉산</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">도원</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">도화</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">독산</button>
+                  </div>
+                </div>
+                <div
+                  class="jobs-filter__panel"
+                  id="talent-filter-task"
+                  role="tabpanel"
+                  aria-labelledby="talent-step-task"
+                  hidden
+                >
+                  <div class="jobs-filter__head">
+                    <h3>업무 선택</h3>
+                    <span class="jobs-filter__toggle material-symbols-rounded" aria-hidden="true">
+                      keyboard_arrow_up
+                    </span>
+                  </div>
+                  <p class="jobs-filter__desc jobs-pc-only">
+                    희망 업무를 선택해 주세요. 여러 항목을 선택할 수 있습니다.
+                  </p>
+                  <p class="jobs-filter__desc jobs-mo-only">희망하는 업무를 선택해 주세요.</p>
+                  <div class="jobs-options" data-jobs-options>
+                    <button class="jobs-option" type="button" aria-pressed="false">진료실</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">진료전반</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">데스크</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">상담/코디</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">교정</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">치과기공</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">보철/보존</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">경영지원</button>
+                    <button class="jobs-option" type="button" aria-pressed="false">기타</button>
+                  </div>
+                </div>
+                <div
+                  class="jobs-filter__panel jobs-filter__panel--detail"
+                  id="talent-filter-detail"
+                  role="tabpanel"
+                  aria-labelledby="talent-step-detail"
+                  hidden
+                >
+                  <div class="jobs-filter__head">
+                    <h3>상세 조건 선택</h3>
+                    <span class="jobs-filter__toggle material-symbols-rounded" aria-hidden="true">
+                      keyboard_arrow_up
+                    </span>
+                  </div>
+                  <div class="jobs-filter__group">
+                    <h4 class="jobs-filter__subtitle" id="talent-detail-1">근무시간</h4>
+                    <div class="jobs-options" role="group" aria-labelledby="talent-detail-1" data-jobs-options>
+                      <button class="jobs-option" type="button" aria-pressed="false">월~토 (주5일)</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">월~토 (주40시간)</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">월~토 (토요일격주근무)</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">월~토</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">월~일</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">주 1일</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">주 3일</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">주 5일</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">협의가능</button>
+                    </div>
+                  </div>
+                  <div class="jobs-filter__group">
+                    <h4 class="jobs-filter__subtitle" id="talent-detail-2">근무형태</h4>
+                    <div class="jobs-options" role="group" aria-labelledby="talent-detail-2" data-jobs-options>
+                      <button class="jobs-option" type="button" aria-pressed="false">정규직</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">비정규직</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">계약직</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">아르바이트</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">프리랜서</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">협의가능</button>
+                    </div>
+                  </div>
+                  <div class="jobs-filter__group">
+                    <h4 class="jobs-filter__subtitle" id="talent-detail-3">학력사항</h4>
+                    <div class="jobs-options" role="group" aria-labelledby="talent-detail-3" data-jobs-options>
+                      <button class="jobs-option" type="button" aria-pressed="false">초등학교</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">중학교</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">고등학교</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">대학교 (2,3년)</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">대학교 4년</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">대학원</button>
+                    </div>
+                  </div>
+                  <div class="jobs-filter__group">
+                    <h4 class="jobs-filter__subtitle" id="talent-detail-4">경력사항</h4>
+                    <div class="jobs-options" role="group" aria-labelledby="talent-detail-4" data-jobs-options>
+                      <button class="jobs-option" type="button" aria-pressed="false">신입</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">1~2년차</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">3~4년차</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">5~10년차</button>
+                      <button class="jobs-option" type="button" aria-pressed="false">10년차 이상</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-filter__result">
+                  <div class="jobs-chips" role="group" aria-label="선택한 조건">
+                    <p class="jobs-chips__empty">선택한 조건이 없습니다. 전체 인재정보를 검색합니다.</p>
+                  </div>
+                  <div class="jobs-filter__actions">
+                    <button class="ds-button ds-button--small ds-button--outline" type="button" data-jobs-reset>
+                      초기화
+                    </button>
+                    <button class="ds-button ds-button--small ds-button--primary" type="button">검색하기</button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <section class="jobs-talent-section" aria-labelledby="jobs-talent-recommend">
               <h2 id="jobs-talent-recommend">등록정회원 인재추천</h2>
               <ul class="jobs-talent-cards">
                 <li>
                   <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-talent-card__profile">
-                      <span class="jobs-avatar" aria-hidden="true">홍</span>
-                      <span class="jobs-talent-card__name">
-                        <strong>홍**</strong>
-                        <span>여, 25세</span>
-                      </span>
+                    <span class="jobs-avatar" aria-hidden="true">홍</span>
+                    <span class="jobs-talent-card__name">
+                      <strong>홍**</strong>
+                      <span>여, 25세</span>
                     </span>
                     <strong class="jobs-talent-card__title">열심히 하겠습니다. 감사합니다.</strong>
-                    <div class="jobs-tags">
+                    <span class="jobs-talent-card__tags">
                       <span class="jobs-tag-location">서울 중랑구</span>
-                      <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                      <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                    </div>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
+                    </span>
                   </a>
                 </li>
                 <li>
                   <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-talent-card__profile">
-                      <span class="jobs-avatar" aria-hidden="true">이</span>
-                      <span class="jobs-talent-card__name">
-                        <strong>이**</strong>
-                        <span>여, 25세</span>
-                      </span>
+                    <span class="jobs-avatar" aria-hidden="true">이</span>
+                    <span class="jobs-talent-card__name">
+                      <strong>이**</strong>
+                      <span>여, 25세</span>
                     </span>
                     <strong class="jobs-talent-card__title">
                       치과대학병원 및 상급종합병원 경력을 지닌 이이수 치과위생사입니다.
                     </strong>
-                    <div class="jobs-tags">
+                    <span class="jobs-talent-card__tags">
                       <span class="jobs-tag-location">서울 중랑구</span>
-                      <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                      <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                    </div>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
+                    </span>
                   </a>
                 </li>
                 <li>
                   <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-talent-card__profile">
-                      <span class="jobs-avatar" aria-hidden="true">김</span>
-                      <span class="jobs-talent-card__name">
-                        <strong>김**</strong>
-                        <span>여, 25세</span>
-                      </span>
+                    <span class="jobs-avatar" aria-hidden="true">김</span>
+                    <span class="jobs-talent-card__name">
+                      <strong>김**</strong>
+                      <span>여, 25세</span>
                     </span>
                     <strong class="jobs-talent-card__title">환자 중심의 진료협조와 상담에 자신 있습니다.</strong>
-                    <div class="jobs-tags">
+                    <span class="jobs-talent-card__tags">
                       <span class="jobs-tag-location">서울 중랑구</span>
-                      <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                      <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                    </div>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
+                    </span>
                   </a>
                 </li>
               </ul>
             </section>
-            <section class="jobs-talent-list" aria-labelledby="jobs-talent-latest">
-              <div class="jobs-talent-list__head">
+            <section class="jobs-talent-section" aria-labelledby="jobs-talent-latest">
+              <div class="jobs-talent-section__head">
                 <h2 id="jobs-talent-latest">최신 인재정보</h2>
-                <div class="jobs-talent-list__limit">
-                  <label for="jobs-talent-limit">페이지당 목록</label>
-                  <select id="jobs-talent-limit" data-custom-select>
-                    <option value="10">10개</option>
+                <div class="jobs-talent-section__limit">
+                  <span class="jobs-mo-only" aria-hidden="true">페이지당 목록</span>
+                  <select aria-label="페이지당 목록" data-custom-select>
+                    <option value="10" data-placeholder="false" selected>10개</option>
                     <option value="20">20개</option>
+                    <option value="30">30개</option>
                   </select>
                 </div>
               </div>
-              <ul>
+              <ul class="jobs-talent-cards jobs-talent-cards--row">
                 <li>
-                  <a class="jobs-talent-row" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-avatar jobs-avatar--large" aria-hidden="true">홍</span>
+                  <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
+                    <span class="jobs-avatar" aria-hidden="true">홍</span>
                     <span class="jobs-talent-card__name">
                       <strong>홍**</strong>
                       <span>여, 25세</span>
                     </span>
-                    <span class="jobs-talent-row__body">
-                      <strong>열심히 하겠습니다. 감사합니다.</strong>
-                      <div class="jobs-tags">
-                        <span class="jobs-tag-location">서울 중랑구</span>
-                        <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                        <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                      </div>
+                    <strong class="jobs-talent-card__title">열심히 하겠습니다. 감사합니다.</strong>
+                    <span class="jobs-talent-card__tags">
+                      <span class="jobs-tag-location">서울 중랑구</span>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
                     </span>
                   </a>
                 </li>
                 <li>
-                  <a class="jobs-talent-row" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-avatar jobs-avatar--large" aria-hidden="true">이</span>
+                  <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
+                    <span class="jobs-avatar" aria-hidden="true">이</span>
                     <span class="jobs-talent-card__name">
                       <strong>이**</strong>
                       <span>여, 25세</span>
                     </span>
-                    <span class="jobs-talent-row__body">
-                      <strong>치과대학병원 및 상급종합병원 경력을 지닌 치과위생사입니다.</strong>
-                      <div class="jobs-tags">
-                        <span class="jobs-tag-location">서울 중랑구</span>
-                        <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                        <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                      </div>
+                    <strong class="jobs-talent-card__title">
+                      치과대학병원 및 상급종합병원 경력을 지닌 치과위생사입니다.
+                    </strong>
+                    <span class="jobs-talent-card__tags">
+                      <span class="jobs-tag-location">서울 중랑구</span>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
                     </span>
                   </a>
                 </li>
                 <li>
-                  <a class="jobs-talent-row" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-avatar jobs-avatar--large" aria-hidden="true">김</span>
+                  <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
+                    <span class="jobs-avatar" aria-hidden="true">김</span>
                     <span class="jobs-talent-card__name">
                       <strong>김**</strong>
                       <span>여, 25세</span>
                     </span>
-                    <span class="jobs-talent-row__body">
-                      <strong>임플란트·교정 진료협조 경험이 많습니다.</strong>
-                      <div class="jobs-tags">
-                        <span class="jobs-tag-location">서울 중랑구</span>
-                        <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                        <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                      </div>
+                    <strong class="jobs-talent-card__title">임플란트·교정 진료협조 경험이 많습니다.</strong>
+                    <span class="jobs-talent-card__tags">
+                      <span class="jobs-tag-location">서울 중랑구</span>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
                     </span>
                   </a>
                 </li>
                 <li>
-                  <a class="jobs-talent-row" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-avatar jobs-avatar--large" aria-hidden="true">박</span>
+                  <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
+                    <span class="jobs-avatar" aria-hidden="true">박</span>
                     <span class="jobs-talent-card__name">
                       <strong>박**</strong>
                       <span>여, 25세</span>
                     </span>
-                    <span class="jobs-talent-row__body">
-                      <strong>성실하고 꼼꼼하게 근무하겠습니다.</strong>
-                      <div class="jobs-tags">
-                        <span class="jobs-tag-location">서울 중랑구</span>
-                        <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                        <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                      </div>
+                    <strong class="jobs-talent-card__title">성실하고 꼼꼼하게 근무하겠습니다.</strong>
+                    <span class="jobs-talent-card__tags">
+                      <span class="jobs-tag-location">서울 중랑구</span>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
                     </span>
                   </a>
                 </li>
                 <li>
-                  <a class="jobs-talent-row" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-avatar jobs-avatar--large" aria-hidden="true">홍</span>
+                  <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
+                    <span class="jobs-avatar" aria-hidden="true">홍</span>
                     <span class="jobs-talent-card__name">
                       <strong>홍**</strong>
                       <span>여, 25세</span>
                     </span>
-                    <span class="jobs-talent-row__body">
-                      <strong>데스크 상담 및 보험청구 가능합니다.</strong>
-                      <div class="jobs-tags">
-                        <span class="jobs-tag-location">서울 중랑구</span>
-                        <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                        <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                      </div>
+                    <strong class="jobs-talent-card__title">데스크 상담 및 보험청구 가능합니다.</strong>
+                    <span class="jobs-talent-card__tags">
+                      <span class="jobs-tag-location">서울 중랑구</span>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
                     </span>
                   </a>
                 </li>
                 <li>
-                  <a class="jobs-talent-row" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-avatar jobs-avatar--large" aria-hidden="true">이</span>
+                  <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
+                    <span class="jobs-avatar" aria-hidden="true">이</span>
                     <span class="jobs-talent-card__name">
                       <strong>이**</strong>
                       <span>여, 25세</span>
                     </span>
-                    <span class="jobs-talent-row__body">
-                      <strong>주 3일 근무 희망합니다.</strong>
-                      <div class="jobs-tags">
-                        <span class="jobs-tag-location">서울 중랑구</span>
-                        <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                        <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                      </div>
+                    <strong class="jobs-talent-card__title">주 3일 근무 희망합니다.</strong>
+                    <span class="jobs-talent-card__tags">
+                      <span class="jobs-tag-location">서울 중랑구</span>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
                     </span>
                   </a>
                 </li>
                 <li>
-                  <a class="jobs-talent-row" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-avatar jobs-avatar--large" aria-hidden="true">김</span>
+                  <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
+                    <span class="jobs-avatar" aria-hidden="true">김</span>
                     <span class="jobs-talent-card__name">
                       <strong>김**</strong>
                       <span>여, 25세</span>
                     </span>
-                    <span class="jobs-talent-row__body">
-                      <strong>신입이지만 누구보다 열정적으로 배우겠습니다.</strong>
-                      <div class="jobs-tags">
-                        <span class="jobs-tag-location">서울 중랑구</span>
-                        <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                        <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                      </div>
+                    <strong class="jobs-talent-card__title">신입이지만 누구보다 열정적으로 배우겠습니다.</strong>
+                    <span class="jobs-talent-card__tags">
+                      <span class="jobs-tag-location">서울 중랑구</span>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
                     </span>
                   </a>
                 </li>
                 <li>
-                  <a class="jobs-talent-row" href="/kdha/career/jobs/talent/detail/">
-                    <span class="jobs-avatar jobs-avatar--large" aria-hidden="true">박</span>
+                  <a class="jobs-talent-card" href="/kdha/career/jobs/talent/detail/">
+                    <span class="jobs-avatar" aria-hidden="true">박</span>
                     <span class="jobs-talent-card__name">
                       <strong>박**</strong>
                       <span>여, 25세</span>
                     </span>
-                    <span class="jobs-talent-row__body">
-                      <strong>예방 진료와 구강보건교육에 관심이 많습니다.</strong>
-                      <div class="jobs-tags">
-                        <span class="jobs-tag-location">서울 중랑구</span>
-                        <span class="ds-badge ds-badge--neutral">10년 이상</span>
-                        <span class="ds-badge ds-badge--neutral">대학교(2,3년) 졸업</span>
-                      </div>
+                    <strong class="jobs-talent-card__title">예방 진료와 구강보건교육에 관심이 많습니다.</strong>
+                    <span class="jobs-talent-card__tags">
+                      <span class="jobs-tag-location">서울 중랑구</span>
+                      <span class="ds-badge ds-badge--secondary">10년 이상</span>
+                      <span class="ds-badge ds-badge--secondary">대학교(2,3년) 졸업</span>
                     </span>
                   </a>
                 </li>
               </ul>
               <nav class="ds-pagination" aria-label="인재정보 목록 페이지">
                 <button type="button" aria-label="이전 페이지">
-                  <span class="material-symbols-rounded">chevron_left</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
                 </button>
-                <button class="is-current" type="button" aria-current="page">1</button>
+                <button type="button" aria-current="page">1</button>
                 <button type="button">2</button>
                 <button type="button">3</button>
                 <button type="button">4</button>
                 <button type="button">5</button>
                 <button type="button" aria-label="다음 페이지">
-                  <span class="material-symbols-rounded">chevron_right</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
                 </button>
               </nav>
             </section>
@@ -712,39 +955,54 @@
         close
       </button>
       <h2 id="jobs-tip-dialog-title">인재정보 이용 Tip</h2>
-      <p class="jobs-dialog__desc">인재정보 열람 및 채용공고 지원과 관련된 주요 이용사항을 안내드립니다.</p>
-      <ol class="jobs-dialog__tips">
-        <li>
-          <span class="jobs-dialog__tip-number">01</span>
-          <p>
-            인재정보 게시판 내 이력서 열람은
-            <strong>병원정보</strong>
-            가 등록된
-            <strong>병원회원</strong>
-            만 가능합니다.
-          </p>
-        </li>
-        <li>
-          <span class="jobs-dialog__tip-number">02</span>
-          <p>
-            병원회원은 병원 또는 기관의
-            <strong>사업자등록번호</strong>
-            가 인증된 회원입니다.
-          </p>
-        </li>
-        <li>
-          <span class="jobs-dialog__tip-number">03</span>
-          <p>인재정보에 등록한 이력서로 채용정보 내 공고에 간편하게 지원할 수 있습니다.</p>
-        </li>
-        <li>
-          <span class="jobs-dialog__tip-number">04</span>
-          <p>
-            지원하려는 공고 페이지 하단의 '
-            <strong>지원하기</strong>
-            ' 버튼을 선택해 주세요!
-          </p>
-        </li>
-      </ol>
+      <div class="edu-dialog__body jobs-dialog__body">
+        <p class="jobs-dialog__desc">인재정보 열람 및 채용공고 지원과 관련된 주요 이용사항을 안내드립니다.</p>
+        <ol class="jobs-dialog__rules jobs-dialog__rules--top">
+          <li>
+            <span class="jobs-dialog__number" aria-hidden="true">01</span>
+            <p>
+              인재정보 게시판 내 이력서 열람은
+              <span class="ds-text-join">
+                <strong>병원정보</strong>
+                <span>가</span>
+              </span>
+              등록된
+              <span class="ds-text-join">
+                <strong>병원회원</strong>
+                <span>만</span>
+              </span>
+              가능합니다.
+            </p>
+          </li>
+          <li>
+            <span class="jobs-dialog__number" aria-hidden="true">02</span>
+            <p>
+              병원회원은 병원 또는 기관의
+              <span class="ds-text-join">
+                <strong>사업자등록번호</strong>
+                <span>가</span>
+              </span>
+              인증된 회원입니다.
+            </p>
+          </li>
+          <li>
+            <span class="jobs-dialog__number" aria-hidden="true">03</span>
+            <p>인재정보에 등록한 이력서로 채용정보 내 공고에 간편하게 지원할 수 있습니다.</p>
+          </li>
+          <li>
+            <span class="jobs-dialog__number" aria-hidden="true">04</span>
+            <p>
+              지원하려는 공고 페이지 하단의
+              <span class="ds-text-join">
+                <span>'</span>
+                <strong>지원하기</strong>
+                <span>'</span>
+              </span>
+              버튼을 선택해 주세요!
+            </p>
+          </li>
+        </ol>
+      </div>
       <div class="edu-dialog__actions">
         <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
       </div>
@@ -755,6 +1013,10 @@
         화면 확인
       </summary>
       <nav aria-label="구인구직 레이어 확인">
+        <a href="/kdha/career/jobs/talent/#talent-filter-region">검색 · 근무지역</a>
+        <a href="/kdha/career/jobs/talent/#talent-filter-subway">검색 · 지하철노선</a>
+        <a href="/kdha/career/jobs/talent/#talent-filter-task">검색 · 업무</a>
+        <a href="/kdha/career/jobs/talent/#talent-filter-detail">검색 · 상세 조건</a>
         <a href="/kdha/career/jobs/talent/#jobs-tip-dialog">인재정보 이용 Tip</a>
       </nav>
     </details>
