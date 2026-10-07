@@ -118,8 +118,23 @@ $(function () {
   renderNews('association');
 
   // 메인 배너 슬라이드 (Figma 최종 확정안 B안 4장)
+  // 모바일 인디케이터를 현재 슬라이드 문구 아래 16px에 배치 (문구 줄 수가 슬라이드마다 다름)
+  function placeHeroDots(swiper) {
+    var slide = swiper.slides[swiper.activeIndex];
+    var copy = slide && slide.querySelector('.main-b-hero__copy');
+    if (!copy) return;
+    swiper.el
+      .closest('.main-b-hero')
+      .style.setProperty('--main-b-hero-dots-top', copy.offsetTop + copy.offsetHeight + 16 + 'px');
+  }
+
   if (typeof Swiper !== 'undefined' && document.querySelector('.main-b-hero__slider')) {
     new Swiper('.main-b-hero__slider', {
+      on: {
+        init: placeHeroDots,
+        slideChange: placeHeroDots,
+        resize: placeHeroDots,
+      },
       loop: true,
       speed: 700,
       effect: 'fade',

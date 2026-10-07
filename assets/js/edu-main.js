@@ -6,7 +6,7 @@ $(function () {
     var slider = new Swiper($section.find('.edu-main-slider')[0], {
       slidesPerView: 'auto',
       spaceBetween: 24,
-      breakpoints: { 0: { spaceBetween: 12 }, 701: { spaceBetween: 24 } },
+      breakpoints: { 0: { spaceBetween: 16 }, 768: { spaceBetween: 24 } },
     });
 
     $section.on('click', '[data-edu-main-filter]', function () {
