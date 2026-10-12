@@ -382,7 +382,7 @@ $(function () {
     if (nextDialog && !nextDialog.open) nextDialog.showModal();
   });
 
-  $(document).on('click', 'dialog.dialog, dialog.edu-dialog', function (event) {
+  $(document).on('click', 'dialog.dialog, dialog.edu-dialog, dialog.ds-alert', function (event) {
     if (event.target !== this) return;
 
     var bounds = this.getBoundingClientRect();

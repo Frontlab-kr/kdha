@@ -23,6 +23,56 @@
     });
   });
 
+  // 면허신고 주기: 취득 년도(2014년~올해) 옵션 생성, 1~4차 신고 연도 계산(+3년)
+  document.querySelectorAll('[data-license-cycle]').forEach(function (row) {
+    var select = row.querySelector('[data-license-cycle-year]');
+    var cells = row.querySelectorAll('[data-license-cycle-round]');
+    var status = document.querySelector('[data-license-cycle-status]');
+    if (!select || !cells.length) return;
+    var FIRST_YEAR = 2014;
+    // 2014년도 이전 취득자는 2015년 일괄신고부터 시작
+    var FIRST_REPORT_YEAR = 2015;
+    var currentYear = new Date().getFullYear();
+    var selected = select.value || String(FIRST_YEAR);
+
+    select.innerHTML = '';
+    for (var year = FIRST_YEAR; year <= currentYear; year += 1) {
+      var option = document.createElement('option');
+      option.value = String(year);
+      option.textContent = year + '년도';
+      option.setAttribute('data-placeholder', 'false');
+      option.selected = String(year) === selected;
+      select.appendChild(option);
+    }
+
+    function render(announce) {
+      var year = Number(select.value);
+      var first = year <= FIRST_YEAR ? FIRST_REPORT_YEAR : year + 3;
+      var years = [];
+      cells.forEach(function (cell, index) {
+        var reportYear = first + index * 3;
+        cell.textContent = reportYear + '년';
+        years.push(index + 1 + '차 ' + reportYear + '년');
+      });
+      if (announce && status) status.textContent = year + '년도 취득: ' + years.join(', ');
+    }
+
+    render(false);
+    if (window.jQuery) {
+      // 공통 셀렉트(common.js)는 jQuery change로 값을 알리므로 jQuery로 연결, 펼침 목록도 다시 맞춤
+      window
+        .jQuery(select)
+        .trigger('change')
+        .on('change', function () {
+          render(true);
+        });
+    } else {
+      select.addEventListener('change', function () {
+        render(true);
+      });
+    }
+  });
+
   // 앵커 탭: 클릭 시 해당 섹션으로 스크롤, 스크롤 위치에 따라 현재 섹션 표시(aria-current)
   document.querySelectorAll('[data-license-anchors]').forEach(function (nav) {
     var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));

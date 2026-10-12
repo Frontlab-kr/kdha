@@ -27,4 +27,26 @@ $(function () {
     var dialog = document.getElementById(hasSelection ? 'dues-refund-item-alert' : 'dues-required-alert');
     if (dialog && !dialog.open) dialog.showModal();
   });
+  // 결제 교육 상세: 전체 선택은 같은 표에서 선택할 수 있는(이수·환불완료로 비활성이 아닌) 교육만 함께 체크합니다.
+  $(document).on('change', '[data-pay-check-all]', function () {
+    $(this).closest('[role="table"]').find('[data-pay-check]:not(:disabled)').prop('checked', this.checked);
+  });
+
+  // 환불 요청 팝업(결제 내역 PAY-02-05P · 회비 내역 SB 31): 필수 입력이 비면 필수 항목 안내, 모두 입력하면 환불 신청 확인 얼럿으로 넘어갑니다.
+  $(document).on('submit', '[data-pay-refund-form]', function (event) {
+    event.preventDefault();
+    var form = this;
+    var hasEmpty = $(form)
+      .find('[required]')
+      .toArray()
+      .some(function (field) {
+        return !String(field.value).trim();
+      });
+    var next = document.getElementById($(form).data(hasEmpty ? 'pay-invalid' : 'pay-confirm'));
+    if (!hasEmpty) {
+      var current = $(form).closest('dialog')[0];
+      if (current?.open) current.close();
+    }
+    if (next && !next.open) next.showModal();
+  });
 });

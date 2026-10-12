@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/kdha/assets/brand/logo-header-b.svg" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <title>실시간 스트리밍 운영자 | 현장교육 | 치위생교육원</title>
+  </head>
+  <body class="edu-streaming-site">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <!-- ED-US-OFE-03-01 현장보수교육 실시간 스트리밍(운영자). 공지 등록·현재 수강자 현황은 운영자 전용 -->
+    <div class="edu-streaming edu-streaming--operator" data-streaming>
+      <header class="edu-streaming__header">
+        <div class="edu-streaming__heading">
+          <div class="edu-streaming__eyebrow">
+            <p>현장교육 · 실시간 스트리밍 · 운영자</p>
+            <p>총 접속시간 : 40분</p>
+          </div>
+          <h1>2026년 상반기 보수교육</h1>
+        </div>
+        <div class="edu-streaming__tools">
+          <p class="edu-streaming__tools-label">운영자</p>
+          <button
+            class="ds-button ds-button--small ds-button--outline edu-streaming__attendee-button"
+            type="button"
+            aria-haspopup="dialog"
+            data-dialog-open="streaming-attendee-dialog"
+          >
+            현재 수강자
+            <em>10명</em>
+          </button>
+        </div>
+        <!-- 서버 연동 시 강의실 주소로 교체 -->
+        <a class="ds-button ds-button--small ds-button--outline edu-streaming__exit" href="#none">강의실 나가기</a>
+      </header>
+      <main id="main-content">
+        <div class="edu-streaming__layout">
+          <div class="edu-streaming__stage">
+            <section class="edu-streaming__video" aria-label="실시간 강의 영상" data-streaming-video>
+              <div class="edu-streaming__screen">
+                <!--
+                  외부 스트리밍 플랫폼 플레이어 삽입 영역입니다.
+                  iframe 등으로 교체할 때 title(예: "2026년 상반기 보수교육 실시간 영상")을 제공하고 16:9 비율을 유지합니다.
+                -->
+                <div class="edu-streaming__player" data-streaming-player>
+                  <span class="edu-streaming__play" aria-hidden="true">▶</span>
+                </div>
+              </div>
+              <div class="edu-streaming__controls">
+                <p class="edu-streaming__live">
+                  <span aria-hidden="true">▶</span>
+                  실시간
+                </p>
+                <div class="edu-streaming__control-actions">
+                  <button class="edu-streaming__text-button" type="button" data-streaming-fullscreen-open>
+                    전체화면
+                  </button>
+                  <button
+                    class="ds-button ds-button--small ds-button--outline edu-streaming__fullscreen-only"
+                    type="button"
+                    data-streaming-fullscreen-close
+                  >
+                    전체화면 종료
+                  </button>
+                  <button
+                    class="ds-button ds-button--small ds-button--outline edu-streaming__fullscreen-only"
+                    type="button"
+                    aria-controls="streaming-chat"
+                    aria-expanded="false"
+                    data-streaming-chat-open
+                  >
+                    채팅
+                  </button>
+                  <a
+                    class="ds-button ds-button--small ds-button--outline edu-streaming__fullscreen-only"
+                    href="/kdha/news/newsletter/viewer/"
+                    target="_blank"
+                    rel="noopener"
+                    data-streaming-pdf-open
+                  >
+                    첨부자료
+                    <span class="sr-only">(새 창)</span>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section class="edu-streaming__abstract" aria-labelledby="streaming-abstract-title">
+              <div class="edu-streaming__abstract-info">
+                <span class="material-symbols-rounded edu-streaming__abstract-icon" aria-hidden="true">download</span>
+                <div>
+                  <h2 id="streaming-abstract-title">강연초록</h2>
+                  <p>강연 내용을 PDF로 확인하세요.</p>
+                </div>
+              </div>
+              <!-- 서버 연동 시 강연초록 PDF 주소와 download 속성 적용 -->
+              <a class="ds-button ds-button--medium ds-button--primary edu-streaming__download" href="#none">
+                강연초록 다운로드
+                <span class="material-symbols-rounded" aria-hidden="true">download</span>
+              </a>
+            </section>
+          </div>
+          <div class="edu-streaming__side">
+            <!-- 모바일: 채팅·첨부자료 탭 전환 / PC·태블릿: 두 패널을 함께 표시 -->
+            <div
+              class="ds-tabs ds-tabs--box edu-streaming__tabs"
+              role="tablist"
+              aria-label="채팅 및 첨부자료"
+              data-streaming-tabs
+            >
+              <button
+                class="ds-tabs__item"
+                id="streaming-tab-chat"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="streaming-chat"
+              >
+                실시간 채팅
+              </button>
+              <button
+                class="ds-tabs__item"
+                id="streaming-tab-attachment"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="streaming-attachment"
+                tabindex="-1"
+              >
+                첨부자료 1
+              </button>
+            </div>
+            <section
+              class="edu-streaming__attachment edu-streaming__panel"
+              data-streaming-pdf="/kdha/assets/edu-streaming/lecture-handout.pdf"
+              data-streaming-pdf-title="2026년 상반기 보수교육 첨부자료"
+              id="streaming-attachment"
+              role="tabpanel"
+              aria-labelledby="streaming-attachment-title"
+            >
+              <div class="edu-streaming__attachment-head">
+                <h2 id="streaming-attachment-title">첨부자료</h2>
+                <span>PDF</span>
+              </div>
+              <!-- 첨부 PDF 1쪽을 PDF.js로 그립니다(실패 시 아래 이미지 유지). 서버 연동 시 data-streaming-pdf 주소를 업로드 파일로 교체 -->
+              <div class="edu-streaming__preview">
+                <canvas
+                  class="edu-streaming__pdf"
+                  data-streaming-pdf-canvas
+                  role="img"
+                  aria-label="첨부자료.pdf 미리보기"
+                  hidden
+                ></canvas>
+                <img
+                  src="/kdha/assets/edu-streaming/document-thumb.svg"
+                  width="126"
+                  height="168"
+                  alt="첨부자료.pdf 1쪽 미리보기"
+                />
+              </div>
+              <div class="edu-streaming__pager">
+                <button
+                  class="edu-streaming__pager-button"
+                  type="button"
+                  aria-label="이전 쪽"
+                  aria-disabled="true"
+                  data-streaming-pdf-prev
+                >
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+                </button>
+                <p>
+                  <span class="sr-only">현재 쪽</span>
+                  <span data-streaming-pdf-page>1</span>
+                  /
+                  <span data-streaming-pdf-total>1</span>
+                </p>
+                <button
+                  class="edu-streaming__pager-button"
+                  type="button"
+                  aria-label="다음 쪽"
+                  aria-disabled="true"
+                  data-streaming-pdf-next
+                >
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                </button>
+              </div>
+              <div class="edu-streaming__file">
+                <p>첨부자료.pdf</p>
+                <a
+                  class="ds-button ds-button--small ds-button--outline"
+                  href="/kdha/news/newsletter/viewer/"
+                  target="_blank"
+                  rel="noopener"
+                  data-streaming-pdf-open
+                >
+                  확대보기
+                  <span class="sr-only">(새 창)</span>
+                </a>
+              </div>
+            </section>
+            <section
+              class="edu-streaming__chat edu-streaming__panel is-active"
+              id="streaming-chat"
+              role="tabpanel"
+              aria-labelledby="streaming-chat-title"
+              data-streaming-chat
+            >
+              <div class="edu-streaming__chat-head">
+                <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--24" aria-hidden="true">
+                  chat
+                </span>
+                <h2 id="streaming-chat-title">실시간 채팅</h2>
+                <button
+                  class="ds-button ds-button--small ds-button--outline edu-streaming__chat-close"
+                  type="button"
+                  aria-controls="streaming-chat"
+                  data-streaming-chat-close
+                >
+                  닫기
+                </button>
+              </div>
+              <!-- 고정 공지: 메시지 스크롤 영역 밖에 유지 -->
+              <div
+                class="edu-streaming__notice"
+                aria-labelledby="streaming-notice-title"
+                role="region"
+                aria-live="polite"
+              >
+                <div class="edu-streaming__notice-head">
+                  <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+                    keep
+                  </span>
+                  <h3 id="streaming-notice-title">공지사항</h3>
+                  <button
+                    class="ds-button ds-button--small ds-button--outline"
+                    type="button"
+                    aria-haspopup="dialog"
+                    data-dialog-open="streaming-notice-dialog"
+                  >
+                    공지 등록
+                  </button>
+                </div>
+                <p data-streaming-notice-text>
+                  강연 관련 질문을 남겨주세요.
+                  <br />
+                  운영자가 확인 후 안내해 드립니다.
+                </p>
+              </div>
+              <!-- 메시지는 예시이며 실제 참여자 채팅 데이터로 교체 -->
+              <div
+                class="edu-streaming__messages"
+                role="log"
+                aria-label="채팅 메시지"
+                tabindex="0"
+                data-streaming-messages
+              >
+                <ol>
+                  <li class="edu-streaming__message">
+                    <time>오전 11:53:54</time>
+                    <span
+                      class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20"
+                      aria-hidden="true"
+                    >
+                      person
+                    </span>
+                    <div>
+                      <strong>홍길동</strong>
+                      <p>강연 자료는 어디에서 받을 수 있나요?</p>
+                    </div>
+                  </li>
+                  <li class="edu-streaming__message edu-streaming__message--operator">
+                    <time>오전 11:54:08</time>
+                    <span
+                      class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20"
+                      aria-hidden="true"
+                    >
+                      person
+                    </span>
+                    <div>
+                      <strong>운영자</strong>
+                      <p>
+                        영상 아래의 강연초록 다운로드
+                        <br />
+                        버튼을 이용해 주세요.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="edu-streaming__message edu-streaming__message--self">
+                    <time>오전 11:54:21</time>
+                    <span
+                      class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20"
+                      aria-hidden="true"
+                    >
+                      person
+                    </span>
+                    <div>
+                      <strong>나</strong>
+                      <p>확인했습니다. 감사합니다.</p>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <form class="edu-streaming__composer" data-streaming-chat-form>
+                <label class="form-field">
+                  <span class="sr-only">채팅 메시지</span>
+                  <input type="text" name="message" placeholder="메시지를 입력하세요" autocomplete="off" />
+                </label>
+                <button class="ds-button ds-button--medium ds-button--primary" type="submit">전송</button>
+              </form>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- 운영자 · 공지 등록 -->
+    <dialog
+      class="dialog edu-streaming-dialog"
+      id="streaming-notice-dialog"
+      aria-labelledby="streaming-notice-dialog-title"
+      aria-describedby="streaming-notice-dialog-desc"
+    >
+      <form class="edu-streaming-dialog__inner" method="dialog" data-streaming-notice-form>
+        <div class="edu-streaming-dialog__head">
+          <h2 id="streaming-notice-dialog-title">공지 등록</h2>
+          <button class="ds-button ds-button--small ds-button--outline" type="button" data-dialog-close>닫기</button>
+        </div>
+        <p class="edu-streaming-dialog__desc" id="streaming-notice-dialog-desc">
+          등록한 내용은 수강생 채팅 상단에 고정됩니다.
+        </p>
+        <div class="form-field form-field--helper edu-streaming-dialog__field">
+          <label class="edu-streaming-dialog__label" for="streaming-notice-input">공지 내용</label>
+          <textarea id="streaming-notice-input" name="notice" aria-describedby="streaming-notice-helper" required>
+강연 관련 질문을 남겨주세요.
+운영자가 확인 후 안내해 드립니다.</textarea>
+          <small id="streaming-notice-helper">기존 공지는 새 내용으로 교체됩니다.</small>
+        </div>
+        <div class="edu-streaming-dialog__actions">
+          <button class="ds-button ds-button--medium ds-button--outline" type="button" data-dialog-close>취소</button>
+          <button class="ds-button ds-button--medium ds-button--primary" type="submit">등록하고 고정</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- 운영자 · 현재 수강자 현황 (이름·인원은 예시이며 실제 참여자 데이터로 교체) -->
+    <dialog
+      class="dialog edu-streaming-dialog"
+      id="streaming-attendee-dialog"
+      aria-labelledby="streaming-attendee-title"
+    >
+      <div class="edu-streaming-dialog__inner">
+        <div class="edu-streaming-dialog__head">
+          <h2 id="streaming-attendee-title">현재 수강자 현황</h2>
+          <button class="ds-button ds-button--small ds-button--outline" type="button" data-dialog-close>닫기</button>
+        </div>
+        <p class="edu-streaming-dialog__desc">현재 이 강의에 접속한 수강자를 확인합니다.</p>
+        <dl class="edu-streaming-dialog__summary">
+          <dt>현재 접속</dt>
+          <dd>10명</dd>
+        </dl>
+        <ul class="edu-streaming-dialog__attendees" aria-label="현재 수강자 목록" tabindex="0">
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>홍길동</strong>
+            <span>접속중</span>
+          </li>
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>수강생 02</strong>
+            <span>접속중</span>
+          </li>
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>수강생 03</strong>
+            <span>접속중</span>
+          </li>
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>수강생 04</strong>
+            <span>접속중</span>
+          </li>
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>수강생 05</strong>
+            <span>접속중</span>
+          </li>
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>수강생 06</strong>
+            <span>접속중</span>
+          </li>
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>수강생 07</strong>
+            <span>접속중</span>
+          </li>
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>수강생 08</strong>
+            <span>접속중</span>
+          </li>
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>수강생 09</strong>
+            <span>접속중</span>
+          </li>
+          <li>
+            <span class="material-symbols-rounded edu-streaming__icon edu-streaming__icon--20" aria-hidden="true">
+              person
+            </span>
+            <strong>수강생 10</strong>
+            <span>접속중</span>
+          </li>
+        </ul>
+        <button
+          class="ds-button ds-button--medium ds-button--outline edu-streaming-dialog__close"
+          type="button"
+          data-dialog-close
+        >
+          닫기
+        </button>
+      </div>
+    </dialog>
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/edu-streaming.js"></script>
+  </body>
+</html>

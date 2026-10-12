@@ -62,7 +62,7 @@ $(function () {
     },
     schedule: {
       label: '노무',
-      more: '/kdha/career/consulting',
+      more: '/kdha/career/consulting/labor/',
       items: [
         ['2026-08-02', '연차휴가 발생 기준과 사용 방법', '근속기간에 따른 연차휴가 계산 방법입니다.'],
         ['2026-07-22', '퇴직금 산정 시 평균임금 계산 안내', '퇴직 전 3개월 임금을 기준으로 한 산정 사례입니다.'],

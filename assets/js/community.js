@@ -11,6 +11,63 @@
     });
   });
 
+  // 카드뉴스 상세: 이미지 한 장씩 이전/다음 전환(버튼·스와이프), 현재 순서 안내
+  document.querySelectorAll('[data-cardnews]').forEach(function (root) {
+    var slides = Array.prototype.slice.call(root.querySelectorAll('.community-cardnews__slide'));
+    var prev = root.querySelector('[data-cardnews-prev]');
+    var next = root.querySelector('[data-cardnews-next]');
+    var current = root.querySelector('[data-cardnews-current]');
+    var total = root.querySelector('[data-cardnews-total]');
+    var status = root.querySelector('[data-cardnews-status]');
+    var index = 0;
+    if (!slides.length) return;
+    if (total) total.textContent = slides.length;
+
+    function show(nextIndex, announce) {
+      index = Math.max(0, Math.min(nextIndex, slides.length - 1));
+      slides.forEach(function (slide, i) {
+        slide.hidden = i !== index;
+        slide.setAttribute('aria-label', i + 1 + ' / ' + slides.length);
+      });
+      if (current) current.textContent = index + 1;
+      if (prev) prev.disabled = index === 0;
+      if (next) next.disabled = index === slides.length - 1;
+      if (announce && status) status.textContent = slides.length + '장 중 ' + (index + 1) + '번째 카드뉴스';
+    }
+
+    if (prev) {
+      prev.addEventListener('click', function () {
+        show(index - 1, true);
+      });
+    }
+    if (next) {
+      next.addEventListener('click', function () {
+        show(index + 1, true);
+      });
+    }
+    // 모바일 스와이프
+    var startX = null;
+    root.addEventListener(
+      'touchstart',
+      function (event) {
+        startX = event.touches[0].clientX;
+      },
+      { passive: true },
+    );
+    root.addEventListener('touchend', function (event) {
+      if (startX === null) return;
+      var diff = event.changedTouches[0].clientX - startX;
+      startX = null;
+      if (Math.abs(diff) > 40) show(index + (diff < 0 ? 1 : -1), true);
+    });
+    // 한 장뿐이면 이전/다음 숨김
+    if (slides.length < 2) {
+      if (prev) prev.hidden = true;
+      if (next) next.hidden = true;
+    }
+    show(0, false);
+  });
+
   document.querySelectorAll('[data-volunteer-write]').forEach(function (form) {
     var regions = Array.from(form.querySelectorAll('[name="region"]'));
     function validate() {
@@ -133,8 +190,11 @@
     var organizationKey = organization ? organization.dataset.organizationFilter : '';
     var query = '';
     var field = 'all';
+    var resourceType = 'all';
     function filterRows() {
       matches = rows.filter(function (row) {
+        // 자료실 구분(전체·일반자료·서식)
+        if (resourceType !== 'all' && row.dataset.resourceType !== resourceType) return false;
         if (eventCategory && row.dataset.eventCategory !== eventCategory) return false;
         if (organizationKey && row.dataset.organization !== organizationKey) return false;
         if (surveyState !== 'all' && row.dataset.surveyState !== surveyState) return false;
@@ -225,6 +285,7 @@
       event.preventDefault();
       query = form.elements.query.value.trim().toLocaleLowerCase();
       field = form.elements.field.value;
+      if (form.elements.type) resourceType = form.elements.type.value;
       filterRows();
     });
     // 공통 커스텀 셀렉트는 jQuery change 이벤트를 발생시킵니다.
@@ -334,9 +395,12 @@
           setScheduleState($(this), false);
         });
 
+        // 순위별(1·2·3순위) 행: 고른 지역과 같은 줄의 교육일정만 갱신합니다.
         $form.find('[data-examiner-region]').on('change', function () {
           var list = schedules[this.value] || [];
-          $schedules.each(function () {
+          var $row = $(this).closest('[data-examiner-region-row]');
+          var $targets = $row.length ? $row.find('[data-examiner-schedule]') : $schedules;
+          $targets.each(function () {
             var $select = $(this);
             $select
               .empty()

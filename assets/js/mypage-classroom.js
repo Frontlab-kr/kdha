@@ -49,6 +49,50 @@ $(function () {
     openDialog($button.data('valid'));
   });
 
+  // 과정공지 첨부파일: 치위협보 PDF 뷰어 주소를 만듭니다(edu-streaming.js와 같은 방식, 배포 경로 변환 대응).
+  // a[data-classroom-pdf-open][href=뷰어] + data-classroom-pdf(PDF 경로) + data-classroom-pdf-title(표시 이름)
+  $('[data-classroom-pdf-open]').each(function () {
+    var pdfSrc = this.getAttribute('data-classroom-pdf');
+    if (!pdfSrc) return;
+    var viewer = new URL(this.getAttribute('href'), window.location.href);
+    viewer.searchParams.set('src', new URL(pdfSrc, window.location.href).pathname);
+    viewer.searchParams.set('title', this.getAttribute('data-classroom-pdf-title') || '첨부파일');
+    this.href = viewer.href;
+  });
+
+  // 채점자교육 상세: 순위별 신청 지역을 고르면 같은 줄의 교육일정을 활성화합니다.
+  // 지역별 교육일정은 퍼블리싱 샘플 데이터이며 개발 시 서버 데이터로 교체합니다.
+  var examinerSchedules = {
+    seoul: ['2026-10-08(목) 서울 치과위생사회관', '2026-10-12(월) 서울 치과위생사회관'],
+    daegu: ['2026-10-10(토) 대구 교육장', '2026-10-17(토) 대구 교육장'],
+    daejeon: ['2026-10-10(토) 대전 교육장', '2026-10-24(토) 대전 교육장'],
+    gwangju: ['2026-10-17(토) 광주 교육장', '2026-10-31(토) 광주 교육장'],
+    busan: ['2026-10-24(토) 부산 교육장', '2026-11-07(토) 부산 교육장'],
+  };
+
+  function setExaminerScheduleState($select, enabled) {
+    $select.prop('disabled', !enabled);
+    $select.next('.ds-select').find('.ds-select__button').prop('disabled', !enabled);
+  }
+
+  $('[data-examiner-region-row] [data-examiner-schedule]').each(function () {
+    setExaminerScheduleState($(this), !this.disabled);
+  });
+
+  $(document).on('change', '[data-examiner-region-row] [data-examiner-region]', function () {
+    var list = examinerSchedules[this.value] || [];
+    var $schedule = $(this).closest('[data-examiner-region-row]').find('[data-examiner-schedule]');
+
+    $schedule
+      .empty()
+      .append($('<option value=""></option>').text(list.length ? '교육일정 선택' : '신청지역을 먼저 선택해 주세요.'));
+    list.forEach(function (item) {
+      $schedule.append($('<option></option>').val(item).text(item));
+    });
+    setExaminerScheduleState($schedule, list.length > 0);
+    $schedule.trigger('change');
+  });
+
   // 사이버강의 플레이어: 재생 버튼 상태(재생 ↔ 일시정지)만 전환합니다. 실제 영상은 서버 연동 시 연결합니다.
   $(document).on('click', '[data-player-toggle]', function () {
     var $player = $(this).closest('[data-player]');

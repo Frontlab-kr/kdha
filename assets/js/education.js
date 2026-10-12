@@ -108,7 +108,7 @@ $(function () {
     if (nextDialog && !nextDialog.open) nextDialog.showModal();
   });
 
-  $(document).on('click', 'dialog.edu-dialog, dialog.dialog', function (event) {
+  $(document).on('click', 'dialog.edu-dialog, dialog.dialog, dialog.ds-alert', function (event) {
     if (event.target !== this || !this.open) return;
 
     var bounds = this.getBoundingClientRect();
@@ -411,4 +411,35 @@ $(function () {
       alert('필수 약관에 모두 동의해 주세요.');
     }
   });
+
+  // 교육 목록 분류 탭(전체·관심교육): 선택 상태만 바꾸고 목록 조회는 서버 연동 시 구현합니다.
+  $(document).on('click', '[data-ofe-tab]', function () {
+    $(this).closest('.ds-tabs').find('[data-ofe-tab]').attr('aria-pressed', 'false');
+    $(this).attr('aria-pressed', 'true');
+  });
+
+  // 관심교육 별 버튼: 등록 여부를 aria-pressed로 전환합니다. 저장은 서버 연동 시 구현합니다.
+  $(document).on('click', '[data-ofe-favorite]', function () {
+    $(this).attr('aria-pressed', String($(this).attr('aria-pressed') !== 'true'));
+  });
+
+  // 결제진행 마일리지/쿠폰 사용 불가 case: 강의 설정에 따라 서버에서 is-benefit-unavailable 클래스를 붙입니다.
+  // 정적 화면 확인용으로 URL hash #benefit-unavailable 일 때 같은 상태를 보여 줍니다.
+  function toggleBenefitUnavailable() {
+    $('.ofe-payment').toggleClass('is-benefit-unavailable', window.location.hash === '#benefit-unavailable');
+  }
+
+  toggleBenefitUnavailable();
+  $(window).on('hashchange', toggleBenefitUnavailable);
 });
+
+// 교육 첨부 PDF: 치위협보 PDF 뷰어(?src=/assets/…pdf&title=…) 주소를 만들어 새 창으로 엽니다.
+// href·data-edu-pdf는 배포 경로 변환을 그대로 따르도록 HTML 값을 기준으로 계산합니다.
+(function () {
+  document.querySelectorAll('[data-edu-pdf]').forEach(function (link) {
+    var viewer = new URL(link.getAttribute('href'), location.href);
+    viewer.searchParams.set('src', new URL(link.getAttribute('data-edu-pdf'), location.href).pathname);
+    viewer.searchParams.set('title', link.getAttribute('data-edu-pdf-title') || '첨부자료');
+    link.href = viewer.href;
+  });
+})();

@@ -13,7 +13,7 @@
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <header class="site-header">
       <div class="site-header__inner layout-container">
-        <a class="site-logo site-logo--header" href="/kdha/edu/" aria-label="치위생교육원 홈">
+        <a class="site-logo site-logo--header" href="/kdha/edu/" aria-label="대한치과위생사협회 치위생교육원 홈">
           <img
             class="site-logo__image"
             width="220"
@@ -21,6 +21,7 @@
             alt="대한치과위생사협회"
             src="/kdha/assets/brand/logo-header-b.svg"
           />
+          <span class="site-logo__site-name">치위생교육원</span>
         </a>
         <div class="site-header__navigation">
           <nav class="utility-nav" aria-label="유틸리티 메뉴">
@@ -28,10 +29,12 @@
               <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
                 덴톡
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
               <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                 영문사이트
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
               <a
                 class="utility-nav__link"
@@ -41,27 +44,31 @@
               >
                 KDHA mall
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
             </div>
           </nav>
           <nav class="primary-nav" aria-label="주 메뉴">
             <div class="primary-nav__links primary-nav__links--education">
+              <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/offline/">현장교육</a></div>
+              <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/online/">사이버교육</a></div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/kdha/edu/classroom/">내 강의실</a>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/kdha/edu/community/notices/">소통광장</a>
+              </div>
               <div class="primary-nav__item">
                 <a class="primary-nav__link" href="/kdha/edu/about/">교육원 소개</a>
               </div>
               <div class="primary-nav__item">
                 <a class="primary-nav__link" href="/kdha/edu/guide/offline/">교육안내</a>
               </div>
-              <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/offline/">현장교육</a></div>
-              <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/online/">사이버교육</a></div>
-              <div class="primary-nav__item">
-                <a class="primary-nav__link" href="#none">내 강의실</a>
-              </div>
             </div>
 
             <div class="site-menu__account">
               <button type="button">로그아웃</button>
-              <a href="#none">마이페이지</a>
+              <a href="/kdha/mypage/">마이페이지</a>
             </div>
 
             <button
@@ -95,19 +102,22 @@
               <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
                 덴톡
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
               <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                 영문사이트
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
               <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
                 KDHA mall
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
             </div>
             <div class="site-menu__account">
               <button type="button">로그아웃</button>
-              <a href="#none">마이페이지</a>
+              <a href="/kdha/mypage/">마이페이지</a>
             </div>
           </div>
           <div class="site-menu__groups">
@@ -143,9 +153,26 @@
                 </button>
               </h2>
               <ul id="edu-menu-group-2">
-                <li><a href="#none">수강신청 현황</a></li>
-                <li><a href="#none">학습진도 현황</a></li>
-                <li><a href="#none">교육이수 현황</a></li>
+                <li><a href="/kdha/edu/classroom/">수강현황</a></li>
+              </ul>
+            </section>
+            <section class="site-menu__group">
+              <h2>
+                <button class="site-menu__heading" type="button" aria-expanded="false" aria-controls="edu-menu-group-4">
+                  소통광장
+                  <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                </button>
+              </h2>
+              <ul id="edu-menu-group-4">
+                <li>
+                  <a href="/kdha/edu/community/notices/">공지사항</a>
+                </li>
+                <li>
+                  <a href="/kdha/edu/community/faq/">자주하는 질문</a>
+                </li>
+                <li>
+                  <a href="/kdha/edu/community/resources/">자료실</a>
+                </li>
               </ul>
             </section>
             <section class="site-menu__group">
@@ -195,12 +222,14 @@
                 <div>
                   <dt>수강료</dt>
                   <dd class="ofe-price-change">
-                    <del>40,000원</del>
-                    <span class="material-symbols-rounded" aria-hidden="true">arrow_right_alt</span>
+                    <del data-benefit-available>40,000원</del>
+                    <span class="material-symbols-rounded" aria-hidden="true" data-benefit-available>
+                      arrow_right_alt
+                    </span>
                     <strong>30,000원</strong>
                   </dd>
                 </div>
-                <div class="ofe-data__coupon">
+                <div class="ofe-data__coupon" data-benefit-available>
                   <dt>쿠폰 할인</dt>
                   <dd>
                     <span class="ofe-data__coupon-copy">
@@ -224,7 +253,7 @@
               <span class="ofe-payment-copy--pc">마일리지 적용</span>
               <span class="ofe-payment-copy--mobile">마일리지 / 쿠폰 적용</span>
             </h3>
-            <div class="ofe-discounts">
+            <div class="ofe-discounts" data-benefit-available>
               <div class="form-field form-field--large">
                 <label for="ofe-mileage">
                   보유 마일리지 사용
@@ -236,9 +265,12 @@
                 </span>
               </div>
             </div>
-            <ul class="ds-guide-list ofe-notice">
+            <ul class="ds-guide-list ofe-notice" data-benefit-available>
               <li>쿠폰과 마일리지 중복 사용이 가능합니다.</li>
               <li>마일리지는 100P 단위로 사용 가능합니다.</li>
+            </ul>
+            <ul class="ds-guide-list ofe-notice" data-benefit-unavailable>
+              <li>해당 교육은 마일리지 및 쿠폰 사용이 불가합니다.</li>
             </ul>
           </section>
           <section class="ofe-total ofe-total--breakdown" aria-label="결제 금액 요약">
@@ -247,11 +279,11 @@
                 <dt>총 수강료</dt>
                 <dd>120,000원</dd>
               </div>
-              <div>
+              <div data-benefit-available>
                 <dt>쿠폰 할인</dt>
                 <dd>−10,000원</dd>
               </div>
-              <div>
+              <div data-benefit-available>
                 <dt>마일리지 사용 (5,000P)</dt>
                 <dd>−5,000원</dd>
               </div>
@@ -298,17 +330,6 @@
           </div>
         </form>
       </div>
-      <aside class="page-banner">
-        <div>
-          <h2>치위협보 기사제보 · 광고문의</h2>
-          <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
-        </div>
-        <a href="mailto:press@kdha.or.kr">
-          02-6213-2735
-          <span>·</span>
-          press@kdha.or.kr
-        </a>
-      </aside>
     </main>
     <dialog
       class="edu-dialog ofe-coupon-dialog"
@@ -434,7 +455,7 @@
             width="290"
             height="55"
             alt="대한치과위생사협회"
-            src="/kdha/assets/brand/logo-footer.png"
+            src="/kdha/assets/brand/logo-footer.svg"
           />
         </a>
         <address class="site-footer__address">

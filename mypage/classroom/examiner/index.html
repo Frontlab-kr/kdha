@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <title>내 강의실 · 채점자교육 | 마이페이지 | 대한치과위생사협회</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="site user-page">
+      <header class="site-header">
+        <div class="site-header__inner layout-container">
+          <a class="site-logo site-logo--header" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
+            <img
+              class="site-logo__image"
+              width="220"
+              height="42"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-header-b.svg"
+            />
+          </a>
+          <div class="site-header__navigation">
+            <nav class="utility-nav" aria-label="유틸리티 메뉴">
+              <div class="utility-nav__external">
+                <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
+                  덴톡
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
+                  영문사이트
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a
+                  class="utility-nav__link"
+                  href="http://kdhamall.or.kr/member/login.php?prev=%2F"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  KDHA mall
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+              </div>
+            </nav>
+            <nav class="primary-nav" aria-label="주 메뉴">
+              <div class="primary-nav__links primary-nav__links--main">
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/news/schedule/">협회소식</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/career/jobs/">회원상담</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/education/about/">치위생교육원</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/license/report/">면허센터</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/community/notices/">소통광장</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/introduce/greeting/">협회소개</a>
+                </div>
+              </div>
+              <div class="primary-nav__links primary-nav__links--education">
+                <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/offline/">현장교육</a></div>
+                <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/online/">사이버교육</a></div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/mypage/classroom/">내 강의실</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/about/">교육원 소개</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/guide/offline/">교육안내</a>
+                </div>
+              </div>
+              <a class="primary-nav__icon-button primary-nav__education-cart" href="/kdha/edu/cart/" aria-label="장바구니">
+                <span
+                  class="material-symbols-outlined material-icon"
+                  aria-hidden="true"
+                  style="font-size: 28px; width: 28px; height: 28px"
+                >
+                  shopping_cart
+                </span>
+              </a>
+              <div class="site-menu__account">
+                <button type="button">로그아웃</button>
+                <a href="/kdha/mypage/">마이페이지</a>
+              </div>
+              <button class="primary-nav__icon-button primary-nav__search" type="button" aria-label="검색">
+                <span
+                  class="material-symbols-outlined material-icon"
+                  aria-hidden="true"
+                  style="font-size: 28px; width: 28px; height: 28px"
+                >
+                  search
+                </span>
+              </button>
+              <button
+                class="primary-nav__icon-button"
+                type="button"
+                aria-label="전체 메뉴"
+                data-site-menu-toggle
+                aria-expanded="false"
+                aria-controls="site-menu"
+              >
+                <span
+                  class="material-symbols-rounded material-icon"
+                  aria-hidden="true"
+                  style="font-size: 40px; width: 40px; height: 40px"
+                >
+                  dehaze
+                </span>
+              </button>
+            </nav>
+          </div>
+        </div>
+        <nav class="site-menu" id="site-menu" aria-label="전체 메뉴" hidden>
+          <div class="site-menu__inner layout-container">
+            <div class="site-menu__top">
+              <button class="site-menu__close" type="button" aria-label="전체 메뉴 닫기">
+                <span class="material-symbols-rounded" aria-hidden="true">close</span>
+              </button>
+            </div>
+            <div class="site-menu__mobile-tools">
+              <div class="site-menu__external">
+                <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
+                  덴톡
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
+                  영문사이트
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
+                  KDHA mall
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+              </div>
+              <div class="site-menu__account">
+                <button type="button">로그아웃</button>
+                <a href="/kdha/mypage/">마이페이지</a>
+              </div>
+            </div>
+            <div class="site-menu__groups">
+              <section class="site-menu__group is-expanded">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="site-menu-group-0"
+                  >
+                    협회소식
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-0">
+                  <li><a href="/kdha/news/schedule/">협회일정</a></li>
+                  <li><a href="/kdha/news/videos/">영상자료</a></li>
+                  <li><a href="/kdha/news/reports/">연구보고서</a></li>
+                  <li><a href="/kdha/news/newsletter/">치위협보</a></li>
+                  <li><a href="/kdha/news/resources/">자료실</a></li>
+                  <li><a href="/kdha/news/fund/">회관기금</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-1"
+                  >
+                    회원상담
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-1">
+                  <li><a href="/kdha/career/jobs/">하이덴잡(구인구직)</a></li>
+                  <li><a href="/kdha/career/contact/">1:1 상담</a></li>
+                  <li><a href="/kdha/career/consulting/legal/">법률ㆍ노무 상담</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-2"
+                  >
+                    치위생교육원
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-2">
+                  <li><a href="/kdha/education/about/">교육원 소개</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
+                  <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-3"
+                  >
+                    면허센터
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-3">
+                  <li><a href="/kdha/license/report/">면허신고 안내</a></li>
+                  <li>
+                    <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
+                      면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-4"
+                  >
+                    소통광장
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-4">
+                  <li><a href="/kdha/community/notices/">공지사항</a></li>
+                  <li><a href="/kdha/community/faq/">자주하는 질문</a></li>
+                  <li><a href="/kdha/community/events/">이벤트</a></li>
+                  <li><a href="/kdha/community/organizations/">산하단체 게시판</a></li>
+                  <li><a href="/kdha/community/executives/">시도회ㆍ산하단체 임원게시판</a></li>
+                  <li><a href="/kdha/community/volunteer/">봉사게시판</a></li>
+                  <li><a href="/kdha/community/surveys/">설문조사</a></li>
+                  <li><a href="/kdha/community/examiner-training/">국가시험 실기시험 채점자교육</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-5"
+                  >
+                    협회소개
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-5">
+                  <li><a href="/kdha/introduce/greeting/">인사말</a></li>
+                  <li><a href="/kdha/introduce/history/">연혁</a></li>
+                  <li><a href="/kdha/introduce/articles/">정관</a></li>
+                  <li><a href="/kdha/introduce/organization#map">조직도</a></li>
+                  <li><a href="/kdha/introduce/policybusiness/">주요정책사업</a></li>
+                  <li><a href="/kdha/introduce/dentalhygienist#introduce">치과위생사소개</a></li>
+                  <li><a href="/kdha/introduce/ci/">CI</a></li>
+                  <li><a href="/kdha/introduce/map/">찾아오시는 길</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main id="main-content" class="user-page__main">
+        <header class="page-hero">
+          <nav aria-label="현재 위치">
+            <a href="/kdha/main/" aria-label="홈">
+              <span class="material-symbols-rounded" aria-hidden="true">home</span>
+            </a>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span>마이페이지</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span aria-current="page">내 강의실</span>
+          </nav>
+          <h1>내 강의실</h1>
+          <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
+        </header>
+        <div id="main-body" class="main-body">
+          <!-- KD-US-KSC-04-01_PC_내 강의실_채점자교육 (4025:202475 · MO 4025:203279 · SB 27) -->
+          <div class="mypage mypage-classroom">
+            <nav class="ds-tabs ds-tabs--box" aria-label="마이페이지 메뉴" data-mypage-tabs>
+              <a class="ds-tabs__item" href="/kdha/mypage/">마이페이지</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/classroom/" aria-current="page">내 강의실</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/license/">면허신고현황</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/payments/">결제관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/points/">쿠폰·마일리지</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/volunteer/">봉사관리</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/consulting/legal/">상담관리</a>
+            </nav>
+            <nav class="ds-tabs" aria-label="내 강의실 하위 메뉴">
+              <a class="ds-tabs__item" href="/kdha/mypage/classroom/">사이버교육</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/classroom/offline/">현장교육</a>
+              <a class="ds-tabs__item" href="/kdha/mypage/classroom/examiner/" aria-current="page">채점자교육</a>
+            </nav>
+
+            <!-- 신청내역
+              · 제목: 채점자교육 상세 팝업(KD-US-KSC-05-01P)을 엽니다.
+              · 수료결과: 관리자 화면에서 입력한 결과(이수완료/미이수)를 표시하고, 이수완료만 수료증 출력 버튼을 활성화합니다.
+              · 신청취소: 결과 입력 전 신청 건에 표시합니다. 취소하면 목록과 관리자 목록에서 삭제합니다(서버 처리).
+            -->
+            <section class="mypage-section" aria-labelledby="classroom-examiner-title">
+              <div class="mypage-section__head mypage-section__head--line">
+                <h2 class="mypage-section__title" id="classroom-examiner-title">신청내역</h2>
+                <span class="mypage-section__count">
+                  3
+                  <span class="sr-only">건</span>
+                </span>
+              </div>
+              <ul class="mypage-course-list">
+                <li class="mypage-course">
+                  <div class="mypage-course__info">
+                    <div class="mypage-course__head">
+                      <div class="mypage-course__name">
+                        <p class="mypage-course__category">신규교육</p>
+                        <h3 class="mypage-course__title">
+                          <button
+                            class="mypage-lessons__link"
+                            type="button"
+                            aria-haspopup="dialog"
+                            data-dialog-open="classroom-examiner-detail-dialog"
+                          >
+                            교직용 – 전임, 겸임, 외래교수
+                          </button>
+                        </h3>
+                      </div>
+                    </div>
+                    <dl class="mypage-course__meta">
+                      <div>
+                        <dt>신청일</dt>
+                        <dd>2026-08-08</dd>
+                      </div>
+                      <div>
+                        <dt>교육기간</dt>
+                        <dd>2026-08-08 ~ 2026-08-31</dd>
+                      </div>
+                      <div>
+                        <dt>신청지역</dt>
+                        <dd>서울 2026-10-08, 대구 2026-10-10, 서울 2026-10-12</dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div class="mypage-course__actions mypage-course__actions--result">
+                    <p class="mypage-course__status mypage-status mypage-status--success">이수완료</p>
+                    <button
+                      class="ds-button ds-button--small ds-button--outline"
+                      type="button"
+                      aria-haspopup="dialog"
+                      data-dialog-open="classroom-examiner-certificate-dialog"
+                    >
+                      수료증 출력
+                    </button>
+                  </div>
+                </li>
+                <li class="mypage-course">
+                  <div class="mypage-course__info">
+                    <div class="mypage-course__head">
+                      <div class="mypage-course__name">
+                        <p class="mypage-course__category">재교육</p>
+                        <h3 class="mypage-course__title">
+                          <button
+                            class="mypage-lessons__link"
+                            type="button"
+                            aria-haspopup="dialog"
+                            data-dialog-open="classroom-examiner-detail-dialog"
+                          >
+                            교직용 – 전임, 겸임, 외래교수
+                          </button>
+                        </h3>
+                      </div>
+                    </div>
+                    <dl class="mypage-course__meta">
+                      <div>
+                        <dt>신청일</dt>
+                        <dd>2026-08-08</dd>
+                      </div>
+                      <div>
+                        <dt>교육기간</dt>
+                        <dd>2026-08-08 ~ 2026-08-31</dd>
+                      </div>
+                      <div>
+                        <dt>신청지역</dt>
+                        <dd>서울 2026-10-08, 대구 2026-10-10, 서울 2026-10-12</dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div class="mypage-course__actions mypage-course__actions--result">
+                    <p class="mypage-course__status mypage-status mypage-status--danger">미이수</p>
+                    <button class="ds-button ds-button--small ds-button--outline" type="button" disabled>
+                      수료증 출력
+                    </button>
+                  </div>
+                </li>
+                <li class="mypage-course">
+                  <div class="mypage-course__info">
+                    <div class="mypage-course__head">
+                      <div class="mypage-course__name">
+                        <p class="mypage-course__category">재교육</p>
+                        <h3 class="mypage-course__title">
+                          <button
+                            class="mypage-lessons__link"
+                            type="button"
+                            aria-haspopup="dialog"
+                            data-dialog-open="classroom-examiner-detail-dialog"
+                          >
+                            교직용 – 전임, 겸임, 외래교수
+                          </button>
+                        </h3>
+                      </div>
+                    </div>
+                    <dl class="mypage-course__meta">
+                      <div>
+                        <dt>신청일</dt>
+                        <dd>2026-08-08</dd>
+                      </div>
+                      <div>
+                        <dt>교육기간</dt>
+                        <dd>2026-08-08 ~ 2026-08-31</dd>
+                      </div>
+                      <div>
+                        <dt>신청지역</dt>
+                        <dd>서울 2026-10-08, 대구 2026-10-10, 서울 2026-10-12</dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div class="mypage-course__actions">
+                    <button
+                      class="ds-button ds-button--small ds-button--outline"
+                      type="button"
+                      aria-haspopup="dialog"
+                      data-dialog-open="classroom-examiner-cancel-alert"
+                    >
+                      신청취소
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <nav class="ds-pagination" aria-label="신청내역 페이지 이동">
+                <button type="button" aria-label="이전 페이지" disabled>
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+                </button>
+                <a href="#" aria-current="page">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" aria-label="다음 페이지">
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                </a>
+              </nav>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__inner layout-container">
+          <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
+            <img
+              class="site-logo__image"
+              width="290"
+              height="55"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-footer.svg"
+            />
+          </a>
+          <address class="site-footer__address">
+            <span class="site-footer__info-row">
+              <span>
+                105-82-07361
+                <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
+              </span>
+              <span>대표자 : 박정란</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
+          </address>
+          <p class="site-footer__contact">
+            <span>TEL. 02-2236-0914</span>
+            <span>FAX. 02-2236-0915</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/related-sites/">관련사이트</a>
+              <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
+            <div class="site-footer__site-selects">
+              <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">시도회 홈페이지</option>
+                <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
+              </select>
+            </div>
+          </div>
+          <div class="site-footer__bottom">
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
+            <div class="social-links">
+              <a
+                class="social-links__item"
+                href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 공식 유튜브(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-youtube.png" />
+              </a>
+              <a
+                class="social-links__item"
+                href="https://ko-kr.facebook.com/koreadha/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 페이스북(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-facebook.png" />
+              </a>
+              <a
+                class="social-links__item"
+                href="https://www.instagram.com/krdha77/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 인스타그램(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-instagram.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- KD-US-KSC-05-01P 채점자교육 상세 (SB 28·29 · 스크롤 팝업 PC 4130:145365 · MO 4130:145721) -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-examiner"
+      id="classroom-examiner-detail-dialog"
+      aria-labelledby="classroom-examiner-detail-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="classroom-examiner-detail-title">채점자교육 상세</h2>
+      <form class="mypage-dialog__form" method="dialog" novalidate data-examiner-detail>
+        <div class="edu-dialog__body mypage-form mypage-examiner__body">
+          <!-- 신청자 정보(조회 전용) -->
+          <dl class="edu-dialog__account-result mypage-examiner__info">
+            <div>
+              <dt>신청 구분</dt>
+              <dd>[신규교육] 교직용 – 전임, 겸임, 외래교수</dd>
+            </div>
+            <div>
+              <dt>성명</dt>
+              <dd>홍길동</dd>
+            </div>
+            <div>
+              <dt>면허번호</dt>
+              <dd>1234567</dd>
+            </div>
+            <div>
+              <dt>생년월일</dt>
+              <dd>1986-05-05</dd>
+            </div>
+          </dl>
+
+          <!-- 소속 및 경력 -->
+          <div class="mypage-examiner__group">
+            <div class="form-field form-field--large">
+              <label for="examiner-detail-organization">
+                소속(대학(교))
+                <span class="mypage-examiner__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                id="examiner-detail-organization"
+                name="organization"
+                type="text"
+                placeholder="소속 대학(교)을 입력하세요."
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="form-field form-field--large">
+              <label for="examiner-detail-position">
+                직급 (전임/겸임/초빙/외래 등)
+                <span class="mypage-examiner__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                id="examiner-detail-position"
+                name="position"
+                type="text"
+                placeholder="직급을 입력하세요."
+                maxlength="50"
+                required
+              />
+            </div>
+            <div class="form-field form-field--large mypage-examiner__subject">
+              <label for="examiner-detail-subject">
+                담당교과목 (최근 3년 이내)
+                <span class="mypage-examiner__required" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                id="examiner-detail-subject"
+                name="subject"
+                placeholder="담당교과목을 입력하세요."
+                maxlength="200"
+                aria-describedby="examiner-detail-subject-guide"
+                required
+              ></textarea>
+              <div class="mypage-examiner__example" id="examiner-detail-subject-guide">
+                <p class="mypage-examiner__example-title">담당교과목 작성 예시</p>
+                <p>
+                  2018년 2학기 ~ 2019년 2학기 포괄치위생학습실
+                  <br />
+                  2020년 1학기 치면세마론
+                </p>
+              </div>
+            </div>
+            <div
+              class="form-field form-field--large mypage-examiner__period"
+              role="group"
+              aria-labelledby="examiner-detail-period-label"
+            >
+              <span class="mypage-examiner__label" id="examiner-detail-period-label">
+                근무기간 (현 직장/총)
+                <span class="mypage-examiner__required" aria-hidden="true">*</span>
+              </span>
+              <select
+                name="periodCurrent"
+                aria-label="현 직장 근무기간"
+                data-custom-select
+                data-select-size="l"
+                required
+              >
+                <option value="">현 직장 근무기간 선택</option>
+                <option value="1">1년 미만</option>
+                <option value="1-3">1년 이상 ~ 3년 미만</option>
+                <option value="3-5">3년 이상 ~ 5년 미만</option>
+                <option value="5-10">5년 이상 ~ 10년 미만</option>
+                <option value="10">10년 이상</option>
+              </select>
+              <select name="periodTotal" aria-label="총 근무기간" data-custom-select data-select-size="l" required>
+                <option value="">총 근무기간 선택</option>
+                <option value="1">1년 미만</option>
+                <option value="1-3">1년 이상 ~ 3년 미만</option>
+                <option value="3-5">3년 이상 ~ 5년 미만</option>
+                <option value="5-10">5년 이상 ~ 10년 미만</option>
+                <option value="10">10년 이상</option>
+              </select>
+            </div>
+            <div class="form-field form-field--large">
+              <label for="examiner-detail-office-tel">근무처 연락처</label>
+              <input
+                id="examiner-detail-office-tel"
+                name="officeTel"
+                type="tel"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="- 을 제외한 숫자만 입력하세요."
+              />
+            </div>
+          </div>
+
+          <!-- 연락처 -->
+          <div class="mypage-examiner__group">
+            <div class="form-field form-field--large">
+              <label for="examiner-detail-mobile">
+                휴대폰
+                <span class="mypage-examiner__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                id="examiner-detail-mobile"
+                name="mobile"
+                type="tel"
+                inputmode="numeric"
+                autocomplete="tel"
+                placeholder="- 을 제외한 숫자만 입력하세요."
+                required
+              />
+            </div>
+            <div class="form-field form-field--large">
+              <label for="examiner-detail-email">
+                이메일
+                <span class="mypage-examiner__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                id="examiner-detail-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="EMAIL@gmail.com"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- 신청 지역 및 교육일정(1·2·3순위): 지역을 고르기 전 교육일정은 비활성 -->
+          <div class="mypage-examiner__group mypage-examiner__group--schedule">
+            <div
+              class="form-field form-field--large mypage-examiner__region"
+              role="group"
+              aria-labelledby="examiner-detail-region-1-label"
+              data-examiner-region-row
+            >
+              <span class="mypage-examiner__label" id="examiner-detail-region-1-label">
+                1순위 신청 지역 및 교육일정
+                <span class="mypage-examiner__required" aria-hidden="true">*</span>
+              </span>
+              <select
+                name="region1"
+                aria-label="1순위 신청 지역"
+                data-custom-select
+                data-select-size="l"
+                data-examiner-region
+                required
+              >
+                <option value="">신청지역 선택</option>
+                <option value="seoul">서울</option>
+                <option value="daegu">대구</option>
+                <option value="daejeon">대전</option>
+                <option value="gwangju">광주</option>
+                <option value="busan">부산</option>
+              </select>
+              <select
+                name="schedule1"
+                aria-label="1순위 교육일정"
+                data-custom-select
+                data-select-size="l"
+                data-examiner-schedule
+                disabled
+                required
+              >
+                <option value="">신청지역을 먼저 선택해 주세요.</option>
+              </select>
+            </div>
+            <div
+              class="form-field form-field--large mypage-examiner__region"
+              role="group"
+              aria-labelledby="examiner-detail-region-2-label"
+              data-examiner-region-row
+            >
+              <span class="mypage-examiner__label" id="examiner-detail-region-2-label">
+                2순위 신청 지역 및 교육일정
+                <span class="mypage-examiner__required" aria-hidden="true">*</span>
+              </span>
+              <select
+                name="region2"
+                aria-label="2순위 신청 지역"
+                data-custom-select
+                data-select-size="l"
+                data-examiner-region
+                required
+              >
+                <option value="">신청지역 선택</option>
+                <option value="seoul">서울</option>
+                <option value="daegu">대구</option>
+                <option value="daejeon">대전</option>
+                <option value="gwangju">광주</option>
+                <option value="busan">부산</option>
+              </select>
+              <select
+                name="schedule2"
+                aria-label="2순위 교육일정"
+                data-custom-select
+                data-select-size="l"
+                data-examiner-schedule
+                disabled
+                required
+              >
+                <option value="">신청지역을 먼저 선택해 주세요.</option>
+              </select>
+            </div>
+            <div
+              class="form-field form-field--large mypage-examiner__region"
+              role="group"
+              aria-labelledby="examiner-detail-region-3-label"
+              data-examiner-region-row
+            >
+              <span class="mypage-examiner__label" id="examiner-detail-region-3-label">
+                3순위 신청 지역 및 교육일정
+                <span class="mypage-examiner__required" aria-hidden="true">*</span>
+              </span>
+              <select
+                name="region3"
+                aria-label="3순위 신청 지역"
+                data-custom-select
+                data-select-size="l"
+                data-examiner-region
+                required
+              >
+                <option value="">신청지역 선택</option>
+                <option value="seoul">서울</option>
+                <option value="daegu">대구</option>
+                <option value="daejeon">대전</option>
+                <option value="gwangju">광주</option>
+                <option value="busan">부산</option>
+              </select>
+              <select
+                name="schedule3"
+                aria-label="3순위 교육일정"
+                data-custom-select
+                data-select-size="l"
+                data-examiner-schedule
+                disabled
+                required
+              >
+                <option value="">신청지역을 먼저 선택해 주세요.</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="edu-dialog__actions">
+          <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+          <!-- 저장: 수정한 내용을 관리자 목록에 반영(서버 처리) -->
+          <button
+            class="ds-button ds-button--large ds-button--primary"
+            type="button"
+            data-dialog-switch="classroom-examiner-saved-alert"
+          >
+            저장
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- 수료증 (KD-US-MYP-01-04P · 마이페이지 메인과 같은 mypage-cert 마크업) -->
+    <dialog
+      class="edu-dialog mypage-cert"
+      id="classroom-examiner-certificate-dialog"
+      aria-labelledby="classroom-examiner-certificate-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 class="mypage-cert__title" id="classroom-examiner-certificate-title">
+        <span aria-hidden="true">수 료 증</span>
+        <span class="sr-only">수료증</span>
+      </h2>
+      <!-- 수료증 영역: 개발 시 기존 수료증 코드를 넣습니다. -->
+      <div class="mypage-cert__slot" data-certificate></div>
+    </dialog>
+
+    <!-- 알림(공통 알림 dialog.ds-alert) · 신청취소 · 저장 -->
+    <dialog
+      class="ds-alert"
+      id="classroom-examiner-cancel-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="classroom-examiner-cancel-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="classroom-examiner-cancel-alert-message">채점자교육 신청을 취소하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="classroom-examiner-canceled-alert"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="classroom-examiner-canceled-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="classroom-examiner-canceled-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="classroom-examiner-canceled-alert-message">신청이 취소되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="classroom-examiner-saved-alert"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="classroom-examiner-saved-alert-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="classroom-examiner-saved-alert-message">수정한 내용이 저장되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
+
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="내 강의실 채점자교육 레이어 확인">
+        <a href="/kdha/mypage/classroom/examiner/#classroom-examiner-detail-dialog">팝업 · 채점자교육 상세</a>
+        <a href="/kdha/mypage/classroom/examiner/#classroom-examiner-certificate-dialog">팝업 · 수료증</a>
+        <a href="/kdha/mypage/classroom/examiner/#classroom-examiner-cancel-alert">알림 · 신청취소 확인</a>
+        <a href="/kdha/mypage/classroom/examiner/#classroom-examiner-canceled-alert">알림 · 신청취소 완료</a>
+        <a href="/kdha/mypage/classroom/examiner/#classroom-examiner-saved-alert">알림 · 저장 완료</a>
+      </nav>
+    </details>
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/mypage.js"></script>
+    <script src="/kdha/assets/js/mypage-classroom.js"></script>
+  </body>
+</html>

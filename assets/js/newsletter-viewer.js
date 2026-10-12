@@ -55,6 +55,16 @@ import '../vendor/pdflipbook/pdflipbook.js';
     const text = root.querySelector('.fb-status-text');
     if (text) text.textContent = 'PDF를 불러오지 못했습니다.';
   });
+  // Ctrl(⌘)+휠·트랙패드 핀치: 브라우저 확대 대신 뷰어 확대·축소
+  root.addEventListener(
+    'wheel',
+    function (event) {
+      if (!book || !(event.ctrlKey || event.metaKey)) return;
+      event.preventDefault();
+      book.setZoom(book.zoom * Math.exp(-event.deltaY * 0.01));
+    },
+    { passive: false },
+  );
   function reset() {
     if (book) book.destroy();
     book = null;
@@ -82,9 +92,20 @@ import '../vendor/pdflipbook/pdflipbook.js';
     );
     translate();
   }
-  const issue = new URLSearchParams(location.search).get('issue') || '356';
+  const params = new URLSearchParams(location.search);
+  const issue = params.get('issue') || '356';
   const docs = window.KDHANewsletterDocuments || {};
-  if (Object.prototype.hasOwnProperty.call(docs, issue)) {
+  // 다른 화면의 첨부 PDF 열기(?src=/assets/…pdf&title=…): 같은 사이트의 /assets/ PDF만 허용
+  const src = params.get('src');
+  if (src) {
+    const url = new URL(src, location.href);
+    const title = (params.get('title') || 'PDF 보기').slice(0, 80);
+    document.querySelector('#viewer-title').textContent = title;
+    document.title = title + ' | 대한치과위생사협회';
+    if (url.origin === location.origin && /\/assets\//.test(url.pathname) && url.pathname.endsWith('.pdf'))
+      open({ url: url.href }, url.href, url.pathname.split('/').pop());
+    else status.textContent = '지원하지 않는 PDF 주소입니다.';
+  } else if (Object.prototype.hasOwnProperty.call(docs, issue)) {
     document.querySelector('#viewer-title').textContent = '제' + issue + '호 치위협보';
     if (docs[issue]) {
       const url = new URL(docs[issue], documentBase);

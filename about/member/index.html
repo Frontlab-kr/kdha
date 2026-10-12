@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <title>정회원 안내 | 대한치과위생사협회</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="site">
+      <header class="site-header">
+        <div class="site-header__inner layout-container">
+          <a class="site-logo site-logo--header" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
+            <img
+              class="site-logo__image"
+              width="220"
+              height="42"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-header-b.svg"
+            />
+          </a>
+          <div class="site-header__navigation">
+            <nav class="utility-nav" aria-label="유틸리티 메뉴">
+              <div class="utility-nav__external">
+                <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
+                  덴톡
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
+                  영문사이트
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a
+                  class="utility-nav__link"
+                  href="http://kdhamall.or.kr/member/login.php?prev=%2F"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  KDHA mall
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+              </div>
+            </nav>
+            <nav class="primary-nav" aria-label="주 메뉴">
+              <div class="primary-nav__links primary-nav__links--main">
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/news/schedule/">협회소식</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/career/jobs/">회원상담</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/education/about/">치위생교육원</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/license/report/">면허센터</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/community/notices/">소통광장</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/introduce/greeting/">협회소개</a>
+                </div>
+              </div>
+              <div class="primary-nav__links primary-nav__links--education">
+                <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/offline/">현장교육</a></div>
+                <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/online/">사이버교육</a></div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/mypage/classroom/">내 강의실</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/about/">교육원 소개</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/edu/guide/offline/">교육안내</a>
+                </div>
+              </div>
+              <a class="primary-nav__icon-button primary-nav__education-cart" href="/kdha/edu/cart/" aria-label="장바구니">
+                <span
+                  class="material-symbols-outlined material-icon"
+                  aria-hidden="true"
+                  style="font-size: 28px; width: 28px; height: 28px"
+                >
+                  shopping_cart
+                </span>
+              </a>
+              <div class="site-menu__account">
+                <button type="button">로그아웃</button>
+                <a href="/kdha/mypage/">마이페이지</a>
+              </div>
+              <button class="primary-nav__icon-button primary-nav__search" type="button" aria-label="검색">
+                <span
+                  class="material-symbols-outlined material-icon"
+                  aria-hidden="true"
+                  style="font-size: 28px; width: 28px; height: 28px"
+                >
+                  search
+                </span>
+              </button>
+              <button
+                class="primary-nav__icon-button"
+                type="button"
+                aria-label="전체 메뉴"
+                data-site-menu-toggle
+                aria-expanded="false"
+                aria-controls="site-menu"
+              >
+                <span
+                  class="material-symbols-rounded material-icon"
+                  aria-hidden="true"
+                  style="font-size: 40px; width: 40px; height: 40px"
+                >
+                  dehaze
+                </span>
+              </button>
+            </nav>
+          </div>
+        </div>
+        <nav class="site-menu" id="site-menu" aria-label="전체 메뉴" hidden>
+          <div class="site-menu__inner layout-container">
+            <div class="site-menu__top">
+              <button class="site-menu__close" type="button" aria-label="전체 메뉴 닫기">
+                <span class="material-symbols-rounded" aria-hidden="true">close</span>
+              </button>
+            </div>
+            <div class="site-menu__mobile-tools">
+              <div class="site-menu__external">
+                <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
+                  덴톡
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
+                  영문사이트
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
+                  KDHA mall
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+              </div>
+              <div class="site-menu__account">
+                <button type="button">로그아웃</button>
+                <a href="/kdha/mypage/">마이페이지</a>
+              </div>
+            </div>
+            <div class="site-menu__groups">
+              <section class="site-menu__group is-expanded">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="site-menu-group-0"
+                  >
+                    협회소식
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-0">
+                  <li><a href="/kdha/news/schedule/">협회일정</a></li>
+                  <li><a href="/kdha/news/videos/">영상자료</a></li>
+                  <li><a href="/kdha/news/reports/">연구보고서</a></li>
+                  <li><a href="/kdha/news/newsletter/">치위협보</a></li>
+                  <li><a href="/kdha/news/resources/">자료실</a></li>
+                  <li><a href="/kdha/news/fund/">회관기금</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-1"
+                  >
+                    회원상담
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-1">
+                  <li><a href="/kdha/career/jobs/">하이덴잡(구인구직)</a></li>
+                  <li><a href="/kdha/career/contact/">1:1 상담</a></li>
+                  <li><a href="/kdha/career/consulting/legal/">법률ㆍ노무 상담</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-2"
+                  >
+                    치위생교육원
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-2">
+                  <li><a href="/kdha/education/about/">교육원 소개</a></li>
+                  <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
+                  <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
+                  <li>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener noreferrer">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener noreferrer">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-3"
+                  >
+                    면허센터
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-3">
+                  <li><a href="/kdha/license/report/">면허신고 안내</a></li>
+                  <li>
+                    <a href="https://lic.kuksiwon.or.kr/mypage/login.do?jj_code=12" target="_blank" rel="noreferrer">
+                      면허신고센터
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://lic.mohw.go.kr/" target="_blank" rel="noreferrer">
+                      면허증 재교부조회
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-4"
+                  >
+                    소통광장
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-4">
+                  <li><a href="/kdha/community/notices/">공지사항</a></li>
+                  <li><a href="/kdha/community/faq/">자주하는 질문</a></li>
+                  <li><a href="/kdha/community/events/">이벤트</a></li>
+                  <li><a href="/kdha/community/organizations/">산하단체 게시판</a></li>
+                  <li><a href="/kdha/community/executives/">시도회ㆍ산하단체 임원게시판</a></li>
+                  <li><a href="/kdha/community/volunteer/">봉사게시판</a></li>
+                  <li><a href="/kdha/community/surveys/">설문조사</a></li>
+                  <li><a href="/kdha/community/examiner-training/">국가시험 실기시험 채점자교육</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-5"
+                  >
+                    협회소개
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-5">
+                  <li><a href="/kdha/introduce/greeting/">인사말</a></li>
+                  <li><a href="/kdha/introduce/history/">연혁</a></li>
+                  <li><a href="/kdha/introduce/articles/">정관</a></li>
+                  <li><a href="/kdha/introduce/organization#map">조직도</a></li>
+                  <li><a href="/kdha/introduce/policybusiness/">주요정책사업</a></li>
+                  <li><a href="/kdha/introduce/dentalhygienist#introduce">치과위생사소개</a></li>
+                  <li><a href="/kdha/introduce/ci/">CI</a></li>
+                  <li><a href="/kdha/introduce/map/">찾아오시는 길</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <header class="page-hero">
+          <nav aria-label="현재 위치">
+            <a href="/kdha/main/" aria-label="홈">
+              <span class="material-symbols-rounded" aria-hidden="true">home</span>
+            </a>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span aria-current="page">정회원 안내</span>
+          </nav>
+          <h1>정회원 안내</h1>
+          <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
+        </header>
+        <div id="main-body" class="main-body">
+          <div class="about-member">
+            <section class="about-member__intro" aria-labelledby="about-member-title">
+              <div class="about-member__intro-text">
+                <p class="about-member__eyebrow">KDHA MEMBERSHIP BENEFITS</p>
+                <h2 id="about-member-title">정회원 혜택 안내</h2>
+                <p>대한치과위생사협회 정회원으로 누릴 수 있는 다양한 서비스와 교육 혜택을 확인해 보세요.</p>
+                <p class="about-member__target">※ 등록정회원 · 평생회원 대상</p>
+              </div>
+              <img
+                class="about-member__visual"
+                src="/kdha/assets/images/about/member/benefits-visual.png"
+                alt=""
+                width="200"
+                height="200"
+              />
+            </section>
+            <section class="about-member__benefits" aria-labelledby="about-member-list-title">
+              <h2 class="sr-only" id="about-member-list-title">혜택 목록</h2>
+              <div class="ds-tabs ds-tabs--pill" role="group" aria-label="혜택 분류" data-member-filter>
+                <button class="ds-tabs__item" type="button" aria-pressed="true" data-member-filter-value="all">
+                  전체
+                </button>
+                <button class="ds-tabs__item" type="button" aria-pressed="false" data-member-filter-value="support">
+                  회원 지원
+                </button>
+                <button class="ds-tabs__item" type="button" aria-pressed="false" data-member-filter-value="education">
+                  교육ㆍ학술
+                </button>
+                <button class="ds-tabs__item" type="button" aria-pressed="false" data-member-filter-value="career">
+                  경력ㆍ참여
+                </button>
+              </div>
+              <p class="sr-only" aria-live="polite" data-member-status></p>
+              <ul class="about-member__cards">
+                <li class="about-member__card" data-member-category="support">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/welcome-kit.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">총무위원회</span>
+                    <span class="ds-badge">회원 지원</span>
+                  </div>
+                  <h3 class="about-member__title">신규 회비 납부 회원 웰컴 키트</h3>
+                  <div class="about-member__text">
+                    <p>등록정회원·평생회원에게 크다박스를 제공합니다.</p>
+                    <p>구성품: 리플렛, 3색 볼펜, 소수첩, 양말, 머리띠, RDH 뱃지, 박스</p>
+                  </div>
+                </li>
+                <li class="about-member__card" data-member-category="support">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/calendar.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">총무위원회</span>
+                    <span class="ds-badge">회원 지원</span>
+                  </div>
+                  <h3 class="about-member__title">탁상달력 제작 및 배부</h3>
+                  <div class="about-member__text">
+                    <p>등록정회원·평생회원에게 탁상달력을 제공합니다.</p>
+                  </div>
+                </li>
+                <li class="about-member__card" data-member-category="support">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/legal.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">법제위원회</span>
+                    <span class="ds-badge">전문 상담</span>
+                  </div>
+                  <h3 class="about-member__title">법률·노무 상담 서비스</h3>
+                  <div class="about-member__text">
+                    <p>정회원·평생회원은 법률·노무 상담 서비스를 이용할 수 있습니다.</p>
+                    <p>상담센터 접수 시 자동으로 권한이 부여됩니다.</p>
+                  </div>
+                </li>
+                <li class="about-member__card" data-member-category="support">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/cashback.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">재무위원회</span>
+                    <span class="ds-badge">캐시백</span>
+                  </div>
+                  <h3 class="about-member__title">신한카드 캐시백 혜택</h3>
+                  <ul class="about-member__list">
+                    <li>당해연도 연회비 20% 캐시백 지급</li>
+                    <li>미납회비 30만원 이상 20% 캐시백 지급</li>
+                    <li>종합학술대회등록비 15% 캐시백</li>
+                    <li>보수교육(중앙회·시도회)비 15% 캐시백</li>
+                    <li>사이버보수교육비 10% 캐시백</li>
+                  </ul>
+                </li>
+                <li class="about-member__card" data-member-category="education">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/academic.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">학술위원회</span>
+                    <span class="ds-badge ds-badge--secondary">교육 할인</span>
+                  </div>
+                  <h3 class="about-member__title">종합학술대회 보수교육비 할인</h3>
+                  <ul class="about-member__list">
+                    <li>회비 미납 회원: 4평점 11만원 · 8평점 22만원(미등록·등록준회원)</li>
+                    <li>회비 완납 회원: 4평점 7만원 · 8평점 14만원(등록 정회원)</li>
+                  </ul>
+                </li>
+                <li class="about-member__card" data-member-category="support">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/news.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">홍보위원회</span>
+                    <span class="ds-badge">회원 소식</span>
+                  </div>
+                  <h3 class="about-member__title">치위협보 제공</h3>
+                  <div class="about-member__text">
+                    <p>신문 발행을 통해 협회 소식을 전합니다.</p>
+                  </div>
+                </li>
+                <li class="about-member__card" data-member-category="education">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/e-learning.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">연수위원회</span>
+                    <span class="ds-badge ds-badge--secondary">교육 할인</span>
+                  </div>
+                  <h3 class="about-member__title">사이버·현장 보수교육 할인</h3>
+                  <ul class="about-member__list">
+                    <li>사이버 보수교육: 회비 미납 회원 1평점당 2만원</li>
+                    <li>회비 완납 회원: 1평점당 1만원</li>
+                  </ul>
+                </li>
+                <li class="about-member__card" data-member-category="education">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/digital.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">연수위원회</span>
+                    <span class="ds-badge ds-badge--secondary">회원 지원</span>
+                  </div>
+                  <h3 class="about-member__title">현장 보수교육(디지털 덴티스트리 교육)</h3>
+                  <div class="about-member__text">
+                    <p>해당 과정 신청 및 수강 권한을 제공합니다.</p>
+                    <p>네이버폼 접수 링크를 통해 신청할 수 있습니다.</p>
+                    <p>(한국스마트의료기기산업진흥재단(MEDIF) 업무협약 과정)</p>
+                  </div>
+                </li>
+                <li class="about-member__card" data-member-category="education">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/specialist.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">노인·장애인 구강보건특별위원회</span>
+                    <span class="ds-badge ds-badge--secondary">전문 과정</span>
+                  </div>
+                  <h3 class="about-member__title">전문치과위생사 양성과정</h3>
+                  <div class="about-member__text">
+                    <p>해당 과정 신청 및 수강 권한을 제공합니다.</p>
+                  </div>
+                </li>
+                <li class="about-member__card" data-member-category="career">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/jobs.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">정보통신위원회</span>
+                    <span class="ds-badge ds-badge--success">채용ㆍ구직</span>
+                  </div>
+                  <h3 class="about-member__title">구인구직 게시판 정보 상위 노출</h3>
+                  <div class="about-member__text">
+                    <p>하이덴잡에서 등록 정회원의 채용공고와 인재정보를 상위에 노출합니다.</p>
+                  </div>
+                </li>
+                <li class="about-member__card" data-member-category="career">
+                  <div class="about-member__head">
+                    <span class="about-member__icon">
+                      <img src="/kdha/assets/images/about/member/volunteer.png" alt="" width="40" height="40" />
+                    </span>
+                    <span class="about-member__committee">대외협력위원회</span>
+                    <span class="ds-badge ds-badge--success">봉사 참여</span>
+                  </div>
+                  <h3 class="about-member__title">봉사자 모집 게시글 상위 노출</h3>
+                  <div class="about-member__text">
+                    <p>봉사자 모집 게시판 내 게시글을 상위에 노출합니다.</p>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <aside class="page-banner">
+          <div>
+            <h2>치위협보 기사제보 · 광고문의</h2>
+            <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+          </div>
+          <a href="mailto:press@kdha.or.kr">
+            02-6213-2735
+            <span>·</span>
+            press@kdha.or.kr
+          </a>
+        </aside>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__inner layout-container">
+          <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
+            <img
+              class="site-logo__image"
+              width="290"
+              height="55"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-footer.svg"
+            />
+          </a>
+          <address class="site-footer__address">
+            <span class="site-footer__info-row">
+              <span>
+                105-82-07361
+                <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
+              </span>
+              <span>대표자 : 박정란</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
+          </address>
+          <p class="site-footer__contact">
+            <span>TEL. 02-2236-0914</span>
+            <span>FAX. 02-2236-0915</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/related-sites/">관련사이트</a>
+              <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
+            <div class="site-footer__site-selects">
+              <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">시도회 홈페이지</option>
+                <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
+              </select>
+            </div>
+          </div>
+          <div class="site-footer__bottom">
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
+            <div class="social-links">
+              <a
+                class="social-links__item"
+                href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 공식 유튜브(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-youtube.png" />
+              </a>
+              <a
+                class="social-links__item"
+                href="https://ko-kr.facebook.com/koreadha/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 페이스북(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-facebook.png" />
+              </a>
+              <a
+                class="social-links__item"
+                href="https://www.instagram.com/krdha77/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="대한치과위생사협회 인스타그램(새 창)"
+              >
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-instagram.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/about-member.js"></script>
+  </body>
+</html>

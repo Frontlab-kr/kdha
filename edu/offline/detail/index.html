@@ -13,7 +13,7 @@
     <a class="skip-link" href="#main-content">본문 바로가기</a>
     <header class="site-header">
       <div class="site-header__inner layout-container">
-        <a class="site-logo site-logo--header" href="/kdha/edu/" aria-label="치위생교육원 홈">
+        <a class="site-logo site-logo--header" href="/kdha/edu/" aria-label="대한치과위생사협회 치위생교육원 홈">
           <img
             class="site-logo__image"
             width="220"
@@ -21,6 +21,7 @@
             alt="대한치과위생사협회"
             src="/kdha/assets/brand/logo-header-b.svg"
           />
+          <span class="site-logo__site-name">치위생교육원</span>
         </a>
         <div class="site-header__navigation">
           <nav class="utility-nav" aria-label="유틸리티 메뉴">
@@ -28,10 +29,12 @@
               <a class="utility-nav__link" href="https://news.kdha.or.kr/#items" target="_blank" rel="noreferrer">
                 덴톡
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
               <a class="utility-nav__link" href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                 영문사이트
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
               <a
                 class="utility-nav__link"
@@ -41,27 +44,31 @@
               >
                 KDHA mall
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
             </div>
           </nav>
           <nav class="primary-nav" aria-label="주 메뉴">
             <div class="primary-nav__links primary-nav__links--education">
+              <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/offline/">현장교육</a></div>
+              <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/online/">사이버교육</a></div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/kdha/edu/classroom/">내 강의실</a>
+              </div>
+              <div class="primary-nav__item">
+                <a class="primary-nav__link" href="/kdha/edu/community/notices/">소통광장</a>
+              </div>
               <div class="primary-nav__item">
                 <a class="primary-nav__link" href="/kdha/edu/about/">교육원 소개</a>
               </div>
               <div class="primary-nav__item">
                 <a class="primary-nav__link" href="/kdha/edu/guide/offline/">교육안내</a>
               </div>
-              <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/offline/">현장교육</a></div>
-              <div class="primary-nav__item"><a class="primary-nav__link" href="/kdha/edu/online/">사이버교육</a></div>
-              <div class="primary-nav__item">
-                <a class="primary-nav__link" href="#none">내 강의실</a>
-              </div>
             </div>
 
             <div class="site-menu__account">
               <button type="button">로그아웃</button>
-              <a href="#none">마이페이지</a>
+              <a href="/kdha/mypage/">마이페이지</a>
             </div>
 
             <button
@@ -95,19 +102,22 @@
               <a href="https://news.kdha.or.kr/#items" target="_blank" rel="noopener noreferrer">
                 덴톡
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
               <a href="/kdha/en/" target="_blank" rel="noopener noreferrer">
                 영문사이트
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
               <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
                 KDHA mall
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                <span class="sr-only">(새 창)</span>
               </a>
             </div>
             <div class="site-menu__account">
               <button type="button">로그아웃</button>
-              <a href="#none">마이페이지</a>
+              <a href="/kdha/mypage/">마이페이지</a>
             </div>
           </div>
           <div class="site-menu__groups">
@@ -143,9 +153,26 @@
                 </button>
               </h2>
               <ul id="edu-menu-group-2">
-                <li><a href="#none">수강신청 현황</a></li>
-                <li><a href="#none">학습진도 현황</a></li>
-                <li><a href="#none">교육이수 현황</a></li>
+                <li><a href="/kdha/edu/classroom/">수강현황</a></li>
+              </ul>
+            </section>
+            <section class="site-menu__group">
+              <h2>
+                <button class="site-menu__heading" type="button" aria-expanded="false" aria-controls="edu-menu-group-4">
+                  소통광장
+                  <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                </button>
+              </h2>
+              <ul id="edu-menu-group-4">
+                <li>
+                  <a href="/kdha/edu/community/notices/">공지사항</a>
+                </li>
+                <li>
+                  <a href="/kdha/edu/community/faq/">자주하는 질문</a>
+                </li>
+                <li>
+                  <a href="/kdha/edu/community/resources/">자료실</a>
+                </li>
               </ul>
             </section>
             <section class="site-menu__group">
@@ -191,20 +218,29 @@
                     <!-- <strong class="ofe-status ofe-status--closed">접수마감</strong> -->
                     <!-- <strong class="ofe-status ofe-status--scheduled">접수예정</strong> -->
                     <!-- <strong class="ofe-status ofe-status--completed">이수완료</strong> -->
+                    <button
+                      type="button"
+                      class="ofe-favorite"
+                      data-ofe-favorite
+                      aria-pressed="false"
+                      aria-label="관심교육"
+                    >
+                      <span class="material-symbols-rounded" aria-hidden="true">kid_star</span>
+                    </button>
                   </div>
                   <h2 class="ofe-course-title">2026 제48회 종합학술대회 및 KDHEX(일요일)</h2>
                 </header>
                 <dl class="ofe-features">
                   <div>
                     <dt>
-                      <img src="/kdha/assets/offline/credit.png" width="40" height="40" alt="" />
+                      <img src="/kdha/assets/offline/credit.svg" width="40" height="40" alt="" />
                       <span>평점</span>
                     </dt>
                     <dd>2평점</dd>
                   </div>
                   <div>
                     <dt>
-                      <img src="/kdha/assets/offline/fee.png" width="40" height="40" alt="" />
+                      <img src="/kdha/assets/offline/fee.svg" width="40" height="40" alt="" />
                       <span>수강료</span>
                     </dt>
                     <dd>
@@ -215,7 +251,7 @@
                   </div>
                   <div>
                     <dt>
-                      <img src="/kdha/assets/offline/capacity.png" width="40" height="40" alt="" />
+                      <img src="/kdha/assets/offline/capacity.svg" width="40" height="40" alt="" />
                       <span>정원</span>
                     </dt>
                     <dd>
@@ -226,20 +262,59 @@
                   </div>
                   <div>
                     <dt>
-                      <img src="/kdha/assets/offline/member.png" width="40" height="40" alt="" />
+                      <img src="/kdha/assets/offline/member.svg" width="40" height="40" alt="" />
                       <span>대상</span>
                     </dt>
                     <dd>등록정회원</dd>
                   </div>
                   <div>
                     <dt>
-                      <img src="/kdha/assets/offline/lunch.png" width="40" height="40" alt="" />
+                      <img src="/kdha/assets/offline/lunch.svg" width="40" height="40" alt="" />
                       <span>점심제공 여부</span>
                     </dt>
                     <dd>제공</dd>
                   </div>
                 </dl>
               </article>
+              <section class="ofe-caution" aria-labelledby="ofe-caution-title">
+                <h2 class="ofe-caution__title" id="ofe-caution-title">
+                  <span class="material-symbols-rounded" aria-hidden="true">error</span>
+                  유의사항
+                </h2>
+                <ul class="ds-guide-list ofe-notice">
+                  <li>
+                    <strong><em>환불 정책</em></strong>
+                    <span class="ofe-caution__sub">
+                      -
+                      <em>교육 7일전까지 : 전액환불</em>
+                    </span>
+                    <span class="ofe-caution__sub">
+                      -
+                      <em>교육 6일전 ~ 당일 : 정회원 환불불가 / 그 외 회원 50% 환불</em>
+                    </span>
+                  </li>
+                  <li><strong>동일 교육과정 재수강은 학점이 인정되지 않습니다.</strong></li>
+                  <li>
+                    <strong>
+                      수료기준 :
+                      <em>전체 수업의 80% 이상 출석 시</em>
+                      학점 인정됩니다.
+                    </strong>
+                    <span class="ofe-caution__sub">
+                      - 강연장 입/퇴실 시 QR코드를 인식하여 주셔야만 이수시간이 확인되어 보수교육 평점인정이 가능합니다.
+                    </span>
+                  </li>
+                  <li>
+                    <strong>
+                      <span class="ds-text-join">
+                        <em>교육 당일 신분증 및 회원증을 지참</em>
+                        <span>하여야</span>
+                      </span>
+                      합니다.
+                    </strong>
+                  </li>
+                </ul>
+              </section>
               <section class="ofe-panel">
                 <h2>교육 일정 및 장소</h2>
                 <dl class="ofe-data">
@@ -282,22 +357,6 @@
                   </li>
                 </ol>
               </section>
-              <ul class="ds-guide-list ofe-notice">
-                <li>
-                  환불 정책
-                  <br />
-                  - 교육 7일전까지 : 전액환불
-                  <br />
-                  - 교육 6일전 ~ 당일 : 정회원 환불불가 / 그 외 회원 50% 환불
-                </li>
-                <li>동일 교육과정 재수강은 학점이 인정되지 않습니다.</li>
-                <li>
-                  수료기준 : 전체 수업의 80% 이상 출석 시 학점이 인정됩니다.
-                  <br />
-                  - 강연장 입/퇴실 시 QR코드를 인식하여 주셔야만 이수시간이 확인되어 보수교육 평점인정이 가능합니다.
-                </li>
-                <li>교육 당일 신분증 및 회원증을 지참하여야 합니다.</li>
-              </ul>
             </div>
             <aside class="ofe-apply-shell" id="ofe-apply-shell" aria-label="수강 신청">
               <form id="ofe-application" class="ofe-application">
@@ -434,17 +493,6 @@
           </button>
         </div>
       </div>
-      <aside class="page-banner">
-        <div>
-          <h2>치위협보 기사제보 · 광고문의</h2>
-          <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
-        </div>
-        <a href="mailto:press@kdha.or.kr">
-          02-6213-2735
-          <span>·</span>
-          press@kdha.or.kr
-        </a>
-      </aside>
     </main>
     <dialog
       class="edu-dialog edu-dialog--auth ofe-privacy-dialog"
@@ -502,6 +550,34 @@
         <a class="ds-button ds-button--large ds-button--primary" href="#">치과위생사회원 전환 신청</a>
       </div>
     </dialog>
+    <dialog
+      class="edu-dialog edu-dialog--auth edu-dialog--id-result ofe-handson-dialog"
+      id="handson-dialog"
+      aria-labelledby="handson-dialog-title"
+      aria-describedby="handson-dialog-description"
+    >
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
+        close
+      </button>
+      <h2 id="handson-dialog-title">핸즈온 추가 신청</h2>
+      <div class="edu-dialog__account-result" id="handson-dialog-description">
+        <p>
+          해당 교육내 실습과정이 포함되어 있습니다.
+          <br />
+          실습과정을 함께 신청하시겠습니까?
+        </p>
+        <p>교재비는 문자로 별도 청구됩니다.</p>
+      </div>
+      <div class="edu-dialog__actions">
+        <a class="ds-button ds-button--large ds-button--outline" href="/kdha/edu/offline/payment/">미신청</a>
+        <a class="ds-button ds-button--large ds-button--primary" href="/kdha/edu/offline/payment/">신청</a>
+      </div>
+    </dialog>
     <footer class="site-footer">
       <div class="site-footer__inner layout-container">
         <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
@@ -510,7 +586,7 @@
             width="290"
             height="55"
             alt="대한치과위생사협회"
-            src="/kdha/assets/brand/logo-footer.png"
+            src="/kdha/assets/brand/logo-footer.svg"
           />
         </a>
         <address class="site-footer__address">
@@ -596,6 +672,7 @@
       <nav aria-label="현장교육 레이어 확인">
         <a href="/kdha/edu/offline/detail/#privacy-dialog">개인정보 이용약관</a>
         <a href="/kdha/edu/offline/detail/#member-switch-dialog">회원 등급 전환 안내</a>
+        <a href="/kdha/edu/offline/detail/#handson-dialog">핸즈온 추가 신청</a>
         <a href="/kdha/edu/offline/payment/#capacity-dialog">신청인원 초과</a>
         <a href="/kdha/edu/offline/payment/#coupon-dialog">보유 쿠폰</a>
       </nav>
