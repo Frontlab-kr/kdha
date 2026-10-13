@@ -244,7 +244,7 @@
     }
     var DELAY = 3000;
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var mobile = window.matchMedia('(max-width: 767px)');
+    var mobile = window.matchMedia('(max-width: 1080px)'); // 1080px 이하: 채용관 가로 슬라이드
     var playing = !reduceMotion.matches;
     var hovering = false;
     var focused = false;
