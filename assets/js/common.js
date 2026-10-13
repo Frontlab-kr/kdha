@@ -708,4 +708,38 @@ $(function () {
     });
     show(0, false);
   });
+
+  // 공통: 첨부 파일 목록 표시 · 삭제(consult-upload: 1:1·법률·노무 상담, 채용정보 작성)
+  document.querySelectorAll('[data-consult-upload]').forEach(function (upload) {
+    var input = upload.querySelector('input[type="file"]');
+    var list = upload.querySelector('[data-consult-upload-list]');
+
+    function size(bytes) {
+      return bytes >= 1048576 ? Math.round(bytes / 1048576) + 'MB' : Math.max(1, Math.round(bytes / 1024)) + 'KB';
+    }
+
+    input.addEventListener('change', function () {
+      Array.from(input.files).forEach(function (file) {
+        var item = document.createElement('li');
+        var name = document.createElement('span');
+        var fileSize = document.createElement('span');
+        var remove = document.createElement('button');
+        name.className = 'consult-upload__name';
+        name.textContent = file.name;
+        fileSize.className = 'consult-upload__size';
+        fileSize.textContent = size(file.size);
+        remove.type = 'button';
+        remove.setAttribute('aria-label', file.name + ' 삭제');
+        remove.setAttribute('data-consult-upload-remove', '');
+        remove.innerHTML = '<span class="material-symbols-rounded" aria-hidden="true">close</span>';
+        item.append(name, fileSize, remove);
+        list.append(item);
+      });
+    });
+
+    list.addEventListener('click', function (event) {
+      var remove = event.target.closest('[data-consult-upload-remove]');
+      if (remove) remove.closest('li').remove();
+    });
+  });
 });

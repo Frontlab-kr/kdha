@@ -343,6 +343,86 @@
                     <input id="recruit-title" name="recruit-title" type="text" placeholder="제목 입력" required />
                   </div>
                 </div>
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="recruit-sido">
+                    근무지역
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <div class="jobs-inline">
+                      <select
+                        id="recruit-sido"
+                        name="recruit-sido"
+                        aria-label="시/도"
+                        required
+                        data-custom-select
+                        data-select-size="l"
+                      >
+                        <option value="">시/도</option>
+                        <option value="서울">서울</option>
+                        <option value="경기">경기</option>
+                        <option value="인천">인천</option>
+                        <option value="부산">부산</option>
+                        <option value="대구">대구</option>
+                        <option value="광주">광주</option>
+                        <option value="대전">대전</option>
+                        <option value="울산">울산</option>
+                        <option value="세종">세종</option>
+                        <option value="강원">강원</option>
+                        <option value="충북">충북</option>
+                        <option value="충남">충남</option>
+                        <option value="전북">전북</option>
+                        <option value="전남">전남</option>
+                        <option value="경북">경북</option>
+                        <option value="경남">경남</option>
+                        <option value="제주">제주</option>
+                      </select>
+                      <select aria-label="시/군/구" required data-custom-select data-select-size="l">
+                        <option value="">시/군/구</option>
+                        <option value="강남구">강남구</option>
+                        <option value="강동구">강동구</option>
+                        <option value="노원구">노원구</option>
+                        <option value="송파구">송파구</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="recruit-time">
+                    근무시간
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <div class="jobs-inline jobs-inline--time jobs-inline--stack">
+                      <select
+                        id="recruit-time"
+                        name="recruit-time"
+                        aria-label="근무요일"
+                        required
+                        data-custom-select
+                        data-select-size="l"
+                      >
+                        <option value="">근무시간 선택</option>
+                        <option value="월~토(주5일)">월~토(주5일)</option>
+                        <option value="월~토(주40시간)">월~토(주40시간)</option>
+                        <option value="월~토(토요일격주근무)" selected>월~토(토요일격주근무)</option>
+                        <option value="월~토">월~토</option>
+                        <option value="월~일">월~일</option>
+                        <option value="주 1일">주 1일</option>
+                        <option value="주 3일">주 3일</option>
+                        <option value="주 5일">주 5일</option>
+                      </select>
+                      <select aria-label="근무시간대" data-custom-select data-select-size="l">
+                        <option value="">시간 선택</option>
+                        <option value="협의가능" selected>협의가능</option>
+                        <option value="오전">오전</option>
+                        <option value="오후">오후</option>
+                        <option value="종일">종일</option>
+                      </select>
+                      <input type="text" placeholder="직접 입력" aria-label="근무시간 직접 입력" disabled />
+                    </div>
+                  </div>
+                </div>
                 <div class="jobs-form-cols">
                   <div class="jobs-form-row">
                     <label class="jobs-form-row__label" for="recruit-start">
@@ -392,202 +472,60 @@
                     </div>
                   </div>
                 </div>
-                <div class="jobs-form-row">
-                  <p class="jobs-form-row__label" id="recruit-content-label">
-                    상세내용
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </p>
-                  <div class="jobs-form-row__slot">
-                    <!-- 에디터 삽입 영역: 개발 시 이 안에 에디터를 넣습니다. -->
-                    <div
-                      class="jobs-editor"
-                      id="recruit-content"
-                      data-editor
-                      aria-labelledby="recruit-content-label"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="jobs-form-section" aria-labelledby="recruit-requirements">
-              <div class="jobs-form-head">
-                <h2 id="recruit-requirements">모집요강</h2>
-              </div>
-              <div class="jobs-form-rows">
-                <div class="jobs-form-row">
-                  <p class="jobs-form-row__label" id="recruit-task-label">
-                    업무
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </p>
-                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-task-label">
-                    <div class="jobs-choices">
-                      <label class="form-check">
-                        <input type="checkbox" name="task" value="진료실" />
-                        <span>진료실</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="task" value="진료전반" checked />
-                        <span>진료전반</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="task" value="데스크" />
-                        <span>데스크</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="task" value="상담/코디" checked />
-                        <span>상담/코디</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="task" value="교정" />
-                        <span>교정</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="task" value="치과기공" />
-                        <span>치과기공</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="task" value="보철/보존" />
-                        <span>보철/보존</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="task" value="경영지원" />
-                        <span>경영지원</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="task" value="기타" />
-                        <span>기타</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="jobs-form-row">
-                  <p class="jobs-form-row__label" id="recruit-worktype-label">
-                    근무형태
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </p>
-                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-worktype-label">
-                    <div class="jobs-choices">
-                      <label class="form-check">
-                        <input type="checkbox" name="workType" value="정규직" checked />
-                        <span>정규직</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="workType" value="비정규직" />
-                        <span>비정규직</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="workType" value="계약직" />
-                        <span>계약직</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="workType" value="아르바이트" />
-                        <span>아르바이트</span>
-                      </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="workType" value="프리랜서" />
-                        <span>프리랜서</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="jobs-form-row">
-                  <label class="jobs-form-row__label" for="recruit-time">
-                    근무시간
-                    <span class="jobs-required" aria-hidden="true">*</span>
-                  </label>
-                  <div class="jobs-form-row__slot form-field form-field--large">
-                    <div class="jobs-inline jobs-inline--time">
+                <div class="jobs-form-cols">
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="recruit-career">
+                      경력
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
                       <select
-                        id="recruit-time"
-                        name="recruit-time"
-                        aria-label="근무요일"
+                        id="recruit-career"
+                        name="recruit-career"
                         required
                         data-custom-select
                         data-select-size="l"
                       >
-                        <option value="">근무시간 선택</option>
-                        <option value="월~토(주5일)">월~토(주5일)</option>
-                        <option value="월~토(주40시간)">월~토(주40시간)</option>
-                        <option value="월~토(토요일격주근무)" selected>월~토(토요일격주근무)</option>
-                        <option value="월~토">월~토</option>
-                        <option value="월~일">월~일</option>
-                        <option value="주 1일">주 1일</option>
-                        <option value="주 3일">주 3일</option>
-                        <option value="주 5일">주 5일</option>
+                        <option value="">선택</option>
+                        <option value="경력무관">경력무관</option>
+                        <option value="신입">신입</option>
+                        <option value="1년 이상">1년 이상</option>
+                        <option value="3년 이상">3년 이상</option>
+                        <option value="5년 이상">5년 이상</option>
                       </select>
-                      <select aria-label="근무시간대" data-custom-select data-select-size="l">
-                        <option value="">시간 선택</option>
-                        <option value="협의가능" selected>협의가능</option>
-                        <option value="오전">오전</option>
-                        <option value="오후">오후</option>
-                        <option value="종일">종일</option>
+                    </div>
+                  </div>
+                  <div class="jobs-form-row">
+                    <label class="jobs-form-row__label" for="recruit-edu">
+                      학력
+                      <span class="jobs-required" aria-hidden="true">*</span>
+                    </label>
+                    <div class="jobs-form-row__slot form-field form-field--large">
+                      <select id="recruit-edu" name="recruit-edu" required data-custom-select data-select-size="l">
+                        <option value="">선택</option>
+                        <option value="학력무관">학력무관</option>
+                        <option value="대학교(2, 3년) 졸업">대학교(2, 3년) 졸업</option>
+                        <option value="대학교(4년) 졸업">대학교(4년) 졸업</option>
                       </select>
-                      <input type="text" placeholder="직접 입력" aria-label="근무시간 직접 입력" disabled />
                     </div>
                   </div>
                 </div>
-                <div class="jobs-form-cols">
-                  <div class="jobs-form-row">
-                    <label class="jobs-form-row__label" for="recruit-sido">
-                      근무지역
-                      <span class="jobs-required" aria-hidden="true">*</span>
-                    </label>
-                    <div class="jobs-form-row__slot form-field form-field--large">
-                      <div class="jobs-inline">
-                        <select
-                          id="recruit-sido"
-                          name="recruit-sido"
-                          aria-label="시/도"
-                          required
-                          data-custom-select
-                          data-select-size="l"
-                        >
-                          <option value="">시/도</option>
-                          <option value="서울">서울</option>
-                          <option value="경기">경기</option>
-                          <option value="인천">인천</option>
-                          <option value="부산">부산</option>
-                          <option value="대구">대구</option>
-                          <option value="광주">광주</option>
-                          <option value="대전">대전</option>
-                          <option value="울산">울산</option>
-                          <option value="세종">세종</option>
-                          <option value="강원">강원</option>
-                          <option value="충북">충북</option>
-                          <option value="충남">충남</option>
-                          <option value="전북">전북</option>
-                          <option value="전남">전남</option>
-                          <option value="경북">경북</option>
-                          <option value="경남">경남</option>
-                          <option value="제주">제주</option>
-                        </select>
-                        <select aria-label="시/군/구" required data-custom-select data-select-size="l">
-                          <option value="">시/군/구</option>
-                          <option value="강남구">강남구</option>
-                          <option value="강동구">강동구</option>
-                          <option value="노원구">노원구</option>
-                          <option value="송파구">송파구</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="jobs-form-row">
-                    <label class="jobs-form-row__label" for="recruit-pay">
-                      급여
-                      <span class="jobs-required" aria-hidden="true">*</span>
-                    </label>
-                    <div class="jobs-form-row__slot form-field form-field--large">
-                      <div class="jobs-inline jobs-inline--pay">
-                        <select id="recruit-pay" name="recruit-pay" required data-custom-select data-select-size="l">
-                          <option value="">급여 선택</option>
-                          <option value="회사 내규에 따름">회사 내규에 따름</option>
-                          <option value="면접 후 결정">면접 후 결정</option>
-                          <option value="월급">월급</option>
-                          <option value="연봉">연봉</option>
-                          <option value="시급">시급</option>
-                        </select>
-                        <input type="text" placeholder="직접 입력" aria-label="급여 직접 입력" disabled />
-                      </div>
+                <div class="jobs-form-row">
+                  <label class="jobs-form-row__label" for="recruit-pay">
+                    급여
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </label>
+                  <div class="jobs-form-row__slot form-field form-field--large">
+                    <div class="jobs-inline jobs-inline--pay">
+                      <select id="recruit-pay" name="recruit-pay" required data-custom-select data-select-size="l">
+                        <option value="">급여 선택</option>
+                        <option value="회사 내규에 따름">회사 내규에 따름</option>
+                        <option value="면접 후 결정">면접 후 결정</option>
+                        <option value="월급">월급</option>
+                        <option value="연봉">연봉</option>
+                        <option value="시급">시급</option>
+                      </select>
+                      <input type="text" placeholder="직접 입력" aria-label="급여 직접 입력" disabled />
                     </div>
                   </div>
                 </div>
@@ -700,48 +638,79 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </section>
-            <section class="jobs-form-section" aria-labelledby="recruit-qualify">
-              <div class="jobs-form-head">
-                <h2 id="recruit-qualify">지원자격</h2>
-              </div>
-              <div class="jobs-form-rows">
-                <div class="jobs-form-cols">
-                  <div class="jobs-form-row">
-                    <label class="jobs-form-row__label" for="recruit-career">
-                      경력
-                      <span class="jobs-required" aria-hidden="true">*</span>
-                    </label>
-                    <div class="jobs-form-row__slot form-field form-field--large">
-                      <select
-                        id="recruit-career"
-                        name="recruit-career"
-                        required
-                        data-custom-select
-                        data-select-size="l"
-                      >
-                        <option value="">선택</option>
-                        <option value="경력무관">경력무관</option>
-                        <option value="신입">신입</option>
-                        <option value="1년 이상">1년 이상</option>
-                        <option value="3년 이상">3년 이상</option>
-                        <option value="5년 이상">5년 이상</option>
-                      </select>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-worktype-label">
+                    근무형태
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-worktype-label">
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="정규직" checked />
+                        <span>정규직</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="비정규직" />
+                        <span>비정규직</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="계약직" />
+                        <span>계약직</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="아르바이트" />
+                        <span>아르바이트</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="workType" value="프리랜서" />
+                        <span>프리랜서</span>
+                      </label>
                     </div>
                   </div>
-                  <div class="jobs-form-row">
-                    <label class="jobs-form-row__label" for="recruit-edu">
-                      학력
-                      <span class="jobs-required" aria-hidden="true">*</span>
-                    </label>
-                    <div class="jobs-form-row__slot form-field form-field--large">
-                      <select id="recruit-edu" name="recruit-edu" required data-custom-select data-select-size="l">
-                        <option value="">선택</option>
-                        <option value="학력무관">학력무관</option>
-                        <option value="대학교(2, 3년) 졸업">대학교(2, 3년) 졸업</option>
-                        <option value="대학교(4년) 졸업">대학교(4년) 졸업</option>
-                      </select>
+                </div>
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-task-label">
+                    담당업무
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </p>
+                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-task-label">
+                    <div class="jobs-choices">
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="진료실" />
+                        <span>진료실</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="진료전반" checked />
+                        <span>진료전반</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="데스크" />
+                        <span>데스크</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="상담/코디" checked />
+                        <span>상담/코디</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="교정" />
+                        <span>교정</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="치과기공" />
+                        <span>치과기공</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="보철/보존" />
+                        <span>보철/보존</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="경영지원" />
+                        <span>경영지원</span>
+                      </label>
+                      <label class="form-check">
+                        <input type="checkbox" name="task" value="기타" />
+                        <span>기타</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -953,6 +922,28 @@
                 </div>
               </div>
             </section>
+            <section class="jobs-form-section" aria-labelledby="recruit-content-title">
+              <div class="jobs-form-head">
+                <h2 id="recruit-content-title">공고내용</h2>
+              </div>
+              <div class="jobs-form-rows">
+                <div class="jobs-form-row">
+                  <p class="jobs-form-row__label" id="recruit-content-label">
+                    상세내용
+                    <span class="jobs-required" aria-hidden="true">*</span>
+                  </p>
+                  <div class="jobs-form-row__slot">
+                    <!-- 에디터 삽입 영역: 개발 시 이 안에 에디터를 넣습니다. -->
+                    <div
+                      class="jobs-editor"
+                      id="recruit-content"
+                      data-editor
+                      aria-labelledby="recruit-content-label"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </section>
             <section class="jobs-form-section" aria-labelledby="recruit-attach">
               <div class="jobs-form-head">
                 <h2 id="recruit-attach">별도 공고 첨부</h2>
@@ -961,26 +952,40 @@
                 <div class="jobs-form-row">
                   <p class="jobs-form-row__label" id="recruit-file-label">첨부파일</p>
                   <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-file-label">
-                    <div class="jobs-drop" data-jobs-drop>
-                      <p>
-                        이곳에 파일을 드래그 하거나, 파일찾기 버튼으로 파일을 추가해 주세요.
-                        <br />
-                        ※ 100MB 이하의 파일만 등록할 수 있습니다.
-                      </p>
-                      <label class="ds-button ds-button--small ds-button--outline" for="recruit-file">파일찾기</label>
-                      <input
-                        class="sr-only"
-                        type="file"
-                        id="recruit-file"
-                        name="recruit-file"
-                        accept=".pdf,.zip,.hwp,.doc,.docx,.ppt,.pptx,.jpg,.png"
-                        aria-describedby="recruit-file-hint"
-                      />
-                      <p class="jobs-drop__list" data-jobs-drop-list aria-live="polite"></p>
+                    <div class="consult-upload" data-consult-upload>
+                      <div class="consult-upload__drop">
+                        <p>
+                          이곳에 파일을 드래그 하거나 파일찾기 버튼으로 파일을 추가해주세요.
+                          <br />
+                          ※ 100MB 이하의 파일만 등록할 수 있습니다.
+                        </p>
+                        <label class="ds-button ds-button--small ds-button--outline" for="recruit-file">파일찾기</label>
+                        <input
+                          class="sr-only"
+                          type="file"
+                          id="recruit-file"
+                          name="recruit-file"
+                          multiple
+                          accept=".hwp,.hwpx,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.gif,.zip"
+                          aria-describedby="recruit-file-hint"
+                        />
+                      </div>
+                      <ul class="consult-upload__list" data-consult-upload-list aria-live="polite">
+                        <li>
+                          <span class="consult-upload__name">파일명.jpg</span>
+                          <span class="consult-upload__size">10MB</span>
+                          <button type="button" aria-label="파일명.jpg 삭제" data-consult-upload-remove>
+                            <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                          </button>
+                        </li>
+                      </ul>
+                      <ul class="consult-upload__guide" id="recruit-file-hint">
+                        <li>
+                          업로드 가능한 파일 형식은 hwp, hwpx, pdf, doc, docx, xls, xlsx, ppt, pptx, jpg, jpeg, png,
+                          gif, zip입니다.
+                        </li>
+                      </ul>
                     </div>
-                    <p class="jobs-hint" id="recruit-file-hint">
-                      등록 가능 파일 형식 : pdf, zip, hwp, doc, docx, ppt, pptx, jpg, png
-                    </p>
                   </div>
                 </div>
               </div>

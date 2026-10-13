@@ -182,7 +182,7 @@
     render(Number(input.value));
   });
 
-  // 구인 상세 병원사진 슬라이드(PC 4장씩 · 양옆 이전·다음 / MO 1장씩 · 아래 이전·현재/전체·다음)
+  // 구인 상세 병원사진 슬라이드(PC 3장씩 · 양옆 이전·다음 / MO 1장씩 · 아래 이전·현재/전체·다음)
   // 끝에서도 버튼 포커스가 사라지지 않도록 disabled 대신 aria-disabled로 표시합니다.
   document.querySelectorAll('[data-jobs-photos]').forEach(function (photos) {
     var slider = photos.querySelector('.jobs-photos__slider');
@@ -208,7 +208,7 @@
       speed: 400,
       watchOverflow: true,
       breakpoints: {
-        768: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 46 },
+        768: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 24 },
       },
       a11y: { slideLabelMessage: '{{index}} / {{slidesLength}}' },
       on: {

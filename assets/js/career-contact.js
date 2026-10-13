@@ -40,40 +40,6 @@
     });
   });
 
-  // 첨부 파일 목록 표시 · 삭제
-  document.querySelectorAll('[data-consult-upload]').forEach(function (upload) {
-    var input = upload.querySelector('input[type="file"]');
-    var list = upload.querySelector('[data-consult-upload-list]');
-
-    function size(bytes) {
-      return bytes >= 1048576 ? Math.round(bytes / 1048576) + 'MB' : Math.max(1, Math.round(bytes / 1024)) + 'KB';
-    }
-
-    input.addEventListener('change', function () {
-      Array.from(input.files).forEach(function (file) {
-        var item = document.createElement('li');
-        var name = document.createElement('span');
-        var fileSize = document.createElement('span');
-        var remove = document.createElement('button');
-        name.className = 'consult-upload__name';
-        name.textContent = file.name;
-        fileSize.className = 'consult-upload__size';
-        fileSize.textContent = size(file.size);
-        remove.type = 'button';
-        remove.setAttribute('aria-label', file.name + ' 삭제');
-        remove.setAttribute('data-consult-upload-remove', '');
-        remove.innerHTML = '<span class="material-symbols-rounded" aria-hidden="true">close</span>';
-        item.append(name, fileSize, remove);
-        list.append(item);
-      });
-    });
-
-    list.addEventListener('click', function (event) {
-      var remove = event.target.closest('[data-consult-upload-remove]');
-      if (remove) remove.closest('li').remove();
-    });
-  });
-
   // 신청 폼: 필수 항목 확인 후 알림(서버 전송 없음)
   document.querySelectorAll('[data-consult-form]').forEach(function (form) {
     form.addEventListener('submit', function (event) {
