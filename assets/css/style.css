@@ -24672,6 +24672,87 @@ main:has(.career-jobs) > .page-banner {
     padding-inline: 12px;
   }
 }
+@media (max-width: 1080px) and (min-width: 768px) {
+  .jobs-filter {
+    padding: 24px 20px;
+  }
+  .jobs-filter__steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .jobs-filter__step {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 11px;
+  }
+  .jobs-filter__icon {
+    width: 32px;
+    height: 32px;
+  }
+  .jobs-filter__text {
+    width: 100%;
+  }
+  .jobs-filter__label {
+    font-size: 16px;
+  }
+  .jobs-filter__panel {
+    padding: 24px 20px;
+  }
+  .jobs-filter__head h3 {
+    color: #101418;
+    line-height: 1.4;
+    letter-spacing: -0.06px;
+  }
+  .jobs-filter__toggle {
+    display: block;
+  }
+  .jobs-filter__desc {
+    margin-top: 0;
+  }
+  .jobs-filter__subtitle {
+    line-height: 1.4;
+  }
+  .jobs-filter__result {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px;
+  }
+  .jobs-filter__actions .ds-button {
+    flex: 1;
+    height: 44px;
+  }
+  .jobs-option {
+    padding: 11px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  .jobs-chips button {
+    gap: 4px;
+    padding: 7px 11px 7px 15px;
+    border-color: #d0d8e2;
+    background: #fff;
+  }
+  .jobs-chips button .material-symbols-rounded {
+    font-size: 16px;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 16;
+  }
+  .jobs-filter__step--more {
+    flex: none;
+  }
+  .jobs-filter__step--more .jobs-filter__arrow {
+    display: none;
+  }
+  .jobs-filter__group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .jobs-filter__group > .jobs-filter__subtitle {
+    flex: none;
+  }
+}
 main:has(.career-contact) > .page-banner {
   margin-top: 0;
 }
