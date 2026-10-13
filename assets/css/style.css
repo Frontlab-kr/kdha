@@ -3282,6 +3282,36 @@ body:not(.regional-site):not(.english-site) .primary-nav__icon-button {
   white-space: nowrap;
 }
 
+.index-table .index-table__group th {
+  font-family: "Pretendard JP Variable", "Pretendard Variable", "Pretendard JP", Pretendard, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0;
+  position: static;
+  padding-block: 16px 8px;
+  border-top: 2px solid #d0d8e2;
+  color: #101418;
+  background: #f5f1ff;
+}
+.index-table .index-table__group th span {
+  font-family: "Pretendard JP Variable", "Pretendard Variable", "Pretendard JP", Pretendard, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  margin-left: 4px;
+  color: #5d2eaa;
+}
+
+.index-table tbody .index-table__group:first-child th {
+  border-top: 0;
+}
+
+.index-table tbody .index-table__group:hover {
+  background: none;
+}
+
 @media (max-width: 640px) {
   .index-page {
     padding-block: 48px;
