@@ -11,7 +11,7 @@
     });
   });
 
-  // 카드뉴스 상세: 이미지 한 장씩 이전/다음 전환(버튼·스와이프), 현재 순서 안내
+  // 카드뉴스 팝업: 이미지 한 장씩 이전/다음 전환(버튼·스와이프), 현재 순서 안내
   document.querySelectorAll('[data-cardnews]').forEach(function (root) {
     var slides = Array.prototype.slice.call(root.querySelectorAll('.community-cardnews__slide'));
     var prev = root.querySelector('[data-cardnews-prev]');
@@ -66,6 +66,21 @@
       if (next) next.hidden = true;
     }
     show(0, false);
+    // 카드뉴스 팝업: 닫으면 다음에 열 때 첫 장부터 보이도록 되돌림
+    var dialog = root.closest('dialog');
+    if (dialog) {
+      dialog.addEventListener('close', function () {
+        show(0, false);
+        if (status) status.textContent = '';
+      });
+    }
+  });
+
+  // 카드뉴스 목록: 카드 링크(#팝업 id)는 주소 이동 없이 팝업만 엽니다. 열기는 common.js [data-dialog-open]
+  document.querySelectorAll('a[data-dialog-open]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+    });
   });
 
   document.querySelectorAll('[data-volunteer-write]').forEach(function (form) {

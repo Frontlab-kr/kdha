@@ -231,6 +231,108 @@
     });
   });
 
+  // 등록정회원 채용관 자동 넘김: PC·태블릿은 목록 안에서 세로로, MO는 가로 슬라이드로 한 장씩 넘기고 끝나면 처음으로.
+  // 마우스 오버·키보드 포커스·터치 중에는 멈추고, 정지/재생 버튼(WCAG 2.2.2)으로 끌 수 있습니다.
+  // 동작 줄이기(prefers-reduced-motion) 설정이면 정지 상태로 시작합니다.
+  document.querySelectorAll('[data-jobs-featured]').forEach(function (panel) {
+    var list = panel.querySelector('.jobs-featured__list');
+    var toggle = panel.querySelector('[data-jobs-featured-toggle]');
+    var items = list ? Array.from(list.children) : [];
+    if (!list || !toggle || items.length < 2) {
+      if (toggle) toggle.hidden = true;
+      return;
+    }
+    var DELAY = 3000;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var mobile = window.matchMedia('(max-width: 767px)');
+    var playing = !reduceMotion.matches;
+    var hovering = false;
+    var focused = false;
+    var touching = false;
+    var timer = null;
+    var touchTimer = null;
+
+    function offset(item) {
+      var listBox = list.getBoundingClientRect();
+      var itemBox = item.getBoundingClientRect();
+      return mobile.matches
+        ? itemBox.left - listBox.left + list.scrollLeft - parseFloat(getComputedStyle(list).paddingLeft)
+        : itemBox.top - listBox.top + list.scrollTop;
+    }
+
+    function advance() {
+      var horizontal = mobile.matches;
+      var position = horizontal ? list.scrollLeft : list.scrollTop;
+      var max = horizontal ? list.scrollWidth - list.clientWidth : list.scrollHeight - list.clientHeight;
+      if (max <= 1) return;
+      var nextItem = items.find(function (item) {
+        return offset(item) > position + 1;
+      });
+      var target = position >= max - 1 || !nextItem ? 0 : Math.min(offset(nextItem), max);
+      list.scrollTo(horizontal ? { left: target, behavior: 'smooth' } : { top: target, behavior: 'smooth' });
+    }
+
+    function update() {
+      window.clearInterval(timer);
+      timer = null;
+      if (playing && !hovering && !focused && !touching && !document.hidden) timer = window.setInterval(advance, DELAY);
+    }
+
+    function render() {
+      toggle.querySelector('.material-symbols-rounded').textContent = playing ? 'pause' : 'play_arrow';
+      toggle.querySelector('.sr-only').textContent = playing ? '채용관 자동 넘김 정지' : '채용관 자동 넘김 시작';
+    }
+
+    toggle.addEventListener('click', function () {
+      playing = !playing;
+      render();
+      update();
+    });
+    panel.addEventListener('mouseenter', function () {
+      hovering = true;
+      update();
+    });
+    panel.addEventListener('mouseleave', function () {
+      hovering = false;
+      update();
+    });
+    // 정지/재생 버튼에 포커스가 있을 때는 멈추지 않아 버튼 상태로 확인할 수 있게 합니다.
+    list.addEventListener('focusin', function () {
+      focused = true;
+      update();
+    });
+    list.addEventListener('focusout', function (event) {
+      if (list.contains(event.relatedTarget)) return;
+      focused = false;
+      update();
+    });
+    list.addEventListener(
+      'touchstart',
+      function () {
+        window.clearTimeout(touchTimer);
+        touching = true;
+        update();
+      },
+      { passive: true },
+    );
+    list.addEventListener('touchend', function () {
+      // 손을 뗀 뒤 한 번 쉬고 다시 넘깁니다.
+      window.clearTimeout(touchTimer);
+      touchTimer = window.setTimeout(function () {
+        touching = false;
+        update();
+      }, DELAY);
+    });
+    document.addEventListener('visibilitychange', update);
+    reduceMotion.addEventListener('change', function () {
+      playing = !reduceMotion.matches;
+      render();
+      update();
+    });
+    render();
+    update();
+  });
+
   // 등록 폼: 필수 항목 확인 후 알림(서버 전송 없음)
   document.querySelectorAll('[data-jobs-form]').forEach(function (form) {
     form.addEventListener('submit', function (event) {

@@ -313,22 +313,15 @@
           <div class="community-page news-board">
             <!-- KD-US-OPE-01-01 -->
             <section class="community-notices" data-community-board aria-label="자료실 목록">
-              <form class="community-search form-field form-field--large" role="search">
-                <!-- 구분 검색조건: 검색 버튼을 누르면 적용 -->
-                <div class="news-resource-type" role="radiogroup" aria-labelledby="resource-type-label">
-                  <span class="news-resource-type__label" id="resource-type-label">구분</span>
-                  <label class="form-check">
-                    <input type="radio" name="type" value="all" checked />
-                    전체
-                  </label>
-                  <label class="form-check">
-                    <input type="radio" name="type" value="general" />
-                    일반자료
-                  </label>
-                  <label class="form-check">
-                    <input type="radio" name="type" value="form" />
-                    서식
-                  </label>
+              <form class="community-search news-resource-search form-field form-field--large" role="search">
+                <!-- 구분 검색조건(Figma '조회' 10/13: 구분 셀렉트): 검색 버튼을 누르면 적용 -->
+                <div class="news-resource-type">
+                  <span class="news-resource-type__label" aria-hidden="true">구분</span>
+                  <select data-select-size="l" data-custom-select name="type" aria-label="구분">
+                    <option value="all">전체</option>
+                    <option value="general">일반자료</option>
+                    <option value="form">서식</option>
+                  </select>
                 </div>
                 <select data-select-size="l" data-custom-select name="field" aria-label="검색 조건">
                   <option value="all">선택</option>
