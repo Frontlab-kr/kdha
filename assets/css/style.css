@@ -9783,9 +9783,9 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   flex-shrink: 0;
 }
 
-.edu-site .site-logo__image--edu {
-  width: 182px;
-  height: 42px;
+.edu-site .site-header .site-logo--header .site-logo__image.site-logo__image--edu {
+  width: 181.89px;
+  height: 41.69px;
 }
 
 .edu-site .site-menu--education .site-menu__groups {
@@ -9796,9 +9796,9 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   .edu-site .site-header .site-logo--header {
     gap: 6px;
   }
-  .edu-site .site-logo__image--edu {
-    width: auto;
-    height: 30.667px;
+  .edu-site .site-header .site-logo--header .site-logo__image.site-logo__image--edu {
+    width: 132.28px;
+    height: 30.32px;
   }
 }
 /* Shared representative / education header */
