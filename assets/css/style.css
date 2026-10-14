@@ -22303,8 +22303,11 @@ main:has(.career-jobs) > .page-banner {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 .jobs-featured__item:is(:hover, :focus-visible) {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(113, 58, 204, 0.14);
+}
+.jobs-featured__item:is(:hover, :focus-visible) strong {
+  color: #713acc;
 }
 .jobs-featured__item span {
   color: #713acc;
