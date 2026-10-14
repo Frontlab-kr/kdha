@@ -22300,15 +22300,11 @@ main:has(.career-jobs) > .page-banner {
   color: #232a31;
   background: #fff;
   line-height: 1.5;
-  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 .jobs-featured__item:is(:hover, :focus-visible) {
-  border-color: #713acc;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transform: translateY(-4px);
-}
-.jobs-featured__item:is(:hover, :focus-visible) strong {
-  color: #713acc;
+  box-shadow: 0 12px 24px rgba(113, 58, 204, 0.14);
 }
 .jobs-featured__item span {
   color: #713acc;
