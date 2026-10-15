@@ -5285,6 +5285,24 @@ body.main-page .site .site-header__inner {
   font-weight: 400;
 }
 
+@media (min-width: 701px) and (max-width: 767px) {
+  body.main-page .site .site-header,
+  body.main-page .site .site-header__inner,
+  body.main-page .site-header,
+  body.main-page .site-header__inner {
+    height: 62.667px;
+  }
+  body.main-page .site .site-header__inner,
+  body.main-page .site-header__inner {
+    align-items: center;
+    padding: 16px;
+  }
+  body.main-page .site-logo--header,
+  body.main-page .site-logo--header .site-logo__image {
+    width: 160px;
+    height: 30.32px;
+  }
+}
 .user-page__main {
   min-height: 720px;
   background: #fff;
