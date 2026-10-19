@@ -2914,8 +2914,7 @@ body:not(.regional-site):not(.english-site) .primary-nav {
   align-items: center;
 }
 body:not(.regional-site):not(.english-site) .utility-nav,
-body:not(.regional-site):not(.english-site) .primary-nav__search,
-body:not(.regional-site):not(.english-site) .primary-nav__education-cart {
+body:not(.regional-site):not(.english-site) .primary-nav__search {
   display: none;
 }
 body:not(.regional-site):not(.english-site) .primary-nav {
@@ -4891,8 +4890,7 @@ body.main-page .primary-nav {
   align-items: center;
 }
 body.main-page .utility-nav,
-body.main-page .primary-nav__search,
-body.main-page .primary-nav__education-cart {
+body.main-page .primary-nav__search {
   display: none;
 }
 body.main-page .primary-nav {
@@ -9816,20 +9814,12 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
     height: 30.32px;
   }
 }
-/* Shared representative / education header */
-.primary-nav__links--education,
-.primary-nav__education-cart {
-  display: none;
-}
-
+/* Education header */
 .edu-site .primary-nav__links--main {
   display: none;
 }
 .edu-site .primary-nav__links--education {
   display: flex;
-}
-.edu-site .primary-nav__education-cart {
-  display: inline-flex;
 }
 
 @media (max-width: 1100px) {
@@ -38443,7 +38433,7 @@ main:has(.mypage-consult) > .page-banner {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .mypage-consult--detail .consult-actions > :first-child {
+  .mypage-consult--detail .consult-actions > .consult-actions__list {
     grid-column: 1/-1;
     order: 1;
   }
