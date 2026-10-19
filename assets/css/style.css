@@ -9570,9 +9570,6 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   gap: 32px;
   margin-right: 8px;
 }
-.site-header .primary-nav__links--education > :last-child {
-  display: none;
-}
 .site-header .primary-nav__link {
   font-size: 20px;
 }
