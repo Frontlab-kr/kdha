@@ -35,6 +35,21 @@ button {
   outline-offset: 2px;
 }
 
+:where(.account-layer-menu summary,
+.english-local-nav a,
+.jobs-stepper button,
+.jobs-featured__item,
+.ds-gallery__thumb,
+.edu-main-notice__list a,
+.main-b-quick__card,
+.main-b-youtube__card,
+.mypage-player__lessons a,
+.public-tabs button,
+.user-faq summary,
+.regional-quick a):focus-visible {
+  outline-offset: -2px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1651,6 +1666,9 @@ button {
   background: #a7b2bf;
 }
 .edu-dialog__body {
+  margin: -4px;
+  padding: 4px;
+  scroll-padding: 4px;
   min-height: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -17082,8 +17100,8 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   right: 40px;
 }
 .edu-dialog.ofe-schedule-dialog .ofe-day-courses {
-  width: 100%;
-  margin-top: 0;
+  width: calc(100% + 8px);
+  margin-top: -4px;
 }
 .edu-dialog.ofe-schedule-dialog .ofe-day-course {
   gap: 12px;
@@ -22210,6 +22228,8 @@ main:has(.career-jobs) > .page-banner {
   .jobs-featured__list {
     flex: 1 1 0;
     min-height: 0;
+    margin: -4px;
+    padding: 4px;
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-color: color-mix(in srgb, #fff 60%, transparent) transparent;
