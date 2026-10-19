@@ -544,8 +544,11 @@ button {
     gap: 4px;
   }
   .ds-pagination > :is(button, a) {
-    width: 40px;
-    height: 40px;
+    flex: 0 1 40px;
+    width: auto;
+    min-width: 32px;
+    height: auto;
+    aspect-ratio: 1;
     font-size: 14px;
   }
   .ds-pagination > :first-child {
