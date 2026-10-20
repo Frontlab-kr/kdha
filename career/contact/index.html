@@ -314,13 +314,6 @@
               <h2 id="consult-list-title">1:1 상담 신청내역</h2>
               <div class="consult-list">
                 <div>
-                  <div class="consult-list__head">
-                    <div class="consult-filter" role="group" aria-label="답변상태" data-consult-filter>
-                      <button type="button" aria-pressed="true" data-consult-filter-value="all">전체</button>
-                      <button type="button" aria-pressed="false" data-consult-filter-value="wait">답변대기</button>
-                      <button type="button" aria-pressed="false" data-consult-filter-value="done">답변완료</button>
-                    </div>
-                  </div>
                   <div
                     class="ds-board consult-table"
                     role="table"
@@ -339,7 +332,16 @@
                       <span class="ds-board__number" role="cell">2</span>
                       <span class="ds-board__category" role="cell">사이버교육</span>
                       <span class="consult-table__kind" role="cell">교육비 결제 및 환불 (회비제외)</span>
-                      <span class="ds-board__title" role="cell"><a href="/kdha/career/contact/detail/">문의</a></span>
+                      <span class="ds-board__title" role="cell">
+                        <a href="/kdha/career/contact/detail/">문의</a>
+                        <span
+                          class="material-symbols-rounded consult-table__attach"
+                          role="img"
+                          aria-label="첨부파일 있음"
+                        >
+                          attach_file
+                        </span>
+                      </span>
                       <span class="consult-table__date" role="cell"><time datetime="2026-08-30">2026.08.30</time></span>
                       <span class="consult-table__status" role="cell"><span class="ds-badge">답변대기</span></span>
                     </div>

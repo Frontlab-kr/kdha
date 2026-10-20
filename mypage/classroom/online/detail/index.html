@@ -1356,6 +1356,91 @@
       </div>
     </dialog>
 
+    <!-- 학습 퀴즈(객관식 1/2 · 서술형 2/2) -->
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--modal mypage-quiz"
+      id="classroom-quiz-dialog"
+      aria-labelledby="classroom-quiz-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="classroom-quiz-title">
+        학습 퀴즈 ·
+        <span data-quiz-type>객관식</span>
+      </h2>
+      <form class="mypage-dialog__form" id="classroom-quiz-form" method="dialog" novalidate data-quiz>
+        <div class="edu-dialog__body">
+          <div
+            class="mypage-exam__question mypage-quiz__step"
+            role="radiogroup"
+            aria-labelledby="classroom-quiz-q1-label"
+            data-quiz-step="객관식"
+          >
+            <p class="mypage-exam__label" id="classroom-quiz-q1-label">문제 1. 다음 중 강의 내용에 해당하는 것은?</p>
+            <div class="mypage-quiz__options">
+              <label class="form-check">
+                <input type="radio" name="quizQ1" value="1" />
+                사이버교육
+              </label>
+              <label class="form-check">
+                <input type="radio" name="quizQ1" value="2" checked />
+                현장교육
+              </label>
+              <label class="form-check">
+                <input type="radio" name="quizQ1" value="3" />
+                사이버
+              </label>
+              <label class="form-check">
+                <input type="radio" name="quizQ1" value="4" />
+                교육
+              </label>
+              <label class="form-check">
+                <input type="radio" name="quizQ1" value="5" />
+                현장
+              </label>
+            </div>
+          </div>
+          <div
+            class="mypage-exam__question mypage-quiz__step form-field mypage-classroom-field"
+            data-quiz-step="서술형"
+            hidden
+          >
+            <label class="mypage-exam__label" for="classroom-quiz-q2">
+              문제 2. 강의에서 학습한 내용을 서술해 주세요.
+            </label>
+            <textarea
+              id="classroom-quiz-q2"
+              name="quizQ2"
+              maxlength="500"
+              placeholder="답변을 입력해 주세요."
+            ></textarea>
+          </div>
+        </div>
+        <div class="mypage-quiz__footer">
+          <div class="mypage-quiz__pager">
+            <button class="mypage-quiz__pager-button" type="button" data-quiz-prev disabled>
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+              이전
+            </button>
+            <p class="mypage-quiz__count" aria-live="polite">
+              <span class="sr-only">문제</span>
+              <span data-quiz-current>1</span>
+              /
+              <span data-quiz-total>2</span>
+            </p>
+            <button class="mypage-quiz__pager-button" type="button" data-quiz-next>
+              다음
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            </button>
+          </div>
+          <div class="edu-dialog__actions">
+            <button class="ds-button ds-button--large ds-button--primary" type="submit">답안 제출</button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
     <details class="account-layer-menu">
       <summary>
         <span class="material-symbols-outlined" aria-hidden="true">layers</span>
@@ -1369,6 +1454,7 @@
         <a href="/kdha/mypage/classroom/online/detail/#classroom-exam-dialog">팝업 · 사이버강의 시험(문항)</a>
         <a href="/kdha/mypage/classroom/online/detail/#classroom-exam-pass-dialog">팝업 · 사이버강의 시험(이수)</a>
         <a href="/kdha/mypage/classroom/online/detail/#classroom-exam-fail-dialog">팝업 · 사이버강의 시험(미이수)</a>
+        <a href="/kdha/mypage/classroom/online/detail/#classroom-quiz-dialog">팝업 · 학습 퀴즈</a>
         <a href="/kdha/mypage/classroom/online/detail/#classroom-survey-dialog">팝업 · 사이버강의 설문조사</a>
         <a href="/kdha/mypage/classroom/online/detail/#classroom-exam-start-alert">알림 · 시험 시작 확인</a>
         <a href="/kdha/mypage/classroom/online/detail/#classroom-exam-incomplete-alert">알림 · 시험 문항 미응답</a>

@@ -514,9 +514,13 @@
                 <h2 id="recruit-welfare">근무환경 및 우대사항</h2>
               </div>
               <div class="jobs-form-rows">
-                <div class="jobs-form-row">
+                <div class="jobs-form-row jobs-form-row--wrap">
                   <p class="jobs-form-row__label" id="recruit-support-label">편의지원</p>
-                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-support-label">
+                  <div
+                    class="jobs-form-row__slot form-field form-field--large"
+                    role="group"
+                    aria-labelledby="recruit-support-label"
+                  >
                     <div class="jobs-choices">
                       <label class="form-check">
                         <input type="checkbox" name="support" value="중식 지원" />
@@ -546,12 +550,23 @@
                         <input type="checkbox" name="support" value="직원 휴게실" />
                         <span>직원 휴게실</span>
                       </label>
+                      <span class="jobs-choices__etc">
+                        <label class="form-check">
+                          <input type="checkbox" name="support" value="기타" checked />
+                          <span>기타</span>
+                        </label>
+                        <input type="text" name="supportEtc" placeholder="기타 입력" aria-label="기타 편의지원 입력" />
+                      </span>
                     </div>
                   </div>
                 </div>
                 <div class="jobs-form-row">
                   <p class="jobs-form-row__label" id="recruit-benefit-label">복리후생</p>
-                  <div class="jobs-form-row__slot" role="group" aria-labelledby="recruit-benefit-label">
+                  <div
+                    class="jobs-form-row__slot form-field form-field--large"
+                    role="group"
+                    aria-labelledby="recruit-benefit-label"
+                  >
                     <div class="jobs-choices">
                       <label class="form-check">
                         <input type="checkbox" name="welfare" value="연차지급" />
@@ -609,10 +624,13 @@
                         <input type="checkbox" name="welfare" value="명절비 지원" />
                         <span>명절비 지원</span>
                       </label>
-                      <label class="form-check">
-                        <input type="checkbox" name="welfare" value="기타" checked />
-                        <span>기타</span>
-                      </label>
+                      <span class="jobs-choices__etc">
+                        <label class="form-check">
+                          <input type="checkbox" name="welfare" value="기타" checked />
+                          <span>기타</span>
+                        </label>
+                        <input type="text" name="welfareEtc" placeholder="기타 입력" aria-label="기타 복리후생 입력" />
+                      </span>
                     </div>
                   </div>
                 </div>

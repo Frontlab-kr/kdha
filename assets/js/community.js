@@ -199,8 +199,6 @@
     var page = 1;
     var matches = rows;
     var surveyState = 'all';
-    var eventFilter = board.querySelector('[data-event-filter][aria-pressed="true"]');
-    var eventCategory = eventFilter ? eventFilter.dataset.eventFilter : '';
     var organization = board.querySelector('[data-organization-filter][aria-pressed="true"]');
     var organizationKey = organization ? organization.dataset.organizationFilter : '';
     var query = '';
@@ -210,7 +208,6 @@
       matches = rows.filter(function (row) {
         // 자료실 구분(전체·일반자료·서식)
         if (resourceType !== 'all' && row.dataset.resourceType !== resourceType) return false;
-        if (eventCategory && row.dataset.eventCategory !== eventCategory) return false;
         if (organizationKey && row.dataset.organization !== organizationKey) return false;
         if (surveyState !== 'all' && row.dataset.surveyState !== surveyState) return false;
         var value =
@@ -228,15 +225,6 @@
       button.addEventListener('click', function () {
         surveyState = button.dataset.surveyFilter;
         board.querySelectorAll('[data-survey-filter]').forEach(function (item) {
-          item.setAttribute('aria-pressed', String(item === button));
-        });
-        filterRows();
-      });
-    });
-    board.querySelectorAll('[data-event-filter]').forEach(function (button) {
-      button.addEventListener('click', function () {
-        eventCategory = button.dataset.eventFilter;
-        board.querySelectorAll('[data-event-filter]').forEach(function (item) {
           item.setAttribute('aria-pressed', String(item === button));
         });
         filterRows();

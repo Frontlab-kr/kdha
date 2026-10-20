@@ -993,6 +993,7 @@
               <th scope="col" role="columnheader">기관명</th>
               <th scope="col" role="columnheader">취득평점</th>
               <th scope="col" role="columnheader">필수과목</th>
+              <th scope="col" role="columnheader">수료증</th>
             </tr>
           </thead>
           <tbody role="rowgroup">
@@ -1014,6 +1015,16 @@
                 <span class="mypage-mo-only">필수과목</span>
                 <span>2</span>
               </td>
+              <td class="mypage-score-board__print" role="cell">
+                <button
+                  class="ds-button ds-button--small ds-button--outline"
+                  type="button"
+                  aria-haspopup="dialog"
+                  data-dialog-open="mypage-certificate-dialog"
+                >
+                  출력하기
+                </button>
+              </td>
             </tr>
             <tr class="ds-board__row" role="row">
               <td class="mypage-score-board__date" role="cell">
@@ -1032,6 +1043,16 @@
               <td class="mypage-score-board__required" role="cell">
                 <span class="mypage-mo-only">필수과목</span>
                 <span>0</span>
+              </td>
+              <td class="mypage-score-board__print" role="cell">
+                <button
+                  class="ds-button ds-button--small ds-button--outline"
+                  type="button"
+                  aria-haspopup="dialog"
+                  data-dialog-open="mypage-certificate-dialog"
+                >
+                  출력하기
+                </button>
               </td>
             </tr>
             <tr class="ds-board__row" role="row">
@@ -1052,6 +1073,7 @@
                 <span class="mypage-mo-only">필수과목</span>
                 <span>2</span>
               </td>
+              <td class="mypage-score-board__print" role="cell"></td>
             </tr>
             <tr class="ds-board__row" role="row">
               <td class="mypage-score-board__date" role="cell">
@@ -1071,6 +1093,7 @@
                 <span class="mypage-mo-only">필수과목</span>
                 <span>0</span>
               </td>
+              <td class="mypage-score-board__print" role="cell"></td>
             </tr>
           </tbody>
         </table>

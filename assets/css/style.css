@@ -25635,37 +25635,6 @@ main:has(.career-contact) > .page-banner {
   margin-top: 0;
 }
 
-.consult-list__head {
-  display: flex;
-  align-items: center;
-  padding-bottom: 16px;
-}
-
-.consult-filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.consult-filter button {
-  padding: 10px 15px;
-  border: 1px solid #d0d8e2;
-  border-radius: 999px;
-  color: #a7b2bf;
-  background: #fff;
-  font: inherit;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.5;
-  cursor: pointer;
-}
-.consult-filter button[aria-pressed=true] {
-  border-color: #713acc;
-  color: #713acc;
-}
-.consult-filter button:not([aria-pressed=true]):hover {
-  color: #713acc;
-}
-
 .career-contact .consult-table {
   --ds-board-columns: 80px 160px 240px minmax(0, 1fr) 140px 120px;
 }
@@ -25686,6 +25655,26 @@ main:has(.career-contact) > .page-banner {
 
 .career-contact .consult-table--board {
   --ds-board-columns: 80px 160px minmax(0, 1fr) 60px 140px 120px;
+}
+
+@media (min-width: 768px) {
+  .career-contact .consult-table:not(.consult-table--board) .ds-board__title {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+  }
+  .career-contact .consult-table:not(.consult-table--board) .ds-board__title > a {
+    overflow: hidden;
+    min-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.consult-table__attach {
+  flex: none;
+  color: #6f7a89;
+  font-size: 20px;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
 }
 
 .consult-table__file {
@@ -25924,13 +25913,6 @@ main:has(.career-contact) > .page-banner {
 }
 .consult-guide__card:hover .consult-guide__card-more {
   color: #713acc;
-}
-
-.career-contact .consult-guide__tabs {
-  gap: 32px;
-}
-.career-contact .consult-guide__tabs > .ds-tabs__item {
-  text-decoration: none;
 }
 
 .consult-guide__body {
@@ -26222,9 +26204,6 @@ main:has(.career-contact) > .page-banner {
     line-height: 1.5;
     letter-spacing: 0;
   }
-  .consult-list__head {
-    padding-bottom: 24px;
-  }
   .career-contact .consult-table {
     display: block;
   }
@@ -26255,6 +26234,10 @@ main:has(.career-contact) > .page-banner {
     white-space: normal;
     -webkit-line-clamp: unset;
     line-clamp: none;
+  }
+  .career-contact .consult-table:not(.consult-table--board) .ds-board__title {
+    display: flex;
+    align-items: flex-start;
   }
   .career-contact .consult-table__status {
     order: -3;
@@ -26450,12 +26433,6 @@ main:has(.career-contact) > .page-banner {
   }
   .consult-guide__card-more {
     margin-top: 8px;
-  }
-  .career-contact .consult-guide__tabs {
-    gap: 16px;
-  }
-  .career-contact .consult-guide__tabs > .ds-tabs__item {
-    font-size: 18px;
   }
   .consult-guide__body {
     gap: 24px;
@@ -35099,7 +35076,7 @@ main:has(.license-report) > .page-banner {
 }
 
 .ds-board.mypage-score-board {
-  --ds-board-columns: 150px minmax(0, 1fr) 110px 110px 110px;
+  --ds-board-columns: 150px minmax(0, 1fr) 110px 110px 110px 110px;
 }
 
 .mypage-score-board__point {
@@ -35564,6 +35541,14 @@ main:has(.license-report) > .page-banner {
   .mypage-score-board__required {
     order: 4;
     margin-top: 4px;
+  }
+  .ds-board.mypage-score-board .mypage-score-board__print {
+    flex-basis: 100%;
+    order: 5;
+    margin-top: 8px;
+  }
+  .ds-board.mypage-score-board .mypage-score-board__print:empty {
+    display: none;
   }
   .mypage-dialog .mypage-member-card {
     height: 420px;
@@ -36550,6 +36535,62 @@ main:has(.license-report) > .page-banner {
   min-height: 56px;
 }
 
+.mypage-quiz__options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.mypage-quiz__step[hidden] {
+  display: none;
+}
+
+.mypage-quiz__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.mypage-quiz__footer .edu-dialog__actions {
+  margin-top: 0;
+}
+
+.mypage-quiz__pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 20px;
+  border-top: 1px solid #e8ecf1;
+}
+
+.mypage-quiz__pager-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  color: #505a67;
+  background: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.mypage-quiz__pager-button .material-symbols-rounded {
+  font-size: 16px;
+}
+.mypage-quiz__pager-button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.mypage-quiz__count {
+  color: #232a31;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 .mypage-survey__fields {
   display: flex;
   flex-direction: column;
@@ -37226,6 +37267,15 @@ main:has(.license-report) > .page-banner {
   .mypage-exam__questions {
     gap: 32px;
   }
+  .edu-dialog.mypage-quiz h2 {
+    font-size: 20px;
+  }
+  .mypage-quiz__options {
+    gap: 12px;
+  }
+  .edu-dialog.mypage-quiz .edu-dialog__actions .ds-button:only-child {
+    flex: 1 1 auto;
+  }
   .mypage-exam__options {
     gap: 12px 8px;
     min-height: 0;
@@ -37352,12 +37402,6 @@ main:has(.license-report) > .page-banner {
   justify-content: space-between;
   gap: 12px 16px;
   min-width: 0;
-}
-
-.mypage-ledger__search {
-  grid-template-columns: minmax(0, 1fr) auto;
-  width: 380px;
-  max-width: 100%;
 }
 
 .ds-board.mypage-ledger__board .ds-board__row {
@@ -37503,10 +37547,6 @@ main:has(.license-report) > .page-banner {
 }
 .mypage-dues__refund > .ds-button {
   width: 240px;
-}
-
-.mypage-fund .mypage-ledger__toolbar {
-  justify-content: flex-end;
 }
 
 .mypage-fund .mypage-ledger__board {
@@ -37885,10 +37925,6 @@ main:has(.license-report) > .page-banner {
   .mypage-ledger__toolbar {
     flex-direction: column;
     align-items: stretch;
-  }
-  .mypage-ledger__search {
-    order: -1;
-    width: 100%;
   }
   .mypage .ds-board.mypage-ledger__board {
     display: flex;

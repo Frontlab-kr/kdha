@@ -106,4 +106,31 @@ $(function () {
         .text(isPlaying ? 'pause' : 'play_arrow');
     });
   });
+  // 학습 퀴즈: 이전·다음으로 문제(step)를 전환하고 제목의 유형(객관식·서술형)과 번호를 바꿉니다.
+  function showQuizStep($form, index) {
+    var $steps = $form.find('[data-quiz-step]');
+    var total = $steps.length;
+    var current = Math.max(0, Math.min(index, total - 1));
+    var $dialog = $form.closest('dialog');
+
+    $steps.each(function (i) {
+      this.hidden = i !== current;
+    });
+    $form.data('quiz-index', current);
+    $form.find('[data-quiz-current]').text(current + 1);
+    $form.find('[data-quiz-total]').text(total);
+    $form.find('[data-quiz-prev]').prop('disabled', current === 0);
+    $form.find('[data-quiz-next]').prop('disabled', current === total - 1);
+    $dialog.find('[data-quiz-type]').text($steps.eq(current).attr('data-quiz-step'));
+  }
+
+  $(document).on('click', '[data-quiz-prev], [data-quiz-next]', function () {
+    var $form = $(this).closest('[data-quiz]');
+    var step = this.hasAttribute('data-quiz-next') ? 1 : -1;
+    showQuizStep($form, ($form.data('quiz-index') || 0) + step);
+  });
+
+  $('[data-quiz]').each(function () {
+    showQuizStep($(this), 0);
+  });
 });
