@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/datepicker.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/system.css" />
+    <title>Foundations | KDHA Design System</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="sg">
+      <nav class="sg-nav" aria-label="디자인 시스템 메뉴">
+        <a class="sg-nav__brand" href="/kdha/system/">
+          KDHA Design System
+          <small>퍼블리싱 기준</small>
+        </a>
+        <h2>FOUNDATIONS</h2>
+        <ul>
+          <li><a href="/kdha/system/#overview">개요</a></li>
+          <li><a href="/kdha/system/#color">Color</a></li>
+          <li><a href="/kdha/system/#typography">Typography</a></li>
+          <li><a href="/kdha/system/#spacing">Spacing</a></li>
+          <li><a href="/kdha/system/#radius">Radius</a></li>
+          <li><a href="/kdha/system/#shadow">Shadow</a></li>
+          <li><a href="/kdha/system/#layout">Layout · Breakpoint</a></li>
+          <li><a href="/kdha/system/#icon">Icon</a></li>
+          <li><a href="/kdha/system/icon/">Icon 목록</a></li>
+          <li><a href="/kdha/system/#focus">Focus · Motion</a></li>
+          <li><a href="/kdha/system/#legacy">기존 토큰 대응</a></li>
+        </ul>
+        <h2>COMPONENTS</h2>
+        <ul>
+          <li><a href="/kdha/system/components/#button">Button</a></li>
+          <li><a href="/kdha/system/components/#link">Link</a></li>
+          <li><a href="/kdha/system/components/#badge">Badge</a></li>
+          <li><a href="/kdha/system/components/#filter">Filter chip</a></li>
+          <li><a href="/kdha/system/components/#tabs">Tabs</a></li>
+          <li><a href="/kdha/system/components/#input">Input</a></li>
+          <li><a href="/kdha/system/components/#select">Select</a></li>
+          <li><a href="/kdha/system/components/#check">Checkbox · Radio</a></li>
+          <li><a href="/kdha/system/components/#input-action">Input + 버튼</a></li>
+          <li><a href="/kdha/system/components/#search">조회 박스</a></li>
+          <li><a href="/kdha/system/components/#datepicker">Date picker</a></li>
+          <li><a href="/kdha/system/components/#choice-card">Choice card</a></li>
+          <li><a href="/kdha/system/components/#board">Board</a></li>
+          <li><a href="/kdha/system/components/#pagination">Pagination</a></li>
+          <li><a href="/kdha/system/components/#guide-list">Guide list</a></li>
+          <li><a href="/kdha/system/components/#dialog">Dialog</a></li>
+          <li><a href="/kdha/system/components/#alert">Alert</a></li>
+          <li><a href="/kdha/system/components/#page-hero">Page hero · Banner</a></li>
+          <li><a href="/kdha/system/components/#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+      <main id="main-content">
+        <div class="sg-main">
+          <header class="sg-hero">
+            <h1>KDHA Design System</h1>
+            <p>
+              지금까지 퍼블리싱한 대표·교육원·회원 화면에서 실제로 쓰는 값과 컴포넌트만 모아 다시 정리한 기준입니다.
+              기존 화면의 마크업과 클래스는 바꾸지 않았고, 이 문서의 예시도 사이트와 같은 클래스로 그려집니다.
+            </p>
+          </header>
+          <section class="sg-section" id="overview" aria-labelledby="overview-title">
+            <h2 id="overview-title">개요</h2>
+            <ul class="sg-rules">
+              <li>
+                <strong>토큰</strong>
+                :
+                <code>src/assets/scss/system/_tokens.scss</code>
+                — 색상·글자·간격·반경·그림자·크기의 단일 기준. CSS 변수(
+                <code>--kd-*</code>
+                )로도 꺼낼 수 있습니다.
+              </li>
+              <li>
+                <strong>컴포넌트</strong>
+                : 사이트 공통 클래스(
+                <code>ds-*</code>
+                ,
+                <code>form-*</code>
+                ,
+                <code>edu-dialog</code>
+                )를 그대로 씁니다. 사용법은
+                <a href="/kdha/system/components/">Components</a>
+                .
+              </li>
+              <li>
+                <strong>기존 문서</strong>
+                : 이전 디자인 가이드(
+                <code>/design-system/</code>
+                )는 삭제했습니다. 이 문서가 유일한 기준입니다.
+              </li>
+              <li>
+                <strong>원칙</strong>
+                : 같은 역할은 같은 컴포넌트로(ds-* 재사용), 페이지 간격은 상위 페이지 클래스에서만, 완료 페이지는
+                마크업·클래스를 바꾸지 않고 스타일만.
+              </li>
+            </ul>
+          </section>
+          <section class="sg-section" id="color" aria-labelledby="color-title">
+            <h2 id="color-title">Color</h2>
+            <p>
+              화면에서는 역할 이름(Semantic)을 쓰고, Primitive는 역할 이름의 원본 값으로만 씁니다. 퍼블리싱 CSS에서 실제
+              사용 빈도가 높은 값 기준입니다.
+            </p>
+            <h3>Semantic</h3>
+            <span class="sg-label">브랜드 · 상호작용</span>
+            <div class="sg-swatches">
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #713acc"></div>
+                <div class="sg-swatch__info">
+                  <strong>primary</strong>
+                  <span>#713acc</span>
+                  <span>주요 버튼 · 선택 · 링크 강조</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #592ba6"></div>
+                <div class="sg-swatch__info">
+                  <strong>primary-hover</strong>
+                  <span>#592ba6</span>
+                  <span>Primary hover</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #44217d"></div>
+                <div class="sg-swatch__info">
+                  <strong>primary-pressed</strong>
+                  <span>#44217d</span>
+                  <span>Primary pressed · 뱃지 글자</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f7f7ff"></div>
+                <div class="sg-swatch__info">
+                  <strong>primary-subtle</strong>
+                  <span>#f7f7ff</span>
+                  <span>Outline hover 배경 · 카드 배경</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f5f1ff"></div>
+                <div class="sg-swatch__info">
+                  <strong>primary-soft</strong>
+                  <span>#f5f1ff</span>
+                  <span>연한 강조 면</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #ebe9ff"></div>
+                <div class="sg-swatch__info">
+                  <strong>primary-tint</strong>
+                  <span>#ebe9ff</span>
+                  <span>뱃지 배경 · Outline pressed</span>
+                </div>
+              </div>
+            </div>
+            <span class="sg-label">글자</span>
+            <div class="sg-swatches">
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #101418"></div>
+                <div class="sg-swatch__info">
+                  <strong>text-heading</strong>
+                  <span>#101418</span>
+                  <span>페이지·섹션 제목</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #232a31"></div>
+                <div class="sg-swatch__info">
+                  <strong>text-default</strong>
+                  <span>#232a31</span>
+                  <span>본문 기본</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #505a67"></div>
+                <div class="sg-swatch__info">
+                  <strong>text-secondary</strong>
+                  <span>#505a67</span>
+                  <span>보조 설명</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #6f7a89"></div>
+                <div class="sg-swatch__info">
+                  <strong>text-tertiary</strong>
+                  <span>#6f7a89</span>
+                  <span>메타 정보 · 아이콘</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #a7b2bf"></div>
+                <div class="sg-swatch__info">
+                  <strong>text-disabled</strong>
+                  <span>#a7b2bf</span>
+                  <span>비활성 · placeholder</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #fff"></div>
+                <div class="sg-swatch__info">
+                  <strong>text-inverse</strong>
+                  <span>#fff</span>
+                  <span>어두운 면 위 글자</span>
+                </div>
+              </div>
+            </div>
+            <span class="sg-label">선</span>
+            <div class="sg-swatches">
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #e8ecf1"></div>
+                <div class="sg-swatch__info">
+                  <strong>border-subtle</strong>
+                  <span>#e8ecf1</span>
+                  <span>목록 구분선 · 카드 테두리</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #d0d8e2"></div>
+                <div class="sg-swatch__info">
+                  <strong>border-default</strong>
+                  <span>#d0d8e2</span>
+                  <span>입력·Outline 버튼 테두리</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #6f7a89"></div>
+                <div class="sg-swatch__info">
+                  <strong>border-strong</strong>
+                  <span>#6f7a89</span>
+                  <span>표 머리 위 선</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #713acc"></div>
+                <div class="sg-swatch__info">
+                  <strong>border-focus</strong>
+                  <span>#713acc</span>
+                  <span>입력 focus 테두리</span>
+                </div>
+              </div>
+            </div>
+            <span class="sg-label">면</span>
+            <div class="sg-swatches">
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #fff"></div>
+                <div class="sg-swatch__info">
+                  <strong>surface</strong>
+                  <span>#fff</span>
+                  <span>기본 배경</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #fafbfc"></div>
+                <div class="sg-swatch__info">
+                  <strong>surface-subtle</strong>
+                  <span>#fafbfc</span>
+                  <span>회원 화면 배경</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f4f6f8"></div>
+                <div class="sg-swatch__info">
+                  <strong>surface-muted</strong>
+                  <span>#f4f6f8</span>
+                  <span>안내 박스(Guide list)</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f7f7ff"></div>
+                <div class="sg-swatch__info">
+                  <strong>surface-purple</strong>
+                  <span>#f7f7ff</span>
+                  <span>보라 톤 카드</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #101418"></div>
+                <div class="sg-swatch__info">
+                  <strong>surface-inverse</strong>
+                  <span>#101418</span>
+                  <span>푸터 등 어두운 면</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f7f8ff"></div>
+                <div class="sg-swatch__info">
+                  <strong>surface-tab</strong>
+                  <span>#f7f8ff</span>
+                  <span>박스형·알약형 탭 배경</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #e0eeff"></div>
+                <div class="sg-swatch__info">
+                  <strong>surface-blue</strong>
+                  <span>#e0eeff</span>
+                  <span>하단 문의 배너</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #25262b"></div>
+                <div class="sg-swatch__info">
+                  <strong>selected-strong</strong>
+                  <span>#25262b</span>
+                  <span>페이지네이션 현재 번호</span>
+                </div>
+              </div>
+            </div>
+            <span class="sg-label">상태 (글자 / 배경)</span>
+            <div class="sg-swatches">
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f04755"></div>
+                <div class="sg-swatch__info">
+                  <strong>danger</strong>
+                  <span>#f04755</span>
+                  <span>필수 *, 오류 문구</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #cc1f2f"></div>
+                <div class="sg-swatch__info">
+                  <strong>danger-strong</strong>
+                  <span>#cc1f2f</span>
+                  <span>danger 뱃지 글자</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #ffd1d3"></div>
+                <div class="sg-swatch__info">
+                  <strong>danger-bg</strong>
+                  <span>#ffd1d3</span>
+                  <span>danger 뱃지 배경</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #028852"></div>
+                <div class="sg-swatch__info">
+                  <strong>success</strong>
+                  <span>#028852</span>
+                  <span>완료 상태</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #d2f9ea"></div>
+                <div class="sg-swatch__info">
+                  <strong>success-bg</strong>
+                  <span>#d2f9ea</span>
+                  <span>success 뱃지 배경</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #faa02e"></div>
+                <div class="sg-swatch__info">
+                  <strong>warning</strong>
+                  <span>#faa02e</span>
+                  <span>경고 상태</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #ffedb8"></div>
+                <div class="sg-swatch__info">
+                  <strong>warning-bg</strong>
+                  <span>#ffedb8</span>
+                  <span>warning 뱃지 배경</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #1117bb"></div>
+                <div class="sg-swatch__info">
+                  <strong>secondary</strong>
+                  <span>#1117bb</span>
+                  <span>secondary 뱃지 글자</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #e0eeff"></div>
+                <div class="sg-swatch__info">
+                  <strong>secondary-bg</strong>
+                  <span>#e0eeff</span>
+                  <span>secondary 뱃지 배경</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #ad99ff"></div>
+                <div class="sg-swatch__info">
+                  <strong>focus-ring</strong>
+                  <span>#ad99ff</span>
+                  <span>키보드 포커스 링</span>
+                </div>
+              </div>
+            </div>
+            <h3>Primitive · Purple</h3>
+            <div class="sg-swatches">
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f5f1ff"></div>
+                <div class="sg-swatch__info">
+                  <strong>purple-50</strong>
+                  <span>#f5f1ff</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #ebe9ff"></div>
+                <div class="sg-swatch__info">
+                  <strong>purple-100</strong>
+                  <span>#ebe9ff</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #d7c6f2"></div>
+                <div class="sg-swatch__info">
+                  <strong>purple-200</strong>
+                  <span>#d7c6f2</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #a482de"></div>
+                <div class="sg-swatch__info">
+                  <strong>purple-300</strong>
+                  <span>#a482de</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #8569df"></div>
+                <div class="sg-swatch__info">
+                  <strong>purple-400</strong>
+                  <span>#8569df</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #8b61d6"></div>
+                <div class="sg-swatch__info">
+                  <strong>purple-500</strong>
+                  <span>#8b61d6</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #713acc"></div>
+                <div class="sg-swatch__info">
+                  <strong>purple-600</strong>
+                  <span>#713acc</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #5d2eaa"></div>
+                <div class="sg-swatch__info">
+                  <strong>purple-700</strong>
+                  <span>#5d2eaa</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #44217d"></div>
+                <div class="sg-swatch__info">
+                  <strong>purple-800</strong>
+                  <span>#44217d</span>
+                </div>
+              </div>
+            </div>
+            <h3>Primitive · Gray</h3>
+            <div class="sg-swatches">
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #fff"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-0</strong>
+                  <span>#fff</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #fafafa"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-50</strong>
+                  <span>#fafafa</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #fafbfc"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-75</strong>
+                  <span>#fafbfc</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f4f6f8"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-100</strong>
+                  <span>#f4f6f8</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #e8ecf1"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-200</strong>
+                  <span>#e8ecf1</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #d0d8e2"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-300</strong>
+                  <span>#d0d8e2</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #a7b2bf"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-400</strong>
+                  <span>#a7b2bf</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #6f7a89"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-500</strong>
+                  <span>#6f7a89</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #505a67"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-600</strong>
+                  <span>#505a67</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #39414b"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-700</strong>
+                  <span>#39414b</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #232a31"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-800</strong>
+                  <span>#232a31</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #101418"></div>
+                <div class="sg-swatch__info">
+                  <strong>gray-900</strong>
+                  <span>#101418</span>
+                </div>
+              </div>
+            </div>
+            <h3>Primitive · Red · Brand</h3>
+            <div class="sg-swatches">
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f6606b"></div>
+                <div class="sg-swatch__info">
+                  <strong>red-400</strong>
+                  <span>#f6606b</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #f04755"></div>
+                <div class="sg-swatch__info">
+                  <strong>red-500</strong>
+                  <span>#f04755</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #cc1f2f"></div>
+                <div class="sg-swatch__info">
+                  <strong>red-700</strong>
+                  <span>#cc1f2f</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #713acc"></div>
+                <div class="sg-swatch__info">
+                  <strong>brand-purple</strong>
+                  <span>#713acc</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #545afb"></div>
+                <div class="sg-swatch__info">
+                  <strong>brand-blue</strong>
+                  <span>#545afb</span>
+                </div>
+              </div>
+              <div class="sg-swatch">
+                <div class="sg-swatch__color" style="background: #00b1bd"></div>
+                <div class="sg-swatch__info">
+                  <strong>brand-mint</strong>
+                  <span>#00b1bd</span>
+                </div>
+              </div>
+            </div>
+            <h3>정리 대상 (비슷한 값)</h3>
+            <p class="sg-lead">
+              아래 값은 현재 화면에 섞여 있습니다. 새 작업은 오른쪽 토큰을 쓰고, 기존 화면은 디자인 확인 후 바꿉니다.
+            </p>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">현재 값</th>
+                    <th scope="col">사용처</th>
+                    <th scope="col">새 토큰</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="sg-chip" style="background: #4f5966"></span>
+                      #4f5966
+                    </td>
+                    <td>DS 문서·일부 본문(37회)</td>
+                    <td>
+                      <code>gray-600</code>
+                      #505a67
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="sg-chip" style="background: #5d2eaa"></span>
+                      #5d2eaa ·
+                      <span class="sg-chip" style="background: #592ba6"></span>
+                      #592ba6
+                    </td>
+                    <td>보라 700(25회) · 버튼 hover(10회)</td>
+                    <td>
+                      <code>purple-700</code>
+                      /
+                      <code>primary-hover</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="sg-chip" style="background: #482184"></span>
+                      #482184 ·
+                      <span class="sg-chip" style="background: #44217d"></span>
+                      #44217d
+                    </td>
+                    <td>보라 800 두 값</td>
+                    <td>
+                      <code>purple-800</code>
+                      #44217d
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="sg-chip" style="background: #f4f4f4"></span>
+                      #f4f4f4 ·
+                      <span class="sg-chip" style="background: #f4f6f8"></span>
+                      #f4f6f8
+                    </td>
+                    <td>회색 100 두 값</td>
+                    <td>
+                      <code>gray-100</code>
+                      #f4f6f8
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="sg-chip" style="background: #dce5e4"></span>
+                      #dce5e4 · #ccd8d7 · #66777e 등
+                    </td>
+                    <td>초기 교육원 테마(청록 회색) 잔여</td>
+                    <td>
+                      <code>border-subtle</code>
+                      ·
+                      <code>text-secondary</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="sg-chip" style="background: #222"></span>
+                      #222 · #666 · #999
+                    </td>
+                    <td>foundation text-primary/secondary/tertiary</td>
+                    <td>
+                      <code>text-default</code>
+                      ·
+                      <code>text-tertiary</code>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="sg-section" id="typography" aria-labelledby="typography-title">
+            <h2 id="typography-title">Typography</h2>
+            <p>
+              글꼴은 Pretendard JP(가변) 하나만 씁니다. 굵기는 Regular 400 · Medium 500 · Bold 700 세 가지입니다. MO
+              크기는 767px 이하에서 적용합니다.
+            </p>
+            <ul class="sg-rules">
+              <li>
+                SCSS:
+                <code>@include kd-type('heading-2');</code>
+                — PC/MO 크기를 함께 적용합니다.
+              </li>
+              <li>
+                제목 글자는
+                <code>text-heading</code>
+                , 본문은
+                <code>text-default</code>
+                , 보조는
+                <code>text-secondary</code>
+                를 씁니다.
+              </li>
+              <li>800·900 굵기는 디자인에 없는 값이므로 새로 쓰지 않습니다.</li>
+            </ul>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">이름</th>
+                    <th scope="col">PC</th>
+                    <th scope="col">MO</th>
+                    <th scope="col">굵기 / 행간 / 자간</th>
+                    <th scope="col">용도</th>
+                    <th scope="col">예시</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>page-title</code></td>
+                    <td>60px</td>
+                    <td>36px</td>
+                    <td>700 / 1.3 / 0</td>
+                    <td>서브 페이지 상단 제목 (.page-hero h1)</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 32px; font-weight: 700; line-height: 1.3">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>display</code></td>
+                    <td>44px</td>
+                    <td>28px</td>
+                    <td>700 / 1.3 / -0.44px</td>
+                    <td>메인 섹션 제목</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 32px; font-weight: 700; line-height: 1.3">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>section-title</code></td>
+                    <td>32px</td>
+                    <td>24px</td>
+                    <td>700 / 1.35 / -0.16px</td>
+                    <td>섹션 큰 제목 (.ds-section__title)</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 32px; font-weight: 700; line-height: 1.35">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>heading-1</code></td>
+                    <td>28px</td>
+                    <td>20px</td>
+                    <td>700 / 1.4 / -0.14px</td>
+                    <td>팝업 제목 · 화면 큰 제목</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 28px; font-weight: 700; line-height: 1.4">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>heading-2</code></td>
+                    <td>24px</td>
+                    <td>18px</td>
+                    <td>700 / 1.4 / -0.072px</td>
+                    <td>콘텐츠 소제목 (edu/섹션 타이틀)</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 24px; font-weight: 700; line-height: 1.4">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>heading-3</code></td>
+                    <td>20px</td>
+                    <td>18px</td>
+                    <td>700 / 1.5 / 0</td>
+                    <td>카드 제목 · 탭</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 20px; font-weight: 700; line-height: 1.5">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>heading-4</code></td>
+                    <td>18px</td>
+                    <td>16px</td>
+                    <td>700 / 1.5 / 0</td>
+                    <td>폼 항목명 · 작은 제목</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 18px; font-weight: 700; line-height: 1.5">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>body-large</code></td>
+                    <td>18px</td>
+                    <td>16px</td>
+                    <td>400 / 1.6 / 0</td>
+                    <td>강조 본문</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 18px; font-weight: 400; line-height: 1.6">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>body</code></td>
+                    <td>16px</td>
+                    <td>16px</td>
+                    <td>400 / 1.5 / 0</td>
+                    <td>기본 본문 · 입력값</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 16px; font-weight: 400; line-height: 1.5">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>body-small</code></td>
+                    <td>14px</td>
+                    <td>14px</td>
+                    <td>400 / 1.5 / 0</td>
+                    <td>보조 본문 · 표 · 체크박스 라벨</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 14px; font-weight: 400; line-height: 1.5">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>caption</code></td>
+                    <td>12px</td>
+                    <td>12px</td>
+                    <td>400 / 1.5 / 0</td>
+                    <td>캡션 · 메타</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 12px; font-weight: 400; line-height: 1.5">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>button-large</code></td>
+                    <td>18px</td>
+                    <td>16px</td>
+                    <td>700 / 1.5 / 0</td>
+                    <td>버튼 L</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 18px; font-weight: 700; line-height: 1.5">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>button-medium</code></td>
+                    <td>16px</td>
+                    <td>16px</td>
+                    <td>700 / 1.5 / 0</td>
+                    <td>버튼 M</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 16px; font-weight: 700; line-height: 1.5">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>button-small</code></td>
+                    <td>14px</td>
+                    <td>14px</td>
+                    <td>700 / 1.5 / 0</td>
+                    <td>버튼 S</td>
+                    <td>
+                      <p class="sg-type-sample" style="font-size: 14px; font-weight: 700; line-height: 1.5">
+                        치과위생사 Aa
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="sg-section" id="spacing" aria-labelledby="spacing-title">
+            <h2 id="spacing-title">Spacing</h2>
+            <p>
+              4px 단위입니다. 레이아웃 간격은 아래 단계만 씁니다. (6·10·14·18·22px 등 중간 값은 디자인 확인 없이 새로
+              만들지 않습니다.)
+            </p>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">토큰</th>
+                    <th scope="col">값</th>
+                    <th scope="col" style="width: 40%">크기</th>
+                    <th scope="col">주 용도</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>space-1</code></td>
+                    <td>4px</td>
+                    <td><span class="sg-bar" style="width: 8px"></span></td>
+                    <td>아이콘-글자, 라벨 내부</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-2</code></td>
+                    <td>8px</td>
+                    <td><span class="sg-bar" style="width: 16px"></span></td>
+                    <td>인라인 요소, 라벨-입력</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-3</code></td>
+                    <td>12px</td>
+                    <td><span class="sg-bar" style="width: 24px"></span></td>
+                    <td>입력 필드 사이, 카드 내부</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-4</code></td>
+                    <td>16px</td>
+                    <td><span class="sg-bar" style="width: 32px"></span></td>
+                    <td>표 셀, MO 블록</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-5</code></td>
+                    <td>20px</td>
+                    <td><span class="sg-bar" style="width: 40px"></span></td>
+                    <td>카드 padding, 체크박스 줄 간격</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-6</code></td>
+                    <td>24px</td>
+                    <td><span class="sg-bar" style="width: 48px"></span></td>
+                    <td>제목-콘텐츠(소제목)</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-8</code></td>
+                    <td>32px</td>
+                    <td><span class="sg-bar" style="width: 64px"></span></td>
+                    <td>MO 팝업 영역 간격</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-10</code></td>
+                    <td>40px</td>
+                    <td><span class="sg-bar" style="width: 80px"></span></td>
+                    <td>블록 간격, PC 팝업 영역 간격</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-12</code></td>
+                    <td>48px</td>
+                    <td><span class="sg-bar" style="width: 96px"></span></td>
+                    <td>큰 블록</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-15</code></td>
+                    <td>60px</td>
+                    <td><span class="sg-bar" style="width: 120px"></span></td>
+                    <td>PC 섹션 간격</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-20</code></td>
+                    <td>80px</td>
+                    <td><span class="sg-bar" style="width: 160px"></span></td>
+                    <td>큰 섹션</td>
+                  </tr>
+                  <tr>
+                    <td><code>space-30</code></td>
+                    <td>120px</td>
+                    <td><span class="sg-bar" style="width: 240px"></span></td>
+                    <td>페이지 하단 여백</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>역할 간격</h3>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">이름</th>
+                    <th scope="col">PC</th>
+                    <th scope="col">MO</th>
+                    <th scope="col">설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>gap-section</code></td>
+                    <td>60px</td>
+                    <td>40px</td>
+                    <td>본문 섹션 사이</td>
+                  </tr>
+                  <tr>
+                    <td><code>gap-block</code></td>
+                    <td>40px</td>
+                    <td>32px</td>
+                    <td>섹션 안 블록 사이, 목록-페이지네이션</td>
+                  </tr>
+                  <tr>
+                    <td><code>gap-group</code></td>
+                    <td>24px</td>
+                    <td>16px</td>
+                    <td>소제목-콘텐츠</td>
+                  </tr>
+                  <tr>
+                    <td><code>gap-field</code></td>
+                    <td>12px</td>
+                    <td>12px</td>
+                    <td>입력 필드 사이</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="sg-section" id="radius" aria-labelledby="radius-title">
+            <h2 id="radius-title">Radius</h2>
+            <p>둥글기는 7단계만 씁니다.</p>
+            <div class="sg-shapes">
+              <div class="sg-shape">
+                <div class="sg-shape__box" style="border-radius: 8px"></div>
+                <strong>radius-sm</strong>
+                <span>8px</span>
+                <span>작은 박스, 셀렉트 옵션</span>
+              </div>
+              <div class="sg-shape">
+                <div class="sg-shape__box" style="border-radius: 12px"></div>
+                <strong>radius-md</strong>
+                <span>12px</span>
+                <span>입력 필드, 카드(작은)</span>
+              </div>
+              <div class="sg-shape">
+                <div class="sg-shape__box" style="border-radius: 16px"></div>
+                <strong>radius-lg</strong>
+                <span>16px</span>
+                <span>안내 박스, 카드</span>
+              </div>
+              <div class="sg-shape">
+                <div class="sg-shape__box" style="border-radius: 20px"></div>
+                <strong>radius-xl</strong>
+                <span>20px</span>
+                <span>팝업</span>
+              </div>
+              <div class="sg-shape">
+                <div class="sg-shape__box" style="border-radius: 24px"></div>
+                <strong>radius-2xl</strong>
+                <span>24px</span>
+                <span>큰 패널</span>
+              </div>
+              <div class="sg-shape">
+                <div class="sg-shape__box" style="border-radius: 999px"></div>
+                <strong>radius-pill</strong>
+                <span>999px</span>
+                <span>버튼, 칩, 뱃지, 검색창</span>
+              </div>
+              <div class="sg-shape">
+                <div class="sg-shape__box" style="border-radius: 50%"></div>
+                <strong>radius-circle</strong>
+                <span>50%</span>
+                <span>페이지 번호, 아이콘 버튼</span>
+              </div>
+            </div>
+          </section>
+          <section class="sg-section" id="shadow" aria-labelledby="shadow-title">
+            <h2 id="shadow-title">Shadow</h2>
+            <p>
+              그림자는 4가지입니다. hover 그림자는
+              <code>transform: translateY(-2px)</code>
+              와 함께 쓰고,
+              <code>prefers-reduced-motion</code>
+              에서는 이동을 끕니다.
+            </p>
+            <div class="sg-shapes">
+              <div class="sg-shape">
+                <div
+                  class="sg-shape__box"
+                  style="border: 0; border-radius: 16px; background: #fff; box-shadow: 0 10px 30px rgb(0 0 0 / 10%)"
+                ></div>
+                <strong>shadow-card</strong>
+                <span>카드 · MO 팝업</span>
+              </div>
+              <div class="sg-shape">
+                <div
+                  class="sg-shape__box"
+                  style="border: 0; border-radius: 16px; background: #fff; box-shadow: 0 20px 40px rgb(0 0 0 / 15%)"
+                ></div>
+                <strong>shadow-dialog</strong>
+                <span>PC 팝업</span>
+              </div>
+              <div class="sg-shape">
+                <div
+                  class="sg-shape__box"
+                  style="
+                    border: 0;
+                    border-radius: 16px;
+                    background: #fff;
+                    box-shadow: 0 12px 24px rgb(113 58 204 / 14%);
+                  "
+                ></div>
+                <strong>shadow-hover</strong>
+                <span>카드 hover(2px 떠오름과 함께)</span>
+              </div>
+              <div class="sg-shape">
+                <div
+                  class="sg-shape__box"
+                  style="border: 0; border-radius: 16px; background: #fff; box-shadow: 0 18px 48px rgb(17 48 46 / 20%)"
+                ></div>
+                <strong>shadow-floating</strong>
+                <span>플로팅 메뉴</span>
+              </div>
+            </div>
+          </section>
+          <section class="sg-section" id="layout" aria-labelledby="layout-title">
+            <h2 id="layout-title">Layout · Breakpoint</h2>
+            <p>
+              디자인 기준 화면은 PC 1920 · MO 360입니다. 콘텐츠 폭은 1440px이며
+              <code>.main-body</code>
+              ·
+              <code>.page-hero</code>
+              ·
+              <code>.layout-container</code>
+              가
+              <code>min(1440px, 100% - 40px)</code>
+              로 잡습니다.
+            </p>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">구간</th>
+                    <th scope="col">범위</th>
+                    <th scope="col">기준</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PC</td>
+                    <td>1101px 이상</td>
+                    <td>콘텐츠 1440px</td>
+                  </tr>
+                  <tr>
+                    <td>Tablet</td>
+                    <td>768 ~ 1100px</td>
+                    <td>PC 구조 유지, 열 수만 줄임(카드 4→3→2열)</td>
+                  </tr>
+                  <tr>
+                    <td>MO</td>
+                    <td>767px 이하</td>
+                    <td>본문(.main-body) = 화면 - 24px (360 → 336), 팝업도 좌우 12px</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                미디어쿼리는
+                <code>max-width: 767px</code>
+                ,
+                <code>768px ~ 1100px</code>
+                두 구간을 기본으로 씁니다.
+              </li>
+              <li>
+                그 외 값(700·900·1080·1399px 등)은 특정 화면에서 공간이 부족할 때만 예외로 쓰고 주석으로 이유를
+                남깁니다.
+              </li>
+              <li>카드 목록: 1400px 이상 4열 / 1101~1399px 3열 / 768~1100px 2열 / 767px 이하 1열.</li>
+              <li>
+                MO 가로 스크롤은 목록 자체에만
+                <code>overflow-x: auto</code>
+                를 주고, 페이지에는
+                <code>overflow-x: clip</code>
+                을 씁니다.
+              </li>
+            </ul>
+          </section>
+          <section class="sg-section" id="icon" aria-labelledby="icon-title">
+            <h2 id="icon-title">Icon</h2>
+            <p>
+              Google Material Symbols 폰트를 씁니다. 이미지로 저장하지 않습니다. 브랜드 로고·일러스트만 SVG/이미지로
+              씁니다.
+            </p>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <span class="material-symbols-rounded" aria-hidden="true" style="font-size: 24px">close</span>
+                <span class="material-symbols-rounded" aria-hidden="true" style="font-size: 24px">search</span>
+                <span class="material-symbols-rounded" aria-hidden="true" style="font-size: 20px">attach_file</span>
+                <span class="material-symbols-rounded" aria-hidden="true" style="font-size: 16px">
+                  arrow_forward_ios
+                </span>
+                <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 24px">calendar_month</span>
+              </div>
+              <pre class="sg-example__code">
+&lt;span class="material-symbols-rounded" aria-hidden="true"&gt;close&lt;/span&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                Figma 표기
+                <code>아이콘명(R/400/24)</code>
+                = Rounded · Weight 400 · Optical size 24.
+                <code>R</code>
+                은 Rounded, 표기가 없으면 Outlined입니다.
+              </li>
+              <li>표기 없는 기본값: Weight 300 · Grade 0 · Fill 0 · Optical size = 표시 크기.</li>
+              <li>
+                장식 아이콘은
+                <code>aria-hidden="true"</code>
+                , 의미 있는 아이콘은
+                <code>role="img"</code>
+                +
+                <code>aria-label</code>
+                , 아이콘만 있는 버튼은 버튼에
+                <code>aria-label</code>
+                .
+              </li>
+              <li>
+                사용 중인 전체 아이콘 목록:
+                <a href="/kdha/system/icon/">Icon 목록</a>
+                (빌드 시 자동 수집)
+              </li>
+            </ul>
+          </section>
+          <section class="sg-section" id="focus" aria-labelledby="focus-title">
+            <h2 id="focus-title">Focus · Motion</h2>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <button
+                  class="ds-button ds-button--medium ds-button--outline"
+                  type="button"
+                  style="outline: 2px solid #ad99ff; outline-offset: 2px"
+                >
+                  포커스 예시
+                </button>
+              </div>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                키보드 포커스:
+                <code>outline 2px #ad99ff</code>
+                ,
+                <code>outline-offset 2px</code>
+                — 요소 밖으로 4px(
+                <code>focus-ring-space</code>
+                )를 차지합니다. 전역 규칙이므로 지우지 않습니다.
+              </li>
+              <li>
+                텍스트 입력은 포커스 링 대신 테두리를
+                <code>primary</code>
+                로 바꿉니다.
+              </li>
+              <li>
+                스크롤 영역(팝업 본문 등) 안에서는
+                <code>focus-ring-room</code>
+                믹스인으로 4px 여유를 줍니다. 여유를 줄 수 없는 가로 스크롤 탭·카드는 테두리를 안쪽(
+                <code>outline-offset: -2px</code>
+                )에 그립니다.
+              </li>
+              <li>
+                모션: 기본 160~180ms ease. hover는 색 변경 + 필요 시 2px 떠오름,
+                <code>prefers-reduced-motion: reduce</code>
+                에서는 이동·자동재생을 끕니다.
+              </li>
+            </ul>
+          </section>
+          <section class="sg-section" id="legacy" aria-labelledby="legacy-title">
+            <h2 id="legacy-title">기존 토큰 대응</h2>
+            <p>
+              기존 토큰 파일 2개(
+              <code>src/assets/scss/_tokens.scss</code>
+              ,
+              <code>modules/styles/foundation/_tokens.scss</code>
+              )는 이름이 같아도 값이 다른 경우가 있습니다. 새 토큰은
+              <code>src/assets/scss/system/_tokens.scss</code>
+              하나입니다.
+            </p>
+            <div class="sg-note">
+              기존 토큰은 화면 유지를 위해 지우지 않습니다. 기존 SCSS를 고칠 때 아래 대응표로 새 이름으로 바꾸고, 바꾼
+              뒤 화면 차이가 없는지 확인합니다.
+            </div>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">기존</th>
+                    <th scope="col">새 토큰</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>$primary-600 / $color-primary-600 / $color-main-purple</code></td>
+                    <td><code>primary · purple-600</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$primary-hover</code></td>
+                    <td><code>primary-hover</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$primary-700 (#44217d) / $color-badge-purple-text</code></td>
+                    <td><code>primary-pressed · purple-800</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$color-primary-700 (#5d2eaa)</code></td>
+                    <td><code>purple-700</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$primary-subtle / $color-background-main-purple</code></td>
+                    <td><code>surface-purple · primary-subtle</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$primary-50</code></td>
+                    <td><code>primary-soft · purple-50</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$primary-100 / $color-badge-purple-bg</code></td>
+                    <td><code>primary-tint · purple-100</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$neutral-900 / $color-neutral-900</code></td>
+                    <td><code>text-heading · gray-900</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$neutral-800 / $color-neutral-800</code></td>
+                    <td><code>text-default · gray-800</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$text-auth-secondary / $color-neutral-600</code></td>
+                    <td><code>text-secondary · gray-600</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$neutral-500</code></td>
+                    <td><code>text-tertiary · border-strong · gray-500</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$neutral-400</code></td>
+                    <td><code>text-disabled · gray-400</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$neutral-300 / $border-input(교육원)</code></td>
+                    <td><code>border-default · gray-300</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$neutral-200</code></td>
+                    <td><code>border-subtle · gray-200</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$neutral-100 / $color-background-01</code></td>
+                    <td><code>surface-muted · gray-100</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$surface-auth</code></td>
+                    <td><code>surface-subtle · gray-75</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$danger-500</code></td>
+                    <td><code>danger</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$focus-ring-color</code></td>
+                    <td><code>focus-ring</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$space-1 (4px, _tokens) ≠ $space-1 (2px, foundation)</code></td>
+                    <td><code>space-1 = 4px 로 통일</code></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>
+                        $space-3 (8px) · $space-5 (12px) · $space-7 (16px) · $space-9 (20px) · $space-11 (24px) ·
+                        $space-14 (32px)
+                      </code>
+                    </td>
+                    <td><code>space-2 · space-3 · space-4 · space-5 · space-6 · space-8</code></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>$radius-sm 8 · $input-radius 12 · $radius-md 16 · $radius-dialog 20 · $radius-pill</code>
+                    </td>
+                    <td><code>radius-sm · md · lg · xl · pill</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$radius-lg (14px, _tokens) ≠ $radius-lg (24px, foundation)</code></td>
+                    <td><code>14px는 정리 대상, 24px = radius-2xl</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$shadow-md · $shadow-dialog-mobile</code></td>
+                    <td><code>shadow-card</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$shadow-dialog-pc / $shadow-lg</code></td>
+                    <td><code>shadow-dialog</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$shadow-floating-menu</code></td>
+                    <td><code>shadow-floating</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$font-weight-design-bold (700) · $font-weight-bold (800)</code></td>
+                    <td><code>bold 700 (800은 쓰지 않음)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>$breakpoint-mobile 767 · $breakpoint-card-grid-two 1100</code></td>
+                    <td><code>breakpoint mobile · tablet</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/kdha/assets/js/site-menu.js"></script>
+  </body>
+</html>

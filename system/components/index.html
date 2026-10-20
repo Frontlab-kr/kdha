@@ -1,0 +1,1697 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/kdha/assets/css/swiper.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/datepicker.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/system.css" />
+    <title>Components | KDHA Design System</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="sg">
+      <nav class="sg-nav" aria-label="디자인 시스템 메뉴">
+        <a class="sg-nav__brand" href="/kdha/system/">
+          KDHA Design System
+          <small>퍼블리싱 기준</small>
+        </a>
+        <h2>FOUNDATIONS</h2>
+        <ul>
+          <li><a href="/kdha/system/#overview">개요</a></li>
+          <li><a href="/kdha/system/#color">Color</a></li>
+          <li><a href="/kdha/system/#typography">Typography</a></li>
+          <li><a href="/kdha/system/#spacing">Spacing</a></li>
+          <li><a href="/kdha/system/#radius">Radius</a></li>
+          <li><a href="/kdha/system/#shadow">Shadow</a></li>
+          <li><a href="/kdha/system/#layout">Layout · Breakpoint</a></li>
+          <li><a href="/kdha/system/#icon">Icon</a></li>
+          <li><a href="/kdha/system/icon/">Icon 목록</a></li>
+          <li><a href="/kdha/system/#focus">Focus · Motion</a></li>
+          <li><a href="/kdha/system/#legacy">기존 토큰 대응</a></li>
+        </ul>
+        <h2>COMPONENTS</h2>
+        <ul>
+          <li><a href="/kdha/system/components/#button">Button</a></li>
+          <li><a href="/kdha/system/components/#link">Link</a></li>
+          <li><a href="/kdha/system/components/#badge">Badge</a></li>
+          <li><a href="/kdha/system/components/#filter">Filter chip</a></li>
+          <li><a href="/kdha/system/components/#tabs">Tabs</a></li>
+          <li><a href="/kdha/system/components/#input">Input</a></li>
+          <li><a href="/kdha/system/components/#select">Select</a></li>
+          <li><a href="/kdha/system/components/#check">Checkbox · Radio</a></li>
+          <li><a href="/kdha/system/components/#input-action">Input + 버튼</a></li>
+          <li><a href="/kdha/system/components/#search">조회 박스</a></li>
+          <li><a href="/kdha/system/components/#datepicker">Date picker</a></li>
+          <li><a href="/kdha/system/components/#choice-card">Choice card</a></li>
+          <li><a href="/kdha/system/components/#board">Board</a></li>
+          <li><a href="/kdha/system/components/#pagination">Pagination</a></li>
+          <li><a href="/kdha/system/components/#guide-list">Guide list</a></li>
+          <li><a href="/kdha/system/components/#dialog">Dialog</a></li>
+          <li><a href="/kdha/system/components/#alert">Alert</a></li>
+          <li><a href="/kdha/system/components/#page-hero">Page hero · Banner</a></li>
+          <li><a href="/kdha/system/components/#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+      <main id="main-content">
+        <div class="sg-main">
+          <header class="sg-hero">
+            <h1>Components</h1>
+            <p>
+              사이트에서 실제로 쓰는 공통 컴포넌트입니다. 아래 예시는 사이트
+              <code>style.css</code>
+              와
+              <code>common.js</code>
+              로 그려지므로 실제 화면과 같습니다. 새 화면은 이 마크업을 그대로 복사해 씁니다.
+            </p>
+          </header>
+          <section class="sg-section" id="button" aria-labelledby="button-title">
+            <h2 id="button-title">Button</h2>
+            <p>핵심 행동은 Primary, 보조 행동은 Outline입니다. 한 화면의 Primary는 가능한 하나로 제한합니다.</p>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <button class="ds-button ds-button--large ds-button--primary" type="button">버튼 L</button>
+                <button class="ds-button ds-button--medium ds-button--primary" type="button">버튼 M</button>
+                <button class="ds-button ds-button--small ds-button--primary" type="button">버튼 S</button>
+                <button class="ds-button ds-button--large ds-button--outline" type="button">버튼 L</button>
+                <button class="ds-button ds-button--medium ds-button--outline" type="button">버튼 M</button>
+                <button class="ds-button ds-button--small ds-button--outline" type="button">
+                  영수증 출력
+                  <span class="material-symbols-rounded" aria-hidden="true">print</span>
+                </button>
+                <button class="ds-button ds-button--large ds-button--primary" type="button" disabled>Disabled</button>
+              </div>
+              <pre class="sg-example__code">
+&lt;button class=&quot;ds-button ds-button--large ds-button--primary&quot; type=&quot;button&quot;&gt;버튼 L&lt;/button&gt;
+&lt;button class=&quot;ds-button ds-button--medium ds-button--primary&quot; type=&quot;button&quot;&gt;버튼 M&lt;/button&gt;
+&lt;button class=&quot;ds-button ds-button--small ds-button--primary&quot; type=&quot;button&quot;&gt;버튼 S&lt;/button&gt;
+&lt;button class=&quot;ds-button ds-button--large ds-button--outline&quot; type=&quot;button&quot;&gt;버튼 L&lt;/button&gt;
+&lt;button class=&quot;ds-button ds-button--medium ds-button--outline&quot; type=&quot;button&quot;&gt;버튼 M&lt;/button&gt;
+&lt;button class=&quot;ds-button ds-button--small ds-button--outline&quot; type=&quot;button&quot;&gt;
+  영수증 출력
+  &lt;span class=&quot;material-symbols-rounded&quot; aria-hidden=&quot;true&quot;&gt;print&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;ds-button ds-button--large ds-button--primary&quot; type=&quot;button&quot; disabled&gt;Disabled&lt;/button&gt;</pre>
+            </div>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">클래스</th>
+                    <th scope="col">높이</th>
+                    <th scope="col">좌우 여백</th>
+                    <th scope="col">글자</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--large</code></td>
+                    <td>52px</td>
+                    <td>24px</td>
+                    <td>18px Bold</td>
+                  </tr>
+                  <tr>
+                    <td><code>--medium</code></td>
+                    <td>48px</td>
+                    <td>20px</td>
+                    <td>16px Bold</td>
+                  </tr>
+                  <tr>
+                    <td><code>--small</code></td>
+                    <td>40px</td>
+                    <td>16px</td>
+                    <td>14px Bold</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">스타일</th>
+                    <th scope="col">기본</th>
+                    <th scope="col">Hover</th>
+                    <th scope="col">Pressed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--primary</code></td>
+                    <td>#713acc 배경</td>
+                    <td>#592ba6</td>
+                    <td>#44217d</td>
+                  </tr>
+                  <tr>
+                    <td><code>--outline</code></td>
+                    <td>흰 배경 · #d0d8e2 테두리</td>
+                    <td>보라 글자·테두리 · #f7f7ff</td>
+                    <td>#592ba6 · #ebe9ff</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>--kakao</code>
+                      /
+                      <code>--naver</code>
+                    </td>
+                    <td>소셜 로그인 전용</td>
+                    <td>—</td>
+                    <td>—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                클래스 순서:
+                <code>ds-button</code>
+                → 크기 → 스타일 (예:
+                <code>ds-button ds-button--large ds-button--primary</code>
+                ). 크기·스타일을 빠뜨리지 않습니다.
+              </li>
+              <li>
+                아이콘은 20px, 글자 뒤에 둡니다. 아이콘만 있는 버튼은
+                <code>aria-label</code>
+                .
+              </li>
+              <li>
+                팝업 하단 버튼은
+                <code>.edu-dialog__actions</code>
+                안에서 최대 240px, MO 전체 폭으로 자동 조정됩니다.
+              </li>
+              <li>
+                입력 옆 버튼은
+                <code>.ds-button</code>
+                이 아니라
+                <code>.form-action-button</code>
+                (사각 radius 12)입니다.
+              </li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              크기·스타일 순서가 섞여 있음(
+              <code>--small --outline</code>
+              /
+              <code>--outline --small</code>
+              ) — 새 작업은 위 순서로.
+              <br />
+              쓰지 않는 버튼 클래스:
+              <code>.dialog-button</code>
+              ,
+              <code>.edu-button</code>
+              ,
+              <code>.edu-account-button</code>
+              ,
+              <code>.english-button</code>
+            </div>
+          </section>
+          <section class="sg-section" id="link" aria-labelledby="link-title">
+            <h2 id="link-title">Link</h2>
+            <p>글자 링크입니다. 아이콘형(더보기)과 밑줄형이 있습니다.</p>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <a class="ds-link ds-link--more" href="#link">
+                  더보기
+                  <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+                </a>
+                <a class="ds-link ds-link--more ds-link--small" href="#link">
+                  더보기
+                  <span class="material-symbols-rounded material-icon" aria-hidden="true">arrow_forward_ios</span>
+                </a>
+                <a class="ds-link ds-link--text" href="#link">아이디 찾기</a>
+                <a class="ds-link ds-link--text ds-link--small" href="#link">비밀번호 찾기</a>
+              </div>
+              <pre class="sg-example__code">
+&lt;a class=&quot;ds-link ds-link--more&quot; href=&quot;#link&quot;&gt;
+  더보기
+  &lt;span class=&quot;material-symbols-rounded material-icon&quot; aria-hidden=&quot;true&quot;&gt;arrow_forward_ios&lt;/span&gt;
+&lt;/a&gt;
+&lt;a class=&quot;ds-link ds-link--more ds-link--small&quot; href=&quot;#link&quot;&gt;
+  더보기
+  &lt;span class=&quot;material-symbols-rounded material-icon&quot; aria-hidden=&quot;true&quot;&gt;arrow_forward_ios&lt;/span&gt;
+&lt;/a&gt;
+&lt;a class=&quot;ds-link ds-link--text&quot; href=&quot;#link&quot;&gt;아이디 찾기&lt;/a&gt;
+&lt;a class=&quot;ds-link ds-link--text ds-link--small&quot; href=&quot;#link&quot;&gt;비밀번호 찾기&lt;/a&gt;</pre>
+            </div>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">클래스</th>
+                    <th scope="col">글자</th>
+                    <th scope="col">색</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>ds-link--more</code></td>
+                    <td>16px Bold, 아이콘 16 · 간격 4</td>
+                    <td>#6f7a89 → hover #713acc</td>
+                  </tr>
+                  <tr>
+                    <td><code>--more --small</code></td>
+                    <td>14px Bold, 간격 2</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>ds-link--text</code></td>
+                    <td>14px Medium 밑줄</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>--text --small</code></td>
+                    <td>12px</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                동작(팝업 열기 등)이면
+                <code>&lt;button class="ds-link"&gt;</code>
+                를 씁니다. 버튼 모양은 자동으로 초기화됩니다.
+              </li>
+              <li>
+                여러 링크를 붙여 쓸 때는
+                <code>.ds-link-group</code>
+                으로 감쌉니다.
+              </li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              <code>ds-link--medium</code>
+              (약 25곳),
+              <code>ds-link-group__suffix</code>
+              (18곳)는 정의되지 않은 클래스 — 기본값으로 보임.
+              <br />
+              포커스 링이 민트(#00b1bd) — 전역 #ad99ff로 통일 대상.
+            </div>
+          </section>
+          <section class="sg-section" id="badge" aria-labelledby="badge-title">
+            <h2 id="badge-title">Badge</h2>
+            <p>상태·분류 표시입니다. 높이 30px, 12px SemiBold, 알약형입니다.</p>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <span class="ds-badge">답변완료</span>
+                <span class="ds-badge ds-badge--secondary">필수과목</span>
+                <span class="ds-badge ds-badge--success">승인</span>
+                <span class="ds-badge ds-badge--warning">대기</span>
+                <span class="ds-badge ds-badge--danger">필수</span>
+                <span class="ds-badge ds-badge--neutral">마감</span>
+                <span class="ds-badge ds-badge--danger ds-badge--outline">진행 중</span>
+                <span class="ds-badge ds-badge--neutral ds-badge--outline">이벤트 종료</span>
+                <span class="ds-badge ds-badge--outline">신청 완료</span>
+              </div>
+              <pre class="sg-example__code">
+&lt;span class=&quot;ds-badge&quot;&gt;답변완료&lt;/span&gt;
+&lt;span class=&quot;ds-badge ds-badge--secondary&quot;&gt;필수과목&lt;/span&gt;
+&lt;span class=&quot;ds-badge ds-badge--success&quot;&gt;승인&lt;/span&gt;
+&lt;span class=&quot;ds-badge ds-badge--warning&quot;&gt;대기&lt;/span&gt;
+&lt;span class=&quot;ds-badge ds-badge--danger&quot;&gt;필수&lt;/span&gt;
+&lt;span class=&quot;ds-badge ds-badge--neutral&quot;&gt;마감&lt;/span&gt;
+&lt;span class=&quot;ds-badge ds-badge--danger ds-badge--outline&quot;&gt;진행 중&lt;/span&gt;
+&lt;span class=&quot;ds-badge ds-badge--neutral ds-badge--outline&quot;&gt;이벤트 종료&lt;/span&gt;
+&lt;span class=&quot;ds-badge ds-badge--outline&quot;&gt;신청 완료&lt;/span&gt;</pre>
+            </div>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">상태</th>
+                    <th scope="col">클래스</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>진행 중 · 접수 중</td>
+                    <td><code>--danger --outline</code></td>
+                  </tr>
+                  <tr>
+                    <td>종료 · 마감</td>
+                    <td><code>--neutral --outline</code></td>
+                  </tr>
+                  <tr>
+                    <td>답변 · 신청 완료</td>
+                    <td><code>--outline</code></td>
+                  </tr>
+                  <tr>
+                    <td>필수과목 등 분류</td>
+                    <td><code>--secondary</code></td>
+                  </tr>
+                  <tr>
+                    <td>기본(보라)</td>
+                    <td><code>ds-badge</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                페이지별 뱃지(
+                <code>community-status</code>
+                등)를 새로 만들지 않습니다.
+              </li>
+              <li>목록의 글자형 상태(답변대기·결제완료 등)는 뱃지가 아니라 화면 디자인을 따릅니다.</li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              <code>ds-badge--primary</code>
+              (21곳)는 정의되지 않음 — 기본(보라)으로 보임. 새 작업은
+              <code>ds-badge</code>
+              만.
+              <br />
+              비슷한 상태 표시가 화면별로 따로 있음:
+              <code>.mypage-status--*</code>
+              ,
+              <code>.ofe-status--*</code>
+              ,
+              <code>.jobs-status</code>
+              .
+            </div>
+          </section>
+          <section class="sg-section" id="filter" aria-labelledby="filter-title">
+            <h2 id="filter-title">Filter chip</h2>
+            <p>목록 위 상태 필터입니다. 높이 43px, 선택 시 보라 테두리·글자(배경은 흰색).</p>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <div class="mypage-filter" role="group" aria-label="결제상태" data-mypage-filter="sample-list">
+                  <button type="button" aria-pressed="true" data-filter-value="all">전체</button>
+                  <button type="button" aria-pressed="false" data-filter-value="paid">결제완료</button>
+                  <button type="button" aria-pressed="false" data-filter-value="refund">환불신청</button>
+                </div>
+              </div>
+              <pre class="sg-example__code">
+&lt;div class=&quot;mypage-filter&quot; role=&quot;group&quot; aria-label=&quot;결제상태&quot; data-mypage-filter=&quot;sample-list&quot;&gt;
+  &lt;button type=&quot;button&quot; aria-pressed=&quot;true&quot; data-filter-value=&quot;all&quot;&gt;전체&lt;/button&gt;
+  &lt;button type=&quot;button&quot; aria-pressed=&quot;false&quot; data-filter-value=&quot;paid&quot;&gt;결제완료&lt;/button&gt;
+  &lt;button type=&quot;button&quot; aria-pressed=&quot;false&quot; data-filter-value=&quot;refund&quot;&gt;환불신청&lt;/button&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                <code>data-mypage-filter="목록 id"</code>
+                + 버튼
+                <code>aria-pressed</code>
+                ·
+                <code>data-filter-value</code>
+                , 목록 행에
+                <code>data-filter-item="값"</code>
+                (mypage.js).
+              </li>
+              <li>
+                선택 상태는
+                <code>aria-pressed="true"</code>
+                로만 표시합니다.
+              </li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              같은 역할의 다른 모양:
+              <code>.ds-tabs--pill</code>
+              (채움형, 정회원 안내),
+              <code>.jobs-chips</code>
+              . 디자인 확인 후 하나로.
+            </div>
+          </section>
+          <section class="sg-section" id="tabs" aria-labelledby="tabs-title">
+            <h2 id="tabs-title">Tabs</h2>
+            <p>
+              밑줄형(기본), 박스형(
+              <code>--box</code>
+              ), 알약형(
+              <code>--pill</code>
+              ) 세 가지입니다.
+            </p>
+            <span class="sg-label">기본 · 패널 전환</span>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <div class="ds-tabs" data-tabs role="tablist" aria-label="본인인증 방식">
+                  <button
+                    class="ds-tabs__item"
+                    id="sg-tab-1"
+                    type="button"
+                    data-tab
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="sg-panel-1"
+                  >
+                    휴대폰인증
+                  </button>
+                  <button
+                    class="ds-tabs__item"
+                    id="sg-tab-2"
+                    type="button"
+                    data-tab
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="sg-panel-2"
+                    tabindex="-1"
+                  >
+                    아이핀인증
+                  </button>
+                </div>
+              </div>
+              <pre class="sg-example__code">
+&lt;div class=&quot;ds-tabs&quot; data-tabs role=&quot;tablist&quot; aria-label=&quot;본인인증 방식&quot;&gt;
+  &lt;button class=&quot;ds-tabs__item&quot; id=&quot;sg-tab-1&quot; type=&quot;button&quot; data-tab role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-controls=&quot;sg-panel-1&quot;&gt;휴대폰인증&lt;/button&gt;
+  &lt;button class=&quot;ds-tabs__item&quot; id=&quot;sg-tab-2&quot; type=&quot;button&quot; data-tab role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;sg-panel-2&quot; tabindex=&quot;-1&quot;&gt;아이핀인증&lt;/button&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <span class="sg-label">박스형 · 페이지 이동</span>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <nav class="ds-tabs ds-tabs--box" aria-label="교육 유형">
+                  <a class="ds-tabs__item" href="#tabs">현장교육 안내</a>
+                  <a class="ds-tabs__item" href="#tabs" aria-current="page">사이버교육 안내</a>
+                </nav>
+              </div>
+              <pre class="sg-example__code">
+&lt;nav class=&quot;ds-tabs ds-tabs--box&quot; aria-label=&quot;교육 유형&quot;&gt;
+  &lt;a class=&quot;ds-tabs__item&quot; href=&quot;#tabs&quot;&gt;현장교육 안내&lt;/a&gt;
+  &lt;a class=&quot;ds-tabs__item&quot; href=&quot;#tabs&quot; aria-current=&quot;page&quot;&gt;사이버교육 안내&lt;/a&gt;
+&lt;/nav&gt;</pre>
+            </div>
+            <span class="sg-label">알약형 · 필터</span>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <div class="ds-tabs ds-tabs--pill" role="group" aria-label="회원 구분">
+                  <button class="ds-tabs__item" type="button" aria-pressed="true">정회원</button>
+                  <button class="ds-tabs__item" type="button" aria-pressed="false">준회원</button>
+                </div>
+              </div>
+              <pre class="sg-example__code">
+&lt;div class=&quot;ds-tabs ds-tabs--pill&quot; role=&quot;group&quot; aria-label=&quot;회원 구분&quot;&gt;
+  &lt;button class=&quot;ds-tabs__item&quot; type=&quot;button&quot; aria-pressed=&quot;true&quot;&gt;정회원&lt;/button&gt;
+  &lt;button class=&quot;ds-tabs__item&quot; type=&quot;button&quot; aria-pressed=&quot;false&quot;&gt;준회원&lt;/button&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                선택 표시: 패널 탭
+                <code>aria-selected</code>
+                , 필터
+                <code>aria-pressed</code>
+                , 페이지 이동
+                <code>a[aria-current="page"]</code>
+                . 모두 같은
+                <code>.ds-tabs__item</code>
+                .
+              </li>
+              <li>
+                패널 탭:
+                <code>data-tabs</code>
+                +
+                <code>data-tab</code>
+                +
+                <code>aria-controls</code>
+                , 패널은
+                <code>role="tabpanel"</code>
+                . 방향키·Home·End 지원(common.js). 탭 밖 버튼으로 바꿀 땐
+                <code>data-tab-target</code>
+                .
+              </li>
+              <li>
+                박스형은 PC 균등 분할(높이 66), MO는 가로 스크롤 알약. MO에서도 균등 분할이면
+                <code>--fill</code>
+                , 항목이 많으면
+                <code>--compact</code>
+                .
+              </li>
+              <li>
+                간격 조정은 상위 페이지 클래스에서만(
+                <code>.community-page .ds-tabs</code>
+                ).
+                <code>community-tabs</code>
+                같은 복제 금지.
+              </li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              탭 JS가 두 가지(
+              <code>data-tab</code>
+              /
+              <code>data-public-tab</code>
+              ) — 새 작업은
+              <code>data-tab</code>
+              .
+              <br />
+              이전 탭 클래스 잔여:
+              <code>.edu-tabs</code>
+              ,
+              <code>.public-tabs</code>
+              ,
+              <code>.community-section-tabs</code>
+              .
+            </div>
+          </section>
+          <section class="sg-section" id="input" aria-labelledby="input-title">
+            <h2 id="input-title">Input</h2>
+            <p>입력 필드입니다. 라벨 16 Bold · 라벨 간격 8 · 도움말 간격 6 · 반경 12.</p>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <label class="form-field form-field--large">
+                  <span>이름</span>
+                  <input type="text" placeholder="이름 입력" />
+                </label>
+                <label class="form-field form-field--large form-field--helper has-error">
+                  <span>이메일</span>
+                  <input type="email" value="kdha@" aria-describedby="sg-email-error" />
+                  <small id="sg-email-error">이메일 형식이 올바르지 않습니다.</small>
+                </label>
+                <label class="form-field form-field--large">
+                  <span>아이디</span>
+                  <input type="text" value="kdha2026" disabled />
+                </label>
+                <label class="form-field">
+                  <span>문의 내용</span>
+                  <textarea placeholder="내용을 입력해 주세요."></textarea>
+                </label>
+              </div>
+              <pre class="sg-example__code">
+&lt;label class=&quot;form-field form-field--large&quot;&gt;
+  &lt;span&gt;이름&lt;/span&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;이름 입력&quot; /&gt;
+&lt;/label&gt;
+&lt;label class=&quot;form-field form-field--large form-field--helper has-error&quot;&gt;
+  &lt;span&gt;이메일&lt;/span&gt;
+  &lt;input type=&quot;email&quot; value=&quot;kdha@&quot; aria-describedby=&quot;sg-email-error&quot; /&gt;
+  &lt;small id=&quot;sg-email-error&quot;&gt;이메일 형식이 올바르지 않습니다.&lt;/small&gt;
+&lt;/label&gt;
+&lt;label class=&quot;form-field form-field--large&quot;&gt;
+  &lt;span&gt;아이디&lt;/span&gt;
+  &lt;input type=&quot;text&quot; value=&quot;kdha2026&quot; disabled /&gt;
+&lt;/label&gt;
+&lt;label class=&quot;form-field&quot;&gt;
+  &lt;span&gt;문의 내용&lt;/span&gt;
+  &lt;textarea placeholder=&quot;내용을 입력해 주세요.&quot;&gt;&lt;/textarea&gt;
+&lt;/label&gt;</pre>
+            </div>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">크기</th>
+                    <th scope="col">PC</th>
+                    <th scope="col">MO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <code>form-field</code>
+                      (M)
+                    </td>
+                    <td>48px</td>
+                    <td>48px</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>form-field--large</code>
+                      (L)
+                    </td>
+                    <td>56px</td>
+                    <td>48px (자동)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                상태: 오류
+                <code>has-error</code>
+                (테두리·도움말 빨강), 도움말 표시
+                <code>form-field--helper</code>
+                , 비활성
+                <code>disabled</code>
+                /
+                <code>readonly</code>
+                .
+              </li>
+              <li>포커스는 전역 링 대신 테두리 보라입니다.</li>
+              <li>
+                오류 문구는
+                <code>aria-describedby</code>
+                로 입력과 연결합니다.
+              </li>
+              <li>MO 높이를 페이지에서 다시 지정하지 않습니다.</li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              <code>.edu-field</code>
+              는
+              <code>.form-field</code>
+              와 같은 별칭 — 새 작업은
+              <code>form-field</code>
+              .
+            </div>
+          </section>
+          <section class="sg-section" id="select" aria-labelledby="select-title">
+            <h2 id="select-title">Select</h2>
+            <p>
+              <code>select[data-custom-select]</code>
+              를 쓰면 공통 드롭다운(
+              <code>.ds-select</code>
+              )으로 바뀝니다. 원본 select 값과 동기화됩니다.
+            </p>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <label class="form-field form-field--large">
+                  <span>교육분류</span>
+                  <select data-custom-select data-select-size="l">
+                    <option>전체</option>
+                    <option>치위생 및 보건</option>
+                    <option>필수과목</option>
+                  </select>
+                </label>
+              </div>
+              <pre class="sg-example__code">
+&lt;label class=&quot;form-field form-field--large&quot;&gt;
+  &lt;span&gt;교육분류&lt;/span&gt;
+  &lt;select data-custom-select data-select-size=&quot;l&quot;&gt;
+    &lt;option&gt;전체&lt;/option&gt;
+    &lt;option&gt;치위생 및 보건&lt;/option&gt;
+    &lt;option&gt;필수과목&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/label&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                크기:
+                <code>data-select-size="l"</code>
+                (56, MO 48) / 기본 m(48).
+              </li>
+              <li>
+                첫 option은 placeholder로 처리됩니다. 첫 값이 실제 값이면
+                <code>option[data-placeholder="false"]</code>
+                .
+              </li>
+              <li>
+                <code>required</code>
+                면 제출 시 미선택 오류를 표시합니다.
+              </li>
+              <li>
+                값을 JS로 바꾼 뒤
+                <code>$(select).trigger('change')</code>
+                , AJAX로 추가한 영역은
+                <code>KDHAComponents.initCustomSelects(영역)</code>
+                .
+              </li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              원본 select에
+              <code>class="ds-select"</code>
+              를 붙인 곳(9곳)이 있음 — 생성되는 래퍼와 이름이 겹치므로 새 작업은 붙이지 않음.
+              <br />
+              <code>data-custom-select</code>
+              없이 OS 기본 셀렉트로 남은 곳 6곳.
+            </div>
+          </section>
+          <section class="sg-section" id="check" aria-labelledby="check-title">
+            <h2 id="check-title">Checkbox · Radio</h2>
+            <p>네이티브 input을 그대로 쓰고 모양만 바꿉니다. 18px 컨트롤 · 24px 누름 영역 · 라벨 14px.</p>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <label class="form-check">
+                  <input type="checkbox" checked />
+                  <span>전체 동의</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" />
+                  <span>선택 안 함</span>
+                </label>
+                <label class="form-check">
+                  <input type="radio" name="sg-radio" checked />
+                  <span>동의함</span>
+                </label>
+                <label class="form-check">
+                  <input type="radio" name="sg-radio" />
+                  <span>동의안함</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" disabled />
+                  <span>비활성</span>
+                </label>
+              </div>
+              <pre class="sg-example__code">
+&lt;label class=&quot;form-check&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; checked /&gt;
+  &lt;span&gt;전체 동의&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;form-check&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; /&gt;
+  &lt;span&gt;선택 안 함&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;form-check&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;sg-radio&quot; checked /&gt;
+  &lt;span&gt;동의함&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;form-check&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;sg-radio&quot; /&gt;
+  &lt;span&gt;동의안함&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;form-check&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; disabled /&gt;
+  &lt;span&gt;비활성&lt;/span&gt;
+&lt;/label&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                라벨 글자는
+                <code>&lt;span&gt;</code>
+                으로 감쌉니다.
+              </li>
+              <li>
+                여러 개 묶음은
+                <code>role="group"</code>
+                +
+                <code>aria-labelledby</code>
+                (또는 fieldset/legend).
+              </li>
+              <li>
+                기타 + 직접입력은
+                <code>.jobs-choices__etc</code>
+                패턴(체크박스 + 입력 240px).
+              </li>
+            </ul>
+          </section>
+          <section class="sg-section" id="input-action" aria-labelledby="input-action-title">
+            <h2 id="input-action-title">Input + 버튼</h2>
+            <p>중복확인·주소찾기·전액 사용처럼 입력 옆에 붙는 버튼입니다.</p>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <div class="form-field form-field--large">
+                  <label for="sg-mileage">마일리지</label>
+                  <span class="form-input-action">
+                    <input id="sg-mileage" type="text" value="5,000" />
+                    <button class="form-action-button" type="button">전액 사용</button>
+                  </span>
+                </div>
+              </div>
+              <pre class="sg-example__code">
+&lt;div class=&quot;form-field form-field--large&quot;&gt;
+  &lt;label for=&quot;sg-mileage&quot;&gt;마일리지&lt;/label&gt;
+  &lt;span class=&quot;form-input-action&quot;&gt;
+    &lt;input id=&quot;sg-mileage&quot; type=&quot;text&quot; value=&quot;5,000&quot; /&gt;
+    &lt;button class=&quot;form-action-button&quot; type=&quot;button&quot;&gt;전액 사용&lt;/button&gt;
+  &lt;/span&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                버튼은
+                <code>.form-action-button</code>
+                (56px, radius 12, 18 Bold; MO 48px).
+                <code>--medium</code>
+                은 48px.
+              </li>
+              <li>입력과 버튼 간격 8px.</li>
+            </ul>
+          </section>
+          <section class="sg-section" id="search" aria-labelledby="search-title">
+            <h2 id="search-title">조회 박스</h2>
+            <p>
+              게시판 목록 위 검색입니다. 셀렉트 + 입력 + 검색 버튼을 공통 컴포넌트로 조합하고, 박스 배경·배치만 페이지
+              클래스가 맡습니다.
+            </p>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <form class="community-search form-field form-field--large" role="search">
+                  <select data-select-size="l" data-custom-select name="field" aria-label="검색 조건">
+                    <option value="all">선택</option>
+                    <option value="title">제목</option>
+                  </select>
+                  <input type="search" name="query" aria-label="검색어" placeholder="검색어를 입력해 주세요" />
+                  <button class="form-action-button" type="submit">검색</button>
+                </form>
+              </div>
+              <pre class="sg-example__code">
+&lt;form class=&quot;community-search form-field form-field--large&quot; role=&quot;search&quot;&gt;
+  &lt;select data-select-size=&quot;l&quot; data-custom-select name=&quot;field&quot; aria-label=&quot;검색 조건&quot;&gt;
+    &lt;option value=&quot;all&quot;&gt;선택&lt;/option&gt;
+    &lt;option value=&quot;title&quot;&gt;제목&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;input type=&quot;search&quot; name=&quot;query&quot; aria-label=&quot;검색어&quot; placeholder=&quot;검색어를 입력해 주세요&quot; /&gt;
+  &lt;button class=&quot;form-action-button&quot; type=&quot;submit&quot;&gt;검색&lt;/button&gt;
+&lt;/form&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                컨테이너
+                <code>form-field form-field--large</code>
+                + 셀렉트
+                <code>data-select-size="l"</code>
+                + 버튼
+                <code>.form-action-button</code>
+                .
+              </li>
+              <li>박스 아래와 목록 사이 40px.</li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              알약형
+              <code>.ds-search</code>
+              는 실제 화면에서 쓰지 않음. 실제 화면은 위 조회 박스와
+              <code>.ofe-search</code>
+              ,
+              <code>.jobs-search</code>
+              등 화면별 검색이 있음.
+            </div>
+          </section>
+          <section class="sg-section" id="datepicker" aria-labelledby="datepicker-title">
+            <h2 id="datepicker-title">Date picker</h2>
+            <p>날짜·연도 선택기입니다(vanillajs-datepicker).</p>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <div class="form-field form-field--large form-datepicker">
+                  <label for="sg-date">입학년도</label>
+                  <span class="form-datepicker__control">
+                    <input
+                      id="sg-date"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="YYYY"
+                      data-datepicker
+                      data-datepicker-view="year"
+                    />
+                    <button
+                      class="form-datepicker__button"
+                      type="button"
+                      data-datepicker-trigger
+                      aria-label="연도 선택"
+                    >
+                      <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <pre class="sg-example__code">
+&lt;div class=&quot;form-field form-field--large form-datepicker&quot;&gt;
+  &lt;label for=&quot;sg-date&quot;&gt;입학년도&lt;/label&gt;
+  &lt;span class=&quot;form-datepicker__control&quot;&gt;
+    &lt;input id=&quot;sg-date&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; placeholder=&quot;YYYY&quot; data-datepicker data-datepicker-view=&quot;year&quot; /&gt;
+    &lt;button class=&quot;form-datepicker__button&quot; type=&quot;button&quot; data-datepicker-trigger aria-label=&quot;연도 선택&quot;&gt;
+      &lt;span class=&quot;material-symbols-rounded&quot; aria-hidden=&quot;true&quot;&gt;calendar_month&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/span&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                입력
+                <code>data-datepicker</code>
+                , 버튼
+                <code>data-datepicker-trigger</code>
+                . 연도만 고를 때
+                <code>data-datepicker-view="year"</code>
+                .
+              </li>
+              <li>
+                기간은
+                <code>data-datepicker-range</code>
+                +
+                <code>data-datepicker-range-trigger</code>
+                .
+              </li>
+              <li>
+                AJAX로 추가하면
+                <code>KDHAComponents.initDatepickers(영역)</code>
+                /
+                <code>initDateRangePickers(영역)</code>
+                .
+              </li>
+            </ul>
+          </section>
+          <section class="sg-section" id="choice-card" aria-labelledby="choice-card-title">
+            <h2 id="choice-card-title">Choice card</h2>
+            <p>결제수단처럼 큰 카드로 고르는 라디오입니다. PC 3열 · MO 1열, 선택 시 보라 테두리.</p>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <div class="ds-choice-cards">
+                  <label class="ds-choice-card">
+                    <input class="sr-only" type="radio" name="sg-pay" value="card" checked />
+                    <span>신용카드</span>
+                  </label>
+                  <label class="ds-choice-card">
+                    <input class="sr-only" type="radio" name="sg-pay" value="bank" />
+                    <span>계좌이체</span>
+                  </label>
+                  <label class="ds-choice-card">
+                    <input class="sr-only" type="radio" name="sg-pay" value="vbank" />
+                    <span>가상계좌</span>
+                  </label>
+                </div>
+              </div>
+              <pre class="sg-example__code">
+&lt;div class=&quot;ds-choice-cards&quot;&gt;
+  &lt;label class=&quot;ds-choice-card&quot;&gt;
+    &lt;input class=&quot;sr-only&quot; type=&quot;radio&quot; name=&quot;sg-pay&quot; value=&quot;card&quot; checked /&gt;
+    &lt;span&gt;신용카드&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;ds-choice-card&quot;&gt;
+    &lt;input class=&quot;sr-only&quot; type=&quot;radio&quot; name=&quot;sg-pay&quot; value=&quot;bank&quot; /&gt;
+    &lt;span&gt;계좌이체&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;ds-choice-card&quot;&gt;
+    &lt;input class=&quot;sr-only&quot; type=&quot;radio&quot; name=&quot;sg-pay&quot; value=&quot;vbank&quot; /&gt;
+    &lt;span&gt;가상계좌&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                카드 안 아이콘 이미지는 48×48,
+                <code>alt=""</code>
+                .
+              </li>
+              <li>
+                라디오는
+                <code>.sr-only</code>
+                로 숨깁니다.
+              </li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              기존 화면은 페이지 클래스
+              <code>.ofe-sr</code>
+              로 숨김 — 새 작업은
+              <code>.sr-only</code>
+              .
+              <br />
+              포커스 링이 primary/offset 3으로 전역 규칙과 다름.
+            </div>
+          </section>
+          <section class="sg-section" id="board" aria-labelledby="board-title">
+            <h2 id="board-title">Board</h2>
+            <p>게시판 목록입니다. PC는 표, MO는 카드형으로 자동 전환됩니다.</p>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <div class="ds-board" role="table" aria-label="공지사항 목록">
+                  <div class="ds-board__head" role="row">
+                    <span role="columnheader">번호</span>
+                    <span role="columnheader">분류</span>
+                    <span role="columnheader">제목</span>
+                    <span role="columnheader">작성자</span>
+                    <span role="columnheader">등록일</span>
+                    <span role="columnheader">조회</span>
+                  </div>
+                  <div class="ds-board__row ds-board__row--pinned" role="row">
+                    <span class="ds-board__number" role="cell">공지</span>
+                    <span class="ds-board__category" role="cell">협회</span>
+                    <span class="ds-board__title" role="cell"><a href="#board">2026년 정기총회 개최 안내</a></span>
+                    <span class="ds-board__author" role="cell">관리자</span>
+                    <time class="ds-board__date" role="cell" datetime="2026-10-20">2026-10-20</time>
+                    <span class="ds-board__views" role="cell">
+                      <span>조회</span>
+                      120
+                    </span>
+                  </div>
+                  <div class="ds-board__row" role="row">
+                    <span class="ds-board__number" role="cell">12</span>
+                    <span class="ds-board__category" role="cell">서식</span>
+                    <span class="ds-board__title" role="cell"><a href="#board">2025 한국치과의료연감</a></span>
+                    <span class="ds-board__author" role="cell">관리자</span>
+                    <time class="ds-board__date" role="cell" datetime="2025-12-29">2025-12-29</time>
+                    <span class="ds-board__views" role="cell">
+                      <span>조회</span>
+                      45
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <pre class="sg-example__code">
+&lt;div class=&quot;ds-board&quot; role=&quot;table&quot; aria-label=&quot;공지사항 목록&quot;&gt;
+  &lt;div class=&quot;ds-board__head&quot; role=&quot;row&quot;&gt;
+    &lt;span role=&quot;columnheader&quot;&gt;번호&lt;/span&gt;
+    &lt;span role=&quot;columnheader&quot;&gt;분류&lt;/span&gt;
+    &lt;span role=&quot;columnheader&quot;&gt;제목&lt;/span&gt;
+    &lt;span role=&quot;columnheader&quot;&gt;작성자&lt;/span&gt;
+    &lt;span role=&quot;columnheader&quot;&gt;등록일&lt;/span&gt;
+    &lt;span role=&quot;columnheader&quot;&gt;조회&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ds-board__row ds-board__row--pinned&quot; role=&quot;row&quot;&gt;
+    &lt;span class=&quot;ds-board__number&quot; role=&quot;cell&quot;&gt;공지&lt;/span&gt;
+    &lt;span class=&quot;ds-board__category&quot; role=&quot;cell&quot;&gt;협회&lt;/span&gt;
+    &lt;span class=&quot;ds-board__title&quot; role=&quot;cell&quot;&gt;&lt;a href=&quot;#board&quot;&gt;2026년 정기총회 개최 안내&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&quot;ds-board__author&quot; role=&quot;cell&quot;&gt;관리자&lt;/span&gt;
+    &lt;time class=&quot;ds-board__date&quot; role=&quot;cell&quot; datetime=&quot;2026-10-20&quot;&gt;2026-10-20&lt;/time&gt;
+    &lt;span class=&quot;ds-board__views&quot; role=&quot;cell&quot;&gt;&lt;span&gt;조회&lt;/span&gt; 120&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ds-board__row&quot; role=&quot;row&quot;&gt;
+    &lt;span class=&quot;ds-board__number&quot; role=&quot;cell&quot;&gt;12&lt;/span&gt;
+    &lt;span class=&quot;ds-board__category&quot; role=&quot;cell&quot;&gt;서식&lt;/span&gt;
+    &lt;span class=&quot;ds-board__title&quot; role=&quot;cell&quot;&gt;&lt;a href=&quot;#board&quot;&gt;2025 한국치과의료연감&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&quot;ds-board__author&quot; role=&quot;cell&quot;&gt;관리자&lt;/span&gt;
+    &lt;time class=&quot;ds-board__date&quot; role=&quot;cell&quot; datetime=&quot;2025-12-29&quot;&gt;2025-12-29&lt;/time&gt;
+    &lt;span class=&quot;ds-board__views&quot; role=&quot;cell&quot;&gt;&lt;span&gt;조회&lt;/span&gt; 45&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                열 너비는 상위 클래스에서
+                <code>--ds-board-columns</code>
+                변수로 지정합니다(예:
+                <code>.mypage-fund .mypage-ledger__board { --ds-board-columns: 194px 194px … }</code>
+                ).
+              </li>
+              <li>
+                표 의미는
+                <code>role="table/row/columnheader/cell"</code>
+                로 유지합니다.
+              </li>
+              <li>
+                상단 고정 행
+                <code>ds-board__row--pinned</code>
+                , 제목은 1줄 말줄임(MO 2줄).
+              </li>
+              <li>
+                첨부 아이콘은
+                <code>attach_file(R/300/20)</code>
+                ,
+                <code>role="img"</code>
+                +
+                <code>aria-label="첨부파일 있음"</code>
+                .
+              </li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              <code>&lt;table class="ds-board"&gt;</code>
+              로 쓴 곳(마이페이지 보수교육·취득 평점)이 있음 — 구조가 두 가지.
+              <br />
+              <code>ds-board__row--reply</code>
+              는 소통광장 SCSS에만 정의.
+            </div>
+          </section>
+          <section class="sg-section" id="pagination" aria-labelledby="pagination-title">
+            <h2 id="pagination-title">Pagination</h2>
+            <p>
+              모든 목록은
+              <code>.ds-pagination</code>
+              하나만 씁니다.
+            </p>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <nav class="ds-pagination" aria-label="목록 페이지 이동">
+                  <button type="button" aria-label="이전 페이지" disabled>
+                    <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+                  </button>
+                  <a href="#pagination" aria-current="page">1</a>
+                  <a href="#pagination">2</a>
+                  <a href="#pagination">3</a>
+                  <a href="#pagination">4</a>
+                  <a href="#pagination">5</a>
+                  <a href="#pagination" aria-label="다음 페이지">
+                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                  </a>
+                </nav>
+              </div>
+              <pre class="sg-example__code">
+&lt;nav class=&quot;ds-pagination&quot; aria-label=&quot;목록 페이지 이동&quot;&gt;
+  &lt;button type=&quot;button&quot; aria-label=&quot;이전 페이지&quot; disabled&gt;&lt;span class=&quot;material-symbols-rounded&quot; aria-hidden=&quot;true&quot;&gt;arrow_back_ios_new&lt;/span&gt;&lt;/button&gt;
+  &lt;a href=&quot;#pagination&quot; aria-current=&quot;page&quot;&gt;1&lt;/a&gt;
+  &lt;a href=&quot;#pagination&quot;&gt;2&lt;/a&gt;
+  &lt;a href=&quot;#pagination&quot;&gt;3&lt;/a&gt;
+  &lt;a href=&quot;#pagination&quot;&gt;4&lt;/a&gt;
+  &lt;a href=&quot;#pagination&quot;&gt;5&lt;/a&gt;
+  &lt;a href=&quot;#pagination&quot; aria-label=&quot;다음 페이지&quot;&gt;&lt;span class=&quot;material-symbols-rounded&quot; aria-hidden=&quot;true&quot;&gt;arrow_forward_ios&lt;/span&gt;&lt;/a&gt;
+&lt;/nav&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>보조 클래스로 스타일을 주지 않습니다. 위 간격만 상위 클래스에서 조정합니다.</li>
+              <li>
+                화면 안 갱신은
+                <code>button</code>
+                , 서버 이동은
+                <code>a</code>
+                . 현재 페이지
+                <code>aria-current="page"</code>
+                .
+              </li>
+              <li>
+                PC 44px · 간격 8 / MO 40px · 간격 4. MO에서 폭이 좁으면(팝업 등) 원형을 유지한 채 32px까지 자동 축소.
+              </li>
+              <li>번호는 5개 단위(이전 + 5 + 다음)로 출력합니다.</li>
+            </ul>
+          </section>
+          <section class="sg-section" id="guide-list" aria-labelledby="guide-list-title">
+            <h2 id="guide-list-title">Guide list</h2>
+            <p>짧은 안내 문구 박스입니다. 회색 배경 · radius 16 · padding 24 · 항목 간격 4 · 14px.</p>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <ul class="ds-guide-list">
+                  <li class="ds-guide-list__item">
+                    <span class="ds-guide-list__content">
+                      <strong>승인 받은 병원만</strong>
+                      공고를 등록할 수 있습니다.
+                    </span>
+                  </li>
+                  <li class="ds-guide-list__item">
+                    <span class="ds-guide-list__content">
+                      자세한 내용은
+                      <a class="ds-link ds-link--text" href="#guide-list">이용안내</a>
+                      를 확인해 주세요.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <pre class="sg-example__code">
+&lt;ul class=&quot;ds-guide-list&quot;&gt;
+  &lt;li class=&quot;ds-guide-list__item&quot;&gt;
+    &lt;span class=&quot;ds-guide-list__content&quot;&gt;&lt;strong&gt;승인 받은 병원만&lt;/strong&gt; 공고를 등록할 수 있습니다.&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;ds-guide-list__item&quot;&gt;
+    &lt;span class=&quot;ds-guide-list__content&quot;&gt;자세한 내용은 &lt;a class=&quot;ds-link ds-link--text&quot; href=&quot;#guide-list&quot;&gt;이용안내&lt;/a&gt;를 확인해 주세요.&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                항목은 반드시
+                <code>__item</code>
+                +
+                <code>__content</code>
+                로 씁니다(사각 글머리표 포함).
+              </li>
+              <li>안내 박스를 페이지 전용으로 새로 만들지 않습니다.</li>
+              <li>링크 뒤 조사는 닫는 태그 바로 뒤에 붙여 씁니다.</li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              158개 중 약 100개가
+              <code>__item</code>
+              없이 일반
+              <code>&lt;li&gt;</code>
+              — 글머리표가 화면별로 따로 그려짐.
+            </div>
+          </section>
+          <section class="sg-section" id="dialog" aria-labelledby="dialog-title">
+            <h2 id="dialog-title">Dialog</h2>
+            <p>
+              일반 팝업입니다. 네이티브
+              <code>&lt;dialog&gt;</code>
+              를 씁니다.
+            </p>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <button
+                  class="ds-button ds-button--medium ds-button--outline"
+                  type="button"
+                  data-dialog-open="sg-dialog"
+                >
+                  팝업 열기
+                </button>
+                <dialog class="edu-dialog" id="sg-dialog" aria-labelledby="sg-dialog-title">
+                  <button
+                    class="edu-dialog__close material-symbols-rounded material-icon--close"
+                    type="button"
+                    data-dialog-close
+                    aria-label="닫기"
+                  >
+                    close
+                  </button>
+                  <h2 id="sg-dialog-title">팝업 제목</h2>
+                  <div class="edu-dialog__body">
+                    <label class="form-field form-field--large">
+                      <span>이름</span>
+                      <input type="text" placeholder="이름 입력" />
+                    </label>
+                  </div>
+                  <div class="edu-dialog__actions">
+                    <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>
+                      취소
+                    </button>
+                    <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>
+                      확인
+                    </button>
+                  </div>
+                </dialog>
+              </div>
+              <pre class="sg-example__code">
+&lt;button class=&quot;ds-button ds-button--medium ds-button--outline&quot; type=&quot;button&quot; data-dialog-open=&quot;sg-dialog&quot;&gt;팝업 열기&lt;/button&gt;
+&lt;dialog class=&quot;edu-dialog&quot; id=&quot;sg-dialog&quot; aria-labelledby=&quot;sg-dialog-title&quot;&gt;
+  &lt;button class=&quot;edu-dialog__close material-symbols-rounded material-icon--close&quot; type=&quot;button&quot; data-dialog-close aria-label=&quot;닫기&quot;&gt;close&lt;/button&gt;
+  &lt;h2 id=&quot;sg-dialog-title&quot;&gt;팝업 제목&lt;/h2&gt;
+  &lt;div class=&quot;edu-dialog__body&quot;&gt;
+    &lt;label class=&quot;form-field form-field--large&quot;&gt;
+      &lt;span&gt;이름&lt;/span&gt;
+      &lt;input type=&quot;text&quot; placeholder=&quot;이름 입력&quot; /&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;edu-dialog__actions&quot;&gt;
+    &lt;button class=&quot;ds-button ds-button--large ds-button--outline&quot; type=&quot;button&quot; data-dialog-close&gt;취소&lt;/button&gt;
+    &lt;button class=&quot;ds-button ds-button--large ds-button--primary&quot; type=&quot;button&quot; data-dialog-close&gt;확인&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</pre>
+            </div>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">PC</th>
+                    <th scope="col">MO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>너비</td>
+                    <td>560px (넓은 팝업 900 · 960)</td>
+                    <td>화면 - 24px</td>
+                  </tr>
+                  <tr>
+                    <td>여백</td>
+                    <td>40px</td>
+                    <td>40px 20px</td>
+                  </tr>
+                  <tr>
+                    <td>영역 간격</td>
+                    <td>40px</td>
+                    <td>32px</td>
+                  </tr>
+                  <tr>
+                    <td>제목</td>
+                    <td>28px Bold</td>
+                    <td>20~24px</td>
+                  </tr>
+                  <tr>
+                    <td>그림자</td>
+                    <td>shadow-dialog</td>
+                    <td>shadow-card</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                열기
+                <code>data-dialog-open="id"</code>
+                , 닫기
+                <code>data-dialog-close</code>
+                , 다음 팝업으로 교체
+                <code>data-dialog-switch="id"</code>
+                . 주소에
+                <code>#id</code>
+                를 붙이면 열린 상태로 시작.
+              </li>
+              <li>
+                <code>aria-labelledby</code>
+                로 제목 연결. 닫으면 연 요소로 포커스가 돌아갑니다.
+              </li>
+              <li>
+                dialog 자체는 스크롤하지 않고
+                <code>.edu-dialog__body</code>
+                만 스크롤(포커스 여유 포함).
+              </li>
+              <li>
+                하단 버튼은
+                <code>.edu-dialog__actions</code>
+                (버튼 최대 240, MO 전체 폭).
+              </li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              공통 팝업인데 클래스가
+              <code>edu-</code>
+              로 시작 — 이름은 유지(완료 페이지).
+              <br />
+              <code>education.js</code>
+              에 열기·닫기 코드가 한 벌 더 있음(로그인·약관 화면용).
+            </div>
+          </section>
+          <section class="sg-section" id="alert" aria-labelledby="alert-title">
+            <h2 id="alert-title">Alert</h2>
+            <p>
+              짧은 알림·확인 팝업입니다. 브라우저
+              <code>alert()</code>
+              /
+              <code>confirm()</code>
+              대신 씁니다. 너비 320px.
+            </p>
+            <div class="sg-example">
+              <div class="sg-example__preview">
+                <button
+                  class="ds-button ds-button--medium ds-button--outline"
+                  type="button"
+                  data-dialog-open="sg-alert"
+                >
+                  알림 열기
+                </button>
+                <dialog
+                  class="ds-alert"
+                  id="sg-alert"
+                  role="alertdialog"
+                  aria-label="알림"
+                  aria-describedby="sg-alert-message"
+                >
+                  <button
+                    class="ds-alert__close material-symbols-rounded"
+                    type="button"
+                    data-dialog-close
+                    aria-label="닫기"
+                  >
+                    close
+                  </button>
+                  <p class="ds-alert__message" id="sg-alert-message">필수 항목을 모두 입력해 주세요.</p>
+                  <div class="edu-dialog__actions">
+                    <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>
+                      확인
+                    </button>
+                  </div>
+                </dialog>
+              </div>
+              <pre class="sg-example__code">
+&lt;button class=&quot;ds-button ds-button--medium ds-button--outline&quot; type=&quot;button&quot; data-dialog-open=&quot;sg-alert&quot;&gt;알림 열기&lt;/button&gt;
+&lt;dialog class=&quot;ds-alert&quot; id=&quot;sg-alert&quot; role=&quot;alertdialog&quot; aria-label=&quot;알림&quot; aria-describedby=&quot;sg-alert-message&quot;&gt;
+  &lt;button class=&quot;ds-alert__close material-symbols-rounded&quot; type=&quot;button&quot; data-dialog-close aria-label=&quot;닫기&quot;&gt;close&lt;/button&gt;
+  &lt;p class=&quot;ds-alert__message&quot; id=&quot;sg-alert-message&quot;&gt;필수 항목을 모두 입력해 주세요.&lt;/p&gt;
+  &lt;div class=&quot;edu-dialog__actions&quot;&gt;
+    &lt;button class=&quot;ds-button ds-button--large ds-button--primary&quot; type=&quot;button&quot; data-dialog-close&gt;확인&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                <code>role="alertdialog"</code>
+                +
+                <code>aria-describedby</code>
+                로 메시지 연결.
+              </li>
+              <li>확인 1개: Primary 1개 / 취소·확인: Outline + Primary(균등 분할).</li>
+              <li>
+                알림 레이어는 모두
+                <code>ds-alert</code>
+                로 통일합니다.
+              </li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              확인 버튼이 화면에 따라 Primary/Outline으로 섞여 있음.
+            </div>
+          </section>
+          <section class="sg-section" id="page-hero" aria-labelledby="page-hero-title">
+            <h2 id="page-hero-title">Page hero · Banner</h2>
+            <p>서브 페이지 상단(breadcrumb + 제목)과 하단 문의 배너입니다. 예시는 문서 폭에 맞춰 보입니다.</p>
+            <span class="sg-label">Page hero</span>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <header class="page-hero">
+                  <nav aria-label="현재 위치">
+                    <a href="#page-hero" aria-label="홈">
+                      <span class="material-symbols-rounded" aria-hidden="true">home</span>
+                    </a>
+                    <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                    <span aria-current="page">결제관리</span>
+                  </nav>
+                  <p style="margin: 0; font-size: 60px; font-weight: 700; line-height: 1.25; letter-spacing: -0.6px">
+                    결제관리
+                  </p>
+                  <p>KOREAN DENTAL HYGIENISTS ASSOCIATION</p>
+                </header>
+              </div>
+              <pre class="sg-example__code">
+&lt;header class=&quot;page-hero&quot;&gt;
+  &lt;nav aria-label=&quot;현재 위치&quot;&gt;
+    &lt;a href=&quot;#page-hero&quot; aria-label=&quot;홈&quot;&gt;&lt;span class=&quot;material-symbols-rounded&quot; aria-hidden=&quot;true&quot;&gt;home&lt;/span&gt;&lt;/a&gt;
+    &lt;span class=&quot;material-symbols-rounded&quot; aria-hidden=&quot;true&quot;&gt;arrow_forward_ios&lt;/span&gt;
+    &lt;span aria-current=&quot;page&quot;&gt;결제관리&lt;/span&gt;
+  &lt;/nav&gt;
+  &lt;h1&gt;결제관리&lt;/h1&gt;
+  &lt;p&gt;KOREAN DENTAL HYGIENISTS ASSOCIATION&lt;/p&gt;
+&lt;/header&gt;</pre>
+            </div>
+            <span class="sg-label">Page banner</span>
+            <div class="sg-example">
+              <div class="sg-example__preview sg-example__preview--stack">
+                <aside class="page-banner">
+                  <div>
+                    <h2>치위협보 기사제보 · 광고문의</h2>
+                    <p>치과위생 현장의 다양한 이야기와 소식을 기다립니다.</p>
+                  </div>
+                  <a href="mailto:press@kdha.or.kr">
+                    02-6213-2735
+                    <span>·</span>
+                    press@kdha.or.kr
+                  </a>
+                </aside>
+              </div>
+              <pre class="sg-example__code">
+&lt;aside class=&quot;page-banner&quot;&gt;
+  &lt;div&gt;
+    &lt;h2&gt;치위협보 기사제보 · 광고문의&lt;/h2&gt;
+    &lt;p&gt;치과위생 현장의 다양한 이야기와 소식을 기다립니다.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;a href=&quot;mailto:press@kdha.or.kr&quot;&gt;02-6213-2735 &lt;span&gt;·&lt;/span&gt; press@kdha.or.kr&lt;/a&gt;
+&lt;/aside&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                구조:
+                <code>main</code>
+                &gt;
+                <code>.page-hero</code>
+                +
+                <code>.main-body</code>
+                + (선택)
+                <code>.page-banner</code>
+                . 셋 다 1440 콘텐츠 폭.
+              </li>
+              <li>제목 PC 60 / MO 36, MO에서는 breadcrumb를 숨깁니다.</li>
+              <li>배너가 없으면 본문 하단 여백도 함께 없앱니다.</li>
+            </ul>
+            <div class="sg-note" hidden>
+              <strong>정리 필요</strong>
+              <br />
+              공통 레이아웃인데 스타일이
+              <code>_offline.scss</code>
+              에 있음.
+              <br />
+              배너 버튼이
+              <code>.ds-button</code>
+              이 아니며 색(#545afb)이 하드코딩.
+              <br />
+              쓰지 않는
+              <code>.breadcrumb</code>
+              클래스 잔여.
+            </div>
+          </section>
+          <section class="sg-section" id="gallery" aria-labelledby="gallery-title">
+            <h2 id="gallery-title">Gallery</h2>
+            <p>
+              사진 상세 보기입니다(봉사 갤러리 상세). 실제 화면:
+              <a href="/kdha/community/volunteer/gallery/detail/">/community/volunteer/gallery/detail/</a>
+            </p>
+            <div class="sg-example">
+              <pre class="sg-example__code" style="border-top: 0">
+&lt;div class=&quot;ds-gallery&quot; data-gallery aria-roledescription=&quot;사진 슬라이드&quot; aria-label=&quot;봉사 활동 사진&quot;&gt;
+  &lt;div class=&quot;ds-gallery__main&quot;&gt;&lt;img src=&quot;…-1.jpg&quot; alt=&quot;… 1 / 6&quot; data-gallery-main /&gt;&lt;/div&gt;
+  &lt;div class=&quot;ds-gallery__controls&quot;&gt;
+    &lt;div class=&quot;ds-gallery__thumbs&quot;&gt;
+      &lt;button class=&quot;ds-gallery__thumb&quot; type=&quot;button&quot; data-gallery-thumb aria-label=&quot;1번째 사진 보기&quot; aria-current=&quot;true&quot;&gt;&lt;img src=&quot;…-1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ds-gallery__nav&quot;&gt;
+      &lt;button class=&quot;ds-gallery__arrow&quot; type=&quot;button&quot; data-gallery-prev aria-label=&quot;이전 사진&quot;&gt;&lt;span class=&quot;material-symbols-rounded&quot; aria-hidden=&quot;true&quot;&gt;arrow_left_alt&lt;/span&gt;&lt;/button&gt;
+      &lt;button class=&quot;ds-gallery__arrow&quot; type=&quot;button&quot; data-gallery-next aria-label=&quot;다음 사진&quot;&gt;&lt;span class=&quot;material-symbols-rounded&quot; aria-hidden=&quot;true&quot;&gt;arrow_right_alt&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;sr-only&quot; role=&quot;status&quot; data-gallery-status&gt;&lt;/p&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <ul class="sg-rules">
+              <li>
+                훅:
+                <code>data-gallery</code>
+                ,
+                <code>data-gallery-main</code>
+                ,
+                <code>data-gallery-thumb</code>
+                ,
+                <code>data-gallery-prev/next</code>
+                ,
+                <code>data-gallery-status</code>
+                (common.js).
+              </li>
+              <li>
+                현재 썸네일
+                <code>aria-current="true"</code>
+                , 썸네일 포커스 링은 안쪽.
+              </li>
+            </ul>
+          </section>
+          <section class="sg-section" id="cleanup" aria-labelledby="cleanup-title" hidden>
+            <h2 id="cleanup-title">정리 필요 목록</h2>
+            <p>
+              현재 코드에서 찾은 중복·불일치입니다. 완료 페이지 마크업은 바꾸지 않고, SCSS·JS 정리만으로 해결할 수 있는
+              것부터 진행합니다.
+            </p>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">내용</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>토큰</td>
+                    <td>
+                      기존 토큰 파일 2개가 같은 이름에 다른 값 — 새 토큰
+                      <code>system/_tokens.scss</code>
+                      로 통일, 기존은 고칠 때 대응표로 교체
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>정의 안 된 클래스</td>
+                    <td>
+                      <code>ds-badge--primary</code>
+                      (21),
+                      <code>ds-link--medium</code>
+                      (~25),
+                      <code>ds-link-group__suffix</code>
+                      (18) — 화면 영향 없음, 마크업은 그대로 두고 신규에서 쓰지 않음
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>쓰지 않는 CSS</td>
+                    <td>
+                      <code>.dialog-button</code>
+                      ,
+                      <code>.breadcrumb</code>
+                      ,
+                      <code>.edu-button</code>
+                      ,
+                      <code>.edu-account-button</code>
+                      ,
+                      <code>.english-button</code>
+                      ,
+                      <code>.offline-badge</code>
+                      ,
+                      <code>.online-complete-badge</code>
+                      — 삭제 가능
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>공통인데 화면 파일에 있음</td>
+                    <td>
+                      <code>.page-hero</code>
+                      ·
+                      <code>.main-body</code>
+                      ·
+                      <code>.page-banner</code>
+                      (_offline),
+                      <code>.mypage-filter</code>
+                      (_mypage),
+                      <code>.ds-link</code>
+                      (modules) —
+                      <code>_components.scss</code>
+                      로 이동 대상
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>중복 컴포넌트</td>
+                    <td>
+                      필터 칩 3종(
+                      <code>mypage-filter</code>
+                      /
+                      <code>ds-tabs--pill</code>
+                      /
+                      <code>jobs-chips</code>
+                      ), 상태 표시 4종(
+                      <code>ds-badge</code>
+                      /
+                      <code>mypage-status</code>
+                      /
+                      <code>ofe-status</code>
+                      /
+                      <code>jobs-status</code>
+                      ), 이전 탭 3종
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>중복 JS</td>
+                    <td>
+                      팝업 열기·닫기(common.js / education.js), 탭(
+                      <code>data-tab</code>
+                      /
+                      <code>data-public-tab</code>
+                      )
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>별칭</td>
+                    <td>
+                      <code>.edu-field</code>
+                      =
+                      <code>.form-field</code>
+                      ,
+                      <code>.edu-input-action</code>
+                      =
+                      <code>.form-input-action</code>
+                      ,
+                      <code>.dialog</code>
+                      =
+                      <code>.edu-dialog</code>
+                      ,
+                      <code>.cbe-joined-copy</code>
+                      =
+                      <code>.ds-text-join</code>
+                      — 신규는 앞쪽 이름 대신 뒤쪽(공통) 이름
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>포커스 링 예외</td>
+                    <td>
+                      <code>.ds-link</code>
+                      민트,
+                      <code>.ds-choice-card</code>
+                      primary — 전역 #ad99ff로 통일 대상
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>하드코딩 색</td>
+                    <td>
+                      뱃지 상태색, 페이지네이션 #25262b, 탭 배경 #f7f8ff, 배너 #e0eeff·#545afb — 토큰(
+                      <code>danger-bg</code>
+                      ,
+                      <code>selected-strong</code>
+                      ,
+                      <code>surface-tab</code>
+                      ,
+                      <code>surface-blue</code>
+                      ,
+                      <code>brand-blue</code>
+                      )으로 교체 대상
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/kdha/assets/js/site-menu.js"></script>
+  </body>
+</html>
