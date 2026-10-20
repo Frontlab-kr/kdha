@@ -7,6 +7,8 @@ $(function () {
       slidesPerView: 'auto',
       spaceBetween: 24,
       breakpoints: { 0: { spaceBetween: 16 }, 768: { spaceBetween: 24 } },
+      // 슬라이드가 ul > li 목록이므로 Swiper 기본 role="group" 대신 목록 항목으로 둡니다.
+      a11y: { slideRole: 'listitem' },
     });
 
     $section.on('click', '[data-edu-main-filter]', function () {

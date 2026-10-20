@@ -363,6 +363,35 @@ $(function () {
     $(window).on('hashchange', openDialogFromHash);
   }
 
+  // 팝업 본문이 스크롤되는데 안에 포커스 가능한 요소가 없으면 키보드로 스크롤할 수 있게 합니다.
+  // (열리는 방법과 상관없이 적용되도록 showModal에 연결하며, 스크롤 여부는 열린 시점 화면 크기로 판단)
+  function makeDialogScrollRegionsFocusable(dialog) {
+    dialog.querySelectorAll('.edu-dialog__body, .edu-dialog__terms').forEach(function (region) {
+      if (region.hasAttribute('tabindex')) return;
+      var isScrollable = region.scrollHeight > region.clientHeight + 1;
+      var hasFocusable = region.querySelector('a[href], button, input, select, textarea, [tabindex]');
+      if (!isScrollable || hasFocusable) return;
+      region.tabIndex = 0;
+      if (!region.hasAttribute('aria-label') && !region.hasAttribute('aria-labelledby')) {
+        region.setAttribute('role', 'region');
+        if (dialog.getAttribute('aria-labelledby')) {
+          region.setAttribute('aria-labelledby', dialog.getAttribute('aria-labelledby'));
+        } else {
+          region.setAttribute('aria-label', dialog.getAttribute('aria-label') || '팝업 내용');
+        }
+      }
+    });
+  }
+
+  if (window.HTMLDialogElement && !HTMLDialogElement.prototype.showModal.__kdhaScrollRegions) {
+    var nativeShowModal = HTMLDialogElement.prototype.showModal;
+    HTMLDialogElement.prototype.showModal = function () {
+      nativeShowModal.apply(this, arguments);
+      makeDialogScrollRegionsFocusable(this);
+    };
+    HTMLDialogElement.prototype.showModal.__kdhaScrollRegions = true;
+  }
+
   // 공통 dialog·alert 레이어 열기 및 닫기
   $(document).on('click', '[data-dialog-open]', function () {
     var dialog = document.getElementById($(this).data('dialog-open'));

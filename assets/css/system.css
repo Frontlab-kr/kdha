@@ -436,3 +436,71 @@ td code {
   font-size: 16px;
   font-weight: 400;
 }
+
+.sg--report {
+  display: block;
+}
+.sg--report .sg-main {
+  margin-inline: auto;
+}
+
+.sg-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 0 0 24px;
+}
+.sg-stats > div {
+  padding: 20px 24px;
+  border: 1px solid #e8ecf1;
+  border-radius: 16px;
+}
+.sg-stats dt {
+  color: #505a67;
+  font-size: 14px;
+}
+.sg-stats dd {
+  margin: 4px 0 0;
+  color: #101418;
+  font-size: 28px;
+  font-weight: 700;
+}
+.sg-stats dd small {
+  margin-left: 4px;
+  color: #6f7a89;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sg-meta {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 10px 16px;
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.sg-meta dt {
+  color: #505a67;
+  font-weight: 700;
+}
+.sg-meta dd {
+  margin: 0;
+}
+
+.sg-table td .ds-badge {
+  white-space: nowrap;
+}
+
+@media print {
+  .sg--report .sg-main {
+    max-width: none;
+    padding: 0;
+  }
+  .sg-table-wrap {
+    overflow: visible;
+  }
+}
+.sg--report .sg-table td:first-child strong {
+  white-space: nowrap;
+}

@@ -1,0 +1,2044 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <link rel="stylesheet" href="/kdha/assets/css/system.css" />
+    <title>웹접근성 검수 결과 | 대한치과위생사협회</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="sg sg--report">
+      <main id="main-content">
+        <div class="sg-main">
+          <header class="sg-hero">
+            <h1>웹접근성 검수 결과</h1>
+            <p>
+              대한치과위생사협회 홈페이지 리뉴얼 퍼블리싱 화면의 웹접근성 자동·수동 검수 결과입니다. 한국형 웹 콘텐츠
+              접근성 지침(KWCAG) 2.2 항목 기준으로 정리했습니다.
+            </p>
+          </header>
+          <section class="sg-section" id="overview" aria-labelledby="overview-title">
+            <h2 id="overview-title">1. 검수 개요</h2>
+            <dl class="sg-meta">
+              <dt>검수일</dt>
+              <dd>2026년 10월 20일</dd>
+              <dt>검수 기준</dt>
+              <dd>한국형 웹 콘텐츠 접근성 지침(KWCAG) 2.2 · WCAG 2.1 A/AA</dd>
+              <dt>검수 대상</dt>
+              <dd>
+                공통(로그인·회원가입) 15개 · 대표 사이트 107개 · 교육원 사이트 33개 화면 (페이지 147개 + 팝업 167개)
+                <br />
+                영문 사이트·시도회 사이트는 작업 진행 중으로 이번 검수에서 제외
+              </dd>
+              <dt>검수 환경</dt>
+              <dd>Google Chrome · PC 1920×1080 / MO 360×800</dd>
+              <dt>검수 도구</dt>
+              <dd>
+                axe-core 4.13.0(국제 표준 자동 검사 엔진), 퍼블리싱 자체 검사(본문 바로가기·제목·lang·id 중복 등), 전
+                화면 키보드(Tab) 순회 점검
+              </dd>
+              <dt>검사 제외</dt>
+              <dd>텍스트 명도 대비(1.4.3) — 확정 디자인(Figma) 색상을 그대로 적용하므로 자동 검사에서 제외</dd>
+            </dl>
+          </section>
+          <section class="sg-section" id="summary" aria-labelledby="summary-title">
+            <h2 id="summary-title">2. 결과 요약</h2>
+            <dl class="sg-stats">
+              <div>
+                <dt>검수 화면</dt>
+                <dd>
+                  155
+                  <small>개</small>
+                </dd>
+              </div>
+              <div>
+                <dt>PC·MO 모두 적합</dt>
+                <dd>
+                  154
+                  <small>개</small>
+                </dd>
+              </div>
+              <div>
+                <dt>KWCAG 적합 항목</dt>
+                <dd>
+                  18
+                  <small>/ 33</small>
+                </dd>
+              </div>
+              <div>
+                <dt>개선 필요</dt>
+                <dd>
+                  1
+                  <small>항목</small>
+                </dd>
+              </div>
+              <div>
+                <dt>조치 완료</dt>
+                <dd>
+                  3
+                  <small>항목</small>
+                </dd>
+              </div>
+            </dl>
+            <ul class="sg-rules">
+              <li>자동 검사에서 화면 오류는 없으며, 권고 1건(회원가입)이 있습니다.</li>
+              <li>개선 필요 1항목은 메인 자동 슬라이드의 정지 기능으로, 디자인 협의 후 반영합니다.</li>
+              <li>
+                ‘수동 검수 예정’ 항목은 최종 검수 단계에서 화면별로 확인합니다. ‘서버 연동 시 확인’ 항목은 개발 연동 후
+                확인합니다.
+              </li>
+            </ul>
+          </section>
+          <section class="sg-section" id="kwcag" aria-labelledby="kwcag-title">
+            <h2 id="kwcag-title">3. 검사 항목별 결과 (KWCAG 2.2, 33개 항목)</h2>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">원칙</th>
+                    <th scope="col">번호</th>
+                    <th scope="col">검사 항목</th>
+                    <th scope="col">검사 방법</th>
+                    <th scope="col">결과</th>
+                    <th scope="col">내용</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>인식의 용이성</strong></td>
+                    <td>1.1.1</td>
+                    <td>적절한 대체 텍스트 제공</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>이미지·아이콘 대체 텍스트, 장식 이미지 alt=""</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1.2.1</td>
+                    <td>자막 제공</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--secondary">콘텐츠 확인</span></td>
+                    <td>유튜브 영상 2건(선가입 홍보영상 등) — 자막은 영상 콘텐츠에서 제공</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1.3.1</td>
+                    <td>표의 구성</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>표 머리글, MO 카드형 전환 시 role로 표 구조 유지</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1.3.2</td>
+                    <td>콘텐츠의 선형 구조</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합(조치 완료)</span></td>
+                    <td>교육원 메인 슬라이드 목록 구조 보정</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1.3.3</td>
+                    <td>명확한 지시 사항 제공</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--secondary">수동 검수 예정</span></td>
+                    <td>모양·위치·색만으로 안내하는 문구 여부</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1.4.1</td>
+                    <td>색에 무관한 콘텐츠 인식</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--secondary">수동 검수 예정</span></td>
+                    <td>선택 상태는 aria-pressed·aria-current와 굵기·선으로 함께 표시</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1.4.2</td>
+                    <td>자동 재생 금지</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>소리가 자동 재생되는 콘텐츠 없음</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1.4.3</td>
+                    <td>텍스트 콘텐츠의 명도 대비</td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--neutral">검사 제외</span></td>
+                    <td>확정 디자인(Figma) 색상을 그대로 적용하여 자동 검사 대상에서 제외</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>1.4.4</td>
+                    <td>콘텐츠 간의 구분</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--secondary">수동 검수 예정</span></td>
+                    <td>이웃한 콘텐츠의 테두리·간격 구분</td>
+                  </tr>
+                  <tr>
+                    <td><strong>운용의 용이성</strong></td>
+                    <td>2.1.1</td>
+                    <td>키보드 사용 보장</td>
+                    <td>자동 + 수동</td>
+                    <td><span class="ds-badge ds-badge--success">적합(조치 완료)</span></td>
+                    <td>전체 화면·팝업 Tab 순회 점검, 팝업 스크롤 영역 키보드 접근 보정</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.1.2</td>
+                    <td>초점 이동과 표시</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--success">적합(조치 완료)</span></td>
+                    <td>전체 화면·팝업 포커스 표시 잘림 보정(10/19)</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.1.3</td>
+                    <td>조작 가능</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--secondary">수동 검수 예정</span></td>
+                    <td>컨트롤 크기·간격</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.1.4</td>
+                    <td>문자 단축키</td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--neutral">해당 없음</span></td>
+                    <td>문자 단축키 기능 없음</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.2.1</td>
+                    <td>응답시간 조절</td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--secondary">서버 연동 시 확인</span></td>
+                    <td>시간 제한(로그인 세션 등)은 서버 기능</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.2.2</td>
+                    <td>정지 기능 제공</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--danger">개선 필요</span></td>
+                    <td>
+                      대표 메인 키비주얼·회원 지원 배너 자동 전환 시 정지 버튼 없음(채용관 자동 넘김은 정지 버튼 제공)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.3.1</td>
+                    <td>깜빡임과 번쩍임 사용 제한</td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--neutral">해당 없음</span></td>
+                    <td>깜빡이는 콘텐츠 없음</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.4.1</td>
+                    <td>반복 영역 건너뛰기</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>전 화면 본문 바로가기 제공</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.4.2</td>
+                    <td>제목 제공</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>페이지 제목(title)·h1·프레임 제목</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.4.3</td>
+                    <td>적절한 링크 텍스트</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>링크 이름, 새 창 열림 사전 안내</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.4.4</td>
+                    <td>고정된 참조 위치 정보</td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--neutral">해당 없음</span></td>
+                    <td>전자출판문서 형식 콘텐츠 없음</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.5.1</td>
+                    <td>단일 포인터 입력 지원</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>슬라이드는 버튼·페이지 표시로도 조작 가능</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.5.2</td>
+                    <td>포인터 입력 취소</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>표준 클릭(누름 해제 시 실행) 사용</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.5.3</td>
+                    <td>레이블과 네임</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>버튼·입력 요소의 접근 가능한 이름</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>2.5.4</td>
+                    <td>동작기반 작동</td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--neutral">해당 없음</span></td>
+                    <td>기기 움직임으로 동작하는 기능 없음</td>
+                  </tr>
+                  <tr>
+                    <td><strong>이해의 용이성</strong></td>
+                    <td>3.1.1</td>
+                    <td>기본 언어 표시</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>html lang="ko"</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3.2.1</td>
+                    <td>사용자 요구에 따른 실행</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>예고 없는 새 창·초점 이동 없음</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3.2.2</td>
+                    <td>찾기 쉬운 도움 정보</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>공통 헤더·푸터로 같은 위치에 제공</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3.3.1</td>
+                    <td>오류 정정</td>
+                    <td>자동 + 수동</td>
+                    <td><span class="ds-badge ds-badge--secondary">서버 연동 시 확인</span></td>
+                    <td>필수 입력 알림 제공, 서버 검증 오류는 연동 시 확인</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3.3.2</td>
+                    <td>레이블 제공</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>입력·선택 요소 레이블</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3.3.3</td>
+                    <td>접근 가능한 인증</td>
+                    <td>수동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>인지 기능 테스트(캡차 등) 없음, 본인인증 2가지 방식 제공</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>3.3.4</td>
+                    <td>반복 입력 정보</td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--secondary">서버 연동 시 확인</span></td>
+                    <td>이전 입력값 자동 채움은 서버 기능</td>
+                  </tr>
+                  <tr>
+                    <td><strong>견고성</strong></td>
+                    <td>4.1.1</td>
+                    <td>마크업 오류 방지</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td>id 중복·요소 중첩 오류 없음</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>4.2.1</td>
+                    <td>웹 애플리케이션 접근성 준수</td>
+                    <td>자동</td>
+                    <td><span class="ds-badge ds-badge--warning">권고</span></td>
+                    <td>ARIA 사용 권고 1건(회원가입 치과위생사 정보입력)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="sg-section" id="findings" aria-labelledby="findings-title">
+            <h2 id="findings-title">4. 발견 사항 및 조치</h2>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">관련 항목</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">대상</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">조치</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2.2.2 정지 기능 제공</td>
+                    <td><span class="ds-badge ds-badge--danger">개선 필요</span></td>
+                    <td>대표 사이트 메인 (/main/)</td>
+                    <td>키비주얼·회원 지원 배너가 5초마다 자동 전환되며 정지 버튼이 없음</td>
+                    <td>디자인 협의 후 정지/재생 버튼 추가 및 마우스·포커스 시 일시정지</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>4.2.1 웹 애플리케이션 접근성</td>
+                    <td><span class="ds-badge ds-badge--warning">권고</span></td>
+                    <td>회원가입 치과위생사 정보입력</td>
+                    <td>우편물 수령지 '기타' 라벨에 허용되지 않는 요소에 aria-label 사용(화면 표시·조작 영향 없음)</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>1.3.2 콘텐츠의 선형 구조</td>
+                    <td><span class="ds-badge ds-badge--success">적합(조치 완료)</span></td>
+                    <td>교육원 메인 (/edu/, /edu/member/)</td>
+                    <td>슬라이드 목록(ul > li)이 슬라이드 라이브러리 기본값으로 목록 구조가 깨짐</td>
+                    <td>목록 항목으로 유지되도록 수정</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>2.1.1 키보드 사용 보장</td>
+                    <td><span class="ds-badge ds-badge--success">적합(조치 완료)</span></td>
+                    <td>결제관리·채용관·이벤트 팝업 4종</td>
+                    <td>본문만 스크롤되는 팝업에서 키보드로 스크롤할 수 없음</td>
+                    <td>스크롤 영역에 키보드 초점 제공(공통 적용)</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>2.1.2 초점 이동과 표시</td>
+                    <td><span class="ds-badge ds-badge--success">적합(조치 완료)</span></td>
+                    <td>전체 팝업·가로 스크롤 목록</td>
+                    <td>포커스 테두리가 스크롤 영역에 잘려 보임</td>
+                    <td>테두리 여유·안쪽 표시로 수정(10/19)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="sg-section" id="pages" aria-labelledby="pages-title">
+            <h2 id="pages-title">5. 화면별 결과</h2>
+            <p>각 화면은 페이지와 그 안의 팝업을 모두 열어 검사했습니다. (팝업 수: 화면에 포함된 팝업 개수)</p>
+            <div class="sg-table-wrap">
+              <table class="sg-table">
+                <thead>
+                  <tr>
+                    <th scope="col">사이트</th>
+                    <th scope="col">메뉴</th>
+                    <th scope="col">화면 ID</th>
+                    <th scope="col">화면명</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">팝업 수</th>
+                    <th scope="col">PC</th>
+                    <th scope="col">MO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>공통</td>
+                    <td>로그인</td>
+                    <td>KD-US-LOG-01-01</td>
+                    <td>로그인</td>
+                    <td><a href="/kdha/account/login/">/account/login</a></td>
+                    <td>5</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>로그인</td>
+                    <td>KD-US-LOG-02-01</td>
+                    <td>로그인 본인인증</td>
+                    <td><a href="/kdha/account/login/verification/">/account/login/verification</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>회원가입</td>
+                    <td>KD-US-JOI-01-01</td>
+                    <td>회원가입·유형선택</td>
+                    <td><a href="/kdha/account/join/">/account/join</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>회원가입</td>
+                    <td>KD-US-JOI-02-01</td>
+                    <td>약관동의</td>
+                    <td><a href="/kdha/account/join/terms/">/account/join/terms</a></td>
+                    <td>2</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>회원가입</td>
+                    <td>KD-US-JOI-03-01</td>
+                    <td>본인인증</td>
+                    <td><a href="/kdha/account/join/verification/">/account/join/verification</a></td>
+                    <td>4</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>회원가입</td>
+                    <td>KD-US-JOI-04-01</td>
+                    <td>회원정보입력 · 치과위생사회원</td>
+                    <td><a href="/kdha/account/join/information/dental/">/account/join/information/dental/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--warning">권고</span></td>
+                    <td><span class="ds-badge ds-badge--warning">권고</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>회원가입</td>
+                    <td>KD-US-JOI-04-02</td>
+                    <td>회원정보입력 · 학생회원</td>
+                    <td><a href="/kdha/account/join/information/student/">/account/join/information/student/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>회원가입</td>
+                    <td>KD-US-JOI-04-03</td>
+                    <td>회원정보입력 · 홈페이지회원</td>
+                    <td><a href="/kdha/account/join/information/general/">/account/join/information/general/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>회원가입</td>
+                    <td>KD-US-JOI-06-01</td>
+                    <td>가입완료</td>
+                    <td><a href="/kdha/account/join/complete/">/account/join/complete</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>회원가입</td>
+                    <td>KD-US-JOI-07-01</td>
+                    <td>선가입회원 회원가입</td>
+                    <td><a href="/kdha/account/join/pre-member">/account/join/pre-member</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>관련사이트</td>
+                    <td>KD-US-REL-01-01</td>
+                    <td>관련사이트 · 전체</td>
+                    <td><a href="/kdha/related-sites/">/related-sites/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>관련사이트</td>
+                    <td>KD-US-REL-02-01</td>
+                    <td>관련사이트 · 정부</td>
+                    <td><a href="/kdha/related-sites/government/">/related-sites/government/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>관련사이트</td>
+                    <td>KD-US-REL-03-01</td>
+                    <td>관련사이트 · 유관단체</td>
+                    <td><a href="/kdha/related-sites/organizations/">/related-sites/organizations/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>관련사이트</td>
+                    <td>KD-US-REL-04-01</td>
+                    <td>관련사이트 · 교육기관</td>
+                    <td><a href="/kdha/related-sites/education/">/related-sites/education/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>공통</td>
+                    <td>개인정보처리방침</td>
+                    <td>KD-US-PRI-01-01</td>
+                    <td>개인정보처리방침</td>
+                    <td><a href="/kdha/privacy/">/privacy/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>공통·메인</td>
+                    <td>공통 레이아웃</td>
+                    <td>대표사이트 기본 레이아웃 (빈 본문)</td>
+                    <td><a href="/kdha/layout/">/layout/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>공통·메인</td>
+                    <td>미정</td>
+                    <td>인트로</td>
+                    <td><a href="/kdha/intro/">/intro/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>공통·메인</td>
+                    <td>KD-US-MAI-01-01</td>
+                    <td>대한치과위생사협회 메인</td>
+                    <td><a href="/kdha/main/">/main</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-INT-01-01</td>
+                    <td>인사말</td>
+                    <td><a href="/kdha/introduce/greeting/">/introduce/greeting/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-HIS-01-01</td>
+                    <td>연혁</td>
+                    <td><a href="/kdha/introduce/history/">/introduce/history/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-ART-01-01</td>
+                    <td>정관</td>
+                    <td><a href="/kdha/introduce/articles/">/introduce/articles/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-ORG-01-01</td>
+                    <td>협회조직</td>
+                    <td><a href="/kdha/introduce/organization/">/introduce/organization/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-ORG-03-01</td>
+                    <td>협회조직 · 회장</td>
+                    <td>
+                      <a href="/kdha/introduce/organization/#organization-executives">
+                        /introduce/organization/#organization-executives
+                      </a>
+                    </td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-ORG-02-01</td>
+                    <td>협회조직 · 분과위원회</td>
+                    <td>
+                      <a href="/kdha/introduce/organization/#organization-committees">
+                        /introduce/organization/#organization-committees
+                      </a>
+                    </td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-ORG-04-01</td>
+                    <td>협회조직 · 시도회</td>
+                    <td>
+                      <a href="/kdha/introduce/organization/#organization-branches">
+                        /introduce/organization/#organization-branches
+                      </a>
+                    </td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-ORG-05-01</td>
+                    <td>협회조직 · 산하단체</td>
+                    <td>
+                      <a href="/kdha/introduce/organization/#organization-groups">
+                        /introduce/organization/#organization-groups
+                      </a>
+                    </td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-ORG-06-01</td>
+                    <td>협회조직 · 학회</td>
+                    <td>
+                      <a href="/kdha/introduce/organization/#organization-societies">
+                        /introduce/organization/#organization-societies
+                      </a>
+                    </td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-POL-01-01</td>
+                    <td>주요정책사업</td>
+                    <td><a href="/kdha/introduce/policybusiness/">/introduce/policybusiness/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-DEN-01-01</td>
+                    <td>치과위생사소개</td>
+                    <td><a href="/kdha/introduce/dentalhygienist/">/introduce/dentalhygienist/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-DEN-02-01</td>
+                    <td>치과위생사선서</td>
+                    <td><a href="/kdha/introduce/dentalhygienist/#oath">/introduce/dentalhygienist/#oath</a></td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-CIB-01-01</td>
+                    <td>CI</td>
+                    <td><a href="/kdha/introduce/ci/">/introduce/ci/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>KD-US-MAP-01-01</td>
+                    <td>찾아오시는 길</td>
+                    <td><a href="/kdha/introduce/map/">/introduce/map/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소개</td>
+                    <td>미정</td>
+                    <td>정회원 안내</td>
+                    <td><a href="/kdha/about/member/">/about/member/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-CAL-01-01</td>
+                    <td>협회일정</td>
+                    <td><a href="/kdha/news/schedule/">/news/schedule/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-CAL-01-01</td>
+                    <td>협회일정 상세</td>
+                    <td><a href="/kdha/news/schedule/detail/?date=2026-10-01">/news/schedule/detail/?date=2026-10-01</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-DAT-01-01</td>
+                    <td>영상자료</td>
+                    <td><a href="/kdha/news/videos/">/news/videos/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-DAT-01-01</td>
+                    <td>영상자료 상세</td>
+                    <td><a href="/kdha/news/videos/detail/">/news/videos/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-REP-01-01</td>
+                    <td>연구보고서</td>
+                    <td><a href="/kdha/news/reports/">/news/reports/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-REP-01-01</td>
+                    <td>연구보고서 상세</td>
+                    <td><a href="/kdha/news/reports/detail/">/news/reports/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-OLD-01-01</td>
+                    <td>치위협보</td>
+                    <td><a href="/kdha/news/newsletter/">/news/newsletter/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-OPE-01-01</td>
+                    <td>자료실</td>
+                    <td><a href="/kdha/news/resources/">/news/resources/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-OPE-01-01</td>
+                    <td>자료실 상세</td>
+                    <td><a href="/kdha/news/resources/detail/">/news/resources/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>협회소식</td>
+                    <td>KD-US-CON-01-01</td>
+                    <td>회관기금</td>
+                    <td><a href="/kdha/news/fund/">/news/fund/</a></td>
+                    <td>4</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-REC-01-01</td>
+                    <td>구인 목록</td>
+                    <td><a href="/kdha/career/jobs/">/career/jobs/</a></td>
+                    <td>3</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-REC-01-01</td>
+                    <td>구인 상세</td>
+                    <td><a href="/kdha/career/jobs/recruit/detail/">/career/jobs/recruit/detail/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-REC-02-01</td>
+                    <td>병원 정보 등록</td>
+                    <td><a href="/kdha/career/jobs/hospital/">/career/jobs/hospital/</a></td>
+                    <td>4</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-REC-03-01</td>
+                    <td>채용공고 내역</td>
+                    <td><a href="/kdha/career/jobs/recruit/history/">/career/jobs/recruit/history/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-REC-04-01</td>
+                    <td>채용정보 작성</td>
+                    <td><a href="/kdha/career/jobs/recruit/write/">/career/jobs/recruit/write/</a></td>
+                    <td>2</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-FIN-01-01</td>
+                    <td>구직(인재정보) 목록</td>
+                    <td><a href="/kdha/career/jobs/talent/">/career/jobs/talent/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-FIN-02-01</td>
+                    <td>구직 상세</td>
+                    <td><a href="/kdha/career/jobs/talent/detail/">/career/jobs/talent/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-FIN-02-01</td>
+                    <td>내 지원 현황</td>
+                    <td><a href="/kdha/career/jobs/applications/">/career/jobs/applications/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-FIN-03-01</td>
+                    <td>인재정보 작성</td>
+                    <td><a href="/kdha/career/jobs/talent/write/">/career/jobs/talent/write/</a></td>
+                    <td>3</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-CST-01-01</td>
+                    <td>서비스 안내 · 법률</td>
+                    <td><a href="/kdha/career/consulting/guide/">/career/consulting/guide/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-CST-01-01</td>
+                    <td>서비스 안내 · 노무</td>
+                    <td><a href="/kdha/career/consulting/guide/labor/">/career/consulting/guide/labor/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-BSB-01-01</td>
+                    <td>법률상담 목록</td>
+                    <td><a href="/kdha/career/consulting/legal/">/career/consulting/legal/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-BSB-01-01</td>
+                    <td>법률상담 상세</td>
+                    <td><a href="/kdha/career/consulting/legal/detail/">/career/consulting/legal/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-BSB-01-01</td>
+                    <td>법률상담 신청</td>
+                    <td><a href="/kdha/career/consulting/legal/write/">/career/consulting/legal/write/</a></td>
+                    <td>2</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-NSB-01-01</td>
+                    <td>노무상담 목록</td>
+                    <td><a href="/kdha/career/consulting/labor/">/career/consulting/labor/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-NSB-01-01</td>
+                    <td>노무상담 상세</td>
+                    <td><a href="/kdha/career/consulting/labor/detail/">/career/consulting/labor/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-NSB-01-01</td>
+                    <td>노무상담 신청</td>
+                    <td><a href="/kdha/career/consulting/labor/write/">/career/consulting/labor/write/</a></td>
+                    <td>2</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-QNA-01-01</td>
+                    <td>1:1 상담 목록</td>
+                    <td><a href="/kdha/career/contact/">/career/contact/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-QNA-01-01</td>
+                    <td>1:1 상담 상세</td>
+                    <td><a href="/kdha/career/contact/detail/">/career/contact/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>회원상담</td>
+                    <td>KD-US-QNA-01-01</td>
+                    <td>1:1 상담 신청</td>
+                    <td><a href="/kdha/career/contact/write/">/career/contact/write/</a></td>
+                    <td>2</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>치위생교육원</td>
+                    <td>ED-US-INT-01-01</td>
+                    <td>교육원 소개</td>
+                    <td><a href="/kdha/education/about/">/education/about</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>치위생교육원</td>
+                    <td>ED-US-OFI-01-01</td>
+                    <td>현장교육 안내</td>
+                    <td><a href="/kdha/education/guide/offline/">/education/guide/offline</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>치위생교육원</td>
+                    <td>ED-US-CYI-01-01</td>
+                    <td>사이버교육 안내</td>
+                    <td><a href="/kdha/education/guide/online/">/education/guide/online</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>치위생교육원</td>
+                    <td>ED-US-REG-01-01</td>
+                    <td>관련법규소개</td>
+                    <td><a href="/kdha/education/regulations/">/education/regulations</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>면허센터</td>
+                    <td>KD-US-LIC-01-01</td>
+                    <td>면허신고</td>
+                    <td><a href="/kdha/license/report/">/license/report</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>공지사항</td>
+                    <td><a href="/kdha/community/notices/">/community/notices</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-NOT-01-01</td>
+                    <td>협회(중앙회)</td>
+                    <td><a href="/kdha/community/notices/association/">/community/notices/association</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-NOT-01-01</td>
+                    <td>공지사항 상세</td>
+                    <td><a href="/kdha/community/notices/association/detail/">/community/notices/association/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-NOT-02-01</td>
+                    <td>보수교육(카드뉴스)</td>
+                    <td><a href="/kdha/community/notices/education/">/community/notices/education</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-NOT-03-01</td>
+                    <td>면허신고</td>
+                    <td><a href="/kdha/community/notices/license/">/community/notices/license</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-NOT-04-01</td>
+                    <td>시도회</td>
+                    <td><a href="/kdha/community/notices/branches/">/community/notices/branches</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-NOT-05-01</td>
+                    <td>산하단체</td>
+                    <td><a href="/kdha/community/notices/organizations/">/community/notices/organizations</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-NOT-06-01</td>
+                    <td>산하학회</td>
+                    <td><a href="/kdha/community/notices/societies/">/community/notices/societies</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-FAQ-01-01</td>
+                    <td>자주하는 질문</td>
+                    <td><a href="/kdha/community/faq/">/community/faq</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-SUR-01-01</td>
+                    <td>설문조사</td>
+                    <td><a href="/kdha/community/surveys/">/community/surveys</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-SUR-01-01</td>
+                    <td>설문조사 상세</td>
+                    <td><a href="/kdha/community/surveys/detail/">/community/surveys/detail/</a></td>
+                    <td>3</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-BOA-01-01</td>
+                    <td>산하단체 게시판</td>
+                    <td><a href="/kdha/community/organizations/">/community/organizations</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>산하단체 게시판 상세</td>
+                    <td><a href="/kdha/community/organizations/detail/">/community/organizations/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>산하단체 게시판 글쓰기·답변</td>
+                    <td><a href="/kdha/community/organizations/write/">/community/organizations/write/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-BDM-01-01</td>
+                    <td>시도회ㆍ산하단체 임원게시판</td>
+                    <td><a href="/kdha/community/executives/">/community/executives</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>시도회ㆍ산하단체 임원게시판 상세</td>
+                    <td><a href="/kdha/community/executives/detail/">/community/executives/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>시도회ㆍ산하단체 임원게시판 글쓰기·답변</td>
+                    <td><a href="/kdha/community/executives/write/">/community/executives/write/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>봉사게시판</td>
+                    <td><a href="/kdha/community/volunteer/">/community/volunteer</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-VOL-01-01</td>
+                    <td>봉사 정보</td>
+                    <td><a href="/kdha/community/volunteer/guide/">/community/volunteer/guide</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-VOL-02-01</td>
+                    <td>봉사자 모집</td>
+                    <td><a href="/kdha/community/volunteer/recruit/">/community/volunteer/recruit</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>봉사자 모집 상세</td>
+                    <td><a href="/kdha/community/volunteer/recruit/detail/">/community/volunteer/recruit/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>봉사자 모집 글쓰기</td>
+                    <td><a href="/kdha/community/volunteer/recruit/write/">/community/volunteer/recruit/write/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-VOL-03-01</td>
+                    <td>봉사 갤러리</td>
+                    <td><a href="/kdha/community/volunteer/gallery/">/community/volunteer/gallery</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-VOL-03-01</td>
+                    <td>봉사 갤러리 상세</td>
+                    <td><a href="/kdha/community/volunteer/gallery/detail/">/community/volunteer/gallery/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-EVE-01-01</td>
+                    <td>이벤트</td>
+                    <td><a href="/kdha/community/events/">/community/events</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>이벤트 상세</td>
+                    <td><a href="/kdha/community/events/detail/">/community/events/detail/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-KSC-01-01</td>
+                    <td>채점자교육 신청 목록</td>
+                    <td><a href="/kdha/community/examiner-training/">/community/examiner-training/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-KSC-02-01</td>
+                    <td>채점자교육 신청</td>
+                    <td><a href="/kdha/community/examiner-training/apply/">/community/examiner-training/apply/</a></td>
+                    <td>3</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-KSC-03-01</td>
+                    <td>채점자교육 신청 접수 완료</td>
+                    <td><a href="/kdha/community/examiner-training/complete/">/community/examiner-training/complete/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-00-01</td>
+                    <td>마이페이지 메인</td>
+                    <td><a href="/kdha/mypage/">/mypage/</a></td>
+                    <td>7</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-01-01</td>
+                    <td>회원정보수정 · 치과위생사회원</td>
+                    <td><a href="/kdha/mypage/member/dental/">/mypage/member/dental/</a></td>
+                    <td>4</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-01-01</td>
+                    <td>회원정보수정 · 학생회원</td>
+                    <td><a href="/kdha/mypage/member/student/">/mypage/member/student/</a></td>
+                    <td>4</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-01-01</td>
+                    <td>회원정보수정 · 홈페이지회원</td>
+                    <td><a href="/kdha/mypage/member/general/">/mypage/member/general/</a></td>
+                    <td>4</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-01-01</td>
+                    <td>회원정보수정 · 선가입회원</td>
+                    <td><a href="/kdha/mypage/member/pre-member/">/mypage/member/pre-member/</a></td>
+                    <td>4</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-06-01</td>
+                    <td>내 강의실 · 사이버교육</td>
+                    <td><a href="/kdha/mypage/classroom/">/mypage/classroom/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-09-01</td>
+                    <td>내 강의실 · 현장교육</td>
+                    <td><a href="/kdha/mypage/classroom/offline/">/mypage/classroom/offline/</a></td>
+                    <td>3</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-KSC-04-01</td>
+                    <td>내 강의실 · 채점자교육</td>
+                    <td><a href="/kdha/mypage/classroom/examiner/">/mypage/classroom/examiner/</a></td>
+                    <td>5</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-07-01</td>
+                    <td>교육 상세 · 사이버교육</td>
+                    <td><a href="/kdha/mypage/classroom/online/detail/">/mypage/classroom/online/detail/</a></td>
+                    <td>19</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-08-01</td>
+                    <td>사이버강의 플레이어</td>
+                    <td><a href="/kdha/mypage/classroom/online/player/">/mypage/classroom/online/player/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-10-01</td>
+                    <td>교육 상세 · 현장교육</td>
+                    <td><a href="/kdha/mypage/classroom/offline/detail/">/mypage/classroom/offline/detail/</a></td>
+                    <td>3</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-10-01</td>
+                    <td>교육 상세 · 현장교육(강의별 신청)</td>
+                    <td>
+                      <a href="/kdha/mypage/classroom/offline/detail/lectures/">
+                        /mypage/classroom/offline/detail/lectures/
+                      </a>
+                    </td>
+                    <td>3</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-11-01</td>
+                    <td>면허신고현황</td>
+                    <td><a href="/kdha/mypage/license/">/mypage/license/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>ED-US-PAY-02-01</td>
+                    <td>결제관리 · 결제 내역</td>
+                    <td><a href="/kdha/mypage/payments/">/mypage/payments/</a></td>
+                    <td>8</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>ED-US-PAY-01-01</td>
+                    <td>결제관리 · 회비 내역</td>
+                    <td><a href="/kdha/mypage/payments/dues/">/mypage/payments/dues/</a></td>
+                    <td>13</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>ED-US-PAY-03-01</td>
+                    <td>결제관리 · 회관기금 내역</td>
+                    <td><a href="/kdha/mypage/payments/fund/">/mypage/payments/fund/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>ED-US-CUP-01-01</td>
+                    <td>쿠폰·마일리지 · 마일리지</td>
+                    <td><a href="/kdha/mypage/points/">/mypage/points/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>ED-US-CUP-02-01</td>
+                    <td>쿠폰·마일리지 · 쿠폰 내역</td>
+                    <td><a href="/kdha/mypage/points/coupon/">/mypage/points/coupon/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>미정</td>
+                    <td>회원증카드 안내</td>
+                    <td><a href="/kdha/mypage/member-card/">/mypage/member-card/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-MYP-12-01</td>
+                    <td>봉사관리</td>
+                    <td><a href="/kdha/mypage/volunteer/">/mypage/volunteer/</a></td>
+                    <td>6</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-BSB-01-01</td>
+                    <td>상담관리 · 법률상담 목록</td>
+                    <td><a href="/kdha/mypage/consulting/legal/">/mypage/consulting/legal/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-BSB-03-01</td>
+                    <td>상담관리 · 법률상담 신청</td>
+                    <td><a href="/kdha/mypage/consulting/legal/write/">/mypage/consulting/legal/write/</a></td>
+                    <td>5</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-BSB-02-01</td>
+                    <td>상담관리 · 상담 상세·답변</td>
+                    <td><a href="/kdha/mypage/consulting/legal/detail/">/mypage/consulting/legal/detail/</a></td>
+                    <td>2</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>KD-US-NSB-01-01</td>
+                    <td>상담관리 · 노무상담 목록</td>
+                    <td><a href="/kdha/mypage/consulting/labor/">/mypage/consulting/labor/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>대표 사이트</td>
+                    <td>마이페이지</td>
+                    <td>ED-US-QNA-01-01</td>
+                    <td>상담관리 · 1:1 상담 목록</td>
+                    <td><a href="/kdha/mypage/consulting/contact/">/mypage/consulting/contact/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>공통·메인</td>
+                    <td>공통 레이아웃</td>
+                    <td>교육원 기본 레이아웃 (빈 본문)</td>
+                    <td><a href="/kdha/edu/layout/">/edu/layout/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>공통·메인</td>
+                    <td>ED-US-MAI-01-01</td>
+                    <td>교육원 메인 (로그인 전)</td>
+                    <td><a href="/kdha/edu/">/edu</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>공통·메인</td>
+                    <td>ED-US-MAI-01-01</td>
+                    <td>교육원 메인 (로그인 후)</td>
+                    <td><a href="/kdha/edu/member/">/edu/member/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>교육원 소개</td>
+                    <td>ED-US-INT-01-01</td>
+                    <td>교육원 소개</td>
+                    <td><a href="/kdha/edu/about/">/edu/about</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>교육원 소개</td>
+                    <td>ED-US-REG-01-01</td>
+                    <td>관련법규소개</td>
+                    <td><a href="/kdha/edu/regulations/">/edu/regulations</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>교육안내</td>
+                    <td>ED-US-OFI-01-01</td>
+                    <td>현장교육 안내</td>
+                    <td><a href="/kdha/edu/guide/offline/">/edu/guide/offline</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>교육안내</td>
+                    <td>ED-US-CYI-01-01</td>
+                    <td>사이버교육 안내</td>
+                    <td><a href="/kdha/edu/guide/online/">/edu/guide/online</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>현장교육</td>
+                    <td>ED-US-OFE-01-01</td>
+                    <td>현장교육</td>
+                    <td><a href="/kdha/edu/offline/">/edu/offline</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>현장교육</td>
+                    <td>ED-US-OFE-01-01</td>
+                    <td>현장교육 검색 결과 없음</td>
+                    <td><a href="/kdha/edu/offline/empty/">/edu/offline/empty/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>현장교육</td>
+                    <td>ED-US-OFE-02-01</td>
+                    <td>현장교육 상세</td>
+                    <td><a href="/kdha/edu/offline/detail/">/edu/offline/detail</a></td>
+                    <td>3</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>현장교육</td>
+                    <td>ED-US-OFE-03-01</td>
+                    <td>현장교육 결제</td>
+                    <td><a href="/kdha/edu/offline/payment/">/edu/offline/payment</a></td>
+                    <td>2</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>현장교육</td>
+                    <td>ED-US-OFE-03-01</td>
+                    <td>현장교육 결제 · 마일리지/쿠폰 사용불가</td>
+                    <td>
+                      <a href="/kdha/edu/offline/payment/#benefit-unavailable">/edu/offline/payment/#benefit-unavailable</a>
+                    </td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>현장교육</td>
+                    <td>ED-US-OFE-04-01</td>
+                    <td>신용카드·간편결제 결제완료</td>
+                    <td><a href="/kdha/edu/offline/complete/">/edu/offline/complete/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>현장교육</td>
+                    <td>ED-US-OFE-04-02</td>
+                    <td>무통장입금 신청완료</td>
+                    <td><a href="/kdha/edu/offline/complete/bank/">/edu/offline/complete/bank/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>현장교육</td>
+                    <td>ED-US-OFE-03-01</td>
+                    <td>현장보수교육 실시간 스트리밍</td>
+                    <td><a href="/kdha/edu/offline/streaming/">/edu/offline/streaming/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>현장교육</td>
+                    <td>ED-US-OFE-03-01</td>
+                    <td>실시간 스트리밍 · 운영자</td>
+                    <td><a href="/kdha/edu/offline/streaming/operator/">/edu/offline/streaming/operator/</a></td>
+                    <td>2</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>사이버교육</td>
+                    <td>ED-US-CBE-01-01</td>
+                    <td>사이버교육</td>
+                    <td><a href="/kdha/edu/online/">/edu/online</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>사이버교육</td>
+                    <td>ED-US-CBE-02-01</td>
+                    <td>사이버교육 상세</td>
+                    <td><a href="/kdha/edu/online/detail/">/edu/online/detail</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>사이버교육</td>
+                    <td>ED-US-CBE-04-02</td>
+                    <td>사이버교육 다건 결제</td>
+                    <td><a href="/kdha/edu/online/payment/">/edu/online/payment</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>사이버교육</td>
+                    <td>ED-US-CBE-03-01</td>
+                    <td>사이버교육 단건 결제</td>
+                    <td><a href="/kdha/edu/online/payment/single/">/edu/online/payment/single/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>사이버교육</td>
+                    <td>ED-US-CBE-03-01</td>
+                    <td>사이버교육 단건 결제 · 마일리지/쿠폰 사용불가</td>
+                    <td>
+                      <a href="/kdha/edu/online/payment/single/#benefit-unavailable">
+                        /edu/online/payment/single/#benefit-unavailable
+                      </a>
+                    </td>
+                    <td>—</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>사이버교육</td>
+                    <td>ED-US-CBE-05-01</td>
+                    <td>사이버교육 결제완료</td>
+                    <td><a href="/kdha/edu/online/complete/">/edu/online/complete</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>사이버교육</td>
+                    <td>ED-US-CBE-04-01</td>
+                    <td>장바구니</td>
+                    <td><a href="/kdha/edu/cart/">/edu/cart</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>내 강의실</td>
+                    <td>KD-US-MYP-06-01</td>
+                    <td>수강신청 현황</td>
+                    <td><a href="/kdha/edu/classroom/applications/">/edu/classroom/applications</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>내 강의실</td>
+                    <td>미정</td>
+                    <td>학습진도 현황</td>
+                    <td><a href="/kdha/edu/classroom/progress/">/edu/classroom/progress</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>내 강의실</td>
+                    <td>KD-US-MYP-05-01</td>
+                    <td>교육이수 현황</td>
+                    <td><a href="/kdha/edu/classroom/completions/">/edu/classroom/completions</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>내 강의실</td>
+                    <td>KD-US-MYP-06-01</td>
+                    <td>내 강의실 · 사이버교육 (교육원)</td>
+                    <td><a href="/kdha/edu/classroom/">/edu/classroom/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>내 강의실</td>
+                    <td>KD-US-MYP-09-01</td>
+                    <td>내 강의실 · 현장교육 (교육원)</td>
+                    <td><a href="/kdha/edu/classroom/offline/">/edu/classroom/offline/</a></td>
+                    <td>3</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>내 강의실</td>
+                    <td>KD-US-KSC-04-01</td>
+                    <td>내 강의실 · 채점자교육 (교육원)</td>
+                    <td><a href="/kdha/edu/classroom/examiner/">/edu/classroom/examiner/</a></td>
+                    <td>5</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-NOT-02-01</td>
+                    <td>소통광장 · 공지사항 (교육원)</td>
+                    <td><a href="/kdha/edu/community/notices/">/edu/community/notices/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-FAQ-01-01</td>
+                    <td>소통광장 · 자주하는 질문 (교육원)</td>
+                    <td><a href="/kdha/edu/community/faq/">/edu/community/faq/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>소통광장</td>
+                    <td>KD-US-OPE-01-01</td>
+                    <td>소통광장 · 자료실 (교육원)</td>
+                    <td><a href="/kdha/edu/community/resources/">/edu/community/resources/</a></td>
+                    <td>1</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                  <tr>
+                    <td>교육원 사이트</td>
+                    <td>소통광장</td>
+                    <td>미정</td>
+                    <td>소통광장 · 자료실 상세 (교육원)</td>
+                    <td><a href="/kdha/edu/community/resources/detail/">/edu/community/resources/detail/</a></td>
+                    <td>0</td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                    <td><span class="ds-badge ds-badge--success">적합</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
