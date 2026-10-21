@@ -188,11 +188,19 @@
       });
     });
   }
-  // 첨부 PDF: 패널 미리보기를 PDF.js로 그리고, 확대보기는 레이어(#streaming-pdf-dialog)에서 크게 봅니다.
+  // 첨부 PDF: 패널 미리보기를 PDF.js로 그리고, 확대보기는 치위협보 PDF 뷰어로 새 창 열기
   var pdfPanel = root.querySelector('[data-streaming-pdf]');
   if (pdfPanel) {
     var pdfSrc = pdfPanel.getAttribute('data-streaming-pdf');
+    var pdfTitle = pdfPanel.getAttribute('data-streaming-pdf-title') || '첨부자료';
     var pdfUrl = new URL(pdfSrc, location.href).href;
+
+    root.querySelectorAll('[data-streaming-pdf-open]').forEach(function (link) {
+      var viewer = new URL(link.getAttribute('href'), location.href);
+      viewer.searchParams.set('src', new URL(pdfUrl).pathname);
+      viewer.searchParams.set('title', pdfTitle);
+      link.href = viewer.href;
+    });
 
     var canvas = pdfPanel.querySelector('[data-streaming-pdf-canvas]');
     var fallback = canvas && canvas.nextElementSibling;
@@ -244,65 +252,6 @@
       next.addEventListener('click', function () {
         move(1);
       });
-
-    // 확대보기 레이어: 치위협보와 같은 PDF 뷰어(PDFlipbook)를 처음 열 때 불러와 미리보기에서 보던 쪽부터 표시
-    var pdfDialog = document.querySelector('[data-streaming-pdf-dialog]');
-    var bookRoot = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-book]');
-    var book = null;
-    var bookLabels = {
-      'Previous page': '이전 페이지',
-      'Next page': '다음 페이지',
-      Fullscreen: '전체화면',
-      'Exit fullscreen': '전체화면 종료',
-      'Zoom in': '확대',
-      'Zoom out': '축소',
-      'Single page view': '한 페이지 보기',
-      'Two-page view': '두 페이지 보기',
-    };
-    var translateBook = function () {
-      bookRoot.querySelectorAll('button[aria-label]').forEach(function (button) {
-        var label = bookLabels[button.getAttribute('aria-label')];
-        if (label) {
-          button.setAttribute('aria-label', label);
-          button.title = label;
-        }
-      });
-      var loading = bookRoot.querySelector('.fb-status-text');
-      if (loading && /^Loading/.test(loading.textContent)) loading.textContent = 'PDF 불러오는 중…';
-    };
-    var openBook = function () {
-      if (book) {
-        book.goTo(pageNum);
-        return;
-      }
-      import('/kdha/assets/vendor/pdflipbook/pdflipbook.js')
-        .then(function () {
-          // 모바일은 뷰어 안쪽 여백을 최소로 해 문서를 크게 보여줍니다.
-          var mobile = matchMedia('(max-width: 767px)').matches;
-          book = window.PDFlipbook.create(bookRoot, {
-            url: pdfUrl,
-            pdfjsSrc: '/kdha/assets/vendor/pdfjs/pdf.min.mjs',
-            pdfWorkerSrc: '/kdha/assets/vendor/pdfjs/pdf.worker.min.mjs',
-            displayMode: 'auto',
-            maxScale: 2,
-            padding: mobile ? 4 : 32,
-            startPage: pageNum,
-            duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 520,
-          });
-          translateBook();
-        })
-        .catch(function () {
-          bookRoot.textContent = 'PDF 뷰어를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.';
-        });
-    };
-    if (bookRoot) {
-      new MutationObserver(translateBook).observe(bookRoot, { childList: true, subtree: true, characterData: true });
-      root.querySelectorAll('[data-streaming-pdf-open]').forEach(function (button) {
-        button.addEventListener('click', function () {
-          requestAnimationFrame(openBook);
-        });
-      });
-    }
 
     if (canvas) {
       import('/kdha/assets/vendor/pdfjs/pdf.min.mjs')

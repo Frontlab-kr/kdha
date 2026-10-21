@@ -32002,40 +32002,6 @@ main:has(.about-member) > .page-banner {
   width: 100%;
 }
 
-.edu-streaming-dialog--pdf {
-  width: min(100% - 32px, 960px);
-  height: calc(100dvh - 32px);
-}
-.edu-streaming-dialog--pdf .edu-streaming-dialog__inner {
-  height: 100%;
-  overflow: hidden;
-}
-
-.edu-streaming-dialog__book,
-.edu-streaming-dialog__book.fb-root {
-  --fb-bg: #e8ecf1;
-  --fb-control-bg: #232a31;
-  --fb-control-fg: #fff;
-  --fb-counter-fg: #fff;
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  background: var(--fb-bg);
-}
-.edu-streaming-dialog__book:focus-visible,
-.edu-streaming-dialog__book button:focus-visible,
-.edu-streaming-dialog__book.fb-root:focus-visible,
-.edu-streaming-dialog__book.fb-root button:focus-visible {
-  outline: 2px solid #ad99ff;
-  outline-offset: -2px;
-}
-.edu-streaming-dialog__book:fullscreen, .edu-streaming-dialog__book.fb-fake-fs,
-.edu-streaming-dialog__book.fb-root:fullscreen,
-.edu-streaming-dialog__book.fb-root.fb-fake-fs {
-  border-radius: 0;
-}
-
 @media (max-width: 767px) {
   .edu-streaming-viewer {
     padding: 16px;
@@ -32045,23 +32011,6 @@ main:has(.about-member) > .page-banner {
   }
   .edu-streaming-dialog__inner {
     padding: 16px;
-  }
-  .edu-streaming-dialog--pdf {
-    width: calc(100% - 8px);
-    max-width: none;
-    height: calc(100dvh - 8px);
-    max-height: none;
-  }
-  .edu-streaming-dialog--pdf .edu-streaming-dialog__inner {
-    gap: 8px;
-    max-height: none;
-    padding: 8px;
-  }
-  .edu-streaming-dialog--pdf .edu-streaming-dialog__head {
-    padding: 4px 4px 0;
-  }
-  .edu-streaming-dialog--pdf .edu-streaming-dialog__book {
-    border-radius: 8px;
   }
 }
 /* 가로 모드 휴대폰: 전체화면을 종료하면 태블릿형 2단 배치 */
