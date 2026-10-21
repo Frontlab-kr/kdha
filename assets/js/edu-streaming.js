@@ -188,19 +188,11 @@
       });
     });
   }
-  // 첨부 PDF: 패널 미리보기를 PDF.js로 그리고, 확대보기는 치위협보 PDF 뷰어로 새 창 열기
+  // 첨부 PDF: 패널 미리보기를 PDF.js로 그리고, 확대보기는 레이어(#streaming-pdf-dialog)에서 크게 봅니다.
   var pdfPanel = root.querySelector('[data-streaming-pdf]');
   if (pdfPanel) {
     var pdfSrc = pdfPanel.getAttribute('data-streaming-pdf');
-    var pdfTitle = pdfPanel.getAttribute('data-streaming-pdf-title') || '첨부자료';
     var pdfUrl = new URL(pdfSrc, location.href).href;
-
-    root.querySelectorAll('[data-streaming-pdf-open]').forEach(function (link) {
-      var viewer = new URL(link.getAttribute('href'), location.href);
-      viewer.searchParams.set('src', new URL(pdfUrl).pathname);
-      viewer.searchParams.set('title', pdfTitle);
-      link.href = viewer.href;
-    });
 
     var canvas = pdfPanel.querySelector('[data-streaming-pdf-canvas]');
     var fallback = canvas && canvas.nextElementSibling;
@@ -253,6 +245,73 @@
         move(1);
       });
 
+    // 확대보기 레이어: 레이어 폭에 맞춘 크기(100%)에서 50~300% 확대·축소, 쪽 이동은 미리보기와 따로 관리
+    var pdfDialog = document.querySelector('[data-streaming-pdf-dialog]');
+    var view = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view]');
+    var viewCanvas = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-canvas]');
+    var viewPrev = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-prev]');
+    var viewNext = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-next]');
+    var viewPageText = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-page]');
+    var viewTotalText = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-total]');
+    var zoomText = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-zoom-value]');
+    var viewPage = 1;
+    var zoom = 1;
+    var viewRendering = null;
+
+    var renderView = function () {
+      if (!pdfDoc || !viewCanvas) return;
+      viewPageText.textContent = viewPage;
+      viewTotalText.textContent = pdfDoc.numPages;
+      zoomText.textContent = Math.round(zoom * 100) + '%';
+      setDisabled(viewPrev, viewPage <= 1);
+      setDisabled(viewNext, viewPage >= pdfDoc.numPages);
+      viewRendering = Promise.resolve(viewRendering).then(function () {
+        return pdfDoc.getPage(viewPage).then(function (page) {
+          var base = page.getViewport({ scale: 1 });
+          var fitWidth = (view.clientWidth || base.width) - 2;
+          var scale = (fitWidth / base.width) * zoom;
+          var ratio = window.devicePixelRatio || 1;
+          var viewport = page.getViewport({ scale: scale * ratio });
+          viewCanvas.width = viewport.width;
+          viewCanvas.height = viewport.height;
+          viewCanvas.style.width = Math.round(viewport.width / ratio) + 'px';
+          viewCanvas.style.height = Math.round(viewport.height / ratio) + 'px';
+          viewCanvas.setAttribute('aria-label', '첨부자료.pdf ' + viewPage + '쪽');
+          return page.render({ canvasContext: viewCanvas.getContext('2d'), viewport: viewport }).promise;
+        });
+      });
+    };
+
+    if (pdfDialog) {
+      root.querySelectorAll('[data-streaming-pdf-open]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          // 미리보기에서 보던 쪽부터 열고, 배율은 맞춤(100%)으로 시작합니다.
+          viewPage = pageNum;
+          zoom = 1;
+          requestAnimationFrame(renderView);
+        });
+      });
+      viewPrev.addEventListener('click', function () {
+        if (!pdfDoc || viewPage <= 1) return;
+        viewPage -= 1;
+        view.scrollTop = 0;
+        renderView();
+      });
+      viewNext.addEventListener('click', function () {
+        if (!pdfDoc || viewPage >= pdfDoc.numPages) return;
+        viewPage += 1;
+        view.scrollTop = 0;
+        renderView();
+      });
+      pdfDialog.querySelectorAll('[data-streaming-pdf-zoom]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var step = Number(button.getAttribute('data-streaming-pdf-zoom')) * 0.25;
+          zoom = Math.min(3, Math.max(0.5, Math.round((zoom + step) * 100) / 100));
+          renderView();
+        });
+      });
+    }
+
     if (canvas) {
       import('/kdha/assets/vendor/pdfjs/pdf.min.mjs')
         .then(function (pdfjs) {
@@ -265,6 +324,7 @@
           canvas.hidden = false;
           if (fallback) fallback.remove();
           renderPage();
+          if (pdfDialog && pdfDialog.open) renderView();
         })
         .catch(function () {
           // 불러오지 못하면 기본 미리보기 이미지를 그대로 둡니다.

@@ -31440,7 +31440,7 @@ main:has(.about-member) > .page-banner {
 .edu-streaming__pager-button[aria-disabled=true] {
   cursor: default;
 }
-.edu-streaming .edu-streaming__pager-button .material-symbols-rounded {
+:is(.edu-streaming, .edu-streaming-dialog) .edu-streaming__pager-button .material-symbols-rounded {
   font-size: 16px;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 16;
 }
@@ -32000,6 +32000,57 @@ main:has(.about-member) > .page-banner {
 
 .edu-streaming-dialog__close {
   width: 100%;
+}
+
+.edu-streaming-dialog--pdf {
+  width: min(100% - 32px, 960px);
+  height: calc(100dvh - 32px);
+}
+.edu-streaming-dialog--pdf .edu-streaming-dialog__inner {
+  height: 100%;
+  overflow: hidden;
+}
+
+.edu-streaming-dialog__pdf {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-radius: 12px;
+  background: #101418;
+  text-align: center;
+}
+.edu-streaming-dialog__pdf:focus-visible {
+  outline: 2px solid #713acc;
+  outline-offset: -2px;
+}
+.edu-streaming-dialog__pdf canvas {
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+}
+
+.edu-streaming-dialog__pdf-tools {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.edu-streaming-dialog__pdf-tools .edu-streaming__pager {
+  gap: 16px;
+}
+.edu-streaming-dialog__pdf-tools p {
+  min-width: 56px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.edu-streaming-dialog__zoom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 @media (max-width: 767px) {

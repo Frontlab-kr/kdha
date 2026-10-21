@@ -61,16 +61,15 @@
                   >
                     채팅
                   </button>
-                  <a
+                  <button
                     class="ds-button ds-button--small ds-button--outline edu-streaming__fullscreen-only"
-                    href="/kdha/news/newsletter/viewer/"
-                    target="_blank"
-                    rel="noopener"
+                    type="button"
+                    aria-haspopup="dialog"
+                    data-dialog-open="streaming-pdf-dialog"
                     data-streaming-pdf-open
                   >
                     첨부자료
-                    <span class="sr-only">(새 창)</span>
-                  </a>
+                  </button>
                 </div>
               </div>
             </section>
@@ -175,16 +174,15 @@
               </div>
               <div class="edu-streaming__file">
                 <p>첨부자료.pdf</p>
-                <a
+                <button
                   class="ds-button ds-button--small ds-button--outline"
-                  href="/kdha/news/newsletter/viewer/"
-                  target="_blank"
-                  rel="noopener"
+                  type="button"
+                  aria-haspopup="dialog"
+                  data-dialog-open="streaming-pdf-dialog"
                   data-streaming-pdf-open
                 >
                   확대보기
-                  <span class="sr-only">(새 창)</span>
-                </a>
+                </button>
               </div>
             </section>
             <section
@@ -289,6 +287,70 @@
         </div>
       </main>
     </div>
+    <!-- 첨부자료 확대보기(PDF, 레이어). 서버 연동 시 data-streaming-pdf 주소의 파일을 그대로 표시 -->
+    <dialog
+      class="dialog edu-streaming-dialog edu-streaming-dialog--pdf"
+      id="streaming-pdf-dialog"
+      aria-labelledby="streaming-pdf-dialog-title"
+      data-streaming-pdf-dialog
+    >
+      <div class="edu-streaming-dialog__inner">
+        <div class="edu-streaming-dialog__head">
+          <h2 id="streaming-pdf-dialog-title">첨부자료.pdf</h2>
+          <button class="ds-button ds-button--small ds-button--outline" type="button" data-dialog-close>닫기</button>
+        </div>
+        <div
+          class="edu-streaming-dialog__pdf"
+          tabindex="0"
+          role="region"
+          aria-label="첨부자료 내용"
+          data-streaming-pdf-view
+        >
+          <canvas data-streaming-pdf-view-canvas role="img" aria-label="첨부자료.pdf 1쪽"></canvas>
+        </div>
+        <div class="edu-streaming-dialog__pdf-tools">
+          <div class="edu-streaming__pager">
+            <button
+              class="edu-streaming__pager-button"
+              type="button"
+              aria-label="이전 쪽"
+              aria-disabled="true"
+              data-streaming-pdf-view-prev
+            >
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+            </button>
+            <p>
+              <span class="sr-only">현재 쪽</span>
+              <span data-streaming-pdf-view-page>1</span>
+              /
+              <span data-streaming-pdf-view-total>1</span>
+            </p>
+            <button
+              class="edu-streaming__pager-button"
+              type="button"
+              aria-label="다음 쪽"
+              aria-disabled="true"
+              data-streaming-pdf-view-next
+            >
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            </button>
+          </div>
+          <div class="edu-streaming-dialog__zoom" role="group" aria-label="확대·축소">
+            <button class="edu-streaming__pager-button" type="button" aria-label="축소" data-streaming-pdf-zoom="-1">
+              <span class="material-symbols-rounded" aria-hidden="true">remove</span>
+            </button>
+            <p aria-live="polite">
+              <span class="sr-only">배율</span>
+              <span data-streaming-pdf-zoom-value>100%</span>
+            </p>
+            <button class="edu-streaming__pager-button" type="button" aria-label="확대" data-streaming-pdf-zoom="1">
+              <span class="material-symbols-rounded" aria-hidden="true">add</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>
