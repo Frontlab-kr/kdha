@@ -245,69 +245,61 @@
         move(1);
       });
 
-    // 확대보기 레이어: 레이어 폭에 맞춘 크기(100%)에서 50~300% 확대·축소, 쪽 이동은 미리보기와 따로 관리
+    // 확대보기 레이어: 치위협보와 같은 PDF 뷰어(PDFlipbook)를 처음 열 때 불러와 미리보기에서 보던 쪽부터 표시
     var pdfDialog = document.querySelector('[data-streaming-pdf-dialog]');
-    var view = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view]');
-    var viewCanvas = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-canvas]');
-    var viewPrev = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-prev]');
-    var viewNext = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-next]');
-    var viewPageText = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-page]');
-    var viewTotalText = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-view-total]');
-    var zoomText = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-zoom-value]');
-    var viewPage = 1;
-    var zoom = 1;
-    var viewRendering = null;
-
-    var renderView = function () {
-      if (!pdfDoc || !viewCanvas) return;
-      viewPageText.textContent = viewPage;
-      viewTotalText.textContent = pdfDoc.numPages;
-      zoomText.textContent = Math.round(zoom * 100) + '%';
-      setDisabled(viewPrev, viewPage <= 1);
-      setDisabled(viewNext, viewPage >= pdfDoc.numPages);
-      viewRendering = Promise.resolve(viewRendering).then(function () {
-        return pdfDoc.getPage(viewPage).then(function (page) {
-          var base = page.getViewport({ scale: 1 });
-          var fitWidth = (view.clientWidth || base.width) - 2;
-          var scale = (fitWidth / base.width) * zoom;
-          var ratio = window.devicePixelRatio || 1;
-          var viewport = page.getViewport({ scale: scale * ratio });
-          viewCanvas.width = viewport.width;
-          viewCanvas.height = viewport.height;
-          viewCanvas.style.width = Math.round(viewport.width / ratio) + 'px';
-          viewCanvas.style.height = Math.round(viewport.height / ratio) + 'px';
-          viewCanvas.setAttribute('aria-label', '첨부자료.pdf ' + viewPage + '쪽');
-          return page.render({ canvasContext: viewCanvas.getContext('2d'), viewport: viewport }).promise;
-        });
-      });
+    var bookRoot = pdfDialog && pdfDialog.querySelector('[data-streaming-pdf-book]');
+    var book = null;
+    var bookLabels = {
+      'Previous page': '이전 페이지',
+      'Next page': '다음 페이지',
+      Fullscreen: '전체화면',
+      'Exit fullscreen': '전체화면 종료',
+      'Zoom in': '확대',
+      'Zoom out': '축소',
+      'Single page view': '한 페이지 보기',
+      'Two-page view': '두 페이지 보기',
     };
-
-    if (pdfDialog) {
+    var translateBook = function () {
+      bookRoot.querySelectorAll('button[aria-label]').forEach(function (button) {
+        var label = bookLabels[button.getAttribute('aria-label')];
+        if (label) {
+          button.setAttribute('aria-label', label);
+          button.title = label;
+        }
+      });
+      var loading = bookRoot.querySelector('.fb-status-text');
+      if (loading && /^Loading/.test(loading.textContent)) loading.textContent = 'PDF 불러오는 중…';
+    };
+    var openBook = function () {
+      if (book) {
+        book.goTo(pageNum);
+        return;
+      }
+      import('/kdha/assets/vendor/pdflipbook/pdflipbook.js')
+        .then(function () {
+          // 모바일은 뷰어 안쪽 여백을 최소로 해 문서를 크게 보여줍니다.
+          var mobile = matchMedia('(max-width: 767px)').matches;
+          book = window.PDFlipbook.create(bookRoot, {
+            url: pdfUrl,
+            pdfjsSrc: '/kdha/assets/vendor/pdfjs/pdf.min.mjs',
+            pdfWorkerSrc: '/kdha/assets/vendor/pdfjs/pdf.worker.min.mjs',
+            displayMode: 'auto',
+            maxScale: 2,
+            padding: mobile ? 4 : 32,
+            startPage: pageNum,
+            duration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 520,
+          });
+          translateBook();
+        })
+        .catch(function () {
+          bookRoot.textContent = 'PDF 뷰어를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.';
+        });
+    };
+    if (bookRoot) {
+      new MutationObserver(translateBook).observe(bookRoot, { childList: true, subtree: true, characterData: true });
       root.querySelectorAll('[data-streaming-pdf-open]').forEach(function (button) {
         button.addEventListener('click', function () {
-          // 미리보기에서 보던 쪽부터 열고, 배율은 맞춤(100%)으로 시작합니다.
-          viewPage = pageNum;
-          zoom = 1;
-          requestAnimationFrame(renderView);
-        });
-      });
-      viewPrev.addEventListener('click', function () {
-        if (!pdfDoc || viewPage <= 1) return;
-        viewPage -= 1;
-        view.scrollTop = 0;
-        renderView();
-      });
-      viewNext.addEventListener('click', function () {
-        if (!pdfDoc || viewPage >= pdfDoc.numPages) return;
-        viewPage += 1;
-        view.scrollTop = 0;
-        renderView();
-      });
-      pdfDialog.querySelectorAll('[data-streaming-pdf-zoom]').forEach(function (button) {
-        button.addEventListener('click', function () {
-          var step = Number(button.getAttribute('data-streaming-pdf-zoom')) * 0.25;
-          zoom = Math.min(3, Math.max(0.5, Math.round((zoom + step) * 100) / 100));
-          renderView();
+          requestAnimationFrame(openBook);
         });
       });
     }
@@ -324,7 +316,6 @@
           canvas.hidden = false;
           if (fallback) fallback.remove();
           renderPage();
-          if (pdfDialog && pdfDialog.open) renderView();
         })
         .catch(function () {
           // 불러오지 못하면 기본 미리보기 이미지를 그대로 둡니다.

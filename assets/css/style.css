@@ -31440,7 +31440,7 @@ main:has(.about-member) > .page-banner {
 .edu-streaming__pager-button[aria-disabled=true] {
   cursor: default;
 }
-:is(.edu-streaming, .edu-streaming-dialog) .edu-streaming__pager-button .material-symbols-rounded {
+.edu-streaming .edu-streaming__pager-button .material-symbols-rounded {
   font-size: 16px;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 16;
 }
@@ -32011,46 +32011,29 @@ main:has(.about-member) > .page-banner {
   overflow: hidden;
 }
 
-.edu-streaming-dialog__pdf {
+.edu-streaming-dialog__book,
+.edu-streaming-dialog__book.fb-root {
+  --fb-bg: #e8ecf1;
+  --fb-control-bg: #232a31;
+  --fb-control-fg: #fff;
+  --fb-counter-fg: #fff;
   flex: 1 1 auto;
   min-height: 0;
-  overflow: auto;
-  overscroll-behavior: contain;
+  overflow: hidden;
   border-radius: 12px;
-  background: #101418;
-  text-align: center;
+  background: var(--fb-bg);
 }
-.edu-streaming-dialog__pdf:focus-visible {
-  outline: 2px solid #713acc;
+.edu-streaming-dialog__book:focus-visible,
+.edu-streaming-dialog__book button:focus-visible,
+.edu-streaming-dialog__book.fb-root:focus-visible,
+.edu-streaming-dialog__book.fb-root button:focus-visible {
+  outline: 2px solid #ad99ff;
   outline-offset: -2px;
 }
-.edu-streaming-dialog__pdf canvas {
-  display: inline-block;
-  vertical-align: top;
-  background: #fff;
-}
-
-.edu-streaming-dialog__pdf-tools {
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-.edu-streaming-dialog__pdf-tools .edu-streaming__pager {
-  gap: 16px;
-}
-.edu-streaming-dialog__pdf-tools p {
-  min-width: 56px;
-  font-size: 14px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.edu-streaming-dialog__zoom {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.edu-streaming-dialog__book:fullscreen, .edu-streaming-dialog__book.fb-fake-fs,
+.edu-streaming-dialog__book.fb-root:fullscreen,
+.edu-streaming-dialog__book.fb-root.fb-fake-fs {
+  border-radius: 0;
 }
 
 @media (max-width: 767px) {
@@ -32062,6 +32045,23 @@ main:has(.about-member) > .page-banner {
   }
   .edu-streaming-dialog__inner {
     padding: 16px;
+  }
+  .edu-streaming-dialog--pdf {
+    width: calc(100% - 8px);
+    max-width: none;
+    height: calc(100dvh - 8px);
+    max-height: none;
+  }
+  .edu-streaming-dialog--pdf .edu-streaming-dialog__inner {
+    gap: 8px;
+    max-height: none;
+    padding: 8px;
+  }
+  .edu-streaming-dialog--pdf .edu-streaming-dialog__head {
+    padding: 4px 4px 0;
+  }
+  .edu-streaming-dialog--pdf .edu-streaming-dialog__book {
+    border-radius: 8px;
   }
 }
 /* 가로 모드 휴대폰: 전체화면을 종료하면 태블릿형 2단 배치 */
