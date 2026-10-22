@@ -15351,6 +15351,10 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   letter-spacing: -0.6px;
   margin: 0 0 16px;
 }
+.page-hero .page-hero__title-sub {
+  font-size: 32px;
+  letter-spacing: 0;
+}
 .page-hero p {
   margin: 0;
   color: #505a67;
@@ -16895,6 +16899,9 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
     font-size: 36px;
     letter-spacing: -0.54px;
     margin-bottom: 8px;
+  }
+  .page-hero .page-hero__title-sub {
+    font-size: 24px;
   }
   .page-hero p {
     max-width: 336px;
