@@ -84,6 +84,20 @@
   });
 
   document.querySelectorAll('[data-volunteer-write]').forEach(function (form) {
+    // 수정 화면(?mode=edit): [삭제][수정] 버튼으로 바꾸고, 수정 제출 시 완료·실패 알림
+    var editMode = new URLSearchParams(location.search).get('mode') === 'edit';
+    var createActions = form.querySelector('[data-volunteer-create-actions]');
+    var editActions = form.querySelector('[data-volunteer-edit-actions]');
+    if (editMode && createActions && editActions) {
+      createActions.hidden = true;
+      editActions.hidden = false;
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        var dialog = document.getElementById(form.checkValidity() ? 'volunteer-edit-done' : 'volunteer-edit-invalid');
+        if (dialog && !dialog.open) dialog.showModal();
+      });
+    }
     var regions = Array.from(form.querySelectorAll('[name="region"]'));
     function validate() {
       regions[0].setCustomValidity(
@@ -204,11 +218,14 @@
     var query = '';
     var field = 'all';
     var resourceType = 'all';
+    var mineOnly = false;
     function filterRows() {
       matches = rows.filter(function (row) {
         // 자료실 구분(전체·일반자료·서식)
         if (resourceType !== 'all' && row.dataset.resourceType !== resourceType) return false;
         if (organizationKey && row.dataset.organization !== organizationKey) return false;
+        // 내가 쓴 글(봉사자 모집): 작성자가 로그인 사용자인 행만
+        if (mineOnly && row.dataset.mine !== 'true') return false;
         if (surveyState !== 'all' && row.dataset.surveyState !== surveyState) return false;
         var value =
           field === 'author'
@@ -227,6 +244,13 @@
         board.querySelectorAll('[data-survey-filter]').forEach(function (item) {
           item.setAttribute('aria-pressed', String(item === button));
         });
+        filterRows();
+      });
+    });
+    board.querySelectorAll('[data-community-mine]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        mineOnly = button.getAttribute('aria-pressed') !== 'true';
+        button.setAttribute('aria-pressed', String(mineOnly));
         filterRows();
       });
     });

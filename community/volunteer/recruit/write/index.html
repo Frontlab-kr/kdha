@@ -636,9 +636,21 @@
               </div>
               <hr class="community-write__divider" />
               <p role="status" data-draft-status hidden></p>
-              <div class="community-detail__actions community-survey-actions">
+              <!-- 등록 시 [취소][작성하기], 수정 시(?mode=edit) [삭제][수정] — SB 10/21. 서버 연동 시 작성자 수정 화면에서 수정용 버튼만 출력 -->
+              <div class="community-detail__actions community-survey-actions" data-volunteer-create-actions>
                 <a class="ds-button ds-button--outline ds-button--large" href="/kdha/community/volunteer/recruit/">취소</a>
                 <button class="ds-button ds-button--primary ds-button--large" type="submit">작성하기</button>
+              </div>
+              <div class="community-detail__actions community-survey-actions" data-volunteer-edit-actions hidden>
+                <button
+                  class="ds-button ds-button--outline ds-button--large"
+                  type="button"
+                  aria-haspopup="dialog"
+                  data-dialog-open="volunteer-delete-confirm"
+                >
+                  삭제
+                </button>
+                <button class="ds-button ds-button--primary ds-button--large" type="submit">수정</button>
               </div>
             </form>
           </div>
@@ -741,6 +753,74 @@
         </div>
       </footer>
     </div>
+    <!-- 봉사자 모집 수정·삭제 알림(SB 10/21) -->
+    <dialog
+      class="ds-alert"
+      id="volunteer-delete-confirm"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-delete-confirm-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-delete-confirm-message">게시글을 삭제하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button
+          class="ds-button ds-button--large ds-button--primary"
+          type="button"
+          data-dialog-switch="volunteer-delete-done"
+        >
+          확인
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="volunteer-delete-done"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-delete-done-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-delete-done-message">게시글이 삭제되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <a class="ds-button ds-button--large ds-button--primary" href="/kdha/community/volunteer/recruit/">확인</a>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="volunteer-edit-done"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-edit-done-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-edit-done-message">게시글이 수정되었습니다.</p>
+      <div class="edu-dialog__actions">
+        <a class="ds-button ds-button--large ds-button--primary" href="/kdha/community/volunteer/recruit/detail/">확인</a>
+      </div>
+    </dialog>
+    <dialog
+      class="ds-alert"
+      id="volunteer-edit-invalid"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-edit-invalid-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-edit-invalid-message">필수 항목을 모두 확인해 주세요.</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>확인</button>
+      </div>
+    </dialog>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>

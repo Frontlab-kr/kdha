@@ -372,6 +372,17 @@
                 신청 취소하기
               </button>
             </div>
+            <!-- 등록한 사용자에게만 노출(SB 10/21 수정하기 버튼). 서버 연동 시 작성자일 때 출력 -->
+            <div class="community-detail__actions volunteer-detail__actions volunteer-detail__owner">
+              <button
+                class="ds-button ds-button--primary ds-button--large"
+                type="button"
+                aria-haspopup="dialog"
+                data-dialog-open="volunteer-edit-confirm"
+              >
+                수정하기
+              </button>
+            </div>
             <p class="community-action-status" role="status" data-community-action-status hidden></p>
           </div>
         </div>
@@ -473,6 +484,24 @@
         </div>
       </footer>
     </div>
+    <dialog
+      class="ds-alert"
+      id="volunteer-edit-confirm"
+      role="alertdialog"
+      aria-label="알림"
+      aria-describedby="volunteer-edit-confirm-message"
+    >
+      <button class="ds-alert__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <p class="ds-alert__message" id="volunteer-edit-confirm-message">게시글을 수정하시겠습니까?</p>
+      <div class="edu-dialog__actions">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <a class="ds-button ds-button--large ds-button--primary" href="/kdha/community/volunteer/recruit/write/?mode=edit">
+          확인
+        </a>
+      </div>
+    </dialog>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>

@@ -16215,13 +16215,6 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   display: grid;
   gap: 8px;
 }
-.ofe-room__part h4 {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.5;
-  color: #505a67;
-}
 
 .ofe-slots {
   display: grid;
@@ -18281,6 +18274,16 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   justify-content: space-between;
   align-items: center;
 }
+.community-list-tools.community-list-tools--write .community-list-tools__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.community-list-tools.community-list-tools--write .ds-button[aria-pressed=true] {
+  border-color: #713acc;
+  color: #713acc;
+  background: #f7f7ff;
+}
 .community-list-tools.community-list-tools--write .ds-button .material-symbols-rounded {
   font-size: 18px;
 }
@@ -19747,6 +19750,17 @@ main:not(:has(> .page-banner)) .community-detail__actions {
 .volunteer-detail__actions .volunteer-cancel {
   color: #fff;
   background: #232a31;
+}
+
+.community-detail__actions.volunteer-detail__actions:has(+ .volunteer-detail__owner) {
+  margin-bottom: 16px;
+}
+
+.community-detail__actions.volunteer-detail__owner {
+  margin-top: 0;
+}
+.community-detail__actions.volunteer-detail__owner .ds-button {
+  min-width: 240px;
 }
 
 .community-action-status {

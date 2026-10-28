@@ -326,14 +326,25 @@
                 <button class="form-action-button" type="submit">검색</button>
               </form>
               <div class="community-list-tools community-list-tools--write">
-                <button
-                  type="button"
-                  data-dialog-open="volunteer-notice-dialog"
-                  class="ds-button ds-button--outline ds-button--small"
-                >
-                  글쓰기
-                  <span class="material-symbols-rounded" aria-hidden="true">edit_square</span>
-                </button>
+                <div class="community-list-tools__group">
+                  <button
+                    type="button"
+                    data-dialog-open="volunteer-notice-dialog"
+                    class="ds-button ds-button--outline ds-button--small"
+                  >
+                    글쓰기
+                    <span class="material-symbols-rounded" aria-hidden="true">edit_square</span>
+                  </button>
+                  <!-- 내가 쓴 글(SB 10/21): 누르면 로그인 사용자가 쓴 글만 목록에 표시. 서버 연동 시 행의 data-mine 값을 작성자 일치 여부로 출력 -->
+                  <button
+                    type="button"
+                    class="ds-button ds-button--outline ds-button--small"
+                    aria-pressed="false"
+                    data-community-mine
+                  >
+                    내가 쓴 글
+                  </button>
+                </div>
                 <select data-community-limit data-custom-select aria-label="페이지당 목록 수">
                   <option value="10">10개</option>
                   <option value="20">20개</option>
@@ -349,7 +360,7 @@
                   <span role="columnheader">인원</span>
                   <span role="columnheader">조회</span>
                 </div>
-                <div role="row" class="ds-board__row" data-community-row data-author="대한의료봉사회">
+                <div role="row" class="ds-board__row" data-community-row data-author="대한의료봉사회" data-mine="true">
                   <span role="cell" class="volunteer-board__agency">대한의료봉사회</span>
                   <span role="cell" class="ds-board__title">
                     <a href="/kdha/community/volunteer/recruit/detail/">치과위생사 봉사단원 모집</a>
