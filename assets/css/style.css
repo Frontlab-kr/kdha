@@ -31105,6 +31105,61 @@ main:has(.about-member) > .page-banner {
   outline-offset: 3px;
 }
 
+.intro__orbit {
+  position: relative;
+  width: 100%;
+}
+.intro__orbit > .intro__services {
+  margin-inline: auto;
+}
+
+.intro__orbit.is-orbit .intro__services {
+  position: relative;
+  display: block;
+  height: 350px;
+}
+.intro__orbit.is-orbit .intro__services > li {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 330px;
+  margin-left: -165px;
+  transform-origin: 50% 0;
+  will-change: transform;
+}
+.intro__orbit.is-orbit .intro-card {
+  height: 274px;
+}
+.intro__orbit.is-orbit .intro-card:is(:hover, :focus-visible) {
+  transform: none;
+}
+
+.intro__orbit-toggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #ad99ff;
+  border-radius: 50%;
+  color: #713acc;
+  background: #fff;
+  place-items: center;
+  cursor: pointer;
+  transition: border-color 160ms ease;
+}
+.intro__orbit-toggle:hover {
+  border-color: #713acc;
+}
+.intro__orbit-toggle[hidden] {
+  display: none;
+}
+.intro__orbit-toggle .material-symbols-rounded {
+  font-size: 20px;
+}
+
 .intro__pre-member {
   display: flex;
   align-items: center;
