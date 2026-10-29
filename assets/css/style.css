@@ -31105,42 +31105,56 @@ main:has(.about-member) > .page-banner {
   outline-offset: 3px;
 }
 
-.intro__orbit {
-  position: relative;
+.intro-carousel {
   width: 100%;
 }
-.intro__orbit > .intro__services {
-  margin-inline: auto;
-}
 
-.intro__orbit.is-orbit .intro__services {
-  position: relative;
-  display: block;
-  height: 350px;
+.intro-carousel__slider {
+  padding-block: 8px 24px;
 }
-.intro__orbit.is-orbit .intro__services > li {
-  position: absolute;
-  top: 0;
-  left: 50%;
+.intro-carousel__slider .swiper-slide {
   width: 330px;
-  margin-left: -165px;
-  transform-origin: 50% 0;
-  will-change: transform;
+  transition-property: transform, opacity;
+  transform-origin: 50% 50%;
 }
-.intro__orbit.is-orbit .intro-card {
+.intro-carousel__slider .intro-card {
   height: 274px;
 }
-.intro__orbit.is-orbit .intro-card:is(:hover, :focus-visible) {
+.intro-carousel__slider .swiper-slide-active .intro-card {
+  border-color: #592ba6;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background: #713acc;
+}
+.intro-carousel__slider .swiper-slide-active .intro-card .intro-card__watermark {
+  opacity: 1;
+}
+.intro-carousel__slider .swiper-slide-active .intro-card .intro-card__number {
+  color: #ad99ff;
+}
+.intro-carousel__slider .swiper-slide-active .intro-card .intro-card__desc {
+  color: #f7f7ff;
+}
+.intro-carousel__slider .swiper-slide-active .intro-card .intro-card__more {
+  color: #fff;
+}
+.intro-carousel__slider .intro-card:is(:hover, :focus-visible) {
   transform: none;
 }
 
-.intro__orbit-toggle {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.intro-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.intro-carousel__nav,
+.intro-carousel__toggle {
   display: grid;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   padding: 0;
   border: 1px solid #ad99ff;
   border-radius: 50%;
@@ -31150,16 +31164,49 @@ main:has(.about-member) > .page-banner {
   cursor: pointer;
   transition: border-color 160ms ease;
 }
-.intro__orbit-toggle:hover {
+.intro-carousel__nav:hover,
+.intro-carousel__toggle:hover {
   border-color: #713acc;
 }
-.intro__orbit-toggle[hidden] {
+.intro-carousel__nav[hidden],
+.intro-carousel__toggle[hidden] {
   display: none;
 }
-.intro__orbit-toggle .material-symbols-rounded {
-  font-size: 20px;
+.intro-carousel__nav .material-symbols-rounded,
+.intro-carousel__toggle .material-symbols-rounded {
+  font-size: 18px;
 }
 
+.intro-carousel__pagination {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.intro-carousel__bullet {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #ad99ff;
+  cursor: pointer;
+  transition: width 160ms ease, background-color 160ms ease;
+}
+.intro-carousel__bullet.is-active {
+  width: 24px;
+  background: #713acc;
+}
+
+@media (max-width: 767px) {
+  .intro-carousel__slider .swiper-slide {
+    width: 260px;
+  }
+  .intro-carousel__slider .intro-card {
+    height: 240px;
+    padding: 20px;
+  }
+}
 .intro__pre-member {
   display: flex;
   align-items: center;
