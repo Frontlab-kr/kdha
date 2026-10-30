@@ -31126,22 +31126,6 @@ main:has(.about-member) > .page-banner {
   transform-origin: 0 0;
   transition: transform 0.8s cubic-bezier(0.45, 0, 0.2, 1);
 }
-.intro-rotate.is-rotate > [data-slot=front-left] {
-  z-index: 3;
-  transform: translate(120px, 1px) scale(1.2121);
-}
-.intro-rotate.is-rotate > [data-slot=front-right] {
-  z-index: 3;
-  transform: translate(560px, 1px) scale(1.2121);
-}
-.intro-rotate.is-rotate > [data-slot=back-right] {
-  z-index: 1;
-  transform: translate(770px, 40px);
-}
-.intro-rotate.is-rotate > [data-slot=back-left] {
-  z-index: 1;
-  transform: translate(0, 40px);
-}
 .intro-rotate.is-rotate .intro-card {
   box-shadow: 0 12px 32px rgba(31, 20, 56, 0.08);
 }
@@ -31266,6 +31250,10 @@ main:has(.about-member) > .page-banner {
 }
 
 @media (max-width: 767px) {
+  .intro-carousel {
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+  }
   .intro-carousel__slider {
     width: 260px;
   }
