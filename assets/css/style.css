@@ -31073,26 +31073,31 @@ main:has(.about-member) > .page-banner {
 }
 
 .intro-card:hover,
-.intro-card:focus-visible {
+.intro-card:focus-visible,
+.intro-rotate > .is-active .intro-card {
   border-color: #592ba6;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   color: #fff;
   background: #713acc;
 }
 .intro-card:hover .intro-card__watermark,
-.intro-card:focus-visible .intro-card__watermark {
+.intro-card:focus-visible .intro-card__watermark,
+.intro-rotate > .is-active .intro-card .intro-card__watermark {
   opacity: 1;
 }
 .intro-card:hover .intro-card__number,
-.intro-card:focus-visible .intro-card__number {
+.intro-card:focus-visible .intro-card__number,
+.intro-rotate > .is-active .intro-card .intro-card__number {
   color: #ad99ff;
 }
 .intro-card:hover .intro-card__desc,
-.intro-card:focus-visible .intro-card__desc {
+.intro-card:focus-visible .intro-card__desc,
+.intro-rotate > .is-active .intro-card .intro-card__desc {
   color: #f7f7ff;
 }
 .intro-card:hover .intro-card__more,
-.intro-card:focus-visible .intro-card__more {
+.intro-card:focus-visible .intro-card__more,
+.intro-rotate > .is-active .intro-card .intro-card__more {
   color: #fff;
 }
 
@@ -31105,6 +31110,55 @@ main:has(.about-member) > .page-banner {
   outline-offset: 3px;
 }
 
+.intro-rotate.is-rotate {
+  position: relative;
+  display: block;
+  width: 1100px;
+  height: 334px;
+  margin-inline: auto;
+}
+.intro-rotate.is-rotate > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 330px;
+  height: 274px;
+  transform-origin: 0 0;
+  transition: transform 0.8s cubic-bezier(0.45, 0, 0.2, 1);
+}
+.intro-rotate.is-rotate > [data-slot=front-left] {
+  z-index: 3;
+  transform: translate(120px, 1px) scale(1.2121);
+}
+.intro-rotate.is-rotate > [data-slot=front-right] {
+  z-index: 3;
+  transform: translate(560px, 1px) scale(1.2121);
+}
+.intro-rotate.is-rotate > [data-slot=back-right] {
+  z-index: 1;
+  transform: translate(770px, 40px);
+}
+.intro-rotate.is-rotate > [data-slot=back-left] {
+  z-index: 1;
+  transform: translate(0, 40px);
+}
+.intro-rotate.is-rotate .intro-card {
+  box-shadow: 0 12px 32px rgba(31, 20, 56, 0.08);
+}
+.intro-rotate.is-rotate > .is-active .intro-card {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1200px) {
+  .intro__body:has(.intro-rotate) {
+    margin-top: 150px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro-rotate.is-rotate > li {
+    transition: none;
+  }
+}
 .intro-carousel {
   width: 100%;
   overflow: hidden;
