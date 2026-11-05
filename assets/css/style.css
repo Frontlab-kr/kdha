@@ -847,6 +847,10 @@ button {
   line-height: 1.5;
 }
 
+.form-required {
+  color: #f04755;
+}
+
 :where(.form-field, .edu-field) :where(input:not([type=checkbox], [type=radio]), select, textarea) {
   width: 100%;
   border: 1px solid #d0d8e2;
@@ -2679,7 +2683,7 @@ button.ds-link {
   z-index: 50;
   height: 122px;
   color: #fff;
-  background: #101418;
+  background: #232a31;
 }
 .site-header__inner {
   display: flex;
@@ -3963,7 +3967,31 @@ body.main-page .site .site-header__inner {
     gap: 40px;
   }
   .main-b-quick {
+    position: relative;
     min-width: 0;
+  }
+  .main-b-quick::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff);
+    content: "";
+    pointer-events: none;
+  }
+  @supports (animation-timeline: scroll()) {
+    .main-b-quick {
+      timeline-scope: --main-quick;
+    }
+    .main-b-quick::after {
+      animation: main-quick-fade linear both;
+      animation-range: 85% 100%;
+      animation-timeline: --main-quick;
+    }
+    .main-b-quick__grid {
+      scroll-timeline: --main-quick inline;
+    }
   }
   .main-b-quick__grid {
     grid-template-columns: repeat(4, 148px);
@@ -4152,6 +4180,11 @@ body.main-page .site .site-header__inner {
   body.main-page .site-logo--header .site-logo__image {
     width: 160px;
     height: 30.32px;
+  }
+}
+@keyframes main-quick-fade {
+  to {
+    opacity: 0;
   }
 }
 .user-page__main {
@@ -8245,7 +8278,7 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   min-height: 435px;
   padding-block: 60px;
   color: #fff;
-  background: #101418;
+  background: #232a31;
 }
 
 .site-footer__logo {
@@ -11460,11 +11493,13 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
 }
 
 .account-join-types a {
-  display: flex;
+  display: grid;
   width: 100%;
-  height: 105px;
+  min-height: 105px;
+  grid-template-columns: auto 1fr;
+  align-content: center;
   align-items: center;
-  gap: 24px;
+  column-gap: 24px;
   padding: 24px 40px;
   border: 1px solid #d0d8e2;
   border-radius: 24px;
@@ -11477,7 +11512,7 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
 }
 
 .account-join-types img {
-  flex: none;
+  grid-row: 1/span 2;
   object-fit: contain;
 }
 
@@ -11496,6 +11531,73 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   color: #66777e;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.account-join-types__note {
+  grid-column: 2;
+  margin-top: 10px;
+  padding-left: 0.8em;
+  color: #f6606b;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+  text-indent: -0.8em;
+  word-break: keep-all;
+}
+
+.account-join__service-guide {
+  margin: 0;
+  color: #66777e;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.account-join__service-guide .ds-link {
+  margin-left: 12px;
+}
+
+.edu-dialog--auth.account-service-dialog {
+  width: min(100% - 64px, 800px);
+}
+
+.account-service-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.account-service-table th,
+.account-service-table td {
+  height: 48px;
+  padding: 12px;
+  border: 1px solid #e8ecf1;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  word-break: keep-all;
+}
+.account-service-table th {
+  color: #232a31;
+  font-weight: 700;
+}
+.account-service-table td {
+  color: #66777e;
+}
+.account-service-table tbody th:not(.account-service-table__group) {
+  text-align: left;
+}
+.account-service-table thead th {
+  height: 60px;
+  background: #f7f7ff;
+}
+.account-service-table thead th:first-child {
+  width: 300px;
+}
+.account-service-table .account-service-table__group {
+  height: 40px;
+  padding-block: 8px;
+  background: #f7f7ff;
 }
 
 .account-join__pre-member {
@@ -12123,10 +12225,47 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
     gap: 20px;
   }
   .account-join-types a {
-    height: 105px;
-    gap: 16px;
+    min-height: 105px;
+    column-gap: 16px;
     padding: 24px 20px;
     border-radius: 16px;
+  }
+  .account-join-types__note {
+    grid-column: 1/-1;
+    margin-top: 16px;
+  }
+  .account-join__service-guide {
+    font-size: 16px;
+  }
+  .account-join__service-guide .ds-link {
+    display: block;
+    margin: 6px auto 0;
+  }
+  .edu-dialog--auth.account-service-dialog {
+    width: min(100% - 40px, 320px);
+    padding: 40px 20px;
+  }
+  .account-service-table th,
+  .account-service-table td {
+    height: 72px;
+    padding: 8px 4px;
+    font-size: 16px;
+  }
+  .account-service-table thead span,
+  .account-service-table td span {
+    display: block;
+  }
+  .account-service-table thead th {
+    height: 65px;
+  }
+  .account-service-table thead th:first-child {
+    width: 96px;
+  }
+  .account-service-table thead th:nth-child(2) {
+    width: 72px;
+  }
+  .account-service-table .account-service-table__group {
+    height: 40px;
   }
   .account-join-types img {
     width: 38px;
@@ -21092,8 +21231,7 @@ main:has(.career-jobs) > .page-banner {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px;
-  border: 1px solid #545afb;
+  padding: 25px;
   border-radius: 20px;
   background: linear-gradient(108.29deg, #5929a6 0%, #8552d9 71.43%);
 }
@@ -26699,9 +26837,8 @@ main:has(> .page-banner) > .main-body > .about-page {
 }
 .about-greeting__sign {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  align-items: flex-end;
+  gap: 12px;
 }
 .about-greeting__sign p {
   margin: 0;
@@ -26750,6 +26887,13 @@ main:has(> .page-banner) > .main-body > .about-page {
   }
   .about-greeting__quote {
     font-size: 22px;
+  }
+  .about-greeting__sign {
+    gap: 20px;
+  }
+  .about-greeting__sign img {
+    width: 99px;
+    height: 42px;
   }
 }
 .about-history {
@@ -29633,7 +29777,6 @@ main:has(.about-page) > .page-banner {
 .edu-guide__text {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   color: #505a67;
   font-size: 18px;
   line-height: 1.6;

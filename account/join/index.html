@@ -70,25 +70,32 @@
               <a href="/kdha/account/join/terms/?type=dental">
                 <img src="/kdha/assets/account/join/member-dental.png" width="70" height="70" alt="" />
                 <span>
-                  <strong>치과위생사회원</strong>
-                  <small>협회에 정식 등록된 치과위생사</small>
+                  <strong>치과위생사 회원</strong>
+                  <small>치과위생사 면허를 소지한 분</small>
                 </span>
+                <em class="account-join-types__note">
+                  * 치과위생사 면허 소지자는 회비 납부 여부와 관계없이 치과위생사 회원으로 가입해주세요.
+                </em>
               </a>
               <a href="/kdha/account/join/terms/?type=student">
                 <img src="/kdha/assets/account/join/member-student.png" width="70" height="70" alt="" />
                 <span>
-                  <strong>치위생(학)과 학생회원</strong>
+                  <strong>치위생(학)과 학생 회원</strong>
                   <small>대학 치위생(학)과에 재학중인 학생</small>
                 </span>
               </a>
               <a href="/kdha/account/join/terms/?type=general">
                 <img src="/kdha/assets/account/join/member-general.png" width="70" height="70" alt="" />
                 <span>
-                  <strong>홈페이지 이용회원</strong>
-                  <small>홈페이지 정보를 열람하고 이용하려는 일반 사용자</small>
+                  <strong>일반 회원</strong>
+                  <small>치과위생사 또는 치위생(학)과 학생 회원이 아닌 일반 이용자</small>
                 </span>
               </a>
             </div>
+            <p class="account-join__service-guide">
+              회원 유형별 이용 가능한 서비스가 궁금하신가요?
+              <button class="ds-link ds-link--text" type="button" data-dialog-open="member-service">자세히 보기</button>
+            </p>
             <div class="account-join__pre-member">
               <p>2027년 이전 선가입회원을 신청하신 분은 아래의 선가입회원 등록으로 진행해주세요.</p>
               <a class="ds-button ds-button--outline ds-button--small" href="/kdha/account/join/pre-member">
@@ -110,6 +117,121 @@
         </p>
       </div>
     </main>
+    <dialog
+      class="edu-dialog edu-dialog--auth account-service-dialog"
+      id="member-service"
+      aria-labelledby="member-service-title"
+    >
+      <button
+        class="edu-dialog__close material-symbols-rounded material-icon--close"
+        type="button"
+        data-dialog-close
+        aria-label="닫기"
+      >
+        close
+      </button>
+      <h2 id="member-service-title">회원유형별 서비스 안내</h2>
+      <div class="edu-dialog__body">
+        <table class="account-service-table">
+          <caption class="sr-only">회원유형별 이용 가능한 서비스 비교</caption>
+          <thead>
+            <tr>
+              <th scope="col">서비스</th>
+              <th scope="col">
+                <span>치과위생사</span>
+                <span>회원</span>
+              </th>
+              <th scope="col">
+                <span>학생</span>
+                <span>회원</span>
+              </th>
+              <th scope="col">
+                <span>일반</span>
+                <span>이용자</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="account-service-table__group" colspan="4" scope="rowgroup">일반서비스</th>
+            </tr>
+            <tr>
+              <th scope="row">회비납부</th>
+              <td>O</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>
+            <tr>
+              <th scope="row">공지사항 및 게시물 확인</th>
+              <td>O</td>
+              <td>O</td>
+              <td>O</td>
+            </tr>
+            <tr>
+              <th scope="row">법률·노무 상담</th>
+              <td>
+                <span>O</span>
+                <span>(정회원)</span>
+              </td>
+              <td>X</td>
+              <td>X</td>
+            </tr>
+            <tr>
+              <th scope="row">1대1 상담</th>
+              <td>O</td>
+              <td>O</td>
+              <td>O</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th class="account-service-table__group" colspan="4" scope="rowgroup">보수교육</th>
+            </tr>
+            <tr>
+              <th scope="row">보수교육 평점 확인</th>
+              <td>O</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>
+            <tr>
+              <th scope="row">면허신고 연도 확인</th>
+              <td>O</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>
+            <tr>
+              <th scope="row">(사이버)보수교육 이수</th>
+              <td>O</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th class="account-service-table__group" colspan="4" scope="rowgroup">하이덴잡(구인구직) 이용</th>
+            </tr>
+            <tr>
+              <th scope="row">채용정보 조회 및 공고게시</th>
+              <td>O</td>
+              <td>O</td>
+              <td>O</td>
+            </tr>
+            <tr>
+              <th scope="row">채용정보 공고 지원</th>
+              <td>O</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>
+            <tr>
+              <th scope="row">인재정보 이력서 등록</th>
+              <td>O</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </dialog>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
 
     <script src="/kdha/assets/js/common.js"></script>
