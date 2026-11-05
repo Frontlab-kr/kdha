@@ -4187,6 +4187,16 @@ body.main-page .site .site-header__inner {
     opacity: 0;
   }
 }
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease-out var(--fade-up-delay, 0ms), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--fade-up-delay, 0ms);
+}
+.fade-up.is-in {
+  opacity: 1;
+  transform: none;
+}
+
 .user-page__main {
   min-height: 720px;
   background: #fff;
