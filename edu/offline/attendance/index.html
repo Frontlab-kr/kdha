@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/kdha/assets/brand/logo-header-b.svg" />
+    <link rel="stylesheet" href="/kdha/assets/css/style.css" />
+    <title>출결정보 입력 | 현장교육 | 치위생교육원</title>
+  </head>
+  <body class="ofe-attendance-site">
+    <!-- ED-AD-OFE-01-09P 출결정보 입력 (Figma 11/09 '출석,퇴실 팝업 추가'): 현장보수교육 QR 출석·퇴실 확인 화면입니다.
+         페이지를 열면 출석 팝업이 바로 열리고, 퇴실은 #attendance-out-dialog 로 확인합니다. -->
+    <main id="main-content" class="ofe-attendance-page">
+      <h1 class="sr-only">출결정보 입력</h1>
+    </main>
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--modal ofe-attendance-dialog"
+      id="attendance-in-dialog"
+      aria-labelledby="attendance-in-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="attendance-in-title">출결정보 입력</h2>
+      <form class="mypage-dialog__form" method="dialog" aria-label="출석 정보 입력">
+        <div class="edu-dialog__body ofe-attendance">
+          <div class="ofe-attendance__course">
+            <p class="ofe-attendance__course-title">2026 서울특별시회 정기 현장보수교육</p>
+            <p class="ofe-attendance__course-date">2026-10-10</p>
+          </div>
+          <fieldset class="ofe-attendance__fields">
+            <legend class="ofe-attendance__lead">출석정보를 입력해주세요.</legend>
+            <div class="form-field form-field--large">
+              <label for="attendance-in-id">ID</label>
+              <input id="attendance-in-id" name="userId" type="text" placeholder="kdhakdha" autocomplete="username" />
+            </div>
+            <div class="form-field form-field--large">
+              <label for="attendance-in-name">이름</label>
+              <input id="attendance-in-name" name="userName" type="text" placeholder="홍길동" autocomplete="name" />
+            </div>
+            <div class="form-field form-field--large">
+              <label for="attendance-in-phone">전화번호</label>
+              <input id="attendance-in-phone" name="phone" type="tel" placeholder="01012345678" autocomplete="tel" />
+            </div>
+          </fieldset>
+        </div>
+        <div class="edu-dialog__actions mypage-dialog__actions--fill">
+          <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+          <button class="ds-button ds-button--large ds-button--primary" type="submit">출석체크</button>
+        </div>
+      </form>
+      <div class="ofe-attendance__foot">
+        <ul class="ds-guide-list">
+          <li class="ds-guide-list__item">
+            <span class="ds-guide-list__content">입력한 정보는 출석 확인에만 사용합니다.</span>
+          </li>
+        </ul>
+        <img src="/kdha/assets/brand/logo-header-b.svg" width="180" height="34" alt="사단법인 대한치과위생사협회" />
+      </div>
+    </dialog>
+
+    <dialog
+      class="edu-dialog mypage-dialog mypage-dialog--modal ofe-attendance-dialog"
+      id="attendance-out-dialog"
+      aria-labelledby="attendance-out-title"
+    >
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="attendance-out-title">출결정보 입력</h2>
+      <form class="mypage-dialog__form" method="dialog" aria-label="퇴실 정보 입력">
+        <div class="edu-dialog__body ofe-attendance">
+          <div class="ofe-attendance__course">
+            <p class="ofe-attendance__course-title">2026 서울특별시회 정기 현장보수교육</p>
+            <p class="ofe-attendance__course-date">2026-10-10</p>
+          </div>
+          <fieldset class="ofe-attendance__fields">
+            <legend class="ofe-attendance__lead">출석정보를 입력해주세요.</legend>
+            <div class="form-field form-field--large">
+              <label for="attendance-out-id">ID</label>
+              <input id="attendance-out-id" name="userId" type="text" placeholder="kdhakdha" autocomplete="username" />
+            </div>
+            <div class="form-field form-field--large">
+              <label for="attendance-out-name">이름</label>
+              <input id="attendance-out-name" name="userName" type="text" placeholder="홍길동" autocomplete="name" />
+            </div>
+            <div class="form-field form-field--large">
+              <label for="attendance-out-phone">전화번호</label>
+              <input id="attendance-out-phone" name="phone" type="tel" placeholder="01012345678" autocomplete="tel" />
+            </div>
+          </fieldset>
+        </div>
+        <div class="edu-dialog__actions mypage-dialog__actions--fill">
+          <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+          <button class="ds-button ds-button--large ds-button--primary" type="submit">퇴실체크</button>
+        </div>
+      </form>
+      <div class="ofe-attendance__foot">
+        <ul class="ds-guide-list">
+          <li class="ds-guide-list__item">
+            <span class="ds-guide-list__content">입력한 정보는 출석 확인에만 사용합니다.</span>
+          </li>
+        </ul>
+        <img src="/kdha/assets/brand/logo-header-b.svg" width="180" height="34" alt="사단법인 대한치과위생사협회" />
+      </div>
+    </dialog>
+    <details class="account-layer-menu">
+      <summary>
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        화면 확인
+      </summary>
+      <nav aria-label="출결정보 입력 레이어 확인">
+        <a href="/kdha/edu/offline/attendance/#attendance-in-dialog">팝업 · 출결정보 입력(출석)</a>
+        <a href="/kdha/edu/offline/attendance/#attendance-out-dialog">팝업 · 출결정보 입력(퇴실)</a>
+      </nav>
+    </details>
+    <script src="/kdha/assets/js/vendor/jquery.js"></script>
+    <script src="/kdha/assets/js/vendor/swiper.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker.js"></script>
+    <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
+    <script src="/kdha/assets/js/common.js"></script>
+    <script src="/kdha/assets/js/site-menu.js"></script>
+
+    <script src="/kdha/assets/js/edu-attendance.js"></script>
+  </body>
+</html>

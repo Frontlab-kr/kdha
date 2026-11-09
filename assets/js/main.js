@@ -157,4 +157,25 @@ $(function () {
       a11y: { paginationBulletMessage: '{{index}}번째 안내로 이동' },
     });
   }
+
+  // 플로팅 메뉴(모바일): 바로가기 버튼으로 링크 목록 펼침/닫힘, Esc·바깥 클릭으로 닫힘
+  var $floating = $('[data-main-floating]');
+  var $floatingToggle = $floating.find('.main-floating__toggle');
+  function setFloating(open) {
+    $floating.toggleClass('is-open', open);
+    $floatingToggle.attr('aria-expanded', String(open));
+    $floatingToggle.find('.sr-only').text(open ? '바로가기 메뉴 닫기' : '바로가기 메뉴 열기');
+  }
+  $floatingToggle.on('click', function () {
+    setFloating(!$floating.hasClass('is-open'));
+  });
+  $(document).on('keydown', function (event) {
+    if (event.key === 'Escape' && $floating.hasClass('is-open')) {
+      setFloating(false);
+      $floatingToggle.trigger('focus');
+    }
+  });
+  $(document).on('click', function (event) {
+    if ($floating.hasClass('is-open') && !$floating[0].contains(event.target)) setFloating(false);
+  });
 });

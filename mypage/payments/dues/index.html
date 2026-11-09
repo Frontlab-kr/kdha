@@ -555,70 +555,106 @@
                     </li>
                   </ul>
                 </div>
+                <!-- 보유 마일리지 사용 · 쿠폰 등록 (Figma 11/09 '내용추가') -->
+                <div class="mypage-dues__benefit">
+                  <div class="form-field form-field--large mypage-dues__field">
+                    <p class="mypage-dues__field-head">
+                      <label for="dues-mileage">보유 마일리지 사용</label>
+                      <span class="mypage-dues__own">보유 마일리지 16,500P</span>
+                    </p>
+                    <span class="form-input-action">
+                      <input id="dues-mileage" name="mileage" type="text" inputmode="numeric" placeholder="0P" />
+                      <button type="button">전액 사용</button>
+                    </span>
+                  </div>
+                  <div class="ds-guide-list mypage-pay-note">
+                    <ul class="mypage-pay-note__list">
+                      <li class="ds-guide-list__item">
+                        <span class="ds-guide-list__content">마일리지는 100P 단위로 사용 가능합니다.</span>
+                      </li>
+                      <li class="ds-guide-list__item">
+                        <span class="ds-guide-list__content">쿠폰과 마일리지 중복 사용이 가능합니다.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-field form-field--large mypage-dues__field mypage-dues__coupon">
+                  <p class="mypage-dues__field-head">
+                    <label for="dues-coupon">쿠폰 등록</label>
+                  </p>
+                  <span class="form-input-action">
+                    <input id="dues-coupon" name="coupon" type="text" value="신규 회원 할인 쿠폰" readonly />
+                    <button type="button">쿠폰 적용</button>
+                    <button type="button">적용 취소</button>
+                  </span>
+                </div>
                 <div class="mypage-dues__actions">
                   <button
                     class="ds-button ds-button--medium ds-button--primary"
                     type="button"
                     aria-haspopup="dialog"
-                    data-dialog-open="dues-pay-alert"
+                    data-dialog-open="dues-pay-dialog"
                   >
                     회비 납부하기
                   </button>
                 </div>
               </section>
-              <section class="mypage-card mypage-dues__autopay" aria-labelledby="dues-autopay-title">
-                <div class="mypage-dues__autopay-text">
-                  <h2 class="mypage-card__title" id="dues-autopay-title">회비 자동납부</h2>
-                  <div class="mypage-dues__autopay-desc">
-                    <p>등록된 결제수단으로 정기 회비를 자동 납부하는 기능입니다.</p>
-                    <p>자동납부 신청/해지 및 등록 결제수단을 관리할 수 있습니다.</p>
+              <!-- 오른쪽 열: 자동납부 박스 + 환불 안내(Figma 11/09 'UI변경': 안내를 자동납부 박스 아래로 이동) -->
+              <div class="mypage-dues__side">
+                <section class="mypage-card mypage-dues__autopay" aria-labelledby="dues-autopay-title">
+                  <div class="mypage-dues__autopay-text">
+                    <h2 class="mypage-card__title" id="dues-autopay-title">회비 자동납부</h2>
+                    <div class="mypage-dues__autopay-desc">
+                      <p>등록된 결제수단으로 정기 회비를 자동 납부하는 기능입니다.</p>
+                      <p>자동납부 신청/해지 및 등록 결제수단을 관리할 수 있습니다.</p>
+                    </div>
                   </div>
+                  <div class="mypage-dues__autopay-actions">
+                    <button
+                      class="ds-button ds-button--medium ds-button--outline"
+                      type="button"
+                      aria-haspopup="dialog"
+                      data-dialog-open="dues-autopay-cancel-alert"
+                    >
+                      해지 하기
+                    </button>
+                    <button
+                      class="ds-button ds-button--medium ds-button--outline"
+                      type="button"
+                      aria-haspopup="dialog"
+                      data-dialog-open="dues-autopay-apply-alert"
+                    >
+                      신청 하기
+                    </button>
+                    <button class="ds-button ds-button--medium ds-button--primary" type="button">관리 하기</button>
+                  </div>
+                </section>
+                <div class="ds-guide-list mypage-pay-note">
+                  <ul class="mypage-pay-note__list">
+                    <li class="ds-guide-list__item">
+                      <span class="ds-guide-list__content">
+                        제 187호 회원규정에 의하여 회비 환불은 납부일로부터
+                        <em>1개월</em>
+                        이내에 가능하며, 등록정회원 자격 취득 후
+                        <span class="ds-text-join">
+                          <em>보수교육</em>
+                          <span>을</span>
+                        </span>
+                        등록한 자는
+                        <span class="ds-text-join">
+                          <em>환불불가</em>
+                          <span>합니다.</span>
+                        </span>
+                      </span>
+                    </li>
+                    <li class="ds-guide-list__item">
+                      <span class="ds-guide-list__content">
+                        위 내용을 확인하신 후 환불(취소) 신청을 진행해 주시기 바랍니다.
+                      </span>
+                    </li>
+                  </ul>
                 </div>
-                <div class="mypage-dues__autopay-actions">
-                  <button
-                    class="ds-button ds-button--medium ds-button--outline"
-                    type="button"
-                    aria-haspopup="dialog"
-                    data-dialog-open="dues-autopay-cancel-alert"
-                  >
-                    해지 하기
-                  </button>
-                  <button
-                    class="ds-button ds-button--medium ds-button--outline"
-                    type="button"
-                    aria-haspopup="dialog"
-                    data-dialog-open="dues-autopay-apply-alert"
-                  >
-                    신청 하기
-                  </button>
-                  <button class="ds-button ds-button--medium ds-button--primary" type="button">관리 하기</button>
-                </div>
-              </section>
-            </div>
-            <div class="ds-guide-list mypage-pay-note">
-              <ul class="mypage-pay-note__list">
-                <li class="ds-guide-list__item">
-                  <span class="ds-guide-list__content">
-                    제 187호 회원규정에 의하여 회비 환불은 납부일로부터
-                    <em>1개월</em>
-                    이내에 가능하며, 등록정회원 자격 취득 후
-                    <span class="ds-text-join">
-                      <em>보수교육</em>
-                      <span>을</span>
-                    </span>
-                    등록한 자는
-                    <span class="ds-text-join">
-                      <em>환불불가</em>
-                      <span>합니다.</span>
-                    </span>
-                  </span>
-                </li>
-                <li class="ds-guide-list__item">
-                  <span class="ds-guide-list__content">
-                    위 내용을 확인하신 후 환불(취소) 신청을 진행해 주시기 바랍니다.
-                  </span>
-                </li>
-              </ul>
+              </div>
             </div>
             <div class="mypage-dues__refund">
               <button
@@ -915,6 +951,38 @@
       </div>
     </dialog>
 
+    <!-- ED-US-PAY-01-02P 회비 결제 내역 확인 (Figma 11/09 '팝업 추가'): '회비 납부하기'에서 엽니다. 금액 상자는 결제 내역 최종 결제 금액(mypage-pay-total) 재사용 -->
+    <dialog class="edu-dialog mypage-dialog mypage-dues-pay" id="dues-pay-dialog" aria-labelledby="dues-pay-title">
+      <button class="edu-dialog__close material-symbols-rounded" type="button" data-dialog-close aria-label="닫기">
+        close
+      </button>
+      <h2 id="dues-pay-title">회비 결제 내역 확인</h2>
+      <div class="mypage-pay-total mypage-pay-total--compact">
+        <dl class="mypage-pay-total__list">
+          <div>
+            <dt>납부회비</dt>
+            <dd>200,000원</dd>
+          </div>
+          <div>
+            <dt>사용 마일리지</dt>
+            <dd>500P</dd>
+          </div>
+          <div>
+            <dt>쿠폰 할인</dt>
+            <dd>3,000원</dd>
+          </div>
+        </dl>
+        <p class="mypage-pay-total__sum">
+          최종 결제 금액
+          <strong>105,000원</strong>
+        </p>
+      </div>
+      <div class="edu-dialog__actions mypage-dialog__actions--fill">
+        <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
+        <button class="ds-button ds-button--large ds-button--primary" type="button" data-dialog-close>회비 납부</button>
+      </div>
+    </dialog>
+
     <!-- ED-US-PAY-01-03P 환불 거절 사유 (Figma 4147:171729 · MO 4147:173635 · SB v0.5 35): 환불거절 행의 '상세 보기'에서 엽니다. -->
     <dialog
       class="edu-dialog mypage-dialog mypage-dialog--modal"
@@ -1045,6 +1113,7 @@
         화면 확인
       </summary>
       <nav aria-label="회비 내역 레이어 확인">
+        <a href="/kdha/mypage/payments/dues/#dues-pay-dialog">팝업 · 회비 결제 내역 확인</a>
         <a href="/kdha/mypage/payments/dues/#dues-refuse-dialog">팝업 · 환불 거절 사유</a>
         <a href="/kdha/mypage/payments/dues/#dues-refund-request-dialog">팝업 · 환불 요청</a>
         <a href="/kdha/mypage/payments/dues/#dues-pay-alert">알림 · 회비 납부 확인</a>

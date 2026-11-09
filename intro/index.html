@@ -9,7 +9,12 @@
   </head>
   <body class="intro-page">
     <a class="skip-link" href="#main-content">본문 바로가기</a>
-    <div class="intro">
+    <div class="intro intro--hero" data-intro-motion>
+      <div class="intro__backdrop" aria-hidden="true">
+        <div class="intro__backdrop-layer">
+          <span class="intro__backdrop-image"></span>
+        </div>
+      </div>
       <div class="intro__visual" aria-hidden="true">
         <span class="intro__glow intro__glow--purple-1"></span>
         <span class="intro__glow intro__glow--purple-2"></span>
@@ -19,6 +24,9 @@
         <span class="intro__glow intro__glow--blue-2"></span>
       </div>
       <header class="intro__header">
+        <a class="intro__brand" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
+          <img src="/kdha/assets/brand/logo-header-b.svg" width="260" height="49" alt="대한치과위생사협회" />
+        </a>
         <nav class="intro__member-nav" aria-label="회원 메뉴">
           <a class="intro__member-link" href="/kdha/account/login/">로그인</a>
           <a class="intro__member-link" href="/kdha/account/join/">회원가입</a>
@@ -26,19 +34,15 @@
       </header>
       <main id="main-content">
         <div class="intro__body">
-          <h1 class="intro__heading">
-            <img
-              class="intro__logo"
-              src="/kdha/assets/brand/logo-header-b.svg"
-              width="280"
-              height="53"
-              alt="대한치과위생사협회"
-            />
-          </h1>
-          <ul class="intro__services">
+          <div class="intro__hero">
+            <img class="intro__hero-logo" src="/kdha/assets/brand/logo-header-b.svg" width="260" height="49" alt="" />
+            <h1 class="intro__title">대한치과위생사협회 통합 서비스</h1>
+            <p class="intro__subtitle">원하시는 서비스를 선택해 주세요.</p>
+          </div>
+          <ul class="intro__services intro__services--trio" aria-label="서비스 바로가기">
             <li>
               <a
-                class="intro-card"
+                class="intro-card is-featured"
                 href="/kdha/main/"
                 aria-labelledby="intro-main-title intro-main-more"
                 aria-describedby="intro-main-desc"
@@ -99,41 +103,6 @@
             <li>
               <a
                 class="intro-card"
-                href="http://kdhamall.or.kr/member/login.php?prev=%2F"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby="intro-mall-title intro-mall-more"
-                aria-describedby="intro-mall-desc"
-              >
-                <span class="intro-card__watermark" aria-hidden="true">
-                  <img src="/kdha/assets/intro/watermark-01.svg" width="125" height="192" alt="" />
-                  <img src="/kdha/assets/intro/watermark-02.svg" width="69" height="171" alt="" />
-                  <img src="/kdha/assets/intro/watermark-03.svg" width="125" height="192" alt="" />
-                  <img src="/kdha/assets/intro/watermark-04.svg" width="69" height="171" alt="" />
-                  <img src="/kdha/assets/intro/watermark-05.svg" width="26" height="54" alt="" />
-                  <img src="/kdha/assets/intro/watermark-06.svg" width="89" height="144" alt="" />
-                  <img src="/kdha/assets/intro/watermark-07.svg" width="22" height="40" alt="" />
-                  <img src="/kdha/assets/intro/watermark-08.svg" width="89" height="157" alt="" />
-                </span>
-                <span class="intro-card__number">03</span>
-                <h2 class="intro-card__title" id="intro-mall-title">KDHA Mall</h2>
-                <p class="intro-card__desc" id="intro-mall-desc">
-                  치과위생사를 위한 전문 상품을
-                  <br />
-                  KDHA Mall에서 만나보세요.
-                </p>
-                <span class="intro-card__more">
-                  <span id="intro-mall-more">
-                    바로가기
-                    <span class="sr-only">(새 창)</span>
-                  </span>
-                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                class="intro-card"
                 href="/kdha/mypage/"
                 aria-labelledby="intro-mypage-title intro-mypage-more"
                 aria-describedby="intro-mypage-desc"
@@ -162,12 +131,26 @@
               </a>
             </li>
           </ul>
-          <a class="intro__pre-member" href="/kdha/account/join/pre-member/">
-            <span class="intro__pre-member-link">
-              선가입 회원등록
-              <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
-            </span>
-          </a>
+          <ul class="intro__shortcuts" aria-label="바로가기">
+            <li>
+              <a class="ds-button ds-button--outline intro__shortcut" href="/kdha/license/report/">
+                면허신고센터
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="ds-button ds-button--outline intro__shortcut"
+                href="http://kdhamall.or.kr/member/login.php?prev=%2F"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                KDHA MALL
+                <span class="sr-only">(새 창)</span>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </main>
       <footer class="intro__footer">
@@ -177,5 +160,6 @@
         </p>
       </footer>
     </div>
+    <script src="/kdha/assets/js/intro.js"></script>
   </body>
 </html>
