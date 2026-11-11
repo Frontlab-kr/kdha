@@ -329,6 +329,19 @@ $(function () {
   openAccountDialogFromHash();
   $(window).on('hashchange', openAccountDialogFromHash);
 
+  // 로그인 구분(아이디/면허번호): 선택에 따라 입력 항목명·안내 문구를 바꿈
+  $('[data-login-type]').on('change', 'input[name="loginType"]', function () {
+    var name = this.value === 'license' ? '면허번호' : '아이디';
+    var $form = $(this).closest('form');
+    var $input = $form.find('[name="userId"]');
+    $form.find('[data-login-type-label]').text(name);
+    $input
+      .attr({ placeholder: name + ' 입력', autocomplete: this.value === 'license' ? 'off' : 'username' })
+      .closest('.edu-field')
+      .find('small')
+      .text(name + '를 입력해 주세요.');
+  });
+
   // 로그인 필수 입력값 검증
   $('.edu-login-form').on('submit', function (event) {
     event.preventDefault();

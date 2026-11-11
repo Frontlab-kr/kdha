@@ -26,8 +26,20 @@
             <form class="edu-login-form" novalidate>
               <div class="edu-login-form__controls">
                 <div class="edu-login-form__fields">
+                  <!-- 로그인 구분(Figma 11/11): 아이디 또는 면허번호로 로그인, 선택에 따라 입력 항목명이 바뀜 -->
+                  <fieldset class="edu-login-form__type" data-login-type>
+                    <legend class="sr-only">로그인 방식</legend>
+                    <label class="form-check">
+                      <input type="radio" name="loginType" value="id" checked />
+                      아이디
+                    </label>
+                    <label class="form-check">
+                      <input type="radio" name="loginType" value="license" />
+                      면허번호
+                    </label>
+                  </fieldset>
                   <label class="edu-field">
-                    <span>아이디</span>
+                    <span data-login-type-label>아이디</span>
                     <input type="text" name="userId" autocomplete="username" placeholder="아이디 입력" required />
                     <small id="login-id-error">아이디를 입력해 주세요.</small>
                   </label>
