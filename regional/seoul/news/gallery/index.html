@@ -3,231 +3,547 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kdha/assets/css/datepicker.css" />
     <link rel="stylesheet" href="/kdha/assets/css/style.css" />
 
     <title>포토갤러리 | 서울특별시치과위생사회</title>
   </head>
-  <body class="regional-site">
+  <body class="regional-body">
     <a class="skip-link" href="#main-content">본문 바로가기</a>
-    <header class="regional-header">
-      <div class="regional-header__utility">
-        <div class="regional-container">
-          <span>대한치과위생사협회 서울특별시회</span>
-          <nav aria-label="유틸리티 메뉴">
-            <a href="/kdha/account/login/">로그인</a>
-            <a href="/kdha/account/join/">회원가입</a>
-            <a href="/kdha/main/">중앙회</a>
-            <a href="/kdha/edu/">치위생교육원</a>
-          </nav>
+    <div class="site">
+      <!-- 시도회 공통 헤더(피그마 RG_GNB_PC): 대표 사이트 헤더(site-header)·전체 메뉴(site-menu) 구조를 그대로 쓰고 로고 옆 시도회명 배지만 추가 -->
+      <header class="site-header site-header--regional">
+        <div class="site-header__inner layout-container">
+          <a class="site-logo site-logo--header site-logo--regional" href="/kdha/regional/seoul/">
+            <img
+              class="site-logo__image"
+              width="260"
+              height="49"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-header-b.svg"
+            />
+            <span class="site-logo__badge">서울특별시회</span>
+          </a>
+          <div class="site-header__navigation">
+            <nav class="utility-nav" aria-label="유틸리티 메뉴">
+              <div class="utility-nav__external">
+                <a class="utility-nav__link" href="/kdha/main/" target="_blank" rel="noopener noreferrer">
+                  중앙회
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a class="utility-nav__link" href="/kdha/edu/" target="_blank" rel="noopener noreferrer">
+                  치위생교육원
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a
+                  class="utility-nav__link"
+                  href="http://kdhamall.or.kr/member/login.php?prev=%2F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  치과위생사 MALL
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+              </div>
+            </nav>
+            <nav class="primary-nav" aria-label="주 메뉴">
+              <div class="primary-nav__links primary-nav__links--main">
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/regional/seoul/introduction/greeting/">서울특별시회 소개</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/regional/seoul/education/about/">보수교육</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/regional/seoul/news/notices/">협회소식</a>
+                </div>
+                <div class="primary-nav__item">
+                  <a class="primary-nav__link" href="/kdha/regional/seoul/community/faq/">소통광장</a>
+                </div>
+              </div>
+              <div class="site-menu__account">
+                <a href="/kdha/account/login/">로그인</a>
+                <a href="/kdha/account/join/">회원가입</a>
+              </div>
+              <button
+                class="primary-nav__icon-button"
+                type="button"
+                aria-label="전체 메뉴"
+                data-site-menu-toggle
+                aria-expanded="false"
+                aria-controls="site-menu"
+              >
+                <span
+                  class="material-symbols-rounded material-icon"
+                  aria-hidden="true"
+                  style="font-size: 40px; width: 40px; height: 40px"
+                >
+                  dehaze
+                </span>
+              </button>
+            </nav>
+          </div>
         </div>
-      </div>
-      <div class="regional-container regional-header__main">
-        <a class="regional-brand" href="/kdha/regional/seoul/" aria-label="서울특별시치과위생사회 홈">
-          <span class="regional-brand__symbol">SEOUL</span>
-          <span>
-            <strong>서울특별시치과위생사회</strong>
-            <small>SEOUL DENTAL HYGIENISTS ASSOCIATION</small>
-          </span>
-        </a>
-        <nav class="regional-nav" aria-label="서울특별시회 주 메뉴">
-          <div>
-            <a href="/kdha/regional/seoul/introduction/greeting/">서울특별시회 소개</a>
-            <div class="regional-nav__mega">
-              <a href="/kdha/regional/seoul/introduction/greeting/">인사말</a>
-              <a href="/kdha/regional/seoul/introduction/history/">연혁</a>
-              <a href="/kdha/regional/seoul/introduction/rules/">회칙</a>
-              <a href="/kdha/regional/seoul/introduction/organization/">조직 및 업무</a>
-              <a href="/kdha/regional/seoul/introduction/policies/">주요정책사업</a>
-              <a href="/kdha/regional/seoul/introduction/hygienist/">치과위생사 소개</a>
-              <a href="/kdha/regional/seoul/introduction/ethics/">윤리강령</a>
-              <a href="/kdha/regional/seoul/introduction/fund/">회관기금</a>
-              <a href="/kdha/regional/seoul/introduction/sites/">관련사이트</a>
-              <a href="/kdha/regional/seoul/introduction/location/">찾아오시는 길</a>
+        <nav class="site-menu" id="site-menu" aria-label="전체 메뉴" hidden>
+          <div class="site-menu__inner layout-container">
+            <div class="site-menu__top">
+              <button class="site-menu__close" type="button" aria-label="전체 메뉴 닫기">
+                <span class="material-symbols-rounded" aria-hidden="true">close</span>
+              </button>
             </div>
-          </div>
-          <div>
-            <a href="/kdha/regional/seoul/education/about/">보수교육</a>
-            <div class="regional-nav__mega">
-              <a href="/kdha/regional/seoul/education/about/">보수교육이란?</a>
-              <a href="/kdha/regional/seoul/education/institute/">치위생교육원</a>
-              <a href="/kdha/regional/seoul/education/programs/">보수교육 일정</a>
-              <a href="/kdha/regional/seoul/education/calendar/">연간교육 일정</a>
-              <a href="/kdha/regional/seoul/education/license/">면허신고 안내</a>
+            <div class="site-menu__mobile-tools">
+              <div class="site-menu__external">
+                <a href="/kdha/main/" target="_blank" rel="noopener noreferrer">
+                  중앙회
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a href="/kdha/edu/" target="_blank" rel="noopener noreferrer">
+                  치위생교육원
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+                <a href="http://kdhamall.or.kr/member/login.php?prev=%2F" target="_blank" rel="noopener noreferrer">
+                  치과위생사 MALL
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <span class="sr-only">(새 창)</span>
+                </a>
+              </div>
+              <div class="site-menu__account">
+                <a href="/kdha/account/login/">로그인</a>
+                <a href="/kdha/account/join/">회원가입</a>
+              </div>
             </div>
-          </div>
-          <div>
-            <a href="/kdha/regional/seoul/news/notices/">협회소식</a>
-            <div class="regional-nav__mega">
-              <a href="/kdha/regional/seoul/news/notices/">공지사항</a>
-              <a href="/kdha/regional/seoul/news/press/">보도자료</a>
-              <a href="/kdha/regional/seoul/news/schedule/">주요 일정</a>
-              <a href="/kdha/regional/seoul/news/activities/">활동사항</a>
-              <a href="/kdha/regional/seoul/news/gallery/">포토갤러리</a>
-              <a href="/kdha/regional/seoul/news/newsletter/">치위협보</a>
-            </div>
-          </div>
-          <div>
-            <a href="/kdha/regional/seoul/community/faq/">소통광장</a>
-            <div class="regional-nav__mega">
-              <a href="/kdha/regional/seoul/community/faq/">자주하는 질문</a>
-              <a href="/kdha/regional/seoul/community/executives/">임원게시판</a>
-              <a href="/kdha/regional/seoul/community/volunteer/">봉사활동</a>
-              <a href="/kdha/regional/seoul/community/surveys/">설문조사</a>
-              <a href="/kdha/regional/seoul/community/dental-news/">치과계 소식</a>
+            <div class="site-menu__groups">
+              <section class="site-menu__group is-expanded">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="site-menu-group-0"
+                  >
+                    서울특별시회 소개
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-0">
+                  <li><a href="/kdha/regional/seoul/introduction/greeting/">인사말</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/history/">연혁</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/rules/">회칙</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/organization/">조직도</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/committees/">위원회별 업무</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/policies/">주요정책사업</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/hygienist/">치과위생사 소개</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/ethics/">윤리강령</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/fund/">회관기금</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/sites/">관련사이트</a></li>
+                  <li><a href="/kdha/regional/seoul/introduction/location/">찾아오시는 길</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-1"
+                  >
+                    보수교육
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-1">
+                  <li><a href="/kdha/regional/seoul/education/about/">보수교육이란?</a></li>
+                  <li><a href="/kdha/regional/seoul/education/institute/">치위생교육원</a></li>
+                  <li><a href="/kdha/regional/seoul/education/programs/">보수교육 일정</a></li>
+                  <li><a href="/kdha/regional/seoul/education/calendar/">연간교육 일정</a></li>
+                  <li><a href="/kdha/regional/seoul/education/license/">면허신고 안내</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-2"
+                  >
+                    협회소식
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-2">
+                  <li><a href="/kdha/regional/seoul/news/notices/">공지사항</a></li>
+                  <li><a href="/kdha/regional/seoul/news/press/">보도자료</a></li>
+                  <li><a href="/kdha/regional/seoul/news/schedule/">주요 일정</a></li>
+                  <li><a href="/kdha/regional/seoul/news/activities/">활동사항</a></li>
+                  <li><a href="/kdha/regional/seoul/news/gallery/">포토갤러리</a></li>
+                  <li><a href="/kdha/regional/seoul/news/newsletter/">치위협보</a></li>
+                </ul>
+              </section>
+              <section class="site-menu__group">
+                <h2>
+                  <button
+                    class="site-menu__heading"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-menu-group-3"
+                  >
+                    소통광장
+                    <span class="material-symbols-rounded" aria-hidden="true">keyboard_arrow_down</span>
+                  </button>
+                </h2>
+                <ul id="site-menu-group-3">
+                  <li><a href="/kdha/regional/seoul/community/faq/">자주하는 질문</a></li>
+                  <li><a href="/kdha/regional/seoul/community/executives/">임원게시판</a></li>
+                  <li><a href="/kdha/regional/seoul/community/volunteer/">봉사활동</a></li>
+                  <li><a href="/kdha/regional/seoul/community/surveys/">설문조사</a></li>
+                  <li><a href="/kdha/regional/seoul/community/dental-news/">치과계 소식</a></li>
+                </ul>
+              </section>
             </div>
           </div>
         </nav>
-        <button class="regional-menu-button" type="button" aria-label="전체 메뉴 열기">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-
-    <main id="main-content">
-      <header class="regional-subhero">
-        <div class="regional-container">
-          <p>협회소식</p>
-          <h1>포토갤러리</h1>
-          <span>사진으로 만나는 서울특별시회의 주요 활동입니다.</span>
-        </div>
       </header>
-      <div class="regional-container regional-content">
-        <nav class="regional-breadcrumb" aria-label="현재 위치">
-          <a href="/kdha/regional/seoul/">홈</a>
-          <span>›</span>
-          <span>협회소식</span>
-          <span>›</span>
-          <strong>포토갤러리</strong>
-        </nav>
-        <div class="regional-gallery">
-          <a href="#">
-            <span class="material-symbols-outlined">photo_camera</span>
-            <strong>서울시민 구강건강 캠페인</strong>
-            <time>2026.07.18</time>
-          </a>
-          <a href="#">
-            <span class="material-symbols-outlined">photo_camera</span>
-            <strong>2026년 상반기 보수교육</strong>
-            <time>2026.06.18</time>
-          </a>
-          <a href="#">
-            <span class="material-symbols-outlined">photo_camera</span>
-            <strong>제5회 서울특별시회 학술제</strong>
-            <time>2026.05.18</time>
-          </a>
-          <a href="#">
-            <span class="material-symbols-outlined">photo_camera</span>
-            <strong>지역사회 봉사활동</strong>
-            <time>2026.04.18</time>
-          </a>
-          <a href="#">
-            <span class="material-symbols-outlined">photo_camera</span>
-            <strong>정기 대의원총회</strong>
-            <time>2026.03.18</time>
-          </a>
-          <a href="#">
-            <span class="material-symbols-outlined">photo_camera</span>
-            <strong>회원 소통 간담회</strong>
-            <time>2026.02.18</time>
-          </a>
-        </div>
-      </div>
-    </main>
-    <footer class="site-footer">
-      <div class="site-footer__inner layout-container">
-        <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
-          <img
-            class="site-logo__image"
-            width="290"
-            height="55"
-            alt="대한치과위생사협회"
-            src="/kdha/assets/brand/logo-footer.svg"
-          />
-        </a>
-        <address class="site-footer__address">
-          <span class="site-footer__info-row">
-            <span>
-              105-82-07361
-              <span class="site-footer__break">(통신판매번호 : 제2010-서울동대문-0959호)</span>
-            </span>
-            <span>대표자 : 박정란</span>
-          </span>
-          <span class="site-footer__info-row">서울특별시 동대문구 고산자로 566(제기동, 치과위생사회관)</span>
-        </address>
-        <p class="site-footer__contact">
-          <span>TEL. 02-2236-0914</span>
-          <span>FAX. 02-2236-0915</span>
-        </p>
-        <div class="site-footer__nav-row">
-          <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
-            <a href="/kdha/related-sites/">관련사이트</a>
-            <a href="/kdha/community/faq/#faq-remote-support">원격지원</a>
-            <a href="/kdha/privacy/">개인정보처리방침</a>
+
+      <!-- 협회소식 · 포토갤러리 목록(피그마 20261111_시도회 · 포토갤러리) -->
+      <main id="main-content" class="regional-sub">
+        <header class="page-hero">
+          <nav aria-label="현재 위치">
+            <a href="/kdha/regional/seoul/" aria-label="홈">
+              <span class="material-symbols-rounded" aria-hidden="true">home</span>
+            </a>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span>협회소식</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+            <span aria-current="page">포토갤러리</span>
           </nav>
-          <div class="site-footer__site-selects">
-            <select aria-label="시도회 홈페이지 (선택 시 새 창)" data-custom-select data-related-site>
-              <option value="">시도회 홈페이지</option>
-              <option value="https://seoul.kdha.or.kr/">서울특별시회</option>
-              <option value="https://gg.kdha.or.kr/">경기도회</option>
-              <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
-              <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
-              <option value="https://ds.kdha.or.kr/">대전·세종회</option>
-              <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
-              <option value="https://cn.kdha.or.kr/">충청남도회</option>
-              <option value="https://busan.kdha.or.kr/">부산광역시회</option>
-              <option value="https://dg.kdha.or.kr/">대구·경북회</option>
-              <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
-              <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
-              <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
-              <option value="https://gj.kdha.or.kr/">광주·전남회</option>
-              <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
-            </select>
+          <h1>포토갤러리</h1>
+        </header>
+        <div id="main-body" class="main-body">
+          <div class="community-page regional-board-page">
+            <section class="community-notices" aria-label="포토갤러리 목록">
+              <form class="community-search form-field form-field--large" role="search">
+                <select data-select-size="l" class="ds-select" data-custom-select name="field" aria-label="검색 조건">
+                  <option value="title">제목</option>
+                  <option value="content">내용</option>
+                </select>
+                <input type="search" name="query" aria-label="검색어" placeholder="검색어를 입력해 주세요" />
+                <button class="form-action-button" type="submit">검색</button>
+              </form>
+              <div class="community-cards community-cards--boxed">
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-07-board-meeting.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>2024년 7월 정기이사회(7월 31일)</h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-08-19">2024.08.19</time>
+                        <span>조회 41,455</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-07-isdh-symposium.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>
+                        2024년 7월 11일~13일
+                        <br />
+                        ISDH 국제치위생심포지엄
+                      </h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-08-19">2024.08.19</time>
+                        <span>조회 1,237</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-06-board-meeting.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>2024년 6월 정기이사회(6월 22일)</h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-08-19">2024.08.19</time>
+                        <span>조회 1,213</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-06-happyteeth-volunteers.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>
+                        2024년 6월 22일
+                        <br />
+                        해피티스 봉사단 발대식
+                      </h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-08-19">2024.08.19</time>
+                        <span>조회 1,121</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-06-oral-health-day.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>
+                        2024년 6월 9일
+                        <br />
+                        구강보건의 날 행사 참여
+                      </h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-08-19">2024.08.19</time>
+                        <span>조회 906</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-05-board-meeting.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>2024년 5월 정기이사회(5월 18일)</h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-08-19">2024.08.19</time>
+                        <span>조회 893</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-05-continuing-education.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>2024년 5월 제1차 보수교육</h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-08-19">2024.08.19</time>
+                        <span>조회 974</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-04-policy-academy.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>
+                        2024년 4월 20일 치위생정책연구
+                        <br />
+                        제1차 정책아카데미
+                      </h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-05-13">2024.05.13</time>
+                        <span>조회 1,101</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-04-board-meeting.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>2024년 4월 정기이사회(4월 15일)</h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-05-13">2024.05.13</time>
+                        <span>조회 1,104</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+                <article class="community-card">
+                  <a href="/kdha/regional/seoul/news/gallery/">
+                    <div class="community-card__image">
+                      <img
+                        src="/kdha/assets/images/regional/seoul/gallery/2024-04-practice-workshop.jpg"
+                        alt=""
+                        width="342"
+                        height="206"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="community-card__text">
+                      <h2>
+                        2024년 4월 13일
+                        <br />
+                        2024년도 회무실무연수회
+                      </h2>
+                      <p class="community-card__meta">
+                        <time datetime="2024-05-13">2024.05.13</time>
+                        <span>조회 1,746</span>
+                      </p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+              <nav class="ds-pagination" aria-label="포토갤러리 페이지">
+                <button type="button" aria-label="이전 페이지" disabled>
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_back_ios_new</span>
+                </button>
+                <a href="/kdha/regional/seoul/news/gallery/" aria-current="page">1</a>
+                <a href="/kdha/regional/seoul/news/gallery/">2</a>
+                <a href="/kdha/regional/seoul/news/gallery/">3</a>
+                <a href="/kdha/regional/seoul/news/gallery/">4</a>
+                <a href="/kdha/regional/seoul/news/gallery/" aria-label="다음 페이지">
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_forward_ios</span>
+                </a>
+              </nav>
+            </section>
           </div>
         </div>
-        <div class="site-footer__bottom">
-          <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
-          <div class="social-links">
-            <a
-              class="social-links__item"
-              href="https://www.youtube.com/channel/UCP-l6HQ3t955ms7iNr2186w"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="대한치과위생사협회 공식 유튜브(새 창)"
-            >
-              <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-youtube.png" />
-            </a>
-            <a
-              class="social-links__item"
-              href="https://ko-kr.facebook.com/koreadha/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="대한치과위생사협회 페이스북(새 창)"
-            >
-              <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-facebook.png" />
-            </a>
-            <a
-              class="social-links__item"
-              href="https://www.instagram.com/krdha77/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="대한치과위생사협회 인스타그램(새 창)"
-            >
-              <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-instagram.png" />
-            </a>
+      </main>
+      <!-- 시도회 공통 푸터(피그마 RG_Footer_PC): 대표 사이트 푸터(site-footer) 구조에 시도회 정보와 배지만 바꿔 사용 -->
+      <footer class="site-footer site-footer--regional">
+        <div class="site-footer__inner layout-container">
+          <a class="site-logo site-logo--footer site-logo--regional" href="/kdha/regional/seoul/">
+            <img
+              class="site-logo__image"
+              width="260"
+              height="49"
+              alt="대한치과위생사협회"
+              src="/kdha/assets/brand/logo-footer.svg"
+            />
+            <span class="site-logo__badge">서울특별시회</span>
+          </a>
+          <address class="site-footer__address">
+            <span class="site-footer__info-row">
+              <span>고유번호 : 106-82-16413</span>
+              <span>대표자 : 김선경</span>
+            </span>
+            <span class="site-footer__info-row">서울특별시 중구 세종대로4길 25 이프라자 704호</span>
+          </address>
+          <p class="site-footer__contact">
+            <span>TEL. 02-714-8212</span>
+            <span>E. seoul@kdha.or.kr</span>
+          </p>
+          <div class="site-footer__nav-row">
+            <nav class="site-footer__legal-links" aria-label="푸터 메뉴">
+              <a href="/kdha/main/">대표사이트 바로가기</a>
+              <a href="/kdha/regional/seoul/introduction/location/">찾아오시는 길</a>
+              <a href="/kdha/privacy/">개인정보처리방침</a>
+            </nav>
+            <div class="site-footer__site-selects">
+              <select aria-label="다른 시도회 바로가기 (선택 시 새 창)" data-custom-select data-related-site>
+                <option value="">다른 시도회 바로가기</option>
+                <option value="https://gg.kdha.or.kr/">경기도회</option>
+                <option value="http://incheon.kdha.or.kr/">인천광역시회</option>
+                <option value="https://gangwon.kdha.or.kr/">강원특별자치도회</option>
+                <option value="https://ds.kdha.or.kr/">대전·세종회</option>
+                <option value="https://chungbuk.kdha.or.kr/">충청북도회</option>
+                <option value="https://cn.kdha.or.kr/">충청남도회</option>
+                <option value="https://busan.kdha.or.kr/">부산광역시회</option>
+                <option value="https://dg.kdha.or.kr/">대구·경북회</option>
+                <option value="https://gyeongnam.kdha.or.kr/">경상남도회</option>
+                <option value="https://ulsan.kdha.or.kr/">울산광역시회</option>
+                <option value="https://jeonbuk.kdha.or.kr/">전북특별자치도회</option>
+                <option value="https://gj.kdha.or.kr/">광주·전남회</option>
+                <option value="https://jeju.kdha.or.kr/">제주특별자치도회</option>
+              </select>
+            </div>
+          </div>
+          <div class="site-footer__bottom">
+            <p class="site-footer__copyright">Copyright ⓒ 2026 KDHA. All rights Reserved</p>
+            <!-- 시도회 SNS 주소는 미정이라 # 으로 둡니다(개발 시 실제 주소·새 창 지정). -->
+            <div class="social-links">
+              <a class="social-links__item" href="#" aria-label="서울특별시회 유튜브">
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-youtube.png" />
+              </a>
+              <a class="social-links__item" href="#" aria-label="서울특별시회 페이스북">
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-facebook.png" />
+              </a>
+              <a class="social-links__item" href="#" aria-label="서울특별시회 인스타그램">
+                <img class="social-links__image" width="20" height="20" alt="" src="/kdha/assets/social/sns-instagram.png" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
     <script src="/kdha/assets/js/vendor/jquery.js"></script>
     <script src="/kdha/assets/js/vendor/swiper.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker.js"></script>
     <script src="/kdha/assets/js/vendor/datepicker-ko.js"></script>
     <script src="/kdha/assets/js/common.js"></script>
     <script src="/kdha/assets/js/site-menu.js"></script>
-
-    <script src="/kdha/assets/js/regional-site.js"></script>
   </body>
 </html>
