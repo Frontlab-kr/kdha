@@ -1120,13 +1120,30 @@
                   <span>(선택)</span>
                 </h2>
                 <ul class="mypage-member-sns__list">
+                  <!-- 아이콘·상태를 버튼 하나로 묶음: 누르면 연동/해제(개발 연동), 상태는 data-sns-linked -->
                   <li>
-                    <img src="/kdha/assets/mypage/sns/kakao.svg" width="36" height="36" alt="카카오" />
-                    연동완료
+                    <button
+                      class="mypage-member-sns__button"
+                      type="button"
+                      data-sns="kakao"
+                      data-sns-linked="true"
+                      aria-label="카카오 연동 해제"
+                    >
+                      <img src="/kdha/assets/mypage/sns/kakao.svg" width="36" height="36" alt="" />
+                      <span>연동완료</span>
+                    </button>
                   </li>
                   <li>
-                    <img src="/kdha/assets/mypage/sns/naver.svg" width="36" height="36" alt="네이버" />
-                    미연동
+                    <button
+                      class="mypage-member-sns__button"
+                      type="button"
+                      data-sns="naver"
+                      data-sns-linked="false"
+                      aria-label="네이버 연동하기"
+                    >
+                      <img src="/kdha/assets/mypage/sns/naver.svg" width="36" height="36" alt="" />
+                      <span>미연동</span>
+                    </button>
                   </li>
                 </ul>
               </section>

@@ -36428,11 +36428,29 @@ main:has(.license-report) > .page-banner {
 }
 .mypage-member-sns__list li {
   display: flex;
+}
+.mypage-member-sns__button {
+  display: flex;
   align-items: center;
   gap: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
   color: #66777e;
+  background: none;
+  font: inherit;
   font-size: 16px;
   line-height: 1.5;
+  cursor: pointer;
+}
+.mypage-member-sns__button:hover span {
+  color: #232a31;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.mypage-member-sns__button:focus-visible {
+  outline: 2px solid #713acc;
+  outline-offset: 4px;
 }
 
 @media (max-width: 767px) {
