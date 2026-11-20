@@ -2378,6 +2378,117 @@ button {
     font-size: 16px;
   }
 }
+.layer-popup {
+  position: fixed;
+  top: 140px;
+  left: 50%;
+  z-index: 60;
+  width: 400px;
+  max-width: calc(100% - 32px);
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(17, 24, 39, 0.24);
+  transform: translateX(-50%);
+}
+.layer-popup[hidden] {
+  display: none;
+}
+
+.layer-popup__body {
+  max-height: calc(100dvh - 140px - 56px - 24px);
+  overflow-y: auto;
+}
+
+.layer-popup__link {
+  display: block;
+}
+.layer-popup__link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.layer-popup__notice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 40px 32px 32px;
+}
+.layer-popup__notice h2 {
+  margin: 0;
+  color: #232a31;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.layer-popup__notice p {
+  margin: 0;
+  color: #66777e;
+  font-size: 14px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+.layer-popup__notice .ds-button {
+  margin-top: 12px;
+}
+
+.layer-popup__notice .layer-popup__eyebrow {
+  color: #713acc;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.layer-popup__actions {
+  display: flex;
+  height: 56px;
+  background: #232a31;
+}
+.layer-popup__actions button {
+  flex: 1;
+  padding: 0 16px;
+  border: 0;
+  color: #fff;
+  background: none;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+.layer-popup__actions button:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.layer-popup__actions button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+.layer-popup__actions button + button {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 767px) {
+  .layer-popup {
+    top: 88px;
+    border-radius: 16px;
+  }
+  .layer-popup__body {
+    max-height: calc(100dvh - 88px - 52px - 16px);
+  }
+  .layer-popup__notice {
+    padding: 32px 20px 24px;
+  }
+  .layer-popup__notice h2 {
+    font-size: 20px;
+  }
+  .layer-popup__actions {
+    height: 52px;
+  }
+  .layer-popup__actions button {
+    font-size: 14px;
+  }
+}
 * {
   box-sizing: border-box;
 }

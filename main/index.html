@@ -719,6 +719,25 @@
           </a>
         </nav>
       </main>
+      <!-- 메인 레이어 팝업: "오늘 하루 열지 않기" 시 그날은 다시 열지 않음(layer-popup.js), 확인용 ?popup -->
+      <section
+        class="layer-popup"
+        data-layer-popup="main-notice"
+        role="dialog"
+        aria-labelledby="main-layer-popup-title"
+        hidden
+      >
+        <div class="layer-popup__body">
+          <a class="layer-popup__link" href="/kdha/career/consulting/legal/">
+            <img src="/kdha/assets/main/promo-legal-labor-mobile.png" width="336" height="328" alt="" />
+            <span class="sr-only" id="main-layer-popup-title">치과위생사 법률·노무 상담 운영 안내</span>
+          </a>
+        </div>
+        <div class="layer-popup__actions">
+          <button type="button" data-layer-popup-today>오늘 하루 열지 않기</button>
+          <button type="button" data-layer-popup-close>닫기</button>
+        </div>
+      </section>
       <footer class="site-footer">
         <div class="site-footer__inner layout-container">
           <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
@@ -813,5 +832,6 @@
     <script src="/kdha/assets/js/site-menu.js"></script>
 
     <script src="/kdha/assets/js/main.js"></script>
+    <script src="/kdha/assets/js/layer-popup.js"></script>
   </body>
 </html>

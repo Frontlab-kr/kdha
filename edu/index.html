@@ -694,6 +694,30 @@
         </div>
       </section>
     </main>
+    <!-- 메인 레이어 팝업: "오늘 하루 열지 않기" 시 그날은 다시 열지 않음(layer-popup.js), 확인용 ?popup -->
+    <section
+      class="layer-popup"
+      data-layer-popup="edu-notice"
+      role="dialog"
+      aria-labelledby="edu-layer-popup-title"
+      hidden
+    >
+      <div class="layer-popup__body">
+        <div class="layer-popup__notice">
+          <p class="layer-popup__eyebrow">공지</p>
+          <h2 id="edu-layer-popup-title">2026년도 사이버보수교육 오픈 일정 안내</h2>
+          <p>
+            당해년도 사이버 보수 교육 정확한 오픈 일정은 추후 공지 예정입니다. 교육 일정과 수강 신청 방법은 교육안내에서
+            확인해 주세요.
+          </p>
+          <a class="ds-button ds-button--primary ds-button--medium" href="/kdha/edu/guide/online/">교육안내 바로가기</a>
+        </div>
+      </div>
+      <div class="layer-popup__actions">
+        <button type="button" data-layer-popup-today>오늘 하루 열지 않기</button>
+        <button type="button" data-layer-popup-close>닫기</button>
+      </div>
+    </section>
     <footer class="site-footer">
       <div class="site-footer__inner layout-container">
         <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">
@@ -788,5 +812,6 @@
 
     <script src="/kdha/assets/js/education.js"></script>
     <script src="/kdha/assets/js/edu-main.js"></script>
+    <script src="/kdha/assets/js/layer-popup.js"></script>
   </body>
 </html>
