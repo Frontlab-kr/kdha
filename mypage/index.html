@@ -186,10 +186,18 @@
                   <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
                   <li>
-                    <a href="/kdha/edu/offline/">현장교육</a>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
                   </li>
                   <li>
-                    <a href="/kdha/edu/online/">사이버교육</a>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
                   </li>
                 </ul>
               </section>
@@ -240,7 +248,7 @@
                   <li><a href="/kdha/community/faq/">자주하는 질문</a></li>
                   <li><a href="/kdha/community/events/">이벤트</a></li>
                   <li><a href="/kdha/community/organizations/">산하단체 게시판</a></li>
-                  <li><a href="/kdha/community/executives/">시도회ㆍ산하단체 임원게시판</a></li>
+                  <li><a href="/kdha/community/executives/">임원게시판</a></li>
                   <li><a href="/kdha/community/volunteer/">봉사게시판</a></li>
                   <li><a href="/kdha/community/surveys/">설문조사</a></li>
                   <li><a href="/kdha/community/examiner-training/">국가시험 실기시험 채점자교육</a></li>
@@ -753,19 +761,6 @@
               </span>
             </div>
           </div>
-          <fieldset class="account-choice-field">
-            <legend>결혼유무 (선택)</legend>
-            <div class="account-choice-group">
-              <label class="form-check">
-                <input type="radio" name="marriage" value="single" />
-                미혼
-              </label>
-              <label class="form-check">
-                <input type="radio" name="marriage" value="married" checked />
-                기혼
-              </label>
-            </div>
-          </fieldset>
           <div class="mypage-form__row">
             <div class="form-field form-field--large form-datepicker">
               <label for="mypage-convert-exam">시험합격일자</label>
@@ -945,6 +940,360 @@
               </select>
             </div>
           </div>
+
+          <!-- Figma 11/17 내용 추가: 근무 및 추가 정보 · 학력현황 · 협회임직경력 -->
+          <div class="form-field form-field--large">
+            <label for="mypage-convert-work-address">근무지 주소</label>
+            <span class="form-input-action">
+              <input id="mypage-convert-work-address" name="workAddress" placeholder="주소를 검색해 주세요" readonly />
+              <button type="button">주소찾기</button>
+            </span>
+            <input name="workAddressDetail" aria-label="근무지 상세주소" placeholder="상세주소 입력" />
+          </div>
+          <div class="mypage-form__row">
+            <div class="form-field form-field--large">
+              <label for="mypage-convert-workplace">근무처명</label>
+              <input id="mypage-convert-workplace" name="workplace" placeholder="근무처명 입력" />
+            </div>
+            <div class="form-field form-field--large">
+              <label for="mypage-convert-position">직위 (선택)</label>
+              <input id="mypage-convert-position" name="position" placeholder="직위 입력" />
+            </div>
+          </div>
+          <div class="mypage-form__row">
+            <div class="form-field form-field--large">
+              <label for="mypage-convert-work-tel">직장 전화번호</label>
+              <input
+                id="mypage-convert-work-tel"
+                name="workTel"
+                type="tel"
+                inputmode="numeric"
+                placeholder="- 없이 숫자만 입력"
+              />
+            </div>
+            <div class="form-field form-field--large">
+              <label for="mypage-convert-fax">팩스번호 (선택)</label>
+              <input
+                id="mypage-convert-fax"
+                name="fax"
+                type="tel"
+                inputmode="numeric"
+                placeholder="- 없이 숫자만 입력"
+              />
+            </div>
+          </div>
+          <fieldset class="account-choice-field">
+            <legend>산하단체</legend>
+            <div class="account-choice-group account-choice-group--wrap">
+              <label class="form-check">
+                <input type="radio" name="convertAffiliate" value="none" checked />
+                없음
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertAffiliate" value="public" />
+                보건회
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertAffiliate" value="clinical" />
+                임상회
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertAffiliate" value="male" />
+                남자회
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertAffiliate" value="military" />
+                군진회
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="account-choice-field">
+            <legend>학회</legend>
+            <div class="account-choice-grid">
+              <label class="form-check">
+                <input type="checkbox" name="convertSociety" value="none" />
+                없음
+              </label>
+              <label class="form-check">
+                <input type="checkbox" name="convertSociety" value="kdhs" />
+                대한치과위생학회
+              </label>
+              <label class="form-check">
+                <input type="checkbox" name="convertSociety" value="ksdh" />
+                한국치위생학회
+              </label>
+              <label class="form-check">
+                <input type="checkbox" name="convertSociety" value="ksdhs" />
+                한국치위생과학회
+              </label>
+              <label class="form-check">
+                <input type="checkbox" name="convertSociety" value="ksdic" />
+                한국치위생감염관리학회
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="account-mailing">
+            <legend>우편물</legend>
+            <div>
+              <strong>치위협보</strong>
+              <label class="form-check">
+                <input type="radio" name="convertMail1" checked />
+                자택
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertMail1" />
+                근무처
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertMail1" />
+                미수령
+              </label>
+            </div>
+            <div>
+              <strong>다이어리</strong>
+              <label class="form-check">
+                <input type="radio" name="convertMail2" checked />
+                자택
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertMail2" />
+                근무처
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertMail2" />
+                미수령
+              </label>
+            </div>
+            <div>
+              <strong>탁상달력</strong>
+              <label class="form-check">
+                <input type="radio" name="convertMail3" checked />
+                자택
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertMail3" />
+                근무처
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertMail3" />
+                미수령
+              </label>
+            </div>
+            <div>
+              <strong class="account-mailing__label--justify" aria-label="기타">
+                <span aria-hidden="true">기</span>
+                <span aria-hidden="true">타</span>
+              </strong>
+              <label class="form-check">
+                <input type="radio" name="convertMail4" checked />
+                자택
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertMail4" />
+                근무처
+              </label>
+              <label class="form-check">
+                <input type="radio" name="convertMail4" />
+                미수령
+              </label>
+            </div>
+          </fieldset>
+          <section
+            class="account-repeat-section"
+            aria-labelledby="convert-education-title"
+            data-repeat-section
+            data-repeat-label="학력현황"
+          >
+            <div class="account-repeat-section__heading">
+              <h3 id="convert-education-title">학력현황 (선택)</h3>
+              <button class="ds-button ds-button--outline ds-button--small" type="button" data-repeat-add>
+                추가
+                <span class="material-symbols-rounded" aria-hidden="true">add</span>
+              </button>
+            </div>
+            <div class="account-repeat-list" data-repeat-list>
+              <div class="account-repeat-card" data-repeat-card>
+                <div class="account-repeat-card__heading">
+                  <strong>학력현황 1</strong>
+                  <button
+                    class="account-repeat-card__remove"
+                    type="button"
+                    aria-label="학력현황 1 삭제"
+                    data-repeat-remove
+                  >
+                    <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                  </button>
+                </div>
+                <div class="account-repeat-card__form">
+                  <div class="account-form-row">
+                    <label class="form-field">
+                      <span class="sr-only">학력구분</span>
+                      <select name="educationType" aria-label="학력구분" data-custom-select>
+                        <option value="">학력구분</option>
+                        <option value="doctor">박사</option>
+                        <option value="master">석사</option>
+                        <option value="bachelor">학사</option>
+                      </select>
+                    </label>
+                    <label class="form-field">
+                      <span class="sr-only">학교</span>
+                      <input name="educationSchool" placeholder="학교" />
+                    </label>
+                  </div>
+                  <div class="account-form-row">
+                    <label class="form-field">
+                      <span class="sr-only">전공</span>
+                      <input name="educationMajor" placeholder="전공" />
+                    </label>
+                    <label class="form-field">
+                      <span class="sr-only">학위명</span>
+                      <input name="educationDegree" placeholder="학위명" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="account-repeat-card" data-repeat-card>
+                <div class="account-repeat-card__heading">
+                  <strong>학력현황 2</strong>
+                  <button
+                    class="account-repeat-card__remove"
+                    type="button"
+                    aria-label="학력현황 2 삭제"
+                    data-repeat-remove
+                  >
+                    <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                  </button>
+                </div>
+                <div class="account-repeat-card__form">
+                  <div class="account-form-row">
+                    <label class="form-field">
+                      <span class="sr-only">학력구분</span>
+                      <select name="educationType" aria-label="학력구분" data-custom-select>
+                        <option value="">학력구분</option>
+                        <option value="doctor">박사</option>
+                        <option value="master">석사</option>
+                        <option value="bachelor">학사</option>
+                      </select>
+                    </label>
+                    <label class="form-field">
+                      <span class="sr-only">학교</span>
+                      <input name="educationSchool" placeholder="학교" />
+                    </label>
+                  </div>
+                  <div class="account-form-row">
+                    <label class="form-field">
+                      <span class="sr-only">전공</span>
+                      <input name="educationMajor" placeholder="전공" />
+                    </label>
+                    <label class="form-field">
+                      <span class="sr-only">학위명</span>
+                      <input name="educationDegree" placeholder="학위명" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="account-repeat-section"
+            aria-labelledby="convert-career-title"
+            data-repeat-section
+            data-repeat-label="협회임직경력"
+          >
+            <div class="account-repeat-section__heading">
+              <h3 id="convert-career-title">협회임직경력 (선택)</h3>
+              <button class="ds-button ds-button--outline ds-button--small" type="button" data-repeat-add>
+                추가
+                <span class="material-symbols-rounded" aria-hidden="true">add</span>
+              </button>
+            </div>
+            <div class="account-repeat-list" data-repeat-list>
+              <div class="account-repeat-card" data-repeat-card>
+                <div class="account-repeat-card__heading">
+                  <strong>협회임직경력 1</strong>
+                  <button
+                    class="account-repeat-card__remove"
+                    type="button"
+                    aria-label="협회임직경력 1 삭제"
+                    data-repeat-remove
+                  >
+                    <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                  </button>
+                </div>
+                <div class="account-repeat-card__form account-repeat-card__form--career">
+                  <div class="account-form-row">
+                    <label class="form-field">
+                      <span class="sr-only">협회명</span>
+                      <select name="careerAssociation" aria-label="협회명" data-custom-select>
+                        <option value="">협회명</option>
+                      </select>
+                    </label>
+                    <label class="form-field">
+                      <span class="sr-only">직위</span>
+                      <input name="careerPosition" placeholder="직위" />
+                    </label>
+                  </div>
+                  <div class="form-field" role="group" aria-label="임직 기간">
+                    <span class="account-repeat-date" data-datepicker-range>
+                      <input name="careerStart" aria-label="임직 시작일" placeholder="2024-03-02" autocomplete="off" />
+                      <span class="account-repeat-date__separator" aria-hidden="true">~</span>
+                      <input name="careerEnd" aria-label="임직 종료일" placeholder="2024-03-02" autocomplete="off" />
+                      <button
+                        class="account-repeat-date__button"
+                        type="button"
+                        data-datepicker-range-trigger
+                        aria-label="임직 기간 선택기 열기"
+                      >
+                        <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="account-repeat-card" data-repeat-card>
+                <div class="account-repeat-card__heading">
+                  <strong>협회임직경력 2</strong>
+                  <button
+                    class="account-repeat-card__remove"
+                    type="button"
+                    aria-label="협회임직경력 2 삭제"
+                    data-repeat-remove
+                  >
+                    <span class="material-symbols-rounded" aria-hidden="true">close</span>
+                  </button>
+                </div>
+                <div class="account-repeat-card__form account-repeat-card__form--career">
+                  <div class="account-form-row">
+                    <label class="form-field">
+                      <span class="sr-only">협회명</span>
+                      <select name="careerAssociation" aria-label="협회명" data-custom-select>
+                        <option value="">협회명</option>
+                      </select>
+                    </label>
+                    <label class="form-field">
+                      <span class="sr-only">직위</span>
+                      <input name="careerPosition" placeholder="직위" />
+                    </label>
+                  </div>
+                  <div class="form-field" role="group" aria-label="임직 기간">
+                    <span class="account-repeat-date" data-datepicker-range>
+                      <input name="careerStart" aria-label="임직 시작일" placeholder="2024-03-02" autocomplete="off" />
+                      <span class="account-repeat-date__separator" aria-hidden="true">~</span>
+                      <input name="careerEnd" aria-label="임직 종료일" placeholder="2024-03-02" autocomplete="off" />
+                      <button
+                        class="account-repeat-date__button"
+                        type="button"
+                        data-datepicker-range-trigger
+                        aria-label="임직 기간 선택기 열기"
+                      >
+                        <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
         <div class="edu-dialog__actions">
           <button class="ds-button ds-button--large ds-button--outline" type="button" data-dialog-close>취소</button>
@@ -1276,5 +1625,6 @@
     <script src="/kdha/assets/js/site-menu.js"></script>
 
     <script src="/kdha/assets/js/mypage.js"></script>
+    <script src="/kdha/assets/js/mypage-member.js"></script>
   </body>
 </html>

@@ -62,26 +62,41 @@
             <form class="edu-member-form" action="/kdha/account/join/complete/">
               <div class="edu-member-grid">
                 <label class="edu-field">
-                  <span>이름</span>
+                  <span>
+                    이름
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <input value="홍길동" disabled />
                 </label>
                 <label class="edu-field">
-                  <span>생년월일</span>
+                  <span>
+                    생년월일
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <input value="2000-01-01" disabled />
                 </label>
                 <label class="edu-field edu-field--wide">
-                  <span>아이디</span>
+                  <span>
+                    아이디
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <span class="edu-input-action">
                     <input placeholder="4-12자 사이의 영문 또는 숫자" required />
                     <button class="form-action-button" type="button">중복체크</button>
                   </span>
                 </label>
                 <label class="edu-field edu-field--wide">
-                  <span>비밀번호</span>
+                  <span>
+                    비밀번호
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <input type="password" placeholder="6-20자 영문 소문자, 숫자" required />
                 </label>
                 <label class="edu-field edu-field--wide has-error">
-                  <span>비밀번호 확인</span>
+                  <span>
+                    비밀번호 확인
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <input
                     type="password"
                     placeholder="비밀번호 재입력"
@@ -96,7 +111,10 @@
                   <input placeholder="영문명 입력" />
                 </label>
                 <div class="edu-field edu-field--wide">
-                  <span>학교</span>
+                  <span>
+                    학교
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <div class="account-form-row account-form-row--school">
                     <label class="edu-field">
                       <span class="sr-only">학제</span>
@@ -117,7 +135,10 @@
                 </div>
 
                 <div class="edu-field form-datepicker">
-                  <label for="admission-year">입학년도</label>
+                  <label for="admission-year">
+                    입학년도
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </label>
                   <span class="form-datepicker__control">
                     <input
                       id="admission-year"
@@ -141,7 +162,10 @@
                 </div>
 
                 <div class="edu-field form-datepicker">
-                  <label for="graduation-year">졸업년도</label>
+                  <label for="graduation-year">
+                    졸업년도
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </label>
                   <span class="form-datepicker__control">
                     <input
                       id="graduation-year"
@@ -164,7 +188,10 @@
                   </span>
                 </div>
                 <div class="edu-field form-datepicker">
-                  <label for="exam-pass-year">시험합격년도</label>
+                  <label for="exam-pass-year">
+                    시험합격년도
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </label>
                   <span class="form-datepicker__control">
                     <input
                       id="exam-pass-year"
@@ -187,7 +214,10 @@
                   </span>
                 </div>
                 <div class="edu-field form-datepicker">
-                  <label for="license-issued-date">면허발행일</label>
+                  <label for="license-issued-date">
+                    면허발행일
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </label>
                   <span class="form-datepicker__control">
                     <input
                       id="license-issued-date"
@@ -209,11 +239,17 @@
                   </span>
                 </div>
                 <label class="edu-field edu-field--wide">
-                  <span>면허번호</span>
+                  <span>
+                    면허번호
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <input placeholder="면허번호 입력" />
                 </label>
                 <div class="edu-field edu-field--wide">
-                  <span>면허증사본</span>
+                  <span>
+                    면허증사본
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <div class="account-file-upload">
                     <p>
                       이곳에 파일을 드래그 하거나
@@ -236,7 +272,10 @@
                   </div>
                 </div>
                 <label class="edu-field">
-                  <span>휴대폰번호</span>
+                  <span>
+                    휴대폰번호
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <input type="tel" inputmode="numeric" placeholder="- 없이 숫자만 입력" required />
                 </label>
                 <label class="edu-field">
@@ -245,7 +284,10 @@
                 </label>
                 <div class="account-form-row account-form-row--email edu-field--wide">
                   <label class="edu-field">
-                    <span>이메일</span>
+                    <span>
+                      이메일
+                      <span class="form-required" aria-hidden="true">*</span>
+                    </span>
                     <input type="email" placeholder="이메일 입력" required />
                   </label>
                   <div class="account-email-domain account-form-row__unlabeled">
@@ -288,7 +330,10 @@
                   </div>
                 </fieldset>
                 <div class="edu-field edu-field--wide">
-                  <span>주소</span>
+                  <span>
+                    주소
+                    <span class="form-required" aria-hidden="true">*</span>
+                  </span>
                   <span class="edu-input-action">
                     <input
                       id="member-address"
@@ -312,7 +357,10 @@
                 <div class="account-form-section edu-field--wide">
                   <div class="account-form-row">
                     <label class="edu-field">
-                      <span>취업현황</span>
+                      <span>
+                        취업현황
+                        <span class="form-required" aria-hidden="true">*</span>
+                      </span>
                       <select name="employmentStatus" data-employment-status data-custom-select>
                         <option value="">선택</option>
                         <option value="clinical">임상</option>
@@ -329,7 +377,10 @@
                     </label>
                   </div>
                   <div class="edu-field">
-                    <span>근무지주소</span>
+                    <span>
+                      근무지주소
+                      <span class="form-required" aria-hidden="true">*</span>
+                    </span>
                     <span class="edu-input-action">
                       <input
                         id="work-address"
@@ -350,7 +401,10 @@
                   </div>
                   <div class="account-form-row">
                     <label class="edu-field">
-                      <span>근무처명</span>
+                      <span>
+                        근무처명
+                        <span class="form-required" aria-hidden="true">*</span>
+                      </span>
                       <input placeholder="근무처명 입력" />
                     </label>
                     <label class="edu-field">
@@ -360,7 +414,10 @@
                   </div>
                   <div class="account-form-row">
                     <label class="edu-field">
-                      <span>직장 전화번호</span>
+                      <span>
+                        직장 전화번호
+                        <span class="form-required" aria-hidden="true">*</span>
+                      </span>
                       <input placeholder="- 없이 숫자만 입력" />
                     </label>
                     <label class="edu-field">
@@ -369,7 +426,10 @@
                     </label>
                   </div>
                   <fieldset class="account-choice-field">
-                    <legend>산하단체</legend>
+                    <legend>
+                      산하단체
+                      <span class="form-required" aria-hidden="true">*</span>
+                    </legend>
                     <div class="account-choice-group account-choice-group--wrap">
                       <label class="form-check">
                         <input type="radio" name="affiliate" />
@@ -394,7 +454,10 @@
                     </div>
                   </fieldset>
                   <fieldset class="account-choice-field">
-                    <legend>학회</legend>
+                    <legend>
+                      학회
+                      <span class="form-required" aria-hidden="true">*</span>
+                    </legend>
                     <div class="account-choice-grid">
                       <label class="form-check">
                         <input type="checkbox" />
@@ -419,7 +482,10 @@
                     </div>
                   </fieldset>
                   <fieldset class="account-mailing">
-                    <legend>우편물</legend>
+                    <legend>
+                      우편물
+                      <span class="form-required" aria-hidden="true">*</span>
+                    </legend>
                     <div>
                       <strong>치위협보</strong>
                       <label class="form-check">

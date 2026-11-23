@@ -4380,6 +4380,9 @@ body.main-page .site .site-header__inner {
 .main-floating__icon--board {
   --icon: url('/kdha/assets/main/floating/board.svg');
 }
+.main-floating__icon--chatbot {
+  --icon: url('/kdha/assets/main/floating/chatbot.svg');
+}
 .main-floating__icon--mobile-open {
   --icon: url('/kdha/assets/main/floating/mobile-open.svg');
 }
@@ -20461,7 +20464,7 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
     margin-bottom: 40px;
   }
   .community-faq__item summary {
-    padding: 20px;
+    padding: 20px 0;
     gap: 16px;
     font-size: 16px;
   }
@@ -27154,6 +27157,29 @@ main:has(.news-page) > .page-banner {
   .news-schedule {
     padding: 40px 0 60px;
   }
+  .news-schedule .ofe-day__count {
+    display: none;
+  }
+  .news-schedule .ofe-day__event:first-of-type {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 4px;
+    background: transparent;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+  }
+  .news-schedule .ofe-day__event:first-of-type b {
+    display: block;
+    overflow: hidden;
+    color: #713acc;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
   .news-schedule__nav {
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -31464,8 +31490,8 @@ main:has(.about-page) > .page-banner {
   }
   .edu-guide__title {
     color: #101418;
-    font-size: 20px;
-    line-height: 1.4;
+    font-size: 24px;
+    line-height: 1.35;
     letter-spacing: -0.06px;
   }
   .edu-guide__groups {
@@ -31475,8 +31501,8 @@ main:has(.about-page) > .page-banner {
     gap: 16px;
   }
   .edu-guide__subtitle {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.4;
     letter-spacing: 0;
   }
   .edu-guide__type {
@@ -31518,7 +31544,7 @@ main:has(.about-page) > .page-banner {
   }
   .edu-table td {
     display: grid;
-    grid-template-columns: 112px minmax(0, 1fr);
+    grid-template-columns: auto minmax(0, 1fr);
     gap: 12px;
     padding: 0 20px;
     text-align: left;
@@ -31561,7 +31587,7 @@ main:has(.about-page) > .page-banner {
   .edu-table--info tbody th {
     width: auto;
     margin: 0;
-    padding: 24px;
+    padding: 16px 20px;
     text-align: center;
   }
   .edu-table--info td {
@@ -31573,7 +31599,7 @@ main:has(.about-page) > .page-banner {
   }
   .edu-flow {
     grid-template-columns: minmax(0, 1fr);
-    gap: 56px;
+    gap: 44px;
   }
   .edu-flow > li {
     padding: 20px;
@@ -31603,9 +31629,12 @@ main:has(.about-page) > .page-banner {
   .edu-flow__arrow {
     top: auto;
     right: auto;
-    bottom: -44px;
+    bottom: -32px;
     left: 50%;
-    margin: 0 0 0 -16px;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 -10px;
+    font-size: 20px;
     transform: rotate(90deg);
   }
   .edu-guide__tiles {
@@ -31707,7 +31736,14 @@ main:has(.about-page) > .page-banner {
 
 .edu-guide__alert {
   color: #f04755;
+  font-size: 18px;
   font-weight: 700;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .edu-guide__alert {
+    font-size: 16px;
+  }
 }
 
 /* 20261002_치위생교육원: 교육원 소개 (ED-US-INT-01-01) */
@@ -31812,8 +31848,8 @@ main:has(.about-page) > .page-banner {
     gap: 16px;
   }
   .edu-about__title {
-    font-size: 24px;
-    line-height: 1.35;
+    font-size: 28px;
+    line-height: 1.3;
     letter-spacing: -0.6px;
   }
   .edu-about__lead {
@@ -34807,7 +34843,7 @@ main:has(.license-report) > .page-banner {
   }
   .license-info th {
     width: auto;
-    padding: 24px;
+    padding: 16px 20px;
     border-bottom: 0;
     font-size: 16px;
   }
@@ -34943,7 +34979,7 @@ main:has(.license-report) > .page-banner {
     border-bottom: 0;
   }
   .license-judge__grid dt {
-    padding: 24px;
+    padding: 16px 20px;
     font-size: 16px;
   }
   .license-judge__grid dd {
@@ -34957,9 +34993,9 @@ main:has(.license-report) > .page-banner {
   }
   .license-report__downloads .ds-button {
     width: 100%;
-    height: 48px;
-    padding-inline: 20px;
-    font-size: 16px;
+    height: 52px;
+    padding-inline: 24px;
+    font-size: 18px;
   }
 }
 .mypage {

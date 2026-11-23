@@ -41,7 +41,7 @@ $(function () {
     });
   }
 
-  $('.mypage-member [data-repeat-section]').each(function () {
+  $('.mypage-member [data-repeat-section], .mypage-dialog [data-repeat-section]').each(function () {
     var $section = $(this);
     var $source = $section.find('[data-repeat-list] > [data-repeat-card]').first();
     if (!$source.length) return;
@@ -51,7 +51,7 @@ $(function () {
     updateRepeatCardNumbers($section);
   });
 
-  $(document).on('click', '.mypage-member [data-repeat-add]', function () {
+  $(document).on('click', '.mypage-member [data-repeat-add], .mypage-dialog [data-repeat-add]', function () {
     var $section = $(this).closest('[data-repeat-section]');
     var template = $section.data('repeat-template');
     if (!template) return;
@@ -70,7 +70,7 @@ $(function () {
       .trigger('focus');
   });
 
-  $(document).on('click', '.mypage-member [data-repeat-remove]', function () {
+  $(document).on('click', '.mypage-member [data-repeat-remove], .mypage-dialog [data-repeat-remove]', function () {
     var $section = $(this).closest('[data-repeat-section]');
     if ($section.find('[data-repeat-list] > [data-repeat-card]').length <= 1) return;
 

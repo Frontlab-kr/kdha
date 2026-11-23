@@ -186,10 +186,18 @@
                   <li><a href="/kdha/education/guide/offline/">교육안내</a></li>
                   <li><a href="/kdha/education/regulations/">관련법규소개</a></li>
                   <li>
-                    <a href="/kdha/edu/offline/">현장교육</a>
+                    <a href="/kdha/edu/offline/" target="_blank" rel="noopener">
+                      현장교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
                   </li>
                   <li>
-                    <a href="/kdha/edu/online/">사이버교육</a>
+                    <a href="/kdha/edu/online/" target="_blank" rel="noopener">
+                      사이버교육
+                      <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                      <span class="sr-only">(새 창)</span>
+                    </a>
                   </li>
                 </ul>
               </section>
@@ -240,7 +248,7 @@
                   <li><a href="/kdha/community/faq/">자주하는 질문</a></li>
                   <li><a href="/kdha/community/events/">이벤트</a></li>
                   <li><a href="/kdha/community/organizations/">산하단체 게시판</a></li>
-                  <li><a href="/kdha/community/executives/">시도회ㆍ산하단체 임원게시판</a></li>
+                  <li><a href="/kdha/community/executives/">임원게시판</a></li>
                   <li><a href="/kdha/community/volunteer/">봉사게시판</a></li>
                   <li><a href="/kdha/community/surveys/">설문조사</a></li>
                   <li><a href="/kdha/community/examiner-training/">국가시험 실기시험 채점자교육</a></li>
@@ -439,21 +447,9 @@
                         </span>
                       </div>
                     </div>
-                    <div class="mypage-member__field" role="radiogroup" aria-labelledby="member-marriage-label">
-                      <span class="mypage-member__label" id="member-marriage-label">결혼유무 (선택)</span>
-                      <div class="account-choice-group">
-                        <label class="form-check">
-                          <input type="radio" name="marriage" value="single" />
-                          미혼
-                        </label>
-                        <label class="form-check">
-                          <input type="radio" name="marriage" value="married" checked />
-                          기혼
-                        </label>
-                      </div>
-                    </div>
                     <div class="mypage-member__pair">
                       <div class="form-field form-field--large form-datepicker mypage-member__field">
+                        <!-- 11/02 요청: 시험합격일자·면허발행일은 값이 입력된 경우 수정 불가(disabled), 값이 없으면 입력 가능 -->
                         <label class="mypage-member__label" for="member-exam">시험합격일자</label>
                         <span class="form-datepicker__control">
                           <input
@@ -462,6 +458,7 @@
                             type="text"
                             inputmode="numeric"
                             placeholder="YYYY"
+                            value="2015"
                             autocomplete="off"
                             data-datepicker
                             data-datepicker-view="year"
@@ -488,8 +485,10 @@
                             type="text"
                             inputmode="numeric"
                             placeholder="YYYY-MM-DD"
+                            value="2015-12-31"
                             autocomplete="off"
                             data-datepicker
+                            disabled
                           />
                           <button
                             class="form-datepicker__button"
@@ -497,6 +496,7 @@
                             data-datepicker-trigger
                             aria-label="면허발행일 달력 열기"
                             aria-controls="member-issued"
+                            disabled
                           >
                             <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
                           </button>
