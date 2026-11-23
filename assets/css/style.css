@@ -4380,9 +4380,6 @@ body.main-page .site .site-header__inner {
 .main-floating__icon--board {
   --icon: url('/kdha/assets/main/floating/board.svg');
 }
-.main-floating__icon--chatbot {
-  --icon: url('/kdha/assets/main/floating/chatbot.svg');
-}
 .main-floating__icon--mobile-open {
   --icon: url('/kdha/assets/main/floating/mobile-open.svg');
 }
@@ -14224,6 +14221,7 @@ main:has(> .page-banner) > .main-body > .user-page__inner {
   flex: none;
   align-items: center;
   gap: 12px;
+  width: fit-content;
 }
 
 .site-logo__badge {
