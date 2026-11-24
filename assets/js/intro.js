@@ -7,9 +7,12 @@
   var root = document.querySelector('[data-intro-motion]');
   if (!root) return;
 
-  // 카드별 배경: 처음에는 대표 사이트, 이후에는 마지막으로 마우스를 올리거나 포커스한 카드의 배경을 유지
+  // 카드 강조·배경: 처음에는 대표 사이트, 이후에는 마지막으로 마우스를 올리거나 포커스한 카드로 옮겨 유지
   var cards = root.querySelectorAll('[data-intro-bg]');
   function select(card) {
+    cards.forEach(function (item) {
+      item.classList.toggle('is-featured', item === card);
+    });
     root.setAttribute('data-intro-active', card.getAttribute('data-intro-bg'));
   }
   cards.forEach(function (card) {

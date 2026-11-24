@@ -32804,6 +32804,25 @@ main:has(.about-member) > .page-banner {
   font-size: 18px;
 }
 
+.intro-card.is-featured {
+  border-color: #592ba6;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background: #713acc;
+}
+.intro-card.is-featured .intro-card__watermark {
+  opacity: 1;
+}
+.intro-card.is-featured .intro-card__number {
+  color: #ad99ff;
+}
+.intro-card.is-featured .intro-card__desc {
+  color: #f7f7ff;
+}
+.intro-card.is-featured .intro-card__more {
+  color: #fff;
+}
+
 .intro__shortcuts {
   display: flex;
   justify-content: center;
