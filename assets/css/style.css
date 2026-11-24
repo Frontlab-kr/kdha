@@ -32862,19 +32862,40 @@ main:has(.about-member) > .page-banner {
 }
 
 .intro__backdrop {
-  display: none;
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  inset: 0;
 }
 
+.intro__backdrop-image {
+  position: absolute;
+  inset: 0;
+}
+.intro__backdrop-image--edu, .intro__backdrop-image--mypage {
+  opacity: 0;
+  transition: opacity 0.7s ease 0.15s;
+}
+
+.intro--hero:has([data-intro-bg=edu]:is(:hover, :focus-visible)) .intro__backdrop-image--edu,
+.intro--hero:has([data-intro-bg=mypage]:is(:hover, :focus-visible)) .intro__backdrop-image--mypage {
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+@media (max-width: 767px) {
+  .intro__backdrop-image--edu {
+    background: #f8f5ff url("/kdha/assets/intro/intro-bg-edu.jpg") 85% top/auto 100% no-repeat;
+    background-blend-mode: multiply;
+  }
+  .intro__backdrop-image--mypage {
+    background: #f8f5ff url("/kdha/assets/intro/intro-bg-mypage.jpg") 88% top/auto 100% no-repeat;
+    background-blend-mode: multiply;
+  }
+}
 @media (min-width: 768px) {
   .intro--hero {
     background: #fff;
-  }
-  .intro__backdrop {
-    position: absolute;
-    display: block;
-    overflow: hidden;
-    pointer-events: none;
-    inset: 0;
   }
   .intro__backdrop-layer {
     position: absolute;
@@ -32882,12 +32903,16 @@ main:has(.about-member) > .page-banner {
     transform: translate3d(calc(var(--intro-px) * -16px), calc(var(--intro-py) * -12px), 0);
   }
   .intro__backdrop-image {
-    position: absolute;
-    inset: 0;
     background: image-set(url("/kdha/assets/intro/intro-bg.jpg") 1x, url("/kdha/assets/intro/intro-bg-2x.jpg") 2x) center top/cover no-repeat;
     transform: scale(1.03);
     transform-origin: 60% 50%;
     animation: intro-bg-drift 26s ease-in-out infinite alternate;
+  }
+  .intro__backdrop-image--edu {
+    background: #fff url("/kdha/assets/intro/intro-bg-edu.jpg") center top/cover no-repeat;
+  }
+  .intro__backdrop-image--mypage {
+    background: #fff url("/kdha/assets/intro/intro-bg-mypage.jpg") center top/cover no-repeat;
   }
   .intro--hero .intro__visual {
     translate: calc(var(--intro-px) * 28px) calc(var(--intro-py) * 20px);
