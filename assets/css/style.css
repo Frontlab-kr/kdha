@@ -4336,10 +4336,10 @@ body.main-page .site .site-header__inner {
 .main-floating__links a {
   display: flex;
   align-items: center;
-  gap: 15px;
-  width: 157px;
+  gap: 8px;
+  width: 146px;
   height: 60px;
-  padding: 0 22px 0 18px;
+  padding: 0 16px;
   border: 2px solid transparent;
   border-radius: 60px;
   color: #143043;
@@ -4379,6 +4379,9 @@ body.main-page .site .site-header__inner {
 }
 .main-floating__icon--board {
   --icon: url('/kdha/assets/main/floating/board.svg');
+}
+.main-floating__icon--chatbot {
+  --icon: url('/kdha/assets/main/floating/chatbot.svg');
 }
 .main-floating__icon--mobile-open {
   --icon: url('/kdha/assets/main/floating/mobile-open.svg');
@@ -4424,7 +4427,7 @@ body.main-page .site .site-header__inner {
     align-items: flex-end;
   }
   .main-floating__links a {
-    width: auto;
+    width: 136px;
     height: 48px;
     font-size: 14px;
   }
