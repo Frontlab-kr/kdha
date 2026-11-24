@@ -7,6 +7,20 @@
   var root = document.querySelector('[data-intro-motion]');
   if (!root) return;
 
+  // 카드별 배경: 처음에는 대표 사이트, 이후에는 마지막으로 마우스를 올리거나 포커스한 카드의 배경을 유지
+  var cards = root.querySelectorAll('[data-intro-bg]');
+  function select(card) {
+    root.setAttribute('data-intro-active', card.getAttribute('data-intro-bg'));
+  }
+  cards.forEach(function (card) {
+    card.addEventListener('pointerenter', function () {
+      select(card);
+    });
+    card.addEventListener('focus', function () {
+      select(card);
+    });
+  });
+
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   var EASE = 0.06; // 프레임마다 목표값을 따라가는 비율

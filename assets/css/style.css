@@ -32804,42 +32804,6 @@ main:has(.about-member) > .page-banner {
   font-size: 18px;
 }
 
-.intro-card.is-featured {
-  border-color: #592ba6;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  background: #713acc;
-}
-.intro-card.is-featured .intro-card__watermark {
-  opacity: 1;
-}
-.intro-card.is-featured .intro-card__number {
-  color: #ad99ff;
-}
-.intro-card.is-featured .intro-card__desc {
-  color: #f7f7ff;
-}
-.intro-card.is-featured .intro-card__more {
-  color: #fff;
-}
-
-.intro__services:has(.intro-card:not(.is-featured):is(:hover, :focus-visible)) .intro-card.is-featured {
-  border-color: #ad99ff;
-  box-shadow: none;
-  color: inherit;
-  background: #fff;
-}
-.intro__services:has(.intro-card:not(.is-featured):is(:hover, :focus-visible)) .intro-card.is-featured .intro-card__watermark {
-  opacity: 0;
-}
-.intro__services:has(.intro-card:not(.is-featured):is(:hover, :focus-visible)) .intro-card.is-featured .intro-card__number,
-.intro__services:has(.intro-card:not(.is-featured):is(:hover, :focus-visible)) .intro-card.is-featured .intro-card__more {
-  color: #713acc;
-}
-.intro__services:has(.intro-card:not(.is-featured):is(:hover, :focus-visible)) .intro-card.is-featured .intro-card__desc {
-  color: #505a67;
-}
-
 .intro__shortcuts {
   display: flex;
   justify-content: center;
@@ -32874,13 +32838,12 @@ main:has(.about-member) > .page-banner {
 }
 .intro__backdrop-image--edu, .intro__backdrop-image--mypage {
   opacity: 0;
-  transition: opacity 0.7s ease 0.15s;
+  transition: opacity 0.7s ease;
 }
 
-.intro--hero:has([data-intro-bg=edu]:is(:hover, :focus-visible)) .intro__backdrop-image--edu,
-.intro--hero:has([data-intro-bg=mypage]:is(:hover, :focus-visible)) .intro__backdrop-image--mypage {
+.intro--hero[data-intro-active=edu] .intro__backdrop-image--edu,
+.intro--hero[data-intro-active=mypage] .intro__backdrop-image--mypage {
   opacity: 1;
-  transition-delay: 0s;
 }
 
 @media (max-width: 767px) {
