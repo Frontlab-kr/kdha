@@ -34748,16 +34748,19 @@ main:has(.about-member) > .page-banner {
 .intro--motion .intro__services--trio .intro-card {
   min-height: 459px;
 }
+.intro--motion .intro-card:is(:hover, :focus-visible) {
+  transform: none;
+}
 .intro--motion .intro-card__number {
   line-height: 26px;
-}
-.intro--motion .intro-card__title {
-  word-break: keep-all;
 }
 @media (min-width: 768px) {
   .intro--motion .intro__body {
     gap: 52px;
-    margin-top: clamp(0px, 100vh - 930px, 32px);
+    margin-top: clamp(0px, 100vh - 930px, 34px);
+  }
+  .intro--motion .intro__subtitle {
+    line-height: 1.6;
   }
 }
 

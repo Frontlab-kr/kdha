@@ -9,11 +9,13 @@
 
   // 카드 강조·배경: 처음에는 대표 사이트, 이후에는 마지막으로 마우스를 올리거나 포커스한 카드로 옮겨 유지
   var cards = root.querySelectorAll('[data-intro-bg]');
+  // 새 시안(/intro/motion/, data-intro-hover): 프로토타입과 같이 배경은 바꾸지 않고, 벗어나면 강조·회전을 해제
+  var hoverOnly = root.hasAttribute('data-intro-hover');
   function select(card) {
     cards.forEach(function (item) {
       item.classList.toggle('is-featured', item === card);
     });
-    root.setAttribute('data-intro-active', card.getAttribute('data-intro-bg'));
+    if (!hoverOnly) root.setAttribute('data-intro-active', card.getAttribute('data-intro-bg'));
   }
   // 새 시안(/intro/motion/): 올리거나 포커스할 때마다 카드 오브젝트를 한 바퀴 회전(끝나면 정지)
   function spin(card) {
@@ -28,6 +30,15 @@
       select(card);
       spin(card);
     });
+    if (hoverOnly) {
+      ['pointerleave', 'blur'].forEach(function (type) {
+        card.addEventListener(type, function () {
+          card.classList.remove('is-featured');
+          var object = card.querySelector('.intro-card__object');
+          if (object) object.classList.remove('is-spinning');
+        });
+      });
+    }
     card.addEventListener('focus', function () {
       select(card);
       spin(card);
