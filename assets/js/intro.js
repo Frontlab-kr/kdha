@@ -15,12 +15,22 @@
     });
     root.setAttribute('data-intro-active', card.getAttribute('data-intro-bg'));
   }
+  // 새 시안(/intro/motion/): 올리거나 포커스할 때마다 카드 오브젝트를 한 바퀴 회전(끝나면 정지)
+  function spin(card) {
+    var object = card.querySelector('.intro-card__object');
+    if (!object) return;
+    object.classList.remove('is-spinning');
+    void object.offsetWidth; // 다시 시작
+    object.classList.add('is-spinning');
+  }
   cards.forEach(function (card) {
     card.addEventListener('pointerenter', function () {
       select(card);
+      spin(card);
     });
     card.addEventListener('focus', function () {
       select(card);
+      spin(card);
     });
   });
 

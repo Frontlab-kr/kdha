@@ -722,24 +722,26 @@
         </nav>
       </main>
       <!-- 메인 레이어 팝업: "오늘 하루 열지 않기" 시 그날은 다시 열지 않음(layer-popup.js), 확인용 ?popup -->
-      <section
-        class="layer-popup"
+      <dialog
+        class="layer-popup layer-popup--modal"
+        tabindex="-1"
         data-layer-popup="main-notice"
-        role="dialog"
         aria-labelledby="main-layer-popup-title"
-        hidden
       >
-        <div class="layer-popup__body">
-          <a class="layer-popup__link" href="/kdha/career/consulting/legal/">
-            <img src="/kdha/assets/main/promo-legal-labor-mobile.png" width="336" height="328" alt="" />
-            <span class="sr-only" id="main-layer-popup-title">치과위생사 법률·노무 상담 운영 안내</span>
-          </a>
+        <h2 class="sr-only" id="main-layer-popup-title">제48회 종합학술대회 사전 등록 이벤트</h2>
+        <button class="layer-popup__close" type="button" data-layer-popup-close aria-label="팝업 닫기">
+          <span class="material-symbols-rounded" aria-hidden="true">close</span>
+        </button>
+        <div class="layer-popup__image">
+          <img
+            src="/kdha/assets/main/popup-conference.jpg"
+            width="480"
+            height="600"
+            alt="대한치과위생사협회 제48회 종합학술대회 사전 등록 이벤트. 배움과 교류를 한자리에서"
+          />
         </div>
-        <div class="layer-popup__actions">
-          <button type="button" data-layer-popup-today>오늘 하루 열지 않기</button>
-          <button type="button" data-layer-popup-close>닫기</button>
-        </div>
-      </section>
+        <button class="layer-popup__today" type="button" data-layer-popup-today>오늘 하루 안 보기</button>
+      </dialog>
       <footer class="site-footer">
         <div class="site-footer__inner layout-container">
           <a class="site-logo site-logo--footer" href="/kdha/main/" aria-label="대한치과위생사협회 홈">

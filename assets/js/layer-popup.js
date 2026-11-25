@@ -27,12 +27,22 @@
       // 저장이 막힌 환경(사생활 보호 모드 등)에서는 이번 방문에만 닫힘
     }
   }
+  // <dialog>(대표 메인)는 배경을 어둡게 덮는 모달로, 그 외(교육원 메인)는 화면 위쪽 레이어로 엽니다.
+  function open(popup) {
+    if (popup.showModal) {
+      popup.showModal();
+      popup.focus(); // 열리자마자 닫기 버튼에 초점 테두리가 보이지 않도록 팝업 자체에 초점
+    } else {
+      popup.hidden = false;
+    }
+  }
   function close(popup) {
-    popup.hidden = true;
+    if (popup.showModal) popup.close();
+    else popup.hidden = true;
   }
 
   popups.forEach(function (popup) {
-    if (force || read(storageKey(popup)) !== todayKey) popup.hidden = false;
+    if (force || read(storageKey(popup)) !== todayKey) open(popup);
 
     popup.addEventListener('click', function (event) {
       if (event.target.closest('[data-layer-popup-today]')) {

@@ -8,24 +8,132 @@
 
   // 샘플 일정 (Figma·화면기획서 예시)
   const EVENTS = [
-    { date: '2026-10-01', time: '09:30', place: '국회 의원회관', title: "회장 외, '건강수명과 튼튼한 돌봄은 입에서 시작된다' 국회 토론회", people: '박정란 회장, 김민영 정책이사 등' },
-    { date: '2026-10-01', time: '14:00', place: '코엑스 마곡', title: '2026년도 상반기 치위생학교육 평가·인증 대상 대학 워크숍', people: '박정란 회장, 강부월 원장, 한경순 부원장, 이선영 간사 외 위원 2인 등' },
-    { date: '2026-10-04', time: '10:00', place: '치과위생사회관', title: '제3차 정기이사회', people: '박정란 회장 외 이사 15인' },
-    { date: '2026-10-10', time: '13:00', place: '서울 aT센터', title: '구강보건의 날 기념 대국민 구강건강 캠페인', people: '박정란 회장, 홍보위원회 등' },
-    { date: '2026-10-11', time: '11:00', place: '보건복지부', title: '보건복지부 구강정책과 간담회', people: '박정란 회장, 김민영 정책이사' },
-    { date: '2026-10-17', time: '09:00', place: '대전컨벤션센터', title: '2026 제48회 종합학술대회 및 KDHEX 개막식', people: '박정란 회장 외 임원 전원' },
-    { date: '2026-10-17', time: '13:30', place: '대전컨벤션센터', title: '치위생 교육기관 협의회 정기총회', people: '강부월 원장, 한경순 부원장' },
-    { date: '2026-10-17', time: '15:00', place: '대전컨벤션센터', title: '시·도회장 연석회의', people: '박정란 회장, 시·도회장 17인' },
-    { date: '2026-10-17', time: '16:30', place: '대전컨벤션센터', title: '국제교류위원회 해외 연자 간담회', people: '국제교류위원회' },
-    { date: '2026-10-17', time: '18:00', place: '대전컨벤션센터', title: '학술대회 우수 포스터 시상식', people: '학술위원회' },
-    { date: '2026-10-18', time: '10:00', place: '대전컨벤션센터', title: '2026 제48회 종합학술대회 2일차', people: '박정란 회장 외 임원 전원' },
-    { date: '2026-10-21', time: '14:00', place: '한국보건의료인국가시험원', title: '치과위생사 국가시험 실기 평가위원 회의', people: '김민영 정책이사' },
-    { date: '2026-10-24', time: '10:00', place: '인천 송도컨벤시아', title: '인천광역시회 창립 기념식', people: '박정란 회장' },
-    { date: '2026-10-25', time: '11:00', place: '광주 김대중컨벤션센터', title: '광주·전남회 회원 한마음 대회', people: '박정란 회장, 한경순 부원장' },
-    { date: '2026-10-28', time: '15:00', place: '치과위생사회관', title: '면허신고 제도 개선 TF 회의', people: '정책위원회' },
-    { date: '2026-10-31', time: '10:00', place: '천안 상록리조트', title: '충청남도회 임원 워크숍', people: '박정란 회장' },
-    { date: '2026-11-05', time: '14:00', place: '치과위생사회관', title: '제4차 정기이사회', people: '박정란 회장 외 이사 15인' },
-    { date: '2026-09-18', time: '10:00', place: '국회 의원회관', title: '의료기사법 개정 관련 국회 정책간담회', people: '박정란 회장' },
+    {
+      date: '2026-10-01',
+      time: '09:30',
+      place: '국회 의원회관',
+      title: "회장 외, '건강수명과 튼튼한 돌봄은 입에서 시작된다' 국회 토론회",
+      people: '박정란 회장, 김민영 정책이사 등',
+    },
+    {
+      date: '2026-10-01',
+      time: '14:00',
+      place: '코엑스 마곡',
+      title: '2026년도 상반기 치위생학교육 평가·인증 대상 대학 워크숍',
+      people: '박정란 회장, 강부월 원장, 한경순 부원장, 이선영 간사 외 위원 2인 등',
+    },
+    {
+      date: '2026-10-04',
+      time: '10:00',
+      place: '치과위생사회관',
+      title: '제3차 정기이사회',
+      people: '박정란 회장 외 이사 15인',
+    },
+    {
+      date: '2026-10-10',
+      time: '13:00',
+      place: '서울 aT센터',
+      title: '구강보건의 날 기념 대국민 구강건강 캠페인',
+      people: '박정란 회장, 홍보위원회 등',
+    },
+    {
+      date: '2026-10-11',
+      time: '11:00',
+      place: '보건복지부',
+      title: '보건복지부 구강정책과 간담회',
+      people: '박정란 회장, 김민영 정책이사',
+    },
+    {
+      date: '2026-10-17',
+      time: '09:00',
+      place: '대전컨벤션센터',
+      title: '2026 제48회 종합학술대회 및 KDHEX 개막식',
+      people: '박정란 회장 외 임원 전원',
+    },
+    {
+      date: '2026-10-17',
+      time: '13:30',
+      place: '대전컨벤션센터',
+      title: '치위생 교육기관 협의회 정기총회',
+      people: '강부월 원장, 한경순 부원장',
+    },
+    {
+      date: '2026-10-17',
+      time: '15:00',
+      place: '대전컨벤션센터',
+      title: '시·도회장 연석회의',
+      people: '박정란 회장, 시·도회장 17인',
+    },
+    {
+      date: '2026-10-17',
+      time: '16:30',
+      place: '대전컨벤션센터',
+      title: '국제교류위원회 해외 연자 간담회',
+      people: '국제교류위원회',
+    },
+    {
+      date: '2026-10-17',
+      time: '18:00',
+      place: '대전컨벤션센터',
+      title: '학술대회 우수 포스터 시상식',
+      people: '학술위원회',
+    },
+    {
+      date: '2026-10-18',
+      time: '10:00',
+      place: '대전컨벤션센터',
+      title: '2026 제48회 종합학술대회 2일차',
+      people: '박정란 회장 외 임원 전원',
+    },
+    {
+      date: '2026-10-21',
+      time: '14:00',
+      place: '한국보건의료인국가시험원',
+      title: '치과위생사 국가시험 실기 평가위원 회의',
+      people: '김민영 정책이사',
+    },
+    {
+      date: '2026-10-24',
+      time: '10:00',
+      place: '인천 송도컨벤시아',
+      title: '인천광역시회 창립 기념식',
+      people: '박정란 회장',
+    },
+    {
+      date: '2026-10-25',
+      time: '11:00',
+      place: '광주 김대중컨벤션센터',
+      title: '광주·전남회 회원 한마음 대회',
+      people: '박정란 회장, 한경순 부원장',
+    },
+    {
+      date: '2026-10-28',
+      time: '15:00',
+      place: '치과위생사회관',
+      title: '면허신고 제도 개선 TF 회의',
+      people: '정책위원회',
+    },
+    {
+      date: '2026-10-31',
+      time: '10:00',
+      place: '천안 상록리조트',
+      title: '충청남도회 임원 워크숍',
+      people: '박정란 회장',
+    },
+    {
+      date: '2026-11-05',
+      time: '14:00',
+      place: '치과위생사회관',
+      title: '제4차 정기이사회',
+      people: '박정란 회장 외 이사 15인',
+    },
+    {
+      date: '2026-09-18',
+      time: '10:00',
+      place: '국회 의원회관',
+      title: '의료기사법 개정 관련 국회 정책간담회',
+      people: '박정란 회장',
+    },
   ];
   const MAX_VISIBLE = 2;
   const WEEK = ['일', '월', '화', '수', '목', '금', '토'];
@@ -36,12 +144,15 @@
     return new Date(y, m - 1, d || 1);
   };
   const escape = (s) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
-  const byDate = (date) => EVENTS.filter((e) => e.date === date).sort((a, b) => a.time.localeCompare(b.time));
+  // 시도회 달력: data-schedule-events="none"이면 샘플 일정 없이, data-schedule-base가 있으면 그 주소로 이동
+  const source = root.dataset.scheduleEvents === 'none' ? [] : EVENTS;
+  const base = root.dataset.scheduleBase || '/kdha/news/schedule/';
+  const byDate = (date) => source.filter((e) => e.date === date).sort((a, b) => a.time.localeCompare(b.time));
   // 화면 확인용 기준일 (Figma 예시와 동일). 실제 서비스에서는 서버 날짜를 사용합니다.
   const today = parse(root.dataset.today || iso(new Date()));
   const params = new URLSearchParams(location.search);
-  const detailUrl = (date) => `/kdha/news/schedule/detail/?date=${date}`;
-  const monthUrl = (d) => `/kdha/news/schedule/?month=${d.getFullYear()}-${pad(d.getMonth() + 1)}`;
+  const detailUrl = (date) => `${base}detail/?date=${date}`;
+  const monthUrl = (d) => `${base}?month=${d.getFullYear()}-${pad(d.getMonth() + 1)}`;
 
   if (root.dataset.newsSchedule === 'month') {
     const title = root.querySelector('[data-schedule-title]');
