@@ -34746,7 +34746,7 @@ main:has(.about-member) > .page-banner {
 }
 
 .intro--motion .intro__services--trio .intro-card {
-  min-height: 459px;
+  min-height: 459.3px;
 }
 .intro--motion .intro-card:is(:hover, :focus-visible) {
   transform: none;
@@ -34757,10 +34757,44 @@ main:has(.about-member) > .page-banner {
 @media (min-width: 768px) {
   .intro--motion .intro__body {
     gap: 52px;
-    margin-top: clamp(0px, 100vh - 930px, 34px);
+    margin-top: clamp(0px, 100vh - 930px, 32px);
+  }
+  .intro--motion .intro__title {
+    line-height: 62px;
   }
   .intro--motion .intro__subtitle {
-    line-height: 1.6;
+    line-height: 29px;
+  }
+  .intro--motion .intro__member-link {
+    height: 36px;
+    padding-inline: 16.3px;
+  }
+  .intro--motion .intro__title,
+  .intro--motion .intro-card__number,
+  .intro--motion .intro-card__title {
+    position: relative;
+    top: 2px;
+  }
+  .intro--motion .intro-card__desc,
+  .intro--motion .intro-card__more {
+    position: relative;
+    top: 1px;
+  }
+  .intro--motion .intro__shortcut.ds-button {
+    padding-top: 2px;
+  }
+  .intro--motion .intro__services--trio .intro-card {
+    padding: 31px;
+  }
+  .intro--motion .intro-card__number {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  .intro--motion .intro__services--trio .intro-card__title {
+    line-height: 43px;
+  }
+  .intro--motion .intro__services--trio .intro-card__desc {
+    line-height: 29px;
   }
 }
 
@@ -34768,12 +34802,17 @@ main:has(.about-member) > .page-banner {
   --object-shadow: rgb(0 0 0 / 25%);
   flex: none;
   width: 160px;
-  height: 161px;
+  height: 160px;
+  margin-block: 0.5px;
   background: 0 0/700% 300% no-repeat;
-  filter: drop-shadow(0 0 6px var(--object-shadow));
+  filter: drop-shadow(0 0 5px var(--object-shadow));
 }
 .intro-card__object--main {
   background-image: url("/kdha/assets/intro/object-main.webp");
+}
+.intro-card__object--main:not(.is-spinning) {
+  background-image: url("/kdha/assets/intro/object-main-rest.webp");
+  background-size: 100% 100%;
 }
 .intro-card__object--edu {
   --object-shadow: #b4b0fd;

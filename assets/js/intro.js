@@ -25,6 +25,9 @@
     void object.offsetWidth; // 다시 시작
     object.classList.add('is-spinning');
   }
+  root.addEventListener('animationend', function (event) {
+    if (event.animationName === 'intro-object-spin') event.target.classList.remove('is-spinning');
+  });
   cards.forEach(function (card) {
     card.addEventListener('pointerenter', function () {
       select(card);
