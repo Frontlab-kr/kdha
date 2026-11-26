@@ -19,6 +19,7 @@
   }
   // 새 시안(/intro/motion/): 올리거나 포커스할 때마다 카드 오브젝트를 한 바퀴 회전(끝나면 정지)
   function spin(card) {
+    if (root.hasAttribute('data-intro-still')) return; // 합친 시안(/intro/combined/): 카드 안 회전 없음
     var object = card.querySelector('.intro-card__object');
     if (!object) return;
     object.classList.remove('is-spinning');
